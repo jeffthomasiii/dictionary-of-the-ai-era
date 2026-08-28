@@ -1,5 +1,13 @@
 const termPage = document.getElementById("term-page");
 
+if (termPage && !document.querySelector('link[data-related-discovery-styles]')) {
+  const styles = document.createElement("link");
+  styles.rel = "stylesheet";
+  styles.href = "../../assets/css/related-discovery.css";
+  styles.dataset.relatedDiscoveryStyles = "true";
+  document.head.append(styles);
+}
+
 const termEsc = (value = "") => String(value).replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
 const safeUrl = value => /^https?:\/\//i.test(String(value || "")) ? String(value) : "#";
 
