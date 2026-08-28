@@ -1,1 +1,1129 @@
-{"agentic":{"researchStatus":"researched","origin":"The adjective ‘agentic’ predates generative AI. In current AI usage, it describes systems that pursue goals with limited direct supervision; OpenAI used ‘agentic AI systems’ in a 2023 governance paper, while later industry guidance helped standardize the modern sense around goal pursuit, planning, and action.","firstKnownUse":null,"history":[{"date":"2023-12-14","event":"OpenAI published ‘Practices for Governing Agentic AI Systems,’ defining agentic AI systems as systems that can pursue complex goals with limited direct supervision."}],"relatedTerms":["ai-agent","tool-calling","reasoning-model","mcp"],"sources":[{"id":"openai-agentic-governance-2023","type":"primary","publisher":"OpenAI","title":"Practices for Governing Agentic AI Systems","published":"2023-12-14","url":"https://openai.com/index/practices-for-governing-agentic-ai-systems/","supports":["definition","history","usage"]}]},"ai-agent":{"researchStatus":"researched","origin":"The concept of software agents is much older than modern generative AI. In current LLM usage, an AI agent generally refers to a model-centered system that directs its own process and tool use toward a user-defined goal, often operating in a loop of planning, acting, observing, and adjusting.","firstKnownUse":null,"history":[{"date":"2023-12-14","event":"OpenAI’s agentic-AI governance paper described systems that can pursue complex goals with limited direct supervision."},{"date":"2026","event":"Anthropic described an agent as an AI model that directs its own processes and tool use, repeatedly planning, acting, observing results, and adjusting until a task is complete or human input is needed."}],"relatedTerms":["agentic","tool-calling","mcp","human-in-the-loop"],"sources":[{"id":"openai-agentic-governance-2023","type":"primary","publisher":"OpenAI","title":"Practices for Governing Agentic AI Systems","published":"2023-12-14","url":"https://openai.com/index/practices-for-governing-agentic-ai-systems/","supports":["definition","history"]},{"id":"anthropic-trustworthy-agents-2026","type":"primary","publisher":"Anthropic","title":"Trustworthy agents in practice","published":"2026","url":"https://www.anthropic.com/research/trustworthy-agents","supports":["definition","usage"]}]},"ai-native":{"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},"ai-slop":{"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},"ai-washing":{"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},"context-window":{"researchStatus":"researched","origin":"‘Context window’ is an established language-model term rather than a generative-AI coinage. It refers to the amount of input context a model can reference while generating new output, functioning as a bounded working memory distinct from the model’s training corpus.","firstKnownUse":null,"history":[{"date":"2023-06-13","event":"OpenAI’s API update highlighted longer-context models alongside function calling, reflecting the term’s growing practical importance as LLM applications expanded."}],"relatedTerms":["token","rag","grounding","few-shot"],"sources":[{"id":"anthropic-context-window-glossary","type":"reference","publisher":"Anthropic","title":"Glossary - Claude Platform Docs","published":null,"url":"https://platform.claude.com/docs/en/about-claude/glossary","supports":["definition","usage"]},{"id":"openai-function-calling-2023","type":"primary","publisher":"OpenAI","title":"Function calling and other API updates","published":"2023-06-13","url":"https://openai.com/index/function-calling-and-other-api-updates/","supports":["history","usage"]}]},"copilot":{"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},"few-shot":{"researchStatus":"researched","origin":"Few-shot learning predates modern generative AI, but the term became central to large-language-model prompting through work such as the 2020 GPT-3 paper, which evaluated task performance from a small number of demonstrations supplied in text.","firstKnownUse":null,"history":[{"date":"2020-05-28","event":"The GPT-3 paper ‘Language Models are Few-Shot Learners’ documented few-shot performance using examples provided in the model's text context without gradient updates."}],"relatedTerms":["zero-shot","prompt-engineering","context-window"],"sources":[{"id":"brown-gpt3-2020","type":"primary","publisher":"arXiv / NeurIPS","title":"Language Models are Few-Shot Learners","published":"2020-05-28","url":"https://arxiv.org/abs/2005.14165","supports":["definition","history"]}]},"grounding":{"researchStatus":"researched","origin":"Grounding is an older AI and language-processing concept. In modern generative AI, it commonly means supplying or connecting a model to trusted external information so its response can be rooted in evidence rather than generated only from model parameters.","firstKnownUse":null,"history":[{"date":"2024","event":"Google Cloud described grounding as connecting large language models with sources of truth and distinguished RAG as one specific grounding technique."}],"relatedTerms":["rag","hallucination","context-window","mcp"],"sources":[{"id":"google-grounding-reliable-models","type":"primary","publisher":"Google Cloud","title":"How Vertex AI grounding helps build more reliable models","published":"2024","url":"https://cloud.google.com/blog/products/ai-machine-learning/how-vertex-ai-grounding-helps-build-more-reliable-models/","supports":["definition","history","usage"]},{"id":"google-grounding-search-api","type":"primary","publisher":"Google Cloud","title":"Grounding with your search API","published":"2026","url":"https://docs.cloud.google.com/vertex-ai/generative-ai/docs/grounding/grounding-with-your-search-api","supports":["definition","usage"]}]},"hallucination":{"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},"human-in-the-loop":{"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},"inference":{"researchStatus":"researched","origin":"Inference is a long-established machine-learning term that predates generative AI. It refers to using a trained model on new input to produce predictions or outputs; in LLMs, that output is typically a generated response.","firstKnownUse":null,"history":[],"relatedTerms":["token","reasoning-model","multimodal"],"sources":[{"id":"google-ml-glossary-inference","type":"reference","publisher":"Google for Developers","title":"Machine Learning Glossary","published":"2026","url":"https://developers.google.com/machine-learning/glossary","supports":["definition","usage"]},{"id":"google-ai-inference","type":"secondary","publisher":"Google Cloud","title":"What is AI inference?","published":"2026","url":"https://cloud.google.com/discover/what-is-ai-inference","supports":["definition","usage"]}]},"mcp":{"researchStatus":"researched","origin":"Anthropic introduced and open-sourced the Model Context Protocol as an open standard for connecting AI assistants to external data sources and tools.","firstKnownUse":{"date":"2024-11-25","precision":"day","note":"Public introduction by Anthropic."},"history":[{"date":"2024-11-25","event":"Anthropic publicly introduced MCP, its specification and SDKs, local server support in Claude Desktop, and an open-source repository of MCP servers."}],"relatedTerms":["tool-calling","grounding","ai-agent"],"sources":[{"id":"anthropic-mcp-2024","type":"primary","publisher":"Anthropic","title":"Introducing the Model Context Protocol","published":"2024-11-25","url":"https://www.anthropic.com/news/model-context-protocol","supports":["origin","definition","history"]}]},"meat-proxy":{"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},"model-collapse":{"researchStatus":"researched","origin":"Researchers led by Ilia Shumailov and Zakhar Shumaylov used ‘model collapse’ for the degenerative process that can occur when generations of generative models are recursively trained on model-generated data.","firstKnownUse":null,"history":[{"date":"2024-07-24","event":"Nature published ‘AI models collapse when trained on recursively generated data,’ defining model collapse and reporting experiments across language models and other generative models."}],"relatedTerms":["synthetic-content","ai-slop"],"sources":[{"id":"shumailov-model-collapse-2024","type":"primary","publisher":"Nature","title":"AI models collapse when trained on recursively generated data","published":"2024-07-24","url":"https://www.nature.com/articles/s41586-024-07566-y","supports":["definition","history","research"]}]},"multimodal":{"researchStatus":"researched","origin":"‘Multimodal’ predates modern generative AI and broadly describes systems that work across multiple forms of information. In current AI usage, multimodal models can understand or generate combinations of text, images, audio, video, code, or other modalities.","firstKnownUse":null,"history":[{"date":"2023-09-25","event":"OpenAI documented GPT-4V as adding image input to GPT-4 and described multimodal LLMs as extending language-only systems with additional modalities."},{"date":"2023-12-06","event":"Google introduced Gemini as a model family built from the ground up to be multimodal across text, code, audio, images, and video."}],"relatedTerms":["inference","token","context-window"],"sources":[{"id":"openai-gpt4v-2023","type":"primary","publisher":"OpenAI","title":"GPT-4V(ision) system card","published":"2023-09-25","url":"https://openai.com/index/gpt-4v-system-card/","supports":["definition","history"]},{"id":"google-gemini-2023","type":"primary","publisher":"Google","title":"Introducing Gemini: Google’s most capable AI model yet","published":"2023-12-06","url":"https://blog.google/innovation-and-ai/technology/ai/google-gemini-ai/","supports":["definition","history","usage"]}]},"prompt-engineering":{"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},"prompt-injection":{"researchStatus":"researched","origin":"Simon Willison coined the term ‘prompt injection’ in September 2022 after Riley Goodside demonstrated attacks that caused GPT-3 to follow malicious instructions embedded in user input.","firstKnownUse":{"date":"2022-09-12","precision":"day","note":"Willison's post naming the attack pattern."},"history":[{"date":"2022-09-12","event":"Riley Goodside demonstrated malicious inputs that overrode earlier GPT-3 instructions; Simon Willison published ‘Prompt injection attacks against GPT-3’ and named the pattern prompt injection."},{"date":"2022-09-17","event":"Willison described why adding more AI-based filtering did not provide a dependable security guarantee against prompt injection."}],"relatedTerms":["prompt-engineering","ai-agent","tool-calling"],"sources":[{"id":"willison-prompt-injection-2022","type":"primary","publisher":"Simon Willison's Weblog","title":"Prompt injection attacks against GPT-3","published":"2022-09-12","url":"https://simonwillison.net/2022/Sep/12/prompt-injection/","supports":["origin","definition","history"]},{"id":"willison-more-ai-2022","type":"primary","publisher":"Simon Willison's Weblog","title":"You can’t solve AI security problems with more AI","published":"2022-09-17","url":"https://simonwillison.net/2022/Sep/17/prompt-injection-more-ai/","supports":["history","risk"]}]},"rag":{"researchStatus":"researched","origin":"The term Retrieval-Augmented Generation (RAG) was introduced in a 2020 research paper by Patrick Lewis and coauthors for models that combine parametric language-model memory with retrieved non-parametric memory.","firstKnownUse":{"date":"2020-05-22","precision":"day","note":"Date of the arXiv submission for the paper that introduced the RAG formulation and name."},"history":[{"date":"2020-05-22","event":"Lewis and coauthors submitted ‘Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,’ introducing the RAG name and model formulation."},{"date":"2020","event":"The work was published at NeurIPS 2020."}],"relatedTerms":["grounding","context-window","inference"],"sources":[{"id":"lewis-rag-2020","type":"primary","publisher":"arXiv / NeurIPS","title":"Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks","published":"2020-05-22","url":"https://arxiv.org/abs/2005.11401","supports":["origin","definition","history"]}]},"reasoning-model":{"researchStatus":"researched","origin":"Reasoning as an AI capability long predates current generative systems, and ‘reasoning model’ does not have a single clear origin. The modern product category gained prominence in 2024 when OpenAI introduced o1-preview as a model series trained to spend more time reasoning before responding.","firstKnownUse":null,"history":[{"date":"2024-09-12","event":"OpenAI introduced o1-preview, describing a new series of models designed to spend more time thinking before responding and to perform better on complex reasoning tasks in science, coding, and mathematics."}],"relatedTerms":["inference","agentic","ai-agent"],"sources":[{"id":"openai-o1-2024","type":"primary","publisher":"OpenAI","title":"Learning to reason with LLMs","published":"2024-09-12","url":"https://openai.com/index/learning-to-reason-with-llms/","supports":["definition","history","usage"]}]},"shadow-ai":{"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},"synthetic-content":{"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},"token":{"researchStatus":"researched","origin":"Tokens are an established concept in computing and natural-language processing, not a generative-AI coinage. In language models, tokenization divides text into the units the model processes, and those units may be whole words, word pieces, characters, punctuation, or other text fragments depending on the tokenizer.","firstKnownUse":null,"history":[],"relatedTerms":["context-window","inference","multimodal"],"sources":[{"id":"openai-tokens-help","type":"reference","publisher":"OpenAI","title":"Understanding and counting tokens","published":null,"url":"https://help.openai.com/en/articles/4936856-understanding-and-counting-tokens","supports":["definition","usage"]}]},"tool-calling":{"researchStatus":"researched","origin":"The broader idea of software invoking external functions predates LLMs. In modern generative AI, tool calling grew out of capabilities often first exposed as ‘function calling,’ where models produce structured requests that applications use to invoke external APIs or tools.","firstKnownUse":null,"history":[{"date":"2023-06-13","event":"OpenAI announced function calling for GPT-4 and GPT-3.5 Turbo, allowing models to choose functions and emit structured arguments so applications could connect model outputs to external tools and APIs."}],"relatedTerms":["ai-agent","agentic","mcp","grounding"],"sources":[{"id":"openai-function-calling-2023","type":"primary","publisher":"OpenAI","title":"Function calling and other API updates","published":"2023-06-13","url":"https://openai.com/index/function-calling-and-other-api-updates/","supports":["definition","history","usage"]}]},"vibe-coding":{"researchStatus":"researched","origin":"Andrej Karpathy introduced the phrase ‘vibe coding’ in a February 2, 2025 social-media post describing a highly AI-directed style of building software in which the developer focuses on outcomes and may pay little attention to the generated code.","firstKnownUse":{"date":"2025-02-02","precision":"day","note":"Karpathy's post is widely credited with introducing the term."},"history":[{"date":"2025-02-02","event":"Andrej Karpathy posted ‘There’s a new kind of coding I call vibe coding,’ describing a workflow centered on conversational prompting, accepting generated changes, and focusing on whether the result works."},{"date":"2026-02-24","event":"Merriam-Webster added a dictionary entry for ‘vibe coding,’ documenting the term's 2025 first known use and Karpathy attribution."}],"relatedTerms":["prompt-engineering","ai-agent","copilot","wrapper"],"sources":[{"id":"merriam-webster-vibe-coding","type":"reference","publisher":"Merriam-Webster","title":"Vibe coding","published":"2026-02-24","url":"https://www.merriam-webster.com/dictionary/vibe%20coding","supports":["origin","definition","firstKnownUse","history"]},{"id":"martin-fowler-vibe-coding-2026","type":"secondary","publisher":"Martin Fowler","title":"Vibe Coding","published":"2026-05-21","url":"https://martinfowler.com/bliki/VibeCoding.html","supports":["definition","origin","usage"]}]},"wrapper":{"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},"zero-shot":{"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]}}
+{
+  "agentic": {
+    "researchStatus": "researched",
+    "origin": "The adjective ‘agentic’ predates generative AI. In current AI usage, it describes systems that pursue goals with limited direct supervision; OpenAI used ‘agentic AI systems’ in a 2023 governance paper, while later industry guidance helped standardize the modern sense around goal pursuit, planning, and action.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2023-12-14",
+        "event": "OpenAI published ‘Practices for Governing Agentic AI Systems,’ defining agentic AI systems as systems that can pursue complex goals with limited direct supervision."
+      }
+    ],
+    "relatedTerms": [
+      "ai-agent",
+      "tool-calling",
+      "reasoning-model",
+      "mcp"
+    ],
+    "sources": [
+      {
+        "id": "openai-agentic-governance-2023",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "Practices for Governing Agentic AI Systems",
+        "published": "2023-12-14",
+        "url": "https://openai.com/index/practices-for-governing-agentic-ai-systems/",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "ai-agent": {
+    "researchStatus": "researched",
+    "origin": "The concept of software agents is much older than modern generative AI. In current LLM usage, an AI agent generally refers to a model-centered system that directs its own process and tool use toward a user-defined goal, often operating in a loop of planning, acting, observing, and adjusting.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2023-12-14",
+        "event": "OpenAI’s agentic-AI governance paper described systems that can pursue complex goals with limited direct supervision."
+      },
+      {
+        "date": "2026",
+        "event": "Anthropic described an agent as an AI model that directs its own processes and tool use, repeatedly planning, acting, observing results, and adjusting until a task is complete or human input is needed."
+      }
+    ],
+    "relatedTerms": [
+      "agentic",
+      "tool-calling",
+      "mcp",
+      "human-in-the-loop"
+    ],
+    "sources": [
+      {
+        "id": "openai-agentic-governance-2023",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "Practices for Governing Agentic AI Systems",
+        "published": "2023-12-14",
+        "url": "https://openai.com/index/practices-for-governing-agentic-ai-systems/",
+        "supports": [
+          "definition",
+          "history"
+        ]
+      },
+      {
+        "id": "anthropic-trustworthy-agents-2026",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Trustworthy agents in practice",
+        "published": "2026",
+        "url": "https://www.anthropic.com/research/trustworthy-agents",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "ai-native": {
+    "researchStatus": "researched",
+    "origin": "‘AI-native’ does not have a single established coinage. The phrase is used to distinguish products, companies, workflows, or systems designed around AI from the beginning from systems that add AI later as a feature. Industry usage was well established by 2023 and has since broadened across software, organizations, and operating models.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2023-02-27",
+        "event": "McKinsey published ‘The AI-native telco,’ using AI-native to describe organizations and operating models that integrate AI broadly rather than through isolated add-on projects."
+      },
+      {
+        "date": "2026-02-03",
+        "event": "IBM described AI-native products, companies, and workflows as designed from the ground up with AI as a core component rather than bolted on later."
+      }
+    ],
+    "relatedTerms": [
+      "agentic",
+      "ai-agent",
+      "copilot"
+    ],
+    "sources": [
+      {
+        "id": "mckinsey-ai-native-telco-2023",
+        "type": "secondary",
+        "publisher": "McKinsey & Company",
+        "title": "The AI-native telco: Radical transformation to thrive in turbulent times",
+        "published": "2023-02-27",
+        "url": "https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-ai-native-telco-radical-transformation-to-thrive-in-turbulent-times",
+        "supports": [
+          "history",
+          "usage"
+        ]
+      },
+      {
+        "id": "ibm-ai-native-2026",
+        "type": "reference",
+        "publisher": "IBM",
+        "title": "What Is AI Native?",
+        "published": "2026-02-03",
+        "url": "https://www.ibm.com/think/topics/ai-native",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "ai-slop": {
+    "researchStatus": "researched",
+    "origin": "‘Slop’ emerged organically as slang for unwanted or low-quality AI-generated material rather than through a single clear coinage. Simon Willison helped popularize the term in May 2024 while explicitly noting that others were already using it.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2024-05-08",
+        "event": "Simon Willison highlighted ‘slop’ as an emerging term for unwanted AI-generated content and compared its usefulness to ‘spam’ as a concise name for a recognizable problem."
+      }
+    ],
+    "relatedTerms": [
+      "synthetic-content",
+      "model-collapse",
+      "meat-proxy"
+    ],
+    "sources": [
+      {
+        "id": "willison-slop-2024",
+        "type": "primary",
+        "publisher": "Simon Willison's Weblog",
+        "title": "Slop is the new name for unwanted AI-generated content",
+        "published": "2024-05-08",
+        "url": "https://simonwillison.net/tags/slop/",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "ai-washing": {
+    "researchStatus": "researched",
+    "origin": "‘AI washing’ adapts the older ‘washing’ metaphor, especially greenwashing, to false, vague, or exaggerated claims about artificial intelligence. A single reliable coinage event is not established in AILex's current evidence. The term became prominent as regulators began warning companies and investment firms against overstating how they use AI.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2023-02-27",
+        "event": "The U.S. Federal Trade Commission warned marketers against exaggerating AI capabilities or claiming products use AI when they do not, describing the underlying conduct before ‘AI washing’ became a prominent regulatory label."
+      },
+      {
+        "date": "2024-03-18",
+        "event": "SEC Chair Gary Gensler publicly used ‘AI washing’ while warning investment advisers, broker-dealers, and public companies that misleading claims about AI use may violate securities laws."
+      }
+    ],
+    "relatedTerms": [
+      "shadow-ai",
+      "synthetic-content"
+    ],
+    "sources": [
+      {
+        "id": "ftc-ai-claims-2023",
+        "type": "primary",
+        "publisher": "Federal Trade Commission",
+        "title": "Keep your AI claims in check",
+        "published": "2023-02-27",
+        "url": "https://www.ftc.gov/business-guidance/blog/2023/02/keep-your-ai-claims-check",
+        "supports": [
+          "definition",
+          "history",
+          "risk"
+        ]
+      },
+      {
+        "id": "sec-ai-washing-2024",
+        "type": "primary",
+        "publisher": "U.S. Securities and Exchange Commission",
+        "title": "Chair Gary Gensler on AI Washing",
+        "published": "2024-03-18",
+        "url": "https://www.sec.gov/newsroom/speeches-statements/sec-chair-gary-gensler-ai-washing",
+        "supports": [
+          "definition",
+          "history",
+          "usage",
+          "risk"
+        ]
+      }
+    ]
+  },
+  "context-window": {
+    "researchStatus": "researched",
+    "origin": "‘Context window’ is an established language-model term rather than a generative-AI coinage. It refers to the amount of input context a model can reference while generating new output, functioning as a bounded working memory distinct from the model’s training corpus.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2023-06-13",
+        "event": "OpenAI’s API update highlighted longer-context models alongside function calling, reflecting the term’s growing practical importance as LLM applications expanded."
+      }
+    ],
+    "relatedTerms": [
+      "token",
+      "rag",
+      "grounding",
+      "few-shot"
+    ],
+    "sources": [
+      {
+        "id": "anthropic-context-window-glossary",
+        "type": "reference",
+        "publisher": "Anthropic",
+        "title": "Glossary - Claude Platform Docs",
+        "published": null,
+        "url": "https://platform.claude.com/docs/en/about-claude/glossary",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      },
+      {
+        "id": "openai-function-calling-2023",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "Function calling and other API updates",
+        "published": "2023-06-13",
+        "url": "https://openai.com/index/function-calling-and-other-api-updates/",
+        "supports": [
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "copilot": {
+    "researchStatus": "researched",
+    "origin": "‘Copilot’ is an older aviation metaphor for an assistant working alongside a primary operator. In modern AI software, GitHub’s 2021 launch of GitHub Copilot was a major early use of the metaphor for an AI assistant embedded in a professional workflow, and Microsoft later expanded the label across productivity products.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2021-06-29",
+        "event": "GitHub launched the technical preview of GitHub Copilot and described it as an ‘AI pair programmer’ that suggests code while the developer remains in control."
+      },
+      {
+        "date": "2023-03-16",
+        "event": "Microsoft introduced Microsoft 365 Copilot as a generative-AI assistant for workplace productivity."
+      },
+      {
+        "date": "2023-09-21",
+        "event": "Microsoft unified multiple AI-assistant experiences under the Microsoft Copilot identity, reinforcing ‘copilot’ as a broad category metaphor for human-AI assistance."
+      }
+    ],
+    "relatedTerms": [
+      "human-in-the-loop",
+      "prompt-engineering",
+      "ai-agent"
+    ],
+    "sources": [
+      {
+        "id": "github-copilot-2021",
+        "type": "primary",
+        "publisher": "GitHub",
+        "title": "Introducing GitHub Copilot: your AI pair programmer",
+        "published": "2021-06-29",
+        "url": "https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/",
+        "supports": [
+          "history",
+          "usage",
+          "definition"
+        ]
+      },
+      {
+        "id": "microsoft-365-copilot-2023",
+        "type": "primary",
+        "publisher": "Microsoft",
+        "title": "Introducing Microsoft 365 Copilot – your copilot for work",
+        "published": "2023-03-16",
+        "url": "https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work/",
+        "supports": [
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "few-shot": {
+    "researchStatus": "researched",
+    "origin": "Few-shot learning predates modern generative AI, but the term became central to large-language-model prompting through work such as the 2020 GPT-3 paper, which evaluated task performance from a small number of demonstrations supplied in text.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2020-05-28",
+        "event": "The GPT-3 paper ‘Language Models are Few-Shot Learners’ documented few-shot performance using examples provided in the model's text context without gradient updates."
+      }
+    ],
+    "relatedTerms": [
+      "zero-shot",
+      "prompt-engineering",
+      "context-window"
+    ],
+    "sources": [
+      {
+        "id": "brown-gpt3-2020",
+        "type": "primary",
+        "publisher": "arXiv / NeurIPS",
+        "title": "Language Models are Few-Shot Learners",
+        "published": "2020-05-28",
+        "url": "https://arxiv.org/abs/2005.14165",
+        "supports": [
+          "definition",
+          "history"
+        ]
+      }
+    ]
+  },
+  "grounding": {
+    "researchStatus": "researched",
+    "origin": "Grounding is an older AI and language-processing concept. In modern generative AI, it commonly means supplying or connecting a model to trusted external information so its response can be rooted in evidence rather than generated only from model parameters.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2024",
+        "event": "Google Cloud described grounding as connecting large language models with sources of truth and distinguished RAG as one specific grounding technique."
+      }
+    ],
+    "relatedTerms": [
+      "rag",
+      "hallucination",
+      "context-window",
+      "mcp"
+    ],
+    "sources": [
+      {
+        "id": "google-grounding-reliable-models",
+        "type": "primary",
+        "publisher": "Google Cloud",
+        "title": "How Vertex AI grounding helps build more reliable models",
+        "published": "2024",
+        "url": "https://cloud.google.com/blog/products/ai-machine-learning/how-vertex-ai-grounding-helps-build-more-reliable-models/",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      },
+      {
+        "id": "google-grounding-search-api",
+        "type": "primary",
+        "publisher": "Google Cloud",
+        "title": "Grounding with your search API",
+        "published": "2026",
+        "url": "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/grounding/grounding-with-your-search-api",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "hallucination": {
+    "researchStatus": "researched",
+    "origin": "‘Hallucination’ has a longer history in AI than the current LLM meaning. Earlier computer-vision research used ‘hallucinate’ positively for generating plausible missing image detail. By the late 2010s, neural machine-translation research used ‘hallucination’ negatively for fluent outputs that were untethered from source material. That failure-mode sense carried into modern generative AI, where the term commonly describes plausible-looking but false, unsupported, or invented output.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "1999-09",
+        "event": "Carnegie Mellon researchers Simon Baker and Takeo Kanade published the technical report ‘Hallucinating Faces,’ using hallucination for generated image detail in super-resolution."
+      },
+      {
+        "date": "2018",
+        "event": "Google researchers used ‘hallucinations’ for neural machine translations that were pathological and completely untethered from the source material, closely matching the modern failure-mode sense."
+      },
+      {
+        "date": "2022-2023",
+        "event": "As conversational large language models became widely used, ‘hallucination’ became common public and technical shorthand for confident-looking generated claims that are false, unsupported, or fabricated."
+      }
+    ],
+    "relatedTerms": [
+      "grounding",
+      "rag",
+      "synthetic-content"
+    ],
+    "sources": [
+      {
+        "id": "baker-kanade-hallucinating-faces-1999",
+        "type": "primary",
+        "publisher": "Carnegie Mellon University Robotics Institute",
+        "title": "Hallucinating Faces",
+        "published": "1999-09",
+        "url": "https://publications.ri.cmu.edu/hallucinating-faces-2",
+        "supports": [
+          "history",
+          "origin"
+        ]
+      },
+      {
+        "id": "google-nmt-hallucinations-2018",
+        "type": "primary",
+        "publisher": "Google Research",
+        "title": "Hallucinations in Neural Machine Translation",
+        "published": "2018",
+        "url": "https://research.google/pubs/hallucinations-in-neural-machine-translation/",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "human-in-the-loop": {
+    "researchStatus": "researched",
+    "origin": "‘Human in the loop’ predates modern machine learning and generative AI, with long-standing use in control systems, simulation, human factors, and security. In contemporary AI, the phrase describes workflows that intentionally retain human guidance, review, labeling, correction, approval, or accountability within a machine-driven process.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2008",
+        "event": "Lorrie Faith Cranor published a security framework for reasoning about systems that rely on a ‘human in the loop’ for security-critical functions, demonstrating established pre-LLM use of the phrase."
+      },
+      {
+        "date": "2022-08-17",
+        "event": "A major review in Artificial Intelligence Review surveyed human-in-the-loop machine learning as an umbrella for approaches that integrate people directly into ML processes."
+      }
+    ],
+    "relatedTerms": [
+      "copilot",
+      "ai-agent",
+      "agentic"
+    ],
+    "sources": [
+      {
+        "id": "cranor-hitl-2008",
+        "type": "primary",
+        "publisher": "USENIX",
+        "title": "A Framework for Reasoning About the Human in the Loop",
+        "published": "2008",
+        "url": "https://www.usenix.org/legacy/event/upsec08/tech/full_papers/cranor/cranor_html/index.html",
+        "supports": [
+          "history",
+          "usage"
+        ]
+      },
+      {
+        "id": "mosqueira-hitl-2022",
+        "type": "secondary",
+        "publisher": "Artificial Intelligence Review",
+        "title": "Human-in-the-loop machine learning: a state of the art",
+        "published": "2022-08-17",
+        "url": "https://doi.org/10.1007/s10462-022-10246-w",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "inference": {
+    "researchStatus": "researched",
+    "origin": "Inference is a long-established machine-learning term that predates generative AI. It refers to using a trained model on new input to produce predictions or outputs; in LLMs, that output is typically a generated response.",
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "token",
+      "reasoning-model",
+      "multimodal"
+    ],
+    "sources": [
+      {
+        "id": "google-ml-glossary-inference",
+        "type": "reference",
+        "publisher": "Google for Developers",
+        "title": "Machine Learning Glossary",
+        "published": "2026",
+        "url": "https://developers.google.com/machine-learning/glossary",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      },
+      {
+        "id": "google-ai-inference",
+        "type": "secondary",
+        "publisher": "Google Cloud",
+        "title": "What is AI inference?",
+        "published": "2026",
+        "url": "https://cloud.google.com/discover/what-is-ai-inference",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "mcp": {
+    "researchStatus": "researched",
+    "origin": "Anthropic introduced and open-sourced the Model Context Protocol as an open standard for connecting AI assistants to external data sources and tools.",
+    "firstKnownUse": {
+      "date": "2024-11-25",
+      "precision": "day",
+      "note": "Public introduction by Anthropic."
+    },
+    "history": [
+      {
+        "date": "2024-11-25",
+        "event": "Anthropic publicly introduced MCP, its specification and SDKs, local server support in Claude Desktop, and an open-source repository of MCP servers."
+      }
+    ],
+    "relatedTerms": [
+      "tool-calling",
+      "grounding",
+      "ai-agent"
+    ],
+    "sources": [
+      {
+        "id": "anthropic-mcp-2024",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Introducing the Model Context Protocol",
+        "published": "2024-11-25",
+        "url": "https://www.anthropic.com/news/model-context-protocol",
+        "supports": [
+          "origin",
+          "definition",
+          "history"
+        ]
+      }
+    ]
+  },
+  "meat-proxy": {
+    "researchStatus": "researched",
+    "origin": "Niklas Gruhn introduced the AI-era expression ‘meat proxy’ in an August 3, 2026 essay criticizing the practice of blindly relaying AI output to other people without reading, validating, or adding judgment.",
+    "firstKnownUse": {
+      "date": "2026-08-03",
+      "precision": "day",
+      "note": "Gruhn's essay is the documented naming event for the current AI-era sense."
+    },
+    "history": [
+      {
+        "date": "2026-08-03",
+        "event": "Niklas Gruhn published ‘Don't be a meat proxy,’ defining the behavior as acting as an unnecessary human relay between another person and an AI system."
+      },
+      {
+        "date": "2026-08-03",
+        "event": "Simon Willison amplified the phrase the same day and explicitly described Gruhn as coining an excellent new term for people who blindly copy and paste AI output to peers."
+      }
+    ],
+    "relatedTerms": [
+      "ai-slop",
+      "human-in-the-loop",
+      "vibe-coding"
+    ],
+    "sources": [
+      {
+        "id": "gruhn-meat-proxy-2026",
+        "type": "primary",
+        "publisher": "Niklas Gruhn",
+        "title": "Don't be a meat proxy",
+        "published": "2026-08-03",
+        "url": "https://gruhn.me/blog/2026-08-03/",
+        "supports": [
+          "origin",
+          "definition",
+          "firstKnownUse",
+          "history"
+        ]
+      },
+      {
+        "id": "willison-meat-proxy-2026",
+        "type": "secondary",
+        "publisher": "Simon Willison's Weblog",
+        "title": "Don't be a meat proxy",
+        "published": "2026-08-03",
+        "url": "https://simonwillison.net/2026/Aug/3/dont-be-a-meat-proxy/",
+        "supports": [
+          "origin",
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "model-collapse": {
+    "researchStatus": "researched",
+    "origin": "Researchers led by Ilia Shumailov and Zakhar Shumaylov used ‘model collapse’ for the degenerative process that can occur when generations of generative models are recursively trained on model-generated data.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2024-07-24",
+        "event": "Nature published ‘AI models collapse when trained on recursively generated data,’ defining model collapse and reporting experiments across language models and other generative models."
+      }
+    ],
+    "relatedTerms": [
+      "synthetic-content",
+      "ai-slop"
+    ],
+    "sources": [
+      {
+        "id": "shumailov-model-collapse-2024",
+        "type": "primary",
+        "publisher": "Nature",
+        "title": "AI models collapse when trained on recursively generated data",
+        "published": "2024-07-24",
+        "url": "https://www.nature.com/articles/s41586-024-07566-y",
+        "supports": [
+          "definition",
+          "history",
+          "research"
+        ]
+      }
+    ]
+  },
+  "multimodal": {
+    "researchStatus": "researched",
+    "origin": "‘Multimodal’ predates modern generative AI and broadly describes systems that work across multiple forms of information. In current AI usage, multimodal models can understand or generate combinations of text, images, audio, video, code, or other modalities.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2023-09-25",
+        "event": "OpenAI documented GPT-4V as adding image input to GPT-4 and described multimodal LLMs as extending language-only systems with additional modalities."
+      },
+      {
+        "date": "2023-12-06",
+        "event": "Google introduced Gemini as a model family built from the ground up to be multimodal across text, code, audio, images, and video."
+      }
+    ],
+    "relatedTerms": [
+      "inference",
+      "token",
+      "context-window"
+    ],
+    "sources": [
+      {
+        "id": "openai-gpt4v-2023",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "GPT-4V(ision) system card",
+        "published": "2023-09-25",
+        "url": "https://openai.com/index/gpt-4v-system-card/",
+        "supports": [
+          "definition",
+          "history"
+        ]
+      },
+      {
+        "id": "google-gemini-2023",
+        "type": "primary",
+        "publisher": "Google",
+        "title": "Introducing Gemini: Google’s most capable AI model yet",
+        "published": "2023-12-06",
+        "url": "https://blog.google/innovation-and-ai/technology/ai/google-gemini-ai/",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "prompt-engineering": {
+    "researchStatus": "researched",
+    "origin": "The practice of deliberately designing prompts grew rapidly with large pretrained language models, but the exact phrase ‘prompt engineering’ does not have a single confidently established coinage. Early research often used neighboring language such as ‘prompt programming’; by the early 2020s, prompt engineering became the common label for systematically shaping instructions, examples, context, and constraints to influence model behavior.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2021-02-15",
+        "event": "Reynolds and McDonell published ‘Prompt Programming for Large Language Models,’ documenting systematic methods for controlling GPT-3 with natural-language prompts, including metaprompts and zero-shot prompting."
+      }
+    ],
+    "relatedTerms": [
+      "few-shot",
+      "zero-shot",
+      "prompt-injection",
+      "vibe-coding"
+    ],
+    "sources": [
+      {
+        "id": "reynolds-prompt-programming-2021",
+        "type": "primary",
+        "publisher": "arXiv / CHI",
+        "title": "Prompt Programming for Large Language Models: Beyond the Few-Shot Paradigm",
+        "published": "2021-02-15",
+        "url": "https://arxiv.org/abs/2102.07350",
+        "supports": [
+          "history",
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "prompt-injection": {
+    "researchStatus": "researched",
+    "origin": "Simon Willison coined the term ‘prompt injection’ in September 2022 after Riley Goodside demonstrated attacks that caused GPT-3 to follow malicious instructions embedded in user input.",
+    "firstKnownUse": {
+      "date": "2022-09-12",
+      "precision": "day",
+      "note": "Willison's post naming the attack pattern."
+    },
+    "history": [
+      {
+        "date": "2022-09-12",
+        "event": "Riley Goodside demonstrated malicious inputs that overrode earlier GPT-3 instructions; Simon Willison published ‘Prompt injection attacks against GPT-3’ and named the pattern prompt injection."
+      },
+      {
+        "date": "2022-09-17",
+        "event": "Willison described why adding more AI-based filtering did not provide a dependable security guarantee against prompt injection."
+      }
+    ],
+    "relatedTerms": [
+      "prompt-engineering",
+      "ai-agent",
+      "tool-calling"
+    ],
+    "sources": [
+      {
+        "id": "willison-prompt-injection-2022",
+        "type": "primary",
+        "publisher": "Simon Willison's Weblog",
+        "title": "Prompt injection attacks against GPT-3",
+        "published": "2022-09-12",
+        "url": "https://simonwillison.net/2022/Sep/12/prompt-injection/",
+        "supports": [
+          "origin",
+          "definition",
+          "history"
+        ]
+      },
+      {
+        "id": "willison-more-ai-2022",
+        "type": "primary",
+        "publisher": "Simon Willison's Weblog",
+        "title": "You can’t solve AI security problems with more AI",
+        "published": "2022-09-17",
+        "url": "https://simonwillison.net/2022/Sep/17/prompt-injection-more-ai/",
+        "supports": [
+          "history",
+          "risk"
+        ]
+      }
+    ]
+  },
+  "rag": {
+    "researchStatus": "researched",
+    "origin": "The term Retrieval-Augmented Generation (RAG) was introduced in a 2020 research paper by Patrick Lewis and coauthors for models that combine parametric language-model memory with retrieved non-parametric memory.",
+    "firstKnownUse": {
+      "date": "2020-05-22",
+      "precision": "day",
+      "note": "Date of the arXiv submission for the paper that introduced the RAG formulation and name."
+    },
+    "history": [
+      {
+        "date": "2020-05-22",
+        "event": "Lewis and coauthors submitted ‘Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,’ introducing the RAG name and model formulation."
+      },
+      {
+        "date": "2020",
+        "event": "The work was published at NeurIPS 2020."
+      }
+    ],
+    "relatedTerms": [
+      "grounding",
+      "context-window",
+      "inference"
+    ],
+    "sources": [
+      {
+        "id": "lewis-rag-2020",
+        "type": "primary",
+        "publisher": "arXiv / NeurIPS",
+        "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+        "published": "2020-05-22",
+        "url": "https://arxiv.org/abs/2005.11401",
+        "supports": [
+          "origin",
+          "definition",
+          "history"
+        ]
+      }
+    ]
+  },
+  "reasoning-model": {
+    "researchStatus": "researched",
+    "origin": "Reasoning as an AI capability long predates current generative systems, and ‘reasoning model’ does not have a single clear origin. The modern product category gained prominence in 2024 when OpenAI introduced o1-preview as a model series trained to spend more time reasoning before responding.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2024-09-12",
+        "event": "OpenAI introduced o1-preview, describing a new series of models designed to spend more time thinking before responding and to perform better on complex reasoning tasks in science, coding, and mathematics."
+      }
+    ],
+    "relatedTerms": [
+      "inference",
+      "agentic",
+      "ai-agent"
+    ],
+    "sources": [
+      {
+        "id": "openai-o1-2024",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "Learning to reason with LLMs",
+        "published": "2024-09-12",
+        "url": "https://openai.com/index/learning-to-reason-with-llms/",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "shadow-ai": {
+    "researchStatus": "researched",
+    "origin": "‘Shadow AI’ extends the established enterprise-technology concept of ‘shadow IT’ to artificial-intelligence tools and services used without organizational approval, visibility, governance, or oversight. The expression grew alongside employee adoption of public generative-AI tools, but AILex does not currently identify a single defensible coinage event.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2023",
+        "event": "Enterprise reporting increasingly described organizations struggling with employees' unsanctioned generative-AI use, paralleling the long-standing shadow-IT problem."
+      },
+      {
+        "date": "2024-10-25",
+        "event": "IBM published a formal explainer defining shadow AI as unsanctioned AI-tool use by employees or end users without IT approval or oversight."
+      }
+    ],
+    "relatedTerms": [
+      "ai-washing",
+      "human-in-the-loop",
+      "copilot"
+    ],
+    "sources": [
+      {
+        "id": "cio-shadow-ai-2023",
+        "type": "secondary",
+        "publisher": "CIO",
+        "title": "IT leaders grapple with shadow AI",
+        "published": "2023",
+        "url": "https://www.cio.com/article/647725/it-leaders-grapple-with-shadow-ai.html",
+        "supports": [
+          "history",
+          "usage"
+        ]
+      },
+      {
+        "id": "ibm-shadow-ai-2024",
+        "type": "reference",
+        "publisher": "IBM",
+        "title": "What Is Shadow AI?",
+        "published": "2024-10-25",
+        "url": "https://www.ibm.com/think/topics/shadow-ai",
+        "supports": [
+          "definition",
+          "usage",
+          "risk"
+        ]
+      }
+    ]
+  },
+  "synthetic-content": {
+    "researchStatus": "researched",
+    "origin": "‘Synthetic content’ is a broad policy and media term rather than a generative-AI coinage. In the current AI era, it refers to information or media significantly generated or modified by algorithms, including AI. The category includes text, images, audio, video, and other media and is broader than deliberately deceptive content such as deepfakes.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2023-10-30",
+        "event": "The U.S. Executive Order on Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence formally defined synthetic content as information such as images, videos, audio, and text that has been significantly modified or generated by algorithms, including AI."
+      },
+      {
+        "date": "2024",
+        "event": "The U.S. AI Safety Institute identified synthetic-content risks as an AI-safety research priority while emphasizing that synthetic content also has benign and beneficial uses."
+      }
+    ],
+    "relatedTerms": [
+      "ai-slop",
+      "hallucination",
+      "model-collapse"
+    ],
+    "sources": [
+      {
+        "id": "us-executive-order-ai-2023",
+        "type": "primary",
+        "publisher": "The White House / Federal Register",
+        "title": "Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence",
+        "published": "2023-10-30",
+        "url": "https://www.federalregister.gov/documents/2023/11/01/2023-24283/safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      },
+      {
+        "id": "nist-synthetic-content-2024",
+        "type": "primary",
+        "publisher": "National Institute of Standards and Technology",
+        "title": "Frontier Research on Mitigating Risks from Synthetic Content: A Call to Action",
+        "published": "2024",
+        "url": "https://www.nist.gov/caisi/frontier-research-mitigating-risks-synthetic-content-call-action",
+        "supports": [
+          "definition",
+          "history",
+          "risk",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "token": {
+    "researchStatus": "researched",
+    "origin": "Tokens are an established concept in computing and natural-language processing, not a generative-AI coinage. In language models, tokenization divides text into the units the model processes, and those units may be whole words, word pieces, characters, punctuation, or other text fragments depending on the tokenizer.",
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "context-window",
+      "inference",
+      "multimodal"
+    ],
+    "sources": [
+      {
+        "id": "openai-tokens-help",
+        "type": "reference",
+        "publisher": "OpenAI",
+        "title": "Understanding and counting tokens",
+        "published": null,
+        "url": "https://help.openai.com/en/articles/4936856-understanding-and-counting-tokens",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "tool-calling": {
+    "researchStatus": "researched",
+    "origin": "The broader idea of software invoking external functions predates LLMs. In modern generative AI, tool calling grew out of capabilities often first exposed as ‘function calling,’ where models produce structured requests that applications use to invoke external APIs or tools.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2023-06-13",
+        "event": "OpenAI announced function calling for GPT-4 and GPT-3.5 Turbo, allowing models to choose functions and emit structured arguments so applications could connect model outputs to external tools and APIs."
+      }
+    ],
+    "relatedTerms": [
+      "ai-agent",
+      "agentic",
+      "mcp",
+      "grounding"
+    ],
+    "sources": [
+      {
+        "id": "openai-function-calling-2023",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "Function calling and other API updates",
+        "published": "2023-06-13",
+        "url": "https://openai.com/index/function-calling-and-other-api-updates/",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "vibe-coding": {
+    "researchStatus": "researched",
+    "origin": "Andrej Karpathy introduced the phrase ‘vibe coding’ in a February 2, 2025 social-media post describing a highly AI-directed style of building software in which the developer focuses on outcomes and may pay little attention to the generated code.",
+    "firstKnownUse": {
+      "date": "2025-02-02",
+      "precision": "day",
+      "note": "Karpathy's post is widely credited with introducing the term."
+    },
+    "history": [
+      {
+        "date": "2025-02-02",
+        "event": "Andrej Karpathy posted ‘There’s a new kind of coding I call vibe coding,’ describing a workflow centered on conversational prompting, accepting generated changes, and focusing on whether the result works."
+      },
+      {
+        "date": "2026-02-24",
+        "event": "Merriam-Webster added a dictionary entry for ‘vibe coding,’ documenting the term's 2025 first known use and Karpathy attribution."
+      }
+    ],
+    "relatedTerms": [
+      "prompt-engineering",
+      "ai-agent",
+      "copilot",
+      "wrapper"
+    ],
+    "sources": [
+      {
+        "id": "merriam-webster-vibe-coding",
+        "type": "reference",
+        "publisher": "Merriam-Webster",
+        "title": "Vibe coding",
+        "published": "2026-02-24",
+        "url": "https://www.merriam-webster.com/dictionary/vibe%20coding",
+        "supports": [
+          "origin",
+          "definition",
+          "firstKnownUse",
+          "history"
+        ]
+      },
+      {
+        "id": "martin-fowler-vibe-coding-2026",
+        "type": "secondary",
+        "publisher": "Martin Fowler",
+        "title": "Vibe Coding",
+        "published": "2026-05-21",
+        "url": "https://martinfowler.com/bliki/VibeCoding.html",
+        "supports": [
+          "definition",
+          "origin",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "wrapper": {
+    "researchStatus": "researched",
+    "origin": "‘Wrapper’ is an established software term for a layer placed around another component. After the rise of foundation-model APIs, ‘AI wrapper’ and ‘LLM wrapper’ became informal startup and developer language for applications whose core model intelligence comes from an external provider while the application adds interface, workflow, context, or other product layers. The label can be neutral or dismissive depending on how much additional value is implied.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2022-2023",
+        "event": "As products built on commercial foundation-model APIs proliferated, ‘wrapper’ became common shorthand in startup discussions for applications layered over models such as GPT, often in debates about differentiation and defensibility."
+      }
+    ],
+    "relatedTerms": [
+      "ai-native",
+      "copilot",
+      "vibe-coding",
+      "rag"
+    ],
+    "sources": [
+      {
+        "id": "startups-ai-wrapper",
+        "type": "reference",
+        "publisher": "Startups.com",
+        "title": "AI Wrapper",
+        "published": null,
+        "url": "https://www.startups.com/lexicon/ai-wrapper",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      },
+      {
+        "id": "rework-ai-wrapper",
+        "type": "reference",
+        "publisher": "Rework",
+        "title": "What is an AI Wrapper?",
+        "published": null,
+        "url": "https://resources.rework.com/libraries/ai-terms/what-is-an-ai-wrapper",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "zero-shot": {
+    "researchStatus": "researched",
+    "origin": "Zero-shot learning predates modern generative AI. The term appeared in machine-learning research by 2009 for systems that classify or predict categories omitted from training. In modern LLM prompting, zero-shot describes asking a model to perform a task without first supplying worked examples in the prompt.",
+    "firstKnownUse": {
+      "date": "2009",
+      "precision": "year",
+      "note": "The 2009 Palatucci et al. paper is an early documented use of the term ‘zero-shot learning’; AILex does not claim it is necessarily the absolute first use."
+    },
+    "history": [
+      {
+        "date": "2009",
+        "event": "Palatucci, Pomerleau, Hinton, and Mitchell published ‘Zero-Shot Learning with Semantic Output Codes,’ formalizing a learning setting where a classifier predicts novel output values omitted from training."
+      },
+      {
+        "date": "2020-05-28",
+        "event": "The GPT-3 paper used zero-shot, one-shot, and few-shot evaluation to describe language-model task performance with zero, one, or a small number of demonstrations in context."
+      }
+    ],
+    "relatedTerms": [
+      "few-shot",
+      "prompt-engineering",
+      "context-window"
+    ],
+    "sources": [
+      {
+        "id": "palatucci-zero-shot-2009",
+        "type": "primary",
+        "publisher": "NeurIPS",
+        "title": "Zero-Shot Learning with Semantic Output Codes",
+        "published": "2009",
+        "url": "https://papers.nips.cc/paper_files/paper/2009/hash/1543843a4723ed2ab08e18053ae6dc5b-Abstract.html",
+        "supports": [
+          "origin",
+          "definition",
+          "history",
+          "firstKnownUse"
+        ]
+      },
+      {
+        "id": "brown-gpt3-2020",
+        "type": "primary",
+        "publisher": "arXiv / NeurIPS",
+        "title": "Language Models are Few-Shot Learners",
+        "published": "2020-05-28",
+        "url": "https://arxiv.org/abs/2005.14165",
+        "supports": [
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  }
+}
