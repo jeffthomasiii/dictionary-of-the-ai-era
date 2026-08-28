@@ -39,7 +39,8 @@ See [`AI-TRANSPARENCY.md`](AI-TRANSPARENCY.md) for the full development and edit
 - Light and dark modes
 - Shareable term anchors
 - Dedicated About, Categories, Contribute, and Methodology pages
-- Structured JSON source data
+- Structured JSON dictionary data
+- Separate provenance and source-research data
 - GitHub Pages-ready static site
 - No database, framework, build step, or API required
 
@@ -54,7 +55,8 @@ dictionary-of-the-ai-era/
 ├── methodology.html
 ├── 404.html
 ├── data/
-│   └── terms.json
+│   ├── terms.json
+│   └── provenance.json
 ├── assets/
 │   ├── css/
 │   │   └── styles.css
@@ -65,13 +67,14 @@ dictionary-of-the-ai-era/
 ├── CONTENT-LICENSE.md
 ├── CONTRIBUTING.md
 ├── DESIGN.md
+├── PROVENANCE.md
 ├── LICENSE
 └── README.md
 ```
 
-## Data model
+## Dictionary data model
 
-Each entry in `data/terms.json` follows this structure:
+`data/terms.json` remains the lightweight source of truth for what appears in the browse interface.
 
 ```json
 {
@@ -90,11 +93,66 @@ Each entry in `data/terms.json` follows this structure:
 }
 ```
 
+The existing `sources` array in this core dataset is retained for compatibility during the research transition. The canonical provenance and source model now lives in `data/provenance.json`.
+
+## Provenance data model
+
+Each term slug can have a separate research record:
+
+```json
+{
+  "vibe-coding": {
+    "researchStatus": "researched",
+    "origin": "A carefully sourced origin statement.",
+    "firstKnownUse": {
+      "date": "2025-02-02",
+      "precision": "day",
+      "note": "Why this date is defensible."
+    },
+    "history": [
+      {
+        "date": "2025-02-02",
+        "event": "A material event in the term's history."
+      }
+    ],
+    "relatedTerms": ["prompt-engineering", "ai-agent"],
+    "sources": [
+      {
+        "id": "source-id",
+        "type": "primary",
+        "publisher": "Publisher",
+        "title": "Source title",
+        "published": "2025-02-02",
+        "url": "https://example.com",
+        "supports": ["origin", "definition", "history"]
+      }
+    ]
+  }
+}
+```
+
+See [`PROVENANCE.md`](PROVENANCE.md) for the sourcing standard, research statuses, source types, origin-language rules, first-known-use policy, and human-review requirements.
+
+## Provenance research phase
+
+The provenance system is being introduced as a vertical slice before researching every term. The first researched set intentionally covers different kinds of AI-era vocabulary:
+
+- Few-Shot
+- MCP
+- Model Collapse
+- Prompt Injection
+- RAG
+- Vibe Coding
+
+Every other published term already has a provenance record marked `pending`, making the remaining research backlog explicit rather than leaving empty fields ambiguous.
+
 ## Editorial principle
 
 AILex is intended to be a dictionary, not a list of AI buzzwords. Terms should have documented real-world usage and definitions should distinguish between established technical vocabulary, emerging terminology, slang, research language, and contested concepts.
 
-AI can assist with identifying and researching candidate terms, drafting definitions, organizing evidence, and maintaining the software. Inclusion, source evaluation, final wording, classification, and publication remain human-reviewed decisions.
+AI can assist with identifying and researching candidate terms, drafting definitions, organizing evidence, and maintaining the software. Inclusion, source evaluation, final wording, classification, provenance claims, and publication remain human-reviewed decisions.
+
+A source that supports a definition does not automatically establish a term's origin. AILex intentionally distinguishes meaning, origin, first known use, history, and broader adoption.
 
 ## Categories
 
@@ -105,7 +163,7 @@ AI can assist with identifying and researching candidate terms, drafting definit
 
 ## Running locally
 
-Because the app loads `data/terms.json` with `fetch`, serve the folder over a local web server instead of double-clicking `index.html`.
+Because the app loads JSON data with `fetch`, serve the folder over a local web server instead of double-clicking `index.html`.
 
 With Python:
 
@@ -128,14 +186,14 @@ No build process is required.
 
 ## Next milestones
 
-- Source citations and provenance for individual terms
-- Dedicated term detail pages
+- Complete provenance research across the remaining published terms
+- Surface source and research information through dedicated term detail pages
 - Audible pronunciation controls for dictionary terms
   - Speaker control beside the written pronunciation
   - Browser-based speech synthesis as the initial implementation
   - Optional curated audio for unusual, ambiguous, or poorly synthesized terms
   - Keyboard and screen-reader accessible playback controls
-- Related-term relationships
+- Expand related-term relationships
 - Emerging-term lifecycle
 - AI-language timeline
 - Submission workflow

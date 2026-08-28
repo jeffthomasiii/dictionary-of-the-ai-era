@@ -1,0 +1,86 @@
+{
+  "agentic": {"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},
+  "ai-agent": {"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},
+  "ai-native": {"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},
+  "ai-slop": {"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},
+  "ai-washing": {"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},
+  "context-window": {"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},
+  "copilot": {"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},
+  "few-shot": {
+    "researchStatus":"researched",
+    "origin":"Few-shot learning predates modern generative AI, but the term became central to large-language-model prompting through work such as the 2020 GPT-3 paper, which evaluated task performance from a small number of demonstrations supplied in text.",
+    "firstKnownUse":null,
+    "history":[{"date":"2020-05-28","event":"The GPT-3 paper ‘Language Models are Few-Shot Learners’ documented few-shot performance using examples provided in the model's text context without gradient updates."}],
+    "relatedTerms":["zero-shot","prompt-engineering","context-window"],
+    "sources":[{"id":"brown-gpt3-2020","type":"primary","publisher":"arXiv / NeurIPS","title":"Language Models are Few-Shot Learners","published":"2020-05-28","url":"https://arxiv.org/abs/2005.14165","supports":["definition","history"]}]
+  },
+  "grounding": {"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},
+  "hallucination": {"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},
+  "human-in-the-loop": {"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},
+  "inference": {"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},
+  "mcp": {
+    "researchStatus":"researched",
+    "origin":"Anthropic introduced and open-sourced the Model Context Protocol as an open standard for connecting AI assistants to external data sources and tools.",
+    "firstKnownUse":{"date":"2024-11-25","precision":"day","note":"Public introduction by Anthropic."},
+    "history":[{"date":"2024-11-25","event":"Anthropic publicly introduced MCP, its specification and SDKs, local server support in Claude Desktop, and an open-source repository of MCP servers."}],
+    "relatedTerms":["tool-calling","grounding","ai-agent"],
+    "sources":[{"id":"anthropic-mcp-2024","type":"primary","publisher":"Anthropic","title":"Introducing the Model Context Protocol","published":"2024-11-25","url":"https://www.anthropic.com/news/model-context-protocol","supports":["origin","definition","history"]}]
+  },
+  "meat-proxy": {"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},
+  "model-collapse": {
+    "researchStatus":"researched",
+    "origin":"Researchers led by Ilia Shumailov and Zakhar Shumaylov used ‘model collapse’ for the degenerative process that can occur when generations of generative models are recursively trained on model-generated data.",
+    "firstKnownUse":null,
+    "history":[{"date":"2024-07-24","event":"Nature published ‘AI models collapse when trained on recursively generated data,’ defining model collapse and reporting experiments across language models and other generative models."}],
+    "relatedTerms":["synthetic-content","ai-slop"],
+    "sources":[{"id":"shumailov-model-collapse-2024","type":"primary","publisher":"Nature","title":"AI models collapse when trained on recursively generated data","published":"2024-07-24","url":"https://www.nature.com/articles/s41586-024-07566-y","supports":["definition","history","research"]}]
+  },
+  "multimodal": {"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},
+  "prompt-engineering": {"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},
+  "prompt-injection": {
+    "researchStatus":"researched",
+    "origin":"Simon Willison coined the term ‘prompt injection’ in September 2022 after Riley Goodside demonstrated attacks that caused GPT-3 to follow malicious instructions embedded in user input.",
+    "firstKnownUse":{"date":"2022-09-12","precision":"day","note":"Willison's post naming the attack pattern."},
+    "history":[
+      {"date":"2022-09-12","event":"Riley Goodside demonstrated malicious inputs that overrode earlier GPT-3 instructions; Simon Willison published ‘Prompt injection attacks against GPT-3’ and named the pattern prompt injection."},
+      {"date":"2022-09-17","event":"Willison described why adding more AI-based filtering did not provide a dependable security guarantee against prompt injection."}
+    ],
+    "relatedTerms":["prompt-engineering","ai-agent","tool-calling"],
+    "sources":[
+      {"id":"willison-prompt-injection-2022","type":"primary","publisher":"Simon Willison's Weblog","title":"Prompt injection attacks against GPT-3","published":"2022-09-12","url":"https://simonwillison.net/2022/Sep/12/prompt-injection/","supports":["origin","definition","history"]},
+      {"id":"willison-more-ai-2022","type":"primary","publisher":"Simon Willison's Weblog","title":"You can’t solve AI security problems with more AI","published":"2022-09-17","url":"https://simonwillison.net/2022/Sep/17/prompt-injection-more-ai/","supports":["history","risk"]}
+    ]
+  },
+  "rag": {
+    "researchStatus":"researched",
+    "origin":"The term Retrieval-Augmented Generation (RAG) was introduced in a 2020 research paper by Patrick Lewis and coauthors for models that combine parametric language-model memory with retrieved non-parametric memory.",
+    "firstKnownUse":{"date":"2020-05-22","precision":"day","note":"Date of the arXiv submission for the paper that introduced the RAG formulation and name."},
+    "history":[
+      {"date":"2020-05-22","event":"Lewis and coauthors submitted ‘Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,’ introducing the RAG name and model formulation."},
+      {"date":"2020","event":"The work was published at NeurIPS 2020."}
+    ],
+    "relatedTerms":["grounding","context-window","inference"],
+    "sources":[{"id":"lewis-rag-2020","type":"primary","publisher":"arXiv / NeurIPS","title":"Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks","published":"2020-05-22","url":"https://arxiv.org/abs/2005.11401","supports":["origin","definition","history"]}]
+  },
+  "reasoning-model": {"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},
+  "shadow-ai": {"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},
+  "synthetic-content": {"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},
+  "token": {"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},
+  "tool-calling": {"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},
+  "vibe-coding": {
+    "researchStatus":"researched",
+    "origin":"Andrej Karpathy introduced the phrase ‘vibe coding’ in a February 2, 2025 social-media post describing a highly AI-directed style of building software in which the developer focuses on outcomes and may pay little attention to the generated code.",
+    "firstKnownUse":{"date":"2025-02-02","precision":"day","note":"Karpathy's post is widely credited with introducing the term."},
+    "history":[
+      {"date":"2025-02-02","event":"Andrej Karpathy posted ‘There’s a new kind of coding I call vibe coding,’ describing a workflow centered on conversational prompting, accepting generated changes, and focusing on whether the result works."},
+      {"date":"2026-02-24","event":"Merriam-Webster added a dictionary entry for ‘vibe coding,’ documenting the term's 2025 first known use and Karpathy attribution."}
+    ],
+    "relatedTerms":["prompt-engineering","ai-agent","copilot","wrapper"],
+    "sources":[
+      {"id":"merriam-webster-vibe-coding","type":"reference","publisher":"Merriam-Webster","title":"Vibe coding","published":"2026-02-24","url":"https://www.merriam-webster.com/dictionary/vibe%20coding","supports":["origin","definition","firstKnownUse","history"]},
+      {"id":"martin-fowler-vibe-coding-2026","type":"secondary","publisher":"Martin Fowler","title":"Vibe Coding","published":"2026-05-21","url":"https://martinfowler.com/bliki/VibeCoding.html","supports":["definition","origin","usage"]}
+    ]
+  },
+  "wrapper": {"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]},
+  "zero-shot": {"researchStatus":"pending","origin":null,"firstKnownUse":null,"history":[],"relatedTerms":[],"sources":[]}
+}

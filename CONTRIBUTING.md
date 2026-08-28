@@ -1,6 +1,6 @@
 # Contributing
 
-Dictionary of the AI Era is a curated reference project. Contributions should improve the accuracy, clarity, provenance, or coverage of the dictionary.
+AILex · Dictionary of the AI Era is a curated reference project. Contributions should improve the accuracy, clarity, provenance, or coverage of the dictionary.
 
 ## AI-assisted contributions
 
@@ -24,6 +24,24 @@ A proposed term should include:
 - Evidence of real-world usage
 - At least one credible source when the term is emerging, contested, historical, or attributed to a particular person
 - Suggested related terms
+
+A proposed term does not need a fully researched origin before it can be considered, but unsupported claims such as “coined by,” “first used by,” or “created in” should not be added merely because they appear plausible.
+
+## Provenance contributions
+
+Provenance research belongs in `data/provenance.json` and should follow `PROVENANCE.md`.
+
+When adding or revising a researched provenance record:
+
+- distinguish sources that support meaning from sources that support origin;
+- prefer primary sources for technical definitions, naming events, specifications, original research, and release dates;
+- use `firstKnownUse: null` when the available evidence does not responsibly establish an earliest use;
+- distinguish **coined by**, **introduced by**, **formalized by**, **popularized by**, and **associated with**;
+- include only history events that materially help explain the term;
+- identify what each source supports rather than treating every citation as evidence for every field;
+- preserve uncertainty and disagreement when the historical record is unclear.
+
+A `researched` status means an initial human-reviewed sourcing pass has been completed. It does not imply permanent certainty or prevent later revision.
 
 ## Editorial standards
 
