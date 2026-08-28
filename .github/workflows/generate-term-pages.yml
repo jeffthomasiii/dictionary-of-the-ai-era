@@ -1,0 +1,116 @@
+name: One-time term page generation
+
+on:
+  push:
+    branches: [feat/dedicated-term-pages]
+    paths:
+      - '.github/workflows/generate-term-pages.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: feat/dedicated-term-pages
+          fetch-depth: 0
+
+      - name: Generate and validate term pages
+        shell: python
+        run: |
+          import html
+          import json
+          from pathlib import Path
+
+          terms = json.loads(Path('data/terms.json').read_text(encoding='utf-8'))
+          provenance = json.loads(Path('data/provenance.json').read_text(encoding='utf-8'))
+          slugs = {term['slug'] for term in terms}
+
+          if len(terms) != 27:
+              raise SystemExit(f'Expected 27 terms, found {len(terms)}')
+          if set(provenance) != slugs:
+              raise SystemExit('Term/provenance slug coverage does not match')
+          if any(provenance[slug].get('researchStatus') != 'researched' for slug in slugs):
+              raise SystemExit('All term pages require researched provenance')
+
+          root = Path('terms')
+          root.mkdir(exist_ok=True)
+
+          brand_svg = '<svg viewBox="0 0 40 40"><path d="M20 2 35 10.5v19L20 38 5 29.5v-19L20 2Z"/><path d="m20 2 0 18 15-9.5M20 20 5 10.5M20 20v18M5 29.5 20 20l15 9.5"/></svg>'
+
+          for term in terms:
+              slug = term['slug']
+              title = html.escape(term['term'])
+              definition = html.escape(term['definition'])
+              pronunciation = html.escape(term.get('pronunciation', ''))
+              description = html.escape(term['definition'], quote=True)
+              page = f'''<!doctype html>
+          <html lang="en">
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="color-scheme" content="light dark">
+            <title>{title} | AILex</title>
+            <meta name="description" content="{description}">
+            <script>
+              (() => {{
+                try {{
+                  const saved = localStorage.getItem("ai-era-theme");
+                  const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+                  document.documentElement.dataset.theme = saved || (systemDark ? "dark" : "light");
+                }} catch (_) {{ document.documentElement.dataset.theme = "light"; }}
+              }})();
+            </script>
+            <link rel="stylesheet" href="../../assets/css/styles.css">
+            <link rel="stylesheet" href="../../assets/css/term-pages.css">
+          </head>
+          <body>
+            <header class="site-header">
+              <div class="shell header-inner">
+                <a class="brand" href="../../" aria-label="AILex home"><span class="brand-mark" aria-hidden="true">{brand_svg}</span><span>AILex</span></a>
+                <nav class="primary-nav" aria-label="Primary navigation">
+                  <a class="active" href="../../">Browse</a><a href="../../categories.html">Categories</a><a href="../../about.html">About</a><a href="../../contribute.html">Contribute</a><a href="../../methodology.html">Methodology</a>
+                </nav>
+                <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme"><span class="sun" aria-hidden="true">☼</span><span class="toggle-track"><span class="toggle-knob"></span></span><span class="moon" aria-hidden="true">☾</span></button>
+              </div>
+            </header>
+
+            <main id="term-page" class="term-page shell" data-term-slug="{html.escape(slug, quote=True)}">
+              <div id="term-fallback" class="term-fallback">
+                <nav class="term-breadcrumb" aria-label="Breadcrumb"><a href="../../">Browse</a><span aria-hidden="true">/</span><span>{title}</span></nav>
+                <p class="eyebrow">AILex entry</p>
+                <h1>{title}</h1>
+                <p class="fallback-pronunciation">{pronunciation}</p>
+                <p class="fallback-definition">{definition}</p>
+              </div>
+            </main>
+
+            <footer class="site-footer"><div class="shell footer-inner"><span class="footer-mark" aria-hidden="true">◎</span><p><strong>AILex · Dictionary of the AI Era</strong><br>Vibe coded · Human-directed · AI-assisted · Human-reviewed</p><p class="footer-license">Code: MIT · Content: CC BY 4.0</p></div></footer>
+            <script src="../../assets/js/app.js"></script>
+            <script src="../../assets/js/term-page.js"></script>
+          </body>
+          </html>
+          '''
+              directory = root / slug
+              directory.mkdir(parents=True, exist_ok=True)
+              (directory / 'index.html').write_text(page, encoding='utf-8')
+
+          generated = list(root.glob('*/index.html'))
+          generated_slugs = {page.parent.name for page in generated}
+          if len(generated) != len(terms) or generated_slugs != slugs:
+              raise SystemExit(f'Generated page mismatch: {len(generated)} pages')
+
+          Path('.github/workflows/generate-term-pages.yml').unlink()
+          print(f'Generated and validated {len(generated)} dedicated term pages')
+
+      - name: Commit generated pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "feat: generate 27 dedicated term pages"
+          git push origin HEAD:feat/dedicated-term-pages
