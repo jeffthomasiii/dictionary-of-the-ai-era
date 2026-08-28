@@ -110,6 +110,11 @@ No build process is required.
 
 - Source citations and provenance for individual terms
 - Dedicated term detail pages
+- Audible pronunciation controls for dictionary terms
+  - Speaker control beside the written pronunciation
+  - Browser-based speech synthesis as the initial implementation
+  - Optional curated audio for unusual, ambiguous, or poorly synthesized terms
+  - Keyboard and screen-reader accessible playback controls
 - Related-term relationships
 - Emerging-term lifecycle
 - AI-language timeline
