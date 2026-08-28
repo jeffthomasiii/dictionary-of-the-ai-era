@@ -3,59 +3,113 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
   <title>Dictionary of the AI Era</title>
   <meta name="description" content="A living dictionary of the language emerging around artificial intelligence.">
+  <script>
+    (() => {
+      const saved = localStorage.getItem("ai-era-theme");
+      const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.dataset.theme = saved || (systemDark ? "dark" : "light");
+    })();
+  </script>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="shell">
-      <a class="brand" href="./">Dictionary of the AI Era</a>
-      <a class="about-link" href="#about">About</a>
+    <div class="shell header-inner">
+      <a class="brand" href="./" aria-label="Dictionary of the AI Era home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" role="img">
+            <path d="M20 2 35 10.5v19L20 38 5 29.5v-19L20 2Z"/>
+            <path d="m20 2 0 18 15-9.5M20 20 5 10.5M20 20v18M5 29.5 20 20l15 9.5"/>
+          </svg>
+        </span>
+        <span>Dictionary of the AI Era</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="#browse">Browse</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About</a>
+        <a href="CONTRIBUTING.md">Contribute</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">
+        <span class="sun" aria-hidden="true">☼</span>
+        <span class="toggle-track"><span class="toggle-knob"></span></span>
+        <span class="moon" aria-hidden="true">☾</span>
+      </button>
     </div>
   </header>
 
   <main>
-    <section class="hero shell">
-      <p class="eyebrow">A living AI dictionary</p>
-      <h1>The language of the AI era, in plain English.</h1>
-      <p class="lede">Search technical concepts, workplace language, emerging slang, safety terms, and the vocabulary forming around artificial intelligence.</p>
+    <section class="hero">
+      <div class="technical-grid" aria-hidden="true"></div>
+      <div class="wave wave-left" aria-hidden="true"></div>
+      <div class="wave wave-right" aria-hidden="true"></div>
+      <div class="shell hero-inner">
+        <aside class="hero-stats" aria-label="Dictionary statistics">
+          <div><span>TERMS</span><strong id="hero-term-count">—</strong></div>
+          <div><span>STATUS</span><strong>Living</strong></div>
+          <div><span>UPDATED</span><strong>2026</strong></div>
+        </aside>
 
-      <label class="search-wrap">
-        <span class="sr-only">Search dictionary</span>
-        <input id="search" type="search" placeholder="Search terms, definitions, aliases..." autocomplete="off">
-      </label>
+        <div class="hero-copy">
+          <p class="eyebrow">A living lexicon</p>
+          <h1>Dictionary of the AI Era</h1>
+          <p class="lede">A living lexicon of artificial intelligence, capturing the terms, concepts, and ideas shaping how we work, create, communicate, and think.</p>
 
-      <div class="toolbar" aria-label="Dictionary filters">
-        <button class="filter active" data-category="all">All terms</button>
-        <button class="filter" data-category="AI Culture & Slang">Culture & Slang</button>
-        <button class="filter" data-category="AI Ways of Working">Ways of Working</button>
-        <button class="filter" data-category="AI Systems & Technical Concepts">Systems & Technical</button>
-        <button class="filter" data-category="AI Risks, Safety & Governance">Risks & Governance</button>
+          <label class="search-wrap">
+            <span class="search-icon" aria-hidden="true"></span>
+            <span class="sr-only">Search dictionary</span>
+            <input id="search" type="search" placeholder="Search terms, concepts, and definitions..." autocomplete="off">
+            <kbd>⌘ K</kbd>
+          </label>
+
+          <div id="categories" class="toolbar" aria-label="Dictionary filters">
+            <button class="filter all active" data-category="all"><span class="category-icon">∞</span><span>All terms</span></button>
+            <button class="filter culture" data-category="AI Culture & Slang"><span class="category-icon">◌</span><span>Culture & Slang</span></button>
+            <button class="filter work" data-category="AI Ways of Working"><span class="category-icon">⌘</span><span>Ways of Working</span></button>
+            <button class="filter systems" data-category="AI Systems & Technical Concepts"><span class="category-icon">◇</span><span>Systems & Technical</span></button>
+            <button class="filter risks" data-category="AI Risks, Safety & Governance"><span class="category-icon">⬡</span><span>Risks & Governance</span></button>
+          </div>
+        </div>
+
+        <blockquote class="hero-quote">
+          <span class="quote-mark">“</span>
+          <p>Language evolves.<br>Understanding empowers.</p>
+          <small>Explore · Learn · Shape</small>
+        </blockquote>
       </div>
     </section>
 
-    <section class="shell dictionary-section">
+    <section id="browse" class="shell dictionary-section">
       <div class="dictionary-meta">
-        <div id="result-count" aria-live="polite"></div>
+        <div class="browse-label">Browse A–Z</div>
         <nav id="alpha-nav" class="alpha-nav" aria-label="Browse alphabetically"></nav>
+        <div id="result-count" aria-live="polite"></div>
       </div>
       <div id="dictionary" class="dictionary"></div>
       <p id="empty-state" class="empty-state" hidden>No matching terms found.</p>
     </section>
 
     <section id="about" class="about shell">
-      <p class="eyebrow">About the project</p>
-      <h2>A dictionary, not just a glossary.</h2>
-      <p>This project catalogs the vocabulary developing around artificial intelligence: technical concepts, new ways of working, emerging slang, and language related to AI risk and governance. Definitions are written for clarity first and are intended to evolve as the language does.</p>
-      <p><strong>Yes, this project is vibe coded.</strong> AI is not only something this dictionary documents; it is part of how the dictionary itself is built. The project is human-directed, AI-assisted, and human-reviewed, with human editorial judgment governing what ultimately gets published.</p>
-      <p><a href="AI-TRANSPARENCY.md">Read the AI transparency policy</a> · <a href="CONTENT-LICENSE.md">Read the dictionary content license</a></p>
+      <div>
+        <p class="eyebrow">About the project</p>
+        <h2>A dictionary, not just a glossary.</h2>
+      </div>
+      <div class="about-copy">
+        <p>This project catalogs the vocabulary developing around artificial intelligence: technical concepts, new ways of working, emerging slang, and language related to AI risk and governance. Definitions are written for clarity first and are intended to evolve as the language does.</p>
+        <p><strong>Yes, this project is vibe coded.</strong> AI is not only something this dictionary documents; it is part of how the dictionary itself is built. The project is human-directed, AI-assisted, and human-reviewed, with human editorial judgment governing what ultimately gets published.</p>
+        <p><a href="AI-TRANSPARENCY.md">AI transparency policy →</a> <a href="CONTENT-LICENSE.md">Content license →</a></p>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="shell">
-      <p>Dictionary of the AI Era · Vibe coded · Human-directed · AI-assisted · Human-reviewed</p>
+    <div class="shell footer-inner">
+      <span class="footer-mark" aria-hidden="true">◎</span>
+      <p><strong>Living & evolving.</strong><br>Vibe coded · Human-directed · AI-assisted · Human-reviewed</p>
+      <p class="footer-license">Code: MIT · Content: CC BY 4.0</p>
     </div>
   </footer>
   <script src="assets/js/app.js"></script>
