@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dictionary of the AI Era</title>
+  <meta name="description" content="A living dictionary of the language emerging around artificial intelligence.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell">
+      <a class="brand" href="./">Dictionary of the AI Era</a>
+      <a class="about-link" href="#about">About</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero shell">
+      <p class="eyebrow">A living AI dictionary</p>
+      <h1>The language of the AI era, in plain English.</h1>
+      <p class="lede">Search technical concepts, workplace language, emerging slang, safety terms, and the vocabulary forming around artificial intelligence.</p>
+
+      <label class="search-wrap">
+        <span class="sr-only">Search dictionary</span>
+        <input id="search" type="search" placeholder="Search terms, definitions, aliases..." autocomplete="off">
+      </label>
+
+      <div class="toolbar" aria-label="Dictionary filters">
+        <button class="filter active" data-category="all">All terms</button>
+        <button class="filter" data-category="AI Culture & Slang">Culture & Slang</button>
+        <button class="filter" data-category="AI Ways of Working">Ways of Working</button>
+        <button class="filter" data-category="AI Systems & Technical Concepts">Systems & Technical</button>
+        <button class="filter" data-category="AI Risks, Safety & Governance">Risks & Governance</button>
+      </div>
+    </section>
+
+    <section class="shell dictionary-section">
+      <div class="dictionary-meta">
+        <div id="result-count" aria-live="polite"></div>
+        <nav id="alpha-nav" class="alpha-nav" aria-label="Browse alphabetically"></nav>
+      </div>
+      <div id="dictionary" class="dictionary"></div>
+      <p id="empty-state" class="empty-state" hidden>No matching terms found.</p>
+    </section>
+
+    <section id="about" class="about shell">
+      <p class="eyebrow">About the project</p>
+      <h2>A dictionary, not just a glossary.</h2>
+      <p>This project catalogs the vocabulary developing around artificial intelligence: technical concepts, new ways of working, emerging slang, and language related to AI risk and governance. Definitions are written for clarity first and are intended to evolve as the language does.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <p>Dictionary of the AI Era · Living reference project</p>
+    </div>
+  </footer>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
