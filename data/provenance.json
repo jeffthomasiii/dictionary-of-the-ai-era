@@ -2021,5 +2021,430 @@
         ]
       }
     ]
+  },
+  "prompt": {
+    "researchStatus": "researched",
+    "origin": "Prompt is an older computing and interaction term that became central to generative AI as pretrained language models began accepting natural-language input to condition their behavior. AILex does not assign a single generative-AI coinage event.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2020",
+        "event": "Large language models such as GPT-3 helped make natural-language prompting a primary way to adapt model behavior without parameter updates."
+      }
+    ],
+    "relatedTerms": [
+      "prompt-engineering",
+      "system-prompt",
+      "user-prompt",
+      "developer-prompt",
+      "few-shot",
+      "zero-shot"
+    ],
+    "sources": [
+      {
+        "id": "google-ml-glossary-prompt",
+        "type": "reference",
+        "publisher": "Google for Developers",
+        "title": "Machine Learning Glossary",
+        "published": "2026",
+        "url": "https://developers.google.com/machine-learning/glossary",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "user-prompt": {
+    "researchStatus": "researched",
+    "origin": "User prompt is a practical role-based label used in chat and model APIs for input attributed to the end user. The wording varies by platform, so AILex treats it as a functional category rather than a coined term.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2026",
+        "event": "OpenAI API documentation defines user messages as end-user messages containing prompts or additional context and places them below developer or system instructions in the instruction hierarchy."
+      }
+    ],
+    "relatedTerms": [
+      "prompt",
+      "developer-prompt",
+      "system-prompt",
+      "prompt-engineering"
+    ],
+    "sources": [
+      {
+        "id": "openai-message-roles-2026",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "OpenAI API Reference: message roles",
+        "published": "2026",
+        "url": "https://platform.openai.com/docs/api-reference/chat/object",
+        "supports": [
+          "definition",
+          "usage",
+          "history"
+        ]
+      }
+    ]
+  },
+  "developer-prompt": {
+    "researchStatus": "researched",
+    "origin": "Developer prompt reflects the modern API practice of separating application-level instructions from end-user input. OpenAI's newer model APIs use the developer role for instructions that take precedence over user messages, while other platforms may use different names for the same architectural idea.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2026",
+        "event": "OpenAI API documentation describes developer instructions as higher priority than user instructions and recommends the developer role for newer models where older APIs often used system messages."
+      }
+    ],
+    "relatedTerms": [
+      "prompt",
+      "user-prompt",
+      "system-prompt",
+      "prompt-engineering"
+    ],
+    "sources": [
+      {
+        "id": "openai-developer-role-2026",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "OpenAI API Reference: developer and user roles",
+        "published": "2026",
+        "url": "https://platform.openai.com/docs/api-reference/responses-streaming/response/output_item?lang=node.js",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "prompt-template": {
+    "researchStatus": "researched",
+    "origin": "Prompt templates are an application-development pattern that applies ordinary software templating to reusable AI prompts. The pattern does not have a single defensible AI-era coinage event.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2026",
+        "event": "Google Cloud documentation describes prompt templates as prompts with replaceable variables that can be reused with different prompt data."
+      }
+    ],
+    "relatedTerms": [
+      "prompt",
+      "prompt-engineering",
+      "prompt-chaining",
+      "system-prompt"
+    ],
+    "sources": [
+      {
+        "id": "google-prompt-templates-2026",
+        "type": "primary",
+        "publisher": "Google Cloud",
+        "title": "Use prompt templates",
+        "published": "2026",
+        "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/prompts/prompt-templates",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "prompt-chaining": {
+    "researchStatus": "researched",
+    "origin": "Prompt chaining developed as a practical way to decompose generative-AI tasks into sequential model calls. AILex does not assign a single coinage event because similar multi-stage pipelines appeared across early LLM tooling and prompting practice.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2026",
+        "event": "Google's machine-learning glossary defines prompt chaining as using the output of one prompt as the input to another."
+      }
+    ],
+    "relatedTerms": [
+      "prompt",
+      "prompt-template",
+      "prompt-engineering",
+      "chain-of-thought"
+    ],
+    "sources": [
+      {
+        "id": "google-ml-glossary-prompt-chaining",
+        "type": "reference",
+        "publisher": "Google for Developers",
+        "title": "Machine Learning Glossary",
+        "published": "2026",
+        "url": "https://developers.google.com/machine-learning/glossary",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "one-shot": {
+    "researchStatus": "researched",
+    "origin": "One-shot learning predates large language models. In modern prompting, the term refers to providing one demonstration in the model's context before the target query. The GPT-3 paper formalized one-shot as one of its principal in-context evaluation settings.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2020-05-28",
+        "event": "The GPT-3 paper evaluated one-shot learning as an in-context setting with a single demonstration and no gradient updates."
+      }
+    ],
+    "relatedTerms": [
+      "zero-shot",
+      "few-shot",
+      "in-context-learning",
+      "prompt"
+    ],
+    "sources": [
+      {
+        "id": "brown-gpt3-one-shot-2020",
+        "type": "primary",
+        "publisher": "arXiv / NeurIPS",
+        "title": "Language Models are Few-Shot Learners",
+        "published": "2020-05-28",
+        "url": "https://arxiv.org/abs/2005.14165",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      },
+      {
+        "id": "google-one-shot-prompting",
+        "type": "reference",
+        "publisher": "Google for Developers",
+        "title": "Machine Learning Glossary",
+        "published": "2026",
+        "url": "https://developers.google.com/machine-learning/glossary",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "in-context-learning": {
+    "researchStatus": "researched",
+    "origin": "In-context learning describes adaptation that occurs through information supplied in a model's current input rather than through weight updates. The 2020 GPT-3 paper made the concept a central part of large-language-model evaluation and usage.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2020-05-28",
+        "event": "The GPT-3 paper described and evaluated in-context learning across zero-shot, one-shot, and few-shot settings without gradient updates or fine-tuning."
+      }
+    ],
+    "relatedTerms": [
+      "few-shot",
+      "one-shot",
+      "zero-shot",
+      "context-window",
+      "prompt"
+    ],
+    "sources": [
+      {
+        "id": "brown-gpt3-icl-2020",
+        "type": "primary",
+        "publisher": "arXiv / NeurIPS",
+        "title": "Language Models are Few-Shot Learners",
+        "published": "2020-05-28",
+        "url": "https://arxiv.org/abs/2005.14165",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "context-engineering": {
+    "researchStatus": "researched",
+    "origin": "Context engineering emerged as a broader companion to prompt engineering as agentic systems required developers to manage not only instructions but also tools, retrieved data, message history, memory, and other state within a finite context window. Anthropic described the term as having come to prominence by 2025 rather than attributing it to a single inventor.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2025-09-29",
+        "event": "Anthropic published ‘Effective context engineering for AI agents,’ distinguishing context engineering from prompt engineering and framing it as curation of the full token context used during inference."
+      }
+    ],
+    "relatedTerms": [
+      "context-window",
+      "prompt-engineering",
+      "prompt",
+      "retrieval",
+      "mcp",
+      "ai-agent"
+    ],
+    "sources": [
+      {
+        "id": "anthropic-context-engineering-2025",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Effective context engineering for AI agents",
+        "published": "2025-09-29",
+        "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "prompt-caching": {
+    "researchStatus": "researched",
+    "origin": "Prompt caching is an optimization pattern in which model providers reuse computation for repeated prompt prefixes or context. OpenAI introduced automatic Prompt Caching in its API in October 2024, while similar caching capabilities have also existed on other model platforms.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2024-10-01",
+        "event": "OpenAI introduced automatic Prompt Caching for supported API models, reducing latency and input cost when prompts reuse previously seen token prefixes."
+      }
+    ],
+    "relatedTerms": [
+      "prompt",
+      "context-window",
+      "token",
+      "inference"
+    ],
+    "sources": [
+      {
+        "id": "openai-prompt-caching-2024",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "Prompt Caching in the API",
+        "published": "2024-10-01",
+        "url": "https://openai.com/index/api-prompt-caching/",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "chunking": {
+    "researchStatus": "researched",
+    "origin": "Chunking is an older information-processing technique. In modern RAG systems, it commonly refers to splitting documents into smaller indexable and retrievable units so relevant passages can be found and supplied to a model efficiently.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2024-03-28",
+        "event": "Google Cloud announced document-chunking improvements for Vertex AI Search and described chunking as a way to improve relevance and reduce computational load for RAG."
+      }
+    ],
+    "relatedTerms": [
+      "rag",
+      "retrieval",
+      "embedding",
+      "vector-database",
+      "context-window"
+    ],
+    "sources": [
+      {
+        "id": "google-document-chunking-rag",
+        "type": "primary",
+        "publisher": "Google Cloud",
+        "title": "Parse and chunk documents",
+        "published": "2026",
+        "url": "https://docs.cloud.google.com/generative-ai-app-builder/docs/parse-chunk-documents",
+        "supports": [
+          "definition",
+          "usage",
+          "history"
+        ]
+      }
+    ]
+  },
+  "retrieval": {
+    "researchStatus": "researched",
+    "origin": "Information retrieval is a field much older than generative AI. In contemporary AI systems, retrieval commonly refers to selecting the information most relevant to a query so it can be searched, ranked, or supplied to a generative model.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2020-05-22",
+        "event": "The RAG paper combined neural retrieval with generation and helped make retrieval a central component of modern knowledge-grounded language-model systems."
+      }
+    ],
+    "relatedTerms": [
+      "rag",
+      "reranking",
+      "semantic-search",
+      "vector-database",
+      "chunking",
+      "grounding"
+    ],
+    "sources": [
+      {
+        "id": "google-rag-retrieval-2026",
+        "type": "primary",
+        "publisher": "Google Cloud",
+        "title": "Vertex AI APIs for building search and RAG experiences",
+        "published": "2026",
+        "url": "https://docs.cloud.google.com/generative-ai-app-builder/docs/builder-apis",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      },
+      {
+        "id": "lewis-rag-retrieval-2020",
+        "type": "primary",
+        "publisher": "arXiv / NeurIPS",
+        "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+        "published": "2020-05-22",
+        "url": "https://arxiv.org/abs/2005.11401",
+        "supports": [
+          "history",
+          "research"
+        ]
+      }
+    ]
+  },
+  "reranking": {
+    "researchStatus": "researched",
+    "origin": "Reranking is an established information-retrieval technique that predates generative AI. In RAG and semantic-search pipelines, it usually refers to applying a second-stage model or scoring method to reorder an initially retrieved candidate set by relevance.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2025",
+        "event": "Google Cloud documented reranking as a step after retrieval that can improve which chunks or documents are supplied to an LLM for grounding."
+      }
+    ],
+    "relatedTerms": [
+      "retrieval",
+      "semantic-search",
+      "rag",
+      "chunking",
+      "embedding"
+    ],
+    "sources": [
+      {
+        "id": "google-ranking-api-rag-2025",
+        "type": "primary",
+        "publisher": "Google Cloud",
+        "title": "Improve search and RAG quality with ranking API",
+        "published": "2025",
+        "url": "https://cloud.google.com/generative-ai-app-builder/docs/ranking",
+        "supports": [
+          "definition",
+          "usage",
+          "history"
+        ]
+      },
+      {
+        "id": "cohere-reranking-docs",
+        "type": "primary",
+        "publisher": "Cohere",
+        "title": "Master Reranking with Cohere Models",
+        "published": null,
+        "url": "https://docs.cohere.com/docs/reranking-with-cohere",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
   }
 }
