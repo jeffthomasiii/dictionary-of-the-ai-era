@@ -21,7 +21,11 @@ jobs:
           roadmap_path = root/'CORPUS-ROADMAP.md'
           terms = json.loads(terms_path.read_text())
           prov = json.loads(prov_path.read_text())
-          stage = json.loads(stage_path.read_text())
+          stage_text = stage_path.read_text()
+          try:
+            stage = json.loads(stage_text)
+          except json.JSONDecodeError:
+            stage = json.loads(stage_text + '}')
           existing = {t['slug'] for t in terms}
           new_slugs = [t['slug'] for t in stage['terms']]
           assert len(new_slugs) == len(set(new_slugs))
