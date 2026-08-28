@@ -203,6 +203,43 @@
       }
     ]
   },
+  "chain-of-thought": {
+    "researchStatus": "researched",
+    "origin": "Jason Wei and colleagues introduced ‘chain-of-thought prompting’ in a 2022 paper for prompting large language models with examples that include intermediate reasoning steps.",
+    "firstKnownUse": {
+      "date": "2022-01-28",
+      "precision": "day",
+      "note": "The first arXiv version of ‘Chain-of-Thought Prompting Elicits Reasoning in Large Language Models’ introduced the named prompting method."
+    },
+    "history": [
+      {
+        "date": "2022-01-28",
+        "event": "Wei and colleagues published the first arXiv version of the chain-of-thought prompting paper."
+      }
+    ],
+    "relatedTerms": [
+      "prompt-engineering",
+      "reasoning-model",
+      "few-shot",
+      "large-language-model"
+    ],
+    "sources": [
+      {
+        "id": "wei-chain-of-thought-2022",
+        "type": "primary",
+        "publisher": "arXiv / NeurIPS",
+        "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+        "published": "2022-01-28",
+        "url": "https://arxiv.org/abs/2201.11903",
+        "supports": [
+          "origin",
+          "definition",
+          "firstKnownUse",
+          "history"
+        ]
+      }
+    ]
+  },
   "context-window": {
     "researchStatus": "researched",
     "origin": "‘Context window’ is an established language-model term rather than a generative-AI coinage. It refers to the amount of input context a model can reference while generating new output, functioning as a bounded working memory distinct from the model’s training corpus.",
@@ -297,6 +334,81 @@
       }
     ]
   },
+  "diffusion-model": {
+    "researchStatus": "researched",
+    "origin": "Modern diffusion-based generative modeling traces to research that applies a forward process which gradually destroys structure with noise and learns a reverse process that reconstructs data. AILex does not claim the generic phrase ‘diffusion model’ was first coined by one paper.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2015-03-12",
+        "event": "Sohl-Dickstein and colleagues submitted ‘Deep Unsupervised Learning using Nonequilibrium Thermodynamics,’ an influential early diffusion-based generative-model paper."
+      }
+    ],
+    "relatedTerms": [
+      "generative-ai",
+      "synthetic-content",
+      "multimodal"
+    ],
+    "sources": [
+      {
+        "id": "sohl-dickstein-diffusion-2015",
+        "type": "primary",
+        "publisher": "arXiv / ICML",
+        "title": "Deep Unsupervised Learning using Nonequilibrium Thermodynamics",
+        "published": "2015-03-12",
+        "url": "https://arxiv.org/abs/1503.03585",
+        "supports": [
+          "definition",
+          "history",
+          "research"
+        ]
+      }
+    ]
+  },
+  "embedding": {
+    "researchStatus": "researched",
+    "origin": "Vector representations and embeddings have a long history in statistics, machine learning, and natural-language processing, so AILex does not assign the term to a single origin. Modern AI usage commonly refers to learned numerical representations in which semantic or structural similarity is reflected by proximity in vector space.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2013-01-16",
+        "event": "Mikolov and colleagues published work on efficient continuous vector representations of words, helping popularize modern neural word embeddings through word2vec."
+      }
+    ],
+    "relatedTerms": [
+      "vector-database",
+      "semantic-search",
+      "rag",
+      "grounding",
+      "transformer"
+    ],
+    "sources": [
+      {
+        "id": "mikolov-word-vectors-2013",
+        "type": "primary",
+        "publisher": "arXiv",
+        "title": "Efficient Estimation of Word Representations in Vector Space",
+        "published": "2013-01-16",
+        "url": "https://arxiv.org/abs/1301.3781",
+        "supports": [
+          "history",
+          "research"
+        ]
+      },
+      {
+        "id": "google-embeddings-overview",
+        "type": "reference",
+        "publisher": "Google for Developers",
+        "title": "Embeddings: Obtaining embeddings",
+        "published": "2026",
+        "url": "https://developers.google.com/machine-learning/crash-course/embeddings/obtaining-embeddings",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
   "few-shot": {
     "researchStatus": "researched",
     "origin": "Few-shot learning predates modern generative AI, but the term became central to large-language-model prompting through work such as the 2020 GPT-3 paper, which evaluated task performance from a small number of demonstrations supplied in text.",
@@ -323,6 +435,111 @@
         "supports": [
           "definition",
           "history"
+        ]
+      }
+    ]
+  },
+  "fine-tuning": {
+    "researchStatus": "researched",
+    "origin": "Fine-tuning is an established machine-learning term that predates the generative-AI era. It describes adapting an already pretrained model through additional training on task-specific or domain-specific data.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2020s",
+        "event": "Fine-tuning became a common way to adapt large pretrained and foundation models to specialized behaviors and domains."
+      }
+    ],
+    "relatedTerms": [
+      "foundation-model",
+      "rlhf",
+      "few-shot",
+      "zero-shot"
+    ],
+    "sources": [
+      {
+        "id": "nist-fine-tuning-glossary",
+        "type": "reference",
+        "publisher": "NIST",
+        "title": "fine-tuning - Glossary",
+        "published": "2025",
+        "url": "https://csrc.nist.gov/glossary/term/fine_tuning",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "foundation-model": {
+    "researchStatus": "researched",
+    "origin": "Rishi Bommasani and colleagues introduced the term ‘foundation model’ in 2021 for models trained on broad data at scale that can be adapted to a wide range of downstream tasks.",
+    "firstKnownUse": {
+      "date": "2021-08-16",
+      "precision": "day",
+      "note": "The Stanford report submitted to arXiv on August 16, 2021 explicitly says, ‘We call these models foundation models.’"
+    },
+    "history": [
+      {
+        "date": "2021-08-16",
+        "event": "Stanford researchers published ‘On the Opportunities and Risks of Foundation Models,’ naming and defining the category."
+      }
+    ],
+    "relatedTerms": [
+      "large-language-model",
+      "fine-tuning",
+      "multimodal",
+      "generative-ai"
+    ],
+    "sources": [
+      {
+        "id": "bommasani-foundation-models-2021",
+        "type": "primary",
+        "publisher": "Stanford / arXiv",
+        "title": "On the Opportunities and Risks of Foundation Models",
+        "published": "2021-08-16",
+        "url": "https://arxiv.org/abs/2108.07258",
+        "supports": [
+          "origin",
+          "definition",
+          "firstKnownUse",
+          "history"
+        ]
+      }
+    ]
+  },
+  "generative-ai": {
+    "researchStatus": "researched",
+    "origin": "Generative modeling predates the current generative-AI boom, and AILex does not assign the phrase to a single inventor. In contemporary usage, generative AI refers to AI models or systems that generate new synthetic content based on patterns learned from input or training data.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2022-11-30",
+        "event": "The public release of ChatGPT accelerated mainstream awareness and adoption of generative AI systems."
+      },
+      {
+        "date": "2024-07-26",
+        "event": "NIST published its Generative Artificial Intelligence Profile, defining and organizing risk-management guidance for generative AI."
+      }
+    ],
+    "relatedTerms": [
+      "synthetic-content",
+      "foundation-model",
+      "large-language-model",
+      "diffusion-model",
+      "multimodal"
+    ],
+    "sources": [
+      {
+        "id": "nist-genai-profile-2024",
+        "type": "primary",
+        "publisher": "NIST",
+        "title": "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
+        "published": "2024-07-26",
+        "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+        "supports": [
+          "definition",
+          "history",
+          "risk"
         ]
       }
     ]
@@ -501,6 +718,55 @@
         "url": "https://cloud.google.com/discover/what-is-ai-inference",
         "supports": [
           "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "large-language-model": {
+    "researchStatus": "researched",
+    "origin": "Large language models grew out of decades of statistical language modeling and neural-network research. AILex does not assign the phrase to a single coinage event; in current usage it describes very large language models trained on extensive data, typically using deep-learning architectures such as transformers.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2017-06-12",
+        "event": "The Transformer architecture was introduced, providing the architectural basis for many later large language models."
+      },
+      {
+        "date": "2020-05-28",
+        "event": "The GPT-3 paper demonstrated broad few-shot capabilities at 175 billion parameters and helped establish the modern scale-driven LLM era."
+      }
+    ],
+    "relatedTerms": [
+      "foundation-model",
+      "transformer",
+      "token",
+      "context-window",
+      "prompt-engineering",
+      "reasoning-model"
+    ],
+    "sources": [
+      {
+        "id": "google-cloud-llm-overview",
+        "type": "reference",
+        "publisher": "Google Cloud",
+        "title": "Large Language Models (LLMs)",
+        "published": null,
+        "url": "https://cloud.google.com/ai/llms",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      },
+      {
+        "id": "brown-gpt3-2020",
+        "type": "primary",
+        "publisher": "arXiv / NeurIPS",
+        "title": "Language Models are Few-Shot Learners",
+        "published": "2020-05-28",
+        "url": "https://arxiv.org/abs/2005.14165",
+        "supports": [
+          "history",
           "usage"
         ]
       }
@@ -824,6 +1090,86 @@
       }
     ]
   },
+  "rlhf": {
+    "researchStatus": "researched",
+    "origin": "Reinforcement learning from human feedback combines reinforcement-learning methods with human judgments or preferences to help define what behavior should be rewarded. The approach has roots before modern LLMs; AILex does not claim that the acronym RLHF itself originated in the 2017 paper commonly associated with the modern method.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2017-06-12",
+        "event": "Christiano and colleagues published ‘Deep Reinforcement Learning from Human Preferences,’ demonstrating complex behaviors learned from human preference feedback."
+      },
+      {
+        "date": "2022-03-04",
+        "event": "OpenAI's InstructGPT paper showed how human demonstrations and preference rankings could be used to align a large language model with user intent, helping popularize RLHF in the LLM era."
+      }
+    ],
+    "relatedTerms": [
+      "fine-tuning",
+      "human-in-the-loop",
+      "foundation-model",
+      "large-language-model"
+    ],
+    "sources": [
+      {
+        "id": "christiano-human-preferences-2017",
+        "type": "primary",
+        "publisher": "arXiv / NeurIPS",
+        "title": "Deep reinforcement learning from human preferences",
+        "published": "2017-06-12",
+        "url": "https://arxiv.org/abs/1706.03741",
+        "supports": [
+          "definition",
+          "history",
+          "research"
+        ]
+      },
+      {
+        "id": "ouyang-instructgpt-2022",
+        "type": "primary",
+        "publisher": "arXiv",
+        "title": "Training language models to follow instructions with human feedback",
+        "published": "2022-03-04",
+        "url": "https://arxiv.org/abs/2203.02155",
+        "supports": [
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "semantic-search": {
+    "researchStatus": "researched",
+    "origin": "Semantic search predates modern generative AI and grew from information-retrieval and natural-language-processing efforts to search by meaning rather than exact lexical matching. Its current AI usage often combines embeddings with vector similarity techniques.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2020s",
+        "event": "Embedding-based vector search made semantic search a common building block in modern AI retrieval and RAG systems."
+      }
+    ],
+    "relatedTerms": [
+      "embedding",
+      "vector-database",
+      "rag",
+      "grounding"
+    ],
+    "sources": [
+      {
+        "id": "google-semantic-search-2026",
+        "type": "reference",
+        "publisher": "Google Cloud",
+        "title": "What is semantic search, and how does it work?",
+        "published": "2026-01-14",
+        "url": "https://cloud.google.com/discover/what-is-semantic-search",
+        "supports": [
+          "definition",
+          "usage",
+          "history"
+        ]
+      }
+    ]
+  },
   "shadow-ai": {
     "researchStatus": "researched",
     "origin": "‘Shadow AI’ extends the established enterprise-technology concept of ‘shadow IT’ to artificial-intelligence tools and services used without organizational approval, visibility, governance, or oversight. The expression grew alongside employee adoption of public generative-AI tools, but AILex does not currently identify a single defensible coinage event.",
@@ -920,6 +1266,37 @@
       }
     ]
   },
+  "system-prompt": {
+    "researchStatus": "researched",
+    "origin": "The practice of giving software systems privileged or application-level instructions predates current LLMs, and AILex does not assign ‘system prompt’ to a single coinage. In modern generative AI, the term refers to instructions supplied by the model developer or application layer that establish behavior or context before ordinary user input.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2023",
+        "event": "Chat-based LLM APIs made role-separated instructions, including system-level messages, a mainstream application-development pattern."
+      }
+    ],
+    "relatedTerms": [
+      "prompt-engineering",
+      "prompt-injection",
+      "context-window",
+      "grounding"
+    ],
+    "sources": [
+      {
+        "id": "nist-system-prompt-glossary",
+        "type": "reference",
+        "publisher": "NIST",
+        "title": "system prompt - Glossary",
+        "published": "2025",
+        "url": "https://csrc.nist.gov/glossary/term/system_prompt",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
   "token": {
     "researchStatus": "researched",
     "origin": "Tokens are an established concept in computing and natural-language processing, not a generative-AI coinage. In language models, tokenization divides text into the units the model processes, and those units may be whole words, word pieces, characters, punctuation, or other text fragments depending on the tokenizer.",
@@ -973,6 +1350,87 @@
           "definition",
           "history",
           "usage"
+        ]
+      }
+    ]
+  },
+  "transformer": {
+    "researchStatus": "researched",
+    "origin": "Ashish Vaswani and colleagues introduced the Transformer architecture in the 2017 paper ‘Attention Is All You Need,’ proposing a sequence-processing architecture based on attention mechanisms rather than recurrence or convolution.",
+    "firstKnownUse": {
+      "date": "2017-06-12",
+      "precision": "day",
+      "note": "The first arXiv version of ‘Attention Is All You Need’ introduced the architecture as ‘the Transformer.’"
+    },
+    "history": [
+      {
+        "date": "2017-06-12",
+        "event": "‘Attention Is All You Need’ introduced the Transformer architecture."
+      }
+    ],
+    "relatedTerms": [
+      "large-language-model",
+      "context-window",
+      "token",
+      "embedding"
+    ],
+    "sources": [
+      {
+        "id": "vaswani-transformer-2017",
+        "type": "primary",
+        "publisher": "arXiv / NeurIPS",
+        "title": "Attention Is All You Need",
+        "published": "2017-06-12",
+        "url": "https://arxiv.org/abs/1706.03762",
+        "supports": [
+          "origin",
+          "definition",
+          "firstKnownUse",
+          "history"
+        ]
+      }
+    ]
+  },
+  "vector-database": {
+    "researchStatus": "researched",
+    "origin": "Vector databases developed from established work in vector similarity search, nearest-neighbor indexing, and specialized data systems. AILex does not assign the modern product category to one inventor. In current AI applications, the term commonly refers to databases optimized to store, index, and query vector embeddings.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2020s",
+        "event": "Vector databases became a prominent component of generative-AI application stacks as embeddings, semantic search, and retrieval-augmented generation became widely used."
+      }
+    ],
+    "relatedTerms": [
+      "embedding",
+      "semantic-search",
+      "rag",
+      "grounding"
+    ],
+    "sources": [
+      {
+        "id": "google-vector-database",
+        "type": "reference",
+        "publisher": "Google Cloud",
+        "title": "What is a vector database?",
+        "published": null,
+        "url": "https://cloud.google.com/discover/what-is-a-vector-database",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      },
+      {
+        "id": "microsoft-vector-database-2026",
+        "type": "reference",
+        "publisher": "Microsoft Learn",
+        "title": "Vector databases",
+        "published": "2026-06-23",
+        "url": "https://learn.microsoft.com/en-us/fabric/real-time-intelligence/vector-database",
+        "supports": [
+          "definition",
+          "usage",
+          "history"
         ]
       }
     ]

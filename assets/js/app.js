@@ -25,7 +25,9 @@ const speechOverrides = {
   "ai-native": "A I native",
   "ai-slop": "A I slop",
   "ai-washing": "A I washing",
+  "generative-ai": "generative A I",
   "mcp": "M C P",
+  "rlhf": "R L H F",
   "shadow-ai": "shadow A I"
 };
 
