@@ -46,16 +46,37 @@ function wirePronunciation(term) {
   if (button) window.AILexPronunciation?.wire(button, term);
 }
 
-function renderTermPage(term, provenance, termsBySlug) {
+function relatedConnections(slug, provenance, allProvenance, termsBySlug) {
+  const direct = new Set(provenance.relatedTerms || []);
+  const reciprocal = new Set();
+
+  Object.entries(allProvenance || {}).forEach(([otherSlug, record]) => {
+    if (otherSlug !== slug && (record.relatedTerms || []).includes(slug)) reciprocal.add(otherSlug);
+  });
+
+  const ordered = [...direct, ...[...reciprocal].filter(item => !direct.has(item))];
+  return ordered
+    .map(relatedSlug => termsBySlug.get(relatedSlug))
+    .filter(Boolean);
+}
+
+function renderRelatedCards(relatedTerms = []) {
+  if (!relatedTerms.length) return `<p class="muted-note">No related entries are currently recorded.</p>`;
+
+  return `<div class="related-term-grid">${relatedTerms.map(relatedTerm => `
+    <a class="related-term-card" data-related-category="${categoryKey(relatedTerm)}" href="../${encodeURIComponent(relatedTerm.slug)}/">
+      <div class="related-card-topline"><span class="related-card-category">${termEsc((relatedTerm.categories || [])[0] || "AILex term")}</span><span class="related-card-arrow" aria-hidden="true">→</span></div>
+      <h3>${termEsc(relatedTerm.term)}</h3>
+      <p>${termEsc(relatedTerm.definition)}</p>
+    </a>`).join("")}</div>`;
+}
+
+function renderTermPage(term, provenance, termsBySlug, allProvenance) {
   const category = categoryKey(term);
   termPage.dataset.category = category;
   document.title = `${term.term} | AILex`;
 
-  const related = (provenance.relatedTerms || []).map(slug => {
-    const relatedTerm = termsBySlug.get(slug);
-    return relatedTerm ? `<a class="related-term" href="../${encodeURIComponent(slug)}/">${termEsc(relatedTerm.term)}</a>` : "";
-  }).filter(Boolean).join("");
-
+  const related = relatedConnections(term.slug, provenance, allProvenance, termsBySlug);
   const history = (provenance.history || []).length
     ? `<ol class="history-list">${provenance.history.map(item => `<li><time>${termEsc(formatDate(item.date))}</time><p>${termEsc(item.event)}</p></li>`).join("")}</ol>`
     : `<p class="muted-note">No separate history milestones are currently recorded.</p>`;
@@ -76,12 +97,13 @@ function renderTermPage(term, provenance, termsBySlug) {
         ${term.aliases?.length ? `<section class="term-section"><span class="entry-label">Also known as</span><p>${term.aliases.map(termEsc).join(", ")}</p></section>` : ""}
         <section class="term-section"><span class="entry-label">Origin & context</span><p>${termEsc(provenance.origin || "Origin research is not yet available.")}</p></section>
         <section class="term-section"><span class="entry-label">History</span>${history}</section>
+        <section class="term-section related-discovery-section"><span class="entry-label">Explore related terms</span><p class="related-intro">Continue through concepts connected to this entry in AILex.</p>${renderRelatedCards(related)}</section>
         <section class="term-section"><span class="entry-label">Sources</span><ol class="source-list">${renderSources(provenance.sources || [])}</ol></section>
       </div>
       <aside class="term-side-column">
         <section class="term-fact-card"><span class="entry-label">First known use</span>${renderFirstKnownUse(provenance)}</section>
         <section class="term-fact-card"><span class="entry-label">Research status</span><p class="research-status">${termEsc(provenance.researchStatus || "unknown")}</p></section>
-        <section class="term-fact-card"><span class="entry-label">Related terms</span><div class="related-terms">${related || `<span class="muted-note">None listed yet.</span>`}</div></section>
+        <section class="term-fact-card connection-summary"><span class="entry-label">Connections</span><p class="connection-count">${related.length}</p><p>${related.length === 1 ? "related AILex entry" : "related AILex entries"}</p></section>
         <section class="term-fact-card term-record-meta"><span class="entry-label">Entry record</span><p>Added ${termEsc(formatDate(term.added))}</p><p>Last reviewed ${termEsc(formatDate(term.lastReviewed))}</p></section>
       </aside>
     </div>`;
@@ -99,7 +121,7 @@ if (termPage) {
     const term = termsBySlug.get(slug);
     const record = provenance[slug];
     if (!term || !record) throw new Error("This AILex entry could not be found.");
-    renderTermPage(term, record, termsBySlug);
+    renderTermPage(term, record, termsBySlug, provenance);
   }).catch(error => {
     const fallback = document.getElementById("term-fallback");
     if (fallback) fallback.insertAdjacentHTML("beforeend", `<p class="term-load-error">${termEsc(error.message)}</p>`);
