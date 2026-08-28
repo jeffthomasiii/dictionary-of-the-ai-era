@@ -11,7 +11,11 @@ app_path = root / 'assets/js/app.js'
 
 terms = json.loads(terms_path.read_text())
 prov = json.loads(prov_path.read_text())
-stage = json.loads(stage_path.read_text())
+stage_text = stage_path.read_text()
+try:
+    stage = json.loads(stage_text)
+except json.JSONDecodeError:
+    stage = json.loads(stage_text + '}')
 
 assert len(terms) == 85, len(terms)
 existing = {t['slug'] for t in terms}
