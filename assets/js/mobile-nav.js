@@ -68,4 +68,11 @@
   const desktopQuery = window.matchMedia('(min-width: 981px)');
   const closeOnDesktop = event => { if (event.matches) setOpen(false); };
   desktopQuery.addEventListener?.('change', closeOnDesktop);
+
+  if (document.getElementById('dictionary') && currentScript?.src && !document.querySelector('script[data-mobile-browse-loader]')) {
+    const browseScript = document.createElement('script');
+    browseScript.src = new URL('mobile-browse.js', currentScript.src).href;
+    browseScript.dataset.mobileBrowseLoader = 'true';
+    document.head.append(browseScript);
+  }
 })();
