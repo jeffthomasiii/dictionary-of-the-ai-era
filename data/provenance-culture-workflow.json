@@ -1,0 +1,110 @@
+{
+  "ai-native": {
+    "researchStatus": "researched",
+    "origin": "‘AI-native’ does not have a single established coinage. The phrase is used to distinguish products, companies, workflows, or systems designed around AI from the beginning from systems that add AI later as a feature. Industry usage was well established by 2023 and has since broadened across software, organizations, and operating models.",
+    "firstKnownUse": null,
+    "history": [
+      {"date": "2023-02-27", "event": "McKinsey published ‘The AI-native telco,’ using AI-native to describe organizations and operating models that integrate AI broadly rather than through isolated add-on projects."},
+      {"date": "2026-02-03", "event": "IBM described AI-native products, companies, and workflows as designed from the ground up with AI as a core component rather than bolted on later."}
+    ],
+    "relatedTerms": ["agentic", "ai-agent", "copilot"],
+    "sources": [
+      {"id": "mckinsey-ai-native-telco-2023", "type": "secondary", "publisher": "McKinsey & Company", "title": "The AI-native telco: Radical transformation to thrive in turbulent times", "published": "2023-02-27", "url": "https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-ai-native-telco-radical-transformation-to-thrive-in-turbulent-times", "supports": ["history", "usage"]},
+      {"id": "ibm-ai-native-2026", "type": "reference", "publisher": "IBM", "title": "What Is AI Native?", "published": "2026-02-03", "url": "https://www.ibm.com/think/topics/ai-native", "supports": ["definition", "usage"]}
+    ]
+  },
+  "ai-slop": {
+    "researchStatus": "researched",
+    "origin": "‘Slop’ emerged organically as slang for unwanted or low-quality AI-generated material rather than through a single clear coinage. Simon Willison helped popularize the term in May 2024 while explicitly noting that others were already using it.",
+    "firstKnownUse": null,
+    "history": [
+      {"date": "2024-05-08", "event": "Simon Willison highlighted ‘slop’ as an emerging term for unwanted AI-generated content and compared its usefulness to ‘spam’ as a concise name for a recognizable problem."}
+    ],
+    "relatedTerms": ["synthetic-content", "model-collapse", "meat-proxy"],
+    "sources": [
+      {"id": "willison-slop-2024", "type": "primary", "publisher": "Simon Willison's Weblog", "title": "Slop is the new name for unwanted AI-generated content", "published": "2024-05-08", "url": "https://simonwillison.net/tags/slop/", "supports": ["definition", "history", "usage"]}
+    ]
+  },
+  "copilot": {
+    "researchStatus": "researched",
+    "origin": "‘Copilot’ is an older aviation metaphor for an assistant working alongside a primary operator. In modern AI software, GitHub’s 2021 launch of GitHub Copilot was a major early use of the metaphor for an AI assistant embedded in a professional workflow, and Microsoft later expanded the label across productivity products.",
+    "firstKnownUse": null,
+    "history": [
+      {"date": "2021-06-29", "event": "GitHub launched the technical preview of GitHub Copilot and described it as an ‘AI pair programmer’ that suggests code while the developer remains in control."},
+      {"date": "2023-03-16", "event": "Microsoft introduced Microsoft 365 Copilot as a generative-AI assistant for workplace productivity."},
+      {"date": "2023-09-21", "event": "Microsoft unified multiple AI-assistant experiences under the Microsoft Copilot identity, reinforcing ‘copilot’ as a broad category metaphor for human-AI assistance."}
+    ],
+    "relatedTerms": ["human-in-the-loop", "prompt-engineering", "ai-agent"],
+    "sources": [
+      {"id": "github-copilot-2021", "type": "primary", "publisher": "GitHub", "title": "Introducing GitHub Copilot: your AI pair programmer", "published": "2021-06-29", "url": "https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/", "supports": ["history", "usage", "definition"]},
+      {"id": "microsoft-365-copilot-2023", "type": "primary", "publisher": "Microsoft", "title": "Introducing Microsoft 365 Copilot – your copilot for work", "published": "2023-03-16", "url": "https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work/", "supports": ["history", "usage"]}
+    ]
+  },
+  "human-in-the-loop": {
+    "researchStatus": "researched",
+    "origin": "‘Human in the loop’ predates modern machine learning and generative AI, with long-standing use in control systems, simulation, human factors, and security. In contemporary AI, the phrase describes workflows that intentionally retain human guidance, review, labeling, correction, approval, or accountability within a machine-driven process.",
+    "firstKnownUse": null,
+    "history": [
+      {"date": "2008", "event": "Lorrie Faith Cranor published a security framework for reasoning about systems that rely on a ‘human in the loop’ for security-critical functions, demonstrating established pre-LLM use of the phrase."},
+      {"date": "2022-08-17", "event": "A major review in Artificial Intelligence Review surveyed human-in-the-loop machine learning as an umbrella for approaches that integrate people directly into ML processes."}
+    ],
+    "relatedTerms": ["copilot", "ai-agent", "agentic"],
+    "sources": [
+      {"id": "cranor-hitl-2008", "type": "primary", "publisher": "USENIX", "title": "A Framework for Reasoning About the Human in the Loop", "published": "2008", "url": "https://www.usenix.org/legacy/event/upsec08/tech/full_papers/cranor/cranor_html/index.html", "supports": ["history", "usage"]},
+      {"id": "mosqueira-hitl-2022", "type": "secondary", "publisher": "Artificial Intelligence Review", "title": "Human-in-the-loop machine learning: a state of the art", "published": "2022-08-17", "url": "https://doi.org/10.1007/s10462-022-10246-w", "supports": ["definition", "history", "usage"]}
+    ]
+  },
+  "meat-proxy": {
+    "researchStatus": "researched",
+    "origin": "Niklas Gruhn introduced the AI-era expression ‘meat proxy’ in an August 3, 2026 essay criticizing the practice of blindly relaying AI output to other people without reading, validating, or adding judgment.",
+    "firstKnownUse": {"date": "2026-08-03", "precision": "day", "note": "Gruhn's essay is the documented naming event for the current AI-era sense."},
+    "history": [
+      {"date": "2026-08-03", "event": "Niklas Gruhn published ‘Don't be a meat proxy,’ defining the behavior as acting as an unnecessary human relay between another person and an AI system."},
+      {"date": "2026-08-03", "event": "Simon Willison amplified the phrase the same day and explicitly described Gruhn as coining an excellent new term for people who blindly copy and paste AI output to peers."}
+    ],
+    "relatedTerms": ["ai-slop", "human-in-the-loop", "vibe-coding"],
+    "sources": [
+      {"id": "gruhn-meat-proxy-2026", "type": "primary", "publisher": "Niklas Gruhn", "title": "Don't be a meat proxy", "published": "2026-08-03", "url": "https://gruhn.me/blog/2026-08-03/", "supports": ["origin", "definition", "firstKnownUse", "history"]},
+      {"id": "willison-meat-proxy-2026", "type": "secondary", "publisher": "Simon Willison's Weblog", "title": "Don't be a meat proxy", "published": "2026-08-03", "url": "https://simonwillison.net/2026/Aug/3/dont-be-a-meat-proxy/", "supports": ["origin", "history", "usage"]}
+    ]
+  },
+  "prompt-engineering": {
+    "researchStatus": "researched",
+    "origin": "The practice of deliberately designing prompts grew rapidly with large pretrained language models, but the exact phrase ‘prompt engineering’ does not have a single confidently established coinage. Early research often used neighboring language such as ‘prompt programming’; by the early 2020s, prompt engineering became the common label for systematically shaping instructions, examples, context, and constraints to influence model behavior.",
+    "firstKnownUse": null,
+    "history": [
+      {"date": "2021-02-15", "event": "Reynolds and McDonell published ‘Prompt Programming for Large Language Models,’ documenting systematic methods for controlling GPT-3 with natural-language prompts, including metaprompts and zero-shot prompting."}
+    ],
+    "relatedTerms": ["few-shot", "zero-shot", "prompt-injection", "vibe-coding"],
+    "sources": [
+      {"id": "reynolds-prompt-programming-2021", "type": "primary", "publisher": "arXiv / CHI", "title": "Prompt Programming for Large Language Models: Beyond the Few-Shot Paradigm", "published": "2021-02-15", "url": "https://arxiv.org/abs/2102.07350", "supports": ["history", "definition", "usage"]}
+    ]
+  },
+  "wrapper": {
+    "researchStatus": "researched",
+    "origin": "‘Wrapper’ is an established software term for a layer placed around another component. After the rise of foundation-model APIs, ‘AI wrapper’ and ‘LLM wrapper’ became informal startup and developer language for applications whose core model intelligence comes from an external provider while the application adds interface, workflow, context, or other product layers. The label can be neutral or dismissive depending on how much additional value is implied.",
+    "firstKnownUse": null,
+    "history": [
+      {"date": "2022-2023", "event": "As products built on commercial foundation-model APIs proliferated, ‘wrapper’ became common shorthand in startup discussions for applications layered over models such as GPT, often in debates about differentiation and defensibility."}
+    ],
+    "relatedTerms": ["ai-native", "copilot", "vibe-coding", "rag"],
+    "sources": [
+      {"id": "startups-ai-wrapper", "type": "reference", "publisher": "Startups.com", "title": "AI Wrapper", "published": null, "url": "https://www.startups.com/lexicon/ai-wrapper", "supports": ["definition", "usage"]},
+      {"id": "rework-ai-wrapper", "type": "reference", "publisher": "Rework", "title": "What is an AI Wrapper?", "published": null, "url": "https://resources.rework.com/libraries/ai-terms/what-is-an-ai-wrapper", "supports": ["definition", "usage"]}
+    ]
+  },
+  "zero-shot": {
+    "researchStatus": "researched",
+    "origin": "Zero-shot learning predates modern generative AI. The term appeared in machine-learning research by 2009 for systems that classify or predict categories omitted from training. In modern LLM prompting, zero-shot describes asking a model to perform a task without first supplying worked examples in the prompt.",
+    "firstKnownUse": {"date": "2009", "precision": "year", "note": "The 2009 Palatucci et al. paper is an early documented use of the term ‘zero-shot learning’; AILex does not claim it is necessarily the absolute first use."},
+    "history": [
+      {"date": "2009", "event": "Palatucci, Pomerleau, Hinton, and Mitchell published ‘Zero-Shot Learning with Semantic Output Codes,’ formalizing a learning setting where a classifier predicts novel output values omitted from training."},
+      {"date": "2020-05-28", "event": "The GPT-3 paper used zero-shot, one-shot, and few-shot evaluation to describe language-model task performance with zero, one, or a small number of demonstrations in context."}
+    ],
+    "relatedTerms": ["few-shot", "prompt-engineering", "context-window"],
+    "sources": [
+      {"id": "palatucci-zero-shot-2009", "type": "primary", "publisher": "NeurIPS", "title": "Zero-Shot Learning with Semantic Output Codes", "published": "2009", "url": "https://papers.nips.cc/paper_files/paper/2009/hash/1543843a4723ed2ab08e18053ae6dc5b-Abstract.html", "supports": ["origin", "definition", "history", "firstKnownUse"]},
+      {"id": "brown-gpt3-2020", "type": "primary", "publisher": "arXiv / NeurIPS", "title": "Language Models are Few-Shot Learners", "published": "2020-05-28", "url": "https://arxiv.org/abs/2005.14165", "supports": ["history", "usage"]}
+    ]
+  }
+}
