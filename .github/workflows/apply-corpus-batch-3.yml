@@ -1,0 +1,70 @@
+name: One-time AILex 100 Batch 3
+on:
+  push:
+    branches: [feat/ailex-100-corpus-phase-3]
+    paths: [.github/workflows/apply-corpus-batch-3.yml]
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/ailex-100-corpus-phase-3
+          fetch-depth: 0
+      - name: Merge Batch 3 and generate pages
+        run: |
+          python - <<'PY'
+          import json, pathlib, html, re
+          root=pathlib.Path('.')
+          terms=json.loads((root/'data/terms.json').read_text())
+          prov=json.loads((root/'data/provenance.json').read_text())
+          batch=json.loads((root/'data/corpus-batch-3.json').read_text())
+          existing={t['slug'] for t in terms}
+          new=batch['terms']
+          new_slugs=[t['slug'] for t in new]
+          assert len(new_slugs)==12 and len(set(new_slugs))==12
+          assert not (existing & set(new_slugs)), existing & set(new_slugs)
+          terms.extend(new)
+          terms.sort(key=lambda t:t['term'].casefold())
+          prov.update(batch['provenance'])
+          slugs={t['slug'] for t in terms}
+          assert len(terms)==64, len(terms)
+          assert slugs==set(prov), (slugs-set(prov), set(prov)-slugs)
+          assert all(p.get('researchStatus')=='researched' for p in prov.values())
+          for slug,record in prov.items():
+              assert record.get('sources'), f'no sources: {slug}'
+              for rel in record.get('relatedTerms',[]):
+                  assert rel in slugs, f'broken related term {slug} -> {rel}'
+                  assert rel != slug, f'self relation {slug}'
+          (root/'data/terms.json').write_text(json.dumps(terms,ensure_ascii=False,separators=(',',':'))+'\n')
+          (root/'data/provenance.json').write_text(json.dumps(prov,ensure_ascii=False,indent=2)+'\n')
+          def esc(v): return html.escape(str(v), quote=True)
+          for t in new:
+              d=root/'terms'/t['slug']; d.mkdir(parents=True,exist_ok=True)
+              page=f'''<!doctype html>
+          <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>{esc(t['term'])} | AILex</title><meta name="description" content="{esc(t['definition'])}"><script>(()=>{{try{{const s=localStorage.getItem("ai-era-theme"),d=window.matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.dataset.theme=s||(d?"dark":"light")}}catch(_){{document.documentElement.dataset.theme="light"}}}})();</script><link rel="stylesheet" href="../../assets/css/styles.css"><link rel="stylesheet" href="../../assets/css/term-pages.css"></head>
+          <body><header class="site-header"><div class="shell header-inner"><a class="brand" href="../../" aria-label="AILex home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M20 2 35 10.5v19L20 38 5 29.5v-19L20 2Z"/><path d="m20 2 0 18 15-9.5M20 20 5 10.5M20 20v18M5 29.5 20 20l15 9.5"/></svg></span><span>AILex</span></a><nav class="primary-nav" aria-label="Primary navigation"><a class="active" href="../../">Browse</a><a href="../../categories.html">Categories</a><a href="../../about.html">About</a><a href="../../contribute.html">Contribute</a><a href="../../methodology.html">Methodology</a></nav><button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme"><span class="sun" aria-hidden="true">☼</span><span class="toggle-track"><span class="toggle-knob"></span></span><span class="moon" aria-hidden="true">☾</span></button></div></header>
+          <main id="term-page" class="term-page shell" data-term-slug="{esc(t['slug'])}"><div id="term-fallback" class="term-fallback"><nav class="term-breadcrumb" aria-label="Breadcrumb"><a href="../../">Browse</a><span aria-hidden="true">/</span><span>{esc(t['term'])}</span></nav><p class="eyebrow">AILex entry</p><h1>{esc(t['term'])}</h1><p class="fallback-pronunciation">{esc(t['pronunciation'])}</p><p class="fallback-definition">{esc(t['definition'])}</p></div></main>
+          <footer class="site-footer"><div class="shell footer-inner"><span class="footer-mark" aria-hidden="true">◎</span><p><strong>AILex · Dictionary of the AI Era</strong><br>Vibe coded · Human-directed · AI-assisted · Human-reviewed</p><p class="footer-license">Code: MIT · Content: CC BY 4.0</p></div></footer><script src="../../assets/js/app.js"></script><script src="../../assets/js/term-page.js"></script></body></html>\n'''
+              (d/'index.html').write_text(page)
+          roadmap=(root/'CORPUS-ROADMAP.md').read_text()
+          roadmap=re.sub(r'AILex currently has .*?corpus threshold\.', 'AILex currently has 64 published, researched entries after Batch 3. The MVP corpus target is **100 published terms**, leaving 36 additional accepted entries to reach the corpus threshold.', roadmap, count=1, flags=re.S)
+          roadmap += '''\n## Batch 3 — Prompting, Context & Retrieval I\n\n1. Prompt\n2. User Prompt\n3. Developer Prompt\n4. Prompt Template\n5. Prompt Chaining\n6. One-Shot\n7. In-Context Learning\n8. Context Engineering\n9. Prompt Caching\n10. Chunking\n11. Retrieval\n12. Reranking\n\nAfter Batch 3, the published corpus reaches **64 terms**, leaving **36 terms** to the 100-term MVP corpus threshold.\n'''
+          (root/'CORPUS-ROADMAP.md').write_text(roadmap)
+          (root/'data/corpus-batch-3.json').unlink()
+          print('Validated 64 terms, 64 provenance records, 12 new pages, and all relationship targets.')
+          PY
+      - name: Commit Batch 3
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/terms.json data/provenance.json CORPUS-ROADMAP.md terms data/corpus-batch-3.json
+          git commit -m "feat: publish AILex 100 batch 3"
+          git push
+      - name: Remove one-time workflow
+        run: |
+          git rm .github/workflows/apply-corpus-batch-3.yml
+          git commit -m "chore: remove one-time batch 3 workflow"
+          git push
