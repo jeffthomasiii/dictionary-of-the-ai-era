@@ -1,6 +1,6 @@
 # AILex 100 Corpus Roadmap
 
-AILex currently has 73 published, researched entries after Batch 4. The MVP corpus target is **100 published terms**, leaving 27 additional accepted entries to reach the corpus threshold.
+AILex currently has 85 published, researched entries after Batch 5. The MVP corpus target is **100 published terms**, leaving 15 additional accepted entries to reach the corpus threshold.
 
 The backlog intentionally contains more candidates than the MVP requires. A candidate is not guaranteed publication. Each term must still pass AILex's usage, sourcing, definition, provenance, and human-review standards.
 
@@ -277,3 +277,20 @@ After Batch 3, the published corpus reaches **64 terms**, leaving **36 terms** t
 9. Graph RAG
 
 After Batch 4, the published corpus reaches **73 terms**, leaving **27 terms** to the MVP threshold.
+
+## Batch 5 — Training & Model Adaptation I
+
+1. Instruction Tuning
+2. Supervised Fine-Tuning (SFT)
+3. Reinforcement Learning
+4. Reward Model
+5. RLAIF
+6. Distillation
+7. Quantization
+8. LoRA
+9. PEFT
+10. Transfer Learning
+11. Self-Supervised Learning
+12. Supervised Learning
+
+After Batch 5, the published corpus reaches **85 terms**, leaving **15 terms** to the MVP threshold.
