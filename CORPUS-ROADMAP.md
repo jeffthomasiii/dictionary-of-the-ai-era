@@ -1,6 +1,6 @@
 # AILex 100 Corpus Roadmap
 
-AILex currently has 27 published, researched entries. The MVP corpus target is **100 published terms**, which requires at least 73 additional accepted entries.
+AILex currently has 52 published, researched entries after Batch 2. The MVP corpus target is **100 published terms**, leaving 48 additional accepted entries to reach the corpus threshold.
 
 The backlog intentionally contains more candidates than the MVP requires. A candidate is not guaranteed publication. Each term must still pass AILex's usage, sourcing, definition, provenance, and human-review standards.
 
@@ -228,3 +228,21 @@ AILex reaches the corpus portion of MVP when:
 - every published term has a human-reviewed provenance record and at least one credible source;
 - related-term links resolve to published entries;
 - the corpus remains balanced across systems, ways of working, risks/governance, and culture/slang rather than being dominated by one technical niche.
+
+## Batch 2 — Foundation Layer Completion
+
+1. Pretraining
+2. Neural Network
+3. Deep Learning
+4. Machine Learning
+5. Artificial General Intelligence (AGI)
+6. Small Language Model (SLM)
+7. Vision-Language Model (VLM)
+8. Parameters
+9. Model Weights
+10. Training Data
+11. Synthetic Data
+12. Attention
+13. Self-Attention
+
+After Batch 2, the published corpus reaches **52 terms** and the Priority 1 foundation layer is substantially complete.
