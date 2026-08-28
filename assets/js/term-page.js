@@ -37,6 +37,53 @@ function renderSources(sources = []) {
   </li>`).join("");
 }
 
+const speechOverrides = {
+  "ai-agent": "A I agent",
+  "ai-native": "A I native",
+  "ai-slop": "A I slop",
+  "ai-washing": "A I washing",
+  "mcp": "M C P",
+  "shadow-ai": "shadow A I"
+};
+
+function speechTextForTerm(term) {
+  return speechOverrides[term.slug] || term.term;
+}
+
+function pronunciationButton(term) {
+  if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) return "";
+  return `<button class="pronunciation-button" type="button" data-pronounce="${termEsc(speechTextForTerm(term))}" aria-label="Hear pronunciation of ${termEsc(term.term)}" title="Hear pronunciation">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 10h4l5-4v12l-5-4H5v-4Z"/><path d="M17 9c1 .9 1.5 1.9 1.5 3S18 14.1 17 15M19.5 6.5c1.8 1.6 2.7 3.4 2.7 5.5s-.9 3.9-2.7 5.5"/></svg>
+  </button>`;
+}
+
+function wirePronunciation(term) {
+  const button = termPage.querySelector(".pronunciation-button");
+  if (!button || !("speechSynthesis" in window)) return;
+
+  const reset = () => {
+    button.classList.remove("is-speaking");
+    button.removeAttribute("aria-pressed");
+    button.setAttribute("aria-label", `Hear pronunciation of ${term.term}`);
+  };
+
+  button.addEventListener("click", () => {
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(button.dataset.pronounce || term.term);
+    utterance.lang = document.documentElement.lang || "en-US";
+    utterance.rate = 0.85;
+    utterance.pitch = 1;
+    utterance.onstart = () => {
+      button.classList.add("is-speaking");
+      button.setAttribute("aria-pressed", "true");
+      button.setAttribute("aria-label", `Playing pronunciation of ${term.term}`);
+    };
+    utterance.onend = reset;
+    utterance.onerror = reset;
+    window.speechSynthesis.speak(utterance);
+  });
+}
+
 function renderTermPage(term, provenance, termsBySlug) {
   const category = categoryKey(term);
   termPage.dataset.category = category;
@@ -56,7 +103,7 @@ function renderTermPage(term, provenance, termsBySlug) {
     <header class="term-page-header">
       <p class="eyebrow">AILex entry</p>
       <h1>${termEsc(term.term)}</h1>
-      <div class="term-pronunciation-row"><span class="term-page-pronunciation">${termEsc(term.pronunciation)}</span><span class="part-of-speech">${termEsc(term.partOfSpeech || "")}</span></div>
+      <div class="term-pronunciation-row"><span class="term-page-pronunciation">${termEsc(term.pronunciation)}</span>${pronunciationButton(term)}<span class="part-of-speech">${termEsc(term.partOfSpeech || "")}</span></div>
       <div class="term-page-pills">${(term.categories || []).map(c => `<span class="pill">${termEsc(c)}</span>`).join("")}<span class="pill status-pill">${termEsc(term.status)}</span></div>
     </header>
 
@@ -76,6 +123,8 @@ function renderTermPage(term, provenance, termsBySlug) {
         <section class="term-fact-card term-record-meta"><span class="entry-label">Entry record</span><p>Added ${termEsc(formatDate(term.added))}</p><p>Last reviewed ${termEsc(formatDate(term.lastReviewed))}</p></section>
       </aside>
     </div>`;
+
+  wirePronunciation(term);
 }
 
 if (termPage) {
