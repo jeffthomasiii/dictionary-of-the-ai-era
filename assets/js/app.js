@@ -30,6 +30,8 @@ const speechOverrides = {
   "generative-ai": "generative A I",
   "llm-as-a-judge": "L L M as a judge",
   "mcp": "M C P",
+  "peft": "P E F T",
+  "rlaif": "R L A I F",
   "rlhf": "R L H F",
   "shadow-ai": "shadow A I"
 };
