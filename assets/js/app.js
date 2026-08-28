@@ -12,6 +12,14 @@ const gridViewButton = document.getElementById("grid-view");
 
 const esc = (value = "") => String(value).replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
 
+if (dictionary && !document.querySelector('link[data-browse-pronunciation]')) {
+  const pronunciationStyles = document.createElement("link");
+  pronunciationStyles.rel = "stylesheet";
+  pronunciationStyles.href = "assets/css/browse-pronunciation.css";
+  pronunciationStyles.dataset.browsePronunciation = "true";
+  document.head.append(pronunciationStyles);
+}
+
 const speechOverrides = {
   "ai-agent": "A I agent",
   "ai-native": "A I native",
