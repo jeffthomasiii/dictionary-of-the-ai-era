@@ -41,7 +41,7 @@ function renderAlpha(terms) {
 
 function termCard(term) {
   return `<article class="entry" data-category="${categoryKey(term)}" id="${esc(term.slug)}">
-    <div class="term-block"><h3 class="term-name">${esc(term.term)}</h3><div class="pronunciation">/${esc(term.pronunciation)}/</div><div class="part-of-speech">${esc(term.partOfSpeech || "")}</div></div>
+    <div class="term-block"><h3 class="term-name"><a href="terms/${encodeURIComponent(term.slug)}/">${esc(term.term)}</a></h3><div class="pronunciation">${esc(term.pronunciation)}</div><div class="part-of-speech">${esc(term.partOfSpeech || "")}</div></div>
     <div class="definition-block"><span class="entry-label">Definition</span><p class="definition">${esc(term.definition)}</p></div>
     <div class="example-block"><span class="entry-label">Used in a sentence</span><p class="example"><em>${esc(term.example)}</em></p></div>
     <div class="entry-meta">${(term.categories || []).map(c => `<span class="pill">${esc(c)}</span>`).join("")}<span class="pill status-pill">${esc(term.status)}</span>${(term.aliases || []).length ? `<span class="aliases"><strong>Also known as:</strong> ${term.aliases.map(esc).join(", ")}</span>` : ""}</div>
