@@ -2,7 +2,19 @@
 
 A living, searchable dictionary of the language emerging around artificial intelligence.
 
+**Development approach: Vibe coded · Human-directed · AI-assisted · Human-reviewed**
+
 The project catalogs technical concepts, new ways of working, emerging slang, and terminology related to AI risk, safety, and governance.
+
+## AI transparency
+
+This project is intentionally and substantially developed through an AI-assisted, vibe-coding workflow. AI is not only something this dictionary documents; it is part of how the dictionary itself is built.
+
+Jeff Thomas III provides the project direction, requirements, editorial judgment, testing, review, and final decisions. AI tools assist with research support, architecture, coding, debugging, documentation, definition drafting, copy editing, and implementation.
+
+Vibe coding here does not mean blindly accepting AI output. It means a human-directed development workflow in which AI generates or modifies significant portions of the implementation while the human project owner evaluates, tests, redirects, accepts, or rejects the results.
+
+See [`AI-TRANSPARENCY.md`](AI-TRANSPARENCY.md) for the full development and editorial transparency policy.
 
 ## Current MVP
 
@@ -30,6 +42,8 @@ dictionary-of-the-ai-era/
 │   │   └── styles.css
 │   └── js/
 │       └── app.js
+├── AI-TRANSPARENCY.md
+├── CONTENT-LICENSE.md
 ├── CONTRIBUTING.md
 ├── LICENSE
 └── README.md
@@ -60,7 +74,7 @@ Each entry in `data/terms.json` follows this structure:
 
 This project is intended to be a dictionary, not a list of AI buzzwords. Terms should have documented real-world usage and definitions should distinguish between established technical vocabulary, emerging terminology, slang, research language, and contested concepts.
 
-AI can assist with identifying and researching candidate terms, but inclusion and wording should remain human-reviewed.
+AI can assist with identifying and researching candidate terms, drafting definitions, organizing evidence, and maintaining the software. Inclusion, source evaluation, final wording, classification, and publication remain human-reviewed decisions.
 
 ## Categories
 
@@ -83,7 +97,7 @@ Then visit `http://localhost:8000`.
 
 ## GitHub Pages
 
-The project is intentionally static. Once the MVP is merged:
+The project is intentionally static.
 
 1. Open **Settings → Pages**.
 2. Under **Build and deployment**, select **Deploy from a branch**.
@@ -103,6 +117,12 @@ No build process is required.
 - Editorial review status
 - Automated candidate-term discovery with human approval
 
-## License
+## Licensing
 
-Code is available under the MIT License. Dictionary content may need a separate content license before accepting external contributions.
+This repository uses a **dual-license model**.
+
+- **Software and website code:** MIT License
+- **Original dictionary and editorial content:** Creative Commons Attribution 4.0 International (CC BY 4.0)
+- **Third-party material:** remains subject to its original copyright, license, trademark, or other applicable terms
+
+See [`LICENSE`](LICENSE) for the MIT software license and scope statement, and [`CONTENT-LICENSE.md`](CONTENT-LICENSE.md) for the dictionary content license and attribution guidance.
