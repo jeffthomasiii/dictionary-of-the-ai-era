@@ -8,7 +8,7 @@ This document records the visual direction established before the project's prov
 
 The interface should feel like a **modern dictionary with a restrained technical layer**. It should preserve the authority, clarity, and scanability of a reference work while acknowledging that the subject is the language of the AI era.
 
-The design should not look like a generic SaaS dashboard, neon cyberpunk interface, or conventional blog.
+The design should not look like a generic SaaS dashboard, neon cyberpunk interface, conventional blog, or single-page marketing site.
 
 ### Core qualities
 
@@ -20,6 +20,20 @@ The design should not look like a generic SaaS dashboard, neon cyberpunk interfa
 - Search-first
 - Highly readable
 - Lightly futuristic rather than overtly futuristic
+
+## Site structure
+
+The site should behave like a reference website, not a single-page landing page.
+
+Primary navigation is divided into dedicated pages:
+
+- **Browse:** the searchable dictionary home page
+- **Categories:** explains the editorial category system
+- **About:** project purpose, transparency, and licensing context
+- **Contribute:** public-facing contribution guidance and current submission path
+- **Methodology:** explains how terms are identified, evaluated, categorized, defined, reviewed, and maintained
+
+Markdown governance documents may remain in the repository, but the public site should provide readable HTML pages for core reader-facing information.
 
 ## Typography
 
@@ -67,7 +81,21 @@ Technical flair should appear primarily through subtle structure:
 - precise metadata labels
 - measured use of monospace-like interface conventions such as keyboard shortcuts
 
+The hero should combine multiple subtle technical layers rather than relying on a grid alone. Network/node diagrams and layered wave or mesh lines should create depth comparable to the approved visual mockup without becoming decorative noise.
+
 These elements should remain in the background and never compete with the dictionary content.
+
+## Category iconography
+
+Category icons should be simple line icons with semantic meaning rather than abstract typographic symbols.
+
+- Culture & Slang: conversation/speech
+- Ways of Working: people/collaboration
+- Systems & Technical: cube/system
+- Risks & Governance: shield/protection
+- All Terms: simple collection/grid
+
+Icons inherit their category color and remain secondary to the category label.
 
 ## Dictionary entries
 
@@ -81,6 +109,15 @@ Term entries should prioritize this reading hierarchy:
 
 Category color may appear as a narrow rule, icon, label, or other small semantic indicator. Do not flood entire cards with category colors.
 
+### View modes
+
+The Browse page supports both:
+
+- **List view:** information-rich scanning with definition and usage visible together
+- **Grid view:** compact dictionary cards comparable to the approved mockup
+
+The user's view preference should persist locally. Neither view changes the underlying term data or filtering behavior.
+
 ## Interaction
 
 Search is the primary action and should remain visually dominant.
@@ -90,13 +127,22 @@ The interface should support:
 - instant search
 - category filtering
 - A–Z browsing
+- list/grid view switching
 - keyboard search shortcut
 - persistent light/dark preference
 - responsive layouts
 
+## Dates and living status
+
+When the interface displays an updated date, use a human-readable full date such as **August 28, 2026**, rather than only the year. The dictionary's living status may appear separately from the date.
+
 ## Theme behavior
 
 On first visit, the site follows the operating system's preferred color scheme. A user-selected light or dark preference is then saved locally and takes precedence on future visits.
+
+## Roadmap design item: dedicated term pages
+
+Individual dictionary entries should eventually have dedicated pages with stable URLs. Those pages may contain expanded provenance, related terms, source citations, history, status, aliases, and other supporting metadata. This is intentionally deferred until the provenance/data model work is mature enough to support it well.
 
 ## Guardrails
 
@@ -111,5 +157,6 @@ Future design changes should avoid:
 - low-contrast text
 - decorative AI imagery that reduces readability
 - category colors used inconsistently
+- collapsing primary reader-facing content back into a single-page navigation pattern
 
 The design should always answer the same question: **Does this still feel like a dictionary first, with the AI era expressed through its details?**
