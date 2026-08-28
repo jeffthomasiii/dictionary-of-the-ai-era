@@ -1,0 +1,154 @@
+name: One-time AILex 100 Batch 1
+
+on:
+  push:
+    paths:
+      - '.github/workflows/apply-corpus-batch-1.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/ailex-100-corpus-phase-1
+          fetch-depth: 0
+      - name: Add Batch 1 terms, provenance, and pages
+        run: |
+          python - <<'PY'
+          import json, pathlib, html
+          from datetime import date
+
+          terms_path = pathlib.Path('data/terms.json')
+          provenance_path = pathlib.Path('data/provenance.json')
+          terms = json.loads(terms_path.read_text())
+          provenance = json.loads(provenance_path.read_text())
+          existing = {t['slug'] for t in terms}
+
+          batch_terms = [
+            {"term":"Generative AI","slug":"generative-ai","pronunciation":"JEN-er-uh-tiv A-I","partOfSpeech":"noun","definition":"Artificial intelligence that creates new content such as text, images, audio, video, code, or other data based on patterns learned from existing data.","example":"The design team used generative AI to create several early visual concepts before refining them by hand.","categories":["AI Systems & Technical Concepts"],"aliases":["GenAI","Generative Artificial Intelligence"],"status":"Established","added":"2026-08-28","lastReviewed":"2026-08-28","sources":[]},
+            {"term":"Large Language Model","slug":"large-language-model","pronunciation":"larj LANG-gwij MOD-ul","partOfSpeech":"noun","definition":"A language model trained on very large amounts of data and many parameters so it can understand and generate natural-language content across a wide range of tasks.","example":"The assistant uses a large language model to summarize documents, answer questions, and draft text.","categories":["AI Systems & Technical Concepts"],"aliases":["LLM"],"status":"Established technical term","added":"2026-08-28","lastReviewed":"2026-08-28","sources":[]},
+            {"term":"Foundation Model","slug":"foundation-model","pronunciation":"fown-DAY-shun MOD-ul","partOfSpeech":"noun","definition":"A broadly trained AI model that can be adapted to many downstream tasks rather than being built for only one narrow purpose.","example":"The team adapted a foundation model for its industry instead of training a new model from scratch.","categories":["AI Systems & Technical Concepts"],"aliases":[],"status":"Technical","added":"2026-08-28","lastReviewed":"2026-08-28","sources":[]},
+            {"term":"Transformer","slug":"transformer","pronunciation":"trans-FOR-mer","partOfSpeech":"noun","definition":"A neural-network architecture built around attention mechanisms that can process relationships among pieces of a sequence in parallel and underlies many modern language and multimodal models.","example":"Most current large language models are based on the transformer architecture.","categories":["AI Systems & Technical Concepts"],"aliases":[],"status":"Technical","added":"2026-08-28","lastReviewed":"2026-08-28","sources":[]},
+            {"term":"Embedding","slug":"embedding","pronunciation":"em-BED-ing","partOfSpeech":"noun","definition":"A numerical representation of data in a vector space where items with similar meaning or characteristics can be positioned near one another.","example":"The system converted each paragraph into an embedding so it could find passages with similar meaning.","categories":["AI Systems & Technical Concepts"],"aliases":["Vector embedding"],"status":"Technical","added":"2026-08-28","lastReviewed":"2026-08-28","sources":[]},
+            {"term":"Vector Database","slug":"vector-database","pronunciation":"VEK-ter DAY-tuh-bays","partOfSpeech":"noun","definition":"A database designed to store, index, and search vector representations such as embeddings, often by finding items that are mathematically similar to a query vector.","example":"The RAG system stores document embeddings in a vector database so it can retrieve relevant passages quickly.","categories":["AI Systems & Technical Concepts"],"aliases":["Vector store"],"status":"Technical","added":"2026-08-28","lastReviewed":"2026-08-28","sources":[]},
+            {"term":"Semantic Search","slug":"semantic-search","pronunciation":"suh-MAN-tik serch","partOfSpeech":"noun","definition":"A search approach that tries to match the meaning and intent of a query rather than relying only on exact keywords.","example":"Semantic search found the policy even though the question used different wording from the document.","categories":["AI Systems & Technical Concepts"],"aliases":[],"status":"Technical","added":"2026-08-28","lastReviewed":"2026-08-28","sources":[]},
+            {"term":"Fine-Tuning","slug":"fine-tuning","pronunciation":"fyn TOO-ning","partOfSpeech":"noun","definition":"Further training a pretrained AI model on additional task-specific or domain-specific data so its behavior becomes better suited to a particular purpose.","example":"The company used fine-tuning to adapt the pretrained model to its specialized document language.","categories":["AI Systems & Technical Concepts","AI Ways of Working"],"aliases":[],"status":"Technical","added":"2026-08-28","lastReviewed":"2026-08-28","sources":[]},
+            {"term":"RLHF","slug":"rlhf","pronunciation":"R-L-H-F","partOfSpeech":"noun","definition":"Reinforcement Learning from Human Feedback, a training approach that uses human preferences or evaluations to help shape a model's behavior toward desired responses.","example":"The model underwent RLHF so human preference data could influence which kinds of responses it learned to favor.","categories":["AI Systems & Technical Concepts"],"aliases":["Reinforcement Learning from Human Feedback"],"status":"Technical","added":"2026-08-28","lastReviewed":"2026-08-28","sources":[]},
+            {"term":"Chain-of-Thought","slug":"chain-of-thought","pronunciation":"chayn uhv thawt","partOfSpeech":"noun","definition":"A reasoning approach in which a model generates intermediate steps while working through a problem, often used or studied to improve performance on multi-step tasks.","example":"Chain-of-thought prompting improved the model's performance on the multi-step math problems.","categories":["AI Ways of Working","AI Systems & Technical Concepts"],"aliases":["CoT"],"status":"Technical","added":"2026-08-28","lastReviewed":"2026-08-28","sources":[]},
+            {"term":"System Prompt","slug":"system-prompt","pronunciation":"SIS-tum prompt","partOfSpeech":"noun","definition":"A set of application-level instructions supplied to a generative AI system to establish behavior, constraints, context, or priorities before the user's request is processed.","example":"The application uses a system prompt to define the assistant's role, formatting rules, and boundaries.","categories":["AI Ways of Working","AI Systems & Technical Concepts"],"aliases":["System message"],"status":"Technical","added":"2026-08-28","lastReviewed":"2026-08-28","sources":[]},
+            {"term":"Diffusion Model","slug":"diffusion-model","pronunciation":"dih-FYOO-zhun MOD-ul","partOfSpeech":"noun","definition":"A generative model that learns to create data by reversing a gradual noising process, a technique widely used for generating images and other media.","example":"The image generator uses a diffusion model to turn random noise into an image matching the prompt.","categories":["AI Systems & Technical Concepts"],"aliases":[],"status":"Technical","added":"2026-08-28","lastReviewed":"2026-08-28","sources":[]}
+          ]
+
+          batch_provenance = {
+            "generative-ai":{"researchStatus":"researched","origin":"Generative modeling predates the current generative-AI boom, and AILex does not assign the phrase to a single inventor. In contemporary usage, generative AI refers to AI models or systems that generate new synthetic content based on patterns learned from input or training data.","firstKnownUse":None,"history":[{"date":"2022-11-30","event":"The public release of ChatGPT accelerated mainstream awareness and adoption of generative AI systems."},{"date":"2024-07-26","event":"NIST published its Generative Artificial Intelligence Profile, defining and organizing risk-management guidance for generative AI."}],"relatedTerms":["synthetic-content","foundation-model","large-language-model","diffusion-model","multimodal"],"sources":[{"id":"nist-genai-profile-2024","type":"primary","publisher":"NIST","title":"Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile","published":"2024-07-26","url":"https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence","supports":["definition","history","risk"]}]},
+            "large-language-model":{"researchStatus":"researched","origin":"Large language models grew out of decades of statistical language modeling and neural-network research. AILex does not assign the phrase to a single coinage event; in current usage it describes very large language models trained on extensive data, typically using deep-learning architectures such as transformers.","firstKnownUse":None,"history":[{"date":"2017-06-12","event":"The Transformer architecture was introduced, providing the architectural basis for many later large language models."},{"date":"2020-05-28","event":"The GPT-3 paper demonstrated broad few-shot capabilities at 175 billion parameters and helped establish the modern scale-driven LLM era."}],"relatedTerms":["foundation-model","transformer","token","context-window","prompt-engineering","reasoning-model"],"sources":[{"id":"google-cloud-llm-overview","type":"reference","publisher":"Google Cloud","title":"Large Language Models (LLMs)","published":None,"url":"https://cloud.google.com/ai/llms","supports":["definition","usage"]},{"id":"brown-gpt3-2020","type":"primary","publisher":"arXiv / NeurIPS","title":"Language Models are Few-Shot Learners","published":"2020-05-28","url":"https://arxiv.org/abs/2005.14165","supports":["history","usage"]}]},
+            "foundation-model":{"researchStatus":"researched","origin":"Rishi Bommasani and colleagues introduced the term ‘foundation model’ in 2021 for models trained on broad data at scale that can be adapted to a wide range of downstream tasks.","firstKnownUse":{"date":"2021-08-16","precision":"day","note":"The Stanford report submitted to arXiv on August 16, 2021 explicitly says, ‘We call these models foundation models.’"},"history":[{"date":"2021-08-16","event":"Stanford researchers published ‘On the Opportunities and Risks of Foundation Models,’ naming and defining the category."}],"relatedTerms":["large-language-model","fine-tuning","multimodal","generative-ai"],"sources":[{"id":"bommasani-foundation-models-2021","type":"primary","publisher":"Stanford / arXiv","title":"On the Opportunities and Risks of Foundation Models","published":"2021-08-16","url":"https://arxiv.org/abs/2108.07258","supports":["origin","definition","firstKnownUse","history"]}]},
+            "transformer":{"researchStatus":"researched","origin":"Ashish Vaswani and colleagues introduced the Transformer architecture in the 2017 paper ‘Attention Is All You Need,’ proposing a sequence-processing architecture based on attention mechanisms rather than recurrence or convolution.","firstKnownUse":{"date":"2017-06-12","precision":"day","note":"The first arXiv version of ‘Attention Is All You Need’ introduced the architecture as ‘the Transformer.’"},"history":[{"date":"2017-06-12","event":"‘Attention Is All You Need’ introduced the Transformer architecture."}],"relatedTerms":["large-language-model","context-window","token","embedding"],"sources":[{"id":"vaswani-transformer-2017","type":"primary","publisher":"arXiv / NeurIPS","title":"Attention Is All You Need","published":"2017-06-12","url":"https://arxiv.org/abs/1706.03762","supports":["origin","definition","firstKnownUse","history"]}]},
+            "embedding":{"researchStatus":"researched","origin":"Vector representations and embeddings have a long history in statistics, machine learning, and natural-language processing, so AILex does not assign the term to a single origin. Modern AI usage commonly refers to learned numerical representations in which semantic or structural similarity is reflected by proximity in vector space.","firstKnownUse":None,"history":[{"date":"2013-01-16","event":"Mikolov and colleagues published work on efficient continuous vector representations of words, helping popularize modern neural word embeddings through word2vec."}],"relatedTerms":["vector-database","semantic-search","rag","grounding","transformer"],"sources":[{"id":"mikolov-word-vectors-2013","type":"primary","publisher":"arXiv","title":"Efficient Estimation of Word Representations in Vector Space","published":"2013-01-16","url":"https://arxiv.org/abs/1301.3781","supports":["history","research"]},{"id":"google-embeddings-overview","type":"reference","publisher":"Google for Developers","title":"Embeddings: Obtaining embeddings","published":"2026","url":"https://developers.google.com/machine-learning/crash-course/embeddings/obtaining-embeddings","supports":["definition","usage"]}]},
+            "vector-database":{"researchStatus":"researched","origin":"Vector databases developed from established work in vector similarity search, nearest-neighbor indexing, and specialized data systems. AILex does not assign the modern product category to one inventor. In current AI applications, the term commonly refers to databases optimized to store, index, and query vector embeddings.","firstKnownUse":None,"history":[{"date":"2020s","event":"Vector databases became a prominent component of generative-AI application stacks as embeddings, semantic search, and retrieval-augmented generation became widely used."}],"relatedTerms":["embedding","semantic-search","rag","grounding"],"sources":[{"id":"google-vector-database","type":"reference","publisher":"Google Cloud","title":"What is a vector database?","published":None,"url":"https://cloud.google.com/discover/what-is-a-vector-database","supports":["definition","usage"]},{"id":"microsoft-vector-database-2026","type":"reference","publisher":"Microsoft Learn","title":"Vector databases","published":"2026-06-23","url":"https://learn.microsoft.com/en-us/fabric/real-time-intelligence/vector-database","supports":["definition","usage","history"]}]},
+            "semantic-search":{"researchStatus":"researched","origin":"Semantic search predates modern generative AI and grew from information-retrieval and natural-language-processing efforts to search by meaning rather than exact lexical matching. Its current AI usage often combines embeddings with vector similarity techniques.","firstKnownUse":None,"history":[{"date":"2020s","event":"Embedding-based vector search made semantic search a common building block in modern AI retrieval and RAG systems."}],"relatedTerms":["embedding","vector-database","rag","grounding"],"sources":[{"id":"google-semantic-search-2026","type":"reference","publisher":"Google Cloud","title":"What is semantic search, and how does it work?","published":"2026-01-14","url":"https://cloud.google.com/discover/what-is-semantic-search","supports":["definition","usage","history"]}]},
+            "fine-tuning":{"researchStatus":"researched","origin":"Fine-tuning is an established machine-learning term that predates the generative-AI era. It describes adapting an already pretrained model through additional training on task-specific or domain-specific data.","firstKnownUse":None,"history":[{"date":"2020s","event":"Fine-tuning became a common way to adapt large pretrained and foundation models to specialized behaviors and domains."}],"relatedTerms":["foundation-model","rlhf","few-shot","zero-shot"],"sources":[{"id":"nist-fine-tuning-glossary","type":"reference","publisher":"NIST","title":"fine-tuning - Glossary","published":"2025","url":"https://csrc.nist.gov/glossary/term/fine_tuning","supports":["definition","usage"]}]},
+            "rlhf":{"researchStatus":"researched","origin":"Reinforcement learning from human feedback combines reinforcement-learning methods with human judgments or preferences to help define what behavior should be rewarded. The approach has roots before modern LLMs; AILex does not claim that the acronym RLHF itself originated in the 2017 paper commonly associated with the modern method.","firstKnownUse":None,"history":[{"date":"2017-06-12","event":"Christiano and colleagues published ‘Deep Reinforcement Learning from Human Preferences,’ demonstrating complex behaviors learned from human preference feedback."},{"date":"2022-03-04","event":"OpenAI's InstructGPT paper showed how human demonstrations and preference rankings could be used to align a large language model with user intent, helping popularize RLHF in the LLM era."}],"relatedTerms":["fine-tuning","human-in-the-loop","foundation-model","large-language-model"],"sources":[{"id":"christiano-human-preferences-2017","type":"primary","publisher":"arXiv / NeurIPS","title":"Deep reinforcement learning from human preferences","published":"2017-06-12","url":"https://arxiv.org/abs/1706.03741","supports":["definition","history","research"]},{"id":"ouyang-instructgpt-2022","type":"primary","publisher":"arXiv","title":"Training language models to follow instructions with human feedback","published":"2022-03-04","url":"https://arxiv.org/abs/2203.02155","supports":["history","usage"]}]},
+            "chain-of-thought":{"researchStatus":"researched","origin":"Jason Wei and colleagues introduced ‘chain-of-thought prompting’ in a 2022 paper for prompting large language models with examples that include intermediate reasoning steps.","firstKnownUse":{"date":"2022-01-28","precision":"day","note":"The first arXiv version of ‘Chain-of-Thought Prompting Elicits Reasoning in Large Language Models’ introduced the named prompting method."},"history":[{"date":"2022-01-28","event":"Wei and colleagues published the first arXiv version of the chain-of-thought prompting paper."}],"relatedTerms":["prompt-engineering","reasoning-model","few-shot","large-language-model"],"sources":[{"id":"wei-chain-of-thought-2022","type":"primary","publisher":"arXiv / NeurIPS","title":"Chain-of-Thought Prompting Elicits Reasoning in Large Language Models","published":"2022-01-28","url":"https://arxiv.org/abs/2201.11903","supports":["origin","definition","firstKnownUse","history"]}]},
+            "system-prompt":{"researchStatus":"researched","origin":"The practice of giving software systems privileged or application-level instructions predates current LLMs, and AILex does not assign ‘system prompt’ to a single coinage. In modern generative AI, the term refers to instructions supplied by the model developer or application layer that establish behavior or context before ordinary user input.","firstKnownUse":None,"history":[{"date":"2023","event":"Chat-based LLM APIs made role-separated instructions, including system-level messages, a mainstream application-development pattern."}],"relatedTerms":["prompt-engineering","prompt-injection","context-window","grounding"],"sources":[{"id":"nist-system-prompt-glossary","type":"reference","publisher":"NIST","title":"system prompt - Glossary","published":"2025","url":"https://csrc.nist.gov/glossary/term/system_prompt","supports":["definition","usage"]}]},
+            "diffusion-model":{"researchStatus":"researched","origin":"Modern diffusion-based generative modeling traces to research that applies a forward process which gradually destroys structure with noise and learns a reverse process that reconstructs data. AILex does not claim the generic phrase ‘diffusion model’ was first coined by one paper.","firstKnownUse":None,"history":[{"date":"2015-03-12","event":"Sohl-Dickstein and colleagues submitted ‘Deep Unsupervised Learning using Nonequilibrium Thermodynamics,’ an influential early diffusion-based generative-model paper."}],"relatedTerms":["generative-ai","synthetic-content","multimodal"],"sources":[{"id":"sohl-dickstein-diffusion-2015","type":"primary","publisher":"arXiv / ICML","title":"Deep Unsupervised Learning using Nonequilibrium Thermodynamics","published":"2015-03-12","url":"https://arxiv.org/abs/1503.03585","supports":["definition","history","research"]}]}
+          }
+
+          for t in batch_terms:
+            if t['slug'] in existing:
+              raise SystemExit(f"Duplicate term slug: {t['slug']}")
+            terms.append(t)
+            existing.add(t['slug'])
+          for slug, record in batch_provenance.items():
+            if slug in provenance:
+              raise SystemExit(f"Duplicate provenance slug: {slug}")
+            provenance[slug] = record
+
+          terms.sort(key=lambda x: x['term'].lower())
+          terms_path.write_text(json.dumps(terms, ensure_ascii=False, separators=(',', ':')) + '\n')
+          provenance_path.write_text(json.dumps(dict(sorted(provenance.items())), ensure_ascii=False, indent=2) + '\n')
+
+          def page(t):
+            term = html.escape(t['term'])
+            desc = html.escape(t['definition'], quote=True)
+            pron = html.escape(t['pronunciation'])
+            slug = html.escape(t['slug'], quote=True)
+            return f'''<!doctype html>
+          <html lang="en">
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="color-scheme" content="light dark">
+            <title>{term} | AILex</title>
+            <meta name="description" content="{desc}">
+            <script>
+              (() => {{
+                try {{
+                  const saved = localStorage.getItem("ai-era-theme");
+                  const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+                  document.documentElement.dataset.theme = saved || (systemDark ? "dark" : "light");
+                }} catch (_) {{ document.documentElement.dataset.theme = "light"; }}
+              }})();
+            </script>
+            <link rel="stylesheet" href="../../assets/css/styles.css">
+            <link rel="stylesheet" href="../../assets/css/term-pages.css">
+          </head>
+          <body>
+            <header class="site-header">
+              <div class="shell header-inner">
+                <a class="brand" href="../../" aria-label="AILex home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M20 2 35 10.5v19L20 38 5 29.5v-19L20 2Z"/><path d="m20 2 0 18 15-9.5M20 20 5 10.5M20 20v18M5 29.5 20 20l15 9.5"/></svg></span><span>AILex</span></a>
+                <nav class="primary-nav" aria-label="Primary navigation"><a class="active" href="../../">Browse</a><a href="../../categories.html">Categories</a><a href="../../about.html">About</a><a href="../../contribute.html">Contribute</a><a href="../../methodology.html">Methodology</a></nav>
+                <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme"><span class="sun" aria-hidden="true">☼</span><span class="toggle-track"><span class="toggle-knob"></span></span><span class="moon" aria-hidden="true">☾</span></button>
+              </div>
+            </header>
+            <main id="term-page" class="term-page shell" data-term-slug="{slug}">
+              <div id="term-fallback" class="term-fallback">
+                <nav class="term-breadcrumb" aria-label="Breadcrumb"><a href="../../">Browse</a><span aria-hidden="true">/</span><span>{term}</span></nav>
+                <p class="eyebrow">AILex entry</p><h1>{term}</h1><p class="fallback-pronunciation">{pron}</p><p class="fallback-definition">{desc}</p>
+              </div>
+            </main>
+            <footer class="site-footer"><div class="shell footer-inner"><span class="footer-mark" aria-hidden="true">◎</span><p><strong>AILex · Dictionary of the AI Era</strong><br>Vibe coded · Human-directed · AI-assisted · Human-reviewed</p><p class="footer-license">Code: MIT · Content: CC BY 4.0</p></div></footer>
+            <script src="../../assets/js/app.js"></script><script src="../../assets/js/term-page.js"></script>
+          </body>
+          </html>
+          '''
+
+          for t in batch_terms:
+            d = pathlib.Path('terms') / t['slug']
+            d.mkdir(parents=True, exist_ok=True)
+            (d / 'index.html').write_text(page(t))
+
+          assert len(terms) == 39, len(terms)
+          assert set(provenance) == {t['slug'] for t in terms}
+          for slug, record in provenance.items():
+            for related in record.get('relatedTerms', []):
+              if related not in existing:
+                raise SystemExit(f"Broken related term {slug} -> {related}")
+          print('Validated 39 terms with complete provenance and related-term targets.')
+          PY
+      - name: Update pronunciation overrides
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('assets/js/app.js')
+          s=p.read_text()
+          s=s.replace('  "ai-washing": "A I washing",', '  "ai-washing": "A I washing",\n  "generative-ai": "generative A I",')
+          s=s.replace('  "mcp": "M C P",', '  "mcp": "M C P",\n  "rlhf": "R L H F",')
+          p.write_text(s)
+          PY
+      - name: Commit generated corpus batch
+        run: |
+          git config user.name "jeffthomasiii"
+          git config user.email "Masterstudent@duck.com"
+          git add data/terms.json data/provenance.json terms assets/js/app.js
+          git commit -m "feat: publish AILex 100 foundational batch"
+          git push origin HEAD:feat/ailex-100-corpus-phase-1
+      - name: Remove one-time workflow
+        run: |
+          git rm .github/workflows/apply-corpus-batch-1.yml
+          git commit -m "chore: remove one-time corpus workflow"
+          git push origin HEAD:feat/ailex-100-corpus-phase-1
