@@ -1,14 +1,25 @@
-# Dictionary of the AI Era
+# AILex
 
-A living, searchable dictionary of the language emerging around artificial intelligence.
+**/A-I-lex/**  
+**Dictionary of the AI Era**
+
+AILex is a living, searchable dictionary of the language emerging around artificial intelligence.
 
 **Development approach: Vibe coded · Human-directed · AI-assisted · Human-reviewed**
 
-The project catalogs technical concepts, new ways of working, emerging slang, and terminology related to AI risk, safety, and governance.
+AILex catalogs technical concepts, new ways of working, emerging slang, and terminology related to AI risk, safety, and governance.
+
+## Brand
+
+**AILex** combines **AI** with **lexicon**. It is pronounced **/A-I-lex/**, saying the letters A and I followed by “lex.”
+
+**Dictionary of the AI Era** is the project descriptor/tagline rather than the primary brand name.
+
+See [`BRAND.md`](BRAND.md) for naming usage and the future repository/domain strategy.
 
 ## AI transparency
 
-This project is intentionally and substantially developed through an AI-assisted, vibe-coding workflow. AI is not only something this dictionary documents; it is part of how the dictionary itself is built.
+This project is intentionally and substantially developed through an AI-assisted, vibe-coding workflow. AI is not only something AILex documents; it is part of how AILex itself is built.
 
 Jeff Thomas III provides the project direction, requirements, editorial judgment, testing, review, and final decisions. AI tools assist with research support, architecture, coding, debugging, documentation, definition drafting, copy editing, and implementation.
 
@@ -24,7 +35,10 @@ See [`AI-TRANSPARENCY.md`](AI-TRANSPARENCY.md) for the full development and edit
 - Instant client-side search
 - Category filters
 - A–Z browsing
+- List and grid views
+- Light and dark modes
 - Shareable term anchors
+- Dedicated About, Categories, Contribute, and Methodology pages
 - Structured JSON source data
 - GitHub Pages-ready static site
 - No database, framework, build step, or API required
@@ -34,6 +48,10 @@ See [`AI-TRANSPARENCY.md`](AI-TRANSPARENCY.md) for the full development and edit
 ```text
 dictionary-of-the-ai-era/
 ├── index.html
+├── about.html
+├── categories.html
+├── contribute.html
+├── methodology.html
 ├── 404.html
 ├── data/
 │   └── terms.json
@@ -43,8 +61,10 @@ dictionary-of-the-ai-era/
 │   └── js/
 │       └── app.js
 ├── AI-TRANSPARENCY.md
+├── BRAND.md
 ├── CONTENT-LICENSE.md
 ├── CONTRIBUTING.md
+├── DESIGN.md
 ├── LICENSE
 └── README.md
 ```
@@ -72,7 +92,7 @@ Each entry in `data/terms.json` follows this structure:
 
 ## Editorial principle
 
-This project is intended to be a dictionary, not a list of AI buzzwords. Terms should have documented real-world usage and definitions should distinguish between established technical vocabulary, emerging terminology, slang, research language, and contested concepts.
+AILex is intended to be a dictionary, not a list of AI buzzwords. Terms should have documented real-world usage and definitions should distinguish between established technical vocabulary, emerging terminology, slang, research language, and contested concepts.
 
 AI can assist with identifying and researching candidate terms, drafting definitions, organizing evidence, and maintaining the software. Inclusion, source evaluation, final wording, classification, and publication remain human-reviewed decisions.
 
@@ -121,6 +141,7 @@ No build process is required.
 - Submission workflow
 - Editorial review status
 - Automated candidate-term discovery with human approval
+- Repository and domain transition from the working `dictionary-of-the-ai-era` identity to AILex once naming, redirects, and link preservation are planned
 
 ## Licensing
 
