@@ -158,3 +158,14 @@ gridViewButton?.addEventListener("click", () => { state.view = "grid"; localStor
 if (dictionary) {
   fetch("data/terms.json").then(response => { if (!response.ok) throw new Error("Could not load dictionary data."); return response.json(); }).then(terms => { state.terms = terms; render(); }).catch(error => { dictionary.innerHTML = `<p>Unable to load the dictionary. ${esc(error.message)}</p>`; });
 }
+
+
+(() => {
+  if (document.querySelector('script[data-mobile-navigation-loader]')) return;
+  const source = document.currentScript?.src;
+  if (!source) return;
+  const script = document.createElement('script');
+  script.src = new URL('mobile-nav.js', source).href;
+  script.dataset.mobileNavigationLoader = 'true';
+  document.head.append(script);
+})();
