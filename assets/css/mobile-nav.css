@@ -1,14 +1,21 @@
-.mobile-nav-toggle,.mobile-nav-panel{display:none}
+.mobile-nav-details{display:none}
 @media(max-width:980px){
   .site-header{overflow:visible}
   .header-inner{grid-template-columns:1fr auto auto;gap:10px}
-  .mobile-nav-toggle{appearance:none;width:40px;height:40px;display:grid;place-items:center;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);cursor:pointer}
+  .mobile-nav-details{display:block;position:static}
+  .mobile-nav-toggle{list-style:none;appearance:none;width:40px;height:40px;display:grid;place-items:center;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);cursor:pointer}
+  .mobile-nav-toggle::-webkit-details-marker{display:none}
+  .mobile-nav-toggle::marker{content:""}
   .mobile-nav-toggle:hover{border-color:var(--line-strong);background:var(--surface-2)}
   .mobile-nav-toggle:focus-visible{outline:3px solid color-mix(in srgb,var(--accent) 28%,transparent);outline-offset:2px}
-  .mobile-nav-toggle svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
+  .mobile-nav-icon{grid-area:1/1;display:grid;place-items:center}
+  .mobile-nav-icon svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
+  .mobile-nav-icon-close{display:none}
+  .mobile-nav-details[open] .mobile-nav-icon-menu{display:none}
+  .mobile-nav-details[open] .mobile-nav-icon-close{display:grid}
   .theme-toggle{justify-self:auto}
-  .mobile-nav-panel{position:absolute;left:0;right:0;top:100%;z-index:70;border-top:1px solid var(--line);background:color-mix(in srgb,var(--bg) 98%,transparent);box-shadow:0 16px 30px rgba(0,0,0,.14);max-height:calc(100vh - 64px);overflow-y:auto}
-  .mobile-nav-panel:not([hidden]){display:block}
+  .mobile-nav-panel{display:none;position:absolute;left:0;right:0;top:100%;z-index:90;border-top:1px solid var(--line);background:color-mix(in srgb,var(--bg) 99%,transparent);box-shadow:0 16px 30px rgba(0,0,0,.14);max-height:calc(100vh - 64px);overflow-y:auto}
+  .mobile-nav-details[open] .mobile-nav-panel{display:block}
   .mobile-primary-nav{width:min(var(--max),calc(100% - 40px));margin:0 auto;padding:10px 0 16px;display:grid}
   .mobile-primary-nav a{display:flex;align-items:center;min-height:44px;padding:9px 4px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--muted);font-size:.92rem;background:transparent}
   .mobile-primary-nav a:last-child{border-bottom:0}
