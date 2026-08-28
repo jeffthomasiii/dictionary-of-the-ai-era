@@ -1,6 +1,6 @@
 # AILex 100 Corpus Roadmap
 
-AILex currently has 52 published, researched entries after Batch 2. The MVP corpus target is **100 published terms**, leaving 48 additional accepted entries to reach the corpus threshold.
+AILex currently has 64 published, researched entries after Batch 3. The MVP corpus target is **100 published terms**, leaving 36 additional accepted entries to reach the corpus threshold.
 
 The backlog intentionally contains more candidates than the MVP requires. A candidate is not guaranteed publication. Each term must still pass AILex's usage, sourcing, definition, provenance, and human-review standards.
 
@@ -246,3 +246,20 @@ AILex reaches the corpus portion of MVP when:
 13. Self-Attention
 
 After Batch 2, the published corpus reaches **52 terms** and the Priority 1 foundation layer is substantially complete.
+
+## Batch 3 — Prompting, Context & Retrieval I
+
+1. Prompt
+2. User Prompt
+3. Developer Prompt
+4. Prompt Template
+5. Prompt Chaining
+6. One-Shot
+7. In-Context Learning
+8. Context Engineering
+9. Prompt Caching
+10. Chunking
+11. Retrieval
+12. Reranking
+
+After Batch 3, the published corpus reaches **64 terms**, leaving **36 terms** to the 100-term MVP corpus threshold.
