@@ -13,6 +13,14 @@
     document.head.append(style);
   }
 
+  const mobileQuery = window.matchMedia('(max-width: 680px)');
+  const originalPlaceholder = search.getAttribute('placeholder') || '';
+  const syncPlaceholder = () => {
+    search.setAttribute('placeholder', mobileQuery.matches ? 'Search AILex…' : originalPlaceholder);
+  };
+  syncPlaceholder();
+  mobileQuery.addEventListener?.('change', syncPlaceholder);
+
   const searchWrap = search.closest('.search-wrap');
   if (!searchWrap || searchWrap.closest('.mobile-browse-controls')) return;
 
@@ -35,7 +43,7 @@
   menu.className = 'mobile-filter-menu';
   menu.hidden = true;
   menu.setAttribute('role', 'menu');
-  controls.appendChild(menu);
+  document.body.appendChild(menu);
 
   const keyFor = filter => {
     if (filter.classList.contains('culture')) return 'culture';
@@ -61,6 +69,17 @@
   const options = [...menu.querySelectorAll('.mobile-filter-option')];
   const label = toggle.querySelector('.mobile-filter-label');
 
+  function positionMenu() {
+    if (menu.hidden) return;
+    const rect = toggle.getBoundingClientRect();
+    const gutter = 14;
+    const width = Math.min(292, window.innerWidth - gutter * 2);
+    const left = Math.min(window.innerWidth - width - gutter, Math.max(gutter, rect.right - width));
+    menu.style.width = `${width}px`;
+    menu.style.left = `${left}px`;
+    menu.style.top = `${rect.bottom + 8}px`;
+  }
+
   function closeMenu({restoreFocus = false} = {}) {
     menu.hidden = true;
     toggle.setAttribute('aria-expanded', 'false');
@@ -70,6 +89,7 @@
   function openMenu() {
     menu.hidden = false;
     toggle.setAttribute('aria-expanded', 'true');
+    positionMenu();
     const selected = menu.querySelector('[aria-current="true"]') || options[0];
     requestAnimationFrame(() => selected?.focus());
   }
@@ -106,10 +126,12 @@
   });
 
   document.addEventListener('click', event => {
-    if (!menu.hidden && !controls.contains(event.target)) closeMenu();
+    if (!menu.hidden && !controls.contains(event.target) && !menu.contains(event.target)) closeMenu();
   });
 
-  window.matchMedia('(min-width: 681px)').addEventListener?.('change', event => {
-    if (event.matches) closeMenu();
+  window.addEventListener('resize', () => {
+    if (!mobileQuery.matches) closeMenu();
+    else positionMenu();
   });
+  window.addEventListener('scroll', positionMenu, {passive: true});
 })();
