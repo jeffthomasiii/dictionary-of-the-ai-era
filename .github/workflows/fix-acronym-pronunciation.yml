@@ -1,0 +1,39 @@
+name: One-time acronym pronunciation fix
+on:
+  push:
+    branches: [fix/acronym-pronunciation-overrides]
+    paths: [.github/workflows/fix-acronym-pronunciation.yml]
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add explicit acronym speech overrides
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('assets/js/app.js')
+          s = p.read_text()
+          assert '  "rlhf": "R L H F",' in s
+          assert '  "rlaif":' not in s
+          assert '  "peft":' not in s
+          s = s.replace('  "rlhf": "R L H F",', '  "peft": "P E F T",\n  "rlaif": "R L A I F",\n  "rlhf": "R L H F",', 1)
+          p.write_text(s)
+          PY
+          node --check assets/js/app.js
+          grep -q '"rlaif": "R L A I F"' assets/js/app.js
+          grep -q '"peft": "P E F T"' assets/js/app.js
+      - name: Commit fix
+        run: |
+          git config user.name "jeffthomasiii"
+          git config user.email "Masterstudent@duck.com"
+          git add assets/js/app.js
+          git commit -m "fix: spell RLAIF and PEFT in speech synthesis"
+          git push
+      - name: Remove one-time workflow
+        run: |
+          git rm .github/workflows/fix-acronym-pronunciation.yml
+          git commit -m "chore: remove acronym pronunciation workflow"
+          git push
