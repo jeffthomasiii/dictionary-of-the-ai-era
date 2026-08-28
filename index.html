@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Dictionary of the AI Era</title>
-  <meta name="description" content="A living dictionary of the language emerging around artificial intelligence.">
+  <title>AILex · Dictionary of the AI Era</title>
+  <meta name="description" content="AILex is a living Dictionary of the AI Era, cataloging the terms, concepts, slang, and language emerging around artificial intelligence.">
   <script>
     (() => {
       const saved = localStorage.getItem("ai-era-theme");
@@ -18,25 +18,21 @@
 <body>
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="brand" href="./" aria-label="Dictionary of the AI Era home">
+      <a class="brand" href="./" aria-label="AILex home">
         <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 40 40" role="img">
-            <path d="M20 2 35 10.5v19L20 38 5 29.5v-19L20 2Z"/>
-            <path d="m20 2 0 18 15-9.5M20 20 5 10.5M20 20v18M5 29.5 20 20l15 9.5"/>
-          </svg>
+          <svg viewBox="0 0 40 40"><path d="M20 2 35 10.5v19L20 38 5 29.5v-19L20 2Z"/><path d="m20 2 0 18 15-9.5M20 20 5 10.5M20 20v18M5 29.5 20 20l15 9.5"/></svg>
         </span>
-        <span>Dictionary of the AI Era</span>
+        <span>AILex</span>
       </a>
       <nav class="primary-nav" aria-label="Primary navigation">
-        <a href="#browse">Browse</a>
-        <a href="#categories">Categories</a>
-        <a href="#about">About</a>
-        <a href="CONTRIBUTING.md">Contribute</a>
+        <a class="active" href="./">Browse</a>
+        <a href="categories.html">Categories</a>
+        <a href="about.html">About</a>
+        <a href="contribute.html">Contribute</a>
+        <a href="methodology.html">Methodology</a>
       </nav>
       <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">
-        <span class="sun" aria-hidden="true">☼</span>
-        <span class="toggle-track"><span class="toggle-knob"></span></span>
-        <span class="moon" aria-hidden="true">☾</span>
+        <span class="sun" aria-hidden="true">☼</span><span class="toggle-track"><span class="toggle-knob"></span></span><span class="moon" aria-hidden="true">☾</span>
       </button>
     </div>
   </header>
@@ -44,41 +40,48 @@
   <main>
     <section class="hero">
       <div class="technical-grid" aria-hidden="true"></div>
-      <div class="wave wave-left" aria-hidden="true"></div>
-      <div class="wave wave-right" aria-hidden="true"></div>
+      <svg class="hero-network network-left" viewBox="0 0 360 240" aria-hidden="true">
+        <g class="network-lines"><path d="M18 165 92 104l70 42 78-90 94 46"/><path d="m92 104 22 95 48-53 80 45"/><path d="M162 146 204 34l36 22"/></g>
+        <g class="network-nodes"><circle cx="18" cy="165" r="3"/><circle cx="92" cy="104" r="4"/><circle cx="114" cy="199" r="3"/><circle cx="162" cy="146" r="4"/><circle cx="204" cy="34" r="3"/><circle cx="240" cy="56" r="4"/><circle cx="240" cy="191" r="3"/><circle cx="334" cy="102" r="4"/></g>
+      </svg>
+      <svg class="hero-network network-right" viewBox="0 0 360 240" aria-hidden="true">
+        <g class="network-lines"><path d="M28 74 104 36l66 76 72-52 91 74"/><path d="m104 36 15 142 51-66 58 82"/><path d="m170 112 70 2 2-54"/></g>
+        <g class="network-nodes"><circle cx="28" cy="74" r="3"/><circle cx="104" cy="36" r="4"/><circle cx="119" cy="178" r="3"/><circle cx="170" cy="112" r="4"/><circle cx="228" cy="194" r="3"/><circle cx="240" cy="114" r="4"/><circle cx="242" cy="60" r="3"/><circle cx="333" cy="134" r="4"/></g>
+      </svg>
+      <svg class="hero-wave" viewBox="0 0 1440 200" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 110 C160 20 310 180 475 92 S770 35 940 116 1230 168 1440 72"/>
+        <path d="M0 126 C160 36 310 196 475 108 S770 51 940 132 1230 184 1440 88"/>
+        <path d="M0 142 C160 52 310 212 475 124 S770 67 940 148 1230 200 1440 104"/>
+        <path d="M0 94 C160 4 310 164 475 76 S770 19 940 100 1230 152 1440 56"/>
+      </svg>
+
       <div class="shell hero-inner">
         <aside class="hero-stats" aria-label="Dictionary statistics">
           <div><span>TERMS</span><strong id="hero-term-count">—</strong></div>
           <div><span>STATUS</span><strong>Living</strong></div>
-          <div><span>UPDATED</span><strong>2026</strong></div>
+          <div><span>UPDATED</span><strong>August 28, 2026</strong></div>
         </aside>
 
         <div class="hero-copy">
-          <p class="eyebrow">A living lexicon</p>
-          <h1>Dictionary of the AI Era</h1>
+          <p class="eyebrow">Dictionary of the AI Era</p>
+          <h1>AILex</h1>
           <p class="lede">A living lexicon of artificial intelligence, capturing the terms, concepts, and ideas shaping how we work, create, communicate, and think.</p>
 
           <label class="search-wrap">
-            <span class="search-icon" aria-hidden="true"></span>
-            <span class="sr-only">Search dictionary</span>
-            <input id="search" type="search" placeholder="Search terms, concepts, and definitions..." autocomplete="off">
-            <kbd>⌘ K</kbd>
+            <span class="search-icon" aria-hidden="true"></span><span class="sr-only">Search AILex</span>
+            <input id="search" type="search" placeholder="Search terms, concepts, and definitions..." autocomplete="off"><kbd>⌘ K</kbd>
           </label>
 
-          <div id="categories" class="toolbar" aria-label="Dictionary filters">
-            <button class="filter all active" data-category="all"><span class="category-icon">∞</span><span>All terms</span></button>
-            <button class="filter culture" data-category="AI Culture & Slang"><span class="category-icon">◌</span><span>Culture & Slang</span></button>
-            <button class="filter work" data-category="AI Ways of Working"><span class="category-icon">⌘</span><span>Ways of Working</span></button>
-            <button class="filter systems" data-category="AI Systems & Technical Concepts"><span class="category-icon">◇</span><span>Systems & Technical</span></button>
-            <button class="filter risks" data-category="AI Risks, Safety & Governance"><span class="category-icon">⬡</span><span>Risks & Governance</span></button>
+          <div class="toolbar" aria-label="Dictionary filters">
+            <button class="filter all active" data-category="all"><span class="category-icon icon-all" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="7" r="2.5"/><circle cx="7" cy="17" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg></span><span>All terms</span></button>
+            <button class="filter culture" data-category="AI Culture & Slang"><span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 6h14v9H9l-4 3V6Z"/><circle cx="9" cy="10.5" r=".7"/><circle cx="12" cy="10.5" r=".7"/><circle cx="15" cy="10.5" r=".7"/></svg></span><span>Culture & Slang</span></button>
+            <button class="filter work" data-category="AI Ways of Working"><span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M3.5 19c.3-4 2-6 4.5-6s4.2 2 4.5 6M11.5 19c.3-4 2-6 4.5-6s4.2 2 4.5 6"/></svg></span><span>Ways of Working</span></button>
+            <button class="filter systems" data-category="AI Systems & Technical Concepts"><span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 7 4v10l-7 4-7-4V7l7-4Z"/><path d="m5 7 7 4 7-4M12 11v10"/></svg></span><span>Systems & Technical</span></button>
+            <button class="filter risks" data-category="AI Risks, Safety & Governance"><span class="category-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 19 6v5c0 4.6-2.7 8-7 10-4.3-2-7-5.4-7-10V6l7-3Z"/></svg></span><span>Risks & Governance</span></button>
           </div>
         </div>
 
-        <blockquote class="hero-quote">
-          <span class="quote-mark">“</span>
-          <p>Language evolves.<br>Understanding empowers.</p>
-          <small>Explore · Learn · Shape</small>
-        </blockquote>
+        <blockquote class="hero-quote"><span class="quote-mark">“</span><p>Language evolves.<br>Understanding empowers.</p><small>Explore · Learn · Shape</small></blockquote>
       </div>
     </section>
 
@@ -86,31 +89,21 @@
       <div class="dictionary-meta">
         <div class="browse-label">Browse A–Z</div>
         <nav id="alpha-nav" class="alpha-nav" aria-label="Browse alphabetically"></nav>
-        <div id="result-count" aria-live="polite"></div>
+        <div class="browse-actions">
+          <div id="result-count" aria-live="polite"></div>
+          <div class="view-toggle" role="group" aria-label="Dictionary view">
+            <button id="list-view" class="view-button active" type="button" aria-label="List view" title="List view"><svg viewBox="0 0 20 20"><path d="M3 5h2M8 5h9M3 10h2M8 10h9M3 15h2M8 15h9"/></svg></button>
+            <button id="grid-view" class="view-button" type="button" aria-label="Grid view" title="Grid view"><svg viewBox="0 0 20 20"><rect x="3" y="3" width="5" height="5"/><rect x="12" y="3" width="5" height="5"/><rect x="3" y="12" width="5" height="5"/><rect x="12" y="12" width="5" height="5"/></svg></button>
+          </div>
+        </div>
       </div>
-      <div id="dictionary" class="dictionary"></div>
+      <div id="dictionary" class="dictionary list-view"></div>
       <p id="empty-state" class="empty-state" hidden>No matching terms found.</p>
-    </section>
-
-    <section id="about" class="about shell">
-      <div>
-        <p class="eyebrow">About the project</p>
-        <h2>A dictionary, not just a glossary.</h2>
-      </div>
-      <div class="about-copy">
-        <p>This project catalogs the vocabulary developing around artificial intelligence: technical concepts, new ways of working, emerging slang, and language related to AI risk and governance. Definitions are written for clarity first and are intended to evolve as the language does.</p>
-        <p><strong>Yes, this project is vibe coded.</strong> AI is not only something this dictionary documents; it is part of how the dictionary itself is built. The project is human-directed, AI-assisted, and human-reviewed, with human editorial judgment governing what ultimately gets published.</p>
-        <p><a href="AI-TRANSPARENCY.md">AI transparency policy →</a> <a href="CONTENT-LICENSE.md">Content license →</a></p>
-      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="shell footer-inner">
-      <span class="footer-mark" aria-hidden="true">◎</span>
-      <p><strong>Living & evolving.</strong><br>Vibe coded · Human-directed · AI-assisted · Human-reviewed</p>
-      <p class="footer-license">Code: MIT · Content: CC BY 4.0</p>
-    </div>
+    <div class="shell footer-inner"><span class="footer-mark" aria-hidden="true">◎</span><p><strong>AILex · Dictionary of the AI Era</strong><br>Vibe coded · Human-directed · AI-assisted · Human-reviewed</p><p class="footer-license">Code: MIT · Content: CC BY 4.0</p></div>
   </footer>
   <script src="assets/js/app.js"></script>
 </body>
