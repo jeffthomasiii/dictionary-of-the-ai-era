@@ -6,6 +6,7 @@ on:
       - feat/ailex-100-corpus-phase-6
     paths:
       - .github/workflows/apply-corpus-batch-6.yml
+      - scripts/apply_batch6.py
 
 permissions:
   contents: write
