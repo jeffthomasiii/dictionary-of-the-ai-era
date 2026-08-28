@@ -22,10 +22,13 @@ if (dictionary && !document.querySelector('link[data-browse-pronunciation]')) {
 
 const speechOverrides = {
   "ai-agent": "A I agent",
+  "ai-alignment": "A I alignment",
+  "ai-governance": "A I governance",
   "ai-native": "A I native",
   "ai-slop": "A I slop",
   "ai-washing": "A I washing",
   "generative-ai": "generative A I",
+  "llm-as-a-judge": "L L M as a judge",
   "mcp": "M C P",
   "rlhf": "R L H F",
   "shadow-ai": "shadow A I"

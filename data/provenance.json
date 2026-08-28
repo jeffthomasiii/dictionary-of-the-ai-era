@@ -3171,5 +3171,538 @@
         ]
       }
     ]
+  },
+  "multi-agent-system": {
+    "researchStatus": "researched",
+    "origin": "Multi-agent systems predate generative AI and have long been studied in distributed artificial intelligence. In the current agentic-AI era, the term commonly describes workflows in which multiple coordinated AI agents divide work or hand tasks to one another.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2025",
+        "event": "OpenAI's practical guide to building agents described multi-agent systems as workflows distributed across multiple coordinated agents, including manager and decentralized handoff patterns."
+      }
+    ],
+    "relatedTerms": [
+      "ai-agent",
+      "agentic",
+      "orchestration",
+      "tool-calling"
+    ],
+    "sources": [
+      {
+        "id": "openai-multi-agent-guide",
+        "type": "reference",
+        "publisher": "OpenAI",
+        "title": "A practical guide to building AI agents",
+        "published": "2025",
+        "url": "https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "computer-use": {
+    "researchStatus": "researched",
+    "origin": "Computer use became a prominent AI capability label in 2024 as frontier models began interacting directly with graphical computer interfaces by interpreting screens and controlling pointers and keyboards.",
+    "firstKnownUse": {
+      "date": "2024-10-22",
+      "precision": "day",
+      "note": "Anthropic publicly introduced 'computer use' as a model capability in public beta on this date; AILex does not claim this was the first research on GUI automation."
+    },
+    "history": [
+      {
+        "date": "2024-10-22",
+        "event": "Anthropic introduced computer use in public beta for Claude 3.5 Sonnet, describing screen viewing, cursor movement, clicking, and typing."
+      }
+    ],
+    "relatedTerms": [
+      "ai-agent",
+      "tool-calling",
+      "orchestration"
+    ],
+    "sources": [
+      {
+        "id": "anthropic-computer-use-2024",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Introducing computer use, a new Claude 3.5 Sonnet, and Claude 3.5 Haiku",
+        "published": "2024-10-22",
+        "url": "https://www.anthropic.com/news/3-5-models-and-computer-use",
+        "supports": [
+          "origin",
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "orchestration": {
+    "researchStatus": "researched",
+    "origin": "Orchestration is an older computing term used for coordinating components and services. In AI systems it has been adapted to describe coordination among models, agents, tools, data sources, and workflow steps.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2025",
+        "event": "OpenAI's agent-building guidance described orchestration patterns for single-agent and multi-agent systems, including runs, loops, tool calls, and handoffs."
+      }
+    ],
+    "relatedTerms": [
+      "multi-agent-system",
+      "ai-agent",
+      "tool-calling",
+      "prompt-chaining"
+    ],
+    "sources": [
+      {
+        "id": "openai-agent-orchestration-guide",
+        "type": "reference",
+        "publisher": "OpenAI",
+        "title": "A practical guide to building AI agents",
+        "published": "2025",
+        "url": "https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "text-to-image": {
+    "researchStatus": "researched",
+    "origin": "Text-to-image generation developed from research connecting natural-language representations with generative image models. The category entered broad public awareness as systems such as DALL·E demonstrated image creation from text prompts.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2021-01-05",
+        "event": "OpenAI introduced DALL·E, a neural network that creates images from text captions."
+      }
+    ],
+    "relatedTerms": [
+      "generative-ai",
+      "diffusion-model",
+      "multimodal",
+      "synthetic-content"
+    ],
+    "sources": [
+      {
+        "id": "openai-dalle-2021",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "DALL·E: Creating images from text",
+        "published": "2021-01-05",
+        "url": "https://openai.com/research/dall-e/",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "temperature": {
+    "researchStatus": "researched",
+    "origin": "Temperature comes from probabilistic sampling methods and predates modern generative AI. In language-model APIs it became a common user-facing control for adjusting randomness in token sampling.",
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "token",
+      "inference",
+      "generative-ai"
+    ],
+    "sources": [
+      {
+        "id": "openai-temperature-api",
+        "type": "reference",
+        "publisher": "OpenAI",
+        "title": "Create a model response - API Reference",
+        "published": null,
+        "url": "https://developers.openai.com/api/reference/cli/resources/responses/methods/create",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "mixture-of-experts": {
+    "researchStatus": "researched",
+    "origin": "Mixture-of-experts architectures grew from earlier neural-network research on combining specialized expert models with a gating mechanism. The approach became especially important for large-scale language models because sparse routing can increase model capacity without activating every parameter for every input.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2017",
+        "event": "Google researchers introduced a sparsely gated Mixture-of-Experts layer with up to thousands of expert subnetworks for language modeling and machine translation."
+      }
+    ],
+    "relatedTerms": [
+      "neural-network",
+      "parameters",
+      "transformer",
+      "large-language-model"
+    ],
+    "sources": [
+      {
+        "id": "google-sparse-moe-2017",
+        "type": "primary",
+        "publisher": "Google Research / ICLR",
+        "title": "Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer",
+        "published": "2017",
+        "url": "https://research.google/pubs/outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts-layer/",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "benchmark": {
+    "researchStatus": "researched",
+    "origin": "Benchmark is an established evaluation term that predates modern AI. In machine learning and generative AI, benchmarks provide standardized tasks, datasets, or scoring procedures for comparing systems.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2024-08-13",
+        "event": "OpenAI and the SWE-bench authors released SWE-bench Verified, a human-validated subset for evaluating software-engineering performance."
+      }
+    ],
+    "relatedTerms": [
+      "eval",
+      "llm-as-a-judge",
+      "reasoning-model"
+    ],
+    "sources": [
+      {
+        "id": "openai-evals-benchmarks",
+        "type": "reference",
+        "publisher": "OpenAI",
+        "title": "OpenAI Evals",
+        "published": null,
+        "url": "https://evals.openai.com/",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "eval": {
+    "researchStatus": "researched",
+    "origin": "Eval is a shortened form of evaluation that became common in modern AI development as teams formalized repeatable tests for model and system behavior. It can refer to a single test, a dataset-plus-grader configuration, or a broader evaluation suite.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2023-03-14",
+        "event": "OpenAI open-sourced Evals alongside GPT-4 as a framework for creating and running model benchmarks and inspecting performance sample by sample."
+      },
+      {
+        "date": "2025-11-19",
+        "event": "OpenAI described evals as methods to measure and improve whether an AI system meets expectations."
+      }
+    ],
+    "relatedTerms": [
+      "benchmark",
+      "llm-as-a-judge",
+      "red-teaming"
+    ],
+    "sources": [
+      {
+        "id": "openai-gpt4-evals-2023",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "GPT-4",
+        "published": "2023-03-14",
+        "url": "https://openai.com/index/gpt-4-research/",
+        "supports": [
+          "origin",
+          "history",
+          "usage"
+        ]
+      },
+      {
+        "id": "openai-evals-primer-2025",
+        "type": "reference",
+        "publisher": "OpenAI",
+        "title": "How evals drive the next chapter in AI for businesses",
+        "published": "2025-11-19",
+        "url": "https://openai.com/index/evals-drive-next-chapter-of-ai/",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "llm-as-a-judge": {
+    "researchStatus": "researched",
+    "origin": "LLM-as-a-judge emerged as language models became capable enough to grade or compare other model outputs using natural-language rubrics. The broader idea overlaps with model-graded evaluation and automated grading.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2023-03-14",
+        "event": "OpenAI's GPT-4 release described 'model-graded evals,' noting that GPT-4 could check its own work."
+      },
+      {
+        "date": "2025-04-02",
+        "event": "OpenAI's PaperBench used an LLM-based judge to grade research-replication attempts against detailed rubrics and separately evaluated the judge itself."
+      }
+    ],
+    "relatedTerms": [
+      "eval",
+      "benchmark",
+      "human-in-the-loop"
+    ],
+    "sources": [
+      {
+        "id": "openai-gpt4-model-graded-evals",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "GPT-4",
+        "published": "2023-03-14",
+        "url": "https://openai.com/index/gpt-4-research/",
+        "supports": [
+          "history",
+          "usage"
+        ]
+      },
+      {
+        "id": "openai-paperbench-judge",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "OpenAI Evals - PaperBench",
+        "published": "2025-04-02",
+        "url": "https://evals.openai.com/",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "red-teaming": {
+    "researchStatus": "researched",
+    "origin": "Red teaming is an established security practice that predates AI. AI red teaming adapts adversarial testing to probe models and systems for unsafe capabilities, failure modes, misuse pathways, and weaknesses in mitigations.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2024-08-08",
+        "event": "OpenAI's GPT-4o System Card documented large-scale external red teaming across safety, misuse, bias, privacy, impersonation, and other risk areas."
+      }
+    ],
+    "relatedTerms": [
+      "jailbreak",
+      "prompt-injection",
+      "guardrail",
+      "eval"
+    ],
+    "sources": [
+      {
+        "id": "openai-gpt4o-red-teaming",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "GPT-4o System Card",
+        "published": "2024-08-08",
+        "url": "https://openai.com/index/gpt-4o-system-card/",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "ai-alignment": {
+    "researchStatus": "researched",
+    "origin": "AI alignment is a research and safety term for the problem of making AI systems reliably pursue intended human goals and follow human values or intent. The underlying problem predates the current generative-AI era and has multiple competing formulations.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2022-08-24",
+        "event": "OpenAI described alignment research as work aimed at making AGI aligned with human values and human intent."
+      },
+      {
+        "date": "2026-07-20",
+        "event": "OpenAI described long-horizon alignment as requiring monitoring, safeguards, and iterative deployment because persistent models create new opportunities for unwanted actions."
+      }
+    ],
+    "relatedTerms": [
+      "rlhf",
+      "rlaif",
+      "human-in-the-loop",
+      "guardrail"
+    ],
+    "sources": [
+      {
+        "id": "openai-alignment-2022",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "Our approach to alignment research",
+        "published": "2022-08-24",
+        "url": "https://openai.com/index/our-approach-to-alignment-research/",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      },
+      {
+        "id": "openai-long-horizon-alignment-2026",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "Safety and alignment in an era of long-horizon models",
+        "published": "2026-07-20",
+        "url": "https://openai.com/index/safety-alignment-long-horizon-models/",
+        "supports": [
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "guardrail": {
+    "researchStatus": "researched",
+    "origin": "Guardrail is a general safety metaphor adapted to AI for controls that constrain behavior or reduce risk. AI guardrails can exist at model, system, policy, workflow, monitoring, or access-control layers rather than referring to one specific technique.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2026-06-09",
+        "event": "NIST reported that fixed AI guardrails cannot be universally robust against adaptive adversarial prompts, reinforcing the need for continuous monitoring and updating."
+      }
+    ],
+    "relatedTerms": [
+      "jailbreak",
+      "ai-alignment",
+      "ai-governance",
+      "human-in-the-loop"
+    ],
+    "sources": [
+      {
+        "id": "nist-ai-guardrails-2026",
+        "type": "primary",
+        "publisher": "NIST",
+        "title": "NIST Mathematical Proof Supports Transition to a Continuous-Monitor-and-Update Security Model for AI Systems",
+        "published": "2026-06-09",
+        "url": "https://www.nist.gov/news-events/news/2026/06/nist-mathematical-proof-supports-transition-continuous-monitor-and-update",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "jailbreak": {
+    "researchStatus": "researched",
+    "origin": "Jailbreak is an older computing term adapted to generative AI for prompts designed to bypass model restrictions or refusal behavior. It became common security vocabulary as public chatbots and safety controls proliferated.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2025",
+        "event": "NIST's adversarial machine-learning terminology defined jailbreak as a direct prompting attack intended to circumvent restrictions on model outputs."
+      }
+    ],
+    "relatedTerms": [
+      "prompt-injection",
+      "red-teaming",
+      "guardrail",
+      "ai-alignment"
+    ],
+    "sources": [
+      {
+        "id": "nist-jailbreak-glossary",
+        "type": "reference",
+        "publisher": "NIST CSRC",
+        "title": "jailbreak - Glossary",
+        "published": "2025",
+        "url": "https://csrc.nist.gov/glossary/term/jailbreak",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "ai-governance": {
+    "researchStatus": "researched",
+    "origin": "AI governance extends organizational governance and risk-management practices to AI systems. It covers the structures, policies, responsibilities, controls, documentation, oversight, and lifecycle processes used to direct AI development and use.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2023-01-26",
+        "event": "NIST released AI RMF 1.0 with GOVERN as a cross-cutting function covering policies, accountability, risk culture, roles, monitoring, inventories, and lifecycle oversight."
+      }
+    ],
+    "relatedTerms": [
+      "shadow-ai",
+      "ai-washing",
+      "guardrail",
+      "human-in-the-loop"
+    ],
+    "sources": [
+      {
+        "id": "nist-ai-rmf-govern-2023",
+        "type": "primary",
+        "publisher": "NIST",
+        "title": "AI RMF Core - Govern",
+        "published": "2023",
+        "url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      },
+      {
+        "id": "nist-ai-rmf-2023",
+        "type": "primary",
+        "publisher": "NIST",
+        "title": "AI Risk Management Framework",
+        "published": "2023-01-26",
+        "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+        "supports": [
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "deepfake": {
+    "researchStatus": "researched",
+    "origin": "Deepfake emerged in the late 2010s as a popular label for highly realistic synthetic or manipulated media produced with deep-learning techniques. The term is now also used in law and policy for AI-generated or manipulated media that can falsely appear authentic.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2024",
+        "event": "The European Union AI Act defined 'deep fake' as AI-generated or manipulated image, audio, or video content that resembles real persons, objects, places, entities, or events and can falsely appear authentic or truthful."
+      }
+    ],
+    "relatedTerms": [
+      "synthetic-content",
+      "generative-ai",
+      "ai-slop"
+    ],
+    "sources": [
+      {
+        "id": "eu-ai-act-deepfake",
+        "type": "primary",
+        "publisher": "European Commission",
+        "title": "AI Act Article 3: Definitions",
+        "published": "2024",
+        "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-3",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ]
   }
 }
