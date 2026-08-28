@@ -73,7 +73,7 @@
     if (menu.hidden) return;
     const rect = toggle.getBoundingClientRect();
     const gutter = 14;
-    const width = Math.min(292, window.innerWidth - gutter * 2);
+    const width = Math.min(220, window.innerWidth - gutter * 2);
     const left = Math.min(window.innerWidth - width - gutter, Math.max(gutter, rect.right - width));
     menu.style.width = `${width}px`;
     menu.style.left = `${left}px`;

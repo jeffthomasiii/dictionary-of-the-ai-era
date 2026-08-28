@@ -4,7 +4,7 @@
   const desktopNav = header?.querySelector('.primary-nav');
   const themeToggle = header?.querySelector('.theme-toggle');
 
-  if (!header || !headerInner || !desktopNav || header.querySelector('.mobile-nav-toggle')) return;
+  if (!header || !headerInner || !desktopNav || header.querySelector('.mobile-nav-details')) return;
 
   const currentScript = document.currentScript;
   if (currentScript?.src && !document.querySelector('link[data-mobile-nav-styles]')) {
@@ -15,59 +15,47 @@
     document.head.append(styles);
   }
 
-  const toggle = document.createElement('button');
-  toggle.type = 'button';
-  toggle.className = 'mobile-nav-toggle';
-  toggle.setAttribute('aria-expanded', 'false');
-  toggle.setAttribute('aria-controls', 'mobile-primary-nav');
-  toggle.setAttribute('aria-label', 'Open navigation menu');
-  toggle.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>';
+  const details = document.createElement('details');
+  details.className = 'mobile-nav-details';
+
+  const summary = document.createElement('summary');
+  summary.className = 'mobile-nav-toggle';
+  summary.setAttribute('aria-label', 'Navigation menu');
+  summary.innerHTML = '<span class="mobile-nav-icon mobile-nav-icon-menu" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span><span class="mobile-nav-icon mobile-nav-icon-close" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></span>';
 
   const panel = document.createElement('div');
   panel.className = 'mobile-nav-panel';
-  panel.id = 'mobile-primary-nav';
-  panel.hidden = true;
 
   const mobileNav = document.createElement('nav');
   mobileNav.className = 'mobile-primary-nav';
   mobileNav.setAttribute('aria-label', 'Mobile primary navigation');
   mobileNav.innerHTML = desktopNav.innerHTML;
+
   panel.append(mobileNav);
+  details.append(summary, panel);
 
-  if (themeToggle) headerInner.insertBefore(toggle, themeToggle);
-  else headerInner.append(toggle);
-  header.append(panel);
+  if (themeToggle) headerInner.insertBefore(details, themeToggle);
+  else headerInner.append(details);
 
-  const setOpen = (open, { focus = false } = {}) => {
-    panel.hidden = !open;
-    header.classList.toggle('mobile-nav-open', open);
-    toggle.setAttribute('aria-expanded', String(open));
-    toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
-    toggle.innerHTML = open
-      ? '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>'
-      : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>';
-    if (open && focus) mobileNav.querySelector('a')?.focus();
-  };
-
-  toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
   mobileNav.addEventListener('click', event => {
-    if (event.target.closest('a')) setOpen(false);
+    if (event.target.closest('a')) details.removeAttribute('open');
   });
 
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
-      setOpen(false);
-      toggle.focus();
+    if (event.key === 'Escape' && details.open) {
+      details.removeAttribute('open');
+      summary.focus();
     }
   });
 
   document.addEventListener('click', event => {
-    if (toggle.getAttribute('aria-expanded') === 'true' && !header.contains(event.target)) setOpen(false);
+    if (details.open && !header.contains(event.target)) details.removeAttribute('open');
   });
 
   const desktopQuery = window.matchMedia('(min-width: 981px)');
-  const closeOnDesktop = event => { if (event.matches) setOpen(false); };
-  desktopQuery.addEventListener?.('change', closeOnDesktop);
+  desktopQuery.addEventListener?.('change', event => {
+    if (event.matches) details.removeAttribute('open');
+  });
 
   if (document.getElementById('dictionary') && currentScript?.src && !document.querySelector('script[data-mobile-browse-loader]')) {
     const browseScript = document.createElement('script');
