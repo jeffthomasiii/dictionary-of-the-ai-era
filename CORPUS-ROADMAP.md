@@ -1,6 +1,6 @@
 # AILex 100 Corpus Roadmap
 
-AILex currently has 85 published, researched entries after Batch 5. The MVP corpus target is **100 published terms**, leaving 15 additional accepted entries to reach the corpus threshold.
+AILex now has **100 published, researched entries** after Batch 6. The corpus portion of the MVP threshold has been reached; future additions should be driven by editorial value rather than a numeric target.
 
 The backlog intentionally contains more candidates than the MVP requires. A candidate is not guaranteed publication. Each term must still pass AILex's usage, sourcing, definition, provenance, and human-review standards.
 
@@ -294,3 +294,27 @@ After Batch 4, the published corpus reaches **73 terms**, leaving **27 terms** t
 12. Supervised Learning
 
 After Batch 5, the published corpus reaches **85 terms**, leaving **15 terms** to the MVP threshold.
+
+## Batch 6 — MVP Balancing & Completion
+
+1. Multi-Agent System
+2. Computer Use
+3. Orchestration
+4. Text-to-Image
+5. Temperature
+6. Mixture of Experts (MoE)
+7. Benchmark
+8. Eval
+9. LLM-as-a-Judge
+10. Red Teaming
+11. AI Alignment
+12. Guardrail
+13. Jailbreak
+14. AI Governance
+15. Deepfake
+
+After Batch 6, the published corpus reaches **100 terms**. This satisfies the numeric corpus threshold for the AILex MVP while deliberately broadening coverage across agents, generation, evaluation, safety, governance, and culture/media.
+
+## Corpus MVP status
+
+**Threshold reached: 100 published terms.** The remaining MVP work is product readiness: category browsing, publishing/SEO foundations, edition/versioning, documentation alignment, cross-device QA, and the public brand/domain decision.
