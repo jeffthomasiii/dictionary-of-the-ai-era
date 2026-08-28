@@ -144,6 +144,20 @@ On first visit, the site follows the operating system's preferred color scheme. 
 
 Individual dictionary entries should eventually have dedicated pages with stable URLs. Those pages may contain expanded provenance, related terms, source citations, history, status, aliases, and other supporting metadata. This is intentionally deferred until the provenance/data model work is mature enough to support it well.
 
+## Roadmap design item: audible pronunciation
+
+Dictionary terms should eventually include an accessible speaker control beside the written pronunciation so a reader can hear the term spoken aloud.
+
+The initial implementation should favor browser-based speech synthesis to preserve the static GitHub Pages architecture. Terms that are ambiguous, newly coined, acronym-heavy, or consistently mispronounced by browser speech engines may later use curated audio files.
+
+Pronunciation controls should:
+
+- appear as a secondary control beside the phonetic pronunciation
+- work with keyboard navigation
+- expose a clear screen-reader label such as **Hear pronunciation of Agentic**
+- avoid autoplay
+- provide a consistent interaction in list view, grid view, and future dedicated term pages
+
 ## Guardrails
 
 Future design changes should avoid:
