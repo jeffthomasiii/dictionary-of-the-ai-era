@@ -1,0 +1,65 @@
+name: One-time AILex 100 Batch 2
+on: push
+permissions:
+  contents: write
+jobs:
+  apply:
+    if: github.ref == 'refs/heads/feat/ailex-100-corpus-phase-2'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/ailex-100-corpus-phase-2
+          fetch-depth: 0
+      - name: Merge Batch 2 and generate pages
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const terms = JSON.parse(fs.readFileSync('data/terms.json','utf8'));
+          const provenance = JSON.parse(fs.readFileSync('data/provenance.json','utf8'));
+          const batch = JSON.parse(fs.readFileSync('data/corpus-batch-2.json','utf8'));
+          const old = new Set(terms.map(t=>t.slug));
+          for (const t of batch.terms) {
+            if (old.has(t.slug)) throw new Error('Duplicate slug: '+t.slug);
+            terms.push(t); old.add(t.slug);
+          }
+          for (const [slug, rec] of Object.entries(batch.provenance)) provenance[slug] = rec;
+          const valid = new Set(terms.map(t=>t.slug));
+          for (const rec of Object.values(provenance)) rec.relatedTerms = (rec.relatedTerms||[]).filter(s=>valid.has(s));
+          terms.sort((a,b)=>a.term.localeCompare(b.term));
+          const termSlugs = terms.map(t=>t.slug).sort();
+          const provSlugs = Object.keys(provenance).sort();
+          if (terms.length !== 52) throw new Error('Expected 52 terms, got '+terms.length);
+          if (JSON.stringify(termSlugs)!==JSON.stringify(provSlugs)) throw new Error('Term/provenance slug mismatch');
+          for (const [slug, rec] of Object.entries(provenance)) {
+            if (rec.researchStatus !== 'researched') throw new Error('Unresearched: '+slug);
+            if (!(rec.sources||[]).length) throw new Error('No sources: '+slug);
+            for (const rel of rec.relatedTerms||[]) if (!valid.has(rel)) throw new Error('Broken relation '+slug+' -> '+rel);
+          }
+          fs.writeFileSync('data/terms.json', JSON.stringify(terms));
+          fs.writeFileSync('data/provenance.json', JSON.stringify(provenance,null,2)+'\n');
+          const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+          for (const t of batch.terms) {
+            const dir=path.join('terms',t.slug); fs.mkdirSync(dir,{recursive:true});
+            const html=`<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <meta name="color-scheme" content="light dark">\n  <title>${esc(t.term)} | AILex</title>\n  <meta name="description" content="${esc(t.definition)}">\n  <script>(()=>{try{const s=localStorage.getItem("ai-era-theme"),d=window.matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.dataset.theme=s||(d?"dark":"light")}catch(_){document.documentElement.dataset.theme="light"}})();</script>\n  <link rel="stylesheet" href="../../assets/css/styles.css">\n  <link rel="stylesheet" href="../../assets/css/term-pages.css">\n</head>\n<body>\n<header class="site-header"><div class="shell header-inner"><a class="brand" href="../../" aria-label="AILex home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M20 2 35 10.5v19L20 38 5 29.5v-19L20 2Z"/><path d="m20 2 0 18 15-9.5M20 20 5 10.5M20 20v18M5 29.5 20 20l15 9.5"/></svg></span><span>AILex</span></a><nav class="primary-nav" aria-label="Primary navigation"><a class="active" href="../../">Browse</a><a href="../../categories.html">Categories</a><a href="../../about.html">About</a><a href="../../contribute.html">Contribute</a><a href="../../methodology.html">Methodology</a></nav><button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme"><span class="sun" aria-hidden="true">☼</span><span class="toggle-track"><span class="toggle-knob"></span></span><span class="moon" aria-hidden="true">☾</span></button></div></header>\n<main id="term-page" class="term-page shell" data-term-slug="${esc(t.slug)}"><div id="term-fallback" class="term-fallback"><nav class="term-breadcrumb" aria-label="Breadcrumb"><a href="../../">Browse</a><span aria-hidden="true">/</span><span>${esc(t.term)}</span></nav><p class="eyebrow">AILex entry</p><h1>${esc(t.term)}</h1><p class="fallback-pronunciation">${esc(t.pronunciation)}</p><p class="fallback-definition">${esc(t.definition)}</p></div></main>\n<footer class="site-footer"><div class="shell footer-inner"><span class="footer-mark" aria-hidden="true">◎</span><p><strong>AILex · Dictionary of the AI Era</strong><br>Vibe coded · Human-directed · AI-assisted · Human-reviewed</p><p class="footer-license">Code: MIT · Content: CC BY 4.0</p></div></footer>\n<script src="../../assets/js/app.js"></script><script src="../../assets/js/term-page.js"></script>\n</body>\n</html>\n`;
+            fs.writeFileSync(path.join(dir,'index.html'),html);
+          }
+          let roadmap=fs.readFileSync('CORPUS-ROADMAP.md','utf8');
+          roadmap=roadmap.replace('AILex currently has 27 published, researched entries. The MVP corpus target is **100 published terms**, which requires at least 73 additional accepted entries.','AILex currently has 52 published, researched entries after Batch 2. The MVP corpus target is **100 published terms**, leaving 48 additional accepted entries to reach the corpus threshold.');
+          if (!roadmap.includes('## Batch 2 — Foundation Layer Completion')) roadmap += `\n## Batch 2 — Foundation Layer Completion\n\n1. Pretraining\n2. Neural Network\n3. Deep Learning\n4. Machine Learning\n5. Artificial General Intelligence (AGI)\n6. Small Language Model (SLM)\n7. Vision-Language Model (VLM)\n8. Parameters\n9. Model Weights\n10. Training Data\n11. Synthetic Data\n12. Attention\n13. Self-Attention\n\nAfter Batch 2, the published corpus reaches **52 terms** and the Priority 1 foundation layer is substantially complete.\n`;
+          fs.writeFileSync('CORPUS-ROADMAP.md',roadmap);
+          fs.unlinkSync('data/corpus-batch-2.json');
+          NODE
+      - name: Commit Batch 2
+        run: |
+          git config user.name "jeffthomasiii"
+          git config user.email "Masterstudent@duck.com"
+          git add -A
+          git commit -m "content: publish AILex 100 batch 2"
+          git push
+      - name: Remove one-time workflow
+        run: |
+          git rm .github/workflows/apply-corpus-batch-2.yml
+          git commit -m "chore: remove one-time batch 2 workflow"
+          git push
