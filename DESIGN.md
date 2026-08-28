@@ -1,8 +1,16 @@
-# Visual Direction
+# AILex Visual Direction
 
-## Dictionary of the AI Era
+**Dictionary of the AI Era**
 
 This document records the visual direction established before the project's provenance and research phase. It is intended to keep future UI work consistent, including AI-assisted and vibe-coded changes.
+
+## Brand hierarchy
+
+The primary product name is **AILex**.
+
+The descriptor/tagline is **Dictionary of the AI Era**.
+
+AILex is pronounced **/A-I-lex/**, saying the letters A and I followed by “lex.” The main interface may keep the masthead visually clean, while the About page and repository documentation should make the pronunciation explicit.
 
 ## Design intent
 
@@ -29,7 +37,7 @@ Primary navigation is divided into dedicated pages:
 
 - **Browse:** the searchable dictionary home page
 - **Categories:** explains the editorial category system
-- **About:** project purpose, transparency, and licensing context
+- **About:** project purpose, pronunciation, transparency, and licensing context
 - **Contribute:** public-facing contribution guidance and current submission path
 - **Methodology:** explains how terms are identified, evaluated, categorized, defined, reviewed, and maintained
 
@@ -37,7 +45,7 @@ Markdown governance documents may remain in the repository, but the public site 
 
 ## Typography
 
-Use an editorial serif for dictionary identity, term names, and major headings. Use a clean system sans-serif for interface controls, metadata, labels, navigation, and supporting copy.
+Use an editorial serif for AILex identity, term names, and major headings. Use a clean system sans-serif for interface controls, metadata, labels, navigation, and supporting copy.
 
 The serif/sans-serif contrast is deliberate: **dictionary tradition + contemporary technical interface**.
 
