@@ -1,3 +1,15 @@
+# Licensing
+
+This repository uses a dual-license model.
+
+- **Software and website code** are licensed under the MIT License below.
+- **Original dictionary and editorial content** are licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0). See `CONTENT-LICENSE.md`.
+- **Third-party material** remains subject to its original copyright, license, trademark, or other applicable terms.
+
+The MIT License below applies to the software and associated code in this repository, including HTML, CSS, JavaScript, configuration, and other implementation files. It does not replace the separate content license for original dictionary/editorial material.
+
+---
+
 MIT License
 
 Copyright (c) 2026 Jeff Thomas III
