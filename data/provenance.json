@@ -1583,5 +1583,443 @@
         ]
       }
     ]
+  },
+  "pretraining": {
+    "researchStatus": "researched",
+    "origin": "Pretraining predates the current generative-AI era. It became central to modern language-model development through approaches that first learn broad representations from large unlabeled corpora and then adapt those representations to downstream tasks.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2018-10-11",
+        "event": "The BERT paper described pre-training deep bidirectional representations from unlabeled text before fine-tuning on downstream language tasks."
+      }
+    ],
+    "relatedTerms": [
+      "fine-tuning",
+      "training-data",
+      "large-language-model",
+      "transformer"
+    ],
+    "sources": [
+      {
+        "id": "bert-pretraining-2018",
+        "type": "primary",
+        "publisher": "Google / arXiv",
+        "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+        "published": "2018-10-11",
+        "url": "https://arxiv.org/abs/1810.04805",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "neural-network": {
+    "researchStatus": "researched",
+    "origin": "Artificial neural networks grew from mid-20th-century efforts to model computation using simplified neuron-like units. McCulloch and Pitts described a mathematical model of neural activity in 1943, and Rosenblatt's perceptron later became one of the earliest implemented learning networks.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "1943",
+        "event": "Warren McCulloch and Walter Pitts published an influential mathematical model of neural activity."
+      },
+      {
+        "date": "1958",
+        "event": "Frank Rosenblatt published the perceptron, an early learning system that became foundational to neural-network history."
+      }
+    ],
+    "relatedTerms": [
+      "deep-learning",
+      "parameters",
+      "model-weights",
+      "machine-learning"
+    ],
+    "sources": [
+      {
+        "id": "rosenblatt-perceptron-1958",
+        "type": "primary",
+        "publisher": "Psychological Review",
+        "title": "The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain",
+        "published": "1958",
+        "url": "https://psycnet.apa.org/record/1959-09865-001",
+        "supports": [
+          "history",
+          "research"
+        ]
+      }
+    ]
+  },
+  "deep-learning": {
+    "researchStatus": "researched",
+    "origin": "Deep learning refers to machine learning with multilayer neural networks. The phrase existed before today's neural-network usage, while the modern sense became established as multilayer networks and improved training methods produced major gains in vision, speech, and other tasks.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2012",
+        "event": "Deep convolutional neural networks achieved a major ImageNet breakthrough, helping accelerate modern adoption of deep learning."
+      }
+    ],
+    "relatedTerms": [
+      "neural-network",
+      "machine-learning",
+      "parameters",
+      "training-data"
+    ],
+    "sources": [
+      {
+        "id": "alexnet-2012",
+        "type": "primary",
+        "publisher": "NeurIPS",
+        "title": "ImageNet Classification with Deep Convolutional Neural Networks",
+        "published": "2012",
+        "url": "https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks",
+        "supports": [
+          "definition",
+          "history",
+          "research"
+        ]
+      }
+    ]
+  },
+  "machine-learning": {
+    "researchStatus": "researched",
+    "origin": "Machine learning became an established AI research term in the 1950s. Arthur Samuel's 1959 checkers paper is widely associated with early use and popularization of the phrase for systems that improve performance through experience.",
+    "firstKnownUse": {
+      "date": "1959-07",
+      "precision": "month",
+      "note": "Arthur Samuel's IBM paper is a well-documented early use and is widely credited with coining or popularizing the term, though AILex does not claim it is provably the absolute first occurrence."
+    },
+    "history": [
+      {
+        "date": "1959-07",
+        "event": "Arthur Samuel published ‘Some Studies in Machine Learning Using the Game of Checkers’ in the IBM Journal of Research and Development."
+      }
+    ],
+    "relatedTerms": [
+      "neural-network",
+      "deep-learning",
+      "training-data",
+      "inference"
+    ],
+    "sources": [
+      {
+        "id": "samuel-machine-learning-1959",
+        "type": "primary",
+        "publisher": "IBM Journal of Research and Development",
+        "title": "Some Studies in Machine Learning Using the Game of Checkers",
+        "published": "1959-07",
+        "url": "https://doi.org/10.1147/rd.33.0210",
+        "supports": [
+          "origin",
+          "history",
+          "usage"
+        ]
+      },
+      {
+        "id": "ibm-ml-history",
+        "type": "secondary",
+        "publisher": "IBM",
+        "title": "What is Machine Learning?",
+        "published": null,
+        "url": "https://www.ibm.com/think/topics/machine-learning",
+        "supports": [
+          "definition",
+          "origin",
+          "history"
+        ]
+      }
+    ]
+  },
+  "artificial-general-intelligence": {
+    "researchStatus": "researched",
+    "origin": "Artificial General Intelligence (AGI) became a distinct research label in the mid-2000s for work aimed at broad, general-purpose machine intelligence rather than narrow task-specific systems. The concept remains disputed because there is no universally accepted operational definition or threshold for achieving AGI.",
+    "firstKnownUse": {
+      "date": "2006",
+      "precision": "year",
+      "note": "Goertzel and Pennachin's edited volume is an early landmark use that explicitly framed and named the field as Artificial General Intelligence."
+    },
+    "history": [
+      {
+        "date": "2006",
+        "event": "Ben Goertzel and Cassio Pennachin edited the volume ‘Artificial General Intelligence,’ presenting AGI as a distinct research area."
+      },
+      {
+        "date": "2008",
+        "event": "The first Conference on Artificial General Intelligence was held, further institutionalizing the label."
+      }
+    ],
+    "relatedTerms": [
+      "foundation-model",
+      "reasoning-model",
+      "ai-agent"
+    ],
+    "sources": [
+      {
+        "id": "goertzel-pennachin-agi-2007",
+        "type": "primary",
+        "publisher": "Springer",
+        "title": "Artificial General Intelligence",
+        "published": "2007",
+        "url": "https://link.springer.com/book/10.1007/978-3-540-68677-4",
+        "supports": [
+          "origin",
+          "definition",
+          "history"
+        ]
+      },
+      {
+        "id": "agi-conference-2008",
+        "type": "primary",
+        "publisher": "AGI Conference",
+        "title": "The First Conference on Artificial General Intelligence",
+        "published": "2008",
+        "url": "https://agi-conf.org/2008/papers/",
+        "supports": [
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "small-language-model": {
+    "researchStatus": "researched",
+    "origin": "Small Language Model (SLM) emerged as a practical category label during the rapid expansion of generative AI to distinguish comparatively compact language models from cloud-scale LLMs. The category is relative rather than defined by one universal parameter threshold.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2023-12-12",
+        "event": "Microsoft Research described Phi-2 as part of a suite of small language models, helping establish SLM as a widely used category label."
+      }
+    ],
+    "relatedTerms": [
+      "large-language-model",
+      "parameters",
+      "inference",
+      "ai-native"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-phi2-2023",
+        "type": "primary",
+        "publisher": "Microsoft Research",
+        "title": "Phi-2: The surprising power of small language models",
+        "published": "2023-12-12",
+        "url": "https://www.microsoft.com/en-us/research/blog/phi-2-the-surprising-power-of-small-language-models/",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "vision-language-model": {
+    "researchStatus": "researched",
+    "origin": "Vision-language models developed from multimodal research that learns relationships between images and text. The VLM label became common as large-scale image-text pretraining enabled one model to perform multiple visual-language tasks and zero-shot transfer.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2023-04-03",
+        "event": "A major survey documented Vision-Language Models as an established research category and summarized their architectures, pretraining, transfer learning, and zero-shot capabilities."
+      }
+    ],
+    "relatedTerms": [
+      "multimodal",
+      "foundation-model",
+      "embedding",
+      "transformer"
+    ],
+    "sources": [
+      {
+        "id": "vlm-survey-2023",
+        "type": "secondary",
+        "publisher": "arXiv",
+        "title": "Vision-Language Models for Vision Tasks: A Survey",
+        "published": "2023-04-03",
+        "url": "https://arxiv.org/abs/2304.00685",
+        "supports": [
+          "definition",
+          "history",
+          "research",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "parameters": {
+    "researchStatus": "researched",
+    "origin": "Parameter is an established mathematical and machine-learning term rather than an AI-era coinage. In trained models, parameters are numerical values learned from data, commonly including weights and biases.",
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "model-weights",
+      "neural-network",
+      "training-data",
+      "small-language-model"
+    ],
+    "sources": [
+      {
+        "id": "google-ml-glossary-parameters",
+        "type": "reference",
+        "publisher": "Google for Developers",
+        "title": "Machine Learning Glossary",
+        "published": "2026",
+        "url": "https://developers.google.com/machine-learning/glossary",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "model-weights": {
+    "researchStatus": "researched",
+    "origin": "Weight is an established neural-network and statistical-model term. In modern AI, model weights are the learned numerical connection strengths that make up a large share of a model's trainable parameters.",
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "parameters",
+      "neural-network",
+      "fine-tuning",
+      "training-data"
+    ],
+    "sources": [
+      {
+        "id": "google-ml-parameters-weights",
+        "type": "reference",
+        "publisher": "Google for Developers",
+        "title": "Linear regression: Hyperparameters",
+        "published": "2026",
+        "url": "https://developers.google.com/machine-learning/crash-course/linear-regression/hyperparameters",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "training-data": {
+    "researchStatus": "researched",
+    "origin": "Training data is an established machine-learning term for the examples used during model training. In generative AI, the phrase has gained broader public importance because dataset composition affects capability, bias, privacy, intellectual-property questions, and model behavior.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2025",
+        "event": "NIST's adversarial machine-learning terminology formally described attacks that target or control training data, reflecting its central role in AI security and governance."
+      }
+    ],
+    "relatedTerms": [
+      "pretraining",
+      "synthetic-data",
+      "model-collapse",
+      "parameters"
+    ],
+    "sources": [
+      {
+        "id": "nist-training-stage",
+        "type": "reference",
+        "publisher": "NIST",
+        "title": "Training stage - Glossary",
+        "published": "2025",
+        "url": "https://csrc.nist.gov/glossary/term/training_stage",
+        "supports": [
+          "definition",
+          "usage",
+          "risk"
+        ]
+      }
+    ]
+  },
+  "synthetic-data": {
+    "researchStatus": "researched",
+    "origin": "Synthetic data predates generative AI and broadly refers to artificial data created to preserve useful characteristics of real or seed data. Modern generative systems greatly expanded the scale and variety of synthetic data used for model training and evaluation.",
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "training-data",
+      "synthetic-content",
+      "model-collapse",
+      "fine-tuning"
+    ],
+    "sources": [
+      {
+        "id": "nist-synthetic-data-generation",
+        "type": "reference",
+        "publisher": "NIST",
+        "title": "Synthetic data generation - Glossary",
+        "published": null,
+        "url": "https://csrc.nist.gov/glossary/term/synthetic_data_generation",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "attention": {
+    "researchStatus": "researched",
+    "origin": "Attention mechanisms were developed in neural sequence modeling before the Transformer. They allow models to compute weighted relationships between parts of an input instead of compressing all relevant information into a single fixed representation.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2017-06-12",
+        "event": "‘Attention Is All You Need’ showed that a high-performing sequence model could be built around attention mechanisms without recurrent or convolutional layers."
+      }
+    ],
+    "relatedTerms": [
+      "self-attention",
+      "transformer",
+      "context-window",
+      "embedding"
+    ],
+    "sources": [
+      {
+        "id": "vaswani-transformer-2017",
+        "type": "primary",
+        "publisher": "arXiv / NeurIPS",
+        "title": "Attention Is All You Need",
+        "published": "2017-06-12",
+        "url": "https://arxiv.org/abs/1706.03762",
+        "supports": [
+          "definition",
+          "history",
+          "research"
+        ]
+      }
+    ]
+  },
+  "self-attention": {
+    "researchStatus": "researched",
+    "origin": "Self-attention is an attention mechanism in which positions within one sequence attend to other positions in that same sequence. It became foundational to modern language models through the Transformer architecture.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2017-06-12",
+        "event": "The Transformer paper used self-attention as the central mechanism for relating positions within input and output sequences."
+      }
+    ],
+    "relatedTerms": [
+      "attention",
+      "transformer",
+      "context-window",
+      "embedding"
+    ],
+    "sources": [
+      {
+        "id": "vaswani-self-attention-2017",
+        "type": "primary",
+        "publisher": "arXiv / NeurIPS",
+        "title": "Attention Is All You Need",
+        "published": "2017-06-12",
+        "url": "https://arxiv.org/abs/1706.03762",
+        "supports": [
+          "definition",
+          "history",
+          "research"
+        ]
+      }
+    ]
   }
 }
