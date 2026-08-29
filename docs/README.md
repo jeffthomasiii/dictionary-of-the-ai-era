@@ -1,6 +1,6 @@
-# AILex Project Documentation
+# EpochLex Project Documentation
 
-This directory is the project-level documentation hub for **AILex · Dictionary of the AI Era**.
+This directory is the project-level documentation hub for **EpochLex · Dictionary of the AI Era**.
 
 The public website is written primarily for people who want to **use and understand the dictionary**. The repository documentation is written for people who want to **understand, build, research, maintain, govern, or contribute to the project**.
 
@@ -8,7 +8,7 @@ The public website is written primarily for people who want to **use and underst
 
 | If you want to... | Read... |
 | --- | --- |
-| Understand how AILex began and why it exists | [`ORIGIN.md`](ORIGIN.md) |
+| Understand how EpochLex began and why it exists | [`ORIGIN.md`](ORIGIN.md) |
 | Understand how the site and data fit together | [`ARCHITECTURE.md`](ARCHITECTURE.md) |
 | See current priorities and longer-term direction | [`ROADMAP.md`](ROADMAP.md) |
 | Run or repeat product-readiness and accessibility checks | [`QA.md`](QA.md) |
@@ -26,14 +26,14 @@ The public website is written primarily for people who want to **use and underst
 
 The site should help readers answer questions such as:
 
-- What is AILex?
+- What is EpochLex?
 - How do I pronounce the name?
 - How did it start?
 - What can I do on the site?
 - What do the categories mean?
 - How is an entry researched and reviewed?
 - How can I suggest a term, correction, source, or pronunciation fix?
-- What does it mean that AILex is a Living Dictionary?
+- What does it mean that EpochLex is a Living Dictionary?
 
 The site should not require a reader to understand repository structure, JSON schemas, Git workflows, release mechanics, or implementation details simply to understand the dictionary.
 
@@ -56,4 +56,4 @@ Some subjects intentionally appear in both places at different depths. For examp
 
 ## Documentation principle
 
-**The website explains AILex to readers. The repository explains AILex to builders, contributors, maintainers, researchers, and people interested in the experiment behind it.**
+**The website explains EpochLex to readers. The repository explains EpochLex to builders, contributors, maintainers, researchers, and people interested in the experiment behind it.**

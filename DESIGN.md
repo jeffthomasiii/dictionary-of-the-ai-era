@@ -1,16 +1,16 @@
-# AILex Visual Direction
+# EpochLex Visual Direction
 
 **Dictionary of the AI Era**
 
-This document records the visual and interaction direction for AILex. It exists to keep future UI work consistent, including AI-assisted and vibe-coded changes.
+This document records the visual and interaction direction for EpochLex. It exists to keep future UI work consistent, including AI-assisted and vibe-coded changes.
 
 ## Brand hierarchy
 
-The primary product name is **AILex**.
+The primary product name is **EpochLex**.
 
 The descriptor is **Dictionary of the AI Era**.
 
-AILex is pronounced **/A-I-lex/**, saying the letters A and I followed by “lex.” The masthead remains visually clean, while the About page and repository documentation make the pronunciation explicit. The About page also provides an audible pronunciation control.
+EpochLex is pronounced **/EP-uk-leks/**, saying the letters A and I followed by “lex.” The masthead remains visually clean, while the About page and repository documentation make the pronunciation explicit. The About page also provides an audible pronunciation control.
 
 ## Design intent
 
@@ -31,13 +31,13 @@ The design should not look like a generic SaaS dashboard, neon cyberpunk interfa
 
 ## Current site structure
 
-AILex behaves like a reference website rather than a single landing page.
+EpochLex behaves like a reference website rather than a single landing page.
 
 Primary navigation includes:
 
 - **Browse:** searchable dictionary home page with A-Z navigation, category filters, list/grid views, and audible pronunciation
 - **Categories:** taxonomy explanation plus live browsable collections generated from the dictionary dataset
-- **About:** project purpose, AILex pronunciation, Living Dictionary/edition model, transparency, and licensing
+- **About:** project purpose, EpochLex pronunciation, Living Dictionary/edition model, transparency, and licensing
 - **Contribute:** contribution guidance
 - **Methodology:** editorial, provenance, sourcing, and maintenance process
 
@@ -47,7 +47,7 @@ Repository governance documents remain Markdown, while the public site provides 
 
 ## Typography
 
-Use an editorial serif for AILex identity, term names, and major headings. Use a clean system sans-serif for interface controls, metadata, labels, navigation, and supporting copy.
+Use an editorial serif for EpochLex identity, term names, and major headings. Use a clean system sans-serif for interface controls, metadata, labels, navigation, and supporting copy.
 
 The serif/sans-serif contrast is deliberate: **dictionary tradition + contemporary technical interface**.
 
@@ -166,7 +166,7 @@ Pronunciation controls should:
 - use explicit speech overrides for acronyms or terms browser voices commonly misread
 - fail gracefully when speech synthesis is unsupported
 
-AILex itself should use the explicit speech form **“A I lex.”**
+EpochLex itself should use the explicit speech form **“A I lex.”**
 
 Curated audio files may be added later for unusual or consistently unreliable pronunciations, but are not required for the static architecture.
 
@@ -211,7 +211,7 @@ The interface currently supports:
 
 ## Publishing and metadata
 
-AILex is a reference site and should remain indexable by default.
+EpochLex is a reference site and should remain indexable by default.
 
 Current publishing behavior includes:
 

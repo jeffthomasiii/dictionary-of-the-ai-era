@@ -1,6 +1,6 @@
 # Contributing
 
-AILex · Dictionary of the AI Era is a curated, open-source reference project. Contributions should improve the accuracy, clarity, provenance, usability, accessibility, documentation, maintainability, or coverage of the dictionary.
+EpochLex · Dictionary of the AI Era is a curated, open-source reference project. Contributions should improve the accuracy, clarity, provenance, usability, accessibility, documentation, maintainability, or coverage of the dictionary.
 
 Contributions do **not** have to involve code.
 
@@ -8,7 +8,7 @@ Useful contributors may include developers, researchers, writers, editors, desig
 
 ## Ways to contribute
 
-You can help AILex by contributing:
+You can help EpochLex by contributing:
 
 - new term suggestions;
 - clearer definitions or examples;
@@ -33,7 +33,7 @@ Start with [`docs/README.md`](docs/README.md), then use the document that matche
 - [`docs/ROADMAP.md`](docs/ROADMAP.md) for current priorities;
 - [`PROVENANCE.md`](PROVENANCE.md) for sourcing, origin, first-known-use, and attribution standards;
 - [`DESIGN.md`](DESIGN.md) for interface and interaction guardrails;
-- [`BRAND.md`](BRAND.md) for AILex naming and identity;
+- [`BRAND.md`](BRAND.md) for EpochLex naming and identity;
 - [`EDITIONS.md`](EDITIONS.md) for Living Dictionary and annual-edition behavior;
 - [`AI-TRANSPARENCY.md`](AI-TRANSPARENCY.md) for the project's AI-assisted development and editorial policy.
 
@@ -66,7 +66,7 @@ A candidate should add distinct reader value. Before proposing a new entry, cons
 
 ## Published-term completeness
 
-AILex treats a published term as a complete reference entry rather than a placeholder.
+EpochLex treats a published term as a complete reference entry rather than a placeholder.
 
 A new published term should have:
 
@@ -141,7 +141,7 @@ Do not remove the written pronunciation even when audible playback exists. Audio
 
 ## Site and interface contributions
 
-UI changes should follow `DESIGN.md` and preserve the reference-first character of AILex.
+UI changes should follow `DESIGN.md` and preserve the reference-first character of EpochLex.
 
 In particular:
 
@@ -159,7 +159,7 @@ Documentation is part of the product and should be maintained with the same care
 
 Use this boundary:
 
-- **Public website documentation** should help readers understand AILex, its features, origin, categories, methodology, Living Dictionary behavior, and easy ways to contribute.
+- **Public website documentation** should help readers understand EpochLex, its features, origin, categories, methodology, Living Dictionary behavior, and easy ways to contribute.
 - **Repository documentation** should preserve project history, architecture, governance, detailed editorial standards, development philosophy, contribution workflows, roadmap, release mechanics, and the open-source AI experiment.
 
 When a feature moves from roadmap to implemented, update the relevant documentation rather than leaving stale future-state language behind.

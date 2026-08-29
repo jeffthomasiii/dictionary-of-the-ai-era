@@ -39,7 +39,7 @@ if (dictionary && !document.querySelector('link[data-browse-pronunciation]')) {
 }
 
 const speechOverrides = {
-  "ailex": "A I lex",
+  "epochlex": "epoch lex",
   "ai-agent": "A I agent",
   "ai-alignment": "A I alignment",
   "ai-governance": "A I governance",
@@ -55,7 +55,7 @@ const speechOverrides = {
   "shadow-ai": "shadow A I"
 };
 
-window.AILexPronunciation = {
+window.EpochLexPronunciation = {
   supported: "speechSynthesis" in window && "SpeechSynthesisUtterance" in window,
   speechText(term) {
     return speechOverrides[term.slug] || term.term;
@@ -122,7 +122,7 @@ function renderAlpha(terms) {
 
 function termCard(term) {
   return `<article class="entry" data-category="${categoryKey(term)}" id="${esc(term.slug)}">
-    <div class="term-block"><h3 class="term-name"><a href="terms/${encodeURIComponent(term.slug)}/">${esc(term.term)}</a></h3><div class="pronunciation-row"><span class="pronunciation">${esc(term.pronunciation)}</span>${window.AILexPronunciation.button(term, "browse-pronunciation-button")}</div><div class="part-of-speech">${esc(term.partOfSpeech || "")}</div></div>
+    <div class="term-block"><h3 class="term-name"><a href="terms/${encodeURIComponent(term.slug)}/">${esc(term.term)}</a></h3><div class="pronunciation-row"><span class="pronunciation">${esc(term.pronunciation)}</span>${window.EpochLexPronunciation.button(term, "browse-pronunciation-button")}</div><div class="part-of-speech">${esc(term.partOfSpeech || "")}</div></div>
     <div class="definition-block"><span class="entry-label">Definition</span><p class="definition">${esc(term.definition)}</p></div>
     <div class="example-block"><span class="entry-label">Used in a sentence</span><p class="example"><em>${esc(term.example)}</em></p></div>
     <div class="entry-meta">${(term.categories || []).map(c => `<span class="pill">${esc(c)}</span>`).join("")}<span class="pill status-pill">${esc(term.status)}</span>${(term.aliases || []).length ? `<span class="aliases"><strong>Also known as:</strong> ${term.aliases.map(esc).join(", ")}</span>` : ""}</div>
@@ -130,11 +130,11 @@ function termCard(term) {
 }
 
 function wireBrowsePronunciations() {
-  if (!dictionary || !window.AILexPronunciation.supported) return;
+  if (!dictionary || !window.EpochLexPronunciation.supported) return;
   const termsBySlug = new Map(state.terms.map(term => [term.slug, term]));
   dictionary.querySelectorAll(".browse-pronunciation-button").forEach(button => {
     const term = termsBySlug.get(button.dataset.pronunciationSlug);
-    if (term) window.AILexPronunciation.wire(button, term);
+    if (term) window.EpochLexPronunciation.wire(button, term);
   });
 }
 

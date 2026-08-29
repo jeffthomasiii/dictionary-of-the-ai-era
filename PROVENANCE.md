@@ -1,6 +1,6 @@
-# AILex Provenance & Sourcing Standard
+# EpochLex Provenance & Sourcing Standard
 
-AILex is intended to document not only what AI-era terms mean, but also where those meanings come from and how confidently their histories can be described.
+EpochLex is intended to document not only what AI-era terms mean, but also where those meanings come from and how confidently their histories can be described.
 
 This standard governs the research layer stored separately from the core dictionary entries in `data/provenance.json`.
 
@@ -8,20 +8,20 @@ This standard governs the research layer stored separately from the core diction
 
 A source that supports a definition does not automatically establish a term's origin.
 
-AILex separates:
+EpochLex separates:
 
 - **Meaning:** evidence supporting what a term means.
 - **Origin:** evidence about who introduced, coined, formalized, or popularized a term.
-- **First known use:** the earliest use AILex can responsibly document. This may remain unknown.
+- **First known use:** the earliest use EpochLex can responsibly document. This may remain unknown.
 - **History:** dated events that help explain how a term entered or changed within AI-era usage.
-- **Related terms:** editorially useful connections to other AILex entries.
+- **Related terms:** editorially useful connections to other EpochLex entries.
 - **Research status:** whether the provenance review for an entry is still pending or has received an initial human-reviewed research pass.
 
 ## Research statuses
 
 ### `pending`
 
-The term is published in AILex, but its provenance record has not yet received a dedicated sourcing review. Empty provenance fields must not be interpreted as claims that no origin or history exists.
+The term is published in EpochLex, but its provenance record has not yet received a dedicated sourcing review. Empty provenance fields must not be interpreted as claims that no origin or history exists.
 
 ### `researched`
 
@@ -69,7 +69,7 @@ When the evidence is uncertain, the prose should say so.
 
 ## First-known-use rules
 
-`firstKnownUse` should only be populated when AILex has evidence for a reasonably defensible earliest documented use within the meaning being described.
+`firstKnownUse` should only be populated when EpochLex has evidence for a reasonably defensible earliest documented use within the meaning being described.
 
 It is acceptable and preferable to use `null` when:
 

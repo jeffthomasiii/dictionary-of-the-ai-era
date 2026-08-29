@@ -1,6 +1,6 @@
-# AILex Roadmap
+# EpochLex Roadmap
 
-AILex is a Living Dictionary. The roadmap is therefore a statement of current priorities and likely directions, not a promise that every listed feature will ship or that priorities cannot change.
+EpochLex is a Living Dictionary. The roadmap is therefore a statement of current priorities and likely directions, not a promise that every listed feature will ship or that priorities cannot change.
 
 ## Current product state
 
@@ -34,7 +34,7 @@ The focus now shifts from accumulating MVP features to improving readiness, iden
 
 ### Public identity
 
-- AILex name/brand collision review;
+- EpochLex name/brand collision review;
 - domain availability and custom-domain decision;
 - migration plan that preserves existing GitHub Pages links;
 - branded social-preview image and `og:image` support;
@@ -60,7 +60,7 @@ Possible work includes:
 - documented handling of contested terminology and source disagreements;
 - contributor recognition and release-note practices.
 
-AILex should remain open to contributions beyond code, including term suggestions, source research, corrections, pronunciation guidance, accessibility testing, design feedback, and documentation improvements.
+EpochLex should remain open to contributions beyond code, including term suggestions, source research, corrections, pronunciation guidance, accessibility testing, design feedback, and documentation improvements.
 
 ## Corpus growth
 
@@ -104,7 +104,7 @@ Browser speech synthesis remains the default because it preserves the static arc
 
 ## AI-assisted project development
 
-AILex will continue exploring human-directed AI collaboration as part of the project itself.
+EpochLex will continue exploring human-directed AI collaboration as part of the project itself.
 
 Future experimentation may include:
 
@@ -119,11 +119,11 @@ Automation should support, not replace, human editorial and release judgment.
 
 ## Annual editions
 
-The Living Dictionary remains continuously updateable. Annual editions provide immutable historical snapshots. The planned inaugural edition is **AILex 2026**, governed by [`../EDITIONS.md`](../EDITIONS.md).
+The Living Dictionary remains continuously updateable. Annual editions provide immutable historical snapshots. The planned inaugural edition is **EpochLex 2026**, governed by [`../EDITIONS.md`](../EDITIONS.md).
 
 ## Guiding question
 
 Roadmap decisions should continue to answer two questions:
 
-1. **Does this make AILex a more useful, credible, understandable dictionary?**
+1. **Does this make EpochLex a more useful, credible, understandable dictionary?**
 2. **Does this help the open-source, human-directed AI experiment remain transparent and maintainable?**
