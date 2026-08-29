@@ -1,0 +1,91 @@
+name: One-time Documentation Architecture Validation
+
+on:
+  push:
+    branches:
+      - feat/documentation-architecture-project-story
+
+permissions:
+  contents: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate documentation boundaries
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          required = [
+              'docs/README.md',
+              'docs/ORIGIN.md',
+              'docs/ARCHITECTURE.md',
+              'docs/ROADMAP.md',
+              'README.md',
+              'CONTRIBUTING.md',
+              'AI-TRANSPARENCY.md',
+              'about.html',
+              'contribute.html',
+              'methodology.html',
+          ]
+          for path in required:
+              assert Path(path).exists(), f'Missing required documentation: {path}'
+
+          terms = json.loads(Path('data/terms.json').read_text())
+          provenance = json.loads(Path('data/provenance.json').read_text())
+          assert len(terms) == 100, f'Expected 100 terms, found {len(terms)}'
+          assert len(provenance) == 100, f'Expected 100 provenance records, found {len(provenance)}'
+          term_slugs = {t['slug'] for t in terms}
+          assert term_slugs == set(provenance), 'Term/provenance parity changed'
+          assert all(v.get('researchStatus') == 'researched' for v in provenance.values()), 'All provenance records must remain researched'
+
+          readme = Path('README.md').read_text()
+          assert 'docs/ORIGIN.md' in readme
+          assert 'docs/ARCHITECTURE.md' in readme
+          assert 'docs/ROADMAP.md' in readme
+          assert 'intended to remain open source' in readme
+          assert "Wouldn't it be cool if the Dictionary of the AI Era was actually built using AI?" in readme
+
+          origin = Path('docs/ORIGIN.md').read_text()
+          for phrase in ['Meat Proxy', 'personal', 'provenance', 'The dictionary came first', 'intended to remain open source']:
+              assert phrase in origin, f'Origin story missing: {phrase}'
+
+          transparency = Path('AI-TRANSPARENCY.md').read_text()
+          assert 'The dictionary came first.' in transparency
+          assert "Wouldn't it be cool if the Dictionary of the AI Era was actually built using AI?" in transparency
+          assert 'Validation is part of the experiment' in transparency
+
+          about = Path('about.html').read_text()
+          for phrase in ['What you can do here', 'How AILex started', 'Meat Proxy', 'Built in the AI era, using AI']:
+              assert phrase in about, f'About page missing: {phrase}'
+          for internal in ['PROVENANCE.md', 'AI-TRANSPARENCY.md', 'DESIGN.md', 'EDITIONS.md']:
+              assert f'href="{internal}"' not in about, f'About exposes internal doc directly: {internal}'
+
+          methodology = Path('methodology.html').read_text()
+          assert 'Want the detailed standards?' in methodology
+          assert 'Explore the AILex project on GitHub' in methodology
+          assert 'What evolves next' not in methodology
+
+          contribute = Path('contribute.html').read_text()
+          for phrase in ['Suggest a term', 'Correct or strengthen an entry', 'Help with pronunciation', 'Test the site', 'Contribute code, design, research, or documentation']:
+              assert phrase in contribute, f'Contribute page missing: {phrase}'
+
+          docs_index = Path('docs/README.md').read_text()
+          assert 'The website explains AILex to readers.' in docs_index
+          assert 'The repository explains AILex to builders' in docs_index
+
+          print('Documentation architecture validation passed.')
+          PY
+
+      - name: Remove one-time workflow
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/validate-documentation-architecture.yml
+          git commit -m "chore: remove one-time documentation validator"
+          git push
