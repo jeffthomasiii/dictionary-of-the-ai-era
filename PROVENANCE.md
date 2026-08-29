@@ -108,6 +108,6 @@ Before publication of a researched provenance record, a human reviewer should ve
 
 ## Relationship to dedicated term pages
 
-`data/provenance.json` is intentionally separate from `data/terms.json` during this phase. The core dictionary remains lightweight while the research model develops.
+`data/provenance.json` remains intentionally separate from `data/terms.json`. The core dictionary dataset stays lightweight while the provenance dataset carries the richer research layer.
 
-Future dedicated term pages can combine both datasets to display definition, pronunciation, source citations, origin, history, related terms, research status, and review dates without forcing every field into the current browse interface.
+Current dedicated term pages combine both datasets to display definition, pronunciation, source citations, origin, history, related terms, research status, and review dates without forcing every field into the Browse interface.
