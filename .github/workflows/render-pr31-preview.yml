@@ -1,84 +1,10 @@
 name: Temporary PR31 Visual Preview
 on:
-  push:
-    branches: [feat/epochlex-visual-system-refresh]
+  workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 jobs:
-  render:
-    if: "!contains(github.event.head_commit.message || '', '[skip preview]')"
+  note:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: feat/epochlex-visual-system-refresh
-          fetch-depth: 0
-      - name: Sync current main
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin main
-          git merge -X ours --no-edit origin/main
-      - name: Refine hero and semantic category colors
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          import re
-          css = Path('assets/css/brand-theme.css')
-          text = css.read_text()
-          text = text.replace('  --culture: #7D8791;\n  --work: #7A9276;\n  --systems: #5C8F95;\n  --risks: #8C7468;', '  --culture: #8B6FBD;\n  --work: #4E9A8A;\n  --systems: #507EA6;\n  --risks: #B56F61;')
-          text = text.replace('  --culture: #A4ADB5;\n  --work: #A2B59D;\n  --systems: #78AAB0;\n  --risks: #B59A8D;', '  --culture: #A387CC;\n  --work: #61B4A2;\n  --systems: #6694BD;\n  --risks: #CA7C6C;')
-          old_hero = '''.hero-network,\n.hero-wave {\n  color: var(--accent-secondary);\n  fill: var(--accent-secondary);\n  stroke: var(--accent-secondary);\n  opacity: .16;\n}'''
-          new_hero = '''.hero-network {\n  color: var(--accent-secondary);\n  fill: var(--accent-secondary);\n  stroke: var(--accent-secondary);\n  opacity: .22;\n}\n\n.hero-wave {\n  color: var(--accent-secondary);\n  fill: none;\n  stroke: var(--accent-secondary);\n  stroke-width: 1;\n  opacity: .22;\n}'''
-          text = text.replace(old_hero, new_hero)
-          marker = '/* Semantic category filters: restore the four editorial colors. */'
-          if marker not in text:
-              text += '''\n\n/* Semantic category filters: restore the four editorial colors. */\n.filter.all { --filter-color: var(--accent-secondary); }\n.filter.culture { --filter-color: var(--culture); }\n.filter.work { --filter-color: var(--work); }\n.filter.systems { --filter-color: var(--systems); }\n.filter.risks { --filter-color: var(--risks); }\n.filter .category-icon { color: var(--filter-color); background: color-mix(in srgb, var(--filter-color) 18%, transparent); }\n.filter:hover { border-color: color-mix(in srgb, var(--filter-color) 48%, var(--line-strong)); }\n.filter.active { color: var(--ink); border-color: color-mix(in srgb, var(--filter-color) 72%, var(--line-strong)); background: color-mix(in srgb, var(--filter-color) 15%, var(--surface)); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--filter-color) 24%, transparent); }\n.filter.active .category-icon { color: var(--filter-color); background: color-mix(in srgb, var(--filter-color) 24%, transparent); }\n.mobile-filter-option[data-key=\"all\"], .mobile-filter-toggle[data-key=\"all\"] { --filter-color: var(--accent-secondary); }\n.mobile-filter-option[data-key=\"culture\"], .mobile-filter-toggle[data-key=\"culture\"] { --filter-color: var(--culture); }\n.mobile-filter-option[data-key=\"work\"], .mobile-filter-toggle[data-key=\"work\"] { --filter-color: var(--work); }\n.mobile-filter-option[data-key=\"systems\"], .mobile-filter-toggle[data-key=\"systems\"] { --filter-color: var(--systems); }\n.mobile-filter-option[data-key=\"risks\"], .mobile-filter-toggle[data-key=\"risks\"] { --filter-color: var(--risks); }\n.mobile-filter-option .mobile-filter-dot { background: var(--filter-color, var(--accent-secondary)); box-shadow: 0 0 0 2px color-mix(in srgb, var(--filter-color, var(--accent-secondary)) 15%, transparent); }\n.mobile-filter-option[aria-current=\"true\"] { background: color-mix(in srgb, var(--filter-color) 15%, var(--surface)); color: var(--ink); box-shadow: inset 3px 0 0 var(--filter-color); }\n.mobile-filter-toggle[data-key] { border-color: color-mix(in srgb, var(--filter-color) 55%, var(--line-strong)); box-shadow: inset 3px 0 0 var(--filter-color), var(--shadow); }\n'''
-          css.write_text(text)
-          js = Path('assets/js/mobile-browse.js')
-          js_text = js.read_text()
-          needle = '    label.textContent = labelFor(filter);\n    options.forEach(option => option.setAttribute(\'aria-current\', String(option.dataset.category === filter.dataset.category)));'
-          replacement = '    label.textContent = labelFor(filter);\n    toggle.dataset.key = keyFor(filter);\n    options.forEach(option => option.setAttribute(\'aria-current\', String(option.dataset.category === filter.dataset.category)));'
-          if 'toggle.dataset.key = keyFor(filter);' not in js_text:
-              js_text = js_text.replace(needle, replacement)
-          js.write_text(js_text)
-          PY
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - name: Install Playwright
-        run: |
-          npm install --no-save playwright
-          npx playwright install --with-deps chromium
-      - name: Render branch screenshots
-        run: |
-          mkdir -p .preview/pr31
-          python3 -m http.server 4173 >/tmp/epochlex-preview.log 2>&1 &
-          SERVER_PID=$!
-          trap 'kill $SERVER_PID || true' EXIT
-          sleep 2
-          cat > render-pr31-preview.mjs <<'JS'
-          import { chromium } from 'playwright';
-          const browser = await chromium.launch({headless:true});
-          async function shot(name, width, height, theme) {
-            const context = await browser.newContext({viewport:{width,height}, deviceScaleFactor:1});
-            const page = await context.newPage();
-            await page.addInitScript(value => localStorage.setItem('ai-era-theme', value), theme);
-            await page.goto('http://127.0.0.1:4173/', {waitUntil:'networkidle'});
-            await page.screenshot({path:`.preview/pr31/${name}.png`, fullPage:true});
-            await context.close();
-          }
-          await shot('mobile-light', 412, 915, 'light');
-          await shot('mobile-dark', 412, 915, 'dark');
-          await shot('desktop-light', 1440, 1000, 'light');
-          await shot('desktop-dark', 1440, 1000, 'dark');
-          await browser.close();
-          JS
-          node render-pr31-preview.mjs
-          rm render-pr31-preview.mjs
-      - name: Commit refreshed previews
-        run: |
-          git add -A
-          if git diff --cached --quiet; then exit 0; fi
-          git commit -m "chore: refresh PR31 visual previews [skip preview]"
-          git push origin HEAD:feat/epochlex-visual-system-refresh
+      - run: echo "PR #31 preview screenshots are already generated. This temporary workflow is frozen pending final review."
