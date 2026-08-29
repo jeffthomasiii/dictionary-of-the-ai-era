@@ -3,54 +3,73 @@
 **/A-I-lex/**  
 **Dictionary of the AI Era**
 
-AILex is a living, searchable dictionary of the language emerging around artificial intelligence.
+AILex is a living, searchable dictionary of the language developing around artificial intelligence. It documents technical concepts, ways of working, emerging slang, and terminology related to AI risk, safety, governance, and culture.
 
 **Development approach: Vibe coded · Human-directed · AI-assisted · Human-reviewed**
 
-AILex catalogs technical concepts, new ways of working, emerging slang, and terminology related to AI risk, safety, and governance.
+Public site: https://jeffthomasiii.github.io/dictionary-of-the-ai-era/
+
+## Current state
+
+AILex currently includes:
+
+- **100 published dictionary entries**
+- **100 researched provenance records** with supporting sources
+- Dedicated, stable term pages at `/terms/<slug>/`
+- Plain-English definitions and natural usage examples
+- Written and audible pronunciation
+- Explicit pronunciation handling for acronyms and ambiguous terms
+- Instant client-side search
+- A-Z browsing
+- Category filtering and dedicated category collections
+- List and grid views
+- Related-term discovery
+- Light and dark modes
+- Responsive mobile navigation and mobile Browse behavior
+- Canonical URLs, Open Graph metadata, Twitter/X metadata, structured data, sitemap, and robots directives
+- A Living Dictionary plus a defined annual-edition model
+- No database, framework, backend, API, or build process required for the public site
+
+The **100-term corpus is the MVP floor, not a ceiling**. AILex is intended to keep growing when new terms meet the editorial standard.
 
 ## Brand
 
 **AILex** combines **AI** with **lexicon**. It is pronounced **/A-I-lex/**, saying the letters A and I followed by “lex.”
 
-**Dictionary of the AI Era** is the project descriptor/tagline rather than the primary brand name.
+**Dictionary of the AI Era** is the project descriptor rather than the primary brand name.
 
-See [`BRAND.md`](BRAND.md) for naming usage and the future repository/domain strategy.
+See [`BRAND.md`](BRAND.md) for naming guidance and the future repository/domain strategy.
 
-## AI transparency
+## Documentation map
 
-This project is intentionally and substantially developed through an AI-assisted, vibe-coding workflow. AI is not only something AILex documents; it is part of how AILex itself is built.
+Use these documents according to what you are trying to understand or change:
 
-Jeff Thomas III provides the project direction, requirements, editorial judgment, testing, review, and final decisions. AI tools assist with research support, architecture, coding, debugging, documentation, definition drafting, copy editing, and implementation.
+| Document | Purpose |
+| --- | --- |
+| [`README.md`](README.md) | Current product overview and repository orientation |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | How to propose or revise terms, provenance, code, and documentation |
+| [`PROVENANCE.md`](PROVENANCE.md) | Research, sourcing, attribution, origin, and first-known-use standards |
+| [`AI-TRANSPARENCY.md`](AI-TRANSPARENCY.md) | How AI is used in development and editorial work |
+| [`DESIGN.md`](DESIGN.md) | Visual system, interaction principles, and UI guardrails |
+| [`BRAND.md`](BRAND.md) | AILex naming, pronunciation, hierarchy, and identity guidance |
+| [`EDITIONS.md`](EDITIONS.md) | Living Dictionary versus annual edition policy |
+| [`CONTENT-LICENSE.md`](CONTENT-LICENSE.md) | CC BY 4.0 licensing for original dictionary/editorial content |
 
-Vibe coding here does not mean blindly accepting AI output. It means a human-directed development workflow in which AI generates or modifies significant portions of the implementation while the human project owner evaluates, tests, redirects, accepts, or rejects the results.
+The public site also includes reader-facing **About**, **Categories**, **Contribute**, and **Methodology** pages.
 
-See [`AI-TRANSPARENCY.md`](AI-TRANSPARENCY.md) for the full development and editorial transparency policy.
+## Architecture
 
-## Current MVP
+AILex is intentionally static and data-driven.
 
-- Plain-English dictionary entries
-- Pronunciation for every term
-- Definition + natural usage example
-- Instant client-side search
-- Category filters
-- A–Z browsing
-- List and grid views
-- Light and dark modes
-- Shareable term anchors
-- Dedicated About, Categories, Contribute, and Methodology pages
-- Structured JSON dictionary data
-- Separate provenance and source-research data
-- GitHub Pages-ready static site
-- No database, framework, build step, or API required
+- `data/terms.json` is the lightweight published dictionary dataset used by Browse and category discovery.
+- `data/provenance.json` is the canonical research/provenance dataset.
+- `data/editions.json` records Living Dictionary and annual-edition metadata.
+- `terms/<slug>/index.html` provides stable, indexable fallback content for each term.
+- `assets/js/term-page.js` enriches dedicated pages with provenance, history, sources, and related-term discovery.
+- `assets/js/app.js` powers Browse, search, view state, theme behavior, and the shared pronunciation engine.
+- GitHub Pages serves the repository directly from `main`.
 
-## Living dictionary and annual editions
-
-The public site and `main` branch are the **AILex Living Dictionary** and remain continuously updateable. Named annual editions, such as the planned **AILex 2026**, are immutable snapshots created at a declared editorial cutoff for historical reference and citation.
-
-Annual editions use Git tags and GitHub Releases rather than duplicating the entire website into yearly folders. Machine-readable edition metadata lives in [`data/editions.json`](data/editions.json).
-
-See [`EDITIONS.md`](EDITIONS.md) for the complete edition, cutoff, release, correction, and citation policy.
+The website is an interface over the editorial datasets, not a separate content store.
 
 ## Repository structure
 
@@ -62,19 +81,36 @@ dictionary-of-the-ai-era/
 ├── contribute.html
 ├── methodology.html
 ├── 404.html
+├── robots.txt
+├── sitemap.xml
 ├── data/
 │   ├── terms.json
-│   └── provenance.json
+│   ├── provenance.json
+│   └── editions.json
+├── terms/
+│   └── <slug>/
+│       └── index.html
 ├── assets/
 │   ├── css/
-│   │   └── styles.css
+│   │   ├── styles.css
+│   │   ├── term-pages.css
+│   │   ├── related-discovery.css
+│   │   ├── browse-pronunciation.css
+│   │   ├── mobile-nav.css
+│   │   ├── mobile-browse.css
+│   │   └── category-browser.css
 │   └── js/
-│       └── app.js
+│       ├── app.js
+│       ├── term-page.js
+│       ├── mobile-nav.js
+│       ├── mobile-browse.js
+│       └── categories.js
 ├── AI-TRANSPARENCY.md
 ├── BRAND.md
 ├── CONTENT-LICENSE.md
 ├── CONTRIBUTING.md
 ├── DESIGN.md
+├── EDITIONS.md
 ├── PROVENANCE.md
 ├── LICENSE
 └── README.md
@@ -82,7 +118,7 @@ dictionary-of-the-ai-era/
 
 ## Dictionary data model
 
-`data/terms.json` remains the lightweight source of truth for what appears in the browse interface.
+`data/terms.json` contains the reader-facing entry data.
 
 ```json
 {
@@ -101,11 +137,11 @@ dictionary-of-the-ai-era/
 }
 ```
 
-The existing `sources` array in this core dataset is retained for compatibility during the research transition. The canonical provenance and source model now lives in `data/provenance.json`.
+The `sources` array in this lightweight dataset is retained for compatibility. Canonical research sources live in `data/provenance.json`.
 
 ## Provenance data model
 
-Each term slug can have a separate research record:
+Every published term has a matching researched record in `data/provenance.json`.
 
 ```json
 {
@@ -139,28 +175,15 @@ Each term slug can have a separate research record:
 }
 ```
 
-See [`PROVENANCE.md`](PROVENANCE.md) for the sourcing standard, research statuses, source types, origin-language rules, first-known-use policy, and human-review requirements.
-
-## Provenance research phase
-
-The provenance system is being introduced as a vertical slice before researching every term. The first researched set intentionally covers different kinds of AI-era vocabulary:
-
-- Few-Shot
-- MCP
-- Model Collapse
-- Prompt Injection
-- RAG
-- Vibe Coding
-
-Every other published term already has a provenance record marked `pending`, making the remaining research backlog explicit rather than leaving empty fields ambiguous.
+See [`PROVENANCE.md`](PROVENANCE.md) for the full sourcing standard.
 
 ## Editorial principle
 
-AILex is intended to be a dictionary, not a list of AI buzzwords. Terms should have documented real-world usage and definitions should distinguish between established technical vocabulary, emerging terminology, slang, research language, and contested concepts.
+AILex is intended to be a dictionary, not a list of AI buzzwords. A candidate should represent language with documented real-world usage and should add enough reader value to justify its own entry.
 
-AI can assist with identifying and researching candidate terms, drafting definitions, organizing evidence, and maintaining the software. Inclusion, source evaluation, final wording, classification, provenance claims, and publication remain human-reviewed decisions.
+Definitions should distinguish established technical vocabulary, emerging terminology, slang, research language, governance language, and contested concepts. AI may assist with candidate discovery, research organization, drafting, coding, and editing, but inclusion, source evaluation, final wording, classification, provenance claims, and publication remain human-reviewed decisions.
 
-A source that supports a definition does not automatically establish a term's origin. AILex intentionally distinguishes meaning, origin, first known use, history, and broader adoption.
+A source that supports a definition does not automatically establish a term's origin. AILex intentionally distinguishes meaning, origin, first known use, history, broader adoption, and current usage.
 
 ## Categories
 
@@ -169,9 +192,29 @@ A source that supports a definition does not automatically establish a term's or
 3. AI Systems & Technical Concepts
 4. AI Risks, Safety & Governance
 
+Terms may belong to more than one category when that better reflects actual usage.
+
+## Living Dictionary and annual editions
+
+The public site and `main` branch are the **AILex Living Dictionary** and remain continuously updateable.
+
+Named annual editions, such as the planned **AILex 2026**, are immutable snapshots created at a declared editorial cutoff for historical reference, citation, and comparison. Annual editions use Git tags and GitHub Releases rather than duplicate yearly website folders.
+
+See [`EDITIONS.md`](EDITIONS.md) and [`data/editions.json`](data/editions.json).
+
+## AI transparency
+
+AILex is intentionally and substantially developed through an AI-assisted, vibe-coding workflow.
+
+Jeff Thomas III provides project direction, requirements, editorial judgment, testing, review, and final decisions. AI tools may assist with research support, architecture, coding, debugging, documentation, definition drafting, copy editing, and implementation.
+
+AI output is never treated as evidence merely because a model produced it.
+
+See [`AI-TRANSPARENCY.md`](AI-TRANSPARENCY.md).
+
 ## Running locally
 
-Because the app loads JSON data with `fetch`, serve the folder over a local web server instead of double-clicking `index.html`.
+Because the site loads JSON data with `fetch`, serve the repository through a local web server rather than opening `index.html` directly.
 
 With Python:
 
@@ -181,40 +224,41 @@ python -m http.server 8000
 
 Then visit `http://localhost:8000`.
 
-## GitHub Pages
+## Publishing
 
-The project is intentionally static.
+GitHub Pages deploys directly from `main` at the repository root. No build step is required.
 
-1. Open **Settings → Pages**.
-2. Under **Build and deployment**, select **Deploy from a branch**.
-3. Choose `main` and `/ (root)`.
-4. Save.
+The published site currently includes:
 
-No build process is required.
+- canonical URLs for all public pages
+- Schema.org `DefinedTermSet` metadata on home
+- Schema.org `DefinedTerm` metadata on all dedicated term pages
+- `sitemap.xml`
+- `robots.txt`
+- explicit `noindex` behavior on the 404 page
 
-## Next milestones
+A future custom-domain migration should update canonical URLs, sitemap URLs, Open Graph URLs, and redirects as one coordinated change.
 
-- Complete provenance research across the remaining published terms
-- Surface source and research information through dedicated term detail pages
-- Audible pronunciation controls for dictionary terms
-  - Speaker control beside the written pronunciation
-  - Browser-based speech synthesis as the initial implementation
-  - Optional curated audio for unusual, ambiguous, or poorly synthesized terms
-  - Keyboard and screen-reader accessible playback controls
-- Expand related-term relationships
-- Emerging-term lifecycle
-- AI-language timeline
-- Submission workflow
-- Editorial review status
-- Automated candidate-term discovery with human approval
-- Repository and domain transition from the working `dictionary-of-the-ai-era` identity to AILex once naming, redirects, and link preservation are planned
+## Current readiness work
+
+The major MVP capabilities are implemented. Remaining readiness and post-MVP work should be driven by quality rather than feature count. Current priorities include:
+
+- documentation consistency and ongoing maintenance
+- final cross-device and accessibility QA
+- public AILex name/domain collision review and custom-domain decision
+- a deliberate branded social-preview image
+- optional search-console submission and indexing verification
+- continued corpus expansion based on editorial value and coverage gaps
+- stronger contribution/review workflow as outside participation grows
+
+Potential later features include richer relationship semantics, timelines, curated pronunciation audio where browser synthesis remains unreliable, and automated candidate discovery with human approval.
 
 ## Licensing
 
-This repository uses a **dual-license model**.
+This repository uses a dual-license model.
 
 - **Software and website code:** MIT License
 - **Original dictionary and editorial content:** Creative Commons Attribution 4.0 International (CC BY 4.0)
 - **Third-party material:** remains subject to its original copyright, license, trademark, or other applicable terms
 
-See [`LICENSE`](LICENSE) for the MIT software license and scope statement, and [`CONTENT-LICENSE.md`](CONTENT-LICENSE.md) for the dictionary content license and attribution guidance.
+See [`LICENSE`](LICENSE) and [`CONTENT-LICENSE.md`](CONTENT-LICENSE.md).
