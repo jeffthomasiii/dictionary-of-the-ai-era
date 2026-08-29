@@ -1,10 +1,19 @@
 const termPage = document.getElementById("term-page");
+const NAMED_ENTITY_CATEGORY = "AI Organizations, Products & Models";
 
 if (termPage && !document.querySelector('link[data-related-discovery-styles]')) {
   const styles = document.createElement("link");
   styles.rel = "stylesheet";
   styles.href = "../../assets/css/related-discovery.css";
   styles.dataset.relatedDiscoveryStyles = "true";
+  document.head.append(styles);
+}
+
+if (termPage && !document.querySelector('link[data-taxonomy-styles]')) {
+  const styles = document.createElement("link");
+  styles.rel = "stylesheet";
+  styles.href = "../../assets/css/taxonomy.css";
+  styles.dataset.taxonomyStyles = "true";
   document.head.append(styles);
 }
 
@@ -25,10 +34,24 @@ function formatDate(value) {
 
 function categoryKey(term) {
   const categories = term.categories || [];
+  if (categories.includes(NAMED_ENTITY_CATEGORY)) return "entities";
   if (categories.includes("AI Culture & Slang")) return "culture";
   if (categories.includes("AI Ways of Working")) return "work";
   if (categories.includes("AI Risks, Safety & Governance")) return "risks";
   return "systems";
+}
+
+function entryType(term) {
+  return term.entryType || "term";
+}
+
+function entryTypeLabel(term) {
+  return {
+    organization: "Organization",
+    product: "Product",
+    "model-family": "Model family",
+    model: "Model"
+  }[entryType(term)] || "";
 }
 
 function renderFirstKnownUse(record) {
@@ -81,7 +104,9 @@ function renderRelatedCards(relatedTerms = []) {
 
 function renderTermPage(term, provenance, termsBySlug, allProvenance) {
   const category = categoryKey(term);
+  const typeLabel = entryTypeLabel(term);
   termPage.dataset.category = category;
+  termPage.dataset.entryType = entryType(term);
   document.title = `${term.term} | EpochLex`;
 
   const related = relatedConnections(term.slug, provenance, allProvenance, termsBySlug);
@@ -95,7 +120,7 @@ function renderTermPage(term, provenance, termsBySlug, allProvenance) {
       <p class="eyebrow">EpochLex entry</p>
       <h1>${termEsc(term.term)}</h1>
       <div class="term-pronunciation-row"><span class="term-page-pronunciation">${termEsc(term.pronunciation)}</span>${pronunciationButton(term)}<span class="part-of-speech">${termEsc(term.partOfSpeech || "")}</span></div>
-      <div class="term-page-pills">${(term.categories || []).map(c => `<span class="pill">${termEsc(c)}</span>`).join("")}<span class="pill status-pill">${termEsc(term.status)}</span></div>
+      <div class="term-page-pills">${typeLabel ? `<span class="pill entry-type-pill">${termEsc(typeLabel)}</span>` : ""}${(term.categories || []).map(c => `<span class="pill">${termEsc(c)}</span>`).join("")}<span class="pill status-pill">${termEsc(term.status)}</span></div>
     </header>
 
     <div class="term-page-layout">
@@ -112,7 +137,7 @@ function renderTermPage(term, provenance, termsBySlug, allProvenance) {
         <section class="term-fact-card"><span class="entry-label">First known use</span>${renderFirstKnownUse(provenance)}</section>
         <section class="term-fact-card"><span class="entry-label">Research status</span><p class="research-status">${termEsc(provenance.researchStatus || "unknown")}</p></section>
         <section class="term-fact-card connection-summary"><span class="entry-label">Connections</span><p class="connection-count">${related.length}</p><p>${related.length === 1 ? "related EpochLex entry" : "related EpochLex entries"}</p></section>
-        <section class="term-fact-card term-record-meta"><span class="entry-label">Entry record</span><p>Added ${termEsc(formatDate(term.added))}</p><p>Last reviewed ${termEsc(formatDate(term.lastReviewed))}</p></section>
+        <section class="term-fact-card term-record-meta"><span class="entry-label">Entry record</span>${typeLabel ? `<p>Type: ${termEsc(typeLabel)}</p>` : ""}<p>Added ${termEsc(formatDate(term.added))}</p><p>Last reviewed ${termEsc(formatDate(term.lastReviewed))}</p></section>
       </aside>
     </div>`;
 
