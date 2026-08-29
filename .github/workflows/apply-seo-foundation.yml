@@ -1,0 +1,26 @@
+name: One-time SEO Foundation
+on:
+  push:
+    branches: [feat/product-readiness-seo-foundation]
+    paths: [.github/workflows/apply-seo-foundation.yml]
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply and validate publishing metadata
+        run: python scripts/apply_seo_foundation.py
+      - name: Commit SEO foundation
+        run: |
+          git config user.name "jeffthomasiii"
+          git config user.email "Masterstudent@duck.com"
+          git add -A
+          git commit -m "feat: add publishing and SEO foundation"
+          git push
+      - name: Remove temporary tooling
+        run: |
+          git rm .github/workflows/apply-seo-foundation.yml scripts/apply_seo_foundation.py
+          git commit -m "chore: remove one-time SEO tooling"
+          git push
