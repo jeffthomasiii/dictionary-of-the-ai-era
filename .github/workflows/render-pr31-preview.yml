@@ -15,50 +15,57 @@ jobs:
         with:
           ref: feat/epochlex-visual-system-refresh
           fetch-depth: 0
-      - name: Sync uploaded production brand assets from main
+      - name: Sync current main
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch origin main
           git merge -X ours --no-edit origin/main
-      - name: Integrate production EpochLex masthead
+      - name: Refine hero and semantic category colors
         run: |
           python - <<'PY'
           from pathlib import Path
           import re
 
-          pages = [Path('index.html'), Path('about.html'), Path('categories.html'), Path('contribute.html'), Path('methodology.html')]
-          pages += sorted(Path('terms').glob('*/index.html'))
-
-          updated = 0
-          for path in pages:
-              text = path.read_text()
-              prefix = '' if path.parent == Path('.') else '../../'
-              light = f"{prefix}assets/brand/epochlex/epochlex-logo-horizontal-light.png"
-              dark = f"{prefix}assets/brand/epochlex/epochlex-logo-horizontal-dark.png"
-              replacement = (
-                  '<span class="brand-lockup" aria-hidden="true">'
-                  f'<img class="brand-lockup-image brand-lockup-light" src="{light}" alt="">'
-                  f'<img class="brand-lockup-image brand-lockup-dark" src="{dark}" alt="">'
-                  '</span><span class="sr-only">EpochLex</span>'
-              )
-              if 'brand-lockup-light' in text:
-                  continue
-              pattern = re.compile(r'<span class="brand-mark"(?: aria-hidden="true")?>.*?</span>\s*<span>EpochLex</span>', re.S)
-              new, count = pattern.subn(replacement, text, count=1)
-              if count == 1:
-                  path.write_text(new)
-                  updated += 1
-          print(f'Integrated production masthead on {updated} pages')
-
           css = Path('assets/css/brand-theme.css')
           text = css.read_text()
-          marker = '/* Production EpochLex masthead lockup */'
+
+          text = text.replace(
+              '  --culture: #7D8791;\n  --work: #7A9276;\n  --systems: #5C8F95;\n  --risks: #8C7468;',
+              '  --culture: #8B6FBD;\n  --work: #4E9A8A;\n  --systems: #507EA6;\n  --risks: #B56F61;'
+          )
+          text = text.replace(
+              '  --culture: #A4ADB5;\n  --work: #A2B59D;\n  --systems: #78AAB0;\n  --risks: #B59A8D;',
+              '  --culture: #A387CC;\n  --work: #61B4A2;\n  --systems: #6694BD;\n  --risks: #CA7C6C;'
+          )
+
+          old_hero = '''.hero-network,\n.hero-wave {\n  color: var(--accent-secondary);\n  fill: var(--accent-secondary);\n  stroke: var(--accent-secondary);\n  opacity: .16;\n}'''
+          new_hero = '''.hero-network {\n  color: var(--accent-secondary);\n  fill: var(--accent-secondary);\n  stroke: var(--accent-secondary);\n  opacity: .22;\n}\n\n.hero-wave {\n  color: var(--accent-secondary);\n  fill: none;\n  stroke: var(--accent-secondary);\n  stroke-width: 1;\n  opacity: .22;\n}'''
+          text = text.replace(old_hero, new_hero)
+
+          marker = '/* Semantic category filters: restore the four editorial colors. */'
           if marker not in text:
-              text += '''\n\n/* Production EpochLex masthead lockup */\n.brand { min-width: 0; }\n.brand-lockup { display:block; width:clamp(160px,18vw,230px); line-height:0; }\n.brand-lockup-image { display:block; width:100%; height:auto; }\n.brand-lockup-dark { display:none; }\nhtml[data-theme="dark"] .brand-lockup-light { display:none; }\nhtml[data-theme="dark"] .brand-lockup-dark { display:block; }\n@media (max-width:680px){ .brand-lockup { width:158px; } }\n'''
-              css.write_text(text)
+              text += '''\n\n/* Semantic category filters: restore the four editorial colors. */\n.filter.all { --filter-color: var(--accent-secondary); }\n.filter.culture { --filter-color: var(--culture); }\n.filter.work { --filter-color: var(--work); }\n.filter.systems { --filter-color: var(--systems); }\n.filter.risks { --filter-color: var(--risks); }\n\n.filter .category-icon {\n  color: var(--filter-color);\n  background: color-mix(in srgb, var(--filter-color) 18%, transparent);\n}\n\n.filter:hover {\n  border-color: color-mix(in srgb, var(--filter-color) 48%, var(--line-strong));\n}\n\n.filter.active {\n  color: var(--ink);\n  border-color: color-mix(in srgb, var(--filter-color) 72%, var(--line-strong));\n  background: color-mix(in srgb, var(--filter-color) 15%, var(--surface));\n  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--filter-color) 24%, transparent);\n}\n\n.filter.active .category-icon {\n  color: var(--filter-color);\n  background: color-mix(in srgb, var(--filter-color) 24%, transparent);\n}\n\n.mobile-filter-option[data-key=\"all\"],\n.mobile-filter-toggle[data-key=\"all\"] { --filter-color: var(--accent-secondary); }\n.mobile-filter-option[data-key=\"culture\"],\n.mobile-filter-toggle[data-key=\"culture\"] { --filter-color: var(--culture); }\n.mobile-filter-option[data-key=\"work\"],\n.mobile-filter-toggle[data-key=\"work\"] { --filter-color: var(--work); }\n.mobile-filter-option[data-key=\"systems\"],\n.mobile-filter-toggle[data-key=\"systems\"] { --filter-color: var(--systems); }\n.mobile-filter-option[data-key=\"risks\"],\n.mobile-filter-toggle[data-key=\"risks\"] { --filter-color: var(--risks); }\n\n.mobile-filter-option .mobile-filter-dot {\n  background: var(--filter-color, var(--accent-secondary));\n  box-shadow: 0 0 0 2px color-mix(in srgb, var(--filter-color, var(--accent-secondary)) 15%, transparent);\n}\n\n.mobile-filter-option[aria-current=\"true\"] {\n  background: color-mix(in srgb, var(--filter-color) 15%, var(--surface));\n  color: var(--ink);\n  box-shadow: inset 3px 0 0 var(--filter-color);\n}\n\n.mobile-filter-toggle[data-key] {\n  border-color: color-mix(in srgb, var(--filter-color) 55%, var(--line-strong));\n  box-shadow: inset 3px 0 0 var(--filter-color), var(--shadow);\n}\n'''
+          css.write_text(text)
+
+          js = Path('assets/js/mobile-browse.js')
+          js_text = js.read_text()
+          needle = '    label.textContent = labelFor(filter);\n    options.forEach(option => option.setAttribute(\'aria-current\', String(option.dataset.category === filter.dataset.category)));'
+          replacement = '    label.textContent = labelFor(filter);\n    toggle.dataset.key = keyFor(filter);\n    options.forEach(option => option.setAttribute(\'aria-current\', String(option.dataset.category === filter.dataset.category)));'
+          if 'toggle.dataset.key = keyFor(filter);' not in js_text:
+              js_text = js_text.replace(needle, replacement)
+          js.write_text(js_text)
+
+          design = Path('DESIGN.md')
+          design_text = design.read_text()
+          pattern = re.compile(r'### Category colors\n\n.*?Never depend on color alone to communicate category or state\.', re.S)
+          replacement = '''### Category colors\n\nCategory color is semantic, not decorative. The four established category colors remain intentionally more distinct than the surrounding brand palette so readers can recognize category at a glance in both light and dark modes.\n\nLight mode:\n\n- **AI Culture & Slang:** muted violet `#8B6FBD`\n- **AI Ways of Working:** muted teal `#4E9A8A`\n- **AI Systems & Technical Concepts:** muted steel blue `#507EA6`\n- **AI Risks, Safety & Governance:** muted clay/coral `#B56F61`\n\nDark mode uses brighter counterparts for comparable recognition and contrast:\n\n- **AI Culture & Slang:** `#A387CC`\n- **AI Ways of Working:** `#61B4A2`\n- **AI Systems & Technical Concepts:** `#6694BD`\n- **AI Risks, Safety & Governance:** `#CA7C6C`\n\nNever depend on color alone to communicate category or state.'''
+          design_text, count = pattern.subn(replacement, design_text, count=1)
+          if count != 1:
+              raise SystemExit('Could not update DESIGN.md category section')
+          design.write_text(design_text)
           PY
-      - name: Validate production logo wiring
+      - name: Validate refinements and production logo wiring
         run: |
           python - <<'PY'
           from pathlib import Path
@@ -74,13 +81,20 @@ jobs:
           for filename in required:
               f = root / filename
               assert f.exists() and f.stat().st_size > 0, f
+
+          css = Path('assets/css/brand-theme.css').read_text()
+          for token in ['#8B6FBD', '#4E9A8A', '#507EA6', '#B56F61', '#A387CC', '#61B4A2', '#6694BD', '#CA7C6C']:
+              assert token in css, token
+          assert '.hero-wave {' in css and 'fill: none;' in css
+          assert 'Semantic category filters' in css
+          assert 'toggle.dataset.key = keyFor(filter);' in Path('assets/js/mobile-browse.js').read_text()
+
           pages = [Path('index.html'), Path('about.html'), Path('categories.html'), Path('contribute.html'), Path('methodology.html')]
           pages += sorted(Path('terms').glob('*/index.html'))
           for path in pages:
               t = path.read_text()
               assert 'brand-lockup-light' in t and 'brand-lockup-dark' in t, path
-              assert '<span class="brand-mark"' not in t, path
-          print(f'Validated logo wiring on {len(pages)} pages')
+          print(f'Validated refined visual system on {len(pages)} branded pages')
           PY
       - uses: actions/setup-node@v4
         with:
@@ -115,10 +129,9 @@ jobs:
           JS
           node render-pr31-preview.mjs
           rm render-pr31-preview.mjs
-      - name: Commit integrated assets and refreshed previews
+      - name: Commit refined visual system and previews
         run: |
-          rm -f .github/workflows/integrate-epochlex-brand-assets.yml
           git add -A
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m "feat: integrate EpochLex production logo and refresh previews [skip preview]"
+          git commit -m "refine: restore technical hero lines and semantic category colors [skip preview]"
           git push origin HEAD:feat/epochlex-visual-system-refresh
