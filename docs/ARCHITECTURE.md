@@ -1,6 +1,6 @@
-# AILex Architecture
+# EpochLex Architecture
 
-AILex is intentionally a **static, data-driven reference site**. The public website is an interface over editorial datasets rather than a separate application with its own database or backend.
+EpochLex is intentionally a **static, data-driven reference site**. The public website is an interface over editorial datasets rather than a separate application with its own database or backend.
 
 ## Design goals
 
@@ -52,7 +52,7 @@ This hybrid approach preserves useful no-JavaScript/indexing content while avoid
 
 ### Reader documentation
 
-- `about.html`: what AILex is, how it began, site features, pronunciation, Living Dictionary context, and a brief open-source/AI-transparency statement.
+- `about.html`: what EpochLex is, how it began, site features, pronunciation, Living Dictionary context, and a brief open-source/AI-transparency statement.
 - `methodology.html`: reader-friendly explanation of how terms are selected, researched, reviewed, and maintained.
 - `contribute.html`: low-friction ways a reader can help, with a path into the repository for deeper contribution workflows.
 
@@ -62,7 +62,7 @@ This hybrid approach preserves useful no-JavaScript/indexing content while avoid
 
 Shared Browse behavior, search/filter state, theme controls, view preference, and the Web Speech API pronunciation engine.
 
-Speech overrides are used where browsers are likely to guess incorrectly, especially for acronyms and the AILex brand name.
+Speech overrides are used where browsers are likely to guess incorrectly, especially for acronyms and the EpochLex brand name.
 
 ### `assets/js/term-page.js`
 

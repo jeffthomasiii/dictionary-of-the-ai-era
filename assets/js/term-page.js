@@ -32,7 +32,7 @@ function categoryKey(term) {
 }
 
 function renderFirstKnownUse(record) {
-  if (!record.firstKnownUse) return `<p class="muted-note">A defensible first-known-use date has not been established in AILex's current research.</p>`;
+  if (!record.firstKnownUse) return `<p class="muted-note">A defensible first-known-use date has not been established in EpochLex's current research.</p>`;
   const precision = record.firstKnownUse.precision ? `<span class="provenance-precision">${termEsc(record.firstKnownUse.precision)} precision</span>` : "";
   return `<p class="first-use-date">${termEsc(formatDate(record.firstKnownUse.date))} ${precision}</p>${record.firstKnownUse.note ? `<p>${termEsc(record.firstKnownUse.note)}</p>` : ""}`;
 }
@@ -46,12 +46,12 @@ function renderSources(sources = []) {
 }
 
 function pronunciationButton(term) {
-  return window.AILexPronunciation?.button(term, "pronunciation-button") || "";
+  return window.EpochLexPronunciation?.button(term, "pronunciation-button") || "";
 }
 
 function wirePronunciation(term) {
   const button = termPage.querySelector(".pronunciation-button");
-  if (button) window.AILexPronunciation?.wire(button, term);
+  if (button) window.EpochLexPronunciation?.wire(button, term);
 }
 
 function relatedConnections(slug, provenance, allProvenance, termsBySlug) {
@@ -73,7 +73,7 @@ function renderRelatedCards(relatedTerms = []) {
 
   return `<div class="related-term-grid">${relatedTerms.map(relatedTerm => `
     <a class="related-term-card" data-related-category="${categoryKey(relatedTerm)}" href="../${encodeURIComponent(relatedTerm.slug)}/">
-      <div class="related-card-topline"><span class="related-card-category">${termEsc((relatedTerm.categories || [])[0] || "AILex term")}</span><span class="related-card-arrow" aria-hidden="true">→</span></div>
+      <div class="related-card-topline"><span class="related-card-category">${termEsc((relatedTerm.categories || [])[0] || "EpochLex term")}</span><span class="related-card-arrow" aria-hidden="true">→</span></div>
       <h3>${termEsc(relatedTerm.term)}</h3>
       <p>${termEsc(relatedTerm.definition)}</p>
     </a>`).join("")}</div>`;
@@ -82,7 +82,7 @@ function renderRelatedCards(relatedTerms = []) {
 function renderTermPage(term, provenance, termsBySlug, allProvenance) {
   const category = categoryKey(term);
   termPage.dataset.category = category;
-  document.title = `${term.term} | AILex`;
+  document.title = `${term.term} | EpochLex`;
 
   const related = relatedConnections(term.slug, provenance, allProvenance, termsBySlug);
   const history = (provenance.history || []).length
@@ -92,7 +92,7 @@ function renderTermPage(term, provenance, termsBySlug, allProvenance) {
   termPage.innerHTML = `
     <nav class="term-breadcrumb" aria-label="Breadcrumb"><a href="../../">Browse</a><span aria-hidden="true">/</span><span>${termEsc(term.term)}</span></nav>
     <header class="term-page-header">
-      <p class="eyebrow">AILex entry</p>
+      <p class="eyebrow">EpochLex entry</p>
       <h1>${termEsc(term.term)}</h1>
       <div class="term-pronunciation-row"><span class="term-page-pronunciation">${termEsc(term.pronunciation)}</span>${pronunciationButton(term)}<span class="part-of-speech">${termEsc(term.partOfSpeech || "")}</span></div>
       <div class="term-page-pills">${(term.categories || []).map(c => `<span class="pill">${termEsc(c)}</span>`).join("")}<span class="pill status-pill">${termEsc(term.status)}</span></div>
@@ -105,13 +105,13 @@ function renderTermPage(term, provenance, termsBySlug, allProvenance) {
         ${term.aliases?.length ? `<section class="term-section"><span class="entry-label">Also known as</span><p>${term.aliases.map(termEsc).join(", ")}</p></section>` : ""}
         <section class="term-section"><span class="entry-label">Origin & context</span><p>${termEsc(provenance.origin || "Origin research is not yet available.")}</p></section>
         <section class="term-section"><span class="entry-label">History</span>${history}</section>
-        <section class="term-section related-discovery-section"><span class="entry-label">Explore related terms</span><p class="related-intro">Continue through concepts connected to this entry in AILex.</p>${renderRelatedCards(related)}</section>
+        <section class="term-section related-discovery-section"><span class="entry-label">Explore related terms</span><p class="related-intro">Continue through concepts connected to this entry in EpochLex.</p>${renderRelatedCards(related)}</section>
         <section class="term-section"><span class="entry-label">Sources</span><ol class="source-list">${renderSources(provenance.sources || [])}</ol></section>
       </div>
       <aside class="term-side-column">
         <section class="term-fact-card"><span class="entry-label">First known use</span>${renderFirstKnownUse(provenance)}</section>
         <section class="term-fact-card"><span class="entry-label">Research status</span><p class="research-status">${termEsc(provenance.researchStatus || "unknown")}</p></section>
-        <section class="term-fact-card connection-summary"><span class="entry-label">Connections</span><p class="connection-count">${related.length}</p><p>${related.length === 1 ? "related AILex entry" : "related AILex entries"}</p></section>
+        <section class="term-fact-card connection-summary"><span class="entry-label">Connections</span><p class="connection-count">${related.length}</p><p>${related.length === 1 ? "related EpochLex entry" : "related EpochLex entries"}</p></section>
         <section class="term-fact-card term-record-meta"><span class="entry-label">Entry record</span><p>Added ${termEsc(formatDate(term.added))}</p><p>Last reviewed ${termEsc(formatDate(term.lastReviewed))}</p></section>
       </aside>
     </div>`;
@@ -128,7 +128,7 @@ if (termPage) {
     const termsBySlug = new Map(terms.map(term => [term.slug, term]));
     const term = termsBySlug.get(slug);
     const record = provenance[slug];
-    if (!term || !record) throw new Error("This AILex entry could not be found.");
+    if (!term || !record) throw new Error("This EpochLex entry could not be found.");
     renderTermPage(term, record, termsBySlug, provenance);
   }).catch(error => {
     const fallback = document.getElementById("term-fallback");

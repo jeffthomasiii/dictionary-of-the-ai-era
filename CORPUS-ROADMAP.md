@@ -1,8 +1,8 @@
-# AILex 100 Corpus Roadmap
+# EpochLex 100 Corpus Roadmap
 
-AILex now has **100 published, researched entries** after Batch 6. The corpus portion of the MVP threshold has been reached; future additions should be driven by editorial value rather than a numeric target.
+EpochLex now has **100 published, researched entries** after Batch 6. The corpus portion of the MVP threshold has been reached; future additions should be driven by editorial value rather than a numeric target.
 
-The backlog intentionally contains more candidates than the MVP requires. A candidate is not guaranteed publication. Each term must still pass AILex's usage, sourcing, definition, provenance, and human-review standards.
+The backlog intentionally contains more candidates than the MVP requires. A candidate is not guaranteed publication. Each term must still pass EpochLex's usage, sourcing, definition, provenance, and human-review standards.
 
 ## Editorial cadence
 
@@ -12,13 +12,13 @@ Work in batches of roughly 10–15 terms:
 2. Verify real-world usage and scope.
 3. Draft the definition, example, pronunciation, category, aliases, and status.
 4. Research provenance and history.
-5. Map related AILex terms.
+5. Map related EpochLex terms.
 6. Human-review each entry.
 7. Publish the batch with dedicated term pages.
 
 ## Priority 1 — Foundational AI vocabulary
 
-These are high-value gaps that should be covered early because they appear frequently in public discussion and connect to many other AILex entries.
+These are high-value gaps that should be covered early because they appear frequently in public discussion and connect to many other EpochLex entries.
 
 - Generative AI
 - Large Language Model (LLM)
@@ -221,7 +221,7 @@ When Batch 1 is published, the corpus will grow from **27 to 39 terms**.
 
 ## MVP completion criterion
 
-AILex reaches the corpus portion of MVP when:
+EpochLex reaches the corpus portion of MVP when:
 
 - at least 100 terms are published;
 - every published term has a definition, example, pronunciation, category/status, and dedicated URL;
@@ -313,7 +313,7 @@ After Batch 5, the published corpus reaches **85 terms**, leaving **15 terms** t
 14. AI Governance
 15. Deepfake
 
-After Batch 6, the published corpus reaches **100 terms**. This satisfies the numeric corpus threshold for the AILex MVP while deliberately broadening coverage across agents, generation, evaluation, safety, governance, and culture/media.
+After Batch 6, the published corpus reaches **100 terms**. This satisfies the numeric corpus threshold for the EpochLex MVP while deliberately broadening coverage across agents, generation, evaluation, safety, governance, and culture/media.
 
 ## Corpus MVP status
 

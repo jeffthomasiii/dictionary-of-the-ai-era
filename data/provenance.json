@@ -157,7 +157,7 @@
   },
   "ai-washing": {
     "researchStatus": "researched",
-    "origin": "‘AI washing’ adapts the older ‘washing’ metaphor, especially greenwashing, to false, vague, or exaggerated claims about artificial intelligence. A single reliable coinage event is not established in AILex's current evidence. The term became prominent as regulators began warning companies and investment firms against overstating how they use AI.",
+    "origin": "‘AI washing’ adapts the older ‘washing’ metaphor, especially greenwashing, to false, vague, or exaggerated claims about artificial intelligence. A single reliable coinage event is not established in EpochLex's current evidence. The term became prominent as regulators began warning companies and investment firms against overstating how they use AI.",
     "firstKnownUse": null,
     "history": [
       {
@@ -336,7 +336,7 @@
   },
   "diffusion-model": {
     "researchStatus": "researched",
-    "origin": "Modern diffusion-based generative modeling traces to research that applies a forward process which gradually destroys structure with noise and learns a reverse process that reconstructs data. AILex does not claim the generic phrase ‘diffusion model’ was first coined by one paper.",
+    "origin": "Modern diffusion-based generative modeling traces to research that applies a forward process which gradually destroys structure with noise and learns a reverse process that reconstructs data. EpochLex does not claim the generic phrase ‘diffusion model’ was first coined by one paper.",
     "firstKnownUse": null,
     "history": [
       {
@@ -367,7 +367,7 @@
   },
   "embedding": {
     "researchStatus": "researched",
-    "origin": "Vector representations and embeddings have a long history in statistics, machine learning, and natural-language processing, so AILex does not assign the term to a single origin. Modern AI usage commonly refers to learned numerical representations in which semantic or structural similarity is reflected by proximity in vector space.",
+    "origin": "Vector representations and embeddings have a long history in statistics, machine learning, and natural-language processing, so EpochLex does not assign the term to a single origin. Modern AI usage commonly refers to learned numerical representations in which semantic or structural similarity is reflected by proximity in vector space.",
     "firstKnownUse": null,
     "history": [
       {
@@ -509,7 +509,7 @@
   },
   "generative-ai": {
     "researchStatus": "researched",
-    "origin": "Generative modeling predates the current generative-AI boom, and AILex does not assign the phrase to a single inventor. In contemporary usage, generative AI refers to AI models or systems that generate new synthetic content based on patterns learned from input or training data.",
+    "origin": "Generative modeling predates the current generative-AI boom, and EpochLex does not assign the phrase to a single inventor. In contemporary usage, generative AI refers to AI models or systems that generate new synthetic content based on patterns learned from input or training data.",
     "firstKnownUse": null,
     "history": [
       {
@@ -725,7 +725,7 @@
   },
   "large-language-model": {
     "researchStatus": "researched",
-    "origin": "Large language models grew out of decades of statistical language modeling and neural-network research. AILex does not assign the phrase to a single coinage event; in current usage it describes very large language models trained on extensive data, typically using deep-learning architectures such as transformers.",
+    "origin": "Large language models grew out of decades of statistical language modeling and neural-network research. EpochLex does not assign the phrase to a single coinage event; in current usage it describes very large language models trained on extensive data, typically using deep-learning architectures such as transformers.",
     "firstKnownUse": null,
     "history": [
       {
@@ -1092,7 +1092,7 @@
   },
   "rlhf": {
     "researchStatus": "researched",
-    "origin": "Reinforcement learning from human feedback combines reinforcement-learning methods with human judgments or preferences to help define what behavior should be rewarded. The approach has roots before modern LLMs; AILex does not claim that the acronym RLHF itself originated in the 2017 paper commonly associated with the modern method.",
+    "origin": "Reinforcement learning from human feedback combines reinforcement-learning methods with human judgments or preferences to help define what behavior should be rewarded. The approach has roots before modern LLMs; EpochLex does not claim that the acronym RLHF itself originated in the 2017 paper commonly associated with the modern method.",
     "firstKnownUse": null,
     "history": [
       {
@@ -1172,7 +1172,7 @@
   },
   "shadow-ai": {
     "researchStatus": "researched",
-    "origin": "‘Shadow AI’ extends the established enterprise-technology concept of ‘shadow IT’ to artificial-intelligence tools and services used without organizational approval, visibility, governance, or oversight. The expression grew alongside employee adoption of public generative-AI tools, but AILex does not currently identify a single defensible coinage event.",
+    "origin": "‘Shadow AI’ extends the established enterprise-technology concept of ‘shadow IT’ to artificial-intelligence tools and services used without organizational approval, visibility, governance, or oversight. The expression grew alongside employee adoption of public generative-AI tools, but EpochLex does not currently identify a single defensible coinage event.",
     "firstKnownUse": null,
     "history": [
       {
@@ -1268,7 +1268,7 @@
   },
   "system-prompt": {
     "researchStatus": "researched",
-    "origin": "The practice of giving software systems privileged or application-level instructions predates current LLMs, and AILex does not assign ‘system prompt’ to a single coinage. In modern generative AI, the term refers to instructions supplied by the model developer or application layer that establish behavior or context before ordinary user input.",
+    "origin": "The practice of giving software systems privileged or application-level instructions predates current LLMs, and EpochLex does not assign ‘system prompt’ to a single coinage. In modern generative AI, the term refers to instructions supplied by the model developer or application layer that establish behavior or context before ordinary user input.",
     "firstKnownUse": null,
     "history": [
       {
@@ -1393,7 +1393,7 @@
   },
   "vector-database": {
     "researchStatus": "researched",
-    "origin": "Vector databases developed from established work in vector similarity search, nearest-neighbor indexing, and specialized data systems. AILex does not assign the modern product category to one inventor. In current AI applications, the term commonly refers to databases optimized to store, index, and query vector embeddings.",
+    "origin": "Vector databases developed from established work in vector similarity search, nearest-neighbor indexing, and specialized data systems. EpochLex does not assign the modern product category to one inventor. In current AI applications, the term commonly refers to databases optimized to store, index, and query vector embeddings.",
     "firstKnownUse": null,
     "history": [
       {
@@ -1538,7 +1538,7 @@
     "firstKnownUse": {
       "date": "2009",
       "precision": "year",
-      "note": "The 2009 Palatucci et al. paper is an early documented use of the term ‘zero-shot learning’; AILex does not claim it is necessarily the absolute first use."
+      "note": "The 2009 Palatucci et al. paper is an early documented use of the term ‘zero-shot learning’; EpochLex does not claim it is necessarily the absolute first use."
     },
     "history": [
       {
@@ -1689,7 +1689,7 @@
     "firstKnownUse": {
       "date": "1959-07",
       "precision": "month",
-      "note": "Arthur Samuel's IBM paper is a well-documented early use and is widely credited with coining or popularizing the term, though AILex does not claim it is provably the absolute first occurrence."
+      "note": "Arthur Samuel's IBM paper is a well-documented early use and is widely credited with coining or popularizing the term, though EpochLex does not claim it is provably the absolute first occurrence."
     },
     "history": [
       {
@@ -2024,7 +2024,7 @@
   },
   "prompt": {
     "researchStatus": "researched",
-    "origin": "Prompt is an older computing and interaction term that became central to generative AI as pretrained language models began accepting natural-language input to condition their behavior. AILex does not assign a single generative-AI coinage event.",
+    "origin": "Prompt is an older computing and interaction term that became central to generative AI as pretrained language models began accepting natural-language input to condition their behavior. EpochLex does not assign a single generative-AI coinage event.",
     "firstKnownUse": null,
     "history": [
       {
@@ -2057,7 +2057,7 @@
   },
   "user-prompt": {
     "researchStatus": "researched",
-    "origin": "User prompt is a practical role-based label used in chat and model APIs for input attributed to the end user. The wording varies by platform, so AILex treats it as a functional category rather than a coined term.",
+    "origin": "User prompt is a practical role-based label used in chat and model APIs for input attributed to the end user. The wording varies by platform, so EpochLex treats it as a functional category rather than a coined term.",
     "firstKnownUse": null,
     "history": [
       {
@@ -2152,7 +2152,7 @@
   },
   "prompt-chaining": {
     "researchStatus": "researched",
-    "origin": "Prompt chaining developed as a practical way to decompose generative-AI tasks into sequential model calls. AILex does not assign a single coinage event because similar multi-stage pipelines appeared across early LLM tooling and prompting practice.",
+    "origin": "Prompt chaining developed as a practical way to decompose generative-AI tasks into sequential model calls. EpochLex does not assign a single coinage event because similar multi-stage pipelines appeared across early LLM tooling and prompting practice.",
     "firstKnownUse": null,
     "history": [
       {
@@ -2453,7 +2453,7 @@
     "firstKnownUse": {
       "date": "2025-07-14",
       "precision": "day",
-      "note": "Chroma's technical report is a clear documented naming event for the phrase in current LLM usage; AILex does not claim it proves the absolute first informal use."
+      "note": "Chroma's technical report is a clear documented naming event for the phrase in current LLM usage; EpochLex does not claim it proves the absolute first informal use."
     },
     "history": [
       {
@@ -2714,7 +2714,7 @@
     "firstKnownUse": {
       "date": "2024-02-13",
       "precision": "day",
-      "note": "Microsoft Research publicly used GraphRAG in a project post on this date; AILex treats this as a documented introduction event for the named approach, not proof of the absolute first graph-based RAG work."
+      "note": "Microsoft Research publicly used GraphRAG in a project post on this date; EpochLex treats this as a documented introduction event for the named approach, not proof of the absolute first graph-based RAG work."
     },
     "history": [
       {
@@ -3210,7 +3210,7 @@
     "firstKnownUse": {
       "date": "2024-10-22",
       "precision": "day",
-      "note": "Anthropic publicly introduced 'computer use' as a model capability in public beta on this date; AILex does not claim this was the first research on GUI automation."
+      "note": "Anthropic publicly introduced 'computer use' as a model capability in public beta on this date; EpochLex does not claim this was the first research on GUI automation."
     },
     "history": [
       {

@@ -16,7 +16,7 @@
   const mobileQuery = window.matchMedia('(max-width: 680px)');
   const originalPlaceholder = search.getAttribute('placeholder') || '';
   const syncPlaceholder = () => {
-    search.setAttribute('placeholder', mobileQuery.matches ? 'Search AILex…' : originalPlaceholder);
+    search.setAttribute('placeholder', mobileQuery.matches ? 'Search EpochLex…' : originalPlaceholder);
   };
   syncPlaceholder();
   mobileQuery.addEventListener?.('change', syncPlaceholder);

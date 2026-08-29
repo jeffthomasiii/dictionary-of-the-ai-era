@@ -1,8 +1,8 @@
-# AILex Product Readiness QA
+# EpochLex Product Readiness QA
 
 This document records the repeatable quality checks used before broader public release and after changes that affect shared site behavior.
 
-AILex is a static, data-driven GitHub Pages site. Automated repository checks can catch many structural regressions, but they do not replace browser, device, keyboard, screen-reader, or visual testing.
+EpochLex is a static, data-driven GitHub Pages site. Automated repository checks can catch many structural regressions, but they do not replace browser, device, keyboard, screen-reader, or visual testing.
 
 ## Automated repository checks
 
@@ -93,7 +93,7 @@ With `prefers-reduced-motion: reduce` enabled:
 
 ## No-JavaScript / fallback checks
 
-AILex uses JavaScript for Browse interaction and rich term-page enrichment, but dedicated term pages include static fallback content for indexing and basic reading.
+EpochLex uses JavaScript for Browse interaction and rich term-page enrichment, but dedicated term pages include static fallback content for indexing and basic reading.
 
 Periodically verify that a dedicated term URL still contains, before JavaScript enhancement:
 
@@ -108,7 +108,7 @@ Periodically verify that a dedicated term URL still contains, before JavaScript 
 
 Browser speech engines vary by operating system and browser. Spot-check:
 
-- AILex;
+- EpochLex;
 - acronym-heavy entries such as MCP, RLHF, RLAIF, PEFT, and LLM-as-a-Judge;
 - newly coined or ambiguous terms;
 - any entry reported by a reader as being mispronounced.
