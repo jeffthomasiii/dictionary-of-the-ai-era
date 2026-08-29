@@ -94,12 +94,21 @@ Neither accent should flood large areas of the interface.
 
 ### Category colors
 
-Category color remains semantic rather than decorative. Categories retain distinct visual signals, but those signals should be muted so they sit inside the EpochLex system rather than becoming a competing palette.
+Category color is semantic, not decorative. The four established category colors remain intentionally more distinct than the surrounding brand palette so readers can recognize category at a glance in both light and dark modes.
 
-- **AI Culture & Slang:** slate-derived neutral
-- **AI Ways of Working:** sage-derived
-- **AI Systems & Technical Concepts:** blue-green-derived
-- **AI Risks, Safety & Governance:** muted warm neutral
+Light mode:
+
+- **AI Culture & Slang:** muted violet `#8B6FBD`
+- **AI Ways of Working:** muted teal `#4E9A8A`
+- **AI Systems & Technical Concepts:** muted steel blue `#507EA6`
+- **AI Risks, Safety & Governance:** muted clay/coral `#B56F61`
+
+Dark mode uses brighter counterparts for comparable recognition and contrast:
+
+- **AI Culture & Slang:** `#A387CC`
+- **AI Ways of Working:** `#61B4A2`
+- **AI Systems & Technical Concepts:** `#6694BD`
+- **AI Risks, Safety & Governance:** `#CA7C6C`
 
 Never depend on color alone to communicate category or state.
 

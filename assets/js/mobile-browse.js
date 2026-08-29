@@ -97,6 +97,7 @@
   function syncFromFilter(filter) {
     if (!filter) return;
     label.textContent = labelFor(filter);
+    toggle.dataset.key = keyFor(filter);
     options.forEach(option => option.setAttribute('aria-current', String(option.dataset.category === filter.dataset.category)));
   }
 
