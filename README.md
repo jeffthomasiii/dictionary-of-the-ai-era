@@ -3,34 +3,64 @@
 **/A-I-lex/**  
 **Dictionary of the AI Era**
 
-AILex is a living, searchable dictionary of the language developing around artificial intelligence. It documents technical concepts, ways of working, emerging slang, and terminology related to AI risk, safety, governance, and culture.
+AILex is an open-source, living dictionary of the language developing around artificial intelligence. It documents technical concepts, ways of working, emerging slang, cultural language, and terminology related to AI risk, safety, governance, and research.
 
 **Development approach: Vibe coded · Human-directed · AI-assisted · Human-reviewed**
 
-Public site: https://jeffthomasiii.github.io/dictionary-of-the-ai-era/
+**Public site:** https://jeffthomasiii.github.io/dictionary-of-the-ai-era/
 
-## Current state
+## What AILex is
 
-AILex currently includes:
+AILex is built to be used like a modern reference work rather than a static glossary. Readers can search, browse, hear pronunciations, move through categories and related concepts, and inspect the provenance and sources behind individual entries.
 
-- **100 published dictionary entries**
-- **100 researched provenance records** with supporting sources
-- Dedicated, stable term pages at `/terms/<slug>/`
-- Plain-English definitions and natural usage examples
-- Written and audible pronunciation
-- Explicit pronunciation handling for acronyms and ambiguous terms
-- Instant client-side search
-- A-Z browsing
-- Category filtering and dedicated category collections
-- List and grid views
-- Related-term discovery
-- Light and dark modes
-- Responsive mobile navigation and mobile Browse behavior
-- Canonical URLs, Open Graph metadata, Twitter/X metadata, structured data, sitemap, and robots directives
-- A Living Dictionary plus a defined annual-edition model
-- No database, framework, backend, API, or build process required for the public site
+The public site currently includes:
 
-The **100-term corpus is the MVP floor, not a ceiling**. AILex is intended to keep growing when new terms meet the editorial standard.
+- **100 published dictionary entries**;
+- **100 researched provenance records** with supporting sources;
+- stable dedicated pages for every term;
+- plain-English definitions and natural usage examples;
+- written and audible pronunciation;
+- explicit speech handling for acronyms and ambiguous terms;
+- instant client-side search and A-Z browsing;
+- category filtering and dedicated category collections;
+- list and grid views;
+- related-term discovery;
+- light and dark themes;
+- responsive desktop, tablet, and mobile behavior;
+- canonical URLs, social metadata, structured data, sitemap, and robots directives;
+- a continuously updated Living Dictionary plus a defined annual-edition model.
+
+The 100-term corpus is an MVP floor, not a ceiling. AILex is intended to continue growing when new terms meet the editorial standard.
+
+## How it started
+
+AILex began with a term seen in a post on X: **Meat Proxy**. The definition was humorous, but the larger idea was more interesting: the AI era was already producing a vocabulary of its own.
+
+The first goal was personal. The project began as an attempt to use ChatGPT to help collect AI-related terms and plain-English definitions for reference. A static Word document or long list quickly felt like the wrong form for something meant to grow and be explored, so the idea evolved into a searchable dictionary.
+
+Then the question expanded from **“What does this term mean?”** to **“Where did this term come from?”** That curiosity led to the provenance model, source research, history, careful first-known-use claims, and the editorial methodology behind AILex.
+
+The project was originally named **Dictionary of the AI Era**. As the identity developed, **AILex** became the primary product name and *Dictionary of the AI Era* became its descriptor.
+
+The dictionary came first. The vibe-coding experiment came later, with another question:
+
+> **“Wouldn't it be cool if the Dictionary of the AI Era was actually built using AI?”**
+
+That became a second purpose for the project: not only to document AI-era language, but to explore how far a serious public reference project can be built and maintained through transparent, human-directed AI collaboration.
+
+Read the fuller story in [`docs/ORIGIN.md`](docs/ORIGIN.md).
+
+## An open-source AI experiment
+
+AILex is intended to remain open source.
+
+That openness matters to both halves of the project. The dictionary should be inspectable: definitions, sources, methodology, changes, and corrections can be reviewed publicly. The development experiment should be inspectable too: architecture, code, documentation, regressions, fixes, QA, and AI-assisted workflows are visible rather than hidden behind the finished site.
+
+AI may assist with brainstorming, research support, source discovery, architecture, coding, debugging, documentation, definition drafting, consistency review, QA, and implementation. Human judgment remains responsible for project direction, editorial inclusion, source evaluation, testing, revision, merge decisions, and what ultimately gets published.
+
+AI output is never treated as evidence merely because a model produced it.
+
+See [`AI-TRANSPARENCY.md`](AI-TRANSPARENCY.md) for the development and editorial principles behind the experiment.
 
 ## Brand
 
@@ -38,38 +68,94 @@ The **100-term corpus is the MVP floor, not a ceiling**. AILex is intended to ke
 
 **Dictionary of the AI Era** is the project descriptor rather than the primary brand name.
 
-See [`BRAND.md`](BRAND.md) for naming guidance and the future repository/domain strategy.
+See [`BRAND.md`](BRAND.md) for naming and identity guidance.
 
-## Documentation map
+## Documentation
 
-Use these documents according to what you are trying to understand or change:
+The website and repository serve different documentation audiences.
+
+**The website explains AILex to readers. The repository explains AILex to builders, contributors, maintainers, researchers, and people interested in the experiment behind it.**
+
+Start with [`docs/README.md`](docs/README.md) for the complete documentation map.
+
+Key documents include:
 
 | Document | Purpose |
 | --- | --- |
-| [`README.md`](README.md) | Current product overview and repository orientation |
-| [`CONTRIBUTING.md`](CONTRIBUTING.md) | How to propose or revise terms, provenance, code, and documentation |
-| [`PROVENANCE.md`](PROVENANCE.md) | Research, sourcing, attribution, origin, and first-known-use standards |
-| [`AI-TRANSPARENCY.md`](AI-TRANSPARENCY.md) | How AI is used in development and editorial work |
-| [`DESIGN.md`](DESIGN.md) | Visual system, interaction principles, and UI guardrails |
-| [`BRAND.md`](BRAND.md) | AILex naming, pronunciation, hierarchy, and identity guidance |
-| [`EDITIONS.md`](EDITIONS.md) | Living Dictionary versus annual edition policy |
-| [`CONTENT-LICENSE.md`](CONTENT-LICENSE.md) | CC BY 4.0 licensing for original dictionary/editorial content |
+| [`docs/ORIGIN.md`](docs/ORIGIN.md) | How the Meat Proxy post, personal catalog, provenance curiosity, and AI-building experiment became AILex |
+| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Static-site architecture, datasets, term pages, pronunciation, discovery, and publishing |
+| [`docs/ROADMAP.md`](docs/ROADMAP.md) | Current readiness priorities and longer-term direction |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | How to contribute terms, research, corrections, code, design, testing, or documentation |
+| [`PROVENANCE.md`](PROVENANCE.md) | Detailed sourcing, origin, attribution, and first-known-use standards |
+| [`AI-TRANSPARENCY.md`](AI-TRANSPARENCY.md) | How and why AI is used in the project |
+| [`DESIGN.md`](DESIGN.md) | Visual system, interaction principles, responsive behavior, and UI guardrails |
+| [`EDITIONS.md`](EDITIONS.md) | Living Dictionary versus immutable annual editions |
+| [`BRAND.md`](BRAND.md) | Naming, pronunciation, descriptor, and identity guidance |
 
-The public site also includes reader-facing **About**, **Categories**, **Contribute**, and **Methodology** pages.
-
-## Architecture
+## Architecture at a glance
 
 AILex is intentionally static and data-driven.
 
-- `data/terms.json` is the lightweight published dictionary dataset used by Browse and category discovery.
-- `data/provenance.json` is the canonical research/provenance dataset.
+- `data/terms.json` is the lightweight reader-facing dictionary dataset.
+- `data/provenance.json` is the canonical research and sourcing dataset.
 - `data/editions.json` records Living Dictionary and annual-edition metadata.
-- `terms/<slug>/index.html` provides stable, indexable fallback content for each term.
-- `assets/js/term-page.js` enriches dedicated pages with provenance, history, sources, and related-term discovery.
-- `assets/js/app.js` powers Browse, search, view state, theme behavior, and the shared pronunciation engine.
+- `terms/<slug>/index.html` provides stable, indexable fallback content for each entry.
+- shared JavaScript progressively adds search, category discovery, pronunciation, provenance, history, sources, and related-term navigation.
 - GitHub Pages serves the repository directly from `main`.
 
-The website is an interface over the editorial datasets, not a separate content store.
+There is no database, framework, backend, server API, or required build process for the public site.
+
+See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for the full architecture guide.
+
+## Editorial model
+
+AILex is intended to be a dictionary, not a list of AI buzzwords. A candidate term should represent language with documented real-world usage and add enough reader value to justify its own entry.
+
+Every published entry has a matching researched provenance record. A source that explains what a term means does not automatically prove who coined it or when it first appeared. AILex intentionally distinguishes meaning, origin, first known use, history, broader adoption, and current usage.
+
+AI may assist with discovery and research organization, but publication remains human reviewed.
+
+See [`PROVENANCE.md`](PROVENANCE.md) and the public [Methodology](https://jeffthomasiii.github.io/dictionary-of-the-ai-era/methodology.html).
+
+## Categories
+
+AILex currently uses four reader-facing categories:
+
+1. AI Culture & Slang
+2. AI Ways of Working
+3. AI Systems & Technical Concepts
+4. AI Risks, Safety & Governance
+
+Terms may belong to more than one category when that better reflects actual usage.
+
+## Living Dictionary and annual editions
+
+The public site and `main` branch are the **AILex Living Dictionary** and remain continuously updateable.
+
+Named annual editions, such as the planned **AILex 2026**, are immutable snapshots created at a declared editorial cutoff for historical reference, citation, and comparison. They use Git tags and GitHub Releases rather than duplicate yearly website folders.
+
+See [`EDITIONS.md`](EDITIONS.md) and [`data/editions.json`](data/editions.json).
+
+## Contributing
+
+Contributions do not have to involve code.
+
+AILex can benefit from people who contribute:
+
+- new term suggestions;
+- stronger definitions or examples;
+- primary or secondary sources;
+- provenance corrections;
+- pronunciation guidance;
+- accessibility and cross-device testing;
+- UI or design improvements;
+- code and automation;
+- documentation and editing;
+- bug reports and quality review.
+
+The public site provides a low-friction [Contribute](https://jeffthomasiii.github.io/dictionary-of-the-ai-era/contribute.html) entry point. Contributors who want to work directly with the repository should use [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
+AI-assisted contributions are welcome when disclosed appropriately, but contributors remain responsible for verifying factual claims and sources.
 
 ## Repository structure
 
@@ -88,23 +174,15 @@ dictionary-of-the-ai-era/
 │   ├── provenance.json
 │   └── editions.json
 ├── terms/
-│   └── <slug>/
-│       └── index.html
+│   └── <slug>/index.html
 ├── assets/
 │   ├── css/
-│   │   ├── styles.css
-│   │   ├── term-pages.css
-│   │   ├── related-discovery.css
-│   │   ├── browse-pronunciation.css
-│   │   ├── mobile-nav.css
-│   │   ├── mobile-browse.css
-│   │   └── category-browser.css
 │   └── js/
-│       ├── app.js
-│       ├── term-page.js
-│       ├── mobile-nav.js
-│       ├── mobile-browse.js
-│       └── categories.js
+├── docs/
+│   ├── README.md
+│   ├── ORIGIN.md
+│   ├── ARCHITECTURE.md
+│   └── ROADMAP.md
 ├── AI-TRANSPARENCY.md
 ├── BRAND.md
 ├── CONTENT-LICENSE.md
@@ -115,102 +193,6 @@ dictionary-of-the-ai-era/
 ├── LICENSE
 └── README.md
 ```
-
-## Dictionary data model
-
-`data/terms.json` contains the reader-facing entry data.
-
-```json
-{
-  "term": "Vibe Coding",
-  "slug": "vibe-coding",
-  "pronunciation": "vybe KOH-ding",
-  "partOfSpeech": "noun",
-  "definition": "A plain-English definition.",
-  "example": "A natural example sentence.",
-  "categories": ["AI Culture & Slang", "AI Ways of Working"],
-  "aliases": [],
-  "status": "Established emerging term",
-  "added": "2026-08-28",
-  "lastReviewed": "2026-08-28",
-  "sources": []
-}
-```
-
-The `sources` array in this lightweight dataset is retained for compatibility. Canonical research sources live in `data/provenance.json`.
-
-## Provenance data model
-
-Every published term has a matching researched record in `data/provenance.json`.
-
-```json
-{
-  "vibe-coding": {
-    "researchStatus": "researched",
-    "origin": "A carefully sourced origin statement.",
-    "firstKnownUse": {
-      "date": "2025-02-02",
-      "precision": "day",
-      "note": "Why this date is defensible."
-    },
-    "history": [
-      {
-        "date": "2025-02-02",
-        "event": "A material event in the term's history."
-      }
-    ],
-    "relatedTerms": ["prompt-engineering", "ai-agent"],
-    "sources": [
-      {
-        "id": "source-id",
-        "type": "primary",
-        "publisher": "Publisher",
-        "title": "Source title",
-        "published": "2025-02-02",
-        "url": "https://example.com",
-        "supports": ["origin", "definition", "history"]
-      }
-    ]
-  }
-}
-```
-
-See [`PROVENANCE.md`](PROVENANCE.md) for the full sourcing standard.
-
-## Editorial principle
-
-AILex is intended to be a dictionary, not a list of AI buzzwords. A candidate should represent language with documented real-world usage and should add enough reader value to justify its own entry.
-
-Definitions should distinguish established technical vocabulary, emerging terminology, slang, research language, governance language, and contested concepts. AI may assist with candidate discovery, research organization, drafting, coding, and editing, but inclusion, source evaluation, final wording, classification, provenance claims, and publication remain human-reviewed decisions.
-
-A source that supports a definition does not automatically establish a term's origin. AILex intentionally distinguishes meaning, origin, first known use, history, broader adoption, and current usage.
-
-## Categories
-
-1. AI Culture & Slang
-2. AI Ways of Working
-3. AI Systems & Technical Concepts
-4. AI Risks, Safety & Governance
-
-Terms may belong to more than one category when that better reflects actual usage.
-
-## Living Dictionary and annual editions
-
-The public site and `main` branch are the **AILex Living Dictionary** and remain continuously updateable.
-
-Named annual editions, such as the planned **AILex 2026**, are immutable snapshots created at a declared editorial cutoff for historical reference, citation, and comparison. Annual editions use Git tags and GitHub Releases rather than duplicate yearly website folders.
-
-See [`EDITIONS.md`](EDITIONS.md) and [`data/editions.json`](data/editions.json).
-
-## AI transparency
-
-AILex is intentionally and substantially developed through an AI-assisted, vibe-coding workflow.
-
-Jeff Thomas III provides project direction, requirements, editorial judgment, testing, review, and final decisions. AI tools may assist with research support, architecture, coding, debugging, documentation, definition drafting, copy editing, and implementation.
-
-AI output is never treated as evidence merely because a model produced it.
-
-See [`AI-TRANSPARENCY.md`](AI-TRANSPARENCY.md).
 
 ## Running locally
 
@@ -228,30 +210,13 @@ Then visit `http://localhost:8000`.
 
 GitHub Pages deploys directly from `main` at the repository root. No build step is required.
 
-The published site currently includes:
+The site has canonical URLs, structured metadata, `sitemap.xml`, `robots.txt`, and noindex handling for the 404 page. A future custom-domain migration should update canonical URLs, sitemap URLs, social metadata URLs, and redirects together.
 
-- canonical URLs for all public pages
-- Schema.org `DefinedTermSet` metadata on home
-- Schema.org `DefinedTerm` metadata on all dedicated term pages
-- `sitemap.xml`
-- `robots.txt`
-- explicit `noindex` behavior on the 404 page
+## Roadmap
 
-A future custom-domain migration should update canonical URLs, sitemap URLs, Open Graph URLs, and redirects as one coordinated change.
+The major MVP capabilities are implemented. Current work is focused on product quality and sustainable growth rather than feature count, including cross-device/accessibility QA, public identity and domain decisions, contribution/review workflows, publishing verification, and continued editorial corpus growth.
 
-## Current readiness work
-
-The major MVP capabilities are implemented. Remaining readiness and post-MVP work should be driven by quality rather than feature count. Current priorities include:
-
-- documentation consistency and ongoing maintenance
-- final cross-device and accessibility QA
-- public AILex name/domain collision review and custom-domain decision
-- a deliberate branded social-preview image
-- optional search-console submission and indexing verification
-- continued corpus expansion based on editorial value and coverage gaps
-- stronger contribution/review workflow as outside participation grows
-
-Potential later features include richer relationship semantics, timelines, curated pronunciation audio where browser synthesis remains unreliable, and automated candidate discovery with human approval.
+See [`docs/ROADMAP.md`](docs/ROADMAP.md) for the current roadmap.
 
 ## Licensing
 
