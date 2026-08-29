@@ -7,10 +7,13 @@
   if (!header || !headerInner || !desktopNav || header.querySelector('.mobile-nav-details')) return;
 
   const currentScript = document.currentScript;
+  const assetVersion = new URL(currentScript?.src || window.location.href).searchParams.get('v');
   if (currentScript?.src && !document.querySelector('link[data-mobile-nav-styles]')) {
     const styles = document.createElement('link');
     styles.rel = 'stylesheet';
-    styles.href = new URL('../css/mobile-nav.css', currentScript.src).href;
+    const stylesUrl = new URL('../css/mobile-nav.css', currentScript.src);
+    if (assetVersion) stylesUrl.searchParams.set('v', assetVersion);
+    styles.href = stylesUrl.href;
     styles.dataset.mobileNavStyles = 'true';
     document.head.append(styles);
   }
@@ -59,7 +62,9 @@
 
   if (document.getElementById('dictionary') && currentScript?.src && !document.querySelector('script[data-mobile-browse-loader]')) {
     const browseScript = document.createElement('script');
-    browseScript.src = new URL('mobile-browse.js', currentScript.src).href;
+    const browseUrl = new URL('mobile-browse.js', currentScript.src);
+    if (assetVersion) browseUrl.searchParams.set('v', assetVersion);
+    browseScript.src = browseUrl.href;
     browseScript.dataset.mobileBrowseLoader = 'true';
     document.head.append(browseScript);
   }
