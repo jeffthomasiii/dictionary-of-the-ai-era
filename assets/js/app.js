@@ -7,6 +7,7 @@ const storage = {
   }
 };
 
+const ASSET_VERSION = "epochlex-20260829-1";
 const state = { terms: [], query: "", category: "all", view: storage.get("ai-era-view") || "list" };
 const dictionary = document.getElementById("dictionary");
 const search = document.getElementById("search");
@@ -202,7 +203,9 @@ if (dictionary) {
   const source = document.currentScript?.src;
   if (!source) return;
   const script = document.createElement('script');
-  script.src = new URL('mobile-nav.js', source).href;
+  const mobileNavUrl = new URL('mobile-nav.js', source);
+  mobileNavUrl.searchParams.set('v', ASSET_VERSION);
+  script.src = mobileNavUrl.href;
   script.dataset.mobileNavigationLoader = 'true';
   document.head.append(script);
 })();
