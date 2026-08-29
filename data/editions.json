@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "live": {
+    "name": "AILex Living Dictionary",
+    "status": "living",
+    "branch": "main",
+    "mutable": true,
+    "canonicalUrl": "https://jeffthomasiii.github.io/dictionary-of-the-ai-era/",
+    "description": "The continuously updated public version of AILex."
+  },
+  "policy": {
+    "editionNamePattern": "AILex YYYY",
+    "tagPattern": "ailex-YYYY",
+    "normalCutoff": "end of named calendar year",
+    "immutableAfterRelease": true,
+    "snapshotUnit": "repository commit"
+  },
+  "planned": [
+    {
+      "year": 2026,
+      "name": "AILex 2026",
+      "status": "planned",
+      "cutoff": "2026-12-31",
+      "tag": null,
+      "snapshotCommit": null,
+      "releasedAt": null,
+      "termCount": null
+    }
+  ],
+  "editions": []
+}

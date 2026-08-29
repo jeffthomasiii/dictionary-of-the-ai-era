@@ -44,6 +44,14 @@ See [`AI-TRANSPARENCY.md`](AI-TRANSPARENCY.md) for the full development and edit
 - GitHub Pages-ready static site
 - No database, framework, build step, or API required
 
+## Living dictionary and annual editions
+
+The public site and `main` branch are the **AILex Living Dictionary** and remain continuously updateable. Named annual editions, such as the planned **AILex 2026**, are immutable snapshots created at a declared editorial cutoff for historical reference and citation.
+
+Annual editions use Git tags and GitHub Releases rather than duplicating the entire website into yearly folders. Machine-readable edition metadata lives in [`data/editions.json`](data/editions.json).
+
+See [`EDITIONS.md`](EDITIONS.md) for the complete edition, cutoff, release, correction, and citation policy.
+
 ## Repository structure
 
 ```text
