@@ -1,0 +1,25 @@
+name: Apply DeepSeek entries
+on:
+  push:
+    branches: [deepseek-entity-research]
+    paths:
+      - scripts/add_deepseek_entries.py
+      - .github/workflows/apply-deepseek-entries.yml
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: deepseek-entity-research
+          fetch-depth: 0
+      - run: python scripts/add_deepseek_entries.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/terms.json data/provenance.json sitemap.xml terms/deepseek terms/deepseek-r1
+          git diff --cached --quiet && exit 0
+          git commit -m "Add researched DeepSeek entries"
+          git push origin HEAD:deepseek-entity-research
