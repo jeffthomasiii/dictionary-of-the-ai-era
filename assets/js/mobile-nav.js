@@ -18,6 +18,15 @@
     document.head.append(styles);
   }
 
+  if (currentScript?.src && !document.querySelector('script[data-pwa-loader]')) {
+    const pwaScript = document.createElement('script');
+    const pwaUrl = new URL('pwa.js', currentScript.src);
+    if (assetVersion) pwaUrl.searchParams.set('v', assetVersion);
+    pwaScript.src = pwaUrl.href;
+    pwaScript.dataset.pwaLoader = 'true';
+    document.head.append(pwaScript);
+  }
+
   const details = document.createElement('details');
   details.className = 'mobile-nav-details';
 
