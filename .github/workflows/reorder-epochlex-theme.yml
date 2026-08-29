@@ -36,7 +36,6 @@ jobs:
                   path.write_text(new)
                   changed += 1
           print(f'Reordered theme link on {changed} pages')
-          assert changed >= 106, changed
           PY
       - name: Verify theme is final stylesheet
         run: |
@@ -44,6 +43,7 @@ jobs:
           from pathlib import Path
           pages = [Path('index.html'),Path('about.html'),Path('categories.html'),Path('contribute.html'),Path('methodology.html'),Path('404.html')]
           pages += sorted(Path('terms').glob('*/index.html'))
+          assert len(pages) == 106, len(pages)
           for path in pages:
               lines = path.read_text().splitlines()
               style_lines = [i for i,l in enumerate(lines) if '<link' in l and 'stylesheet' in l]
