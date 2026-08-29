@@ -29,6 +29,51 @@ The name reflects the project's purpose: documenting the vocabulary emerging dur
 
 The name is intentionally broader than a conventional AI glossary. EpochLex documents the language of an era, not only the components of AI systems.
 
+## Visual identity
+
+EpochLex uses a **modern editorial reference** aesthetic with a restrained computational layer. The brand should feel credible enough for a dictionary, contemporary enough for a digital product, and clearly connected to the AI era without relying on generic AI imagery.
+
+### Logo concept
+
+The selected mark combines:
+
+- an **open book** for language, reference, documentation, and learning;
+- a **horizon arc** for epoch, transition, and a new era;
+- restrained **segmented digital geometry** as the AI/computational signal.
+
+The mark should not add a compass star, robot, brain, sparkle, or literal neural-network symbol. The AI meaning is intentionally integrated through digital geometry rather than a separate cliché icon.
+
+### Color palette
+
+The approved core palette is:
+
+- **Ink Navy:** `#0F1D2D`
+- **Charcoal:** `#2B333B`
+- **Sage:** `#7A9276`
+- **Blue Green:** `#5C8F95`
+- **Paper:** `#F5F2EC`
+- **Warm Gray:** `#E4E0DB`
+- **Slate:** `#A7AEB3`
+
+**Sage** is the primary brand accent and carries the horizon/epoch idea. **Blue Green** is the technical accent and carries the AI/digital interaction layer.
+
+Light mode should feel paper-like, calm, and editorial. Dark mode should use deep ink/navy surfaces with warm light text and softened Sage/Blue Green accents rather than simply inverting the light palette.
+
+### Typography
+
+- **Playfair Display:** brand-adjacent editorial typography, page titles, headwords, and major headings
+- **Inter:** body copy, navigation, controls, metadata, filters, and technical UI
+
+Fallback fonts should always be provided so content remains legible if web fonts are unavailable.
+
+### Interface character
+
+Controls should use restrained rounded rectangles, thin borders, soft surface contrast, and subtle depth. Selected states favor a light Sage treatment. Focus and technical interaction states favor Blue Green.
+
+Avoid turning the interface into a generic blue/teal SaaS product. The dictionary content remains visually dominant.
+
+Detailed implementation guidance is maintained in [`DESIGN.md`](DESIGN.md).
+
 ## Naming usage
 
 Use **EpochLex** as the primary name in:
