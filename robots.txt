@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jeffthomasiii.github.io/dictionary-of-the-ai-era/sitemap.xml
