@@ -1,0 +1,71 @@
+name: One-time EpochLex Visual System Validation
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  validate:
+    if: github.event.pull_request.head.ref == 'feat/epochlex-visual-system-refresh'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/epochlex-visual-system-refresh
+          fetch-depth: 0
+      - name: Validate visual refresh
+        run: |
+          git fetch origin main
+          cmp data/terms.json <(git show origin/main:data/terms.json)
+          cmp data/provenance.json <(git show origin/main:data/provenance.json)
+          cmp data/editions.json <(git show origin/main:data/editions.json)
+          node --check assets/js/app.js
+          node --check assets/js/term-page.js
+          python - <<'PY'
+          import json, pathlib
+          root = pathlib.Path('.')
+          terms = json.loads((root/'data/terms.json').read_text())
+          prov = json.loads((root/'data/provenance.json').read_text())
+          assert len(terms) == 100
+          assert len(prov) == 100
+          assert {t['slug'] for t in terms} == set(prov)
+          assert all(prov[s]['researchStatus'] == 'researched' for s in prov)
+
+          public = [root/'index.html', root/'about.html', root/'categories.html', root/'contribute.html', root/'methodology.html', root/'404.html']
+          public += sorted((root/'terms').glob('*/index.html'))
+          assert len(public) == 106, len(public)
+          missing = [str(p) for p in public if 'brand-theme.css' not in p.read_text()]
+          assert not missing, missing
+
+          css = (root/'assets/css/brand-theme.css').read_text()
+          required = {
+            'Ink Navy':'#0F1D2D',
+            'Charcoal':'#2B333B',
+            'Sage':'#7A9276',
+            'Blue Green':'#5C8F95',
+            'Paper':'#F5F2EC',
+            'Warm Gray':'#E4E0DB',
+            'Slate':'#A7AEB3',
+            'Playfair Display':'Playfair Display',
+            'Inter':'Inter'
+          }
+          for label, token in required.items():
+              assert token in css, label
+
+          design = (root/'DESIGN.md').read_text()
+          brand = (root/'BRAND.md').read_text()
+          assert 'epoch lex' in design.lower()
+          assert 'A I lex' not in design
+          assert '#0F1D2D' in design and '#7A9276' in design and '#5C8F95' in design
+          assert 'open book' in brand.lower() and 'segmented digital geometry' in brand.lower()
+          print('EpochLex visual system validation passed.')
+          PY
+      - name: Remove validator and commit cleanup
+        if: success()
+        run: |
+          rm .github/workflows/validate-epochlex-visual-system.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "chore: remove visual system validator"
+          git push origin HEAD:feat/epochlex-visual-system-refresh
