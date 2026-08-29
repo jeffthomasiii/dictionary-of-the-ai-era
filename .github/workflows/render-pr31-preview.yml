@@ -26,7 +26,7 @@ jobs:
           SERVER_PID=$!
           trap 'kill $SERVER_PID || true' EXIT
           sleep 2
-          cat > /tmp/render.mjs <<'JS'
+          cat > render-pr31-preview.mjs <<'JS'
           import { chromium } from 'playwright';
           const browser = await chromium.launch({headless:true});
           async function shot(name, width, height, theme) {
@@ -43,7 +43,8 @@ jobs:
           await shot('desktop-dark', 1440, 1000, 'dark');
           await browser.close();
           JS
-          node /tmp/render.mjs
+          node render-pr31-preview.mjs
+          rm render-pr31-preview.mjs
       - name: Commit temporary previews
         run: |
           git config user.name "github-actions[bot]"
