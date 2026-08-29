@@ -21,6 +21,7 @@ if (dictionary && !document.querySelector('link[data-browse-pronunciation]')) {
 }
 
 const speechOverrides = {
+  "ailex": "A I lex",
   "ai-agent": "A I agent",
   "ai-alignment": "A I alignment",
   "ai-governance": "A I governance",
@@ -165,7 +166,6 @@ gridViewButton?.addEventListener("click", () => { state.view = "grid"; localStor
 if (dictionary) {
   fetch("data/terms.json").then(response => { if (!response.ok) throw new Error("Could not load dictionary data."); return response.json(); }).then(terms => { state.terms = terms; render(); }).catch(error => { dictionary.innerHTML = `<p>Unable to load the dictionary. ${esc(error.message)}</p>`; });
 }
-
 
 (() => {
   if (document.querySelector('script[data-mobile-navigation-loader]')) return;
