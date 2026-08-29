@@ -1,0 +1,41 @@
+:root {
+  --entities: #8A7A63;
+}
+
+html[data-theme="dark"] {
+  --entities: #B7A486;
+}
+
+.filter.entities .category-icon {
+  color: var(--entities);
+  background: color-mix(in srgb, var(--entities) 13%, transparent);
+}
+
+.entry[data-category="entities"],
+#term-page[data-category="entities"] {
+  --term-accent: var(--entities);
+}
+
+.entry-type-pill {
+  border-color: color-mix(in srgb, var(--entities) 36%, var(--line));
+  background: color-mix(in srgb, var(--entities) 10%, var(--surface));
+  color: color-mix(in srgb, var(--entities) 82%, var(--ink));
+  font-weight: 600;
+}
+
+.category-jump-nav a[data-category-key="entities"] .category-jump-dot,
+.category-collection[data-category-key="entities"] .category-count {
+  color: var(--entities);
+}
+
+.category-jump-nav a[data-category-key="entities"] .category-jump-dot {
+  background: var(--entities);
+}
+
+.category-collection[data-category-key="entities"] {
+  --category-accent: var(--entities);
+}
+
+.related-term-card[data-related-category="entities"] {
+  --related-accent: var(--entities);
+}
