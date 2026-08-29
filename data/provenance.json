@@ -4153,5 +4153,441 @@
         ]
       }
     ]
+  },
+  "google": {
+    "researchStatus": "researched",
+    "origin": "Google began as a search-engine project at Stanford and Google Inc. was formally established in 1998. The company later became a major developer and deployer of AI technologies across research, products, cloud services, and model families.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "1998",
+        "event": "Google Inc. was formally established after the search project created by Larry Page and Sergey Brin attracted early investment."
+      },
+      {
+        "date": "2023-12-06",
+        "event": "Google introduced Gemini, a new family of AI models developed through Google DeepMind and teams across Google."
+      }
+    ],
+    "relatedTerms": [
+      "gemini"
+    ],
+    "sources": [
+      {
+        "id": "google-company-info",
+        "type": "primary",
+        "publisher": "Google",
+        "title": "About Google: History, office locations, commitments, initiatives",
+        "published": null,
+        "url": "https://about.google/company-info/",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      },
+      {
+        "id": "google-story",
+        "type": "primary",
+        "publisher": "Google",
+        "title": "From the garage to the Googleplex",
+        "published": null,
+        "url": "https://about.google/company-info/our-story/",
+        "supports": [
+          "origin",
+          "history"
+        ]
+      },
+      {
+        "id": "google-gemini-2023",
+        "type": "primary",
+        "publisher": "Google",
+        "title": "Introducing Gemini: our largest and most capable AI model",
+        "published": "2023-12-06",
+        "url": "https://blog.google/innovation-and-ai/technology/ai/google-gemini-ai/",
+        "supports": [
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "gemini": {
+    "researchStatus": "researched",
+    "origin": "Google introduced Gemini on December 6, 2023 as a new generation of multimodal AI models. The Gemini name later also became the consumer-facing assistant and app brand, so current usage spans both a product experience and model families.",
+    "firstKnownUse": "2023-12-06",
+    "history": [
+      {
+        "date": "2023-12-06",
+        "event": "Google introduced Gemini as its new family of multimodal AI models."
+      },
+      {
+        "date": "2026-05-19",
+        "event": "Google described the Gemini app as an AI assistant while continuing to release Gemini model families, illustrating the name's dual product-and-model usage."
+      }
+    ],
+    "relatedTerms": [
+      "google",
+      "multimodal",
+      "large-language-model"
+    ],
+    "sources": [
+      {
+        "id": "google-gemini-2023",
+        "type": "primary",
+        "publisher": "Google",
+        "title": "Introducing Gemini: our largest and most capable AI model",
+        "published": "2023-12-06",
+        "url": "https://blog.google/innovation-and-ai/technology/ai/google-gemini-ai/",
+        "supports": [
+          "definition",
+          "origin",
+          "first-known-use",
+          "history"
+        ]
+      },
+      {
+        "id": "google-gemini-app-2026",
+        "type": "primary",
+        "publisher": "Google",
+        "title": "The Gemini app becomes more agentic, delivering proactive, 24/7 help",
+        "published": "2026-05-19",
+        "url": "https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/",
+        "supports": [
+          "definition",
+          "usage",
+          "history"
+        ]
+      },
+      {
+        "id": "google-gemini-3-5-2026",
+        "type": "primary",
+        "publisher": "Google",
+        "title": "Gemini 3.5: frontier intelligence with action",
+        "published": "2026-05-19",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "meta": {
+    "researchStatus": "researched",
+    "origin": "The company formerly branded as Facebook adopted the Meta company brand in October 2021. Meta now develops social platforms, devices, AI products, and model families including Llama.",
+    "firstKnownUse": "2021-10-28",
+    "history": [
+      {
+        "date": "2021-10-28",
+        "event": "The Facebook company introduced Meta as its new company brand."
+      },
+      {
+        "date": "2023-02-24",
+        "event": "Meta introduced the first LLaMA large language model release."
+      }
+    ],
+    "relatedTerms": [
+      "llama"
+    ],
+    "sources": [
+      {
+        "id": "meta-company-2021",
+        "type": "primary",
+        "publisher": "Meta",
+        "title": "Introducing Meta: A Social Technology Company",
+        "published": "2021-10-28",
+        "url": "https://about.fb.com/news/2021/10/facebook-company-is-now-meta/",
+        "supports": [
+          "definition",
+          "origin",
+          "first-known-use",
+          "history"
+        ]
+      },
+      {
+        "id": "meta-llama-2023",
+        "type": "primary",
+        "publisher": "Meta AI",
+        "title": "Introducing LLaMA: A foundational, 65-billion-parameter large language model",
+        "published": "2023-02-24",
+        "url": "https://ai.meta.com/blog/large-language-model-llama-meta-ai/",
+        "supports": [
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "llama": {
+    "researchStatus": "researched",
+    "origin": "Meta introduced the original model in February 2023 using the styling LLaMA, short for Large Language Model Meta AI. Meta's current materials use Llama as the continuing family and platform name.",
+    "firstKnownUse": "2023-02-24",
+    "history": [
+      {
+        "date": "2023-02-24",
+        "event": "Meta introduced LLaMA, short for Large Language Model Meta AI."
+      },
+      {
+        "date": "2026",
+        "event": "Meta's current Llama documentation presents Llama as an ongoing model platform with multiple current models and resources."
+      }
+    ],
+    "relatedTerms": [
+      "meta",
+      "large-language-model",
+      "foundation-model",
+      "multimodal"
+    ],
+    "sources": [
+      {
+        "id": "meta-llama-2023",
+        "type": "primary",
+        "publisher": "Meta AI",
+        "title": "Introducing LLaMA: A foundational, 65-billion-parameter large language model",
+        "published": "2023-02-24",
+        "url": "https://ai.meta.com/blog/large-language-model-llama-meta-ai/",
+        "supports": [
+          "definition",
+          "origin",
+          "first-known-use",
+          "history",
+          "alias"
+        ]
+      },
+      {
+        "id": "meta-llama-current",
+        "type": "primary",
+        "publisher": "Meta AI",
+        "title": "Get started with Llama",
+        "published": null,
+        "url": "https://ai.meta.com/llama/get-started/",
+        "supports": [
+          "definition",
+          "usage",
+          "history"
+        ]
+      }
+    ]
+  },
+  "xai": {
+    "researchStatus": "researched",
+    "origin": "xAI was established in 2023 as an artificial-intelligence company and developed the Grok product and model line. SpaceX announced on February 2, 2026 that it had acquired xAI; current x.ai legal materials identify the operating company as SpaceXAI LLC.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2026-02-02",
+        "event": "SpaceX announced that it had acquired xAI."
+      },
+      {
+        "date": "2026-08-24",
+        "event": "Current x.ai legal materials identify SpaceXAI LLC as the company providing Grok and related services."
+      }
+    ],
+    "relatedTerms": [
+      "grok"
+    ],
+    "sources": [
+      {
+        "id": "xai-series-e-2026",
+        "type": "primary",
+        "publisher": "xAI",
+        "title": "xAI Raises $20B Series E",
+        "published": "2026-01-06",
+        "url": "https://x.ai/news/series-e",
+        "supports": [
+          "definition",
+          "usage",
+          "history"
+        ]
+      },
+      {
+        "id": "xai-joins-spacex-2026",
+        "type": "primary",
+        "publisher": "xAI",
+        "title": "xAI joins SpaceX",
+        "published": "2026-02-02",
+        "url": "https://x.ai/news/xai-joins-spacex",
+        "supports": [
+          "definition",
+          "history"
+        ]
+      },
+      {
+        "id": "spacexai-privacy-2026",
+        "type": "primary",
+        "publisher": "SpaceXAI",
+        "title": "SpaceXAI Privacy Policy",
+        "published": "2026-08-24",
+        "url": "https://x.ai/legal/privacy-policy",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "grok": {
+    "researchStatus": "researched",
+    "origin": "Grok was introduced by xAI as its conversational generative-AI product and model brand. After SpaceX acquired xAI in February 2026, current x.ai materials describe Grok as a SpaceXAI service powered by SpaceXAI models.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2026-02-02",
+        "event": "SpaceX announced its acquisition of xAI, changing the organizational context around Grok."
+      },
+      {
+        "date": "2026-08-24",
+        "event": "SpaceXAI's current privacy policy described Grok as a conversational generative AI powered by SpaceXAI large language models."
+      }
+    ],
+    "relatedTerms": [
+      "xai",
+      "large-language-model",
+      "multimodal"
+    ],
+    "sources": [
+      {
+        "id": "spacexai-privacy-2026",
+        "type": "primary",
+        "publisher": "SpaceXAI",
+        "title": "SpaceXAI Privacy Policy",
+        "published": "2026-08-24",
+        "url": "https://x.ai/legal/privacy-policy",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      },
+      {
+        "id": "spacexai-home-2026",
+        "type": "primary",
+        "publisher": "SpaceXAI",
+        "title": "SpaceXAI",
+        "published": null,
+        "url": "https://x.ai/",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "mistral-ai": {
+    "researchStatus": "researched",
+    "origin": "Mistral was founded in April 2023 with the goal of developing accessible and customizable frontier AI. Its early public work focused on open generative models, followed by broader model, platform, and deployment offerings.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2023-04",
+        "event": "Mistral's official company history dates the company's founding to April 2023."
+      },
+      {
+        "date": "2023-09-27",
+        "event": "Mistral published an early statement of its approach to open generative AI models."
+      }
+    ],
+    "relatedTerms": [
+      "mistral"
+    ],
+    "sources": [
+      {
+        "id": "mistral-about",
+        "type": "primary",
+        "publisher": "Mistral",
+        "title": "About Mistral",
+        "published": null,
+        "url": "https://mistral.ai/about/",
+        "supports": [
+          "definition",
+          "origin",
+          "history"
+        ]
+      },
+      {
+        "id": "mistral-open-models-2023",
+        "type": "primary",
+        "publisher": "Mistral AI",
+        "title": "Bringing open AI models to the frontier",
+        "published": "2023-09-27",
+        "url": "https://mistral.ai/news/about-mistral-ai/",
+        "supports": [
+          "history",
+          "usage"
+        ]
+      },
+      {
+        "id": "mistral-docs-current",
+        "type": "primary",
+        "publisher": "Mistral AI",
+        "title": "Mistral AI Documentation",
+        "published": null,
+        "url": "https://docs.mistral.ai/",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "mistral": {
+    "researchStatus": "researched",
+    "origin": "Mistral AI has used Mistral as a recurring family name across multiple general-purpose model lines rather than as the identifier for one permanent model. Current model listings include Mistral Large, Mistral Medium, and Mistral Small alongside specialist families.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2023-12-11",
+        "event": "Mistral AI's early platform documentation exposed multiple Mistral-branded model endpoints rather than a single fixed Mistral model."
+      },
+      {
+        "date": "2026",
+        "event": "Current Mistral model documentation lists multiple continuing Mistral model lines, including Large, Medium, and Small."
+      }
+    ],
+    "relatedTerms": [
+      "mistral-ai",
+      "large-language-model",
+      "foundation-model"
+    ],
+    "sources": [
+      {
+        "id": "mistral-platform-2023",
+        "type": "primary",
+        "publisher": "Mistral AI",
+        "title": "La Plateforme",
+        "published": "2023-12-11",
+        "url": "https://mistral.ai/news/la-plateforme/",
+        "supports": [
+          "origin",
+          "history",
+          "usage"
+        ]
+      },
+      {
+        "id": "mistral-models-current",
+        "type": "primary",
+        "publisher": "Mistral AI",
+        "title": "Models - from cloud to edge",
+        "published": null,
+        "url": "https://mistral.ai/models/",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      },
+      {
+        "id": "mistral-docs-models",
+        "type": "primary",
+        "publisher": "Mistral AI",
+        "title": "Models Overview",
+        "published": null,
+        "url": "https://docs.mistral.ai/models",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
   }
 }
