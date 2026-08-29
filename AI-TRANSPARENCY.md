@@ -1,8 +1,8 @@
 # AI Transparency
 
-## Why AILex is vibe coded
+## Why EpochLex is vibe coded
 
-AILex did not begin as a vibe-coding experiment. The dictionary came first.
+EpochLex did not begin as a vibe-coding experiment. The dictionary came first.
 
 The project began as a personal attempt to catalog the new language emerging around artificial intelligence. After the idea had already grown from a term list into a searchable dictionary with provenance research, another thought changed the development approach:
 
@@ -10,13 +10,13 @@ The project began as a personal attempt to catalog the new language emerging aro
 
 That question became a second experiment inside the project.
 
-AILex would not only document the language of the AI era. It would also explore what it looks like to build and maintain a serious public reference project through human-directed AI collaboration.
+EpochLex would not only document the language of the AI era. It would also explore what it looks like to build and maintain a serious public reference project through human-directed AI collaboration.
 
-The full project origin is documented in [`docs/ORIGIN.md`](docs/ORIGIN.md).
+The project previously used **AILex** as its short-form brand before adopting EpochLex. That naming change does not reset or separate the experiment; it is part of the same project history documented in [`docs/ORIGIN.md`](docs/ORIGIN.md).
 
 ## This project is intentionally AI-assisted
 
-**AILex is intentionally and substantially developed through an AI-assisted, vibe-coding workflow.** AI is not only a subject documented by this project; it is materially involved in how the project itself is built.
+**EpochLex is intentionally and substantially developed through an AI-assisted, vibe-coding workflow.** AI is not only a subject documented by this project; it is materially involved in how the project itself is built.
 
 Jeff Thomas III provides the project direction, product requirements, editorial judgment, testing, review, and final decisions. AI tools assist with activities that may include brainstorming, research support, architecture, code generation, debugging, documentation, definition drafting, copy editing, QA, and implementation.
 
@@ -24,7 +24,7 @@ The project does not present AI-assisted work as though it were created without 
 
 ## What "vibe coded" means here
 
-For AILex, vibe coding does **not** mean blindly accepting whatever an AI system produces. It describes a human-directed development process in which goals, constraints, desired behavior, and review feedback are expressed conversationally, AI systems generate or modify significant portions of implementation, and the human project owner evaluates, tests, redirects, accepts, or rejects the results.
+For EpochLex, vibe coding does **not** mean blindly accepting whatever an AI system produces. It describes a human-directed development process in which goals, constraints, desired behavior, and review feedback are expressed conversationally, AI systems generate or modify significant portions of implementation, and the human project owner evaluates, tests, redirects, accepts, or rejects the results.
 
 A concise description of the development model is:
 
@@ -92,12 +92,13 @@ AI may help discover, compare, organize, and prepare material. It does not indep
 
 AI-assisted development can produce useful work quickly, but it can also produce regressions, incorrect assumptions, malformed data, stale documentation, or browser-specific behavior that looks correct in code and fails in use.
 
-AILex has already encountered examples such as:
+EpochLex has already encountered examples such as:
 
 - mobile navigation that required redesign after real testing;
 - acronym pronunciations that browser speech engines guessed incorrectly;
 - staging-data mistakes caught before publication by validation;
-- documentation that became inaccurate as the product evolved quickly.
+- documentation that became inaccurate as the product evolved quickly;
+- a public-brand collision review that led from AILex to EpochLex before deeper infrastructure was committed to the earlier name.
 
 The goal is not to present the AI-assisted process as frictionless. Testing, validation, spot checking, correction, and revision are part of the development model.
 
@@ -105,7 +106,7 @@ When practical, repeatable validation should be added around high-risk or high-v
 
 ## Why open source matters to the experiment
 
-AILex is intended to remain open source.
+EpochLex is intended to remain open source.
 
 Open source makes the dictionary inspectable, but it also makes the experiment inspectable. The public repository exposes the code, editorial datasets, standards, documentation, changes, fixes, and contribution history rather than asking people to trust a description of how the project was made.
 
@@ -121,4 +122,4 @@ When a particular AI tool or workflow materially changes the project's methodolo
 
 A project documenting the language of the AI era should be transparent about its own relationship with AI.
 
-The goal is neither to minimize AI involvement nor to imply that AI independently authored or governs the project. The goal is to make the division of labor visible, learn from the process in public, and preserve human accountability for what AILex ultimately publishes and ships.
+The goal is neither to minimize AI involvement nor to imply that AI independently authored or governs the project. The goal is to make the division of labor visible, learn from the process in public, and preserve human accountability for what EpochLex ultimately publishes and ships.
