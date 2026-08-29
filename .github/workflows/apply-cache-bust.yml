@@ -1,0 +1,37 @@
+name: One-time EpochLex Cache Bust
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  apply:
+    if: github.event.pull_request.head.ref == 'fix/epochlex-cache-busting'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/epochlex-cache-busting
+      - name: Version Browse entry asset
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          text = p.read_text()
+          old = '<script src="assets/js/app.js"></script>'
+          new = '<script src="assets/js/app.js?v=epochlex-20260829-1"></script>'
+          assert old in text
+          p.write_text(text.replace(old, new, 1))
+          PY
+          node --check assets/js/app.js
+          node --check assets/js/mobile-nav.js
+          grep -F 'Search EpochLex…' assets/js/mobile-browse.js
+          grep -F 'app.js?v=epochlex-20260829-1' index.html
+          rm .github/workflows/apply-cache-bust.yml
+      - name: Commit patch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "fix: bust stale mobile browse cache"
+          git push origin HEAD:fix/epochlex-cache-busting
