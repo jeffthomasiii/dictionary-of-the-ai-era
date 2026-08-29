@@ -1,23 +1,49 @@
 # Contributing
 
-AILex · Dictionary of the AI Era is a curated reference project. Contributions should improve the accuracy, clarity, provenance, usability, documentation, or coverage of the dictionary.
+AILex · Dictionary of the AI Era is a curated, open-source reference project. Contributions should improve the accuracy, clarity, provenance, usability, accessibility, documentation, maintainability, or coverage of the dictionary.
+
+Contributions do **not** have to involve code.
+
+Useful contributors may include developers, researchers, writers, editors, designers, accessibility testers, documentation contributors, AI practitioners, and readers who simply notice a missing term, weak source, broken pronunciation, or site problem.
+
+## Ways to contribute
+
+You can help AILex by contributing:
+
+- new term suggestions;
+- clearer definitions or examples;
+- aliases, acronyms, or pronunciation guidance;
+- stronger sources or provenance corrections;
+- historical context or evidence of early usage;
+- accessibility and cross-device testing;
+- UI, design, or interaction improvements;
+- bug fixes and technical maintenance;
+- validation or automation improvements;
+- documentation, editing, or information-architecture improvements;
+- review feedback on existing entries or features.
+
+The public [Contribute page](https://jeffthomasiii.github.io/dictionary-of-the-ai-era/contribute.html) is the reader-friendly entry point. This document describes contribution expectations for people working directly with the repository.
 
 ## Before contributing
 
-Start with the document that matches your change:
+Start with [`docs/README.md`](docs/README.md), then use the document that matches your change:
 
-- `README.md` for the current architecture and repository map
-- `PROVENANCE.md` for sourcing, origin, first-known-use, and attribution standards
-- `DESIGN.md` for interface and interaction guardrails
-- `BRAND.md` for AILex naming and identity
-- `EDITIONS.md` for Living Dictionary and annual-edition behavior
-- `AI-TRANSPARENCY.md` for the project's AI-assisted development and editorial policy
+- [`docs/ORIGIN.md`](docs/ORIGIN.md) for project history and intent;
+- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for site/data structure and technical boundaries;
+- [`docs/ROADMAP.md`](docs/ROADMAP.md) for current priorities;
+- [`PROVENANCE.md`](PROVENANCE.md) for sourcing, origin, first-known-use, and attribution standards;
+- [`DESIGN.md`](DESIGN.md) for interface and interaction guardrails;
+- [`BRAND.md`](BRAND.md) for AILex naming and identity;
+- [`EDITIONS.md`](EDITIONS.md) for Living Dictionary and annual-edition behavior;
+- [`AI-TRANSPARENCY.md`](AI-TRANSPARENCY.md) for the project's AI-assisted development and editorial policy.
 
 ## AI-assisted contributions
 
 AI-assisted contributions are welcome. Contributors should be transparent when AI materially helped draft code, definitions, research summaries, documentation, or other submitted work.
 
 AI output is not evidence by itself. Claims about terminology, history, origin, usage, or attribution should be verified against appropriate external sources before publication. Human contributors remain responsible for what they submit.
+
+Generated code or documentation should also be reviewed rather than submitted solely because it runs or reads plausibly.
 
 ## Proposing a term
 
@@ -40,7 +66,7 @@ A candidate should add distinct reader value. Before proposing a new entry, cons
 
 ## Published-term completeness
 
-AILex currently treats a published term as a complete reference entry rather than a placeholder.
+AILex treats a published term as a complete reference entry rather than a placeholder.
 
 A new published term should have:
 
@@ -113,7 +139,7 @@ When an acronym or unusual term is likely to be pronounced incorrectly by browse
 
 Do not remove the written pronunciation even when audible playback exists. Audio is supplemental and must fail gracefully when speech synthesis is unavailable.
 
-## Interface contributions
+## Site and interface contributions
 
 UI changes should follow `DESIGN.md` and preserve the reference-first character of AILex.
 
@@ -121,16 +147,22 @@ In particular:
 
 - do not create duplicate editorial datasets for UI convenience;
 - preserve keyboard access and visible focus states;
-- preserve mobile behavior;
+- preserve responsive/mobile behavior;
 - avoid color-only meaning;
 - preserve no-JavaScript/indexable fallback content on dedicated term pages;
-- avoid inventing semantic relationship labels that the provenance data does not encode.
+- avoid inventing semantic relationship labels that the provenance data does not encode;
+- keep public-facing documentation focused on readers rather than repository mechanics.
 
 ## Documentation contributions
 
-Documentation should describe current behavior, not obsolete implementation phases. When a feature moves from roadmap to implemented, update the relevant reader-facing and repository documentation in the same change or a follow-up cleanup PR.
+Documentation is part of the product and should be maintained with the same care as code and dictionary content.
 
-Public-facing explanations belong on the HTML site when they are important to ordinary readers. Detailed governance, contribution, research, design, and release rules can remain in repository Markdown documents.
+Use this boundary:
+
+- **Public website documentation** should help readers understand AILex, its features, origin, categories, methodology, Living Dictionary behavior, and easy ways to contribute.
+- **Repository documentation** should preserve project history, architecture, governance, detailed editorial standards, development philosophy, contribution workflows, roadmap, release mechanics, and the open-source AI experiment.
+
+When a feature moves from roadmap to implemented, update the relevant documentation rather than leaving stale future-state language behind.
 
 ## Validation checklist
 
@@ -144,7 +176,9 @@ Depending on the change, verify:
 - canonical/social metadata remains present;
 - sitemap URLs reflect the published page set;
 - pronunciation controls remain keyboard and screen-reader accessible;
-- light, dark, desktop, and mobile behavior remain usable.
+- light, dark, desktop, tablet, and mobile behavior remain usable;
+- public documentation still points readers toward the site rather than exposing unnecessary repository mechanics;
+- repository documentation links remain valid.
 
 ## Contribution licensing
 
