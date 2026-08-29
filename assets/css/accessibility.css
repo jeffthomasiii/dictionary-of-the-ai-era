@@ -1,0 +1,27 @@
+/* Shared accessibility refinements loaded by app.js across public pages. */
+:where(a, button, input, summary):focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  outline-offset: 3px;
+}
+
+:where(.filter, .view-button, .alpha-nav button, .theme-toggle):focus-visible {
+  border-radius: 7px;
+}
+
+.primary-nav a:focus-visible,
+.mobile-primary-nav a:focus-visible,
+.brand:focus-visible,
+.content-page a:focus-visible,
+.term-name a:focus-visible {
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}

@@ -1,4 +1,13 @@
-const state = { terms: [], query: "", category: "all", view: localStorage.getItem("ai-era-view") || "list" };
+const storage = {
+  get(key) {
+    try { return localStorage.getItem(key); } catch (_) { return null; }
+  },
+  set(key, value) {
+    try { localStorage.setItem(key, value); } catch (_) {}
+  }
+};
+
+const state = { terms: [], query: "", category: "all", view: storage.get("ai-era-view") || "list" };
 const dictionary = document.getElementById("dictionary");
 const search = document.getElementById("search");
 const count = document.getElementById("result-count");
@@ -9,8 +18,17 @@ const filters = [...document.querySelectorAll(".filter")];
 const themeToggle = document.getElementById("theme-toggle");
 const listViewButton = document.getElementById("list-view");
 const gridViewButton = document.getElementById("grid-view");
+const reducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches ?? false;
 
 const esc = (value = "") => String(value).replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+
+if (!document.querySelector('link[data-accessibility-styles]')) {
+  const accessibilityStyles = document.createElement("link");
+  accessibilityStyles.rel = "stylesheet";
+  accessibilityStyles.href = document.currentScript?.src ? new URL("../css/accessibility.css", document.currentScript.src).href : "assets/css/accessibility.css";
+  accessibilityStyles.dataset.accessibilityStyles = "true";
+  document.head.append(accessibilityStyles);
+}
 
 if (dictionary && !document.querySelector('link[data-browse-pronunciation]')) {
   const pronunciationStyles = document.createElement("link");
@@ -99,7 +117,7 @@ function renderAlpha(terms) {
   if (!alpha) return;
   const letters = [...new Set(terms.map(t => t.term[0].toUpperCase()))];
   alpha.innerHTML = letters.map(letter => `<button type="button" data-letter="${esc(letter)}" aria-label="Jump to ${esc(letter)}">${esc(letter)}</button>`).join("");
-  alpha.querySelectorAll("button").forEach(button => button.addEventListener("click", () => document.getElementById(`letter-${button.dataset.letter}`)?.scrollIntoView({behavior:"smooth"})));
+  alpha.querySelectorAll("button").forEach(button => button.addEventListener("click", () => document.getElementById(`letter-${button.dataset.letter}`)?.scrollIntoView({behavior: reducedMotion ? "auto" : "smooth"})));
 }
 
 function termCard(term) {
@@ -120,6 +138,12 @@ function wireBrowsePronunciations() {
   });
 }
 
+function syncControlStates() {
+  filters.forEach(button => button.setAttribute("aria-pressed", String(button.dataset.category === state.category)));
+  listViewButton?.setAttribute("aria-pressed", String(state.view === "list"));
+  gridViewButton?.setAttribute("aria-pressed", String(state.view === "grid"));
+}
+
 function render() {
   if (!dictionary) return;
   const terms = filteredTerms();
@@ -132,6 +156,7 @@ function render() {
   dictionary.classList.toggle("list-view", state.view === "list");
   listViewButton?.classList.toggle("active", state.view === "list");
   gridViewButton?.classList.toggle("active", state.view === "grid");
+  syncControlStates();
 
   const grouped = terms.reduce((acc, term) => { const letter = term.term[0].toUpperCase(); (acc[letter] ||= []).push(term); return acc; }, {});
   dictionary.innerHTML = Object.entries(grouped).map(([letter, group]) => `<section class="letter-group" id="letter-${esc(letter)}"><h2 class="letter-heading">${esc(letter)}</h2><div class="letter-entries">${group.map(termCard).join("")}</div></section>`).join("");
@@ -140,7 +165,7 @@ function render() {
 
 function setTheme(theme) {
   document.documentElement.dataset.theme = theme;
-  localStorage.setItem("ai-era-theme", theme);
+  storage.set("ai-era-theme", theme);
   if (themeToggle) {
     const next = theme === "dark" ? "light" : "dark";
     themeToggle.setAttribute("aria-label", `Switch to ${next} mode`);
@@ -159,9 +184,14 @@ document.addEventListener("keydown", event => {
   if (event.key === "Escape" && document.activeElement === search) { search.value = ""; state.query = ""; search.blur(); render(); }
 });
 
-filters.forEach(button => button.addEventListener("click", () => { state.category = button.dataset.category; filters.forEach(b => b.classList.toggle("active", b === button)); render(); }));
-listViewButton?.addEventListener("click", () => { state.view = "list"; localStorage.setItem("ai-era-view", state.view); render(); });
-gridViewButton?.addEventListener("click", () => { state.view = "grid"; localStorage.setItem("ai-era-view", state.view); render(); });
+filters.forEach(button => button.addEventListener("click", () => {
+  state.category = button.dataset.category;
+  filters.forEach(b => b.classList.toggle("active", b === button));
+  render();
+}));
+listViewButton?.addEventListener("click", () => { state.view = "list"; storage.set("ai-era-view", state.view); render(); });
+gridViewButton?.addEventListener("click", () => { state.view = "grid"; storage.set("ai-era-view", state.view); render(); });
+syncControlStates();
 
 if (dictionary) {
   fetch("data/terms.json").then(response => { if (!response.ok) throw new Error("Could not load dictionary data."); return response.json(); }).then(terms => { state.terms = terms; render(); }).catch(error => { dictionary.innerHTML = `<p>Unable to load the dictionary. ${esc(error.message)}</p>`; });

@@ -11,6 +11,7 @@ The public website is written primarily for people who want to **use and underst
 | Understand how AILex began and why it exists | [`ORIGIN.md`](ORIGIN.md) |
 | Understand how the site and data fit together | [`ARCHITECTURE.md`](ARCHITECTURE.md) |
 | See current priorities and longer-term direction | [`ROADMAP.md`](ROADMAP.md) |
+| Run or repeat product-readiness and accessibility checks | [`QA.md`](QA.md) |
 | Contribute terms, sources, code, design, tests, or documentation | [`../CONTRIBUTING.md`](../CONTRIBUTING.md) |
 | Understand sourcing and provenance standards | [`../PROVENANCE.md`](../PROVENANCE.md) |
 | Understand the AI-assisted/vibe-coding experiment | [`../AI-TRANSPARENCY.md`](../AI-TRANSPARENCY.md) |
@@ -47,6 +48,7 @@ The repository should preserve the complete project context, including:
 - editorial and provenance standards;
 - contribution expectations;
 - design and accessibility principles;
+- product-readiness and regression testing;
 - edition and release mechanics;
 - project roadmap and maintenance priorities.
 
