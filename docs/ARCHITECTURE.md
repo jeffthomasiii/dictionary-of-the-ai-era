@@ -22,7 +22,9 @@ GitHub Pages serves the repository directly from `main`.
 
 The lightweight reader-facing dictionary dataset. It contains the information required for Browse, search, category collections, and the fallback content on dedicated term pages.
 
-Typical fields include term, slug, pronunciation, part of speech, definition, example, categories, aliases, status, added date, and last-reviewed date.
+Typical fields include term, slug, pronunciation, part of speech, definition, example, categories, entry type, aliases, status, added date, and last-reviewed date.
+
+EpochLex uses two complementary classification layers. `categories` describes the editorial areas through which a reader may discover an entry, while `entryType` identifies whether the entry is a general `term`, `organization`, `product`, `model-family`, or individual `model`. Existing records without an explicit `entryType` are treated as `term` for backward compatibility; new or materially revised named-entity records should identify their type explicitly. See [`TAXONOMY.md`](TAXONOMY.md).
 
 ### `data/provenance.json`
 
@@ -42,11 +44,11 @@ The main dictionary interface provides client-side search, A-Z navigation, categ
 
 ### Categories: `categories.html`
 
-Builds reader-facing category collections from `data/terms.json`. There is no separate category-content datastore.
+Builds reader-facing category collections from `data/terms.json`. There is no separate category-content datastore. The current reader-facing taxonomy contains five editorial categories, including **AI Organizations, Products & Models** for named entities that meet EpochLex inclusion standards.
 
 ### Dedicated terms: `terms/<slug>/index.html`
 
-Every term has a stable, indexable URL with core fallback content in HTML. JavaScript progressively enriches the page with provenance, history, sources, aliases, research status, and related-term discovery.
+Every term has a stable, indexable URL with core fallback content in HTML. JavaScript progressively enriches the page with provenance, history, sources, aliases, research status, entry type where applicable, and related-term discovery.
 
 This hybrid approach preserves useful no-JavaScript/indexing content while avoiding 100 independent hand-maintained content sources.
 
@@ -60,13 +62,13 @@ This hybrid approach preserves useful no-JavaScript/indexing content while avoid
 
 ### `assets/js/app.js`
 
-Shared Browse behavior, search/filter state, theme controls, view preference, and the Web Speech API pronunciation engine.
+Shared Browse behavior, search/filter state, theme controls, view preference, entry-type handling, and the Web Speech API pronunciation engine.
 
 Speech overrides are used where browsers are likely to guess incorrectly, especially for acronyms and the EpochLex brand name.
 
 ### `assets/js/term-page.js`
 
-Loads canonical term and provenance data for dedicated pages and renders the richer entry experience.
+Loads canonical term and provenance data for dedicated pages and renders the richer entry experience, including named-entity entry types when present.
 
 ### `assets/js/categories.js`
 
@@ -80,7 +82,9 @@ Mobile navigation and Browse refinements are kept in focused shared scripts/styl
 
 `provenance.relatedTerms` stores canonical relationship targets as slugs. Dedicated pages show direct relationships first and can also surface reciprocal/inbound connections.
 
-The current schema does **not** encode relationship semantics. The UI therefore avoids inventing claims such as “depends on,” “contrasts with,” or “is a subtype of” unless the data model is expanded to support them explicitly.
+The current schema does **not** encode relationship semantics. The UI therefore avoids inventing claims such as “depends on,” “contrasts with,” “developed by,” “owned by,” “powers,” or “is a subtype of” unless the data model is expanded to support them explicitly.
+
+This matters particularly for named organizations, products, and model families: a related-term connection may help discovery without claiming a typed relationship that the data does not encode.
 
 ## Pronunciation
 

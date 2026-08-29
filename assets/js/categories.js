@@ -6,7 +6,8 @@
     { key: 'culture', name: 'AI Culture & Slang', label: 'Culture & Slang' },
     { key: 'work', name: 'AI Ways of Working', label: 'Ways of Working' },
     { key: 'systems', name: 'AI Systems & Technical Concepts', label: 'Systems & Technical' },
-    { key: 'risks', name: 'AI Risks, Safety & Governance', label: 'Risks & Governance' }
+    { key: 'risks', name: 'AI Risks, Safety & Governance', label: 'Risks & Governance' },
+    { key: 'entities', name: 'AI Organizations, Products & Models', label: 'Organizations, Products & Models' }
   ];
 
   const esc = (value = '') => String(value).replace(/[&<>"']/g, ch => ({

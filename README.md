@@ -3,7 +3,7 @@
 **/EP-uk-leks/**  
 **Dictionary of the AI Era**
 
-EpochLex is an open-source, living dictionary of the language developing around artificial intelligence. It documents technical concepts, ways of working, emerging slang, cultural language, and terminology related to AI risk, safety, governance, and research.
+EpochLex is an open-source, living dictionary of the language developing around artificial intelligence. It documents technical concepts, ways of working, emerging slang, cultural language, terminology related to AI risk, safety, governance, and research, and selected named organizations, products, and models that provide meaningful AI-era context.
 
 **Development approach: Vibe coded · Human-directed · AI-assisted · Human-reviewed**
 
@@ -84,6 +84,7 @@ Start with [`docs/README.md`](docs/README.md) for the complete documentation map
 | --- | --- |
 | [`docs/ORIGIN.md`](docs/ORIGIN.md) | How Meat Proxy, a personal catalog, provenance curiosity, the AILex stage, and the AI-building experiment became EpochLex |
 | [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Static-site architecture, datasets, term pages, pronunciation, discovery, and publishing |
+| [`docs/TAXONOMY.md`](docs/TAXONOMY.md) | Editorial categories, entry types, named-entity inclusion, and model-version granularity |
 | [`docs/ROADMAP.md`](docs/ROADMAP.md) | Current readiness priorities and longer-term direction |
 | [`docs/QA.md`](docs/QA.md) | Product-readiness, accessibility, responsive, and regression QA baseline |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | How to contribute terms, research, corrections, code, design, testing, or documentation |
@@ -97,7 +98,7 @@ Start with [`docs/README.md`](docs/README.md) for the complete documentation map
 
 EpochLex is intentionally static and data-driven.
 
-- `data/terms.json` is the lightweight reader-facing dictionary dataset.
+- `data/terms.json` is the lightweight reader-facing dictionary dataset, including editorial categories and entry type where applicable.
 - `data/provenance.json` is the canonical research and sourcing dataset.
 - `data/editions.json` records Living Dictionary and annual-edition metadata.
 - `terms/<slug>/index.html` provides stable, indexable fallback content for each entry.
@@ -110,24 +111,31 @@ See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
 
 ## Editorial model
 
-EpochLex is intended to be a dictionary, not a list of AI buzzwords. A candidate term should represent language with documented real-world usage and add enough reader value to justify its own entry.
+EpochLex is intended to be a dictionary, not a list of AI buzzwords or a vendor catalog. A candidate entry should represent language or a named entity with documented real-world usage and add enough reader value to justify its own entry.
 
-Every published entry has a matching researched provenance record. A source that explains what a term means does not automatically prove who coined it or when it first appeared. EpochLex intentionally distinguishes meaning, origin, first known use, history, broader adoption, and current usage.
+Named AI organizations, products, model families, and individual models may qualify when understanding the name provides meaningful context for understanding AI-era terminology, technology, history, or culture. Inclusion is not automatic merely because an organization develops AI, a product uses AI, or a model has been released.
+
+Every published entry has a matching researched provenance record. A source that explains what an entry means does not automatically prove who coined, introduced, named, or released it or when it first appeared. EpochLex intentionally distinguishes meaning, origin, first known use, history, broader adoption, and current usage.
 
 AI may assist with discovery and research organization, but publication remains human reviewed.
 
-See [`PROVENANCE.md`](PROVENANCE.md) and the public [Methodology](https://jeffthomasiii.github.io/dictionary-of-the-ai-era/methodology.html).
+See [`docs/TAXONOMY.md`](docs/TAXONOMY.md), [`PROVENANCE.md`](PROVENANCE.md), and the public [Methodology](https://jeffthomasiii.github.io/dictionary-of-the-ai-era/methodology.html).
 
-## Categories
+## Taxonomy
 
-EpochLex currently uses four reader-facing categories:
+EpochLex uses five reader-facing editorial categories:
 
 1. AI Culture & Slang
 2. AI Ways of Working
 3. AI Systems & Technical Concepts
 4. AI Risks, Safety & Governance
+5. AI Organizations, Products & Models
 
-Terms may belong to more than one category when that better reflects actual usage.
+Entries may belong to more than one category when that better reflects actual usage.
+
+A separate `entryType` dimension identifies what an entry is. The current values are `term`, `organization`, `product`, `model-family`, and `model`. This allows EpochLex to distinguish a generic concept such as **Copilot** from named products such as **Microsoft Copilot** and **GitHub Copilot**, or a product such as **ChatGPT** from the **GPT** model family.
+
+See [`docs/TAXONOMY.md`](docs/TAXONOMY.md).
 
 ## Living Dictionary and annual editions
 

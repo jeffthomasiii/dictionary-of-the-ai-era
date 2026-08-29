@@ -30,6 +30,7 @@ Start with [`docs/README.md`](docs/README.md), then use the document that matche
 
 - [`docs/ORIGIN.md`](docs/ORIGIN.md) for project history and intent;
 - [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for site/data structure and technical boundaries;
+- [`docs/TAXONOMY.md`](docs/TAXONOMY.md) for editorial categories, entry types, and named-entity inclusion;
 - [`docs/ROADMAP.md`](docs/ROADMAP.md) for current priorities;
 - [`PROVENANCE.md`](PROVENANCE.md) for sourcing, origin, first-known-use, and attribution standards;
 - [`DESIGN.md`](DESIGN.md) for interface and interaction guardrails;
@@ -45,38 +46,46 @@ AI output is not evidence by itself. Claims about terminology, history, origin, 
 
 Generated code or documentation should also be reviewed rather than submitted solely because it runs or reads plausibly.
 
-## Proposing a term
+## Proposing an entry
 
-A proposed term should include:
+A proposed entry should include:
 
-- Term
+- Term or entry name
 - Slug
 - Written pronunciation
 - Plain-English definition
 - Natural example sentence
 - Part of speech
 - One or more categories
+- Entry type
 - Status
 - Known aliases or acronyms
 - Evidence of real-world usage
 - Suggested related terms
 - A researched provenance record with credible sources
 
-A candidate should add distinct reader value. Before proposing a new entry, consider whether the phrase is better represented as an alias of an existing term or is too generic to require its own AI-era definition.
+The current `entryType` vocabulary is `term`, `organization`, `product`, `model-family`, and `model`. See `docs/TAXONOMY.md` for the distinction between entry type and editorial category.
 
-## Published-term completeness
+A candidate should add distinct reader value. Before proposing a new entry, consider whether the phrase or name is better represented as an alias of an existing entry or is too generic to require its own AI-era definition.
 
-EpochLex treats a published term as a complete reference entry rather than a placeholder.
+Named AI organizations, products, model families, and individual models may qualify when understanding the name provides meaningful context for understanding AI-era terminology, technology, history, or culture. Inclusion is not automatic merely because an organization develops AI, a product uses AI, or a model has been released. EpochLex should not become an exhaustive vendor directory or model-release tracker.
 
-A new published term should have:
+For fast-changing product and model lines, prefer durable identity and reader value over transient specifications, rankings, pricing, or release-by-release coverage. A separate individual-model entry should exist only when that model provides distinct reader value beyond its parent family.
+
+## Published-entry completeness
+
+EpochLex treats a published entry as a complete reference entry rather than a placeholder.
+
+A new published entry should have:
 
 1. one entry in `data/terms.json`;
 2. one matching researched record in `data/provenance.json`;
-3. valid related-term slugs that point only to published entries;
-4. a dedicated `terms/<slug>/index.html` page;
-5. search/social metadata consistent with the existing dedicated pages;
-6. inclusion in the sitemap;
-7. a pronunciation override when browser speech synthesis would reasonably misread the term or acronym.
+3. a valid `entryType` appropriate to the entry;
+4. valid related-term slugs that point only to published entries;
+5. a dedicated `terms/<slug>/index.html` page;
+6. search/social metadata consistent with the existing dedicated pages;
+7. inclusion in the sitemap;
+8. a pronunciation override when browser speech synthesis would reasonably misread the term, acronym, organization, product, or model name.
 
 The term and provenance slug sets should remain equal.
 
@@ -93,6 +102,8 @@ When adding or revising a provenance record:
 - include only history events that materially help explain the term;
 - identify what each source supports rather than treating every citation as evidence for every field;
 - preserve uncertainty and disagreement when the historical record is unclear.
+
+For named organizations, products, and models, use primary sources where available to establish identity, naming events, introductions, and release dates. Do not infer ownership, development, powering, succession, or other typed relationships merely from an EpochLex related-term connection.
 
 A `researched` status means an initial human-reviewed sourcing pass has been completed. It does not imply permanent certainty or prevent later revision.
 
@@ -127,9 +138,11 @@ Compound labels may be used when they add useful context, but status should rema
 
 ## Updating `terms.json`
 
-Keep terms sorted alphabetically by `term`. Use a lowercase hyphenated slug and preserve the existing schema.
+Keep entries sorted alphabetically by `term`. Use a lowercase hyphenated slug and preserve the existing schema.
 
-Before submitting changes, verify that search can find the entry through relevant term text, definition text, aliases, categories, and examples.
+Existing legacy records without `entryType` are treated as `term` for backward compatibility. New entries and materially revised named-entity entries should include an explicit `entryType`.
+
+Before submitting changes, verify that search can find the entry through relevant term text, definition text, aliases, categories, entry type, and examples.
 
 ## Pronunciation
 
@@ -160,7 +173,7 @@ Documentation is part of the product and should be maintained with the same care
 Use this boundary:
 
 - **Public website documentation** should help readers understand EpochLex, its features, origin, categories, methodology, Living Dictionary behavior, and easy ways to contribute.
-- **Repository documentation** should preserve project history, architecture, governance, detailed editorial standards, development philosophy, contribution workflows, roadmap, release mechanics, and the open-source AI experiment.
+- **Repository documentation** should preserve project history, architecture, taxonomy, governance, detailed editorial standards, development philosophy, contribution workflows, roadmap, release mechanics, and the open-source AI experiment.
 
 When a feature moves from roadmap to implemented, update the relevant documentation rather than leaving stale future-state language behind.
 
@@ -169,6 +182,7 @@ When a feature moves from roadmap to implemented, update the relevant documentat
 Depending on the change, verify:
 
 - JSON parses successfully;
+- every new or materially revised named entity has a valid `entryType`;
 - term/provenance slug parity is preserved;
 - related-term targets resolve and do not self-link;
 - JavaScript syntax is valid;
