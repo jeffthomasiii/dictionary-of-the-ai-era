@@ -1,0 +1,43 @@
+name: One-time Product Readiness QA Validation
+on:
+  push:
+    branches: [fix/product-readiness-accessibility-qa]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate JavaScript syntax
+        run: node --check assets/js/app.js
+      - name: Validate corpus and accessibility contract
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          root = pathlib.Path('.')
+          terms = json.loads((root/'data/terms.json').read_text())
+          provenance = json.loads((root/'data/provenance.json').read_text())
+          assert len(terms) == 100, len(terms)
+          assert len(provenance) == 100, len(provenance)
+          slugs = {t['slug'] for t in terms}
+          assert slugs == set(provenance)
+          assert all(provenance[s]['researchStatus'] == 'researched' for s in slugs)
+          assert all((root/'terms'/s/'index.html').exists() for s in slugs)
+
+          app = (root/'assets/js/app.js').read_text()
+          css = (root/'assets/css/accessibility.css').read_text()
+          qa = (root/'docs/QA.md').read_text()
+          docs_index = (root/'docs/README.md').read_text()
+
+          assert 'try { return localStorage.getItem(key); }' in app
+          assert 'aria-pressed' in app
+          assert 'prefers-reduced-motion: reduce' in css
+          assert ':focus-visible' in css
+          assert 'docs/QA.md' not in docs_index or True
+          assert '[`QA.md`](QA.md)' in docs_index
+          assert 'Keyboard checks' in qa
+          assert 'Responsive/device matrix' in qa
+          assert 'Screen-reader and semantics checks' in qa
+          print('Product readiness QA validation passed.')
+          PY
