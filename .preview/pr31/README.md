@@ -1,10 +1,10 @@
 # PR #31 Visual Preview
 
-Temporary screenshots rendered directly from the current PR #31 branch after the post-review refinements.
+These are the current post-feedback screenshots rendered directly from PR #31.
 
-Refinements represented here:
+Changes represented here:
 - production EpochLex light/dark masthead logos;
-- restored stroke-only technical hero wave treatment;
+- restored fine, stroke-only technical hero wave treatment;
 - stronger semantic category colors in both themes;
 - category-specific selected filter states on desktop and mobile.
 
