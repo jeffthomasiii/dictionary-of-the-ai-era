@@ -2,13 +2,10 @@ name: Temporary PR31 Visual Preview
 on:
   push:
     branches: [feat/epochlex-visual-system-refresh]
-  pull_request:
-    branches: [main]
 permissions:
   contents: write
 jobs:
   render:
-    if: github.ref_name == 'feat/epochlex-visual-system-refresh' && !contains(github.event.head_commit.message || '', '[skip preview]')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
