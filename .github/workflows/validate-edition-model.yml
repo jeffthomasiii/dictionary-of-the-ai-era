@@ -1,0 +1,82 @@
+name: One-time Edition Model Validation
+
+on:
+  push:
+    branches:
+      - feat/product-readiness-edition-model
+
+permissions:
+  contents: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/product-readiness-edition-model
+
+      - name: Validate edition registry and documentation
+        run: |
+          python - <<'PY'
+          import json, pathlib, re
+
+          root = pathlib.Path('.')
+          registry = json.loads((root / 'data/editions.json').read_text())
+          assert registry['schemaVersion'] == 1
+
+          live = registry['live']
+          assert live['name'] == 'AILex Living Dictionary'
+          assert live['status'] == 'living'
+          assert live['branch'] == 'main'
+          assert live['mutable'] is True
+          assert live['canonicalUrl'].startswith('https://')
+
+          policy = registry['policy']
+          assert policy['editionNamePattern'] == 'AILex YYYY'
+          assert policy['tagPattern'] == 'ailex-YYYY'
+          assert policy['immutableAfterRelease'] is True
+          assert policy['snapshotUnit'] == 'repository commit'
+
+          planned = registry.get('planned', [])
+          assert any(item['year'] == 2026 and item['name'] == 'AILex 2026' for item in planned)
+          for item in planned:
+              assert item['status'] == 'planned'
+              assert item['tag'] is None
+              assert item['snapshotCommit'] is None
+              assert item['releasedAt'] is None
+              assert item['termCount'] is None
+
+          for edition in registry.get('editions', []):
+              assert edition['status'] == 'released'
+              assert re.fullmatch(r'ailex-\d{4}', edition['tag'])
+              assert edition['snapshotCommit']
+              assert edition['releasedAt']
+              assert isinstance(edition['termCount'], int) and edition['termCount'] > 0
+              assert edition['cutoff']
+
+          editions_doc = (root / 'EDITIONS.md').read_text()
+          for phrase in ['Living Dictionary', 'AILex 2026', 'ailex-YYYY', 'immutable', 'data/editions.json']:
+              assert phrase in editions_doc, phrase
+
+          about = (root / 'about.html').read_text()
+          assert 'AILex Living Dictionary' in about
+          assert 'AILex 2026' in about
+          assert 'EDITIONS.md' in about
+
+          readme = (root / 'README.md').read_text()
+          assert 'Living dictionary and annual editions' in readme
+          assert 'data/editions.json' in readme
+          assert 'EDITIONS.md' in readme
+
+          print('Edition model validation passed.')
+          PY
+
+      - name: Remove one-time validation workflow
+        run: |
+          rm .github/workflows/validate-edition-model.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/workflows/validate-edition-model.yml
+          git commit -m "chore: remove one-time edition validator"
+          git push
