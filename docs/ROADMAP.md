@@ -16,35 +16,37 @@ The initial product and corpus MVP is substantially complete:
 - responsive/mobile behavior;
 - publishing and SEO foundation;
 - Living Dictionary and annual-edition model;
-- open-source repository and contribution guidance.
+- open-source repository and contribution guidance;
+- repeatable accessibility and product-readiness QA baseline;
+- EpochLex selected as the public identity after a brand-collision review of the earlier AILex name.
 
-The focus now shifts from accumulating MVP features to improving readiness, identity, contribution quality, and long-term maintainability.
+The focus now shifts from accumulating MVP features to improving readiness, identity infrastructure, contribution quality, and long-term maintainability.
 
 ## Product readiness
 
 ### Cross-device and accessibility QA
 
-- systematic desktop, tablet, and mobile review;
-- keyboard-only navigation checks;
-- screen-reader labeling review;
-- focus-order and visible-focus checks;
-- reduced-motion and theme behavior checks;
-- pronunciation controls across representative browsers;
-- graceful behavior when JavaScript or speech synthesis is unavailable.
+The repository now includes a repeatable QA baseline in [`QA.md`](QA.md). Remaining readiness work includes deliberate human spot checks across representative devices, browsers, keyboard-only use, screen-reader behavior, themes, reduced motion, pronunciation, and graceful degradation.
 
-### Public identity
+### Public identity and URL migration
 
-- EpochLex name/brand collision review;
-- domain availability and custom-domain decision;
-- migration plan that preserves existing GitHub Pages links;
-- branded social-preview image and `og:image` support;
-- canonical/sitemap migration when a custom domain is adopted.
+The short-form brand decision is complete: **EpochLex** is the public product name and **Dictionary of the AI Era** remains the descriptor.
+
+The next identity work is infrastructure rather than naming:
+
+- confirm a suitable EpochLex domain or subdomain;
+- decide whether the repository itself should eventually be renamed;
+- plan redirects and GitHub Pages behavior before changing URLs;
+- migrate canonical and sitemap URLs only as one coordinated change;
+- create a deliberate EpochLex social-preview image and add `og:image` support after the durable public URL is chosen.
+
+The current `dictionary-of-the-ai-era` repository slug and GitHub Pages URL remain valid during this transition.
 
 ### Publishing verification
 
 - optional search-engine console submission;
 - sitemap/indexing verification;
-- social-card preview testing;
+- social-card preview testing after the branded preview asset exists;
 - periodic metadata integrity checks as the corpus grows.
 
 ## Contribution and editorial operations
