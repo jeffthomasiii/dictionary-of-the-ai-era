@@ -10,7 +10,7 @@ The primary product name is **EpochLex**.
 
 The descriptor is **Dictionary of the AI Era**.
 
-EpochLex is pronounced **/EP-uk-leks/**, saying the letters A and I followed by “lex.” The masthead remains visually clean, while the About page and repository documentation make the pronunciation explicit. The About page also provides an audible pronunciation control.
+EpochLex is pronounced **/EP-uk-leks/**, saying “epoch” followed by “lex.” The masthead remains visually clean, while the About page and repository documentation make the pronunciation explicit. The About page also provides an audible pronunciation control.
 
 ## Design intent
 
@@ -166,7 +166,7 @@ Pronunciation controls should:
 - use explicit speech overrides for acronyms or terms browser voices commonly misread
 - fail gracefully when speech synthesis is unsupported
 
-EpochLex itself should use the explicit speech form **“A I lex.”**
+EpochLex itself should use the explicit speech form **“epoch lex.”**
 
 Curated audio files may be added later for unusual or consistently unreliable pronunciations, but are not required for the static architecture.
 
