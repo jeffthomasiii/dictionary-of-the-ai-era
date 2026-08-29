@@ -1,5 +1,5 @@
 const termPage = document.getElementById("term-page");
-const NAMED_ENTITY_CATEGORY = "AI Organizations, Products & Models";
+const TERM_NAMED_ENTITY_CATEGORY = "AI Organizations, Products & Models";
 
 if (termPage && !document.querySelector('link[data-related-discovery-styles]')) {
   const styles = document.createElement("link");
@@ -34,7 +34,7 @@ function formatDate(value) {
 
 function categoryKey(term) {
   const categories = term.categories || [];
-  if (categories.includes(NAMED_ENTITY_CATEGORY)) return "entities";
+  if (categories.includes(TERM_NAMED_ENTITY_CATEGORY)) return "entities";
   if (categories.includes("AI Culture & Slang")) return "culture";
   if (categories.includes("AI Ways of Working")) return "work";
   if (categories.includes("AI Risks, Safety & Governance")) return "risks";
