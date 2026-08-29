@@ -44,7 +44,7 @@ jobs:
               )
               if 'brand-lockup-light' in text:
                   continue
-              pattern = re.compile(r'<span class="brand-mark" aria-hidden="true">.*?</span>\s*<span>EpochLex</span>', re.S)
+              pattern = re.compile(r'<span class="brand-mark"(?: aria-hidden="true")?>.*?</span>\s*<span>EpochLex</span>', re.S)
               new, count = pattern.subn(replacement, text, count=1)
               if count == 1:
                   path.write_text(new)
