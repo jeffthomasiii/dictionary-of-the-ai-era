@@ -12,6 +12,74 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: feat/epochlex-visual-system-refresh
+          fetch-depth: 0
+      - name: Sync uploaded production brand assets from main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git merge --no-edit origin/main
+      - name: Integrate production EpochLex masthead
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          pages = [Path('index.html'), Path('about.html'), Path('categories.html'), Path('contribute.html'), Path('methodology.html')]
+          pages += sorted(Path('terms').glob('*/index.html'))
+
+          updated = 0
+          for path in pages:
+              text = path.read_text()
+              prefix = '' if path.parent == Path('.') else '../../'
+              light = f"{prefix}assets/brand/epochlex/epochlex-logo-horizontal-light.png"
+              dark = f"{prefix}assets/brand/epochlex/epochlex-logo-horizontal-dark.png"
+              replacement = (
+                  '<span class="brand-lockup" aria-hidden="true">'
+                  f'<img class="brand-lockup-image brand-lockup-light" src="{light}" alt="">'
+                  f'<img class="brand-lockup-image brand-lockup-dark" src="{dark}" alt="">'
+                  '</span><span class="sr-only">EpochLex</span>'
+              )
+              if 'brand-lockup-light' in text:
+                  continue
+              pattern = re.compile(r'<span class="brand-mark" aria-hidden="true">.*?</span>\s*<span>EpochLex</span>', re.S)
+              new, count = pattern.subn(replacement, text, count=1)
+              if count == 1:
+                  path.write_text(new)
+                  updated += 1
+          print(f'Integrated production masthead on {updated} pages')
+
+          css = Path('assets/css/brand-theme.css')
+          text = css.read_text()
+          marker = '/* Production EpochLex masthead lockup */'
+          if marker not in text:
+              text += '''\n\n/* Production EpochLex masthead lockup */\n.brand { min-width: 0; }\n.brand-lockup { display:block; width:clamp(160px,18vw,230px); line-height:0; }\n.brand-lockup-image { display:block; width:100%; height:auto; }\n.brand-lockup-dark { display:none; }\nhtml[data-theme="dark"] .brand-lockup-light { display:none; }\nhtml[data-theme="dark"] .brand-lockup-dark { display:block; }\n@media (max-width:680px){ .brand-lockup { width:158px; } }\n'''
+              css.write_text(text)
+          PY
+      - name: Validate production logo wiring
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          required = [
+              'epochlex-logo-horizontal-light.png',
+              'epochlex-logo-horizontal-dark.png',
+              'epochlex-logo-stacked-light.png',
+              'epochlex-logo-stacked-pronunciation-light.png',
+              'epochlex-mark-light.png',
+              'epochlex-mark-dark.png',
+          ]
+          root = Path('assets/brand/epochlex')
+          for filename in required:
+              f = root / filename
+              assert f.exists() and f.stat().st_size > 0, f
+          pages = [Path('index.html'), Path('about.html'), Path('categories.html'), Path('contribute.html'), Path('methodology.html')]
+          pages += sorted(Path('terms').glob('*/index.html'))
+          for path in pages:
+              t = path.read_text()
+              assert 'brand-lockup-light' in t and 'brand-lockup-dark' in t, path
+              assert '<span class="brand-mark"' not in t, path
+          print(f'Validated logo wiring on {len(pages)} pages')
+          PY
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -45,11 +113,10 @@ jobs:
           JS
           node render-pr31-preview.mjs
           rm render-pr31-preview.mjs
-      - name: Commit temporary previews
+      - name: Commit integrated assets and refreshed previews
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .preview/pr31/*.png
+          rm -f .github/workflows/integrate-epochlex-brand-assets.yml
+          git add -A
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m "chore: add PR31 visual previews [skip preview]"
+          git commit -m "feat: integrate EpochLex production logo and refresh previews [skip preview]"
           git push origin HEAD:feat/epochlex-visual-system-refresh
