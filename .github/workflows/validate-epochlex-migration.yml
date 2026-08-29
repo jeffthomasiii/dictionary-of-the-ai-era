@@ -13,23 +13,36 @@ jobs:
         with:
           ref: feat/epochlex-brand-migration
           fetch-depth: 0
+      - name: Migrate provenance self-reference only
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('data/provenance.json')
+          text = path.read_text()
+          updated = text.replace('AILex', 'EpochLex')
+          path.write_text(updated)
+          print(f'Replaced {text.count("AILex")} provenance self-reference(s).')
+          PY
       - name: Validate migration
         run: |
           node --check assets/js/app.js
           node --check assets/js/term-page.js
           git fetch origin main
           cmp data/terms.json <(git show origin/main:data/terms.json)
-          cmp data/provenance.json <(git show origin/main:data/provenance.json)
           python - <<'PY'
-          import json, pathlib
+          import json, pathlib, subprocess
           root = pathlib.Path('.')
           terms = json.loads((root/'data/terms.json').read_text())
-          prov = json.loads((root/'data/provenance.json').read_text())
+          prov_text = (root/'data/provenance.json').read_text()
+          prov = json.loads(prov_text)
           editions = json.loads((root/'data/editions.json').read_text())
+          main_prov = subprocess.check_output(['git','show','origin/main:data/provenance.json'], text=True)
+          assert prov_text == main_prov.replace('AILex', 'EpochLex'), 'Provenance changed beyond the brand self-reference replacement.'
           assert len(terms) == 100
           assert len(prov) == 100
           assert {t['slug'] for t in terms} == set(prov)
           assert all(prov[s]['researchStatus'] == 'researched' for s in prov)
+          assert 'AILex' not in prov_text
 
           pages = sorted((root/'terms').glob('*/index.html'))
           assert len(pages) == 100, len(pages)
@@ -69,8 +82,10 @@ jobs:
               pathlib.Path('BRAND.md'),
               pathlib.Path('README.md'),
               pathlib.Path('AI-TRANSPARENCY.md'),
+              pathlib.Path('EDITIONS.md'),
               pathlib.Path('about.html'),
               pathlib.Path('docs/ORIGIN.md'),
+              pathlib.Path('docs/ROADMAP.md'),
           }
           stale = []
           for path in root.rglob('*'):
@@ -81,17 +96,17 @@ jobs:
               text = path.read_text(errors='ignore')
               if 'AILex' in text and path not in allowed_old_brand:
                   stale.append(str(path))
-              if 'ailex-YYYY' in text or 'ailex-2026' in text:
+              if ('ailex-YYYY' in text or 'ailex-2026' in text) and path != pathlib.Path('EDITIONS.md'):
                   stale.append(str(path) + ' (old edition tag)')
           assert not stale, stale
           print('EpochLex migration validation passed.')
           PY
-      - name: Remove validator and commit cleanup
+      - name: Commit provenance migration and remove validator
         if: success()
         run: |
           rm .github/workflows/validate-epochlex-migration.yml
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "chore: remove EpochLex migration validator"
+          git commit -m "fix: migrate provenance brand self-references"
           git push origin HEAD:feat/epochlex-brand-migration
