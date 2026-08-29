@@ -304,7 +304,9 @@
     "relatedTerms": [
       "human-in-the-loop",
       "prompt-engineering",
-      "ai-agent"
+      "ai-agent",
+      "microsoft-copilot",
+      "github-copilot"
     ],
     "sources": [
       {
@@ -3700,6 +3702,453 @@
         "supports": [
           "definition",
           "history",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "openai": {
+    "researchStatus": "researched",
+    "origin": "OpenAI is the name of an AI research and deployment organization. Its current structure consists of the nonprofit OpenAI Foundation and the for-profit OpenAI Group, which operates as a public benefit corporation.",
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "chatgpt",
+      "gpt"
+    ],
+    "sources": [
+      {
+        "id": "openai-about",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "About",
+        "published": null,
+        "url": "https://openai.com/about/",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "chatgpt": {
+    "researchStatus": "researched",
+    "origin": "OpenAI introduced ChatGPT publicly as a conversational system in November 2022. The name now refers to OpenAI's conversational AI product rather than to the GPT model family itself.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2022-11-30",
+        "event": "OpenAI publicly introduced ChatGPT as a research preview built for conversational interaction."
+      }
+    ],
+    "relatedTerms": [
+      "openai",
+      "gpt",
+      "large-language-model"
+    ],
+    "sources": [
+      {
+        "id": "openai-chatgpt-2022",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "Introducing ChatGPT",
+        "published": "2022-11-30",
+        "url": "https://openai.com/index/chatgpt/",
+        "supports": [
+          "origin",
+          "history",
+          "usage"
+        ]
+      },
+      {
+        "id": "openai-chatgpt-faq-2026",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "What is ChatGPT: FAQ",
+        "published": null,
+        "url": "https://help.openai.com/en/articles/12677804-what-is-chatgpt-faq",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "gpt": {
+    "researchStatus": "researched",
+    "origin": "GPT expands to Generative Pre-trained Transformer. OpenAI uses GPT as the recurring name for a model lineage that combines transformer architectures with generative pre-training and has continued through multiple model generations.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2018-06-11",
+        "event": "OpenAI published its early work combining transformers with generative pre-training for language understanding."
+      },
+      {
+        "date": "2023-03-17",
+        "event": "An OpenAI publication explicitly described GPT models as Generative Pre-trained Transformer models."
+      }
+    ],
+    "relatedTerms": [
+      "openai",
+      "chatgpt",
+      "transformer",
+      "pretraining",
+      "large-language-model"
+    ],
+    "sources": [
+      {
+        "id": "openai-language-unsupervised-2018",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "Improving language understanding with unsupervised learning",
+        "published": "2018-06-11",
+        "url": "https://openai.com/index/language-unsupervised/",
+        "supports": [
+          "history"
+        ]
+      },
+      {
+        "id": "openai-gpts-are-gpts-2023",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "GPTs are GPTs: An early look at the labor market impact potential of large language models",
+        "published": "2023-03-17",
+        "url": "https://openai.com/index/gpts-are-gpts/",
+        "supports": [
+          "definition",
+          "origin",
+          "usage"
+        ]
+      },
+      {
+        "id": "openai-gpt5",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "GPT-5 is here",
+        "published": null,
+        "url": "https://openai.com/gpt-5/",
+        "supports": [
+          "usage"
+        ]
+      }
+    ]
+  },
+  "anthropic": {
+    "researchStatus": "researched",
+    "origin": "Anthropic is an AI company organized as a public benefit corporation. It develops Claude and publishes research concerning AI capabilities, safety, governance, and societal impacts.",
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "claude",
+      "claude-opus",
+      "claude-sonnet",
+      "claude-haiku"
+    ],
+    "sources": [
+      {
+        "id": "anthropic-home",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Anthropic",
+        "published": null,
+        "url": "https://www.anthropic.com/",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      },
+      {
+        "id": "anthropic-company",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Company",
+        "published": null,
+        "url": "https://www.anthropic.com/company",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "claude": {
+    "researchStatus": "researched",
+    "origin": "Anthropic introduced Claude publicly in March 2023 as an AI assistant accessible through conversational and developer-facing interfaces. Claude now names Anthropic's assistant product while also serving as the umbrella brand for Claude models.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2023-03-14",
+        "event": "Anthropic publicly introduced Claude as an AI assistant for conversational and text-processing tasks."
+      }
+    ],
+    "relatedTerms": [
+      "anthropic",
+      "claude-opus",
+      "claude-sonnet",
+      "claude-haiku"
+    ],
+    "sources": [
+      {
+        "id": "anthropic-introducing-claude-2023",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Introducing Claude",
+        "published": "2023-03-14",
+        "url": "https://www.anthropic.com/news/introducing-claude",
+        "supports": [
+          "origin",
+          "history",
+          "definition"
+        ]
+      },
+      {
+        "id": "anthropic-meet-claude",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Meet Claude",
+        "published": null,
+        "url": "https://www.anthropic.com/claude",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "claude-opus": {
+    "researchStatus": "researched",
+    "origin": "Anthropic introduced Opus as one of the three named model lines in the Claude 3 family in March 2024. The Opus name has continued across later Claude generations, so EpochLex treats Claude Opus as a model-family entry rather than creating an entry for every numbered release.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2024-03-04",
+        "event": "Anthropic announced the Claude 3 family with Haiku, Sonnet, and Opus model names."
+      }
+    ],
+    "relatedTerms": [
+      "anthropic",
+      "claude",
+      "claude-sonnet",
+      "claude-haiku"
+    ],
+    "sources": [
+      {
+        "id": "anthropic-claude3-family-2024",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Introducing the next generation of Claude",
+        "published": "2024-03-04",
+        "url": "https://www.anthropic.com/research/claude-3-family",
+        "supports": [
+          "origin",
+          "history",
+          "definition"
+        ]
+      },
+      {
+        "id": "anthropic-claude-opus",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Claude Opus",
+        "published": null,
+        "url": "https://www.anthropic.com/claude/opus",
+        "supports": [
+          "usage"
+        ]
+      }
+    ]
+  },
+  "claude-sonnet": {
+    "researchStatus": "researched",
+    "origin": "Anthropic introduced Sonnet as one of the three named model lines in the Claude 3 family in March 2024. The Sonnet name has continued across later Claude generations, so EpochLex treats Claude Sonnet as a model-family entry rather than creating an entry for every numbered release.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2024-03-04",
+        "event": "Anthropic announced the Claude 3 family with Haiku, Sonnet, and Opus model names."
+      }
+    ],
+    "relatedTerms": [
+      "anthropic",
+      "claude",
+      "claude-opus",
+      "claude-haiku"
+    ],
+    "sources": [
+      {
+        "id": "anthropic-claude3-family-2024",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Introducing the next generation of Claude",
+        "published": "2024-03-04",
+        "url": "https://www.anthropic.com/research/claude-3-family",
+        "supports": [
+          "origin",
+          "history",
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "claude-haiku": {
+    "researchStatus": "researched",
+    "origin": "Anthropic introduced Haiku as one of the three named model lines in the Claude 3 family in March 2024. The Haiku name has continued across later Claude generations, so EpochLex treats Claude Haiku as a model-family entry rather than creating an entry for every numbered release.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2024-03-04",
+        "event": "Anthropic announced the Claude 3 family with Haiku, Sonnet, and Opus model names."
+      }
+    ],
+    "relatedTerms": [
+      "anthropic",
+      "claude",
+      "claude-opus",
+      "claude-sonnet"
+    ],
+    "sources": [
+      {
+        "id": "anthropic-claude3-family-2024",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Introducing the next generation of Claude",
+        "published": "2024-03-04",
+        "url": "https://www.anthropic.com/research/claude-3-family",
+        "supports": [
+          "origin",
+          "history",
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "microsoft": {
+    "researchStatus": "researched",
+    "origin": "Microsoft is a technology company whose current product ecosystem includes Microsoft Copilot and other AI-assisted software and services.",
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "microsoft-copilot"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-about",
+        "type": "primary",
+        "publisher": "Microsoft",
+        "title": "Our Mission and Values",
+        "published": null,
+        "url": "https://www.microsoft.com/en-us/about",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "microsoft-copilot": {
+    "researchStatus": "researched",
+    "origin": "Microsoft consolidated Bing Chat and Bing Chat Enterprise under the Copilot name in 2023 as part of a broader Copilot product strategy. The product name is distinct from the generic AI-era use of the word copilot.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2023-11-15",
+        "event": "Microsoft announced that Bing Chat and Bing Chat Enterprise would become Copilot as it simplified its Copilot product line."
+      }
+    ],
+    "relatedTerms": [
+      "microsoft",
+      "copilot"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-copilot-2023",
+        "type": "primary",
+        "publisher": "Microsoft",
+        "title": "Introducing Microsoft Copilot Studio and new features in Copilot for Microsoft 365",
+        "published": "2023-11-15",
+        "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2023/11/15/introducing-microsoft-copilot-studio-and-new-features-in-copilot-for-microsoft-365/",
+        "supports": [
+          "origin",
+          "history",
+          "usage"
+        ]
+      },
+      {
+        "id": "microsoft-copilot-current",
+        "type": "primary",
+        "publisher": "Microsoft",
+        "title": "Get Copilot",
+        "published": null,
+        "url": "https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/get-copilot",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "github": {
+    "researchStatus": "researched",
+    "origin": "GitHub is an organization and software-development platform centered on hosting code and supporting software collaboration. Its current platform includes AI-assisted development through GitHub Copilot.",
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "github-copilot"
+    ],
+    "sources": [
+      {
+        "id": "github-about",
+        "type": "primary",
+        "publisher": "GitHub",
+        "title": "About GitHub",
+        "published": null,
+        "url": "https://github.com/about",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "github-copilot": {
+    "researchStatus": "researched",
+    "origin": "GitHub introduced GitHub Copilot in a technical preview in June 2021 as an AI pair-programming tool. The product has since expanded beyond code completion into broader contextual assistance across software-development workflows.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2021-06-29",
+        "event": "GitHub launched a technical preview of GitHub Copilot as an AI pair programmer."
+      }
+    ],
+    "relatedTerms": [
+      "github",
+      "copilot"
+    ],
+    "sources": [
+      {
+        "id": "github-copilot-launch-2021",
+        "type": "primary",
+        "publisher": "GitHub",
+        "title": "Introducing GitHub Copilot: your AI pair programmer",
+        "published": "2021-06-29",
+        "url": "https://github.blog/news-insights/product-news/introducing-github-copilot-ai-pair-programmer/",
+        "supports": [
+          "origin",
+          "history",
+          "usage"
+        ]
+      },
+      {
+        "id": "github-copilot-docs",
+        "type": "primary",
+        "publisher": "GitHub",
+        "title": "What is GitHub Copilot?",
+        "published": null,
+        "url": "https://docs.github.com/en/copilot/get-started/what-is-github-copilot",
+        "supports": [
+          "definition",
           "usage"
         ]
       }

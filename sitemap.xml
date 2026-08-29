@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jeffthomasiii.github.io/dictionary-of-the-ai-era/</loc>
@@ -419,5 +419,53 @@
   <url>
     <loc>https://jeffthomasiii.github.io/dictionary-of-the-ai-era/terms/zero-shot/</loc>
     <lastmod>2026-08-28</lastmod>
+  </url>
+  <url>
+    <loc>https://jeffthomasiii.github.io/dictionary-of-the-ai-era/terms/openai/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://jeffthomasiii.github.io/dictionary-of-the-ai-era/terms/chatgpt/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://jeffthomasiii.github.io/dictionary-of-the-ai-era/terms/gpt/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://jeffthomasiii.github.io/dictionary-of-the-ai-era/terms/anthropic/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://jeffthomasiii.github.io/dictionary-of-the-ai-era/terms/claude/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://jeffthomasiii.github.io/dictionary-of-the-ai-era/terms/claude-opus/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://jeffthomasiii.github.io/dictionary-of-the-ai-era/terms/claude-sonnet/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://jeffthomasiii.github.io/dictionary-of-the-ai-era/terms/claude-haiku/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://jeffthomasiii.github.io/dictionary-of-the-ai-era/terms/microsoft/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://jeffthomasiii.github.io/dictionary-of-the-ai-era/terms/microsoft-copilot/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://jeffthomasiii.github.io/dictionary-of-the-ai-era/terms/github/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://jeffthomasiii.github.io/dictionary-of-the-ai-era/terms/github-copilot/</loc>
+    <lastmod>2026-08-29</lastmod>
   </url>
 </urlset>
