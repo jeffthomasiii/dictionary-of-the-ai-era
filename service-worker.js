@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'epochlex-pwa-20260829-1';
+const CACHE_VERSION = 'epochlex-pwa-20260829-2';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
@@ -15,9 +15,11 @@ const CORE_ASSETS = [
   './assets/css/taxonomy.css',
   './assets/css/mobile-nav.css',
   './assets/css/mobile-browse.css',
+  './assets/css/pwa.css',
   './assets/js/app.js',
   './assets/js/mobile-nav.js',
   './assets/js/mobile-browse.js',
+  './assets/js/pwa.js',
   './data/terms.json'
 ];
 
@@ -45,11 +47,11 @@ async function networkFirst(request) {
     const response = await fetch(request);
     if (response && response.ok) cache.put(request, response.clone());
     return response;
-  } catch (_) {
+  } catch (error) {
     const cached = await caches.match(request);
     if (cached) return cached;
     if (request.mode === 'navigate') return caches.match('./offline.html');
-    throw _;
+    throw error;
   }
 }
 
