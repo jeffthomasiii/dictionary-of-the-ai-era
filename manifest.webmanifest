@@ -12,16 +12,10 @@
   "categories": ["education", "reference"],
   "icons": [
     {
-      "src": "favicon.png",
+      "src": "assets/brand/epochlex/epochlex-app-icon.svg",
       "sizes": "any",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "favicon.png",
-      "sizes": "any",
-      "type": "image/png",
-      "purpose": "maskable"
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
     }
   ]
 }
