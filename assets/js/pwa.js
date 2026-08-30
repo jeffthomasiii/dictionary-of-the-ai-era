@@ -11,6 +11,14 @@
     document.head.append(manifest);
   }
 
+  if (!document.querySelector('link[data-pwa-styles]')) {
+    const styles = document.createElement('link');
+    styles.rel = 'stylesheet';
+    styles.href = new URL('assets/css/pwa.css', siteRoot).href;
+    styles.dataset.pwaStyles = 'true';
+    document.head.append(styles);
+  }
+
   if (!document.querySelector('link[rel="apple-touch-icon"]')) {
     const touchIcon = document.createElement('link');
     touchIcon.rel = 'apple-touch-icon';
