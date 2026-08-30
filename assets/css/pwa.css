@@ -1,0 +1,22 @@
+/* Installed-web-app refinements. Browser-mode layout remains governed by the existing site styles. */
+@media (display-mode: standalone) {
+  html, body { min-height: 100%; }
+  body {
+    min-height: 100dvh;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .site-header {
+    padding-top: env(safe-area-inset-top);
+  }
+  .site-footer {
+    padding-bottom: calc(26px + env(safe-area-inset-bottom));
+  }
+}
+
+@media (display-mode: standalone) and (max-width: 680px) {
+  .header-inner { min-height: 58px; }
+  .site-header { background: color-mix(in srgb, var(--bg) 97%, transparent); }
+  .mobile-nav-panel { max-height: calc(100dvh - 58px - env(safe-area-inset-top)); }
+  .term-page { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
+  .dictionary-section { padding-bottom: calc(54px + env(safe-area-inset-bottom)); }
+}
