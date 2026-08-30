@@ -8,6 +8,7 @@
 
   const currentScript = document.currentScript;
   const assetVersion = new URL(currentScript?.src || window.location.href).searchParams.get('v');
+  const siteRoot = currentScript?.src ? new URL('../../', currentScript.src) : new URL('./', window.location.href);
   if (currentScript?.src && !document.querySelector('link[data-mobile-nav-styles]')) {
     const styles = document.createElement('link');
     styles.rel = 'stylesheet';
@@ -16,6 +17,15 @@
     styles.href = stylesUrl.href;
     styles.dataset.mobileNavStyles = 'true';
     document.head.append(styles);
+  }
+
+  if (currentScript?.src && !document.querySelector('script[data-pwa-loader]')) {
+    const pwaScript = document.createElement('script');
+    const pwaUrl = new URL('pwa.js', currentScript.src);
+    if (assetVersion) pwaUrl.searchParams.set('v', assetVersion);
+    pwaScript.src = pwaUrl.href;
+    pwaScript.dataset.pwaLoader = 'true';
+    document.head.append(pwaScript);
   }
 
   const details = document.createElement('details');
@@ -33,6 +43,12 @@
   mobileNav.className = 'mobile-primary-nav';
   mobileNav.setAttribute('aria-label', 'Mobile primary navigation');
   mobileNav.innerHTML = desktopNav.innerHTML;
+
+  const searchLink = document.createElement('a');
+  searchLink.className = 'mobile-nav-search';
+  searchLink.href = new URL('#search', siteRoot).href;
+  searchLink.textContent = 'Search';
+  mobileNav.prepend(searchLink);
 
   panel.append(mobileNav);
   details.append(summary, panel);

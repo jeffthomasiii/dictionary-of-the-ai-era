@@ -1,0 +1,27 @@
+{
+  "id": "./",
+  "name": "EpochLex · Dictionary of the AI Era",
+  "short_name": "EpochLex",
+  "description": "A searchable, living reference for the terminology of the AI era.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F5F2EC",
+  "theme_color": "#0F1D2D",
+  "orientation": "any",
+  "categories": ["education", "reference"],
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
