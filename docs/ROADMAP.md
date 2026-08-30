@@ -28,6 +28,19 @@ The focus now shifts from accumulating MVP features to improving readiness, iden
 
 The repository now includes a repeatable QA baseline in [`QA.md`](QA.md). Remaining readiness work includes deliberate human spot checks across representative devices, browsers, keyboard-only use, screen-reader behavior, themes, reduced motion, pronunciation, and graceful degradation.
 
+### Mobile web app and install identity
+
+EpochLex now has a first-launch installable web-app foundation. During initial mobile testing, the installed app uses the existing `assets/brand/epochlex/epochlex-logo-stacked-pronunciation-light.png` brand asset as a pragmatic launcher icon rather than treating it as the permanent app-icon design.
+
+Future refinement should include:
+
+- design and validate a dedicated EpochLex app icon that remains legible across Android and other supported launcher treatments;
+- create appropriate standard and maskable icon variants and sizes rather than relying on a general-purpose brand asset;
+- verify icon safe areas, background treatment, cropping, and launcher masking on representative devices;
+- keep the app icon consistent with the approved EpochLex identity without changing the underlying logo artwork solely to satisfy launcher behavior.
+
+This is product-polish work, not a new logo or brand-direction decision.
+
 ### Public identity and URL migration
 
 The short-form brand decision is complete: **EpochLex** is the public product name and **Dictionary of the AI Era** remains the descriptor.
