@@ -1,0 +1,48 @@
+name: Feature or improvement
+description: Suggest an improvement to EpochLex's reader experience, tooling, documentation, or contributor workflow.
+title: "[Idea]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem or opportunity does this address?
+      description: Start with the reader, contributor, maintainer, or research need rather than the proposed implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Proposed improvement
+      description: Describe the behavior or outcome you have in mind.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Primary area
+      options:
+        - Search and discovery
+        - Term pages and reading experience
+        - Accessibility
+        - Responsive / mobile UX
+        - Editorial and research workflow
+        - Contributor experience
+        - Documentation
+        - Validation / automation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or additional context
+      description: Include examples, screenshots, comparable patterns, or tradeoffs if useful.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and the roadmap for something similar.
+          required: true
