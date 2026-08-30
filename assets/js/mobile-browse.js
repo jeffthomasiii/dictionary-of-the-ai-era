@@ -29,6 +29,16 @@
   searchWrap.parentNode.insertBefore(controls, searchWrap);
   controls.appendChild(searchWrap);
 
+  const focusSearchFromHash = () => {
+    if (window.location.hash !== '#search') return;
+    requestAnimationFrame(() => {
+      search.scrollIntoView({ block: 'center', behavior: 'auto' });
+      search.focus({ preventScroll: true });
+    });
+  };
+  focusSearchFromHash();
+  window.addEventListener('hashchange', focusSearchFromHash);
+
   const toggle = document.createElement('button');
   toggle.className = 'mobile-filter-toggle';
   toggle.type = 'button';
@@ -50,6 +60,7 @@
     if (filter.classList.contains('work')) return 'work';
     if (filter.classList.contains('systems')) return 'systems';
     if (filter.classList.contains('risks')) return 'risks';
+    if (filter.classList.contains('entities')) return 'entities';
     return 'all';
   };
 
