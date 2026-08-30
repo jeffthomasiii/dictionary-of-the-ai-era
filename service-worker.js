@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'epochlex-pwa-20260829-2';
+const CACHE_VERSION = 'epochlex-pwa-20260830-1';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
@@ -8,6 +8,8 @@ const CORE_ASSETS = [
   './offline.html',
   './manifest.webmanifest',
   './favicon.png',
+  './assets/brand/epochlex/epochlex-app-icon.svg',
+  './assets/brand/epochlex/epochlex-mark-light.png',
   './assets/css/styles.css',
   './assets/css/term-pages.css',
   './assets/css/brand-theme.css',
