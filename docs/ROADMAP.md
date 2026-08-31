@@ -17,10 +17,14 @@ The initial product and corpus MVP is substantially complete:
 - publishing and SEO foundation;
 - Living Dictionary and annual-edition model;
 - open-source repository and contribution guidance;
+- structured issue forms and pull-request guidance;
+- GitHub Discussions for community conversation;
+- a linked GitHub Project for priorities and contributor-ready work;
 - repeatable accessibility and product-readiness QA baseline;
-- EpochLex selected as the public identity after a brand-collision review of the earlier AILex name.
+- EpochLex selected as the public identity after a brand-collision review of the earlier AILex name;
+- the custom public domain `epochlex.justathoughtblog.org` configured for GitHub Pages.
 
-The focus now shifts from accumulating MVP features to improving readiness, identity infrastructure, contribution quality, and long-term maintainability.
+The focus now shifts from accumulating MVP features to improving readiness, contribution quality, publishing integrity, and long-term maintainability.
 
 ## Product readiness
 
@@ -41,39 +45,48 @@ Future refinement should include:
 
 This is product-polish work, not a new logo or brand-direction decision.
 
-### Public identity and URL migration
+### Public identity and URLs
 
 The short-form brand decision is complete: **EpochLex** is the public product name and **Dictionary of the AI Era** remains the descriptor.
 
-The next identity work is infrastructure rather than naming:
+The custom public domain **https://epochlex.justathoughtblog.org/** is now configured for GitHub Pages. The repository itself remains `dictionary-of-the-ai-era`.
 
-- confirm a suitable EpochLex domain or subdomain;
-- decide whether the repository itself should eventually be renamed;
-- plan redirects and GitHub Pages behavior before changing URLs;
-- migrate canonical and sitemap URLs only as one coordinated change;
-- create a deliberate EpochLex social-preview image and add `og:image` support after the durable public URL is chosen.
+Remaining identity/infrastructure work may include:
 
-The current `dictionary-of-the-ai-era` repository slug and GitHub Pages URL remain valid during this transition.
+- deciding whether the repository itself should eventually be renamed;
+- preserving redirects and GitHub Pages behavior before any repository URL change;
+- keeping canonical URLs, sitemap URLs, social metadata URLs, and public documentation aligned with the custom domain;
+- creating a deliberate EpochLex social-preview image and adding `og:image` support.
 
 ### Publishing verification
 
 - optional search-engine console submission;
 - sitemap/indexing verification;
 - social-card preview testing after the branded preview asset exists;
-- periodic metadata integrity checks as the corpus grows.
+- periodic metadata integrity checks as the corpus grows;
+- periodic checks that canonical and social URLs continue to use the current public domain.
 
 ## Contribution and editorial operations
 
-The next operational maturity step is making outside participation easier without weakening editorial quality.
+EpochLex now has a basic contributor-participation system in place:
+
+- a reader-friendly public Contribute page;
+- repository-level contribution guidance;
+- structured issue forms for term suggestions, research corrections, bugs, feature requests, and accessibility testing;
+- a pull-request template;
+- GitHub Discussions for terminology conversations, research questions, and ideas that are not yet concrete work items;
+- a linked GitHub Project for current priorities and contributor-ready work;
+- a growing set of bounded issues suitable for outside contributors.
+
+The next operational maturity work is less about creating entry points and more about making contribution quality and review sustainable.
 
 Possible work includes:
 
-- a clearer term/correction submission path for non-developers;
-- issue templates or structured proposal forms;
 - contributor-oriented validation tooling;
 - clearer review states for proposed/revised terms;
 - documented handling of contested terminology and source disagreements;
-- contributor recognition and release-note practices.
+- contributor recognition and release-note practices;
+- periodic review of whether Discussions, Issues, the Project, and public contribution guidance still route people clearly.
 
 EpochLex should remain open to contributions beyond code, including term suggestions, source research, corrections, pronunciation guidance, accessibility testing, design feedback, and documentation improvements.
 
