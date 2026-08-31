@@ -7,7 +7,7 @@ EpochLex is an open-source, living dictionary of the language developing around 
 
 **Development approach: Vibe coded · Human-directed · AI-assisted · Human-reviewed**
 
-**Public site:** https://epochlex.justathought.org
+**Public site:** https://epochlex.justathoughtblog.org
 
 ## What EpochLex is
 
