@@ -1,0 +1,43 @@
+name: Accessibility or device test
+description: Report an accessibility, responsive-layout, keyboard, screen-reader, or cross-device finding.
+title: "[Accessibility]: "
+labels:
+  - bug
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page or feature tested
+    validations:
+      required: true
+  - type: textarea
+    id: finding
+    attributes:
+      label: Finding
+      description: Explain what made the experience difficult, inaccessible, confusing, or inconsistent.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Test environment
+      description: Include device, browser, operating system, assistive technology, viewport, zoom level, or input method when relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: Describe the more usable or accessible outcome.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Additional evidence
+      description: Screenshots, recordings, WCAG references, reproduction steps, or other context.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues for the same finding.
+          required: true

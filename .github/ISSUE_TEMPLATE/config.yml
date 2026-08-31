@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Contributing guide
+    url: https://github.com/jeffthomasiii/dictionary-of-the-ai-era/blob/main/CONTRIBUTING.md
+    about: Read how EpochLex handles code, research, editorial, design, testing, and documentation contributions.
+  - name: Reader-friendly contribution page
+    url: https://epochlex.justathoughtblog.org/contribute.html
+    about: Start here if you want to contribute without working directly in GitHub.

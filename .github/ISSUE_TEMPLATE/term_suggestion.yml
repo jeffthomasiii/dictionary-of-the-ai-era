@@ -1,0 +1,60 @@
+name: Suggest a term or named entry
+description: Propose terminology or an AI-era entity that may belong in EpochLex.
+title: "[Entry]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        EpochLex is curated rather than exhaustive. A suggestion does not need to arrive fully researched, but evidence of real-world usage helps us evaluate whether it adds distinct reader value.
+  - type: input
+    id: term
+    attributes:
+      label: Proposed entry
+      placeholder: Agentic AI
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: What kind of entry is this?
+      options:
+        - Term or concept
+        - Organization
+        - Product
+        - Model family
+        - Individual model
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: meaning
+    attributes:
+      label: What does it mean and why does it belong in EpochLex?
+      description: Explain the term in your own words and the reader value of a dedicated entry.
+    validations:
+      required: true
+  - type: textarea
+    id: usage
+    attributes:
+      label: Evidence of real-world usage
+      description: Share links, citations, examples, or places where the term is being used.
+  - type: textarea
+    id: aliases
+    attributes:
+      label: Aliases, acronyms, or related terms
+  - type: textarea
+    id: provenance
+    attributes:
+      label: Origin or provenance information
+      description: Share anything known about who introduced, coined, formalized, or popularized the term. It is okay to say this is unknown.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched EpochLex and existing issues to make sure this is not already represented.
+          required: true
+        - label: I understand that inclusion depends on EpochLex's editorial criteria and available evidence.
+          required: true

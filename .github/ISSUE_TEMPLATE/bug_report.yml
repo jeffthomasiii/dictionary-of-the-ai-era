@@ -1,0 +1,62 @@
+name: Bug report
+description: Report a reproducible problem with the EpochLex site or repository.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve EpochLex. Please describe what happened and how we can reproduce it.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Give the smallest useful set of steps that reproduces the issue.
+      placeholder: |
+        1. Open ...
+        2. Select ...
+        3. See ...
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Page or term
+      description: Link to the affected page or name the affected term, if applicable.
+  - type: dropdown
+    id: device
+    attributes:
+      label: Where did you see it?
+      options:
+        - Desktop
+        - Tablet
+        - Mobile
+        - More than one device type
+        - Not device-specific
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Browser and environment
+      description: Browser, operating system, screen size, or other details that may matter.
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Screenshots, console errors, accessibility details, or anything else that may help.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues for the same problem.
+          required: true

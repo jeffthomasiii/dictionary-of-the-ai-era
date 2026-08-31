@@ -1,0 +1,58 @@
+name: Research or definition correction
+description: Challenge or improve a definition, source, origin claim, pronunciation, categorization, or historical detail.
+title: "[Research]: "
+labels:
+  - documentation
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Entry or page
+      description: Name the EpochLex entry or documentation page involved.
+    validations:
+      required: true
+  - type: dropdown
+    id: correction_type
+    attributes:
+      label: What should be reviewed?
+      options:
+        - Definition or example
+        - Source quality
+        - Origin / first-known-use claim
+        - Historical context
+        - Pronunciation
+        - Category or entry type
+        - Alias or related term
+        - Other editorial detail
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: What does EpochLex currently say?
+      description: Quote only the smallest portion necessary or describe the current claim.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: What should change?
+      description: Explain the correction, uncertainty, or alternative interpretation.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting sources
+      description: Provide credible sources and briefly state what each source supports. Primary sources are preferred for origin, naming, releases, standards, and technical definitions.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I have distinguished evidence from my interpretation.
+          required: true
+        - label: I searched existing issues for the same correction.
+          required: true
