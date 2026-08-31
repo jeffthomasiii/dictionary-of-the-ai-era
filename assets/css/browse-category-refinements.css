@@ -92,6 +92,10 @@ details.category-collection {
   padding: 0;
 }
 
+.category-collection[data-category-key="entities"] {
+  --collection-accent: var(--entities);
+}
+
 .category-collection-summary {
   list-style: none;
   display: grid;
