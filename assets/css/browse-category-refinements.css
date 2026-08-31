@@ -71,7 +71,7 @@
 }
 
 /* The category jump pills remain one clean row. Growth produces horizontal overflow,
-   not extra rows; counts can grow without destabilizing the page. */
+   not extra rows; three-digit and larger counts do not destabilize the layout. */
 .category-jump-nav {
   flex-wrap: nowrap;
   overflow-x: auto;
