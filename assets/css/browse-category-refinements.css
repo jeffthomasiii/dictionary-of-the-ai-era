@@ -1,62 +1,84 @@
 /* Browse + Categories refinements
    Keeps high-frequency controls compact and category browsing scannable as EpochLex grows. */
 
-/* Browse hero: filters stay restrained and read as secondary controls. */
+/* Browse hero: six filters remain one clean row without squeezing labels outside buttons. */
 @media (min-width: 981px) {
   .toolbar {
     display: flex;
     flex-wrap: nowrap;
     gap: 6px;
-    max-width: 1040px;
+    width: min(950px, calc(100vw - 300px));
+    max-width: none;
+    margin-left: 50%;
+    transform: translateX(-50%);
   }
 
   .toolbar .filter {
-    flex: 1 1 0;
-    min-width: 0;
-    padding: 7px 8px;
+    flex: 0 1 auto;
+    min-width: max-content;
+    padding: 7px 9px;
     gap: 5px;
-    font-size: .68rem;
-    line-height: 1.2;
+    font-size: .65rem;
+    line-height: 1.15;
     border-radius: 9px;
     white-space: nowrap;
   }
 
-  .toolbar .filter.entities {
-    flex-grow: 1.32;
-  }
+  .toolbar .filter.all { flex: 1 1 108px; }
+  .toolbar .filter.culture { flex: 1 1 132px; }
+  .toolbar .filter.work { flex: 1 1 140px; }
+  .toolbar .filter.systems { flex: 1 1 156px; }
+  .toolbar .filter.risks { flex: 1 1 150px; }
+  .toolbar .filter.entities { flex: 1.35 1 224px; }
 
   .toolbar .category-icon {
-    width: 20px;
-    height: 20px;
+    width: 19px;
+    height: 19px;
     border-radius: 6px;
     flex: 0 0 auto;
   }
 
   .toolbar .category-icon svg {
-    width: 15px;
-    height: 15px;
+    width: 14px;
+    height: 14px;
   }
 }
 
 /* The quote is supporting copy, not another brand headline. */
+.hero-quote {
+  padding: 16px 15px;
+}
+
 .hero-quote p {
   font-family: var(--font-sans);
   font-style: italic;
   font-weight: 400;
   color: var(--muted);
-  line-height: 1.5;
+  font-size: .91rem;
+  line-height: 1.48;
+  margin-bottom: 10px;
 }
 
 .hero-quote small {
   display: block;
   white-space: nowrap;
+  font-size: .54rem;
+  letter-spacing: .09em;
+  line-height: 1.3;
 }
 
-/* Category overview cards use their own semantic accents as a quiet overlay. */
+/* Category overview cards use their own semantic accents as a quiet overlay.
+   A single vertical sequence avoids the awkward final orphan card. */
+.category-grid {
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
 .category-card {
   --category-card-accent: var(--accent);
   border-left: 3px solid var(--category-card-accent);
   background: color-mix(in srgb, var(--category-card-accent) 7%, var(--surface));
+  padding: 22px 24px;
 }
 
 .category-card--culture { --category-card-accent: var(--culture); }
@@ -70,96 +92,148 @@
   border-left-color: var(--category-card-accent);
 }
 
-/* The category jump pills remain one clean row. Growth produces horizontal overflow,
-   not extra rows; three-digit and larger counts do not destabilize the layout. */
+/* Category jump controls are compact enough to fit as a single desktop row.
+   Scrollbars remain hidden as a fallback on narrower layouts. */
 .category-jump-nav {
+  display: flex;
   flex-wrap: nowrap;
+  gap: 6px;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
-  scrollbar-width: thin;
-  padding-bottom: 5px;
+  scrollbar-width: none;
+  padding-bottom: 2px;
+  margin-bottom: 30px;
 }
 
-.category-jump-nav a {
-  flex: 0 0 auto;
-  white-space: nowrap;
-  font-weight: 500;
-}
-
-/* Collapsible category collections. Native details/summary preserves accessibility. */
-details.category-collection {
-  border-top: 1px solid var(--line);
-  padding: 0;
-}
-
-.category-collection[data-category-key="entities"] {
-  --collection-accent: var(--entities);
-}
-
-.category-collection-summary {
-  list-style: none;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto auto;
-  align-items: center;
-  gap: 16px;
-  padding: 24px 0;
-  cursor: pointer;
-}
-
-.category-collection-summary::-webkit-details-marker {
+.category-jump-nav::-webkit-scrollbar {
   display: none;
 }
 
-.category-collection-summary h3 {
+.category-jump-nav a {
+  flex: 1 1 auto;
+  min-width: max-content;
+  justify-content: center;
+  gap: 5px;
+  padding: 6px 8px;
+  white-space: nowrap;
+  font-size: .66rem;
+  line-height: 1.15;
+  font-weight: 500;
+}
+
+.category-jump-dot {
+  width: 7px;
+  height: 7px;
+}
+
+/* Category sections always expose two real entries, then progressively disclose the rest. */
+.category-collection {
+  --collection-accent: var(--accent);
+  scroll-margin-top: 92px;
+  border-top: 1px solid var(--line);
+  padding: 28px 0 30px;
+}
+
+.category-collection[data-category-key="culture"] { --collection-accent: var(--culture); }
+.category-collection[data-category-key="work"] { --collection-accent: var(--work); }
+.category-collection[data-category-key="systems"] { --collection-accent: var(--systems); }
+.category-collection[data-category-key="risks"] { --collection-accent: var(--risks); }
+.category-collection[data-category-key="entities"] { --collection-accent: var(--entities); }
+
+.category-collection-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.category-collection-heading h3 {
   margin: 0;
 }
 
-.category-collection-summary::after {
-  content: "+";
-  width: 30px;
-  height: 30px;
+.category-preview-grid,
+.category-more .category-term-grid {
   display: grid;
-  place-items: center;
-  border: 1px solid color-mix(in srgb, var(--collection-accent) 36%, var(--line));
-  border-radius: 50%;
-  color: var(--collection-accent);
-  font: 500 1.1rem/1 var(--font-sans);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
 }
 
-details.category-collection[open] > .category-collection-summary::after {
+.category-more {
+  margin-top: 12px;
+}
+
+.category-more > summary {
+  list-style: none;
+  width: max-content;
+  max-width: 100%;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid color-mix(in srgb, var(--collection-accent) 34%, var(--line));
+  border-radius: 999px;
+  padding: 7px 11px;
+  color: var(--collection-accent);
+  background: color-mix(in srgb, var(--collection-accent) 5%, var(--surface));
+  cursor: pointer;
+  font-size: .72rem;
+  font-weight: 600;
+}
+
+.category-more > summary::-webkit-details-marker {
+  display: none;
+}
+
+.category-more > summary::after {
+  content: "+";
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.category-more[open] > summary::after {
   content: "−";
 }
 
-.category-collection-summary:hover h3,
-.category-collection-summary:focus-visible h3 {
-  color: var(--collection-accent);
+.category-more[open] > summary {
+  margin-bottom: 12px;
 }
 
-.category-collection-summary:focus-visible {
+.category-more > summary:hover,
+.category-more > summary:focus-visible {
+  color: var(--ink);
+  border-color: var(--collection-accent);
+}
+
+.category-more > summary:focus-visible {
   outline: 2px solid var(--accent-secondary);
-  outline-offset: 4px;
-  border-radius: 4px;
+  outline-offset: 3px;
 }
 
-.category-collection .category-term-grid {
-  padding: 0 0 28px;
+@media (max-width: 980px) {
+  .category-jump-nav a {
+    flex: 0 0 auto;
+  }
 }
 
 @media (max-width: 680px) {
-  .category-collection-summary {
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 10px 14px;
-    padding: 20px 0;
+  .category-card {
+    padding: 20px;
   }
 
-  .category-collection-summary .category-count {
-    grid-column: 1;
-    grid-row: 2;
-    justify-self: start;
+  .category-jump-nav {
+    justify-content: flex-start;
   }
 
-  .category-collection-summary::after {
-    grid-column: 2;
-    grid-row: 1 / span 2;
+  .category-collection {
+    padding: 24px 0 26px;
+  }
+
+  .category-collection-heading {
+    align-items: flex-end;
+  }
+
+  .category-preview-grid,
+  .category-more .category-term-grid {
+    grid-template-columns: 1fr;
   }
 }
