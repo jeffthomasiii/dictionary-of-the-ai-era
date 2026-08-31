@@ -14,6 +14,13 @@
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   }[ch]));
 
+  function openCollection(key, scroll = false) {
+    const collection = document.getElementById(`category-${key}`);
+    if (!(collection instanceof HTMLDetailsElement)) return;
+    collection.open = true;
+    if (scroll) collection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
   function render(terms) {
     const jumpNav = categories.map(category => {
       const count = terms.filter(term => (term.categories || []).includes(category.name)).length;
@@ -27,10 +34,23 @@
 
       const cards = matches.map(term => `<a class="category-term-card" href="terms/${encodeURIComponent(term.slug)}/"><h4>${esc(term.term)}</h4><p>${esc(term.definition)}</p></a>`).join('');
 
-      return `<section class="category-collection" id="category-${category.key}" data-category-key="${category.key}"><div class="category-collection-heading"><h3>${esc(category.label)}</h3><span class="category-count">${matches.length} ${matches.length === 1 ? 'term' : 'terms'}</span></div><div class="category-term-grid">${cards}</div></section>`;
+      return `<details class="category-collection" id="category-${category.key}" data-category-key="${category.key}"><summary class="category-collection-summary"><h3>${esc(category.label)}</h3><span class="category-count">${matches.length} ${matches.length === 1 ? 'term' : 'terms'}</span></summary><div class="category-term-grid">${cards}</div></details>`;
     }).join('');
 
     root.innerHTML = `<nav class="category-jump-nav" aria-label="Jump to category">${jumpNav}</nav>${sections}`;
+
+    root.querySelectorAll('.category-jump-nav a[data-category-key]').forEach(link => {
+      link.addEventListener('click', event => {
+        event.preventDefault();
+        const key = link.dataset.categoryKey;
+        if (!key) return;
+        history.replaceState(null, '', `#category-${key}`);
+        openCollection(key, true);
+      });
+    });
+
+    const initialKey = location.hash.match(/^#category-(culture|work|systems|risks|entities)$/)?.[1];
+    if (initialKey) openCollection(initialKey);
   }
 
   fetch('data/terms.json')
