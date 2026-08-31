@@ -78,29 +78,30 @@
   font-weight: 400;
 }
 
+/* Independent newspaper-style columns avoid the awkward row-height gaps that
+   appeared when one feature wrapped to two lines and its neighbor did not. */
 .doc-feature-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 28px;
-  row-gap: 12px;
-  margin: 20px 0 0;
+  columns: 2;
+  column-gap: 38px;
+  margin: 18px 0 0;
   padding: 0;
   list-style: none;
 }
 
 .doc-feature-list li {
-  display: grid;
-  grid-template-columns: 7px minmax(0, 1fr);
-  gap: 11px;
-  align-items: start;
-  padding: 0;
+  position: relative;
+  break-inside: avoid;
+  margin: 0 0 10px;
+  padding-left: 18px;
 }
 
 .doc-feature-list li::before {
   content: "";
-  width: 7px;
-  height: 7px;
-  margin-top: .58em;
+  position: absolute;
+  left: 0;
+  top: .62em;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: var(--accent-secondary);
 }
@@ -190,7 +191,7 @@
   }
 
   .doc-feature-list {
-    grid-template-columns: 1fr;
+    columns: 1;
   }
 }
 
