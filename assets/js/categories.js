@@ -15,11 +15,12 @@
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   }[ch]));
 
-  function openCollection(key, scroll = false) {
+  const card = term => `<a class="category-term-card" href="terms/${encodeURIComponent(term.slug)}/"><h4>${esc(term.term)}</h4><p>${esc(term.definition)}</p></a>`;
+
+  function scrollToCollection(key) {
     const collection = document.getElementById(`category-${key}`);
-    if (!(collection instanceof HTMLDetailsElement)) return;
-    collection.open = true;
-    if (scroll) collection.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' });
+    if (!collection) return;
+    collection.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' });
   }
 
   function render(terms) {
@@ -33,9 +34,14 @@
         .filter(term => (term.categories || []).includes(category.name))
         .sort((a, b) => a.term.localeCompare(b.term));
 
-      const cards = matches.map(term => `<a class="category-term-card" href="terms/${encodeURIComponent(term.slug)}/"><h4>${esc(term.term)}</h4><p>${esc(term.definition)}</p></a>`).join('');
+      const preview = matches.slice(0, 2).map(card).join('');
+      const remaining = matches.slice(2).map(card).join('');
+      const moreCount = Math.max(matches.length - 2, 0);
+      const more = moreCount
+        ? `<details class="category-more"><summary>Show all ${matches.length} terms</summary><div class="category-term-grid">${remaining}</div></details>`
+        : '';
 
-      return `<details class="category-collection" id="category-${category.key}" data-category-key="${category.key}"><summary class="category-collection-summary"><h3>${esc(category.label)}</h3><span class="category-count">${matches.length} ${matches.length === 1 ? 'term' : 'terms'}</span></summary><div class="category-term-grid">${cards}</div></details>`;
+      return `<section class="category-collection" id="category-${category.key}" data-category-key="${category.key}"><div class="category-collection-heading"><h3>${esc(category.label)}</h3><span class="category-count">${matches.length} ${matches.length === 1 ? 'term' : 'terms'}</span></div><div class="category-preview-grid">${preview}</div>${more}</section>`;
     }).join('');
 
     root.innerHTML = `<nav class="category-jump-nav" aria-label="Jump to category">${jumpNav}</nav>${sections}`;
@@ -46,12 +52,12 @@
         const key = link.dataset.categoryKey;
         if (!key) return;
         history.replaceState(null, '', `#category-${key}`);
-        openCollection(key, true);
+        scrollToCollection(key);
       });
     });
 
     const initialKey = location.hash.match(/^#category-(culture|work|systems|risks|entities)$/)?.[1];
-    if (initialKey) openCollection(initialKey);
+    if (initialKey) scrollToCollection(initialKey);
   }
 
   fetch('data/terms.json')
