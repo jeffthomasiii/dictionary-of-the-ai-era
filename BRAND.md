@@ -4,6 +4,12 @@
 
 **EpochLex**
 
+The displayed brand name is always written exactly as **EpochLex**: capital **E**, lowercase **poch**, capital **L**, lowercase **ex**.
+
+Do not use display variants such as `Epochlex`, `EPOCHLEX`, `epochLex`, or `epochlex` when referring to the brand in prose, headings, interface copy, metadata titles, documentation, or promotional material.
+
+Lowercase `epochlex` is acceptable where technical conventions require or strongly favor lowercase, including URLs, domains, file paths, slugs, CSS/JavaScript identifiers, asset names, and similar implementation details.
+
 ## Pronunciation
 
 **/EP-uk-leks/**
@@ -116,7 +122,7 @@ Historical documentation may refer to **AILex** when describing that earlier sta
 
 ## Repository strategy
 
-The current repository name, `dictionary-of-the-ai-era`, predates both short-form brand names. It remains intentionally unchanged during the EpochLex identity migration so existing GitHub Pages URLs and external references are not casually broken.
+The current repository name, `dictionary-of-the-ai-era`, predates both short-form brand names. It remains intentionally unchanged so existing repository history and external GitHub references are not casually broken.
 
 A future repository transition should evaluate:
 
@@ -128,8 +134,6 @@ A future repository transition should evaluate:
 
 ## Domain strategy
 
-EpochLex should eventually use a short, memorable public URL if a suitable domain or subdomain is available and appropriate.
+The public site uses **https://epochlex.justathoughtblog.org/** as the current EpochLex domain.
 
-Domain selection and repository renaming are separate from this brand migration. When that transition occurs, canonical URLs, sitemap URLs, social metadata, redirects, GitHub Pages configuration, and documentation should be updated together.
-
-Until then, the product can be fully branded as EpochLex while continuing to use the existing GitHub Pages address.
+The custom domain and repository name are separate concerns. Canonical URLs, sitemap URLs, social metadata, redirects, GitHub Pages configuration, and documentation should remain aligned with the custom domain whenever publishing metadata changes. A future repository rename does not by itself require changing the public domain.

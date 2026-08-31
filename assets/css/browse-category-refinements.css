@@ -1,0 +1,239 @@
+/* Browse + Categories refinements
+   Keeps high-frequency controls compact and category browsing scannable as EpochLex grows. */
+
+/* Browse hero: six filters remain one clean row without squeezing labels outside buttons. */
+@media (min-width: 981px) {
+  .toolbar {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 6px;
+    width: min(950px, calc(100vw - 300px));
+    max-width: none;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .toolbar .filter {
+    flex: 0 1 auto;
+    min-width: max-content;
+    padding: 7px 9px;
+    gap: 5px;
+    font-size: .65rem;
+    line-height: 1.15;
+    border-radius: 9px;
+    white-space: nowrap;
+  }
+
+  .toolbar .filter.all { flex: 1 1 108px; }
+  .toolbar .filter.culture { flex: 1 1 132px; }
+  .toolbar .filter.work { flex: 1 1 140px; }
+  .toolbar .filter.systems { flex: 1 1 156px; }
+  .toolbar .filter.risks { flex: 1 1 150px; }
+  .toolbar .filter.entities { flex: 1.35 1 224px; }
+
+  .toolbar .category-icon {
+    width: 19px;
+    height: 19px;
+    border-radius: 6px;
+    flex: 0 0 auto;
+  }
+
+  .toolbar .category-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* The quote is supporting copy, not another brand headline. */
+.hero-quote {
+  padding: 16px 15px;
+}
+
+.hero-quote p {
+  font-family: var(--font-sans);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--muted);
+  font-size: .91rem;
+  line-height: 1.48;
+  margin-bottom: 10px;
+}
+
+.hero-quote small {
+  display: block;
+  white-space: nowrap;
+  font-size: .54rem;
+  letter-spacing: .09em;
+  line-height: 1.3;
+}
+
+/* Category overview cards use their own semantic accents as a quiet overlay.
+   A single vertical sequence avoids the awkward final orphan card. */
+.category-grid {
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.category-card {
+  --category-card-accent: var(--accent);
+  border-left: 3px solid var(--category-card-accent);
+  background: color-mix(in srgb, var(--category-card-accent) 7%, var(--surface));
+  padding: 22px 24px;
+}
+
+.category-card--culture { --category-card-accent: var(--culture); }
+.category-card--work { --category-card-accent: var(--work); }
+.category-card--systems { --category-card-accent: var(--systems); }
+.category-card--risks { --category-card-accent: var(--risks); }
+.category-card--entities { --category-card-accent: var(--entities); }
+
+.category-card:hover {
+  border-color: color-mix(in srgb, var(--category-card-accent) 48%, var(--line));
+  border-left-color: var(--category-card-accent);
+}
+
+/* Category jump controls are compact enough to fit as a single desktop row.
+   Scrollbars remain hidden as a fallback on narrower layouts. */
+.category-jump-nav {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 6px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: none;
+  padding-bottom: 2px;
+  margin-bottom: 30px;
+}
+
+.category-jump-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.category-jump-nav a {
+  flex: 1 1 auto;
+  min-width: max-content;
+  justify-content: center;
+  gap: 5px;
+  padding: 6px 8px;
+  white-space: nowrap;
+  font-size: .66rem;
+  line-height: 1.15;
+  font-weight: 500;
+}
+
+.category-jump-dot {
+  width: 7px;
+  height: 7px;
+}
+
+/* Category sections always expose two real entries, then progressively disclose the rest. */
+.category-collection {
+  --collection-accent: var(--accent);
+  scroll-margin-top: 92px;
+  border-top: 1px solid var(--line);
+  padding: 28px 0 30px;
+}
+
+.category-collection[data-category-key="culture"] { --collection-accent: var(--culture); }
+.category-collection[data-category-key="work"] { --collection-accent: var(--work); }
+.category-collection[data-category-key="systems"] { --collection-accent: var(--systems); }
+.category-collection[data-category-key="risks"] { --collection-accent: var(--risks); }
+.category-collection[data-category-key="entities"] { --collection-accent: var(--entities); }
+
+.category-collection-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.category-collection-heading h3 {
+  margin: 0;
+}
+
+.category-preview-grid,
+.category-more .category-term-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.category-more {
+  margin-top: 12px;
+}
+
+.category-more > summary {
+  list-style: none;
+  width: max-content;
+  max-width: 100%;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid color-mix(in srgb, var(--collection-accent) 34%, var(--line));
+  border-radius: 999px;
+  padding: 7px 11px;
+  color: var(--collection-accent);
+  background: color-mix(in srgb, var(--collection-accent) 5%, var(--surface));
+  cursor: pointer;
+  font-size: .72rem;
+  font-weight: 600;
+}
+
+.category-more > summary::-webkit-details-marker {
+  display: none;
+}
+
+.category-more > summary::after {
+  content: "+";
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.category-more[open] > summary::after {
+  content: "−";
+}
+
+.category-more[open] > summary {
+  margin-bottom: 12px;
+}
+
+.category-more > summary:hover,
+.category-more > summary:focus-visible {
+  color: var(--ink);
+  border-color: var(--collection-accent);
+}
+
+.category-more > summary:focus-visible {
+  outline: 2px solid var(--accent-secondary);
+  outline-offset: 3px;
+}
+
+@media (max-width: 980px) {
+  .category-jump-nav a {
+    flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 680px) {
+  .category-card {
+    padding: 20px;
+  }
+
+  .category-jump-nav {
+    justify-content: flex-start;
+  }
+
+  .category-collection {
+    padding: 24px 0 26px;
+  }
+
+  .category-collection-heading {
+    align-items: flex-end;
+  }
+
+  .category-preview-grid,
+  .category-more .category-term-grid {
+    grid-template-columns: 1fr;
+  }
+}

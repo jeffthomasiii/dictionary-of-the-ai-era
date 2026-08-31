@@ -21,6 +21,17 @@ The public website is written primarily for people who want to **use and underst
 | Understand Living Dictionary and annual-edition policy | [`../EDITIONS.md`](../EDITIONS.md) |
 | Understand licensing | [`../LICENSE`](../LICENSE) and [`../CONTENT-LICENSE.md`](../CONTENT-LICENSE.md) |
 
+## Participate in the project
+
+Repository documentation explains the standards behind the work; GitHub's collaboration surfaces are where that work is discussed, selected, tracked, and reviewed.
+
+- Use [Discussions](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/discussions) for terminology conversations, research questions, ideas, and topics that are not yet concrete work items.
+- Use [Issues](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/issues/new/choose) for structured term suggestions, research corrections, bugs, feature requests, accessibility findings, and defined tasks.
+- Use [EpochLex Projects](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/projects) to see current priorities and contributor-ready work.
+- Use pull requests for concrete repository changes ready for human review.
+
+See [`../CONTRIBUTING.md`](../CONTRIBUTING.md) for the contribution workflow and editorial/technical expectations.
+
 ## Documentation boundary
 
 ### Public-site documentation

@@ -6,6 +6,17 @@ Contributions do **not** have to involve code.
 
 Useful contributors may include developers, researchers, writers, editors, designers, accessibility testers, documentation contributors, AI practitioners, and readers who simply notice a missing term, weak source, broken pronunciation, or site problem.
 
+## Choosing where to start
+
+EpochLex uses several GitHub surfaces for different kinds of participation:
+
+- **[Discussions](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/discussions)** are for terminology conversations, research questions, ideas, uncertainty, and topics that may benefit from community discussion before becoming tracked work.
+- **[Issues](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/issues/new/choose)** are for actionable term suggestions, research corrections, bug reports, feature requests, accessibility findings, and defined work.
+- **[EpochLex Projects](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/projects)** provide a view of current priorities and contributor-ready opportunities.
+- **Pull requests** are for concrete repository changes that are ready for human review.
+
+If you are not sure whether an idea is ready to become an issue, starting a Discussion is appropriate. If the work is already specific enough to describe, reproduce, research, or complete, use the matching issue form or an existing issue.
+
 ## Ways to contribute
 
 You can help EpochLex by contributing:
@@ -22,7 +33,7 @@ You can help EpochLex by contributing:
 - documentation, editing, or information-architecture improvements;
 - review feedback on existing entries or features.
 
-The public [Contribute page](https://jeffthomasiii.github.io/dictionary-of-the-ai-era/contribute.html) is the reader-friendly entry point. This document describes contribution expectations for people working directly with the repository.
+The public [Contribute page](https://epochlex.justathoughtblog.org/contribute.html) is the reader-friendly entry point. This document describes contribution expectations for people working directly with the repository.
 
 ## Before contributing
 
@@ -175,7 +186,7 @@ Use this boundary:
 - **Public website documentation** should help readers understand EpochLex, its features, origin, categories, methodology, Living Dictionary behavior, and easy ways to contribute.
 - **Repository documentation** should preserve project history, architecture, taxonomy, governance, detailed editorial standards, development philosophy, contribution workflows, roadmap, release mechanics, and the open-source AI experiment.
 
-When a feature moves from roadmap to implemented, update the relevant documentation rather than leaving stale future-state language behind.
+When a feature or workflow moves from roadmap to implemented, update the relevant documentation rather than leaving stale future-state language behind.
 
 ## Validation checklist
 
@@ -187,7 +198,7 @@ Depending on the change, verify:
 - related-term targets resolve and do not self-link;
 - JavaScript syntax is valid;
 - dedicated term pages exist for all published entries;
-- canonical/social metadata remains present;
+- canonical/social metadata remains present and uses the current public domain;
 - sitemap URLs reflect the published page set;
 - pronunciation controls remain keyboard and screen-reader accessible;
 - light, dark, desktop, tablet, and mobile behavior remain usable;
