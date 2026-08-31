@@ -1,0 +1,161 @@
+/* Browse + Categories refinements
+   Keeps high-frequency controls compact and category browsing scannable as EpochLex grows. */
+
+/* Browse hero: filters stay restrained and read as secondary controls. */
+@media (min-width: 981px) {
+  .toolbar {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 6px;
+    max-width: 1040px;
+  }
+
+  .toolbar .filter {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 7px 8px;
+    gap: 5px;
+    font-size: .68rem;
+    line-height: 1.2;
+    border-radius: 9px;
+    white-space: nowrap;
+  }
+
+  .toolbar .filter.entities {
+    flex-grow: 1.32;
+  }
+
+  .toolbar .category-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    flex: 0 0 auto;
+  }
+
+  .toolbar .category-icon svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+/* The quote is supporting copy, not another brand headline. */
+.hero-quote p {
+  font-family: var(--font-sans);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.hero-quote small {
+  display: block;
+  white-space: nowrap;
+}
+
+/* Category overview cards use their own semantic accents as a quiet overlay. */
+.category-card {
+  --category-card-accent: var(--accent);
+  border-left: 3px solid var(--category-card-accent);
+  background: color-mix(in srgb, var(--category-card-accent) 7%, var(--surface));
+}
+
+.category-card--culture { --category-card-accent: var(--culture); }
+.category-card--work { --category-card-accent: var(--work); }
+.category-card--systems { --category-card-accent: var(--systems); }
+.category-card--risks { --category-card-accent: var(--risks); }
+.category-card--entities { --category-card-accent: var(--entities); }
+
+.category-card:hover {
+  border-color: color-mix(in srgb, var(--category-card-accent) 48%, var(--line));
+  border-left-color: var(--category-card-accent);
+}
+
+/* The category jump pills remain one clean row. Growth produces horizontal overflow,
+   not extra rows; counts can grow without destabilizing the page. */
+.category-jump-nav {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+  padding-bottom: 5px;
+}
+
+.category-jump-nav a {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+/* Collapsible category collections. Native details/summary preserves accessibility. */
+details.category-collection {
+  border-top: 1px solid var(--line);
+  padding: 0;
+}
+
+.category-collection-summary {
+  list-style: none;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 0;
+  cursor: pointer;
+}
+
+.category-collection-summary::-webkit-details-marker {
+  display: none;
+}
+
+.category-collection-summary h3 {
+  margin: 0;
+}
+
+.category-collection-summary::after {
+  content: "+";
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--collection-accent) 36%, var(--line));
+  border-radius: 50%;
+  color: var(--collection-accent);
+  font: 500 1.1rem/1 var(--font-sans);
+}
+
+details.category-collection[open] > .category-collection-summary::after {
+  content: "−";
+}
+
+.category-collection-summary:hover h3,
+.category-collection-summary:focus-visible h3 {
+  color: var(--collection-accent);
+}
+
+.category-collection-summary:focus-visible {
+  outline: 2px solid var(--accent-secondary);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.category-collection .category-term-grid {
+  padding: 0 0 28px;
+}
+
+@media (max-width: 680px) {
+  .category-collection-summary {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px 14px;
+    padding: 20px 0;
+  }
+
+  .category-collection-summary .category-count {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: start;
+  }
+
+  .category-collection-summary::after {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+}
