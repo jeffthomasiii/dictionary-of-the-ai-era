@@ -40,7 +40,7 @@ The first goal was personal. ChatGPT helped assemble an initial list of AI-relat
 
 Then the question expanded from **“What does this term mean?”** to **“Where did this term come from?”** That curiosity led to the provenance model, source research, history, careful first-known-use claims, and the editorial methodology behind the project.
 
-The project began under the working name **Dictionary of the AI Era**, later adopted **AILex** as its first short-form brand, and became **EpochLex** after a public-identity review found meaningful collisions around the AILex name. The rename happened before a custom domain or repository rename, allowing the underlying project to continue without breaking a mature public URL structure.
+The project began under the working name **Dictionary of the AI Era**, later adopted **AILex** as its first short-form brand, and became **EpochLex** after a public-identity review found meaningful collisions around the AILex name. The rename happened before a repository rename, allowing the underlying project to continue without breaking its project history.
 
 The dictionary came first. The vibe-coding experiment came later, with another question:
 
@@ -70,7 +70,7 @@ The name reflects the project's broader purpose: documenting the vocabulary emer
 
 **Dictionary of the AI Era** remains the descriptor rather than the primary brand name.
 
-See [`BRAND.md`](BRAND.md) for current naming, historical continuity, and future domain/repository guidance.
+See [`BRAND.md`](BRAND.md) for current naming, historical continuity, and identity guidance.
 
 ## Documentation
 
@@ -93,6 +93,19 @@ Start with [`docs/README.md`](docs/README.md) for the complete documentation map
 | [`DESIGN.md`](DESIGN.md) | Visual system, interaction principles, responsive behavior, and UI guardrails |
 | [`EDITIONS.md`](EDITIONS.md) | Living Dictionary versus immutable annual editions |
 | [`BRAND.md`](BRAND.md) | Naming, pronunciation, descriptor, brand history, and identity guidance |
+
+## Community and project work
+
+EpochLex uses different GitHub surfaces for different kinds of participation so exploratory conversation and actionable work do not have to compete in the same place.
+
+| If you want to... | Start here |
+| --- | --- |
+| Discuss terminology, research questions, ideas, or project direction | [GitHub Discussions](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/discussions) |
+| Find current priorities and contributor-ready work | [EpochLex Projects](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/projects) |
+| Suggest a term, report a bug, propose a feature, submit a research correction, or share accessibility findings | [GitHub Issues](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/issues/new/choose) |
+| Prepare a direct code, content, research, design, or documentation contribution | [`CONTRIBUTING.md`](CONTRIBUTING.md) and pull requests |
+
+Discussions are useful when a topic still benefits from conversation. Issues are best for concrete work that can be tracked to completion. The Project provides a view of active priorities and available work, while pull requests remain the review surface for proposed repository changes.
 
 ## Architecture at a glance
 
@@ -119,7 +132,7 @@ Every published entry has a matching researched provenance record. A source that
 
 AI may assist with discovery and research organization, but publication remains human reviewed.
 
-See [`docs/TAXONOMY.md`](docs/TAXONOMY.md), [`PROVENANCE.md`](PROVENANCE.md), and the public [Methodology](https://jeffthomasiii.github.io/dictionary-of-the-ai-era/methodology.html).
+See [`docs/TAXONOMY.md`](docs/TAXONOMY.md), [`PROVENANCE.md`](PROVENANCE.md), and the public [Methodology](https://epochlex.justathoughtblog.org/methodology.html).
 
 ## Taxonomy
 
@@ -149,7 +162,7 @@ See [`EDITIONS.md`](EDITIONS.md) and [`data/editions.json`](data/editions.json).
 
 Contributions do not have to involve code. EpochLex can benefit from new term suggestions, stronger definitions or sources, provenance corrections, pronunciation guidance, accessibility and device testing, UI/design work, code, automation, documentation, editing, bug reports, and quality review.
 
-The public site provides a low-friction [Contribute](https://jeffthomasiii.github.io/dictionary-of-the-ai-era/contribute.html) entry point. Contributors who want to work directly with the repository should use [`CONTRIBUTING.md`](CONTRIBUTING.md).
+The public site provides a low-friction [Contribute](https://epochlex.justathoughtblog.org/contribute.html) entry point. Contributors can also use [Discussions](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/discussions) for conversation, [Issues](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/issues/new/choose) for structured proposals and reports, and the [EpochLex Project](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/projects) to find current work. Contributors who want to work directly with the repository should use [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 AI-assisted contributions are welcome when disclosed appropriately, but contributors remain responsible for verifying factual claims and sources.
 
@@ -163,15 +176,15 @@ python -m http.server 8000
 
 Then visit `http://localhost:8000`.
 
-## Publishing and URL migration
+## Publishing and URLs
 
 GitHub Pages deploys directly from `main` at the repository root. No build step is required.
 
-The current repository slug and canonical GitHub Pages base remain `dictionary-of-the-ai-era` during this brand migration. A future custom-domain or repository migration should update canonical URLs, sitemap URLs, social metadata URLs, redirects, GitHub Pages configuration, and documentation as one coordinated change.
+The public site uses the custom domain **https://epochlex.justathoughtblog.org/**. The repository slug remains `dictionary-of-the-ai-era`. Canonical URLs, sitemap URLs, social metadata URLs, redirects, and GitHub Pages configuration should remain aligned with the custom domain whenever publishing metadata changes.
 
 ## Roadmap
 
-The major MVP capabilities are implemented. Current work is focused on product quality and sustainable growth rather than feature count, including final identity/domain decisions, cross-device QA, contribution/review workflows, publishing verification, and continued editorial corpus growth.
+The major MVP capabilities are implemented. Current work is focused on product quality and sustainable growth rather than feature count, including cross-device QA, contribution/review workflows, publishing verification, continued editorial corpus growth, and long-term maintenance.
 
 See [`docs/ROADMAP.md`](docs/ROADMAP.md).
 
