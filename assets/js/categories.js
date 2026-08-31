@@ -2,6 +2,7 @@
   const root = document.getElementById('category-directory');
   if (!root) return;
 
+  const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches ?? false;
   const categories = [
     { key: 'culture', name: 'AI Culture & Slang', label: 'Culture & Slang' },
     { key: 'work', name: 'AI Ways of Working', label: 'Ways of Working' },
@@ -18,7 +19,7 @@
     const collection = document.getElementById(`category-${key}`);
     if (!(collection instanceof HTMLDetailsElement)) return;
     collection.open = true;
-    if (scroll) collection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (scroll) collection.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' });
   }
 
   function render(terms) {
