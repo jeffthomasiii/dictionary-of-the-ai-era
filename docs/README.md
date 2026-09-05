@@ -11,6 +11,7 @@ The public website is written primarily for people who want to **use and underst
 | Understand how EpochLex began and why it exists | [`ORIGIN.md`](ORIGIN.md) |
 | Understand how the site and data fit together | [`ARCHITECTURE.md`](ARCHITECTURE.md) |
 | See current priorities and longer-term direction | [`ROADMAP.md`](ROADMAP.md) |
+| Review unpublished terms being considered for future corpus expansion | [`CORPUS-CANDIDATES.md`](CORPUS-CANDIDATES.md) |
 | Run or repeat product-readiness and accessibility checks | [`QA.md`](QA.md) |
 | Contribute terms, sources, code, design, tests, or documentation | [`../CONTRIBUTING.md`](../CONTRIBUTING.md) |
 | Use baseline AI prompts for code, design, research, or documentation contributions | [`prompts/README.md`](prompts/README.md) |
