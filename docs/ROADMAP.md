@@ -6,8 +6,8 @@ EpochLex is a Living Dictionary. The roadmap is therefore a statement of current
 
 The initial product and corpus MVP is substantially complete:
 
-- 100 published dictionary terms;
-- 100 researched provenance records;
+- 122 published dictionary entries;
+- researched provenance records for the published corpus;
 - dedicated term pages;
 - Browse search, A-Z navigation, filters, list/grid views;
 - category collections;
@@ -20,6 +20,7 @@ The initial product and corpus MVP is substantially complete:
 - structured issue forms and pull-request guidance;
 - GitHub Discussions for community conversation;
 - a linked GitHub Project for priorities and contributor-ready work;
+- a source-controlled corpus candidate inventory for terminology that may merit future research;
 - repeatable accessibility and product-readiness QA baseline;
 - EpochLex selected as the public identity after a brand-collision review of the earlier AILex name;
 - the custom public domain `epochlex.justathoughtblog.org` configured for GitHub Pages.
@@ -76,7 +77,11 @@ EpochLex now has a basic contributor-participation system in place:
 - a pull-request template;
 - GitHub Discussions for terminology conversations, research questions, and ideas that are not yet concrete work items;
 - a linked GitHub Project for current priorities and contributor-ready work;
+- a source-controlled [`CORPUS-CANDIDATES.md`](CORPUS-CANDIDATES.md) inventory for possible future coverage;
+- individual research issues for selected candidates that are sufficiently actionable for focused contributor work;
 - a growing set of bounded issues suitable for outside contributors.
+
+The candidate inventory is a planning and research surface, not a publication queue. A candidate's appearance there does not mean it has been approved as a future entry. Research can result in a separate entry, an alias, continued observation, or a decision not to include the candidate. Human editorial review remains responsible for publication decisions.
 
 The next operational maturity work is less about creating entry points and more about making contribution quality and review sustainable.
 
@@ -86,13 +91,15 @@ Possible work includes:
 - clearer review states for proposed/revised terms;
 - documented handling of contested terminology and source disagreements;
 - contributor recognition and release-note practices;
-- periodic review of whether Discussions, Issues, the Project, and public contribution guidance still route people clearly.
+- periodic review of whether Discussions, Issues, the Project, the candidate inventory, and public contribution guidance still route people clearly.
 
 EpochLex should remain open to contributions beyond code, including term suggestions, source research, corrections, pronunciation guidance, accessibility testing, design feedback, and documentation improvements.
 
 ## Corpus growth
 
-The 100-term corpus is a floor, not a target ceiling. Future additions should be driven by documented usage, reader value, and coverage gaps rather than arbitrary term-count milestones.
+The current published corpus is a foundation, not a target ceiling. Future additions should be driven by documented usage, reader value, and coverage gaps rather than arbitrary term-count milestones.
+
+[`CORPUS-CANDIDATES.md`](CORPUS-CANDIDATES.md) is the source-controlled working inventory of unpublished terminology that may merit future review. It provides a durable place to preserve possible coverage without implying that every candidate belongs in the dictionary. Selected candidates can be promoted into focused research issues when they are ready for contributor work.
 
 Ongoing corpus work may include:
 
