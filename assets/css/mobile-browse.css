@@ -43,16 +43,20 @@
   .browse-label{grid-column:1;font-size:.64rem}
   .browse-actions{grid-column:2;grid-row:1;gap:9px;justify-self:end}
   #result-count{font-size:.72rem}
-  .view-button{width:34px;height:32px}
-  .alpha-nav{grid-column:1/-1;grid-row:2;display:flex;justify-content:flex-start;flex-wrap:nowrap;gap:1px;overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-width:none;padding:2px 0 4px;-webkit-overflow-scrolling:touch}
-  .alpha-nav::-webkit-scrollbar{display:none}
-  .alpha-nav button{flex:0 0 32px;width:32px;height:32px;font-size:.75rem}
+  .alpha-nav{grid-column:1/-1;grid-row:2;gap:1px;padding:2px 0 4px}
 
   .dictionary{padding-top:6px}
   .letter-group{padding-top:16px}
   .letter-heading{margin-bottom:9px;font-size:.72rem}
   .list-view .entry{gap:14px;padding:18px 16px 18px 22px}
   .grid-view .entry{min-height:265px;padding:19px 17px 17px 22px}
+}
+
+@media(max-width:900px){
+  .view-button{width:44px;height:44px}
+  .alpha-nav{display:flex;justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .alpha-nav::-webkit-scrollbar{display:none}
+  .alpha-nav button{flex:0 0 44px;width:44px;height:44px}
 }
 
 @media(display-mode:standalone) and (max-width:680px){
