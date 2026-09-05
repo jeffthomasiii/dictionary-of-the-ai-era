@@ -1,0 +1,100 @@
+name: Research a candidate entry
+description: Research a contributor-ready EpochLex candidate before an editorial publication decision.
+title: "[Research]: "
+labels:
+  - "help wanted"
+  - "contribution: research"
+  - "contribution: editorial"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for candidate entries that have already been promoted into the contributor research backlog. Research does not mean the entry has been approved for publication. The evidence may support a separate entry, an alias, continued watchlisting, or closing the candidate as not planned.
+
+        Follow `CONTRIBUTING.md`, `PROVENANCE.md`, and `docs/TAXONOMY.md`. Keep meaning evidence distinct from origin evidence, preserve uncertainty, and do not use AI-generated claims as sources.
+  - type: input
+    id: candidate
+    attributes:
+      label: Candidate entry
+      description: The term, organization, product, model family, or model being researched.
+      placeholder: Context Caching
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Likely entry type
+      options:
+        - Term or concept
+        - Organization
+        - Product
+        - Model family
+        - Individual model
+        - Not yet determined
+    validations:
+      required: true
+  - type: textarea
+    id: usage
+    attributes:
+      label: Real-world usage evidence
+      description: Provide credible evidence showing how the candidate is actually used in AI-era discussion, documentation, research, reporting, professional practice, or everyday language.
+    validations:
+      required: true
+  - type: textarea
+    id: reader_value
+    attributes:
+      label: Distinct reader value
+      description: Explain why a separate entry would help readers, or whether an existing entry or alias may already cover the concept adequately.
+    validations:
+      required: true
+  - type: textarea
+    id: meaning
+    attributes:
+      label: Meaning research
+      description: Summarize what the candidate means in actual usage. Preserve multiple or contested meanings where the evidence supports them.
+    validations:
+      required: true
+  - type: textarea
+    id: origin
+    attributes:
+      label: Origin, first-known-use, and history research
+      description: Document origin, naming history, earliest usage, or changes in meaning where evidence permits. It is acceptable for these questions to remain unresolved.
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: List claim-specific sources. Prefer primary sources for origin, first-use, technical-definition, naming, and release claims when available.
+    validations:
+      required: true
+  - type: textarea
+    id: recommendation
+    attributes:
+      label: Proposed EpochLex treatment
+      description: Recommend the canonical name, aliases/acronyms, likely editorial category, likely entry type, a plain-language definition, a natural usage example, related EpochLex entries, and any unresolved research questions.
+    validations:
+      required: true
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: Research recommendation
+      options:
+        - Develop as a separate EpochLex entry
+        - Represent as an alias of an existing entry
+        - Return to watchlist for more evidence
+        - Do not plan for inclusion
+        - More research needed
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Research checks
+      options:
+        - label: I kept evidence about meaning distinct from evidence about origin or first-known use.
+          required: true
+        - label: I did not use AI-generated claims as sources.
+          required: true
+        - label: I preserved uncertainty rather than inventing precision where the evidence is incomplete.
+          required: true
+        - label: I understand that final inclusion, wording, classification, provenance claims, and publication require human editorial review.
+          required: true
