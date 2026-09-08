@@ -13,6 +13,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: corpus/2026-09-publish-batch-p
+      - name: Reconcile unpublished related-term reference
+        run: sed -i "s/'ai-security'/'agent-security'/" tools/apply_corpus_batch_p_2026_09.py
       - name: Apply and validate Batch P
         run: python tools/apply_corpus_batch_p_2026_09.py
       - name: Commit generated corpus changes
