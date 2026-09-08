@@ -878,4 +878,44 @@
     <loc>https://epochlex.justathoughtblog.org/terms/least-privilege-agent/</loc>
     <lastmod>2026-09-08</lastmod>
   </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/retrieval-precision/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/retrieval-recall/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/latency/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/throughput/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/proximal-policy-optimization/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/agent-identity/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/ai-audit/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/ai-risk-assessment/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/mcp-client/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/model-license/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
 </urlset>

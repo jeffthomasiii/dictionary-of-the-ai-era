@@ -21,7 +21,7 @@ The initial inventory below was seeded from the September 2026 EpochLex corpus-e
 
 These planning pools are not new editorial lifecycle states. Candidates with an active research issue are linked directly to that issue.
 
-**Current unpublished inventory: 657 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
+**Current unpublished inventory: 647 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
 
 ---
 
@@ -225,7 +225,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 - Agent Handoff
 - Agent Harness
-- Agent Identity
+
 - Agent Memory
 - Agent Planning
 - Agent Protocol
@@ -329,8 +329,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Reference Answer
 - Refusal
 - Regression Evaluation
-- Retrieval Precision
-- Retrieval Recall
+
 - Rubric
 
 - Task Success Rate
@@ -395,7 +394,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 - Input Token
 - JSON Mode
-- Latency
+
 - Log Probability
 - Max Tokens
 - Model Endpoint
@@ -406,8 +405,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 - Stop Sequence
 - Streaming Generation
-
-- Throughput
 
 ### Local, Open Models & Deployment
 
@@ -421,7 +418,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Local Model
 - Low-Bit Quantization
 - Model Hub
-- Model License
+
 - Model Repository
 - Model Runtime
 - Offline AI
@@ -440,7 +437,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 ### MCP Ecosystem
 
 - Local MCP Server
-- MCP Client
+
 - MCP Connector
 - MCP Host
 - MCP Prompt
@@ -548,7 +545,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Agent Hijacking
 - AI Accountability
 - AI Act
-- AI Audit
+
 - AI Auditing
 - AI Bill of Materials (AIBOM)
 - AI Compliance
@@ -562,7 +559,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - AI Oversight
 - AI Regulation
 - AI Risk
-- AI Risk Assessment
+
 - AI Risk Management
 - AI Safety
 - AI Sandbox
@@ -638,7 +635,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Post-Training
 - Preference Dataset
 - Preference Optimization
-- Proximal Policy Optimization (PPO)
+
 - Regularization
 
 - Student Model
