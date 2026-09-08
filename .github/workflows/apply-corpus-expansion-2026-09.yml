@@ -6,6 +6,7 @@ on:
       - corpus/2026-09-expansion-audit
     paths:
       - tools/apply_corpus_expansion_2026_09.py
+      - tools/restore_provenance_order_2026_09.py
       - .github/workflows/apply-corpus-expansion-2026-09.yml
 
 permissions:
@@ -20,8 +21,11 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: corpus/2026-09-expansion-audit
+          fetch-depth: 0
       - name: Apply corpus changes
-        run: python tools/apply_corpus_expansion_2026_09.py
+        run: |
+          python tools/apply_corpus_expansion_2026_09.py
+          python tools/restore_provenance_order_2026_09.py
       - name: Commit generated corpus changes
         run: |
           git config user.name "github-actions[bot]"
@@ -30,6 +34,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No generated changes to commit."
           else
-            git commit -m "Publish first pending-provenance corpus expansion batch"
+            git commit -m "Refine generated corpus expansion changes"
             git push origin HEAD:corpus/2026-09-expansion-audit
           fi
