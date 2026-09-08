@@ -59,7 +59,7 @@ Generated code or documentation should also be reviewed rather than submitted so
 
 ## Proposing an entry
 
-A proposed entry should include:
+A proposed entry should include enough information for editors to evaluate whether it belongs in EpochLex. Useful proposal information includes:
 
 - Term or entry name
 - Slug
@@ -73,7 +73,7 @@ A proposed entry should include:
 - Known aliases or acronyms
 - Evidence of real-world usage
 - Suggested related terms
-- A researched provenance record with credible sources
+- Provenance research or credible source leads when available
 
 The current `entryType` vocabulary is `term`, `organization`, `product`, `model-family`, and `model`. See `docs/TAXONOMY.md` for the distinction between entry type and editorial category.
 
@@ -83,22 +83,41 @@ Named AI organizations, products, model families, and individual models may qual
 
 For fast-changing product and model lines, prefer durable identity and reader value over transient specifications, rankings, pricing, or release-by-release coverage. A separate individual-model entry should exist only when that model provides distinct reader value beyond its parent family.
 
-## Published-entry completeness
+## Publishable dictionary entries
 
-EpochLex treats a published entry as a complete reference entry rather than a placeholder.
+EpochLex separates **dictionary publication** from **provenance research completion**.
 
-A new published entry should have:
+A published entry must be useful and defensible as a dictionary entry. It is not a placeholder, draft definition, or unreviewed AI-generated record. Before publication, the entry should have:
 
-1. one entry in `data/terms.json`;
-2. one matching researched record in `data/provenance.json`;
-3. a valid `entryType` appropriate to the entry;
-4. valid related-term slugs that point only to published entries;
-5. a dedicated `terms/<slug>/index.html` page;
-6. search/social metadata consistent with the existing dedicated pages;
-7. inclusion in the sitemap;
-8. a pronunciation override when browser speech synthesis would reasonably misread the term, acronym, organization, product, or model name.
+1. one complete core entry in `data/terms.json` with the required reader-facing fields;
+2. documented real-world usage and distinct reader value sufficient to justify inclusion;
+3. a clear, human-reviewed definition and natural example sentence;
+4. written pronunciation, categories, reader-facing status, and a valid `entryType` appropriate to the entry;
+5. aliases or acronyms where they materially help discovery;
+6. one matching record in `data/provenance.json` whose `researchStatus` is either `pending` or `researched`;
+7. valid related-term slugs that point only to published entries when related terms are recorded;
+8. a dedicated `terms/<slug>/index.html` page;
+9. search/social metadata consistent with the existing dedicated pages;
+10. inclusion in the sitemap;
+11. a pronunciation override when browser speech synthesis would reasonably misread the term, acronym, organization, product, or model name.
 
 The term and provenance slug sets should remain equal.
+
+A `pending` provenance status means the dictionary entry has passed the publication threshold but its deeper origin/history sourcing review has not yet been completed. `pending` does **not** lower the standard for the definition itself and must not be used to publish unsupported terminology or unreviewed content.
+
+## Provenance-researched entries
+
+An entry becomes `researched` when its matching `data/provenance.json` record has received an initial human-reviewed sourcing pass under `PROVENANCE.md`.
+
+That research may establish, qualify, or leave unresolved:
+
+- origin or naming history;
+- first-known-use evidence;
+- meaningful historical milestones;
+- claim-specific sources;
+- uncertainty, competing evidence, or limits on what can responsibly be claimed.
+
+A `researched` status means the current provenance claims have been reviewed against sources. It does not mean the entry is permanently complete or immune from later revision.
 
 ## Provenance contributions
 
@@ -116,7 +135,9 @@ When adding or revising a provenance record:
 
 For named organizations, products, and models, use primary sources where available to establish identity, naming events, introductions, and release dates. Do not infer ownership, development, powering, succession, or other typed relationships merely from an EpochLex related-term connection.
 
-A `researched` status means an initial human-reviewed sourcing pass has been completed. It does not imply permanent certainty or prevent later revision.
+For `pending` records, unresearched origin, first-known-use, history, or source fields may remain empty or unresolved. Empty fields must not be interpreted as evidence that no such history exists. Any provenance claim that is populated should still be supportable under `PROVENANCE.md`.
+
+For `researched` records, the initial human-reviewed provenance pass should be complete enough to support the claims currently recorded.
 
 ## Editorial standards
 
@@ -145,7 +166,7 @@ Statuses may include:
 - Contested
 - Deprecated
 
-Compound labels may be used when they add useful context, but status should remain reader-facing rather than becoming an internal workflow field.
+Compound labels may be used when they add useful context, but status should remain reader-facing rather than becoming an internal workflow field. `researchStatus` in `data/provenance.json` is the separate field that tracks provenance-review state.
 
 ## Updating `terms.json`
 
@@ -177,6 +198,8 @@ In particular:
 - avoid inventing semantic relationship labels that the provenance data does not encode;
 - keep public-facing documentation focused on readers rather than repository mechanics.
 
+For entries with `researchStatus: "pending"`, the interface should make the pending provenance state understandable without presenting empty origin, first-known-use, history, or source fields as researched conclusions.
+
 ## Documentation contributions
 
 Documentation is part of the product and should be maintained with the same care as code and dictionary content.
@@ -193,8 +216,11 @@ When a feature or workflow moves from roadmap to implemented, update the relevan
 Depending on the change, verify:
 
 - JSON parses successfully;
+- every published term has one matching provenance record and the term/provenance slug sets remain equal;
+- every provenance record uses a supported `researchStatus` (`pending` or `researched` under the current model);
+- `pending` records are allowed to leave unresearched provenance fields unresolved without weakening the completeness requirements for the core dictionary entry;
+- `researched` records have received the human-reviewed sourcing pass described in `PROVENANCE.md`;
 - every new or materially revised named entity has a valid `entryType`;
-- term/provenance slug parity is preserved;
 - related-term targets resolve and do not self-link;
 - JavaScript syntax is valid;
 - dedicated term pages exist for all published entries;

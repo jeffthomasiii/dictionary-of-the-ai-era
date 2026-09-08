@@ -2,7 +2,7 @@
 
 This document records the repeatable quality checks used before broader public release and after changes that affect shared site behavior.
 
-EpochLex is a static, data-driven GitHub Pages site. Automated repository checks can catch many structural regressions, but they do not replace browser, device, keyboard, screen-reader, or visual testing.
+EpochLex is a static, data-driven GitHub Pages site. Automated repository checks can catch many structural regressions, but they do not replace browser, device, keyboard, screen-reader, visual, or editorial testing.
 
 ## Automated repository checks
 
@@ -10,6 +10,10 @@ The following should be checked whenever relevant files change:
 
 - `data/terms.json` and `data/provenance.json` parse successfully.
 - Published term and provenance slug sets remain equal.
+- Every provenance record uses a supported `researchStatus`. Under the current model, supported values are `pending` and `researched`.
+- A `pending` provenance record may leave unresearched origin, first-known-use, history, or source fields empty or unresolved; those empty fields must not be treated as structural validation failures.
+- The matching core dictionary entry must still satisfy the publication requirements in `CONTRIBUTING.md`; `pending` does not permit an incomplete or unreviewed definition.
+- A `researched` provenance record represents an initial human-reviewed sourcing pass under `PROVENANCE.md`. Structural validation can confirm the status value and record shape, but source judgment remains a human editorial check.
 - All related-term targets resolve to published entries and do not self-link.
 - Every published term has a dedicated `terms/<slug>/index.html` page.
 - Shared JavaScript files parse successfully.
@@ -21,6 +25,20 @@ The following should be checked whenever relevant files change:
 - Storage-dependent preferences fail gracefully if browser storage is unavailable.
 - Reduced-motion preferences are respected for smooth scrolling and transitions.
 - Keyboard focus is visibly indicated on interactive controls.
+
+## Editorial-state checks
+
+Repository structure alone cannot determine whether an entry deserves publication or whether provenance research is sufficient to be called `researched`.
+
+For a newly published entry, confirm that:
+
+1. documented real-world usage supports inclusion;
+2. the entry provides distinct reader value rather than duplicating an alias or generic phrase;
+3. the definition and example are human reviewed and useful without relying on unfinished provenance work;
+4. the matching provenance record explicitly declares either `pending` or `researched`;
+5. any provenance claim already populated is no stronger than its evidence supports.
+
+For a transition from `pending` to `researched`, confirm the human-reviewed sourcing checks in `PROVENANCE.md` rather than treating the status change as a purely mechanical edit.
 
 ## Keyboard checks
 
@@ -104,6 +122,8 @@ Periodically verify that a dedicated term URL still contains, before JavaScript 
 - canonical URL;
 - structured metadata.
 
+A pending provenance state must not make the static fallback unusable as a dictionary entry. The core definition and identifying metadata should remain available even when deeper provenance fields have not been researched.
+
 ## Pronunciation checks
 
 Browser speech engines vary by operating system and browser. Spot-check:
@@ -121,6 +141,7 @@ Any change to `assets/js/app.js`, shared CSS, mobile navigation, or term-page re
 
 - Browse on desktop and mobile;
 - at least one dedicated term page;
+- at least one `researched` entry and, once present in the corpus, at least one `pending` entry;
 - About, Categories, Contribute, and Methodology;
 - theme switching;
 - pronunciation;
@@ -129,4 +150,4 @@ Any change to `assets/js/app.js`, shared CSS, mobile navigation, or term-page re
 
 ## Known limitation of automated QA
 
-Repository validation can confirm structure and syntax. It cannot prove that a page looks correct on every browser, that a particular speech voice pronounces a term correctly, or that a screen-reader experience is clear. Those require human spot checks and should remain part of release readiness rather than being represented as fully automated guarantees.
+Repository validation can confirm structure, syntax, supported status values, and dataset relationships. It cannot prove that a definition is editorially sound, that provenance evidence justifies a `researched` status, that a page looks correct on every browser, that a particular speech voice pronounces a term correctly, or that a screen-reader experience is clear. Those require human spot checks and editorial judgment and should remain part of release readiness rather than being represented as fully automated guarantees.

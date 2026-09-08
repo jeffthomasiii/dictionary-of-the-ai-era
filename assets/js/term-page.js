@@ -54,7 +54,25 @@ function entryTypeLabel(term) {
   }[entryType(term)] || "";
 }
 
+function researchStatus(record) {
+  return record.researchStatus || "unknown";
+}
+
+function isPendingResearch(record) {
+  return researchStatus(record) === "pending";
+}
+
+function researchStatusLabel(record) {
+  return {
+    pending: "Pending provenance review",
+    researched: "Researched"
+  }[researchStatus(record)] || researchStatus(record);
+}
+
 function renderFirstKnownUse(record) {
+  if (isPendingResearch(record) && !record.firstKnownUse) {
+    return `<p class="muted-note">Not yet established. This entry's provenance research is still pending.</p>`;
+  }
   if (!record.firstKnownUse) return `<p class="muted-note">A defensible first-known-use date has not been established in EpochLex's current research.</p>`;
   const precision = record.firstKnownUse.precision ? `<span class="provenance-precision">${termEsc(record.firstKnownUse.precision)} precision</span>` : "";
   return `<p class="first-use-date">${termEsc(formatDate(record.firstKnownUse.date))} ${precision}</p>${record.firstKnownUse.note ? `<p>${termEsc(record.firstKnownUse.note)}</p>` : ""}`;
@@ -102,17 +120,41 @@ function renderRelatedCards(relatedTerms = []) {
     </a>`).join("")}</div>`;
 }
 
+function renderProvenanceSections(provenance) {
+  const sections = [];
+
+  if (isPendingResearch(provenance)) {
+    sections.push(`<section class="term-section research-pending-section"><span class="entry-label">Provenance research</span><p>EpochLex has reviewed this term for dictionary publication, but its dedicated origin and historical provenance research is still pending. Unrecorded research fields should not be read as claims that no origin, history, or supporting evidence exists.</p></section>`);
+  }
+
+  if (provenance.origin) {
+    sections.push(`<section class="term-section"><span class="entry-label">Origin & context</span><p>${termEsc(provenance.origin)}</p></section>`);
+  } else if (!isPendingResearch(provenance)) {
+    sections.push(`<section class="term-section"><span class="entry-label">Origin & context</span><p class="muted-note">A specific origin is not established in EpochLex's current research.</p></section>`);
+  }
+
+  if ((provenance.history || []).length) {
+    sections.push(`<section class="term-section"><span class="entry-label">History</span><ol class="history-list">${provenance.history.map(item => `<li><time>${termEsc(formatDate(item.date))}</time><p>${termEsc(item.event)}</p></li>`).join("")}</ol></section>`);
+  } else if (!isPendingResearch(provenance)) {
+    sections.push(`<section class="term-section"><span class="entry-label">History</span><p class="muted-note">No separate history milestones are currently recorded.</p></section>`);
+  }
+
+  if ((provenance.sources || []).length) {
+    sections.push(`<section class="term-section"><span class="entry-label">Sources</span><ol class="source-list">${renderSources(provenance.sources)}</ol></section>`);
+  }
+
+  return sections.join("");
+}
+
 function renderTermPage(term, provenance, termsBySlug, allProvenance) {
   const category = categoryKey(term);
   const typeLabel = entryTypeLabel(term);
   termPage.dataset.category = category;
   termPage.dataset.entryType = entryType(term);
+  termPage.dataset.researchStatus = researchStatus(provenance);
   document.title = `${term.term} | EpochLex`;
 
   const related = relatedConnections(term.slug, provenance, allProvenance, termsBySlug);
-  const history = (provenance.history || []).length
-    ? `<ol class="history-list">${provenance.history.map(item => `<li><time>${termEsc(formatDate(item.date))}</time><p>${termEsc(item.event)}</p></li>`).join("")}</ol>`
-    : `<p class="muted-note">No separate history milestones are currently recorded.</p>`;
 
   termPage.innerHTML = `
     <nav class="term-breadcrumb" aria-label="Breadcrumb"><a href="../../">Browse</a><span aria-hidden="true">/</span><span>${termEsc(term.term)}</span></nav>
@@ -128,14 +170,12 @@ function renderTermPage(term, provenance, termsBySlug, allProvenance) {
         <section class="term-section definition-section"><span class="entry-label">Definition</span><p class="term-page-definition">${termEsc(term.definition)}</p></section>
         <section class="term-section"><span class="entry-label">Used in a sentence</span><p class="term-page-example"><em>${termEsc(term.example)}</em></p></section>
         ${term.aliases?.length ? `<section class="term-section"><span class="entry-label">Also known as</span><p>${term.aliases.map(termEsc).join(", ")}</p></section>` : ""}
-        <section class="term-section"><span class="entry-label">Origin & context</span><p>${termEsc(provenance.origin || "Origin research is not yet available.")}</p></section>
-        <section class="term-section"><span class="entry-label">History</span>${history}</section>
+        ${renderProvenanceSections(provenance)}
         <section class="term-section related-discovery-section"><span class="entry-label">Explore related terms</span><p class="related-intro">Continue through concepts connected to this entry in EpochLex.</p>${renderRelatedCards(related)}</section>
-        <section class="term-section"><span class="entry-label">Sources</span><ol class="source-list">${renderSources(provenance.sources || [])}</ol></section>
       </div>
       <aside class="term-side-column">
         <section class="term-fact-card"><span class="entry-label">First known use</span>${renderFirstKnownUse(provenance)}</section>
-        <section class="term-fact-card"><span class="entry-label">Research status</span><p class="research-status">${termEsc(provenance.researchStatus || "unknown")}</p></section>
+        <section class="term-fact-card"><span class="entry-label">Research status</span><p class="research-status">${termEsc(researchStatusLabel(provenance))}</p>${isPendingResearch(provenance) ? `<p class="muted-note">Dictionary entry published; provenance review pending.</p>` : ""}</section>
         <section class="term-fact-card connection-summary"><span class="entry-label">Connections</span><p class="connection-count">${related.length}</p><p>${related.length === 1 ? "related EpochLex entry" : "related EpochLex entries"}</p></section>
         <section class="term-fact-card term-record-meta"><span class="entry-label">Entry record</span>${typeLabel ? `<p>Type: ${termEsc(typeLabel)}</p>` : ""}<p>Added ${termEsc(formatDate(term.added))}</p><p>Last reviewed ${termEsc(formatDate(term.lastReviewed))}</p></section>
       </aside>
