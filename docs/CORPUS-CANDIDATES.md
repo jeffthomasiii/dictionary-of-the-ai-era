@@ -21,7 +21,7 @@ The initial inventory below was seeded from the September 2026 EpochLex corpus-e
 
 These planning pools are not new editorial lifecycle states. Candidates with an active research issue are linked directly to that issue.
 
-**Current unpublished inventory: 582 candidates** (83 repository-roadmap candidates and 507 research-pool candidates).
+**Current unpublished inventory: 754 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions. (83 repository-roadmap candidates and 507 research-pool candidates).
 
 ---
 
@@ -684,13 +684,6 @@ New candidates can enter through repository corpus review, Discussions, contribu
 
 When a candidate is ready for focused research, create an individual **Research candidate entry** issue using the repository issue template and link the candidate here. Once research and human editorial review produce a publication decision, update this inventory so it does not drift from the actionable backlog or published corpus.
 
-## Related documentation
-
-- [`../CONTRIBUTING.md`](../CONTRIBUTING.md) — contribution and editorial expectations
-- [`../PROVENANCE.md`](../PROVENANCE.md) — evidence and provenance standards
-- [`TAXONOMY.md`](TAXONOMY.md) — current editorial categories and entry types
-- [`NAMED-ENTITIES-BACKLOG.md`](NAMED-ENTITIES-BACKLOG.md) — focused named-entity planning notes
-- [`../CORPUS-ROADMAP.md`](../CORPUS-ROADMAP.md) — corpus-planning history and roadmap
 ---
 
 ## September 2026 audit expansion
@@ -901,3 +894,11 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - Compute Allocation
 - AI Infrastructure Cost
 - Cost per Inference
+
+## Related documentation
+
+- [`../CONTRIBUTING.md`](../CONTRIBUTING.md) — contribution and editorial expectations
+- [`../PROVENANCE.md`](../PROVENANCE.md) — evidence and provenance standards
+- [`TAXONOMY.md`](TAXONOMY.md) — current editorial categories and entry types
+- [`NAMED-ENTITIES-BACKLOG.md`](NAMED-ENTITIES-BACKLOG.md) — focused named-entity planning notes
+- [`../CORPUS-ROADMAP.md`](../CORPUS-ROADMAP.md) — corpus-planning history and roadmap
