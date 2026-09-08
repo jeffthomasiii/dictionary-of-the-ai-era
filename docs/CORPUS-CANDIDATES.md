@@ -21,7 +21,7 @@ The initial inventory below was seeded from the September 2026 EpochLex corpus-e
 
 These planning pools are not new editorial lifecycle states. Candidates with an active research issue are linked directly to that issue.
 
-**Current unpublished inventory: 723 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
+**Current unpublished inventory: 718 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
 
 ---
 
@@ -35,7 +35,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 - AI Doomer
 - AI Fatigue
-- AI Fluency
+
 - AI Maximalist
 - AI-Augmented
 - Centaur
@@ -51,7 +51,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 ### AI Risks, Safety & Governance
 
 - Adversarial Attack
-- AI Assurance
+
 - AI Inventory
 
 - AI Policy
@@ -82,7 +82,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Groundedness
 - Image-to-Image
 - Latent Diffusion
-- Latent Space
+
 - Leaderboard
 
 - Perplexity
@@ -98,14 +98,14 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 - AI Memory
 - API
-- Autonomous Agent
+
 - Browser Use
 
 - Long-Term Memory
 - Planning
 - Reflection
 - Short-Term Memory
-- Subagent
+
 - Tool Use
 
 ---

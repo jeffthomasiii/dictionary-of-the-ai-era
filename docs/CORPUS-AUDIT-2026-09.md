@@ -255,15 +255,51 @@ Any candidate in `CORPUS-CANDIDATES.md` that is not explicitly listed as Publish
 
 **Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
 
+## Publish — Batch D (published September 8, 2026)
+
+### Latent Space
+
+**Why publish:** A learned representation space in which an AI or machine-learning model encodes features or concepts as numerical positions or directions, so items with related learned characteristics may be represented near one another.
+
+**Usage evidence:** [Google for Developers: Machine Learning Glossary](https://developers.google.com/machine-learning/glossary)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### AI Assurance
+
+**Why publish:** The practice of gathering and evaluating evidence that an AI system performs as intended within defined conditions and that relevant risks, trustworthiness properties, and safeguards have been assessed.
+
+**Usage evidence:** [NIST: The Path to Consensus on Artificial Intelligence Assurance](https://www.nist.gov/publications/path-consensus-artificial-intelligence-assurance)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Subagent
+
+**Why publish:** A specialized AI agent or agent-like worker delegated a narrower task by a primary agent or orchestration process, often with its own context, instructions, tools, or permissions.
+
+**Usage evidence:** [Anthropic: Create custom subagents - Claude Code Docs](https://code.claude.com/docs/en/subagents)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Autonomous Agent
+
+**Why publish:** An AI agent designed to pursue tasks or goals with a comparatively high degree of independent decision-making and action, requiring less step-by-step human direction than an assistant or tightly scripted workflow.
+
+**Usage evidence:** [Microsoft: AI Agent FAQ: Definitions and Explanations](https://www.microsoft.com/en-us/microsoft-365-copilot/agents/ai-agents-faq)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### AI Fluency
+
+**Why publish:** The practical ability to work with AI effectively, critically, responsibly, and safely, including knowing what to delegate, how to communicate with AI, how to evaluate its outputs, and when human judgment is required.
+
+**Usage evidence:** [Anthropic: AI Fluency: The AI Fluency Framework](https://www.anthropic.com/ai-fluency/overview)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
 ## Publish — next qualified group
 
-These candidates have strong reader value and should move next into definition drafting and meaning-evidence review under the new publication model:
-
-- Latent Space
-- AI Assurance
-- Subagent
-- Autonomous Agent
-- AI Fluency
+The previously qualified queue has now been published through Batches A–D. No additional candidates are prequalified for publication in this audit; future Publish promotions should come from fresh evidence-based review of the Research Further inventory.
 
 ## Alias
 
@@ -357,7 +393,7 @@ All remaining unpublished candidates in `CORPUS-CANDIDATES.md`, including the ne
 
 ## Expansion result
 
-This audit has now published 28 candidates across Batches A, B, and C and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
+This audit has now published 33 candidates across Batches A, B, C, and D and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
 
 ## Follow-up
 

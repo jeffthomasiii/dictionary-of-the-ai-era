@@ -5310,5 +5310,134 @@
         ]
       }
     ]
+  },
+  "latent-space": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "embedding",
+      "vector-search",
+      "neural-network"
+    ],
+    "sources": [
+      {
+        "id": "google-ml-latent-space-2026",
+        "type": "reference",
+        "publisher": "Google for Developers",
+        "title": "Machine Learning Glossary",
+        "published": "2026",
+        "url": "https://developers.google.com/machine-learning/glossary",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "ai-assurance": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "responsible-ai",
+      "ai-governance",
+      "eval",
+      "red-teaming"
+    ],
+    "sources": [
+      {
+        "id": "nist-ai-assurance-2022",
+        "type": "primary",
+        "publisher": "NIST",
+        "title": "The Path to Consensus on Artificial Intelligence Assurance",
+        "published": "2022-03-15",
+        "url": "https://www.nist.gov/publications/path-consensus-artificial-intelligence-assurance",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "subagent": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-agent",
+      "agentic-workflow",
+      "orchestration",
+      "tool-calling"
+    ],
+    "sources": [
+      {
+        "id": "anthropic-subagents-2026",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Create custom subagents - Claude Code Docs",
+        "published": "2026",
+        "url": "https://code.claude.com/docs/en/subagents",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "autonomous-agent": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-agent",
+      "agentic",
+      "agent-loop",
+      "computer-use"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-autonomous-agent-2026",
+        "type": "primary",
+        "publisher": "Microsoft",
+        "title": "AI Agent FAQ: Definitions and Explanations",
+        "published": "2026",
+        "url": "https://www.microsoft.com/en-us/microsoft-365-copilot/agents/ai-agents-faq",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "ai-fluency": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-literacy",
+      "human-ai-collaboration",
+      "responsible-ai",
+      "prompt-engineering"
+    ],
+    "sources": [
+      {
+        "id": "anthropic-ai-fluency-2026",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "AI Fluency: The AI Fluency Framework",
+        "published": "2026",
+        "url": "https://www.anthropic.com/ai-fluency/overview",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
   }
 }
