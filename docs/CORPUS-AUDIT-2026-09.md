@@ -378,6 +378,90 @@ These are not recommended as separate entries now. Some are generic business phr
 - Cyborg Workflow
 - Vibe Debugging
 
+## Research Further promotion pass 8 — Batch L (published September 8, 2026)
+
+This batch is the eighth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
+
+### Query Routing
+
+**Why promote and publish:** The practice of directing an incoming query to the most suitable model, retriever, search system, tool, or processing path based on the query and the available capabilities.
+
+**Usage evidence:** [arXiv: Query Routing for Retrieval-Augmented Language Models](https://arxiv.org/abs/2505.23052); [arXiv: Unsupervised Query Routing for Retrieval Augmented Generation](https://arxiv.org/abs/2501.07793)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Semantic Router
+
+**Why promote and publish:** A routing component that uses the semantic meaning or other interpreted signals from a request to select an appropriate model, capability, tool, or processing path.
+
+**Usage evidence:** [vLLM Project: vLLM Semantic Router — Introduction](https://github.com/vllm-project/semantic-router/blob/main/website/docs/intro.md); [Aurelio Labs: Semantic Router documentation](https://semantic-router.readthedocs.io/en/stable/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Agent Authorization
+
+**Why promote and publish:** The process of determining and granting what an AI agent is allowed to access or do, including which resources, scopes, actions, or delegated permissions it may use.
+
+**Usage evidence:** [Microsoft Learn: Grant agents access to Microsoft 365 resources](https://github.com/MicrosoftDocs/entra-docs/blob/main/docs/agent-id/grant-agent-access-microsoft-365.md)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### AI Risk Management
+
+**Why promote and publish:** The coordinated practice of identifying, assessing, prioritizing, treating, monitoring, and governing risks associated with artificial-intelligence systems across their lifecycle and use context.
+
+**Usage evidence:** [NIST: AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework); [ISO: ISO/IEC 23894:2023 — Artificial intelligence — Guidance on risk management](https://www.iso.org/standard/77304.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### AI Act
+
+**Why promote and publish:** The European Union’s Artificial Intelligence Act, Regulation (EU) 2024/1689, which establishes harmonized rules and obligations for AI systems and general-purpose AI models using a risk-based regulatory framework.
+
+**Usage evidence:** [European Commission: AI Act](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai); [AI Act Service Desk: AI Act Explorer](https://ai-act-service-desk.ec.europa.eu/en/ai-act-explorer)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### ONNX
+
+**Why promote and publish:** Open Neural Network Exchange: an open format and ecosystem for representing machine-learning models using a standardized computation graph, operators, and data types so models can move across compatible frameworks, tools, and runtimes.
+
+**Usage evidence:** [ONNX: Introduction to ONNX](https://onnx.ai/onnx/intro/); [ONNX: Open standard for machine learning interoperability](https://github.com/onnx/onnx)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Open-Source AI
+
+**Why promote and publish:** An AI system made available in a way that grants users the freedoms to use, study, modify, and share the system, with access to the preferred form for making modifications as specified by the Open Source AI Definition.
+
+**Usage evidence:** [Open Source Initiative: The Open Source AI Definition — 1.0](https://opensource.org/ai/open-source-ai-definition)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Human Evaluation
+
+**Why promote and publish:** Evaluation in which people directly judge, rate, compare, or otherwise assess AI outputs or behavior using defined criteria rather than relying only on automated metrics or model-based graders.
+
+**Usage evidence:** [Google Cloud: Evaluating Single LLM Outputs With Vertex AI Evaluation](https://codelabs.developers.google.com/codelabs/production-ready-ai-with-gc/6-ai-evaluation/evaluating-single-llm-outputs-with-vertex-ai-evaluation); [Google Cloud: Evaluate a judge model](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/evaluate-judge-model)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Task Success Rate
+
+**Why promote and publish:** An evaluation metric measuring the proportion of attempted tasks in which an AI system or agent reaches the defined successful outcome or pass condition.
+
+**Usage evidence:** [Snowflake: AI Agent Evaluation: Metrics and Methods](https://www.snowflake.com/en/artificial-intelligence/agents/agent-evaluation/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### MCP Host
+
+**Why promote and publish:** The AI application in a Model Context Protocol architecture that coordinates and manages one or more MCP clients and integrates the capabilities they obtain from MCP servers into the application experience.
+
+**Usage evidence:** [Model Context Protocol: Core architecture](https://github.com/modelcontextprotocol/docs/blob/main/docs/concepts/architecture.mdx); [Microsoft Learn: Overview of MCP servers in Azure API Management](https://learn.microsoft.com/en-us/azure/api-management/mcp-server-overview)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
 ## Research Further promotion pass 7 — Batch K (published September 8, 2026)
 
 This batch is the seventh evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
@@ -981,7 +1065,7 @@ All remaining unpublished candidates in `CORPUS-CANDIDATES.md`, including the ne
 
 ## Expansion result
 
-This audit has now published 103 candidates across Batches A–K and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
+This audit has now published 113 candidates across Batches A–L and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
 
 ## Follow-up
 

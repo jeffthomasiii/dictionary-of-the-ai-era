@@ -21,7 +21,7 @@ The initial inventory below was seeded from the September 2026 EpochLex corpus-e
 
 These planning pools are not new editorial lifecycle states. Candidates with an active research issue are linked directly to that issue.
 
-**Current unpublished inventory: 647 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
+**Current unpublished inventory: 637 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
 
 ---
 
@@ -321,7 +321,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 - Hallucination Rate
 - Holdout Set
-- Human Evaluation
+
 - Judge Model
 - Model Grader
 
@@ -332,7 +332,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 - Rubric
 
-- Task Success Rate
 - Test Contamination
 - Test Set
 - Tool-Use Evaluation
@@ -423,9 +422,8 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Model Runtime
 - Offline AI
 
-- ONNX
 - Open Model
-- Open-Source AI
+
 - Open-Source Model
 
 - Private AI
@@ -439,7 +437,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Local MCP Server
 
 - MCP Connector
-- MCP Host
+
 - MCP Prompt
 - MCP Registry
 
@@ -544,7 +542,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Adversarial Machine Learning
 - Agent Hijacking
 - AI Accountability
-- AI Act
 
 - AI Auditing
 - AI Bill of Materials (AIBOM)
@@ -560,7 +557,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - AI Regulation
 - AI Risk
 
-- AI Risk Management
 - AI Safety
 - AI Sandbox
 - AI Security
@@ -669,7 +665,6 @@ The September 8, 2026 corpus audit added the following candidates after checking
 
 - Agent Telemetry
 
-- Agent Authorization
 - Agent Security
 - Agent Benchmark
 - Tool Permission
@@ -754,8 +749,7 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - RAG Pipeline
 - RAG Chunking
 - Retrieval Quality
-- Query Routing
-- Semantic Router
+
 - Agentic Retrieval
 - Multi-Hop Retrieval
 - Retrieval Fusion
