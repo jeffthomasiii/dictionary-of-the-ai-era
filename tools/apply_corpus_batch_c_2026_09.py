@@ -31,7 +31,6 @@ terms.sort(key=lambda x:x['term'].lower()); terms_path.write_text(json.dumps(ter
 
 prov_path=ROOT/'data/provenance.json'; prov=json.loads(prov_path.read_text())
 for b in BATCH: prov[b['slug']]={'researchStatus':'pending','origin':None,'firstKnownUse':None,'history':[],'relatedTerms':b['related'],'sources':b['sources']}
-# Sampling can now point directly to Top-p because Top-p is published in this batch.
 if 'sampling' in prov:
  rel=prov['sampling'].get('relatedTerms',[])
  if 'top-p' not in rel: rel.append('top-p')
@@ -64,3 +63,4 @@ for record in prov.values():
 for b in BATCH: assert (ROOT/'terms'/b['slug']/'index.html').exists()
 assert count==723, count
 print('Validated 150 published entries, 28 pending provenance records, 723 candidates, and related-term parity.')
+# Triggered after workflow creation so GitHub Actions can execute this one-time publisher.
