@@ -8866,5 +8866,278 @@
         ]
       }
     ]
+  },
+  "inference-runtime": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "inference",
+      "model-serving",
+      "onnx"
+    ],
+    "sources": [
+      {
+        "id": "onnx-runtime-inference-2026",
+        "type": "primary",
+        "publisher": "ONNX Runtime",
+        "title": "ONNX Runtime for Inferencing",
+        "published": "2026",
+        "url": "https://onnxruntime.ai/inference",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "unified-memory": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "local-inference",
+      "on-device-ai",
+      "ai-pc"
+    ],
+    "sources": [
+      {
+        "id": "apple-mlx-unified-memory-2025",
+        "type": "primary",
+        "publisher": "Apple Developer",
+        "title": "Get started with MLX for Apple silicon",
+        "published": "2025",
+        "url": "https://developer.apple.com/videos/play/wwdc2025/315/",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "gpu-offloading": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "local-inference",
+      "model-serving",
+      "quantized-model"
+    ],
+    "sources": [
+      {
+        "id": "hf-big-model-offload-2026",
+        "type": "reference",
+        "publisher": "Hugging Face",
+        "title": "Loading models — Big Model Inference",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/transformers/models",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "model-telemetry": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "llm-observability",
+      "agent-telemetry",
+      "latency"
+    ],
+    "sources": [
+      {
+        "id": "otel-genai-telemetry-2026",
+        "type": "primary",
+        "publisher": "OpenTelemetry",
+        "title": "Inside the LLM Call: GenAI Observability with OpenTelemetry",
+        "published": "2026-05-14",
+        "url": "https://opentelemetry.io/blog/2026/genai-observability/",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "mcp-connector": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "mcp",
+      "mcp-client",
+      "mcp-server"
+    ],
+    "sources": [
+      {
+        "id": "anthropic-mcp-connector",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Model Context Protocol (MCP)",
+        "published": "2026",
+        "url": "https://docs.anthropic.com/en/docs/mcp",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "bi-encoder": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "embedding",
+      "dense-retrieval",
+      "cross-encoder"
+    ],
+    "sources": [
+      {
+        "id": "sbert-bi-encoder-2026",
+        "type": "reference",
+        "publisher": "Sentence Transformers",
+        "title": "Quickstart — Sentence Transformer",
+        "published": "2026",
+        "url": "https://sbert.net/docs/quickstart.html",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "sparse-retrieval": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "bm25",
+      "dense-retrieval",
+      "hybrid-search"
+    ],
+    "sources": [
+      {
+        "id": "sbert-sparse-encoder-2026",
+        "type": "reference",
+        "publisher": "Sentence Transformers",
+        "title": "Sparse Encoder — Usage",
+        "published": "2026",
+        "url": "https://www.sbert.net/docs/sparse_encoder/usage/usage.html",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "ai-inventory": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-governance",
+      "ai-risk-management",
+      "ai-compliance"
+    ],
+    "sources": [
+      {
+        "id": "nist-ai-rmf-inventory",
+        "type": "primary",
+        "publisher": "NIST AI Resource Center",
+        "title": "AI RMF Core — Govern 1.6",
+        "published": "2026",
+        "url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
+        "supports": [
+          "definition",
+          "usage",
+          "governance"
+        ]
+      }
+    ]
+  },
+  "ai-incident-response": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-incident",
+      "ai-incident-reporting",
+      "ai-risk-management"
+    ],
+    "sources": [
+      {
+        "id": "nist-ai-rmf-incident-response",
+        "type": "primary",
+        "publisher": "NIST AI Resource Center",
+        "title": "AI RMF Playbook — Govern",
+        "published": "2026",
+        "url": "https://airc.nist.gov/airmf-resources/playbook/govern/",
+        "supports": [
+          "definition",
+          "usage",
+          "governance",
+          "risk"
+        ]
+      },
+      {
+        "id": "nist-ai-incident-workshop-2026",
+        "type": "primary",
+        "publisher": "NIST",
+        "title": "Workshop on AI Incident Management",
+        "published": "2026-05",
+        "url": "https://www.nist.gov/news-events/events/2026/05/nist-workshop-ai-incident-management",
+        "supports": [
+          "usage",
+          "risk"
+        ]
+      }
+    ]
+  },
+  "trustworthy-ai": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "responsible-ai",
+      "ai-risk-management",
+      "ai-governance"
+    ],
+    "sources": [
+      {
+        "id": "oecd-trustworthy-ai-2026",
+        "type": "primary",
+        "publisher": "OECD.AI",
+        "title": "Catalogue of Tools & Metrics for Trustworthy AI — FAQ",
+        "published": "2026",
+        "url": "https://oecd.ai/en/catalogue/faq",
+        "supports": [
+          "definition",
+          "usage",
+          "governance"
+        ]
+      }
+    ]
   }
 }
