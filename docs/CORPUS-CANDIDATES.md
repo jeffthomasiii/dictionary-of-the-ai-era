@@ -21,7 +21,7 @@ The initial inventory below was seeded from the September 2026 EpochLex corpus-e
 
 These planning pools are not new editorial lifecycle states. Candidates with an active research issue are linked directly to that issue.
 
-**Current unpublished inventory: 627 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
+**Current unpublished inventory: 617 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
 
 ---
 
@@ -436,8 +436,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 - MCP Connector
 
-- MCP Prompt
-
 - Remote MCP Server
 
 ### Named Entities
@@ -546,7 +544,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - AI Control Framework
 - AI Disclosure
 - AI Ethics
-- AI Impact Assessment
 
 - AI Oversight
 - AI Regulation
@@ -583,14 +580,13 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Model Stealing
 - Poisoning Attack
 - Privilege Escalation
-- Prohibited AI Practice
 
 - RAG Poisoning
 - Safe AI
 - Sandboxing
 - Sensitive Information Disclosure
 - System Prompt Extraction
-- Systemic Risk
+
 - Tool Poisoning
 - Training Data Extraction
 - Trustworthy AI
@@ -660,31 +656,26 @@ The September 8, 2026 corpus audit added the following candidates after checking
 
 - Agent Telemetry
 
-- Agent Security
 - Agent Benchmark
-- Tool Permission
 
 - Tool Result
 - Tool Schema
 - Tool Discovery
 - Tool Search
 - Programmatic Tool Calling
-- Human Approval Gate
 
 - Agentic UI
 
 ### MCP ecosystem
 
 - MCP Extension
-- MCP Elicitation
+
 - MCP Sampling
 - MCP Roots
 
-- MCP OAuth
-
 - MCP Progress Notification
 - MCP Structured Content
-- MCP Security
+
 - MCP UI Resource
 
 ### Local AI, hardware & inference

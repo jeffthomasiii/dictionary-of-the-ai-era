@@ -7952,5 +7952,339 @@
         ]
       }
     ]
+  },
+  "mcp-prompt": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "mcp",
+      "mcp-server",
+      "mcp-client"
+    ],
+    "sources": [
+      {
+        "id": "mcp-prompts-draft-2026",
+        "type": "primary",
+        "publisher": "Model Context Protocol",
+        "title": "Prompts",
+        "published": "2026",
+        "url": "https://modelcontextprotocol.io/specification/draft/server/prompts",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "mcp-oauth": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "mcp",
+      "agent-authorization",
+      "mcp-client"
+    ],
+    "sources": [
+      {
+        "id": "mcp-auth-draft-2026",
+        "type": "primary",
+        "publisher": "Model Context Protocol",
+        "title": "Authorization",
+        "published": "2026",
+        "url": "https://modelcontextprotocol.io/specification/draft/basic/authorization",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition",
+          "risk"
+        ]
+      },
+      {
+        "id": "mcp-spec-july-2026",
+        "type": "primary",
+        "publisher": "Model Context Protocol",
+        "title": "The 2026-07-28 Specification",
+        "published": "2026-07-28",
+        "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+        "supports": [
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "mcp-elicitation": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "mcp",
+      "mcp-client",
+      "mcp-server"
+    ],
+    "sources": [
+      {
+        "id": "mcp-elicitation-draft-2026",
+        "type": "primary",
+        "publisher": "Model Context Protocol",
+        "title": "Elicitation",
+        "published": "2026",
+        "url": "https://modelcontextprotocol.io/specification/draft/client/elicitation",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "mcp-spec-july-2026",
+        "type": "primary",
+        "publisher": "Model Context Protocol",
+        "title": "The 2026-07-28 Specification",
+        "published": "2026-07-28",
+        "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+        "supports": [
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "mcp-security": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "mcp",
+      "mcp-oauth",
+      "mcp-server"
+    ],
+    "sources": [
+      {
+        "id": "mcp-spec-security-2025",
+        "type": "primary",
+        "publisher": "Model Context Protocol",
+        "title": "Specification — Security and Trust & Safety principles",
+        "published": "2025-11-25",
+        "url": "https://modelcontextprotocol.io/specification/2025-11-25",
+        "supports": [
+          "definition",
+          "usage",
+          "risk"
+        ]
+      },
+      {
+        "id": "mcp-auth-security-2026",
+        "type": "primary",
+        "publisher": "Model Context Protocol",
+        "title": "Authorization — Security Considerations",
+        "published": "2026",
+        "url": "https://modelcontextprotocol.io/specification/draft/basic/authorization",
+        "supports": [
+          "usage",
+          "risk",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "human-approval-gate": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "human-oversight",
+      "tool-approval",
+      "ai-agent"
+    ],
+    "sources": [
+      {
+        "id": "openai-codex-safety-2026",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "Running Codex safely at OpenAI",
+        "published": "2026-05-08",
+        "url": "https://openai.com/index/running-codex-safely/",
+        "supports": [
+          "definition",
+          "usage",
+          "risk"
+        ]
+      }
+    ]
+  },
+  "tool-permission": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "tool-approval",
+      "agent-permission",
+      "least-privilege-agent"
+    ],
+    "sources": [
+      {
+        "id": "openai-codex-safety-2026",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "Running Codex safely at OpenAI",
+        "published": "2026-05-08",
+        "url": "https://openai.com/index/running-codex-safely/",
+        "supports": [
+          "definition",
+          "usage",
+          "risk"
+        ]
+      },
+      {
+        "id": "mcp-spec-tool-safety-2025",
+        "type": "primary",
+        "publisher": "Model Context Protocol",
+        "title": "Specification — Tool Safety",
+        "published": "2025-11-25",
+        "url": "https://modelcontextprotocol.io/specification/2025-11-25",
+        "supports": [
+          "usage",
+          "risk"
+        ]
+      }
+    ]
+  },
+  "systemic-risk": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-act",
+      "general-purpose-ai",
+      "frontier-ai"
+    ],
+    "sources": [
+      {
+        "id": "eu-ai-act-systemic-risk",
+        "type": "primary",
+        "publisher": "EUR-Lex",
+        "title": "Regulation (EU) 2024/1689 — General-purpose AI models with systemic risk",
+        "published": "2024-07-12",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32024R1689",
+        "supports": [
+          "definition",
+          "usage",
+          "regulation"
+        ]
+      }
+    ]
+  },
+  "prohibited-ai-practice": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-act",
+      "ai-risk-management",
+      "high-risk-ai"
+    ],
+    "sources": [
+      {
+        "id": "eu-ai-act-prohibited-practices",
+        "type": "primary",
+        "publisher": "EUR-Lex",
+        "title": "Regulation (EU) 2024/1689 — Article 5 Prohibited AI practices",
+        "published": "2024-07-12",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32024R1689",
+        "supports": [
+          "definition",
+          "usage",
+          "regulation"
+        ]
+      }
+    ]
+  },
+  "ai-impact-assessment": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-risk-assessment",
+      "ai-risk-management",
+      "ai-governance"
+    ],
+    "sources": [
+      {
+        "id": "uk-ai-management-essentials-impact",
+        "type": "primary",
+        "publisher": "UK Department for Science, Innovation and Technology",
+        "title": "AI Management Essentials tool — Impact assessment",
+        "published": "2026",
+        "url": "https://www.gov.uk/government/consultations/ai-management-essentials-tool/ai-management-essentials-tool-accessible",
+        "supports": [
+          "definition",
+          "usage",
+          "governance"
+        ]
+      },
+      {
+        "id": "nist-ai-impact-assessment-tasks",
+        "type": "primary",
+        "publisher": "NIST AI Resource Center",
+        "title": "Descriptions of AI Actor Tasks — AI Impact Assessment",
+        "published": "2026",
+        "url": "https://airc.nist.gov/airmf-resources/airmf/appendices/app-a-descriptions-of-ai-actor-tasks/",
+        "supports": [
+          "usage",
+          "governance"
+        ]
+      }
+    ]
+  },
+  "agent-security": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-agent",
+      "agent-identity",
+      "agent-sandbox"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-agent-security-2026",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "Agent Security with FIDES",
+        "published": "2026-08-25",
+        "url": "https://learn.microsoft.com/en-us/agent-framework/agents/security",
+        "supports": [
+          "definition",
+          "usage",
+          "risk"
+        ]
+      },
+      {
+        "id": "microsoft-agent-safety-2026",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "Agent Safety",
+        "published": "2026-08-25",
+        "url": "https://learn.microsoft.com/en-us/agent-framework/concepts/agents/safety",
+        "supports": [
+          "usage",
+          "risk"
+        ]
+      }
+    ]
   }
 }
