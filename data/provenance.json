@@ -10743,5 +10743,361 @@
         ]
       }
     ]
+  },
+  "query-expansion": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "query-rewriting",
+      "multi-query-retrieval",
+      "retrieval-pipeline"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-query-expansion-2026",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "Improve RAG chain quality",
+        "published": "2026",
+        "url": "https://learn.microsoft.com/en-us/azure/databricks/agents/tutorials/ai-cookbook/quality-rag-chain",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "multi-hop-retrieval": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "retrieval-pipeline",
+      "multi-query-retrieval",
+      "query-expansion"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-rag-decomposition-2026",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "Develop a RAG Solution on Azure - Information-Retrieval Phase",
+        "published": "2026",
+        "url": "https://learn.microsoft.com/azure/architecture/ai-ml/guide/rag/rag-information-retrieval",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "microsoft-agentic-retrieval-2026",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "Quickstart: Agentic Retrieval",
+        "published": "2026",
+        "url": "https://learn.microsoft.com/en-us/azure/search/search-get-started-agentic-retrieval?pivots=rest",
+        "supports": [
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "membership-inference": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "model-inversion",
+      "ai-security",
+      "training-data"
+    ],
+    "sources": [
+      {
+        "id": "nist-membership-inference-2026",
+        "type": "primary",
+        "publisher": "NIST CSRC",
+        "title": "membership-inference attack - Glossary",
+        "published": "2026",
+        "url": "https://csrc.nist.gov/glossary/term/membership_inference_attack",
+        "supports": [
+          "definition",
+          "technical-definition",
+          "security"
+        ]
+      }
+    ]
+  },
+  "agent-session": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "agent-state",
+      "agent-memory",
+      "agent-runtime"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-agent-session-2026",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "Conversations & Memory overview in Agent Framework",
+        "published": "2026-08-25",
+        "url": "https://learn.microsoft.com/en-us/agent-framework/agents/conversations/",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "microsoft-agent-session-api-2026",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "AgentSession Class",
+        "published": "2026",
+        "url": "https://learn.microsoft.com/en-us/dotnet/api/microsoft.agents.ai.agentsession?view=agent-framework-dotnet-latest",
+        "supports": [
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "persistent-memory": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "agent-memory",
+      "agent-session",
+      "semantic-memory"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-persistent-memory-neo4j-2026",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "Neo4j",
+        "published": "2026",
+        "url": "https://learn.microsoft.com/en-us/agent-framework/integrations/neo4j-memory",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "microsoft-persistent-memory-foundry-2026",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "Quickstart: Give a hosted agent persistent memory",
+        "published": "2026-08-05",
+        "url": "https://learn.microsoft.com/en-us/azure/foundry/agents/quickstarts/quickstart-memory-hosted-agent",
+        "supports": [
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "semantic-memory": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "agent-memory",
+      "persistent-memory",
+      "vector-database"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-semantic-memory-cosmos-2026",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "Azure Cosmos DB",
+        "published": "2026-08-25",
+        "url": "https://learn.microsoft.com/en-us/agent-framework/integrations/by-component/context-providers/azure-cosmos",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "microsoft-semantic-memory-foundry-2026",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "Quickstart: Give a hosted agent persistent memory",
+        "published": "2026-08-05",
+        "url": "https://learn.microsoft.com/en-us/azure/foundry/agents/quickstarts/quickstart-memory-hosted-agent",
+        "supports": [
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "capability-benchmark": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "capability-evaluation",
+      "safety-benchmark",
+      "eval"
+    ],
+    "sources": [
+      {
+        "id": "anthropic-capability-benchmark-2026",
+        "type": "research",
+        "publisher": "Anthropic",
+        "title": "Automated Researchers Can Mitigate Well-Characterized Alignment Failures",
+        "published": "2026",
+        "url": "https://alignment.anthropic.com/2026/automated-alignment-researchers/",
+        "supports": [
+          "definition",
+          "usage",
+          "evaluation"
+        ]
+      },
+      {
+        "id": "anthropic-a3-capability-benchmark-2026",
+        "type": "research",
+        "publisher": "Anthropic",
+        "title": "A3: An Automated Alignment Agent for Safety Finetuning",
+        "published": "2026",
+        "url": "https://alignment.anthropic.com/2026/automated-alignment-agent/",
+        "supports": [
+          "usage",
+          "evaluation"
+        ]
+      }
+    ]
+  },
+  "multimodal-benchmark": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "capability-evaluation",
+      "safety-benchmark",
+      "eval"
+    ],
+    "sources": [
+      {
+        "id": "openai-multimodal-benchmark-2026",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "GPT-5.5 System Card",
+        "published": "2026-04-23",
+        "url": "https://deploymentsafety.openai.com/gpt-5-5",
+        "supports": [
+          "definition",
+          "usage",
+          "evaluation"
+        ]
+      },
+      {
+        "id": "openai-multimodal-eval-2025",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "GPT-5 System Card",
+        "published": "2025",
+        "url": "https://deploymentsafety.openai.com/gpt-5",
+        "supports": [
+          "usage",
+          "evaluation"
+        ]
+      }
+    ]
+  },
+  "ai-red-team": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "red-teaming",
+      "ai-security-testing",
+      "safety-evaluation"
+    ],
+    "sources": [
+      {
+        "id": "openai-red-team-2024",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "Response to NIST Executive Order on AI",
+        "published": "2024",
+        "url": "https://openai.com/global-affairs/response-to-nist-executive-order-on-ai/",
+        "supports": [
+          "definition",
+          "usage",
+          "governance"
+        ]
+      },
+      {
+        "id": "openai-gpt55-red-team-2026",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "GPT-5.5 System Card",
+        "published": "2026-04-23",
+        "url": "https://openai.com/index/gpt-5-5-system-card/",
+        "supports": [
+          "usage",
+          "evaluation"
+        ]
+      }
+    ]
+  },
+  "backdoor-attack": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "data-poisoning",
+      "ai-security",
+      "model-inversion"
+    ],
+    "sources": [
+      {
+        "id": "nist-backdoor-attack-2024",
+        "type": "primary",
+        "publisher": "NIST",
+        "title": "Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations",
+        "published": "2024",
+        "url": "https://www.nist.gov/publications/adversarial-machine-learning-taxonomy-and-terminology-attacks-and-mitigations",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition",
+          "security"
+        ]
+      },
+      {
+        "id": "nist-trojai-backdoor",
+        "type": "primary",
+        "publisher": "NIST",
+        "title": "What Is TrojAI",
+        "published": "2024",
+        "url": "https://pages.nist.gov/trojai/docs/about.html",
+        "supports": [
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
   }
 }

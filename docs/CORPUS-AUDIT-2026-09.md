@@ -378,6 +378,94 @@ These are not recommended as separate entries now. Some are generic business phr
 - Cyborg Workflow
 - Vibe Debugging
 
+## Research Further promotion pass 19 — Batch W (published September 8, 2026)
+
+This batch is the nineteenth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
+
+### Query Expansion
+
+**Why promote and publish:** A retrieval technique that broadens or reformulates a search request into additional query terms or query variants so the system can retrieve a wider set of potentially relevant results.
+
+**Usage evidence:** [Microsoft Learn: Improve RAG chain quality](https://learn.microsoft.com/en-us/azure/databricks/agents/tutorials/ai-cookbook/quality-rag-chain)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Multi-Hop Retrieval
+
+**Why promote and publish:** A retrieval approach that gathers evidence across multiple dependent retrieval steps when answering a question requires information that is distributed across different sources or intermediate facts.
+
+**Usage evidence:** [Microsoft Learn: Develop a RAG Solution on Azure - Information-Retrieval Phase](https://learn.microsoft.com/azure/architecture/ai-ml/guide/rag/rag-information-retrieval); [Microsoft Learn: Quickstart: Agentic Retrieval](https://learn.microsoft.com/en-us/azure/search/search-get-started-agentic-retrieval?pivots=rest)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Membership Inference
+
+**Why promote and publish:** A privacy attack that attempts to determine whether a particular data sample was included in the training set of a machine-learning model.
+
+**Usage evidence:** [NIST CSRC: membership-inference attack - Glossary](https://csrc.nist.gov/glossary/term/membership_inference_attack)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Agent Session
+
+**Why promote and publish:** A conversation-scoped state container used by an AI agent to preserve information such as message history, memory references, service conversation identifiers, or other state across multiple runs.
+
+**Usage evidence:** [Microsoft Learn: Conversations & Memory overview in Agent Framework](https://learn.microsoft.com/en-us/agent-framework/agents/conversations/); [Microsoft Learn: AgentSession Class](https://learn.microsoft.com/en-us/dotnet/api/microsoft.agents.ai.agentsession?view=agent-framework-dotnet-latest)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Persistent Memory
+
+**Why promote and publish:** Agent memory stored durably so information can be recalled across separate sessions, process restarts, or later interactions rather than existing only in the current context window.
+
+**Usage evidence:** [Microsoft Learn: Neo4j](https://learn.microsoft.com/en-us/agent-framework/integrations/neo4j-memory); [Microsoft Learn: Quickstart: Give a hosted agent persistent memory](https://learn.microsoft.com/en-us/azure/foundry/agents/quickstarts/quickstart-memory-hosted-agent)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Semantic Memory
+
+**Why promote and publish:** Long-term agent memory that stores facts, concepts, preferences, or other knowledge in a form that can be retrieved later by semantic relevance rather than only by exact conversational position.
+
+**Usage evidence:** [Microsoft Learn: Azure Cosmos DB](https://learn.microsoft.com/en-us/agent-framework/integrations/by-component/context-providers/azure-cosmos); [Microsoft Learn: Quickstart: Give a hosted agent persistent memory](https://learn.microsoft.com/en-us/azure/foundry/agents/quickstarts/quickstart-memory-hosted-agent)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Capability Benchmark
+
+**Why promote and publish:** A benchmark used to measure a model’s performance on general or domain-specific capabilities so changes in useful ability can be compared across models, training methods, or safety interventions.
+
+**Usage evidence:** [Anthropic: Automated Researchers Can Mitigate Well-Characterized Alignment Failures](https://alignment.anthropic.com/2026/automated-alignment-researchers/); [Anthropic: A3: An Automated Alignment Agent for Safety Finetuning](https://alignment.anthropic.com/2026/automated-alignment-agent/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Multimodal Benchmark
+
+**Why promote and publish:** A benchmark that evaluates a model or AI system on tasks requiring understanding, reasoning, generation, or interaction across more than one modality, such as text and images.
+
+**Usage evidence:** [OpenAI: GPT-5.5 System Card](https://deploymentsafety.openai.com/gpt-5-5); [OpenAI: GPT-5 System Card](https://deploymentsafety.openai.com/gpt-5)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### AI Red Team
+
+**Why promote and publish:** A group of internal or external testers who adversarially probe an AI model or system to uncover harmful capabilities, misuse pathways, security weaknesses, or failures in safeguards.
+
+**Usage evidence:** [OpenAI: Response to NIST Executive Order on AI](https://openai.com/global-affairs/response-to-nist-executive-order-on-ai/); [OpenAI: GPT-5.5 System Card](https://openai.com/index/gpt-5-5-system-card/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Backdoor Attack
+
+**Why promote and publish:** An adversarial machine-learning attack that implants or exploits a hidden trigger so a model behaves normally on ordinary inputs but produces attacker-chosen behavior when the trigger is present.
+
+**Usage evidence:** [NIST: Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations](https://www.nist.gov/publications/adversarial-machine-learning-taxonomy-and-terminology-attacks-and-mitigations); [NIST: What Is TrojAI](https://pages.nist.gov/trojai/docs/about.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Alias disposition: Model Backdoor
+
+**Disposition:** Represent as an alias of the published **Backdoor Attack** entry rather than as a separate page. Current adversarial-ML terminology treats the model backdoor as the implanted backdoor behavior or mechanism within the broader backdoor-attack concept, and a separate entry would not add enough distinct reader value here.
+
 ## Research Further promotion pass 18 — Batch V (published September 8, 2026)
 
 This batch is the eighteenth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
@@ -1920,7 +2008,7 @@ All remaining unpublished candidates in `CORPUS-CANDIDATES.md`, including the ne
 
 ## Expansion result
 
-This audit has now published 213 candidates across Batches A–V and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
+This audit has now published 223 candidates across Batches A–W and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
 
 ## Follow-up
 

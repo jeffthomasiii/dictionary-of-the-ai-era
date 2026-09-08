@@ -21,7 +21,7 @@ The initial inventory below was seeded from the September 2026 EpochLex corpus-e
 
 These planning pools are not new editorial lifecycle states. Candidates with an active research issue are linked directly to that issue.
 
-**Current unpublished inventory: 533 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
+**Current unpublished inventory: 522 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
 
 ---
 
@@ -236,9 +236,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - GUI Agent
 - Memory Store
 
-- Persistent Memory
 - Research Agent
-- Semantic Memory
 
 - Swarm Intelligence
 - Task Decomposition
@@ -483,7 +481,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 - Multimodal RAG
 - Parent-Child Retrieval
-- Query Expansion
 
 - Self-RAG
 
@@ -506,7 +503,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 - AI Standard
 
-- Backdoor Attack
 - Confused Deputy
 - Data Leakage
 - Evasion Attack
@@ -516,9 +512,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Indirect Prompt Injection Attack
 
 - Meaningful Human Control
-- Membership Inference
-
-- Model Backdoor
 
 - Model Stealing
 - Poisoning Attack
@@ -594,7 +587,6 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - Agentic Payments
 - Agentic Web
 - AI Browser
-- Agent Session
 
 - Agent Benchmark
 
@@ -661,7 +653,6 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - Retrieval Quality
 
 - Agentic Retrieval
-- Multi-Hop Retrieval
 
 - Retrieval Grounding
 - Citation Retrieval
@@ -671,9 +662,6 @@ The September 8, 2026 corpus audit added the following candidates after checking
 
 - Benchmark Gaming
 - Benchmark Leakage
-- Capability Benchmark
-
-- Multimodal Benchmark
 
 - Needle-in-a-Haystack Evaluation
 - Human Preference Evaluation
@@ -692,7 +680,6 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - Model Spec
 - Constitutional Classifier
 - Safeguard Model
-- AI Red Team
 
 - Tool Injection
 - Kill Switch (AI)
