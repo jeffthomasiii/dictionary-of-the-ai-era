@@ -9423,5 +9423,314 @@
         ]
       }
     ]
+  },
+  "batch-inference": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "online-inference",
+      "inference",
+      "throughput"
+    ],
+    "sources": [
+      {
+        "id": "google-batch-inference-2026",
+        "type": "primary",
+        "publisher": "Google Cloud",
+        "title": "What is batch inference?",
+        "published": "2026",
+        "url": "https://cloud.google.com/discover/what-is-batch-inference",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "google-static-dynamic-inference-2025",
+        "type": "primary",
+        "publisher": "Google for Developers",
+        "title": "Production ML systems: Static versus dynamic inference",
+        "published": "2025-12-02",
+        "url": "https://developers.google.com/machine-learning/crash-course/production-ml-systems/static-vs-dynamic-inference",
+        "supports": [
+          "aliases",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "inference-provider": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "model-serving",
+      "inference-server",
+      "inference"
+    ],
+    "sources": [
+      {
+        "id": "hf-inference-providers-2026",
+        "type": "primary",
+        "publisher": "Hugging Face",
+        "title": "Inference Providers",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/inference-providers/index",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "inference-engine": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "inference-runtime",
+      "inference-backend",
+      "model-serving"
+    ],
+    "sources": [
+      {
+        "id": "nvidia-tensorrt-engine-2026",
+        "type": "primary",
+        "publisher": "NVIDIA",
+        "title": "NVIDIA TensorRT Documentation",
+        "published": "2026-08",
+        "url": "https://docs.nvidia.com/deeplearning/tensorrt/latest/",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "nvidia-build-engine-2026",
+        "type": "primary",
+        "publisher": "NVIDIA",
+        "title": "Build Your First Engine",
+        "published": "2026-08",
+        "url": "https://docs.nvidia.com/deeplearning/tensorrt/latest/getting-started/build-your-first-engine.html",
+        "supports": [
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "approximate-nearest-neighbor": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "hnsw",
+      "vector-database",
+      "embedding"
+    ],
+    "sources": [
+      {
+        "id": "elastic-approx-knn-2026",
+        "type": "primary",
+        "publisher": "Elastic",
+        "title": "k-nearest neighbor (kNN) search",
+        "published": "2026",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/8.19/knn-search.html",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "hybrid-retrieval": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "hybrid-search",
+      "dense-retrieval",
+      "sparse-retrieval"
+    ],
+    "sources": [
+      {
+        "id": "elastic-hybrid-search-2026",
+        "type": "primary",
+        "publisher": "Elastic",
+        "title": "Hybrid search with semantic_text",
+        "published": "2026",
+        "url": "https://www.elastic.co/docs/solutions/search/hybrid-semantic-text",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "evals-framework": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "eval",
+      "evaluation-harness",
+      "evaluation-dataset"
+    ],
+    "sources": [
+      {
+        "id": "openai-evals-framework-2023",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "GPT-4 — OpenAI Evals",
+        "published": "2023-03-14",
+        "url": "https://openai.com/index/gpt-4-research/",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "openai-evals-primer-2025",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "How evals drive the next chapter in AI for businesses",
+        "published": "2025-11-19",
+        "url": "https://openai.com/index/evals-drive-next-chapter-of-ai/",
+        "supports": [
+          "usage",
+          "evaluation"
+        ]
+      }
+    ]
+  },
+  "golden-dataset": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "evaluation-dataset",
+      "human-evaluation",
+      "eval"
+    ],
+    "sources": [
+      {
+        "id": "openai-golden-set-2025",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "How evals drive the next chapter in AI for businesses",
+        "published": "2025-11-19",
+        "url": "https://openai.com/index/evals-drive-next-chapter-of-ai/",
+        "supports": [
+          "definition",
+          "usage",
+          "evaluation"
+        ]
+      }
+    ]
+  },
+  "algorithmic-impact-assessment": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-impact-assessment",
+      "ai-risk-management",
+      "human-oversight"
+    ],
+    "sources": [
+      {
+        "id": "canada-aia-2026",
+        "type": "primary",
+        "publisher": "Government of Canada",
+        "title": "Algorithmic Impact Assessment tool",
+        "published": "2026-05-28",
+        "url": "https://www.canada.ca/en/government/system/digital-government/digital-government-innovations/responsible-use-ai/algorithmic-impact-assessment.html",
+        "supports": [
+          "definition",
+          "usage",
+          "governance",
+          "risk"
+        ]
+      }
+    ]
+  },
+  "general-purpose-ai-model": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "general-purpose-ai",
+      "ai-act",
+      "systemic-risk"
+    ],
+    "sources": [
+      {
+        "id": "eu-gpai-model-2025",
+        "type": "primary",
+        "publisher": "European Commission",
+        "title": "General-Purpose AI Models in the AI Act — Questions & Answers",
+        "published": "2025",
+        "url": "https://digital-strategy.ec.europa.eu/en/faqs/general-purpose-ai-models-ai-act-questions-answers",
+        "supports": [
+          "definition",
+          "usage",
+          "regulation"
+        ]
+      }
+    ]
+  },
+  "ai-transparency": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-governance",
+      "responsible-ai",
+      "model-card"
+    ],
+    "sources": [
+      {
+        "id": "nist-ai-transparency-2026",
+        "type": "primary",
+        "publisher": "NIST AI Resource Center",
+        "title": "AI Risks and Trustworthiness",
+        "published": "2026",
+        "url": "https://airc.nist.gov/airmf-resources/airmf/3-sec-characteristics/",
+        "supports": [
+          "definition",
+          "usage",
+          "governance"
+        ]
+      },
+      {
+        "id": "nist-transparency-playbook-2026",
+        "type": "primary",
+        "publisher": "NIST AI Resource Center",
+        "title": "AI RMF Playbook — Measure",
+        "published": "2026",
+        "url": "https://airc.nist.gov/airmf-resources/playbook/measure/",
+        "supports": [
+          "usage",
+          "governance"
+        ]
+      }
+    ]
   }
 }

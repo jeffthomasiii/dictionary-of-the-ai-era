@@ -378,6 +378,94 @@ These are not recommended as separate entries now. Some are generic business phr
 - Cyborg Workflow
 - Vibe Debugging
 
+## Research Further promotion pass 15 — Batch S (published September 8, 2026)
+
+This batch is the fifteenth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
+
+### Batch Inference
+
+**Why promote and publish:** A mode of model inference that processes many inputs together, typically asynchronously and without a requirement for immediate per-request responses, so predictions can be generated efficiently at high throughput.
+
+**Usage evidence:** [Google Cloud: What is batch inference?](https://cloud.google.com/discover/what-is-batch-inference); [Google for Developers: Production ML systems: Static versus dynamic inference](https://developers.google.com/machine-learning/crash-course/production-ml-systems/static-vs-dynamic-inference)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Inference Provider
+
+**Why promote and publish:** A service provider that hosts AI models and exposes infrastructure or APIs for running inference, allowing applications to request model outputs without operating the underlying model-serving stack themselves.
+
+**Usage evidence:** [Hugging Face: Inference Providers](https://huggingface.co/docs/inference-providers/index)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Inference Engine
+
+**Why promote and publish:** An optimized executable representation or execution component produced for running a trained model efficiently on a target inference stack or hardware platform.
+
+**Usage evidence:** [NVIDIA: NVIDIA TensorRT Documentation](https://docs.nvidia.com/deeplearning/tensorrt/latest/); [NVIDIA: Build Your First Engine](https://docs.nvidia.com/deeplearning/tensorrt/latest/getting-started/build-your-first-engine.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Approximate Nearest Neighbor
+
+**Why promote and publish:** A similarity-search approach that finds items likely to be among the nearest neighbors of a query vector without exhaustively comparing every candidate, trading some exactness for much faster search at scale.
+
+**Usage evidence:** [Elastic: k-nearest neighbor (kNN) search](https://www.elastic.co/guide/en/elasticsearch/reference/8.19/knn-search.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Hybrid Retrieval
+
+**Why promote and publish:** A retrieval approach that combines results or scores from different retrieval methods—commonly lexical and semantic or vector retrieval—to produce a single ranked result set.
+
+**Usage evidence:** [Elastic: Hybrid search with semantic_text](https://www.elastic.co/docs/solutions/search/hybrid-semantic-text)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Evals Framework
+
+**Why promote and publish:** A software or methodological framework for defining evaluation cases, running them against AI models or systems, applying grading logic, and inspecting results in a repeatable way.
+
+**Usage evidence:** [OpenAI: GPT-4 — OpenAI Evals](https://openai.com/index/gpt-4-research/); [OpenAI: How evals drive the next chapter in AI for businesses](https://openai.com/index/evals-drive-next-chapter-of-ai/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Golden Dataset
+
+**Why promote and publish:** A curated set of representative examples with trusted expected outputs, labels, judgments, or success criteria that serves as a reference for evaluating and improving an AI system.
+
+**Usage evidence:** [OpenAI: How evals drive the next chapter in AI for businesses](https://openai.com/index/evals-drive-next-chapter-of-ai/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Algorithmic Impact Assessment
+
+**Why promote and publish:** A structured assessment used to identify and evaluate the potential impacts and risks of an automated decision system so required safeguards, review, transparency, and mitigation measures can be determined.
+
+**Usage evidence:** [Government of Canada: Algorithmic Impact Assessment tool](https://www.canada.ca/en/government/system/digital-government/digital-government-innovations/responsible-use-ai/algorithmic-impact-assessment.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### General-Purpose AI Model
+
+**Why promote and publish:** Under the EU AI Act, an AI model that displays significant generality, can competently perform a wide range of distinct tasks, and can be integrated into a variety of downstream systems or applications.
+
+**Usage evidence:** [European Commission: General-Purpose AI Models in the AI Act — Questions & Answers](https://digital-strategy.ec.europa.eu/en/faqs/general-purpose-ai-models-ai-act-questions-answers)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### AI Transparency
+
+**Why promote and publish:** The quality and practice of making relevant information about an AI system, its operation, governance, limitations, decisions, and impacts available in ways that help affected people and responsible actors understand what happened and how the system is being managed.
+
+**Usage evidence:** [NIST AI Resource Center: AI Risks and Trustworthiness](https://airc.nist.gov/airmf-resources/airmf/3-sec-characteristics/); [NIST AI Resource Center: AI RMF Playbook — Measure](https://airc.nist.gov/airmf-resources/playbook/measure/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Offline Inference
+
+**Disposition:** Alias of **Batch Inference**, consistent with current Google documentation that uses offline/static inference for the same batch-prediction pattern. It is removed from the unpublished candidate inventory rather than published as a duplicate entry.
+
 ## Research Further promotion pass 14 — Batch R (published September 8, 2026)
 
 This batch is the fourteenth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
@@ -1569,7 +1657,7 @@ All remaining unpublished candidates in `CORPUS-CANDIDATES.md`, including the ne
 
 ## Expansion result
 
-This audit has now published 173 candidates across Batches A–R and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
+This audit has now published 183 candidates across Batches A–S and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
 
 ## Follow-up
 
