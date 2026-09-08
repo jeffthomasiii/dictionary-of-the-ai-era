@@ -21,7 +21,7 @@ The initial inventory below was seeded from the September 2026 EpochLex corpus-e
 
 These planning pools are not new editorial lifecycle states. Candidates with an active research issue are linked directly to that issue.
 
-**Current unpublished inventory: 637 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
+**Current unpublished inventory: 627 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
 
 ---
 
@@ -229,8 +229,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Agent Memory
 - Agent Planning
 - Agent Protocol
-- Agent Runtime
-- Agent State
+
 - Agent Supervisor
 - Agent Swarm
 - Agent-to-Agent (A2A)
@@ -246,7 +245,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Episodic Memory
 - GUI Agent
 - Memory Store
-- Multi-Agent Orchestration
+
 - Persistent Memory
 - Research Agent
 - Semantic Memory
@@ -325,7 +324,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Judge Model
 - Model Grader
 
-- Pointwise Evaluation
 - Reference Answer
 - Refusal
 - Regression Evaluation
@@ -334,7 +332,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 - Test Contamination
 - Test Set
-- Tool-Use Evaluation
+
 - Uncertainty
 - Win Rate
 
@@ -439,9 +437,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - MCP Connector
 
 - MCP Prompt
-- MCP Registry
 
-- MCP Transport
 - Remote MCP Server
 
 ### Named Entities
@@ -551,8 +547,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - AI Disclosure
 - AI Ethics
 - AI Impact Assessment
-- AI Incident
-- AI Incident Reporting
+
 - AI Oversight
 - AI Regulation
 - AI Risk
@@ -571,7 +566,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Excessive Agency
 
 - General-Purpose AI Model
-- Human Oversight
+
 - Human-on-the-Loop
 - Human-out-of-the-Loop
 - Indirect Prompt Injection Attack

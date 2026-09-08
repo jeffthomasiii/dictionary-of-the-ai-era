@@ -378,6 +378,90 @@ These are not recommended as separate entries now. Some are generic business phr
 - Cyborg Workflow
 - Vibe Debugging
 
+## Research Further promotion pass 9 — Batch M (published September 8, 2026)
+
+This batch is the ninth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
+
+### MCP Transport
+
+**Why promote and publish:** The communication mechanism used to carry Model Context Protocol messages between an MCP client and server. The protocol defines transports including standard input/output for local subprocess connections and Streamable HTTP for networked connections.
+
+**Usage evidence:** [Model Context Protocol: Transports](https://modelcontextprotocol.io/specification/2025-06-18/basic/transports)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### MCP Registry
+
+**Why promote and publish:** A registry service for publishing and discovering metadata about Model Context Protocol servers so clients, aggregators, and users can find available servers and installation information.
+
+**Usage evidence:** [Model Context Protocol: The MCP Registry](https://modelcontextprotocol.io/registry/about); [Model Context Protocol: Official MCP Registry Reference](https://registry.modelcontextprotocol.io/docs)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Agent Runtime
+
+**Why promote and publish:** The execution environment that hosts, runs, and operates an AI agent or agentic application, providing infrastructure for concerns such as scaling, conversations, tool calls, lifecycle management, and durable execution.
+
+**Usage evidence:** [Microsoft Learn: What is Microsoft Foundry Agent Service?](https://learn.microsoft.com/en-us/azure/ai-services/agents/overview); [Google Cloud: Agent Runtime](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/runtime)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Agent State
+
+**Why promote and publish:** Data that represents information an agent or agent workflow needs to preserve or share across steps, turns, executors, or execution boundaries so later behavior can depend on earlier activity.
+
+**Usage evidence:** [Microsoft Learn: Microsoft Agent Framework Workflows — State](https://learn.microsoft.com/en-us/agent-framework/workflows/state)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Multi-Agent Orchestration
+
+**Why promote and publish:** The coordination of multiple AI agents with distinct roles or capabilities so they can exchange work, route tasks, collaborate, or execute a larger workflow using an explicit orchestration pattern.
+
+**Usage evidence:** [Microsoft Agent Framework: Microsoft Agent Framework Version 1.0](https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0/); [Microsoft Agent Framework: Microsoft Agent Framework at BUILD 2026: Agent Harness, Hosted Agents, CodeAct, and more](https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-at-build-2026-announce/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Pointwise Evaluation
+
+**Why promote and publish:** An evaluation method that scores or judges one model response at a time against defined criteria or a rubric, rather than directly comparing it with another candidate response.
+
+**Usage evidence:** [Google Cloud: View and interpret evaluation results](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/eval-python-sdk/view-evaluation); [Google Cloud: Vertex AI evaluation package — PointwiseMetric](https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.evaluation)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Tool-Use Evaluation
+
+**Why promote and publish:** Evaluation of how an AI model or agent selects, calls, and uses tools during a task, including whether required tools are invoked appropriately and whether tool interactions contribute to successful outcomes.
+
+**Usage evidence:** [Anthropic: Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Human Oversight
+
+**Why promote and publish:** Human supervision of an AI system intended to enable people to understand, monitor, intervene in, override, or stop the system when needed, with the level of oversight shaped by the system’s risks, autonomy, and context of use.
+
+**Usage evidence:** [EUR-Lex: Regulation (EU) 2024/1689 — Article 14 Human oversight](https://eur-lex.europa.eu/eli/reg/2024/1689/oj?locale=en)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### AI Incident
+
+**Why promote and publish:** An event or circumstance involving an AI system that results in, contributes to, or creates a meaningful risk of harm to people, organizations, property, rights, safety, security, or the environment, depending on the reporting framework being used.
+
+**Usage evidence:** [OECD: AI risks and incidents](https://www.oecd.org/en/topics/ai-risks-and-incidents.html); [OECD: Defining AI incidents and related terms](https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/05/defining-ai-incidents-and-related-terms_88d089ec/d1a8d965-en.pdf)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### AI Incident Reporting
+
+**Why promote and publish:** The structured practice or regulatory process of documenting and communicating information about AI incidents to designated internal teams, regulators, or shared reporting systems so incidents can be investigated, learned from, and addressed.
+
+**Usage evidence:** [EUR-Lex: Regulation (EU) 2024/1689 — Article 73 Reporting of serious incidents](https://eur-lex.europa.eu/eli/reg/2024/1689/oj?locale=en); [OECD: AI risks and incidents](https://www.oecd.org/en/topics/ai-risks-and-incidents.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
 ## Research Further promotion pass 8 — Batch L (published September 8, 2026)
 
 This batch is the eighth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
@@ -1065,7 +1149,7 @@ All remaining unpublished candidates in `CORPUS-CANDIDATES.md`, including the ne
 
 ## Expansion result
 
-This audit has now published 113 candidates across Batches A–L and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
+This audit has now published 123 candidates across Batches A–M and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
 
 ## Follow-up
 

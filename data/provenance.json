@@ -7620,5 +7620,337 @@
         ]
       }
     ]
+  },
+  "mcp-transport": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "mcp",
+      "mcp-client",
+      "mcp-server"
+    ],
+    "sources": [
+      {
+        "id": "mcp-transports-2025",
+        "type": "primary",
+        "publisher": "Model Context Protocol",
+        "title": "Transports",
+        "published": "2025-06-18",
+        "url": "https://modelcontextprotocol.io/specification/2025-06-18/basic/transports",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "mcp-registry": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "mcp",
+      "mcp-server",
+      "mcp-client"
+    ],
+    "sources": [
+      {
+        "id": "mcp-registry-about-2026",
+        "type": "primary",
+        "publisher": "Model Context Protocol",
+        "title": "The MCP Registry",
+        "published": "2026",
+        "url": "https://modelcontextprotocol.io/registry/about",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "mcp-registry-api-2026",
+        "type": "primary",
+        "publisher": "Model Context Protocol",
+        "title": "Official MCP Registry Reference",
+        "published": "2026",
+        "url": "https://registry.modelcontextprotocol.io/docs",
+        "supports": [
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "agent-runtime": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-agent",
+      "agentic-workflow",
+      "agent-state"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-agent-runtime-2026",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "What is Microsoft Foundry Agent Service?",
+        "published": "2026-08-19",
+        "url": "https://learn.microsoft.com/en-us/azure/ai-services/agents/overview",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "google-agent-runtime-2026",
+        "type": "primary",
+        "publisher": "Google Cloud",
+        "title": "Agent Runtime",
+        "published": "2026-08",
+        "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/runtime",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "agent-state": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-agent",
+      "agent-runtime",
+      "ai-memory"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-agent-state-2026",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "Microsoft Agent Framework Workflows — State",
+        "published": "2026-08-25",
+        "url": "https://learn.microsoft.com/en-us/agent-framework/workflows/state",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "multi-agent-orchestration": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-agent",
+      "agentic-workflow",
+      "agent-runtime"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-multi-agent-orchestration-2026",
+        "type": "primary",
+        "publisher": "Microsoft Agent Framework",
+        "title": "Microsoft Agent Framework Version 1.0",
+        "published": "2026-04-03",
+        "url": "https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0/",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      },
+      {
+        "id": "microsoft-orchestration-patterns-2026",
+        "type": "primary",
+        "publisher": "Microsoft Agent Framework",
+        "title": "Microsoft Agent Framework at BUILD 2026: Agent Harness, Hosted Agents, CodeAct, and more",
+        "published": "2026",
+        "url": "https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-at-build-2026-announce/",
+        "supports": [
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "pointwise-evaluation": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "eval",
+      "pairwise-evaluation",
+      "grader"
+    ],
+    "sources": [
+      {
+        "id": "google-pointwise-evaluation-2026",
+        "type": "reference",
+        "publisher": "Google Cloud",
+        "title": "View and interpret evaluation results",
+        "published": "2026",
+        "url": "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/eval-python-sdk/view-evaluation",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "google-pointwise-metric-2026",
+        "type": "reference",
+        "publisher": "Google Cloud",
+        "title": "Vertex AI evaluation package — PointwiseMetric",
+        "published": "2026-05-30",
+        "url": "https://docs.cloud.google.com/python/docs/reference/vertexai/latest/vertexai.evaluation",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "tool-use-evaluation": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "agent-evaluation",
+      "tool-calling",
+      "grader"
+    ],
+    "sources": [
+      {
+        "id": "anthropic-agent-evals-tool-use-2026",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Demystifying evals for AI agents",
+        "published": "2026-01-09",
+        "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+        "supports": [
+          "definition",
+          "usage",
+          "evaluation"
+        ]
+      }
+    ]
+  },
+  "human-oversight": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-governance",
+      "high-risk-ai",
+      "ai-risk-management"
+    ],
+    "sources": [
+      {
+        "id": "eu-ai-act-human-oversight",
+        "type": "primary",
+        "publisher": "EUR-Lex",
+        "title": "Regulation (EU) 2024/1689 — Article 14 Human oversight",
+        "published": "2024-07-12",
+        "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj?locale=en",
+        "supports": [
+          "definition",
+          "usage",
+          "regulation"
+        ]
+      }
+    ]
+  },
+  "ai-incident": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-risk-management",
+      "ai-assurance",
+      "ai-governance"
+    ],
+    "sources": [
+      {
+        "id": "oecd-ai-incidents-2026",
+        "type": "primary",
+        "publisher": "OECD",
+        "title": "AI risks and incidents",
+        "published": "2026",
+        "url": "https://www.oecd.org/en/topics/ai-risks-and-incidents.html",
+        "supports": [
+          "definition",
+          "usage",
+          "governance"
+        ]
+      },
+      {
+        "id": "oecd-defining-ai-incidents-2024",
+        "type": "research",
+        "publisher": "OECD",
+        "title": "Defining AI incidents and related terms",
+        "published": "2024",
+        "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/05/defining-ai-incidents-and-related-terms_88d089ec/d1a8d965-en.pdf",
+        "supports": [
+          "definition",
+          "governance"
+        ]
+      }
+    ]
+  },
+  "ai-incident-reporting": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-incident",
+      "ai-risk-management",
+      "ai-act"
+    ],
+    "sources": [
+      {
+        "id": "eu-ai-act-incident-reporting",
+        "type": "primary",
+        "publisher": "EUR-Lex",
+        "title": "Regulation (EU) 2024/1689 — Article 73 Reporting of serious incidents",
+        "published": "2024-07-12",
+        "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj?locale=en",
+        "supports": [
+          "definition",
+          "usage",
+          "regulation"
+        ]
+      },
+      {
+        "id": "oecd-ai-incident-reporting-2026",
+        "type": "primary",
+        "publisher": "OECD",
+        "title": "AI risks and incidents",
+        "published": "2026",
+        "url": "https://www.oecd.org/en/topics/ai-risks-and-incidents.html",
+        "supports": [
+          "definition",
+          "usage",
+          "governance"
+        ]
+      }
+    ]
   }
 }
