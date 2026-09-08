@@ -378,6 +378,90 @@ These are not recommended as separate entries now. Some are generic business phr
 - Cyborg Workflow
 - Vibe Debugging
 
+## Research Further promotion pass 17 — Batch U (published September 8, 2026)
+
+This batch is the seventeenth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
+
+### Agent Handoff
+
+**Why promote and publish:** A transfer of control from one AI agent to another so the receiving agent continues the workflow with the relevant conversation or task state.
+
+**Usage evidence:** [OpenAI: A practical guide to building agents](https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Agent Harness
+
+**Why promote and publish:** The surrounding software and workflow infrastructure that manages an AI agent’s loop, tools, context, execution environment, state, and control flow so the agent can carry out tasks reliably over time.
+
+**Usage evidence:** [OpenAI: The next evolution of the Agents SDK](https://openai.com/index/the-next-evolution-of-the-agents-sdk/); [Anthropic: Harness design for long-running application development](https://www.anthropic.com/engineering/harness-design-long-running-apps)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Agent Planning
+
+**Why promote and publish:** The process by which an AI agent identifies or organizes intermediate steps, subtasks, or actions needed to complete a larger goal before or during execution.
+
+**Usage evidence:** [Microsoft Learn: What Is the AI Agent Planning Design Pattern?](https://learn.microsoft.com/en-us/shows/ai-agents-for-beginners/what-is-the-ai-agent-planning-design-pattern)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Verifiable Reward
+
+**Why promote and publish:** A reward signal whose correctness or success can be checked automatically or objectively against a rule, reference answer, test, or other verifier rather than relying only on a learned preference model.
+
+**Usage evidence:** [Hugging Face: Verifiable Rewards (Rule/Checker-Based Rewards)](https://huggingface.co/datasets/rl-llm-wiki/knowledge-base/blob/main/topics/reward-modeling/verifiable-rewards.md); [Microsoft Research: Reinforcement Learning with Verifiable Rewards Implicitly Incentivizes Correct Reasoning in Base LLMs](https://www.microsoft.com/en-us/research/publication/reinforcement-learning-with-verifiable-rewards-implicitly-incentivizes-correct-reasoning-in-base-llms/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Semantic Chunking
+
+**Why promote and publish:** A document-splitting approach that creates chunks around semantically coherent content or meaning boundaries instead of relying only on fixed character, token, or length limits.
+
+**Usage evidence:** [Microsoft Learn: Retrieval-Augmented Generation with Azure Document Intelligence in Foundry Tools](https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/concept/retrieval-augmented-generation?view=doc-intel-4.0.0)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Regression Evaluation
+
+**Why promote and publish:** An evaluation used to detect whether a model, prompt, retrieval system, or AI application performs worse on previously supported behaviors after a change.
+
+**Usage evidence:** [OpenAI: Morgan Stanley uses AI evals to shape the future of financial services](https://openai.com/index/morgan-stanley/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Excessive Agency
+
+**Why promote and publish:** A security vulnerability in which an AI or LLM-based system has more functionality, permissions, or autonomy than necessary, allowing unexpected or manipulated outputs to cause damaging actions.
+
+**Usage evidence:** [OWASP GenAI Security Project: LLM06:2025 Excessive Agency](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Prompt Injection Defense
+
+**Why promote and publish:** A defense-in-depth set of controls intended to reduce the likelihood or impact of direct or indirect prompt injection, such as input handling, instruction/data separation, least privilege, output validation, monitoring, and approval gates.
+
+**Usage evidence:** [OWASP Cheat Sheet Series: LLM Prompt Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html); [OWASP GenAI Security Project: LLM01:2025 Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### AI Oversight
+
+**Why promote and publish:** The organizational and human governance activities used to supervise, review, challenge, monitor, or intervene in the development, deployment, and operation of AI systems.
+
+**Usage evidence:** [NIST AI Resource Center: AI RMF Playbook — Map and Govern](https://airc.nist.gov/airmf-resources/playbook/map/); [NIST AI Resource Center: AI RMF Playbook — Govern](https://airc.nist.gov/airmf-resources/playbook/govern/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Model Audit
+
+**Why promote and publish:** A structured examination of a model and its surrounding development, validation, monitoring, documentation, controls, or performance to assess whether it meets defined governance, risk, or compliance expectations.
+
+**Usage evidence:** [NIST AI Resource Center: AI RMF Playbook — Govern](https://airc.nist.gov/airmf-resources/playbook/govern/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
 ## Research Further promotion pass 16 — Batch T (published September 8, 2026)
 
 This batch is the sixteenth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
@@ -1745,7 +1829,7 @@ All remaining unpublished candidates in `CORPUS-CANDIDATES.md`, including the ne
 
 ## Expansion result
 
-This audit has now published 193 candidates across Batches A–T and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
+This audit has now published 203 candidates across Batches A–U and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
 
 ## Follow-up
 

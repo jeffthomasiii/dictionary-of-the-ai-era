@@ -21,7 +21,7 @@ The initial inventory below was seeded from the September 2026 EpochLex corpus-e
 
 These planning pools are not new editorial lifecycle states. Candidates with an active research issue are linked directly to that issue.
 
-**Current unpublished inventory: 555 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
+**Current unpublished inventory: 545 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
 
 ---
 
@@ -219,10 +219,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Agent Context
 - Agent Delegation
 
-- Agent Handoff
-- Agent Harness
-
-- Agent Planning
 - Agent Protocol
 
 - Agent Supervisor
@@ -319,7 +315,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 - Reference Answer
 - Refusal
-- Regression Evaluation
 
 - Test Contamination
 - Test Set
@@ -497,7 +492,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Query Expansion
 
 - Self-RAG
-- Semantic Chunking
 
 ### Safety, Security & Governance
 
@@ -511,8 +505,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - AI Disclosure
 - AI Ethics
 
-- AI Oversight
-
 - AI Risk
 
 - AI Safety
@@ -524,7 +516,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Confused Deputy
 - Data Leakage
 - Evasion Attack
-- Excessive Agency
 
 - Human-on-the-Loop
 - Human-out-of-the-Loop
@@ -532,7 +523,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 - Meaningful Human Control
 - Membership Inference
-- Model Audit
+
 - Model Backdoor
 - Model Extraction
 
@@ -644,7 +635,7 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - Hidden Chain of Thought
 - Reasoning Trace
 - Reasoning Summary
-- Verifiable Reward
+
 - Sparse MoE
 - Expert Routing
 - Activation Sparsity
@@ -715,7 +706,7 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - Safeguard Model
 - AI Red Team
 - AI Security Testing
-- Prompt Injection Defense
+
 - Tool Injection
 - Kill Switch (AI)
 
