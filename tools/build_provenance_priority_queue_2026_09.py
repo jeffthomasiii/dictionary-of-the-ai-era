@@ -36,9 +36,7 @@ inbound=Counter()
 for p in prov.values():
     for rel in p.get('relatedTerms',[]): inbound[rel]+=1
 
-def degree(slug):
-    return inbound[slug]+len(prov[slug].get('relatedTerms',[]))
-
+def degree(slug): return inbound[slug]+len(prov[slug].get('relatedTerms',[]))
 def cats(slug): return by_slug[slug].get('categories',[])
 def term(slug): return by_slug[slug]['term']
 
@@ -49,11 +47,9 @@ def wave_for(slug):
     fast_words=('mcp','agent','security','risk','governance','oversight','compliance','regulation','policy','incident','approval','permission','systemic','prohibited','accountability','audit','safety')
     if any(w in n for w in fast_words) or 'risks, safety & governance' in c:
         return 2
-    if 'systems & technical concepts' in c or 'ways of working' in c:
-        return 3
-    return 4
+    return 3
 
-waves={1:[],2:[],3:[],4:[]}
+waves={1:[],2:[],3:[]}
 for s in pending: waves[wave_for(s)].append(s)
 for w in waves: waves[w].sort(key=lambda s:(-degree(s),term(s).casefold()))
 assert sum(map(len,waves.values()))==243
@@ -66,8 +62,8 @@ lines += ['# EpochLex Pending Provenance Review Queue — September 2026','',
 'EpochLex currently has **365 published entries**, including **122 researched** provenance records and **243 pending** records. The current corpus-growth pause shifts attention from bulk publication to deeper provenance review. The first milestone is to complete 61 pending records, which would move the corpus to **183 researched / 182 pending** without adding new entries.','',
 'The queue prioritizes four practical considerations: broad reader importance, value to EpochLex’s identity and differentiation, volatility or likelihood of meaning changing quickly, and the value of documenting provenance/history rather than leaving a useful definition without its research layer. These considerations guide this working queue only; they do not change `PROVENANCE.md` or `CONTRIBUTING.md`.','',
 '## Review waves','',
-'- **Wave 1 — Majority milestone (61):** highest-priority mix of foundational concepts, EpochLex differentiators, fast-moving agent/protocol terms, and governance/safety anchors. Completing this wave crosses the majority-researched milestone.','- **Wave 2 — Time-sensitive and governance/security:** remaining fast-moving protocols, agent concepts, security, regulation, oversight, and governance entries where current sourcing matters especially strongly.','- **Wave 3 — Technical and workflow backbone:** remaining systems, retrieval, evaluation, deployment, and ways-of-working concepts that are important but generally less time-sensitive.','- **Wave 4 — Stable/narrower supporting vocabulary:** remaining pending entries that can follow once higher-impact and more volatile records are consolidated.','',
-'Within Waves 2–4, relationship centrality in the current published corpus is used only as a practical ordering aid; it is not a measure of editorial importance.','',
+'- **Wave 1 — Majority milestone (61):** highest-priority mix of foundational concepts, EpochLex differentiators, fast-moving agent/protocol terms, and governance/safety anchors. Completing this wave crosses the majority-researched milestone.','- **Wave 2 — Time-sensitive and governance/security:** remaining fast-moving protocols, agent concepts, security, regulation, oversight, and governance entries where current sourcing matters especially strongly.','- **Wave 3 — Technical and workflow backbone:** all other pending systems, retrieval, evaluation, deployment, and ways-of-working concepts. These remain important, but the current evidence suggests they are generally less time-sensitive than Wave 2.','',
+'Within Waves 2–3, relationship centrality in the current published corpus is used only as a practical ordering aid; it is not a measure of editorial importance.','',
 '## First provenance research batch — 10 entries','',
 'This first batch deliberately mixes foundational, differentiating, practical, and fast-moving concepts so the workflow can be tested across several kinds of provenance research before scaling to the rest of Wave 1.','']
 for i,n in enumerate(first10,1): lines.append(f'{i}. **{n}**')
@@ -79,7 +75,7 @@ for group,names in W1.items():
         lines.append(f'- **{n}** — relationship links: {degree(s)}')
     lines.append('')
 
-for w,title in [(2,'Wave 2 — Time-sensitive and governance/security'),(3,'Wave 3 — Technical and workflow backbone'),(4,'Wave 4 — Stable/narrower supporting vocabulary')]:
+for w,title in [(2,'Wave 2 — Time-sensitive and governance/security'),(3,'Wave 3 — Technical and workflow backbone')]:
     lines += [f'## {title} ({len(waves[w])})','']
     for s in waves[w]:
         cs=', '.join(cats(s)) or 'Uncategorized'
@@ -93,4 +89,4 @@ lines += ['## Working review sequence','',
 
 out='\n'.join(lines)+'\n'
 (R/'docs/PROVENANCE-REVIEW-QUEUE-2026-09.md').write_text(out)
-print(json.dumps({'pending':len(pending),'wave1':len(waves[1]),'wave2':len(waves[2]),'wave3':len(waves[3]),'wave4':len(waves[4]),'first_batch':first10},indent=2))
+print(json.dumps({'pending':len(pending),'wave1':len(waves[1]),'wave2':len(waves[2]),'wave3':len(waves[3]),'first_batch':first10},indent=2))
