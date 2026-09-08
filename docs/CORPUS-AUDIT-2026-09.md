@@ -378,6 +378,98 @@ These are not recommended as separate entries now. Some are generic business phr
 - Cyborg Workflow
 - Vibe Debugging
 
+## Research Further promotion pass 21 — Batch Y (published September 8, 2026)
+
+This batch is the twenty-first evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule. This pass deliberately prioritizes foundational model-architecture vocabulary that remained underrepresented after earlier frontier and agent-focused expansion.
+
+### Byte-Pair Encoding (BPE)
+
+**Why promote and publish:** A subword tokenization algorithm that builds a vocabulary by repeatedly merging frequently occurring adjacent symbols or token pairs, allowing common sequences to become single tokens while less common text remains split into smaller units.
+
+**Usage evidence:** [Hugging Face: Tokenization algorithms — Byte pair encoding (BPE)](https://huggingface.co/docs/transformers/main/tokenizer_summary); [Hugging Face: Tokenizers Models — BPE](https://huggingface.co/docs/tokenizers/main/api/models)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Autoregressive Model
+
+**Why promote and publish:** A model that generates or predicts a sequence one step at a time, with each new prediction conditioned on earlier elements of the sequence, including the model’s own previous outputs during generation.
+
+**Usage evidence:** [Google for Developers: Machine Learning Glossary — auto-regressive model](https://developers.google.com/machine-learning/glossary); [Hugging Face: Causal language modeling](https://huggingface.co/docs/transformers/tasks/language_modeling)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Encoder
+
+**Why promote and publish:** The component of an encoder-decoder or related neural architecture that transforms input data into hidden representations that capture information the model can use for downstream prediction or generation.
+
+**Usage evidence:** [Hugging Face: Encoder Decoder Models](https://huggingface.co/docs/transformers/model_doc/encoder-decoder); [arXiv: Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Decoder
+
+**Why promote and publish:** The component of an encoder-decoder or generative neural architecture that produces output representations or tokens, often using prior generated tokens and, when present, information produced by an encoder.
+
+**Usage evidence:** [Hugging Face: Encoder Decoder Models](https://huggingface.co/docs/transformers/model_doc/encoder-decoder); [arXiv: Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Cross-Attention
+
+**Why promote and publish:** An attention mechanism in which one sequence or representation supplies the queries while a different sequence or representation supplies the keys and values, allowing information from one source to guide processing of another.
+
+**Usage evidence:** [Hugging Face: Encoder Decoder Models](https://huggingface.co/docs/transformers/model_doc/encoder-decoder); [arXiv: Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Softmax
+
+**Why promote and publish:** A function that converts a set of numeric scores into nonnegative values that sum to one, commonly used to turn model logits into a probability distribution over possible classes or tokens.
+
+**Usage evidence:** [PyTorch: Softmax](https://docs.pytorch.org/docs/stable/generated/torch.nn.modules.activation.Softmax.html); [Google for Developers: Machine Learning Glossary — softmax](https://developers.google.com/machine-learning/glossary)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Logit
+
+**Why promote and publish:** A raw, unnormalized prediction score produced by a model before a normalization step such as softmax converts a set of scores into probabilities.
+
+**Usage evidence:** [Hugging Face: Encoder Decoder Models](https://huggingface.co/docs/transformers/model_doc/encoder-decoder)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Perplexity
+
+**Why promote and publish:** A metric for evaluating autoregressive language models based on the exponentiated average negative log-likelihood of a sequence; lower perplexity indicates that the model assigns higher probability to the observed text under the same tokenization and evaluation setup.
+
+**Usage evidence:** [Hugging Face: Perplexity of fixed-length models](https://huggingface.co/docs/transformers/v4.57.1/en/perplexity); [Hugging Face: Causal language modeling](https://huggingface.co/docs/transformers/tasks/language_modeling)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Multimodal Model
+
+**Why promote and publish:** An AI model designed to process, relate, or generate information across more than one data modality, such as text, images, audio, or video.
+
+**Usage evidence:** [Hugging Face: Multimodal Generation](https://huggingface.co/docs/transformers/main/tasks/any_to_any)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### FlashAttention
+
+**Why promote and publish:** An IO-aware exact attention algorithm that reorganizes attention computation into blocks to reduce memory reads and writes between GPU memory levels, improving speed and memory efficiency without approximating the attention result.
+
+**Usage evidence:** [arXiv: FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](https://arxiv.org/abs/2205.14135); [Hugging Face: Attention backends](https://huggingface.co/docs/transformers/en/attention_interface)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Alias disposition: Faithfulness
+
+**Disposition:** Remove **Faithfulness** from the unpublished candidate inventory because the existing published **Groundedness** entry already carries it as an alias. This is a consistency cleanup, not a new relationship type or lifecycle rule.
+
+### Alias disposition: Test-Time Scaling
+
+**Disposition:** Remove **Test-Time Scaling** from the unpublished candidate inventory because the existing published **Inference-Time Scaling** entry already carries it as an alias. This is a consistency cleanup, not a new relationship type or lifecycle rule.
+
 ## Research Further promotion pass 20 — Batch X (published September 8, 2026)
 
 This batch is the twentieth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
@@ -2096,7 +2188,7 @@ All remaining unpublished candidates in `CORPUS-CANDIDATES.md`, including the ne
 
 ## Expansion result
 
-This audit has now published 233 candidates across Batches A–X and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
+This audit has now published 243 candidates across Batches A–Y and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
 
 ## Follow-up
 

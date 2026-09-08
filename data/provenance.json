@@ -11459,5 +11459,351 @@
         ]
       }
     ]
+  },
+  "byte-pair-encoding": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "tokenization"
+    ],
+    "sources": [
+      {
+        "id": "hf-bpe-2026",
+        "type": "primary",
+        "publisher": "Hugging Face",
+        "title": "Tokenization algorithms — Byte pair encoding (BPE)",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/transformers/main/tokenizer_summary",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "hf-tokenizers-bpe-2026",
+        "type": "primary",
+        "publisher": "Hugging Face",
+        "title": "Tokenizers Models — BPE",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/tokenizers/main/api/models",
+        "supports": [
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "autoregressive-model": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "transformer",
+      "inference"
+    ],
+    "sources": [
+      {
+        "id": "google-autoregressive-glossary-2026",
+        "type": "primary",
+        "publisher": "Google for Developers",
+        "title": "Machine Learning Glossary — auto-regressive model",
+        "published": "2026",
+        "url": "https://developers.google.com/machine-learning/glossary",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "hf-causal-lm-2026",
+        "type": "primary",
+        "publisher": "Hugging Face",
+        "title": "Causal language modeling",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/transformers/tasks/language_modeling",
+        "supports": [
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "encoder": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "decoder",
+      "transformer",
+      "embedding"
+    ],
+    "sources": [
+      {
+        "id": "hf-encoder-decoder-2026",
+        "type": "primary",
+        "publisher": "Hugging Face",
+        "title": "Encoder Decoder Models",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/transformers/model_doc/encoder-decoder",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "vaswani-transformer-2017",
+        "type": "research",
+        "publisher": "arXiv",
+        "title": "Attention Is All You Need",
+        "published": "2017-06-12",
+        "url": "https://arxiv.org/abs/1706.03762",
+        "supports": [
+          "technical-definition",
+          "history"
+        ]
+      }
+    ]
+  },
+  "decoder": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "encoder",
+      "transformer",
+      "cross-attention"
+    ],
+    "sources": [
+      {
+        "id": "hf-encoder-decoder-2026",
+        "type": "primary",
+        "publisher": "Hugging Face",
+        "title": "Encoder Decoder Models",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/transformers/model_doc/encoder-decoder",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "vaswani-transformer-2017",
+        "type": "research",
+        "publisher": "arXiv",
+        "title": "Attention Is All You Need",
+        "published": "2017-06-12",
+        "url": "https://arxiv.org/abs/1706.03762",
+        "supports": [
+          "technical-definition",
+          "history"
+        ]
+      }
+    ]
+  },
+  "cross-attention": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "encoder",
+      "decoder",
+      "transformer"
+    ],
+    "sources": [
+      {
+        "id": "hf-cross-attention-2026",
+        "type": "primary",
+        "publisher": "Hugging Face",
+        "title": "Encoder Decoder Models",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/transformers/model_doc/encoder-decoder",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "vaswani-transformer-2017",
+        "type": "research",
+        "publisher": "arXiv",
+        "title": "Attention Is All You Need",
+        "published": "2017-06-12",
+        "url": "https://arxiv.org/abs/1706.03762",
+        "supports": [
+          "technical-definition",
+          "history"
+        ]
+      }
+    ]
+  },
+  "softmax": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "logit"
+    ],
+    "sources": [
+      {
+        "id": "pytorch-softmax-2026",
+        "type": "primary",
+        "publisher": "PyTorch",
+        "title": "Softmax",
+        "published": "2026",
+        "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.modules.activation.Softmax.html",
+        "supports": [
+          "definition",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "google-softmax-glossary-2026",
+        "type": "primary",
+        "publisher": "Google for Developers",
+        "title": "Machine Learning Glossary — softmax",
+        "published": "2026",
+        "url": "https://developers.google.com/machine-learning/glossary",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "logit": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "softmax",
+      "decoder"
+    ],
+    "sources": [
+      {
+        "id": "hf-logits-encoder-decoder-2026",
+        "type": "primary",
+        "publisher": "Hugging Face",
+        "title": "Encoder Decoder Models",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/transformers/model_doc/encoder-decoder",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "perplexity": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "autoregressive-model",
+      "eval"
+    ],
+    "sources": [
+      {
+        "id": "hf-perplexity-2026",
+        "type": "primary",
+        "publisher": "Hugging Face",
+        "title": "Perplexity of fixed-length models",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/transformers/v4.57.1/en/perplexity",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition",
+          "evaluation"
+        ]
+      },
+      {
+        "id": "hf-causal-perplexity-2026",
+        "type": "primary",
+        "publisher": "Hugging Face",
+        "title": "Causal language modeling",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/transformers/tasks/language_modeling",
+        "supports": [
+          "usage",
+          "evaluation"
+        ]
+      }
+    ]
+  },
+  "multimodal-model": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "multimodal-benchmark",
+      "text-to-video"
+    ],
+    "sources": [
+      {
+        "id": "hf-multimodal-generation-2026",
+        "type": "primary",
+        "publisher": "Hugging Face",
+        "title": "Multimodal Generation",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/transformers/main/tasks/any_to_any",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "flashattention": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "transformer",
+      "kv-cache"
+    ],
+    "sources": [
+      {
+        "id": "dao-flashattention-2022",
+        "type": "research",
+        "publisher": "arXiv",
+        "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+        "published": "2022-05-27",
+        "url": "https://arxiv.org/abs/2205.14135",
+        "supports": [
+          "definition",
+          "technical-definition",
+          "history"
+        ]
+      },
+      {
+        "id": "hf-attention-backends-2026",
+        "type": "primary",
+        "publisher": "Hugging Face",
+        "title": "Attention backends",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/transformers/en/attention_interface",
+        "supports": [
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
   }
 }
