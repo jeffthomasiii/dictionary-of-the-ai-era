@@ -1,0 +1,35 @@
+name: Apply September 2026 corpus expansion
+
+on:
+  push:
+    branches:
+      - corpus/2026-09-expansion-audit
+    paths:
+      - tools/apply_corpus_expansion_2026_09.py
+      - .github/workflows/apply-corpus-expansion-2026-09.yml
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: corpus/2026-09-expansion-audit
+      - name: Apply corpus changes
+        run: python tools/apply_corpus_expansion_2026_09.py
+      - name: Commit generated corpus changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/terms.json data/provenance.json sitemap.xml docs/CORPUS-CANDIDATES.md docs/CORPUS-AUDIT-2026-09.md docs/ROADMAP.md terms/
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit."
+          else
+            git commit -m "Publish first pending-provenance corpus expansion batch"
+            git push origin HEAD:corpus/2026-09-expansion-audit
+          fi
