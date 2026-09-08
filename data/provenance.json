@@ -5439,5 +5439,276 @@
         ]
       }
     ]
+  },
+  "agent-skills": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-agent",
+      "context-engineering",
+      "orchestration",
+      "subagent"
+    ],
+    "sources": [
+      {
+        "id": "anthropic-agent-skills-2025",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Equipping agents for the real world with Agent Skills",
+        "published": "2025-10-16",
+        "url": "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "agent-observability": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-agent",
+      "eval",
+      "red-teaming",
+      "agent-loop"
+    ],
+    "sources": [
+      {
+        "id": "google-agent-observability-2026",
+        "type": "primary",
+        "publisher": "Google Cloud",
+        "title": "Agent observability",
+        "published": "2026",
+        "url": "https://docs.cloud.google.com/stackdriver/docs/observability/agent-observability",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "ai-pc": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "npu",
+      "local-ai",
+      "artificial-intelligence"
+    ],
+    "sources": [
+      {
+        "id": "intel-ai-pc-2026",
+        "type": "primary",
+        "publisher": "Intel",
+        "title": "What is an AI PC?",
+        "published": "2026-06-08",
+        "url": "https://www.intel.com/content/www/us/en/support/articles/000099561/processors/intel-core-ultra-processors.html",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "npu": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-pc",
+      "local-ai",
+      "inference"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-npu-2026",
+        "type": "primary",
+        "publisher": "Microsoft",
+        "title": "All about neural processing units (NPUs)",
+        "published": "2026",
+        "url": "https://support.microsoft.com/en-us/windows/experience/compatibility/all-about-neural-processing-units-npus",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "high-risk-ai": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-governance",
+      "responsible-ai",
+      "ai-assurance",
+      "artificial-intelligence"
+    ],
+    "sources": [
+      {
+        "id": "eu-high-risk-ai-2026",
+        "type": "primary",
+        "publisher": "European Commission AI Act Service Desk",
+        "title": "Article 6: Classification rules for high-risk AI systems",
+        "published": "2026",
+        "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-6",
+        "supports": [
+          "definition",
+          "usage",
+          "scope"
+        ]
+      }
+    ]
+  },
+  "reasoning-effort": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "inference",
+      "large-language-model",
+      "chain-of-thought"
+    ],
+    "sources": [
+      {
+        "id": "openai-reasoning-effort-2025",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "Introducing GPT-5 for developers",
+        "published": "2025",
+        "url": "https://openai.com/index/introducing-gpt-5-for-developers/",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "reciprocal-rank-fusion": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "hybrid-search",
+      "reranking",
+      "vector-search",
+      "rag"
+    ],
+    "sources": [
+      {
+        "id": "elastic-rrf",
+        "type": "reference",
+        "publisher": "Elastic",
+        "title": "Reciprocal rank fusion",
+        "published": null,
+        "url": "https://www.elastic.co/docs/reference/elasticsearch/rest-apis/reciprocal-rank-fusion",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "browser-use": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "computer-use",
+      "ai-agent",
+      "tool-calling",
+      "agentic-workflow"
+    ],
+    "sources": [
+      {
+        "id": "openai-browser-use-2026",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "Using the built-in browser in the ChatGPT desktop app",
+        "published": "2026",
+        "url": "https://help.openai.com/en/articles/20001277-using-the-built-in-browser-in-the-chatgpt-desktop-app",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "ai-memory": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "context-window",
+      "context-engineering",
+      "ai-agent",
+      "agentic-workflow"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-ai-memory-2026",
+        "type": "primary",
+        "publisher": "Microsoft Security",
+        "title": "Guarding AI memory",
+        "published": "2026-06-22",
+        "url": "https://www.microsoft.com/en-us/security/blog/2026/06/22/guarding-ai-memory/",
+        "supports": [
+          "definition",
+          "usage",
+          "risk"
+        ]
+      }
+    ]
+  },
+  "local-ai": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "open-weight-model",
+      "inference",
+      "ai-pc",
+      "npu"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-local-ai-2025",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "Choose between cloud-based and local AI models",
+        "published": "2025-12",
+        "url": "https://learn.microsoft.com/en-us/windows/ai/cloud-ai",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      },
+      {
+        "id": "intel-local-ai-2026",
+        "type": "primary",
+        "publisher": "Intel",
+        "title": "Local AI and the Compute Architecture That Makes It Work",
+        "published": "2026-06-09",
+        "url": "https://community.intel.com/t5/Blogs/Tech-Innovation/Edge-5G/Local-AI-and-the-Compute-Architecture-That-Makes-It-Work/post/1750535",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
   }
 }
