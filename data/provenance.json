@@ -8286,5 +8286,288 @@
         ]
       }
     ]
+  },
+  "mcp-extension": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "mcp",
+      "mcp-apps",
+      "mcp-tasks"
+    ],
+    "sources": [
+      {
+        "id": "mcp-2026-extensions",
+        "type": "primary",
+        "publisher": "Model Context Protocol",
+        "title": "The 2026-07-28 Specification",
+        "published": "2026-07-28",
+        "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "mcp-ui-resource": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "mcp-apps",
+      "mcp-tool",
+      "mcp-resource"
+    ],
+    "sources": [
+      {
+        "id": "mcp-apps-ui-resource-2026",
+        "type": "primary",
+        "publisher": "Model Context Protocol",
+        "title": "MCP Apps - Bringing UI Capabilities To MCP Clients",
+        "published": "2026-01-26",
+        "url": "https://blog.modelcontextprotocol.io/posts/2026-01-26-mcp-apps/",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "mcp-structured-content": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "mcp-tool",
+      "structured-output",
+      "mcp"
+    ],
+    "sources": [
+      {
+        "id": "mcp-tools-structured-content",
+        "type": "primary",
+        "publisher": "Model Context Protocol",
+        "title": "Tools",
+        "published": "2025-11-25",
+        "url": "https://modelcontextprotocol.io/specification/2025-11-25/server/tools",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "mcp-2026-structured-content",
+        "type": "primary",
+        "publisher": "Model Context Protocol",
+        "title": "The 2026-07-28 Specification Release Candidate",
+        "published": "2026-05-21",
+        "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+        "supports": [
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "agent-trace": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "agent-observability",
+      "ai-agent",
+      "llm-observability"
+    ],
+    "sources": [
+      {
+        "id": "ms-foundry-agent-tracing-2026",
+        "type": "primary",
+        "publisher": "Microsoft Foundry",
+        "title": "Set Up Tracing for AI Agents in Microsoft Foundry",
+        "published": "2026-09-07",
+        "url": "https://learn.microsoft.com/en-us/azure/foundry/observability/how-to/trace-agent-setup",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "llm-observability": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "agent-observability",
+      "agent-trace",
+      "large-language-model"
+    ],
+    "sources": [
+      {
+        "id": "otel-genai-observability-2026",
+        "type": "primary",
+        "publisher": "OpenTelemetry",
+        "title": "Inside the LLM Call: GenAI Observability with OpenTelemetry",
+        "published": "2026-05-14",
+        "url": "https://opentelemetry.io/blog/2026/genai-observability/",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "evaluation-harness": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "eval",
+      "benchmark",
+      "evaluation-dataset"
+    ],
+    "sources": [
+      {
+        "id": "eleutherai-lm-eval-harness",
+        "type": "primary",
+        "publisher": "EleutherAI",
+        "title": "Language Model Evaluation Harness",
+        "published": "2026",
+        "url": "https://github.com/EleutherAI/lm-evaluation-harness",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "evaluation-dataset": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "eval",
+      "benchmark",
+      "ground-truth"
+    ],
+    "sources": [
+      {
+        "id": "ms-foundry-evaluation-datasets-2026",
+        "type": "primary",
+        "publisher": "Microsoft Foundry",
+        "title": "Evaluation datasets in Microsoft Foundry",
+        "published": "2026-08-28",
+        "url": "https://learn.microsoft.com/en-us/azure/foundry/observability/how-to/evaluation-datasets",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "8-bit-quantization": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "quantization",
+      "4-bit-quantization",
+      "local-ai"
+    ],
+    "sources": [
+      {
+        "id": "hf-bitsandbytes-8bit",
+        "type": "primary",
+        "publisher": "Hugging Face",
+        "title": "Bitsandbytes",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/transformers/quantization/bitsandbytes",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "quantized-model": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "quantization",
+      "gguf",
+      "local-ai"
+    ],
+    "sources": [
+      {
+        "id": "hf-transformers-quantization",
+        "type": "primary",
+        "publisher": "Hugging Face",
+        "title": "Quantization",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/transformers/main_classes/quantization",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "hf-bitsandbytes-quantized-model",
+        "type": "primary",
+        "publisher": "Hugging Face",
+        "title": "Bitsandbytes",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/transformers/quantization/bitsandbytes",
+        "supports": [
+          "usage"
+        ]
+      }
+    ]
+  },
+  "kv-cache-quantization": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "kv-cache",
+      "quantization",
+      "inference"
+    ],
+    "sources": [
+      {
+        "id": "vllm-kv-cache-quantization-2026",
+        "type": "primary",
+        "publisher": "vLLM",
+        "title": "Quantized KV Cache",
+        "published": "2026",
+        "url": "https://docs.vllm.ai/en/stable/features/quantization/quantized_kvcache/",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
   }
 }

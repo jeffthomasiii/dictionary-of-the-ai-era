@@ -1038,4 +1038,44 @@
     <loc>https://epochlex.justathoughtblog.org/terms/agent-security/</loc>
     <lastmod>2026-09-08</lastmod>
   </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/mcp-extension/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/mcp-ui-resource/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/mcp-structured-content/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/agent-trace/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/llm-observability/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/evaluation-harness/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/evaluation-dataset/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/8-bit-quantization/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/quantized-model/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/kv-cache-quantization/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
 </urlset>
