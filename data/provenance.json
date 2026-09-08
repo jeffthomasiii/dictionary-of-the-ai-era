@@ -6490,5 +6490,272 @@
         ]
       }
     ]
+  },
+  "inference-server": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "inference",
+      "model-serving",
+      "local-ai",
+      "structured-output"
+    ],
+    "sources": [
+      {
+        "id": "hf-transformers-serve-2026",
+        "type": "reference",
+        "publisher": "Hugging Face",
+        "title": "Serve CLI",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/transformers/serve-cli/serving",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "model-serving": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "inference",
+      "inference-server",
+      "model-registry",
+      "ai-governance"
+    ],
+    "sources": [
+      {
+        "id": "hf-jobs-serving-2026",
+        "type": "reference",
+        "publisher": "Hugging Face",
+        "title": "Serve Models on Jobs",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/hub/jobs-serving",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "gguf": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "local-ai",
+      "open-weight-model",
+      "qlora",
+      "on-device-ai"
+    ],
+    "sources": [
+      {
+        "id": "hf-gguf-2026",
+        "type": "reference",
+        "publisher": "Hugging Face",
+        "title": "GGUF",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/transformers/main/quantization/gguf",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "4-bit-quantization": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "qlora",
+      "local-ai",
+      "open-weight-model",
+      "inference"
+    ],
+    "sources": [
+      {
+        "id": "hf-bitsandbytes-4bit-2026",
+        "type": "reference",
+        "publisher": "Hugging Face",
+        "title": "Bitsandbytes",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/transformers/main/quantization/bitsandbytes",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "safetensors": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "model-weights",
+      "open-weight-model",
+      "fine-tuning",
+      "local-ai"
+    ],
+    "sources": [
+      {
+        "id": "hf-safetensors-2026",
+        "type": "primary",
+        "publisher": "Hugging Face",
+        "title": "Safetensors",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/safetensors/index",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "reranker": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "reranking",
+      "rag",
+      "hybrid-search",
+      "vector-search"
+    ],
+    "sources": [
+      {
+        "id": "cohere-rerank-2026",
+        "type": "primary",
+        "publisher": "Cohere",
+        "title": "Cohere’s Rerank Model",
+        "published": "2026",
+        "url": "https://docs.cohere.com/docs/rerank",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "safety-evaluation": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "eval",
+      "red-teaming",
+      "ai-safety-case",
+      "ai-assurance"
+    ],
+    "sources": [
+      {
+        "id": "nist-ai-metrology-safety-eval-2026",
+        "type": "primary",
+        "publisher": "NIST",
+        "title": "AI Metrology Center",
+        "published": "2026",
+        "url": "https://airc.nist.gov/metrology/",
+        "supports": [
+          "definition",
+          "usage",
+          "risk"
+        ]
+      }
+    ]
+  },
+  "pass-at-k": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "eval",
+      "benchmark",
+      "sampling"
+    ],
+    "sources": [
+      {
+        "id": "chen-codex-passk-2021",
+        "type": "primary",
+        "publisher": "OpenAI researchers",
+        "title": "Evaluating Large Language Models Trained on Code",
+        "published": "2021-07-07",
+        "url": "https://arxiv.org/abs/2107.03374",
+        "supports": [
+          "definition",
+          "usage",
+          "history"
+        ]
+      }
+    ]
+  },
+  "group-relative-policy-optimization": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "direct-preference-optimization",
+      "ai-alignment",
+      "fine-tuning",
+      "reasoning-effort"
+    ],
+    "sources": [
+      {
+        "id": "hf-grpo-trainer-2026",
+        "type": "reference",
+        "publisher": "Hugging Face",
+        "title": "GRPO Trainer",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/trl/grpo_trainer",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "model-registry": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-governance",
+      "model-card",
+      "system-card",
+      "model-serving"
+    ],
+    "sources": [
+      {
+        "id": "aws-model-registry-2026",
+        "type": "primary",
+        "publisher": "AWS",
+        "title": "Model Registration Deployment with Model Registry",
+        "published": "2026",
+        "url": "https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry.html",
+        "supports": [
+          "definition",
+          "usage",
+          "governance"
+        ]
+      }
+    ]
   }
 }
