@@ -1398,4 +1398,44 @@
     <loc>https://epochlex.justathoughtblog.org/terms/backdoor-attack/</loc>
     <lastmod>2026-09-08</lastmod>
   </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/rag-pipeline/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/rag-chunking/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/needle-in-a-haystack-evaluation/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/human-preference-evaluation/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/agent-risk-assessment/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/training-data-extraction/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/tool-poisoning/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/rag-poisoning/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/sensitive-information-disclosure/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/constitutional-classifier/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
 </urlset>
