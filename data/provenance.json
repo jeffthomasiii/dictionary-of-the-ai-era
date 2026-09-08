@@ -5044,7 +5044,8 @@
       "temperature",
       "inference",
       "token",
-      "large-language-model"
+      "large-language-model",
+      "top-p"
     ],
     "sources": [
       {
@@ -5054,6 +5055,255 @@
         "title": "How to generate text: using different decoding methods for language generation with Transformers",
         "published": "2020",
         "url": "https://huggingface.co/blog/how-to-generate",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "top-p": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "sampling",
+      "token",
+      "temperature",
+      "inference"
+    ],
+    "sources": [
+      {
+        "id": "hf-top-p-sampling",
+        "type": "reference",
+        "publisher": "Hugging Face",
+        "title": "How to generate text: using different decoding methods for language generation with Transformers",
+        "published": "2020-03-01",
+        "url": "https://huggingface.co/blog/how-to-generate",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "speech-to-text": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "artificial-intelligence",
+      "natural-language-processing"
+    ],
+    "sources": [
+      {
+        "id": "google-cloud-stt",
+        "type": "primary",
+        "publisher": "Google Cloud",
+        "title": "Cloud Speech-to-Text documentation",
+        "published": null,
+        "url": "https://docs.cloud.google.com/speech-to-text/docs",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "text-to-speech": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "artificial-intelligence",
+      "natural-language-processing"
+    ],
+    "sources": [
+      {
+        "id": "google-cloud-tts",
+        "type": "primary",
+        "publisher": "Google Cloud",
+        "title": "Cloud Text-to-Speech documentation",
+        "published": null,
+        "url": "https://docs.cloud.google.com/text-to-speech/docs",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "text-to-video": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "artificial-intelligence",
+      "synthetic-content"
+    ],
+    "sources": [
+      {
+        "id": "hf-text-to-video",
+        "type": "reference",
+        "publisher": "Hugging Face",
+        "title": "Text-to-Video",
+        "published": null,
+        "url": "https://huggingface.co/tasks/text-to-video",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "loss-function": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "training-data",
+      "parameters",
+      "fine-tuning"
+    ],
+    "sources": [
+      {
+        "id": "google-ml-loss-function",
+        "type": "reference",
+        "publisher": "Google for Developers",
+        "title": "Machine Learning Glossary",
+        "published": "2026",
+        "url": "https://developers.google.com/machine-learning/glossary",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "gradient-descent": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "loss-function",
+      "parameters",
+      "training-data"
+    ],
+    "sources": [
+      {
+        "id": "google-ml-gradient-descent",
+        "type": "reference",
+        "publisher": "Google for Developers",
+        "title": "Machine Learning Glossary",
+        "published": "2026",
+        "url": "https://developers.google.com/machine-learning/glossary",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "backpropagation": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "gradient-descent",
+      "loss-function",
+      "neural-network",
+      "parameters"
+    ],
+    "sources": [
+      {
+        "id": "google-ml-backprop",
+        "type": "reference",
+        "publisher": "Google for Developers",
+        "title": "Machine Learning Glossary",
+        "published": "2026",
+        "url": "https://developers.google.com/machine-learning/glossary",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "overfitting": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "training-data",
+      "fine-tuning",
+      "loss-function"
+    ],
+    "sources": [
+      {
+        "id": "google-ml-overfitting",
+        "type": "reference",
+        "publisher": "Google for Developers",
+        "title": "Machine Learning Glossary",
+        "published": "2026",
+        "url": "https://developers.google.com/machine-learning/glossary",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "underfitting": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "training-data",
+      "fine-tuning",
+      "loss-function"
+    ],
+    "sources": [
+      {
+        "id": "google-ml-underfitting",
+        "type": "reference",
+        "publisher": "Google for Developers",
+        "title": "Machine Learning Glossary",
+        "published": "2026",
+        "url": "https://developers.google.com/machine-learning/glossary",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "unsupervised-learning": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "artificial-intelligence",
+      "training-data",
+      "neural-network"
+    ],
+    "sources": [
+      {
+        "id": "google-ml-unsupervised",
+        "type": "reference",
+        "publisher": "Google for Developers",
+        "title": "Machine Learning Glossary",
+        "published": "2026",
+        "url": "https://developers.google.com/machine-learning/glossary",
         "supports": [
           "definition",
           "usage"
