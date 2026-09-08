@@ -21,7 +21,7 @@ The initial inventory below was seeded from the September 2026 EpochLex corpus-e
 
 These planning pools are not new editorial lifecycle states. Candidates with an active research issue are linked directly to that issue.
 
-**Current unpublished inventory: 577 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
+**Current unpublished inventory: 566 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
 
 ---
 
@@ -312,7 +312,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Factuality
 - False Negative
 - False Positive
-- Golden Dataset
 
 - Hallucination Rate
 - Holdout Set
@@ -379,11 +378,9 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 ### Inference & Serving
 
 - AI Gateway
-- Batch Inference
+
 - Cached Token
 - Constrained Decoding
-
-- Inference Provider
 
 - Input Token
 - JSON Mode
@@ -391,8 +388,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Log Probability
 - Max Tokens
 - Model Endpoint
-
-- Offline Inference
 
 - Output Token
 
@@ -488,8 +483,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 ### Retrieval & RAG
 
-- Approximate Nearest Neighbor (ANN)
-
 - Chunk Overlap
 
 - Corrective RAG (CRAG)
@@ -497,8 +490,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Embedding Model
 - Embedding Space
 - Fixed-Size Chunking
-
-- Hybrid Retrieval
 
 - Keyword Search
 - Knowledge Retrieval
@@ -535,16 +526,14 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - AI Sandbox
 
 - AI Standard
-- AI Transparency
+
 - Algorithmic Audit
-- Algorithmic Impact Assessment
+
 - Backdoor Attack
 - Confused Deputy
 - Data Leakage
 - Evasion Attack
 - Excessive Agency
-
-- General-Purpose AI Model
 
 - Human-on-the-Loop
 - Human-out-of-the-Loop
@@ -653,8 +642,6 @@ The September 8, 2026 corpus audit added the following candidates after checking
 
 - TOPS
 
-- Inference Engine
-
 - Hardware Acceleration
 - AI Accelerator Card
 - Memory Footprint
@@ -713,7 +700,6 @@ The September 8, 2026 corpus audit added the following candidates after checking
 
 ### Evaluation & observability
 
-- Evals Framework
 - Benchmark Gaming
 - Benchmark Leakage
 - Capability Benchmark
