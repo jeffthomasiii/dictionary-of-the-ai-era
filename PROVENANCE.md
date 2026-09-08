@@ -17,11 +17,27 @@ EpochLex separates:
 - **Related terms:** editorially useful connections to other EpochLex entries.
 - **Research status:** whether the provenance review for an entry is still pending or has received an initial human-reviewed research pass.
 
+## Publication and provenance are separate gates
+
+A term may be publishable as a dictionary entry before its deeper provenance research is complete.
+
+Publication requires enough human-reviewed information to make the entry genuinely useful and defensible as a reference entry: the term must have documented real-world usage, distinct reader value, a clear definition, a natural example, pronunciation, classification metadata, and the other core fields required by `data/terms.json` and the dedicated term page.
+
+Publication does **not** require EpochLex to have already established an origin, first-known-use date, historical milestones, or a complete provenance source set.
+
+Every published term must still have a matching record in `data/provenance.json` so the research state is explicit. A publishable entry whose dedicated provenance review has not yet been completed uses `researchStatus: "pending"`. Empty provenance fields on such a record mean that the claim has not yet been researched or established; they do not mean that no origin, history, or relevant source exists.
+
+A term moves to `researchStatus: "researched"` only after its provenance record has received an initial human-reviewed sourcing pass under this standard.
+
+This distinction is intended to let EpochLex improve useful dictionary coverage without presenting unfinished historical research as settled fact. `pending` is a transparent research state, not permission to publish an unreviewed or unsupported definition.
+
 ## Research statuses
 
 ### `pending`
 
 The term is published in EpochLex, but its provenance record has not yet received a dedicated sourcing review. Empty provenance fields must not be interpreted as claims that no origin or history exists.
+
+A `pending` record may contain provenance information that has already been established, but any populated claim should still be supported appropriately. The status remains `pending` until the entry has received the dedicated provenance review required for `researched`.
 
 ### `researched`
 
@@ -110,4 +126,4 @@ Before publication of a researched provenance record, a human reviewer should ve
 
 `data/provenance.json` remains intentionally separate from `data/terms.json`. The core dictionary dataset stays lightweight while the provenance dataset carries the richer research layer.
 
-Current dedicated term pages combine both datasets to display definition, pronunciation, source citations, origin, history, related terms, research status, and review dates without forcing every field into the Browse interface.
+Current dedicated term pages combine both datasets to display definition, pronunciation, source citations, origin, history, related terms, research status, and review dates without forcing every field into the Browse interface. When provenance research is pending, the page should communicate that state clearly and should not imply that unresolved origin, first-use, history, or source fields have been disproven or fully investigated.
