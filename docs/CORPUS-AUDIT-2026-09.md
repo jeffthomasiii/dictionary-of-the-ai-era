@@ -378,6 +378,90 @@ These are not recommended as separate entries now. Some are generic business phr
 - Cyborg Workflow
 - Vibe Debugging
 
+## Research Further promotion pass 6 — Batch J (published September 8, 2026)
+
+This batch is the sixth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
+
+### Contextual Retrieval
+
+**Why promote and publish:** A retrieval approach that adds chunk-specific context before indexing so retrieved passages retain information about where they came from and what they refer to within the larger source.
+
+**Usage evidence:** [Anthropic: Introducing Contextual Retrieval](https://www.anthropic.com/engineering/contextual-retrieval)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### BM25
+
+**Why promote and publish:** A statistical text-ranking function used in information retrieval to score how well a document matches a query using term frequency, inverse document frequency, and document-length normalization.
+
+**Usage evidence:** [Elastic: Similarity settings — BM25 similarity](https://www.elastic.co/guide/en/elasticsearch/reference/current/index-modules-similarity.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### HNSW
+
+**Why promote and publish:** A graph-based approximate nearest-neighbor search algorithm that organizes vectors in hierarchical navigable small-world layers to enable fast similarity search at scale.
+
+**Usage evidence:** [Redis: Vector search concepts — HNSW index](https://redis.io/docs/latest/develop/ai/search-and-query/vectors/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Online Inference
+
+**Why promote and publish:** On-demand model inference performed synchronously in response to individual application requests, typically when a timely prediction or generated result is needed.
+
+**Usage evidence:** [Google for Developers: Production ML systems: online inference](https://developers.google.com/machine-learning/crash-course/MCE/mc-il-production-inference-online)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Time to First Token
+
+**Why promote and publish:** An inference-latency metric measuring the elapsed time from submitting a generation request until the first output token is received.
+
+**Usage evidence:** [NVIDIA: NIM LLMs Benchmarking — Time to First Token](https://docs.nvidia.com/nim/benchmarking/llm/latest/metrics.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Tokens per Second
+
+**Why promote and publish:** An inference-throughput metric that measures how many output tokens are generated per second, either for an individual request or across a serving system depending on the measurement definition.
+
+**Usage evidence:** [NVIDIA: NIM LLMs Benchmarking — Tokens Per Second](https://docs.nvidia.com/nim/benchmarking/llm/latest/metrics.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Reinforcement Learning with Verifiable Rewards
+
+**Why promote and publish:** A post-training approach that uses reinforcement learning with reward signals derived from outcomes that can be checked automatically or objectively, such as whether a mathematical answer or program is correct.
+
+**Usage evidence:** [Microsoft Research: Reinforcement Learning with Verifiable Rewards Implicitly Incentivizes Correct Reasoning in Base LLMs](https://www.microsoft.com/en-us/research/publication/reinforcement-learning-with-verifiable-rewards-implicitly-incentivizes-correct-reasoning-in-base-llms/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Process Reward Model
+
+**Why promote and publish:** A reward model that evaluates intermediate steps in a reasoning or decision process rather than scoring only the final response or outcome.
+
+**Usage evidence:** [Proceedings of Machine Learning Research: Free Process Rewards without Process Labels](https://proceedings.mlr.press/v267/yuan25c.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Pairwise Evaluation
+
+**Why promote and publish:** An evaluation method that compares two model outputs, prompts, or system variants against the same criteria and determines which performs better rather than assigning each an independent absolute score.
+
+**Usage evidence:** [Apple Developer Documentation: Scoring with model-as-judge evaluators](https://developer.apple.com/documentation/Evaluations/scoring-with-model-as-judge-evaluators)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Least-Privilege Agent
+
+**Why promote and publish:** An AI agent whose identity, resource access, tool access, and action permissions are intentionally limited to the minimum scope needed for its assigned tasks.
+
+**Usage evidence:** [Microsoft Learn: Least privilege for AI agents](https://learn.microsoft.com/en-us/security/zero-trust/sfi/least-privilege-for-ai-agents)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
 ## Research Further promotion pass 5 — Batch I (published September 8, 2026)
 
 This batch is the fifth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
@@ -813,7 +897,7 @@ All remaining unpublished candidates in `CORPUS-CANDIDATES.md`, including the ne
 
 ## Expansion result
 
-This audit has now published 83 candidates across Batches A–I and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
+This audit has now published 93 candidates across Batches A–J and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
 
 ## Follow-up
 

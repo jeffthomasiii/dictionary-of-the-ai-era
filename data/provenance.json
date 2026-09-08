@@ -6757,5 +6757,264 @@
         ]
       }
     ]
+  },
+  "contextual-retrieval": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "rag",
+      "reranker",
+      "hybrid-search"
+    ],
+    "sources": [
+      {
+        "id": "anthropic-contextual-retrieval-2024",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Introducing Contextual Retrieval",
+        "published": "2024-09-19",
+        "url": "https://www.anthropic.com/engineering/contextual-retrieval",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "bm25": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "hybrid-search",
+      "rag",
+      "reciprocal-rank-fusion"
+    ],
+    "sources": [
+      {
+        "id": "elastic-bm25",
+        "type": "reference",
+        "publisher": "Elastic",
+        "title": "Similarity settings — BM25 similarity",
+        "published": "2026",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/index-modules-similarity.html",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "hnsw": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "vector-search",
+      "vector-database",
+      "embedding"
+    ],
+    "sources": [
+      {
+        "id": "redis-hnsw",
+        "type": "reference",
+        "publisher": "Redis",
+        "title": "Vector search concepts — HNSW index",
+        "published": "2026",
+        "url": "https://redis.io/docs/latest/develop/ai/search-and-query/vectors/",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "online-inference": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "inference",
+      "model-serving",
+      "inference-server"
+    ],
+    "sources": [
+      {
+        "id": "google-online-inference",
+        "type": "reference",
+        "publisher": "Google for Developers",
+        "title": "Production ML systems: online inference",
+        "published": "2025-08-25",
+        "url": "https://developers.google.com/machine-learning/crash-course/MCE/mc-il-production-inference-online",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "time-to-first-token": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "inference",
+      "model-serving",
+      "inference-server"
+    ],
+    "sources": [
+      {
+        "id": "nvidia-ttft-2026",
+        "type": "reference",
+        "publisher": "NVIDIA",
+        "title": "NIM LLMs Benchmarking — Time to First Token",
+        "published": "2026-07-20",
+        "url": "https://docs.nvidia.com/nim/benchmarking/llm/latest/metrics.html",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "tokens-per-second": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "inference",
+      "model-serving",
+      "inference-server"
+    ],
+    "sources": [
+      {
+        "id": "nvidia-tps-2026",
+        "type": "reference",
+        "publisher": "NVIDIA",
+        "title": "NIM LLMs Benchmarking — Tokens Per Second",
+        "published": "2026-07-20",
+        "url": "https://docs.nvidia.com/nim/benchmarking/llm/latest/metrics.html",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "reinforcement-learning-with-verifiable-rewards": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "group-relative-policy-optimization",
+      "ai-alignment",
+      "fine-tuning"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-rlvr-2026",
+        "type": "research",
+        "publisher": "Microsoft Research",
+        "title": "Reinforcement Learning with Verifiable Rewards Implicitly Incentivizes Correct Reasoning in Base LLMs",
+        "published": "2026",
+        "url": "https://www.microsoft.com/en-us/research/publication/reinforcement-learning-with-verifiable-rewards-implicitly-incentivizes-correct-reasoning-in-base-llms/",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "process-reward-model": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "group-relative-policy-optimization",
+      "ai-alignment",
+      "inference-time-scaling"
+    ],
+    "sources": [
+      {
+        "id": "pmlr-process-reward-model-2025",
+        "type": "research",
+        "publisher": "Proceedings of Machine Learning Research",
+        "title": "Free Process Rewards without Process Labels",
+        "published": "2025",
+        "url": "https://proceedings.mlr.press/v267/yuan25c.html",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "pairwise-evaluation": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "eval",
+      "llm-as-a-judge",
+      "calibration"
+    ],
+    "sources": [
+      {
+        "id": "apple-pairwise-evaluation-2026",
+        "type": "reference",
+        "publisher": "Apple Developer Documentation",
+        "title": "Scoring with model-as-judge evaluators",
+        "published": "2026",
+        "url": "https://developer.apple.com/documentation/Evaluations/scoring-with-model-as-judge-evaluators",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "least-privilege-agent": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-agent",
+      "agent-permission",
+      "agent-sandbox",
+      "tool-approval"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-least-privilege-agents-2026",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "Least privilege for AI agents",
+        "published": "2026-07-15",
+        "url": "https://learn.microsoft.com/en-us/security/zero-trust/sfi/least-privilege-for-ai-agents",
+        "supports": [
+          "definition",
+          "usage",
+          "risk"
+        ]
+      }
+    ]
   }
 }
