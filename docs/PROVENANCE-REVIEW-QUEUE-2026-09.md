@@ -4,7 +4,7 @@
 
 ## Why this queue exists
 
-EpochLex currently has **365 published entries**, including **162 researched** provenance records and **203 pending** records after provenance Batch 04. The current corpus-growth pause shifts attention from bulk publication to deeper provenance review. The first milestone remains **183 researched / 182 pending** without adding new entries. Provenance Batches 01–04 completed 40 of the 61 Wave 1 records, leaving **21 Wave 1 reviews** to reach that milestone.
+EpochLex currently has **365 published entries**, including **172 researched** provenance records and **193 pending** records after provenance Batch 05. The current corpus-growth pause shifts attention from bulk publication to deeper provenance review. The first milestone remains **183 researched / 182 pending** without adding new entries. Provenance Batches 01–05 completed 50 of the 61 Wave 1 records, leaving **11 Wave 1 reviews** to reach that milestone.
 
 The queue prioritizes four practical considerations: broad reader importance, value to EpochLex’s identity and differentiation, volatility or likelihood of meaning changing quickly, and the value of documenting provenance/history rather than leaving a useful definition without its research layer. These considerations guide this working queue only; they do not change `PROVENANCE.md` or `CONTRIBUTING.md`.
 
@@ -75,6 +75,21 @@ This batch concentrated on model serving and retrieval architecture. All ten rec
 8. **Bi-Encoder**
 9. **Reranker**
 10. **Retrieval Pipeline**
+
+## Provenance Batch 05 — completed September 8, 2026
+
+This batch concentrated on agent architecture and practical AI, with two remaining technical backbone entries. All ten records completed the initial human-reviewed provenance pass and now use `researchStatus: "researched"`.
+
+1. **Latent Space**
+2. **RAG Pipeline**
+3. **Agent Loop**
+4. **Autonomous Agent**
+5. **Agent Skills**
+6. **Browser Use**
+7. **Agent Security**
+8. **Agent Handoff**
+9. **Agent Planning**
+10. **On-Device AI**
 
 ## Wave 1 — Majority milestone (61)
 
