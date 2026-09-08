@@ -21,7 +21,7 @@ The initial inventory below was seeded from the September 2026 EpochLex corpus-e
 
 These planning pools are not new editorial lifecycle states. Candidates with an active research issue are linked directly to that issue.
 
-**Current unpublished inventory: 587 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
+**Current unpublished inventory: 577 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
 
 ---
 
@@ -52,8 +52,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 - Adversarial Attack
 
-- AI Policy
-- Algorithmic Accountability
 - Constitutional AI
 - Data Exfiltration
 
@@ -512,9 +510,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Query Expansion
 - Query Rewriting
 
-- Retrieval Pipeline
-
-- Retriever
 - Self-RAG
 - Semantic Chunking
 
@@ -538,7 +533,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 - AI Safety
 - AI Sandbox
-- AI Security
+
 - AI Standard
 - AI Transparency
 - Algorithmic Audit
@@ -560,7 +555,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Model Audit
 - Model Backdoor
 - Model Extraction
-- Model Inventory
+
 - Model Inversion
 
 - Model Stealing
@@ -658,11 +653,8 @@ The September 8, 2026 corpus audit added the following candidates after checking
 
 - TOPS
 
-- Model Offloading
-- CPU Offloading
-
 - Inference Engine
-- Inference Backend
+
 - Hardware Acceleration
 - AI Accelerator Card
 - Memory Footprint
@@ -732,8 +724,6 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - Human Preference Evaluation
 
 - Agent Evaluation Trace
-
-- Prompt Observability
 
 ### Safety, security & governance
 
