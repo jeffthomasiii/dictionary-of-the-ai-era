@@ -378,6 +378,94 @@ These are not recommended as separate entries now. Some are generic business phr
 - Cyborg Workflow
 - Vibe Debugging
 
+## Research Further promotion pass 20 — Batch X (published September 8, 2026)
+
+This batch is the twentieth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
+
+### RAG Pipeline
+
+**Why promote and publish:** The end-to-end workflow of a retrieval-augmented generation system, typically covering content ingestion and chunking, embedding and indexing, query-time retrieval, context assembly, and generation of an answer grounded in retrieved content.
+
+**Usage evidence:** [Microsoft Learn: Retrieval-Augmented Generation (RAG) with Azure Files](https://learn.microsoft.com/en-us/azure/storage/files/artificial-intelligence/retrieval-augmented-generation/overview); [Microsoft Learn: Design and Develop a RAG Solution on Azure](https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### RAG Chunking
+
+**Why promote and publish:** The preparation phase in a retrieval-augmented generation system where source documents are divided into smaller retrieval units whose size and boundaries are chosen to preserve useful context while improving retrieval precision and efficiency.
+
+**Usage evidence:** [Microsoft Learn: Develop a RAG Solution on Azure - Chunking Phase](https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-chunking-phase); [Microsoft Learn: How to Use Fabric for Retrieval Augmented Generation](https://learn.microsoft.com/en-us/fabric/data-science/quickstart-building-retrieval-augmented-generation)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Needle-in-a-Haystack Evaluation
+
+**Why promote and publish:** A long-context evaluation that places one or more target facts or passages inside a much larger body of context and tests whether a model can locate and use the hidden information.
+
+**Usage evidence:** [Anthropic: Claude Opus 4.6](https://www.anthropic.com/news/claude-opus-4-6); [Anthropic: Measuring and improving coding audit realism with deployment resources](https://alignment.anthropic.com/2026/coding-audit-realism/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Human Preference Evaluation
+
+**Why promote and publish:** An evaluation in which people compare or rate model responses according to which output they prefer, often on open-ended tasks where a single objective answer is insufficient.
+
+**Usage evidence:** [OpenAI: Learning to reason with LLMs](https://openai.com/index/learning-to-reason-with-llms/); [OpenAI: OpenAI o1-mini](https://openai.com/index/openai-o1-mini-advancing-cost-efficient-reasoning/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Agent Risk Assessment
+
+**Why promote and publish:** A risk assessment focused on an AI agent’s capabilities, tool access, permissions, operating environment, autonomy, and possible harms in a specific deployment.
+
+**Usage evidence:** [NIST: Lessons Learned from the Consortium: Tool Use in Agent Systems](https://www.nist.gov/news-events/news/2025/08/lessons-learned-consortium-tool-use-agent-systems)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Training Data Extraction
+
+**Why promote and publish:** A privacy attack in which an adversary attempts to recover examples or information from a generative model’s training data by interacting with or prompting the model.
+
+**Usage evidence:** [NIST CSRC: training data extraction - Glossary](https://csrc.nist.gov/glossary/term/training_data_extraction); [NIST: Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Tool Poisoning
+
+**Why promote and publish:** An attack in which an AI agent is given malicious or manipulated tool definitions, schemas, metadata, or tool outputs that cause the agent to misuse a tool, follow injected instructions, or perform unintended actions.
+
+**Usage evidence:** [OWASP: MCP Tool Poisoning](https://owasp.org/www-community/attacks/MCP_Tool_Poisoning); [OWASP: MCP03:2025 - Tool Poisoning](https://owasp.org/www-project-mcp-top-10/2025/MCP03-2025%E2%80%93Tool-Poisoning)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### RAG Poisoning
+
+**Why promote and publish:** An attack that contaminates documents, embeddings, indexes, or other retrieval data used by a retrieval-augmented generation system so malicious or misleading content is retrieved as grounding context.
+
+**Usage evidence:** [Microsoft Learn: AI Memory / Context Poisoning (Corruption)](https://learn.microsoft.com/en-us/security/zero-trust/catalog-ai-attack-techniques/ai-memory-context-poisoning); [OWASP Cheat Sheet Series: Retrieval-Augmented Generation (RAG) Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/RAG_Security_Cheat_Sheet.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Sensitive Information Disclosure
+
+**Why promote and publish:** An AI security failure in which a model or AI application reveals confidential, personal, proprietary, or otherwise sensitive information through its outputs or connected data flows.
+
+**Usage evidence:** [OWASP GenAI Security Project: LLM02:2025 Sensitive Information Disclosure](https://genai.owasp.org/llmrisk/llm022025-sensitive-information-disclosure/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Constitutional Classifier
+
+**Why promote and publish:** A safety classifier trained from a natural-language constitution or rule set to detect and block model inputs or outputs that violate specified behavioral constraints.
+
+**Usage evidence:** [Anthropic: Next-generation Constitutional Classifiers: More efficient protection against universal jailbreaks](https://www.anthropic.com/research/next-generation-constitutional-classifiers); [Anthropic: Frontier Safety Roadmap](https://www.anthropic.com/responsible-scaling-policy/roadmap)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Alias disposition: Model Stealing
+
+**Disposition:** Represent as an alias of the published **Model Extraction** entry rather than as a separate page. NIST discusses model stealing attacks within its Model Extraction taxonomy, and a separate EpochLex page would duplicate the same attack family without enough distinct reader value.
+
 ## Research Further promotion pass 19 — Batch W (published September 8, 2026)
 
 This batch is the nineteenth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
@@ -2008,7 +2096,7 @@ All remaining unpublished candidates in `CORPUS-CANDIDATES.md`, including the ne
 
 ## Expansion result
 
-This audit has now published 223 candidates across Batches A–W and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
+This audit has now published 233 candidates across Batches A–X and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
 
 ## Follow-up
 

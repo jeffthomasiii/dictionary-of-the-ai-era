@@ -11099,5 +11099,365 @@
         ]
       }
     ]
+  },
+  "rag-pipeline": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "rag",
+      "retrieval-pipeline",
+      "embedding"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-azure-files-rag-overview-2026",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "Retrieval-Augmented Generation (RAG) with Azure Files",
+        "published": "2026-04-23",
+        "url": "https://learn.microsoft.com/en-us/azure/storage/files/artificial-intelligence/retrieval-augmented-generation/overview",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "microsoft-rag-design-guide-2026",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "Design and Develop a RAG Solution on Azure",
+        "published": "2026-06-30",
+        "url": "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide",
+        "supports": [
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "rag-chunking": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "rag-pipeline",
+      "semantic-chunking",
+      "retrieval-pipeline"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-rag-chunking-2026",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "Develop a RAG Solution on Azure - Chunking Phase",
+        "published": "2026-06-18",
+        "url": "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-chunking-phase",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "microsoft-fabric-rag-chunking-2025",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "How to Use Fabric for Retrieval Augmented Generation",
+        "published": "2025",
+        "url": "https://learn.microsoft.com/en-us/fabric/data-science/quickstart-building-retrieval-augmented-generation",
+        "supports": [
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "needle-in-a-haystack-evaluation": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "long-context-evaluation",
+      "eval",
+      "capability-evaluation"
+    ],
+    "sources": [
+      {
+        "id": "anthropic-opus46-needle-2026",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Claude Opus 4.6",
+        "published": "2026",
+        "url": "https://www.anthropic.com/news/claude-opus-4-6",
+        "supports": [
+          "definition",
+          "usage",
+          "evaluation"
+        ]
+      },
+      {
+        "id": "anthropic-niah-realism-2026",
+        "type": "research",
+        "publisher": "Anthropic",
+        "title": "Measuring and improving coding audit realism with deployment resources",
+        "published": "2026",
+        "url": "https://alignment.anthropic.com/2026/coding-audit-realism/",
+        "supports": [
+          "usage",
+          "evaluation"
+        ]
+      }
+    ]
+  },
+  "human-preference-evaluation": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "human-evaluation",
+      "pairwise-evaluation",
+      "rubric"
+    ],
+    "sources": [
+      {
+        "id": "openai-o1-human-preference-2024",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "Learning to reason with LLMs",
+        "published": "2024-09-12",
+        "url": "https://openai.com/index/learning-to-reason-with-llms/",
+        "supports": [
+          "definition",
+          "usage",
+          "evaluation"
+        ]
+      },
+      {
+        "id": "openai-o1mini-human-preference-2024",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "OpenAI o1-mini",
+        "published": "2024",
+        "url": "https://openai.com/index/openai-o1-mini-advancing-cost-efficient-reasoning/",
+        "supports": [
+          "usage",
+          "evaluation"
+        ]
+      }
+    ]
+  },
+  "agent-risk-assessment": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-risk-assessment",
+      "agent-security",
+      "agent-permission"
+    ],
+    "sources": [
+      {
+        "id": "nist-agent-tool-risk-2025",
+        "type": "primary",
+        "publisher": "NIST",
+        "title": "Lessons Learned from the Consortium: Tool Use in Agent Systems",
+        "published": "2025-08-05",
+        "url": "https://www.nist.gov/news-events/news/2025/08/lessons-learned-consortium-tool-use-agent-systems",
+        "supports": [
+          "definition",
+          "usage",
+          "governance"
+        ]
+      }
+    ]
+  },
+  "training-data-extraction": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "membership-inference",
+      "model-inversion",
+      "ai-security"
+    ],
+    "sources": [
+      {
+        "id": "nist-training-data-extraction-2025",
+        "type": "primary",
+        "publisher": "NIST CSRC",
+        "title": "training data extraction - Glossary",
+        "published": "2025",
+        "url": "https://csrc.nist.gov/glossary/term/training_data_extraction",
+        "supports": [
+          "definition",
+          "technical-definition",
+          "security"
+        ]
+      },
+      {
+        "id": "nist-aml-100-2e2025-training-extraction",
+        "type": "primary",
+        "publisher": "NIST",
+        "title": "Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations",
+        "published": "2025-03",
+        "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf",
+        "supports": [
+          "usage",
+          "technical-definition",
+          "security"
+        ]
+      }
+    ]
+  },
+  "tool-poisoning": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "mcp-tool",
+      "prompt-injection",
+      "ai-security"
+    ],
+    "sources": [
+      {
+        "id": "owasp-mcp-tool-poisoning",
+        "type": "primary",
+        "publisher": "OWASP",
+        "title": "MCP Tool Poisoning",
+        "published": "2026",
+        "url": "https://owasp.org/www-community/attacks/MCP_Tool_Poisoning",
+        "supports": [
+          "definition",
+          "usage",
+          "security"
+        ]
+      },
+      {
+        "id": "owasp-mcp03-tool-poisoning-2025",
+        "type": "primary",
+        "publisher": "OWASP",
+        "title": "MCP03:2025 - Tool Poisoning",
+        "published": "2025",
+        "url": "https://owasp.org/www-project-mcp-top-10/2025/MCP03-2025%E2%80%93Tool-Poisoning",
+        "supports": [
+          "usage",
+          "security",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "rag-poisoning": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "rag",
+      "data-poisoning",
+      "ai-security"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-memory-context-poisoning-2026",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "AI Memory / Context Poisoning (Corruption)",
+        "published": "2026-08-01",
+        "url": "https://learn.microsoft.com/en-us/security/zero-trust/catalog-ai-attack-techniques/ai-memory-context-poisoning",
+        "supports": [
+          "definition",
+          "usage",
+          "security"
+        ]
+      },
+      {
+        "id": "owasp-rag-security-2026",
+        "type": "primary",
+        "publisher": "OWASP Cheat Sheet Series",
+        "title": "Retrieval-Augmented Generation (RAG) Security Cheat Sheet",
+        "published": "2026",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/RAG_Security_Cheat_Sheet.html",
+        "supports": [
+          "usage",
+          "security",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "sensitive-information-disclosure": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-security",
+      "prompt-injection",
+      "membership-inference"
+    ],
+    "sources": [
+      {
+        "id": "owasp-sensitive-disclosure-2025",
+        "type": "primary",
+        "publisher": "OWASP GenAI Security Project",
+        "title": "LLM02:2025 Sensitive Information Disclosure",
+        "published": "2025",
+        "url": "https://genai.owasp.org/llmrisk/llm022025-sensitive-information-disclosure/",
+        "supports": [
+          "definition",
+          "usage",
+          "security"
+        ]
+      }
+    ]
+  },
+  "constitutional-classifier": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "jailbreak",
+      "safety-evaluation",
+      "ai-security"
+    ],
+    "sources": [
+      {
+        "id": "anthropic-constitutional-classifiers-2026",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Next-generation Constitutional Classifiers: More efficient protection against universal jailbreaks",
+        "published": "2026-01-09",
+        "url": "https://www.anthropic.com/research/next-generation-constitutional-classifiers",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition",
+          "security"
+        ]
+      },
+      {
+        "id": "anthropic-frontier-safety-roadmap-2026",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Frontier Safety Roadmap",
+        "published": "2026",
+        "url": "https://www.anthropic.com/responsible-scaling-policy/roadmap",
+        "supports": [
+          "usage",
+          "governance"
+        ]
+      }
+    ]
   }
 }

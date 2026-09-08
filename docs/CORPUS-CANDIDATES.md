@@ -21,7 +21,7 @@ The initial inventory below was seeded from the September 2026 EpochLex corpus-e
 
 These planning pools are not new editorial lifecycle states. Candidates with an active research issue are linked directly to that issue.
 
-**Current unpublished inventory: 522 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
+**Current unpublished inventory: 511 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
 
 ---
 
@@ -513,18 +513,13 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 - Meaningful Human Control
 
-- Model Stealing
 - Poisoning Attack
 - Privilege Escalation
 
-- RAG Poisoning
 - Safe AI
 - Sandboxing
-- Sensitive Information Disclosure
-- System Prompt Extraction
 
-- Tool Poisoning
-- Training Data Extraction
+- System Prompt Extraction
 
 - Universal Jailbreak
 - Vector Database Poisoning
@@ -648,8 +643,6 @@ The September 8, 2026 corpus audit added the following candidates after checking
 
 ### Retrieval, RAG & search
 
-- RAG Pipeline
-- RAG Chunking
 - Retrieval Quality
 
 - Agentic Retrieval
@@ -663,9 +656,6 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - Benchmark Gaming
 - Benchmark Leakage
 
-- Needle-in-a-Haystack Evaluation
-- Human Preference Evaluation
-
 - Agent Evaluation Trace
 
 ### Safety, security & governance
@@ -678,7 +668,7 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - Deployment Threshold
 - Model Behavior Specification
 - Model Spec
-- Constitutional Classifier
+
 - Safeguard Model
 
 - Tool Injection
@@ -687,7 +677,6 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - Deployment Safeguard
 - Capability Gate
 - Model Safeguard
-- Agent Risk Assessment
 
 ### Generative media & provenance
 
