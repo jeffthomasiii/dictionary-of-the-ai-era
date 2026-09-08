@@ -838,4 +838,44 @@
     <loc>https://epochlex.justathoughtblog.org/terms/model-registry/</loc>
     <lastmod>2026-09-08</lastmod>
   </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/contextual-retrieval/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/bm25/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/hnsw/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/online-inference/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/time-to-first-token/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/tokens-per-second/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/reinforcement-learning-with-verifiable-rewards/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/process-reward-model/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/pairwise-evaluation/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/least-privilege-agent/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
 </urlset>

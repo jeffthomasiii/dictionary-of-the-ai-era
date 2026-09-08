@@ -21,7 +21,7 @@ The initial inventory below was seeded from the September 2026 EpochLex corpus-e
 
 These planning pools are not new editorial lifecycle states. Candidates with an active research issue are linked directly to that issue.
 
-**Current unpublished inventory: 667 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
+**Current unpublished inventory: 657 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
 
 ---
 
@@ -324,7 +324,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Human Evaluation
 - Judge Model
 - Model Grader
-- Pairwise Evaluation
 
 - Pointwise Evaluation
 - Reference Answer
@@ -402,15 +401,13 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Model Endpoint
 
 - Offline Inference
-- Online Inference
+
 - Output Token
 
 - Stop Sequence
 - Streaming Generation
 
 - Throughput
-- Time to First Token (TTFT)
-- Tokens per Second
 
 ### Local, Open Models & Deployment
 
@@ -514,16 +511,16 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 - Approximate Nearest Neighbor (ANN)
 - Bi-Encoder
-- BM25
+
 - Chunk Overlap
-- Contextual Retrieval
+
 - Corrective RAG (CRAG)
 - Cross-Encoder
 - Dense Retrieval
 - Embedding Model
 - Embedding Space
 - Fixed-Size Chunking
-- HNSW
+
 - Hybrid Retrieval
 
 - Keyword Search
@@ -643,7 +640,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Preference Optimization
 - Proximal Policy Optimization (PPO)
 - Regularization
-- Reinforcement Learning with Verifiable Rewards (RLVR)
+
 - Student Model
 - Teacher Model
 - Training
@@ -686,7 +683,7 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - Tool Search
 - Programmatic Tool Calling
 - Human Approval Gate
-- Least-Privilege Agent
+
 - Agentic UI
 
 ### MCP ecosystem
@@ -750,7 +747,7 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - Distillation Loss
 - Reward Hacking
 - Specification Gaming
-- Process Reward Model
+
 - Outcome Reward Model
 - Verifier Model
 - Critic Model
