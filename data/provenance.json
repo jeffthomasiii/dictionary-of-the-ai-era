@@ -7016,5 +7016,265 @@
         ]
       }
     ]
+  },
+  "retrieval-precision": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "rag",
+      "reranker",
+      "contextual-retrieval"
+    ],
+    "sources": [
+      {
+        "id": "scikit-precision-recall",
+        "type": "reference",
+        "publisher": "scikit-learn",
+        "title": "Precision-Recall",
+        "published": "2026",
+        "url": "https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "retrieval-recall": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "rag",
+      "retrieval-precision",
+      "contextual-retrieval"
+    ],
+    "sources": [
+      {
+        "id": "scikit-precision-recall",
+        "type": "reference",
+        "publisher": "scikit-learn",
+        "title": "Precision-Recall",
+        "published": "2026",
+        "url": "https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "latency": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "inference",
+      "time-to-first-token",
+      "model-serving"
+    ],
+    "sources": [
+      {
+        "id": "nvidia-nim-metrics-2026",
+        "type": "reference",
+        "publisher": "NVIDIA",
+        "title": "NIM LLMs Benchmarking — Metrics",
+        "published": "2026-07-20",
+        "url": "https://docs.nvidia.com/nim/benchmarking/llm/latest/metrics.html",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "throughput": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "inference",
+      "tokens-per-second",
+      "model-serving"
+    ],
+    "sources": [
+      {
+        "id": "nvidia-nim-benchmarking-2026",
+        "type": "reference",
+        "publisher": "NVIDIA",
+        "title": "A Comprehensive Guide to NIM LLM Latency-Throughput Benchmarking",
+        "published": "2026-07-20",
+        "url": "https://docs.nvidia.com/nim/benchmarking/llm/latest/",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "proximal-policy-optimization": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-alignment",
+      "reinforcement-learning-with-verifiable-rewards",
+      "group-relative-policy-optimization"
+    ],
+    "sources": [
+      {
+        "id": "hf-ppo-trainer-2026",
+        "type": "reference",
+        "publisher": "Hugging Face",
+        "title": "PPO Trainer",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/trl/ppo_trainer",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "agent-identity": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-agent",
+      "agent-permission",
+      "least-privilege-agent"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-agent-identity-2026",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "What are agent identities?",
+        "published": "2026-06-15",
+        "url": "https://learn.microsoft.com/en-us/entra/agent-id/what-are-agent-identities",
+        "supports": [
+          "definition",
+          "usage",
+          "risk"
+        ]
+      }
+    ]
+  },
+  "ai-audit": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-governance",
+      "ai-assurance",
+      "safety-evaluation"
+    ],
+    "sources": [
+      {
+        "id": "gao-ai-accountability-framework",
+        "type": "primary",
+        "publisher": "U.S. Government Accountability Office",
+        "title": "Artificial Intelligence: An Accountability Framework for Federal Agencies and Other Entities",
+        "published": "2021-06-30",
+        "url": "https://www.gao.gov/products/gao-21-519sp",
+        "supports": [
+          "definition",
+          "usage",
+          "governance"
+        ]
+      }
+    ]
+  },
+  "ai-risk-assessment": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-governance",
+      "ai-assurance",
+      "ai-safety-case"
+    ],
+    "sources": [
+      {
+        "id": "nist-ai-rmf-2026",
+        "type": "primary",
+        "publisher": "NIST",
+        "title": "AI Risk Management Framework",
+        "published": "2026",
+        "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+        "supports": [
+          "definition",
+          "usage",
+          "governance"
+        ]
+      }
+    ]
+  },
+  "mcp-client": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "mcp",
+      "mcp-server",
+      "mcp-tool",
+      "mcp-resource"
+    ],
+    "sources": [
+      {
+        "id": "mcp-architecture-2025",
+        "type": "primary",
+        "publisher": "Model Context Protocol",
+        "title": "Architecture",
+        "published": "2025-06-18",
+        "url": "https://modelcontextprotocol.io/specification/2025-06-18/architecture",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "model-license": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "open-weight-model",
+      "model-card",
+      "local-ai"
+    ],
+    "sources": [
+      {
+        "id": "hf-repository-licenses-2026",
+        "type": "reference",
+        "publisher": "Hugging Face",
+        "title": "Licenses",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/hub/en/repositories-licenses",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
   }
 }

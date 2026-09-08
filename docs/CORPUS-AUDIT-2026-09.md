@@ -378,6 +378,90 @@ These are not recommended as separate entries now. Some are generic business phr
 - Cyborg Workflow
 - Vibe Debugging
 
+## Research Further promotion pass 7 — Batch K (published September 8, 2026)
+
+This batch is the seventh evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
+
+### Retrieval Precision
+
+**Why promote and publish:** An information-retrieval metric measuring the fraction of retrieved items that are relevant to the query or task.
+
+**Usage evidence:** [scikit-learn: Precision-Recall](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Retrieval Recall
+
+**Why promote and publish:** An information-retrieval metric measuring the fraction of all relevant items that a retrieval system successfully returns.
+
+**Usage evidence:** [scikit-learn: Precision-Recall](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Latency
+
+**Why promote and publish:** The elapsed time required for an AI system or inference service to respond to a request or complete a defined stage of processing.
+
+**Usage evidence:** [NVIDIA: NIM LLMs Benchmarking — Metrics](https://docs.nvidia.com/nim/benchmarking/llm/latest/metrics.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Throughput
+
+**Why promote and publish:** The amount of inference work an AI serving system completes over a unit of time, such as requests, samples, or tokens processed per second.
+
+**Usage evidence:** [NVIDIA: A Comprehensive Guide to NIM LLM Latency-Throughput Benchmarking](https://docs.nvidia.com/nim/benchmarking/llm/latest/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Proximal Policy Optimization
+
+**Why promote and publish:** A reinforcement-learning algorithm that updates a policy while constraining each update so the new policy does not move too far from the previous one; it has been widely used in reinforcement learning from human feedback for language-model post-training.
+
+**Usage evidence:** [Hugging Face: PPO Trainer](https://huggingface.co/docs/trl/ppo_trainer)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Agent Identity
+
+**Why promote and publish:** A distinct digital identity assigned to an AI agent so its authentication, access, ownership, activity, and policy enforcement can be managed and audited separately from human users or other applications.
+
+**Usage evidence:** [Microsoft Learn: What are agent identities?](https://learn.microsoft.com/en-us/entra/agent-id/what-are-agent-identities)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### AI Audit
+
+**Why promote and publish:** A structured examination of an AI system and its surrounding governance, data, performance, and monitoring practices to assess accountability, controls, risks, or compliance against defined criteria.
+
+**Usage evidence:** [U.S. Government Accountability Office: Artificial Intelligence: An Accountability Framework for Federal Agencies and Other Entities](https://www.gao.gov/products/gao-21-519sp)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### AI Risk Assessment
+
+**Why promote and publish:** A structured process for identifying, analyzing, and evaluating risks associated with an AI system, its intended use, affected people or organizations, and the conditions in which it operates.
+
+**Usage evidence:** [NIST: AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### MCP Client
+
+**Why promote and publish:** A Model Context Protocol component within a host application that communicates with an MCP server, negotiates supported capabilities, and exchanges protocol messages on the host’s behalf.
+
+**Usage evidence:** [Model Context Protocol: Architecture](https://modelcontextprotocol.io/specification/2025-06-18/architecture)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Model License
+
+**Why promote and publish:** The license or terms attached to an AI model that specify permissions, restrictions, conditions, or obligations governing how the model or its associated files may be used, modified, or redistributed.
+
+**Usage evidence:** [Hugging Face: Licenses](https://huggingface.co/docs/hub/en/repositories-licenses)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
 ## Research Further promotion pass 6 — Batch J (published September 8, 2026)
 
 This batch is the sixth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
@@ -897,7 +981,7 @@ All remaining unpublished candidates in `CORPUS-CANDIDATES.md`, including the ne
 
 ## Expansion result
 
-This audit has now published 93 candidates across Batches A–J and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
+This audit has now published 103 candidates across Batches A–K and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
 
 ## Follow-up
 
