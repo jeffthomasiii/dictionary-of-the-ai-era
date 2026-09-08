@@ -4859,9 +4859,9 @@
     "history": [],
     "relatedTerms": [
       "training-data",
-      "adversarial-attack",
       "model-collapse",
-      "fine-tuning"
+      "fine-tuning",
+      "ai-alignment"
     ],
     "sources": [
       {
@@ -4886,7 +4886,7 @@
     "history": [],
     "relatedTerms": [
       "system-card",
-      "model-evaluation",
+      "eval",
       "benchmark",
       "responsible-ai"
     ],
@@ -5042,7 +5042,7 @@
     "history": [],
     "relatedTerms": [
       "temperature",
-      "top-p",
+      "inference",
       "token",
       "large-language-model"
     ],
