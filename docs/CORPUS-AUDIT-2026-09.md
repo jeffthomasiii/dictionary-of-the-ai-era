@@ -378,6 +378,90 @@ These are not recommended as separate entries now. Some are generic business phr
 - Cyborg Workflow
 - Vibe Debugging
 
+## Research Further promotion pass 2 — Batch F (published September 8, 2026)
+
+This batch is the second evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule. **Frontier Model** is treated as an alias of **Frontier AI** rather than a separate entry in this pass.
+
+### Agentic Commerce
+
+**Why promote and publish:** Online commerce in which AI agents help discover, compare, select, or purchase products and services on behalf of a user, potentially carrying a transaction from expressed intent through checkout.
+
+**Usage evidence:** [Stripe: Agentic commerce](https://docs.stripe.com/agentic-commerce)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Agent Evaluation
+
+**Why promote and publish:** The systematic testing of an AI agent across tasks or scenarios using defined success criteria, repeated trials, graders, traces, or outcome checks to measure how well the agent behaves and completes work.
+
+**Usage evidence:** [Anthropic: Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Groundedness
+
+**Why promote and publish:** An evaluation property describing whether a generated response is supported by the supplied or retrieved context rather than introducing claims that are not grounded in that context.
+
+**Usage evidence:** [Microsoft Learn: Develop a RAG Solution on Azure - Large Language Model End-to-End Evaluation Phase](https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-llm-evaluation-phase)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Benchmark Contamination
+
+**Why promote and publish:** A condition that weakens an AI benchmark when a model has already been exposed to benchmark questions, answers, or closely related test material before evaluation, making the resulting score less trustworthy as a measure of unseen performance.
+
+**Usage evidence:** [Google DeepMind: Piloting the world’s first double-blind AI evaluations](https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Inference-Time Scaling
+
+**Why promote and publish:** An approach to improving AI performance by allocating more computation during inference, such as allowing a reasoning model or agent to spend more effort, samples, or search steps on a task before producing a result.
+
+**Usage evidence:** [OpenAI: BrowseComp: a benchmark for browsing agents](https://openai.com/index/browsecomp/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Edge Inference
+
+**Why promote and publish:** Running a trained AI model to make predictions or generate outputs on computing infrastructure near the data source or end device rather than sending the workload to a distant centralized cloud service.
+
+**Usage evidence:** [NVIDIA: Accelerating LLM and VLM Inference for Automotive and Robotics with NVIDIA TensorRT Edge-LLM](https://developer.nvidia.com/blog/accelerating-llm-and-vlm-inference-for-automotive-and-robotics-with-nvidia-tensorrt-edge-llm/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### RAG Evaluation
+
+**Why promote and publish:** The evaluation of a retrieval-augmented generation system across retrieval and answer quality, using measures such as relevance, groundedness, completeness, correctness, retrieval quality, or end-to-end task performance.
+
+**Usage evidence:** [Microsoft Learn: Develop a RAG Solution on Azure - Large Language Model End-to-End Evaluation Phase](https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-llm-evaluation-phase)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Calibration
+
+**Why promote and publish:** The degree to which a model’s predicted probabilities or confidence levels correspond to observed outcomes; a well-calibrated model’s stated confidence matches how often predictions at that confidence are actually correct.
+
+**Usage evidence:** [scikit-learn: Probability calibration](https://scikit-learn.org/stable/modules/calibration.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### AI Safety Case
+
+**Why promote and publish:** A structured argument, supported by evidence, that an AI system is acceptably safe within a specified training, deployment, or operating context.
+
+**Usage evidence:** [UK AI Security Institute: Safety cases at AISI](https://www.aisi.gov.uk/blog/safety-cases-at-aisi)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Frontier AI
+
+**Why promote and publish:** A relative term for highly capable general-purpose AI models at or near the leading edge of current capabilities. What counts as frontier AI changes as the state of the art advances, so the term does not imply a fixed capability threshold.
+
+**Usage evidence:** [UK Department for Science, Innovation and Technology: A pro-innovation approach to AI regulation: government response to consultation](https://assets.publishing.service.gov.uk/media/65c1e41663a23d000dc8224f/a-pro-innovation-approach-to-ai-regulation-amended-governement-response-print-ready.pdf)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
 ## Research Further promotion pass 1 — Batch E (published September 8, 2026)
 
 This batch is the first set promoted directly from **Research Further** after the original prequalified Publish queue was exhausted. Promotion reflects fresh evidence and reader value review; it does not create a new permanent editorial status or automatic promotion rule.
@@ -477,7 +561,7 @@ All remaining unpublished candidates in `CORPUS-CANDIDATES.md`, including the ne
 
 ## Expansion result
 
-This audit has now published 43 candidates across Batches A–E and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
+This audit has now published 53 candidates across Batches A–F and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
 
 ## Follow-up
 

@@ -5710,5 +5710,266 @@
         ]
       }
     ]
+  },
+  "agentic-commerce": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-agent",
+      "autonomous-agent",
+      "tool-calling",
+      "agentic-workflow"
+    ],
+    "sources": [
+      {
+        "id": "stripe-agentic-commerce-2026",
+        "type": "primary",
+        "publisher": "Stripe",
+        "title": "Agentic commerce",
+        "published": "2026",
+        "url": "https://docs.stripe.com/agentic-commerce",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "agent-evaluation": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "eval",
+      "ai-agent",
+      "benchmark",
+      "agent-observability"
+    ],
+    "sources": [
+      {
+        "id": "anthropic-agent-evals-2026",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Demystifying evals for AI agents",
+        "published": "2026-01-09",
+        "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "groundedness": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "rag",
+      "eval",
+      "ground-truth",
+      "hallucination"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-rag-groundedness-2025",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "Develop a RAG Solution on Azure - Large Language Model End-to-End Evaluation Phase",
+        "published": "2025-11-20",
+        "url": "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-llm-evaluation-phase",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "benchmark-contamination": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "benchmark",
+      "training-data",
+      "eval",
+      "ground-truth"
+    ],
+    "sources": [
+      {
+        "id": "deepmind-benchmark-contamination-2026",
+        "type": "primary",
+        "publisher": "Google DeepMind",
+        "title": "Piloting the world’s first double-blind AI evaluations",
+        "published": "2026-08-27",
+        "url": "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/",
+        "supports": [
+          "definition",
+          "usage",
+          "risk"
+        ]
+      }
+    ]
+  },
+  "inference-time-scaling": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "reasoning-effort",
+      "inference",
+      "chain-of-thought",
+      "large-language-model"
+    ],
+    "sources": [
+      {
+        "id": "openai-inference-time-scaling-2025",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "BrowseComp: a benchmark for browsing agents",
+        "published": "2025",
+        "url": "https://openai.com/index/browsecomp/",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "edge-inference": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "local-ai",
+      "inference",
+      "npu",
+      "ai-pc"
+    ],
+    "sources": [
+      {
+        "id": "nvidia-edge-inference-2026",
+        "type": "primary",
+        "publisher": "NVIDIA",
+        "title": "Accelerating LLM and VLM Inference for Automotive and Robotics with NVIDIA TensorRT Edge-LLM",
+        "published": "2026",
+        "url": "https://developer.nvidia.com/blog/accelerating-llm-and-vlm-inference-for-automotive-and-robotics-with-nvidia-tensorrt-edge-llm/",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "rag-evaluation": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "rag",
+      "eval",
+      "groundedness",
+      "hybrid-search"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-rag-evaluation-2025",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "Develop a RAG Solution on Azure - Large Language Model End-to-End Evaluation Phase",
+        "published": "2025-11-20",
+        "url": "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-llm-evaluation-phase",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "calibration": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "eval",
+      "ground-truth",
+      "supervised-learning"
+    ],
+    "sources": [
+      {
+        "id": "sklearn-probability-calibration",
+        "type": "reference",
+        "publisher": "scikit-learn",
+        "title": "Probability calibration",
+        "published": "2026",
+        "url": "https://scikit-learn.org/stable/modules/calibration.html",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "ai-safety-case": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-assurance",
+      "ai-governance",
+      "responsible-ai",
+      "red-teaming"
+    ],
+    "sources": [
+      {
+        "id": "aisi-safety-cases-2024",
+        "type": "primary",
+        "publisher": "UK AI Security Institute",
+        "title": "Safety cases at AISI",
+        "published": "2024-08-23",
+        "url": "https://www.aisi.gov.uk/blog/safety-cases-at-aisi",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "frontier-ai": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "artificial-intelligence",
+      "ai-governance",
+      "ai-assurance",
+      "responsible-ai"
+    ],
+    "sources": [
+      {
+        "id": "uk-frontier-ai-2024",
+        "type": "primary",
+        "publisher": "UK Department for Science, Innovation and Technology",
+        "title": "A pro-innovation approach to AI regulation: government response to consultation",
+        "published": "2024",
+        "url": "https://assets.publishing.service.gov.uk/media/65c1e41663a23d000dc8224f/a-pro-innovation-approach-to-ai-regulation-amended-governement-response-print-ready.pdf",
+        "supports": [
+          "definition",
+          "usage",
+          "scope"
+        ]
+      }
+    ]
   }
 }

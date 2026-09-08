@@ -21,7 +21,7 @@ The initial inventory below was seeded from the September 2026 EpochLex corpus-e
 
 These planning pools are not new editorial lifecycle states. Candidates with an active research issue are linked directly to that issue.
 
-**Current unpublished inventory: 708 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
+**Current unpublished inventory: 697 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
 
 ---
 
@@ -60,8 +60,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Data Exfiltration
 
 - Explainable AI (XAI)
-- Frontier AI
-- Frontier Model
 
 - Interpretable AI
 - Model Poisoning
@@ -78,7 +76,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Faithfulness
 - Generative Video
 
-- Groundedness
 - Image-to-Image
 - Latent Diffusion
 
@@ -225,7 +222,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Agent
 - Agent Context
 - Agent Delegation
-- Agent Evaluation
+
 - Agent Handoff
 - Agent Harness
 - Agent Identity
@@ -306,9 +303,9 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Abstention
 - Arena
 - Automated Evaluation
-- Benchmark Contamination
+
 - Benchmark Saturation
-- Calibration
+
 - Capability Evaluation
 - Citation Accuracy
 - Confidence Score
@@ -673,7 +670,7 @@ The September 8, 2026 corpus audit added the following candidates after checking
 ### Agents, protocols & agentic systems
 
 - SKILL.md
-- Agentic Commerce
+
 - Agentic Payments
 - Agentic Web
 - AI Browser
@@ -715,7 +712,7 @@ The September 8, 2026 corpus audit added the following candidates after checking
 ### Local AI, hardware & inference
 
 - TOPS
-- Edge Inference
+
 - Local Inference
 - Unified Memory
 - GPU Offloading
@@ -730,7 +727,6 @@ The September 8, 2026 corpus audit added the following candidates after checking
 
 ### Reasoning & model behavior
 
-- Inference-Time Scaling
 - Test-Time Scaling
 - Deliberation
 - Hidden Chain of Thought
@@ -768,7 +764,6 @@ The September 8, 2026 corpus audit added the following candidates after checking
 
 ### Retrieval, RAG & search
 
-- RAG Evaluation
 - RAG Pipeline
 - RAG Chunking
 - Retrieval Quality
@@ -805,7 +800,7 @@ The September 8, 2026 corpus audit added the following candidates after checking
 ### Safety, security & governance
 
 - Safety Case
-- AI Safety Case
+
 - Frontier Safety Framework
 - Responsible Scaling Policy
 - Capability Threshold
