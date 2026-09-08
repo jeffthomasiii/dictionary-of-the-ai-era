@@ -5283,29 +5283,42 @@
     ]
   },
   "agent-loop": {
-    "researchStatus": "pending",
-    "origin": null,
+    "researchStatus": "researched",
+    "origin": "Agent loop is a descriptive term for the repeated control cycle in which an agent interprets its current state, plans or selects an action, uses a tool or takes another step, observes the result, and continues until completion or intervention. The pattern reflects older control-loop ideas and modern agent runtimes rather than a single established coinage.",
     "firstKnownUse": null,
     "history": [],
+    "sources": [
+      {
+        "id": "anthropic-trustworthy-agents-2026",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Trustworthy agents in practice",
+        "published": "2026-04-09",
+        "url": "https://www.anthropic.com/research/trustworthy-agents",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      },
+      {
+        "id": "openai-agents-running",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "Running agents - OpenAI Agents SDK",
+        "published": null,
+        "url": "https://openai.github.io/openai-agents-python/running_agents/",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ],
     "relatedTerms": [
       "ai-agent",
       "agentic",
       "tool-calling",
       "orchestration"
-    ],
-    "sources": [
-      {
-        "id": "anthropic-building-agents-loop",
-        "type": "primary",
-        "publisher": "Anthropic",
-        "title": "Building Effective AI Agents",
-        "published": "2024-12-19",
-        "url": "https://www.anthropic.com/engineering/building-effective-agents",
-        "supports": [
-          "definition",
-          "usage"
-        ]
-      }
     ]
   },
   "ai-companion": {
@@ -5716,28 +5729,29 @@
     ]
   },
   "latent-space": {
-    "researchStatus": "pending",
-    "origin": null,
+    "researchStatus": "researched",
+    "origin": "Latent space comes from the broader statistical and machine-learning tradition of representing data through underlying variables that are not directly observed. In modern deep learning and generative AI, the term refers to a learned representation space that compresses salient structure from higher-dimensional input data. EpochLex does not assign the general concept to a single AI-era coinage.",
     "firstKnownUse": null,
     "history": [],
+    "sources": [
+      {
+        "id": "ibm-latent-space",
+        "type": "reference",
+        "publisher": "IBM",
+        "title": "What Is Latent Space?",
+        "published": null,
+        "url": "https://www.ibm.com/think/topics/latent-space",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ],
     "relatedTerms": [
       "embedding",
       "vector-search",
       "neural-network"
-    ],
-    "sources": [
-      {
-        "id": "google-ml-latent-space-2026",
-        "type": "reference",
-        "publisher": "Google for Developers",
-        "title": "Machine Learning Glossary",
-        "published": "2026",
-        "url": "https://developers.google.com/machine-learning/glossary",
-        "supports": [
-          "definition",
-          "usage"
-        ]
-      }
     ]
   },
   "ai-assurance": {
@@ -5793,29 +5807,43 @@
     ]
   },
   "autonomous-agent": {
-    "researchStatus": "pending",
-    "origin": null,
+    "researchStatus": "researched",
+    "origin": "Autonomous agent is an established agent-design label rather than a single modern coinage. In current generative-AI usage it describes an agent that can pursue goals, make decisions, and execute tasks with limited or no step-by-step human direction, while still operating within configured tools, permissions, triggers, and guardrails.",
     "firstKnownUse": null,
     "history": [],
+    "sources": [
+      {
+        "id": "anthropic-safe-agents-2025",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Our framework for developing safe and trustworthy agents",
+        "published": "2025-08-04",
+        "url": "https://www.anthropic.com/news/our-framework-for-developing-safe-and-trustworthy-agents",
+        "supports": [
+          "definition",
+          "usage",
+          "risk"
+        ]
+      },
+      {
+        "id": "microsoft-autonomous-agents-2026",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "Design autonomous agent capabilities",
+        "published": "2026",
+        "url": "https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/autonomous-agents",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ],
     "relatedTerms": [
       "ai-agent",
       "agentic",
       "agent-loop",
       "computer-use"
-    ],
-    "sources": [
-      {
-        "id": "microsoft-autonomous-agent-2026",
-        "type": "primary",
-        "publisher": "Microsoft",
-        "title": "AI Agent FAQ: Definitions and Explanations",
-        "published": "2026",
-        "url": "https://www.microsoft.com/en-us/microsoft-365-copilot/agents/ai-agents-faq",
-        "supports": [
-          "definition",
-          "usage"
-        ]
-      }
     ]
   },
   "ai-fluency": {
@@ -5845,15 +5873,22 @@
     ]
   },
   "agent-skills": {
-    "researchStatus": "pending",
-    "origin": null,
-    "firstKnownUse": null,
-    "history": [],
-    "relatedTerms": [
-      "ai-agent",
-      "context-engineering",
-      "orchestration",
-      "subagent"
+    "researchStatus": "researched",
+    "origin": "Anthropic introduced Agent Skills in 2025 as organized folders of instructions, scripts, and resources that agents can discover and load dynamically to perform specialized work. Anthropic later published Agent Skills as an open standard for cross-platform portability.",
+    "firstKnownUse": {
+      "date": "2025-10-16",
+      "precision": "day",
+      "note": "Anthropic published “Equipping agents for the real world with Agent Skills” on October 16, 2025, explicitly introducing the named mechanism."
+    },
+    "history": [
+      {
+        "date": "2025-10-16",
+        "event": "Anthropic introduced Agent Skills as composable folders of instructions, scripts, and resources for specialized agent capabilities."
+      },
+      {
+        "date": "2025-12-18",
+        "event": "Anthropic published Agent Skills as an open standard for cross-platform portability."
+      }
     ],
     "sources": [
       {
@@ -5864,10 +5899,19 @@
         "published": "2025-10-16",
         "url": "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills",
         "supports": [
+          "origin",
+          "firstKnownUse",
           "definition",
+          "history",
           "usage"
         ]
       }
+    ],
+    "relatedTerms": [
+      "ai-agent",
+      "context-engineering",
+      "orchestration",
+      "subagent"
     ]
   },
   "agent-observability": {
@@ -6025,29 +6069,60 @@
     ]
   },
   "browser-use": {
-    "researchStatus": "pending",
-    "origin": null,
+    "researchStatus": "researched",
+    "origin": "Browser use is a descriptive capability term for agents that navigate and interact with websites through a browser interface. Modern implementations may operate through screenshots, DOM information, mouse and keyboard actions, or a combination of these. EpochLex does not assign the generic phrase to a single origin.",
     "firstKnownUse": null,
-    "history": [],
+    "history": [
+      {
+        "date": "2025-01-23",
+        "event": "OpenAI introduced Operator, a browser-using agent that could navigate websites and perform tasks through a browser interface."
+      }
+    ],
+    "sources": [
+      {
+        "id": "openai-operator-2025",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "Introducing Operator",
+        "published": "2025-01-23",
+        "url": "https://openai.com/index/introducing-operator/",
+        "supports": [
+          "history",
+          "usage"
+        ]
+      },
+      {
+        "id": "openai-cua-browser-use",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "Computer-Using Agent",
+        "published": "2025",
+        "url": "https://openai.com/index/computer-using-agent/",
+        "supports": [
+          "definition",
+          "usage",
+          "evaluation"
+        ]
+      },
+      {
+        "id": "anthropic-agent-evals-browser-2026",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Demystifying evals for AI agents",
+        "published": "2026",
+        "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+        "supports": [
+          "definition",
+          "usage",
+          "contrast"
+        ]
+      }
+    ],
     "relatedTerms": [
       "computer-use",
       "ai-agent",
       "tool-calling",
       "agentic-workflow"
-    ],
-    "sources": [
-      {
-        "id": "openai-browser-use-2026",
-        "type": "primary",
-        "publisher": "OpenAI",
-        "title": "Using the built-in browser in the ChatGPT desktop app",
-        "published": "2026",
-        "url": "https://help.openai.com/en/articles/20001277-using-the-built-in-browser-in-the-chatgpt-desktop-app",
-        "supports": [
-          "definition",
-          "usage"
-        ]
-      }
     ]
   },
   "ai-memory": {
@@ -6845,29 +6920,52 @@
     ]
   },
   "on-device-ai": {
-    "researchStatus": "pending",
-    "origin": null,
+    "researchStatus": "researched",
+    "origin": "On-device AI describes AI models or features whose inference runs on the user’s local device rather than depending entirely on a remote server. The pattern predates today’s foundation models through mobile and edge machine learning, so EpochLex does not assign the umbrella term to one inventor.",
     "firstKnownUse": null,
-    "history": [],
+    "history": [
+      {
+        "date": "2025",
+        "event": "Apple exposed the on-device foundation model behind Apple Intelligence to developers through the Foundation Models framework, making local generative-AI inference a first-class application capability."
+      },
+      {
+        "date": "2026",
+        "event": "Apple expanded its on-device AI platform with Core AI and continued Foundation Models updates for local model execution and agentic application features."
+      }
+    ],
+    "sources": [
+      {
+        "id": "apple-foundation-models-on-device",
+        "type": "primary",
+        "publisher": "Apple Developer",
+        "title": "Generating content and performing tasks with Foundation Models",
+        "published": null,
+        "url": "https://developer.apple.com/documentation/FoundationModels/generating-content-and-performing-tasks-with-foundation-models",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "apple-ai-machine-learning-2026",
+        "type": "primary",
+        "publisher": "Apple Developer",
+        "title": "AI & Machine Learning",
+        "published": "2026",
+        "url": "https://developer.apple.com/machine-learning/",
+        "supports": [
+          "history",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ],
     "relatedTerms": [
       "local-ai",
       "edge-inference",
       "npu",
       "ai-pc"
-    ],
-    "sources": [
-      {
-        "id": "apple-core-ai-on-device-2026",
-        "type": "primary",
-        "publisher": "Apple",
-        "title": "Integrating on-device AI models in your app with Core AI",
-        "published": "2026",
-        "url": "https://developer.apple.com/documentation/CoreAI/integrating-on-device-ai-models-in-your-app-with-core-ai",
-        "supports": [
-          "definition",
-          "usage"
-        ]
-      }
     ]
   },
   "qlora": {
@@ -8742,41 +8840,52 @@
     ]
   },
   "agent-security": {
-    "researchStatus": "pending",
-    "origin": null,
+    "researchStatus": "researched",
+    "origin": "Agent security is an umbrella security concept for protecting AI agents, their identities, tools, memory, data, execution environments, and interactions from misuse or compromise. Its scope has expanded as agents gained autonomy and access to external systems, but the term does not have a single established coinage.",
     "firstKnownUse": null,
-    "history": [],
-    "relatedTerms": [
-      "ai-agent",
-      "agent-identity",
-      "agent-sandbox"
+    "history": [
+      {
+        "date": "2026-06-01",
+        "event": "OWASP published version 2.01 of its State of Agentic AI Security and Governance, reflecting the maturation of agent-specific security and governance practices."
+      },
+      {
+        "date": "2026-09-01",
+        "event": "OWASP published the Agent Control Standard as an open foundation for runtime transparency and control across agent platforms."
+      }
     ],
     "sources": [
       {
-        "id": "microsoft-agent-security-2026",
-        "type": "primary",
-        "publisher": "Microsoft Learn",
-        "title": "Agent Security with FIDES",
-        "published": "2026-08-25",
-        "url": "https://learn.microsoft.com/en-us/agent-framework/agents/security",
+        "id": "owasp-ai-agent-security-cheat-sheet",
+        "type": "reference",
+        "publisher": "OWASP",
+        "title": "AI Agent Security Cheat Sheet",
+        "published": null,
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html",
         "supports": [
           "definition",
+          "risk",
           "usage",
-          "risk"
+          "technical-definition"
         ]
       },
       {
-        "id": "microsoft-agent-safety-2026",
+        "id": "owasp-agentic-security-2026",
         "type": "primary",
-        "publisher": "Microsoft Learn",
-        "title": "Agent Safety",
-        "published": "2026-08-25",
-        "url": "https://learn.microsoft.com/en-us/agent-framework/concepts/agents/safety",
+        "publisher": "OWASP GenAI Security Project",
+        "title": "State of Agentic AI Security and Governance 2.01",
+        "published": "2026-06-01",
+        "url": "https://genai.owasp.org/resource/state-of-agentic-ai-security-and-governance/",
         "supports": [
+          "history",
           "usage",
           "risk"
         ]
       }
+    ],
+    "relatedTerms": [
+      "ai-agent",
+      "agent-identity",
+      "agent-sandbox"
     ]
   },
   "mcp-extension": {
@@ -10649,29 +10758,42 @@
     ]
   },
   "agent-handoff": {
-    "researchStatus": "pending",
-    "origin": null,
+    "researchStatus": "researched",
+    "origin": "Agent handoff is a multi-agent orchestration pattern in which one agent transfers control of a task or conversation to another specialized agent. The pattern is implemented explicitly in current agent frameworks, but EpochLex does not claim a single origin for the generic term.",
     "firstKnownUse": null,
     "history": [],
-    "relatedTerms": [
-      "ai-agent",
-      "agent-to-agent-a2a",
-      "multi-agent-orchestration"
-    ],
     "sources": [
       {
-        "id": "openai-agent-handoff-2026",
+        "id": "openai-agent-handoffs",
         "type": "primary",
         "publisher": "OpenAI",
-        "title": "A practical guide to building agents",
-        "published": "2026",
-        "url": "https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/",
+        "title": "Handoffs - OpenAI Agents SDK",
+        "published": null,
+        "url": "https://openai.github.io/openai-agents-python/handoffs/",
         "supports": [
           "definition",
           "usage",
           "technical-definition"
         ]
+      },
+      {
+        "id": "openai-agent-orchestration",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "Agent orchestration - OpenAI Agents SDK",
+        "published": null,
+        "url": "https://openai.github.io/openai-agents-python/multi_agent/",
+        "supports": [
+          "definition",
+          "usage",
+          "contrast"
+        ]
       }
+    ],
+    "relatedTerms": [
+      "ai-agent",
+      "agent-to-agent-a2a",
+      "multi-agent-orchestration"
     ]
   },
   "agent-harness": {
@@ -10713,29 +10835,41 @@
     ]
   },
   "agent-planning": {
-    "researchStatus": "pending",
-    "origin": null,
+    "researchStatus": "researched",
+    "origin": "Agent planning is the process by which an agent decomposes or organizes work before or during execution, selecting intermediate steps, tools, or subgoals toward a larger objective. Planning has deep roots in classical AI; current LLM-agent frameworks expose it through explicit plan modes, task lists, or model-directed orchestration. EpochLex does not assign the general concept to a modern coinage.",
     "firstKnownUse": null,
     "history": [],
-    "relatedTerms": [
-      "ai-agent",
-      "agent-state",
-      "agent-memory"
-    ],
     "sources": [
       {
-        "id": "microsoft-agent-planning-2025",
+        "id": "microsoft-agent-planning-2026",
         "type": "primary",
         "publisher": "Microsoft Learn",
-        "title": "What Is the AI Agent Planning Design Pattern?",
-        "published": "2025-03-24",
-        "url": "https://learn.microsoft.com/en-us/shows/ai-agents-for-beginners/what-is-the-ai-agent-planning-design-pattern",
+        "title": "Planning and todos",
+        "published": "2026",
+        "url": "https://learn.microsoft.com/en-us/agent-framework/agents/planning-and-todos",
         "supports": [
           "definition",
           "usage",
           "technical-definition"
         ]
+      },
+      {
+        "id": "openai-agent-orchestration",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "Agent orchestration - OpenAI Agents SDK",
+        "published": null,
+        "url": "https://openai.github.io/openai-agents-python/multi_agent/",
+        "supports": [
+          "definition",
+          "usage"
+        ]
       }
+    ],
+    "relatedTerms": [
+      "ai-agent",
+      "agent-state",
+      "agent-memory"
     ]
   },
   "verifiable-reward": {
@@ -11696,41 +11830,46 @@
     ]
   },
   "rag-pipeline": {
-    "researchStatus": "pending",
-    "origin": null,
+    "researchStatus": "researched",
+    "origin": "“RAG pipeline” is a descriptive systems term built on retrieval-augmented generation rather than a separately established coinage. It refers to the end-to-end workflow that prepares and indexes source material, retrieves relevant context at query time, augments the model input, and generates a grounded response. Modern implementations often separate indexing or ingestion from the online query path.",
     "firstKnownUse": null,
-    "history": [],
-    "relatedTerms": [
-      "rag",
-      "retrieval-pipeline",
-      "embedding"
+    "history": [
+      {
+        "date": "2020-05-22",
+        "event": "Lewis and colleagues submitted the Retrieval-Augmented Generation paper, establishing the modern RAG framework that later production pipelines operationalized."
+      }
     ],
     "sources": [
       {
-        "id": "microsoft-azure-files-rag-overview-2026",
+        "id": "lewis-rag-2020",
+        "type": "primary",
+        "publisher": "arXiv",
+        "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+        "published": "2020-05-22",
+        "url": "https://arxiv.org/abs/2005.11401",
+        "supports": [
+          "history",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "microsoft-rag-azure-files-2026",
         "type": "primary",
         "publisher": "Microsoft Learn",
         "title": "Retrieval-Augmented Generation (RAG) with Azure Files",
-        "published": "2026-04-23",
+        "published": "2026",
         "url": "https://learn.microsoft.com/en-us/azure/storage/files/artificial-intelligence/retrieval-augmented-generation/overview",
         "supports": [
           "definition",
           "usage",
           "technical-definition"
         ]
-      },
-      {
-        "id": "microsoft-rag-design-guide-2026",
-        "type": "primary",
-        "publisher": "Microsoft Learn",
-        "title": "Design and Develop a RAG Solution on Azure",
-        "published": "2026-06-30",
-        "url": "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide",
-        "supports": [
-          "usage",
-          "technical-definition"
-        ]
       }
+    ],
+    "relatedTerms": [
+      "rag",
+      "retrieval-pipeline",
+      "embedding"
     ]
   },
   "rag-chunking": {
