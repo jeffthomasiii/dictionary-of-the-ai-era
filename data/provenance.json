@@ -10052,5 +10052,313 @@
         ]
       }
     ]
+  },
+  "agent-handoff": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-agent",
+      "agent-to-agent-a2a",
+      "multi-agent-orchestration"
+    ],
+    "sources": [
+      {
+        "id": "openai-agent-handoff-2026",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "A practical guide to building agents",
+        "published": "2026",
+        "url": "https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "agent-harness": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "agent-runtime",
+      "agent-loop",
+      "ai-agent"
+    ],
+    "sources": [
+      {
+        "id": "openai-agent-harness-2026",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "The next evolution of the Agents SDK",
+        "published": "2026-04-15",
+        "url": "https://openai.com/index/the-next-evolution-of-the-agents-sdk/",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "anthropic-agent-harness-2026",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Harness design for long-running application development",
+        "published": "2026",
+        "url": "https://www.anthropic.com/engineering/harness-design-long-running-apps",
+        "supports": [
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "agent-planning": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-agent",
+      "agent-state",
+      "agent-memory"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-agent-planning-2025",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "What Is the AI Agent Planning Design Pattern?",
+        "published": "2025-03-24",
+        "url": "https://learn.microsoft.com/en-us/shows/ai-agents-for-beginners/what-is-the-ai-agent-planning-design-pattern",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "verifiable-reward": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "reinforcement-learning-with-verifiable-rewards",
+      "outcome-reward-model",
+      "process-reward-model"
+    ],
+    "sources": [
+      {
+        "id": "hf-verifiable-reward-2026",
+        "type": "reference",
+        "publisher": "Hugging Face",
+        "title": "Verifiable Rewards (Rule/Checker-Based Rewards)",
+        "published": "2026",
+        "url": "https://huggingface.co/datasets/rl-llm-wiki/knowledge-base/blob/main/topics/reward-modeling/verifiable-rewards.md",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "microsoft-rlvr-2026",
+        "type": "research",
+        "publisher": "Microsoft Research",
+        "title": "Reinforcement Learning with Verifiable Rewards Implicitly Incentivizes Correct Reasoning in Base LLMs",
+        "published": "2026",
+        "url": "https://www.microsoft.com/en-us/research/publication/reinforcement-learning-with-verifiable-rewards-implicitly-incentivizes-correct-reasoning-in-base-llms/",
+        "supports": [
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "semantic-chunking": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "rag",
+      "retrieval-pipeline",
+      "contextual-retrieval"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-semantic-chunking-2026",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "Retrieval-Augmented Generation with Azure Document Intelligence in Foundry Tools",
+        "published": "2026-08-15",
+        "url": "https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/concept/retrieval-augmented-generation?view=doc-intel-4.0.0",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "regression-evaluation": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "automated-evaluation",
+      "eval",
+      "golden-dataset"
+    ],
+    "sources": [
+      {
+        "id": "openai-regression-evals-2026",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "Morgan Stanley uses AI evals to shape the future of financial services",
+        "published": "2026",
+        "url": "https://openai.com/index/morgan-stanley/",
+        "supports": [
+          "definition",
+          "usage",
+          "evaluation"
+        ]
+      }
+    ]
+  },
+  "excessive-agency": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "agent-security",
+      "least-privilege-agent",
+      "tool-approval"
+    ],
+    "sources": [
+      {
+        "id": "owasp-excessive-agency-2025",
+        "type": "primary",
+        "publisher": "OWASP GenAI Security Project",
+        "title": "LLM06:2025 Excessive Agency",
+        "published": "2025",
+        "url": "https://genai.owasp.org/llmrisk/llm062025-excessive-agency/",
+        "supports": [
+          "definition",
+          "usage",
+          "security"
+        ]
+      }
+    ]
+  },
+  "prompt-injection-defense": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "prompt-injection",
+      "ai-security",
+      "agent-security"
+    ],
+    "sources": [
+      {
+        "id": "owasp-prompt-injection-defense-2026",
+        "type": "primary",
+        "publisher": "OWASP Cheat Sheet Series",
+        "title": "LLM Prompt Injection Prevention Cheat Sheet",
+        "published": "2026",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
+        "supports": [
+          "definition",
+          "usage",
+          "security"
+        ]
+      },
+      {
+        "id": "owasp-prompt-injection-2025",
+        "type": "primary",
+        "publisher": "OWASP GenAI Security Project",
+        "title": "LLM01:2025 Prompt Injection",
+        "published": "2025",
+        "url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+        "supports": [
+          "usage",
+          "security"
+        ]
+      }
+    ]
+  },
+  "ai-oversight": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "human-oversight",
+      "ai-governance",
+      "ai-accountability"
+    ],
+    "sources": [
+      {
+        "id": "nist-ai-oversight-2026",
+        "type": "primary",
+        "publisher": "NIST AI Resource Center",
+        "title": "AI RMF Playbook — Map and Govern",
+        "published": "2026",
+        "url": "https://airc.nist.gov/airmf-resources/playbook/map/",
+        "supports": [
+          "definition",
+          "usage",
+          "governance"
+        ]
+      },
+      {
+        "id": "nist-ai-oversight-govern-2026",
+        "type": "primary",
+        "publisher": "NIST AI Resource Center",
+        "title": "AI RMF Playbook — Govern",
+        "published": "2026",
+        "url": "https://airc.nist.gov/airmf-resources/playbook/govern/",
+        "supports": [
+          "usage",
+          "governance"
+        ]
+      }
+    ]
+  },
+  "model-audit": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-audit",
+      "model-risk-management",
+      "model-inventory"
+    ],
+    "sources": [
+      {
+        "id": "nist-model-audit-2026",
+        "type": "primary",
+        "publisher": "NIST AI Resource Center",
+        "title": "AI RMF Playbook — Govern",
+        "published": "2026",
+        "url": "https://airc.nist.gov/airmf-resources/playbook/govern/",
+        "supports": [
+          "definition",
+          "usage",
+          "governance"
+        ]
+      }
+    ]
   }
 }
