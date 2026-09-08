@@ -378,6 +378,90 @@ These are not recommended as separate entries now. Some are generic business phr
 - Cyborg Workflow
 - Vibe Debugging
 
+## Research Further promotion pass 12 — Batch P (published September 8, 2026)
+
+This batch is the twelfth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
+
+### Local Inference
+
+**Why promote and publish:** AI model inference performed on a user-controlled local machine or local network endpoint rather than by sending the request to a third-party cloud inference service.
+
+**Usage evidence:** [NVIDIA: Use a Local Inference Server](https://docs.nvidia.com/nemoclaw/latest/inference/use-local-inference.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Agent Telemetry
+
+**Why promote and publish:** Operational data emitted or collected from AI agents—such as traces, metrics, logs, tool activity, and execution context—to support monitoring, troubleshooting, security analysis, and performance assessment.
+
+**Usage evidence:** [Microsoft Learn: Microsoft OpenTelemetry Distro](https://learn.microsoft.com/en-us/microsoft-agent-365/developer/microsoft-opentelemetry)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Evaluation Trace
+
+**Why promote and publish:** A recorded sequence of an AI system or agent trial—including outputs, tool calls, intermediate actions, and other interactions—used as evidence for evaluating how the system behaved, not only what final result it produced.
+
+**Usage evidence:** [Anthropic: Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents); [OpenAI: OpenAI Agents SDK — Tracing](https://openai.github.io/openai-agents-python/tracing/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### MCP Progress Notification
+
+**Why promote and publish:** A Model Context Protocol notification that reports incremental progress for a long-running request, associated with the originating request through a progress token.
+
+**Usage evidence:** [Model Context Protocol: Schema Reference — notifications/progress](https://modelcontextprotocol.io/specification/2025-11-25/schema)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Cross-Encoder
+
+**Why promote and publish:** A model that jointly processes a pair of inputs—such as a query and candidate document—to produce a relevance or similarity score, commonly used as a second-stage reranker after faster retrieval.
+
+**Usage evidence:** [Sentence Transformers: Cross Encoder — Usage](https://www.sbert.net/docs/cross_encoder/usage/usage.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Dense Retrieval
+
+**Why promote and publish:** A retrieval approach that represents queries and documents as dense vector embeddings and retrieves items whose vectors are close in the embedding space.
+
+**Usage evidence:** [Sentence Transformers: Retrieve & Re-Rank](https://www.sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### AI Bill of Materials
+
+**Why promote and publish:** A structured inventory of components, models, data-related artifacts, dependencies, and other supply-chain information associated with an AI system, intended to improve transparency, security, and traceability.
+
+**Usage evidence:** [OWASP GenAI Security Project: AI Bill of Materials](https://genai.owasp.org/initiatives/ai-sbom-initiative/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Model Risk Management
+
+**Why promote and publish:** The governance, validation, monitoring, and control practices used to identify and manage risks arising from the development, use, limitations, and outputs of models. In current U.S. banking guidance, generative and agentic AI are explicitly outside that guidance’s scope.
+
+**Usage evidence:** [Federal Reserve: Supervisory Guidance on Model Risk Management](https://www.federalreserve.gov/frrs/guidance/supervisory-guidance-on-model-risk-management.htm)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### AI Accountability
+
+**Why promote and publish:** The principle and practice of assigning responsibility to AI actors and organizations for the proper functioning, governance, risk management, and consequences of AI systems according to their roles and ability to act.
+
+**Usage evidence:** [OECD: OECD AI Principles — Accountability](https://oecd.ai/en/ai-principles); [NIST AI Resource Center: AI RMF Playbook — Govern](https://airc.nist.gov/airmf-resources/playbook/govern/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### AI Compliance
+
+**Why promote and publish:** The organizational practice of determining, documenting, and maintaining whether AI systems and related activities satisfy applicable legal, regulatory, contractual, and internal-policy requirements.
+
+**Usage evidence:** [European Commission AI Office: AI Act Single Information Platform](https://ai-act-service-desk.ec.europa.eu/en); [NIST AI Resource Center: AI RMF Playbook — Govern](https://airc.nist.gov/airmf-resources/playbook/govern/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
 ## Research Further promotion pass 11 — Batch O (published September 8, 2026)
 
 This batch is the eleventh evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
@@ -1317,7 +1401,7 @@ All remaining unpublished candidates in `CORPUS-CANDIDATES.md`, including the ne
 
 ## Expansion result
 
-This audit has now published 143 candidates across Batches A–O and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
+This audit has now published 153 candidates across Batches A–P and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
 
 ## Follow-up
 

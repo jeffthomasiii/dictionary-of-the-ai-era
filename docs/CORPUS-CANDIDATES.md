@@ -21,7 +21,7 @@ The initial inventory below was seeded from the September 2026 EpochLex corpus-e
 
 These planning pools are not new editorial lifecycle states. Candidates with an active research issue are linked directly to that issue.
 
-**Current unpublished inventory: 607 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
+**Current unpublished inventory: 597 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
 
 ---
 
@@ -502,8 +502,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Chunk Overlap
 
 - Corrective RAG (CRAG)
-- Cross-Encoder
-- Dense Retrieval
+
 - Embedding Model
 - Embedding Space
 - Fixed-Size Chunking
@@ -533,11 +532,9 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Adversarial Example
 - Adversarial Machine Learning
 - Agent Hijacking
-- AI Accountability
 
 - AI Auditing
-- AI Bill of Materials (AIBOM)
-- AI Compliance
+
 - AI Control
 - AI Control Framework
 - AI Disclosure
@@ -574,7 +571,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Model Inventory
 - Model Inversion
 
-- Model Risk Management
 - Model Stealing
 - Poisoning Attack
 - Privilege Escalation
@@ -651,8 +647,6 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - AI Browser
 - Agent Session
 
-- Agent Telemetry
-
 - Agent Benchmark
 
 - Tool Result
@@ -668,13 +662,10 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - MCP Sampling
 - MCP Roots
 
-- MCP Progress Notification
-
 ### Local AI, hardware & inference
 
 - TOPS
 
-- Local Inference
 - Unified Memory
 - GPU Offloading
 - Model Offloading
@@ -750,7 +741,6 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - Needle-in-a-Haystack Evaluation
 - Human Preference Evaluation
 
-- Evaluation Trace
 - Agent Evaluation Trace
 
 - Prompt Observability

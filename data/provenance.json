@@ -8569,5 +8569,302 @@
         ]
       }
     ]
+  },
+  "local-inference": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "local-ai",
+      "inference",
+      "on-device-ai"
+    ],
+    "sources": [
+      {
+        "id": "nvidia-local-inference-2026",
+        "type": "primary",
+        "publisher": "NVIDIA",
+        "title": "Use a Local Inference Server",
+        "published": "2026",
+        "url": "https://docs.nvidia.com/nemoclaw/latest/inference/use-local-inference.html",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "agent-telemetry": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "agent-trace",
+      "llm-observability",
+      "ai-agent"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-agent-telemetry-2026",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "Microsoft OpenTelemetry Distro",
+        "published": "2026-06-15",
+        "url": "https://learn.microsoft.com/en-us/microsoft-agent-365/developer/microsoft-opentelemetry",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "evaluation-trace": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "eval",
+      "agent-trace",
+      "evaluation-harness"
+    ],
+    "sources": [
+      {
+        "id": "anthropic-agent-evals-trace-2026",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Demystifying evals for AI agents",
+        "published": "2026-01-09",
+        "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+        "supports": [
+          "definition",
+          "usage",
+          "evaluation"
+        ]
+      },
+      {
+        "id": "openai-agents-tracing-2026",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "OpenAI Agents SDK — Tracing",
+        "published": "2026",
+        "url": "https://openai.github.io/openai-agents-python/tracing/",
+        "supports": [
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "mcp-progress-notification": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "mcp",
+      "mcp-client",
+      "mcp-server"
+    ],
+    "sources": [
+      {
+        "id": "mcp-progress-schema-2025",
+        "type": "primary",
+        "publisher": "Model Context Protocol",
+        "title": "Schema Reference — notifications/progress",
+        "published": "2025-11-25",
+        "url": "https://modelcontextprotocol.io/specification/2025-11-25/schema",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "cross-encoder": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "reranker",
+      "embedding",
+      "dense-retrieval"
+    ],
+    "sources": [
+      {
+        "id": "sentence-transformers-cross-encoder",
+        "type": "reference",
+        "publisher": "Sentence Transformers",
+        "title": "Cross Encoder — Usage",
+        "published": "2026",
+        "url": "https://www.sbert.net/docs/cross_encoder/usage/usage.html",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "dense-retrieval": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "embedding",
+      "vector-database",
+      "reranker"
+    ],
+    "sources": [
+      {
+        "id": "sentence-transformers-dense-retrieval",
+        "type": "reference",
+        "publisher": "Sentence Transformers",
+        "title": "Retrieve & Re-Rank",
+        "published": "2026",
+        "url": "https://www.sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "ai-bill-of-materials": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-governance",
+      "agent-security",
+      "model-card"
+    ],
+    "sources": [
+      {
+        "id": "owasp-aibom-2026",
+        "type": "primary",
+        "publisher": "OWASP GenAI Security Project",
+        "title": "AI Bill of Materials",
+        "published": "2026",
+        "url": "https://genai.owasp.org/initiatives/ai-sbom-initiative/",
+        "supports": [
+          "definition",
+          "usage",
+          "risk",
+          "governance"
+        ]
+      }
+    ]
+  },
+  "model-risk-management": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-risk-management",
+      "ai-governance",
+      "model-card"
+    ],
+    "sources": [
+      {
+        "id": "fed-model-risk-management-2026",
+        "type": "primary",
+        "publisher": "Federal Reserve",
+        "title": "Supervisory Guidance on Model Risk Management",
+        "published": "2026-04-17",
+        "url": "https://www.federalreserve.gov/frrs/guidance/supervisory-guidance-on-model-risk-management.htm",
+        "supports": [
+          "definition",
+          "usage",
+          "governance",
+          "scope"
+        ]
+      }
+    ]
+  },
+  "ai-accountability": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-governance",
+      "responsible-ai",
+      "human-oversight"
+    ],
+    "sources": [
+      {
+        "id": "oecd-ai-accountability",
+        "type": "primary",
+        "publisher": "OECD",
+        "title": "OECD AI Principles — Accountability",
+        "published": "2024",
+        "url": "https://oecd.ai/en/ai-principles",
+        "supports": [
+          "definition",
+          "governance"
+        ]
+      },
+      {
+        "id": "nist-govern-accountability",
+        "type": "primary",
+        "publisher": "NIST AI Resource Center",
+        "title": "AI RMF Playbook — Govern",
+        "published": "2026",
+        "url": "https://airc.nist.gov/airmf-resources/playbook/govern/",
+        "supports": [
+          "usage",
+          "governance"
+        ]
+      }
+    ]
+  },
+  "ai-compliance": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-governance",
+      "ai-act",
+      "ai-risk-management"
+    ],
+    "sources": [
+      {
+        "id": "eu-ai-act-compliance-platform",
+        "type": "primary",
+        "publisher": "European Commission AI Office",
+        "title": "AI Act Single Information Platform",
+        "published": "2026",
+        "url": "https://ai-act-service-desk.ec.europa.eu/en",
+        "supports": [
+          "definition",
+          "usage",
+          "regulation"
+        ]
+      },
+      {
+        "id": "nist-ai-legal-requirements",
+        "type": "primary",
+        "publisher": "NIST AI Resource Center",
+        "title": "AI RMF Playbook — Govern",
+        "published": "2026",
+        "url": "https://airc.nist.gov/airmf-resources/playbook/govern/",
+        "supports": [
+          "usage",
+          "governance"
+        ]
+      }
+    ]
   }
 }
