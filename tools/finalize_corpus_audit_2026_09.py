@@ -39,7 +39,7 @@ if marker in text and related in text:
 inventory_slice = text[text.index("## Repository roadmap candidates"):text.index(related)]
 count = sum(1 for line in inventory_slice.splitlines() if line.startswith("- "))
 text = re.sub(
-    r"\*\*Current unpublished inventory: [^\n]+\*\*",
+    r"\*\*Current unpublished inventory: [^\n]+\*\*[^\n]*",
     f"**Current unpublished inventory: {count} candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.",
     text,
     count=1,
