@@ -1438,4 +1438,44 @@
     <loc>https://epochlex.justathoughtblog.org/terms/constitutional-classifier/</loc>
     <lastmod>2026-09-08</lastmod>
   </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/byte-pair-encoding/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/autoregressive-model/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/encoder/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/decoder/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/cross-attention/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/softmax/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/logit/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/perplexity/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/multimodal-model/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://epochlex.justathoughtblog.org/terms/flashattention/</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
 </urlset>

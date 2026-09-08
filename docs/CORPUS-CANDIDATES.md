@@ -21,7 +21,7 @@ The initial inventory below was seeded from the September 2026 EpochLex corpus-e
 
 These planning pools are not new editorial lifecycle states. Candidates with an active research issue are linked directly to that issue.
 
-**Current unpublished inventory: 511 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
+**Current unpublished inventory: 499 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
 
 ---
 
@@ -69,7 +69,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Dense Model
 - Emergent Capability
 - Epoch
-- Faithfulness
+
 - Generative Video
 
 - Image-to-Image
@@ -77,7 +77,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 - Leaderboard
 
-- Perplexity
 - Precision
 - Preference Learning
 - Recall
@@ -249,25 +248,20 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Activation Function
 - Architecture
 
-- Autoregressive Model
-- Byte-Pair Encoding (BPE)
 - Compute Scaling
 - Computer Vision
-- Cross-Attention
-- Decoder
+
 - Discriminative Model
-- Encoder
+
 - Encoder-Decoder Model
 - Feed-Forward Network
-- Flash Attention
+
 - Generative Model
 - Hidden Layer
 - Hidden State
 - Inference-Time Compute
 
 - Language Model
-- Logit
-- Multimodal Model
 
 - Neural Scaling Law
 - Parameter Count
@@ -276,7 +270,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Reasoning Token
 - RoPE
 - Scaling Law
-- Softmax
+
 - Sparse Attention
 - Subword Token
 - Test-Time Compute
@@ -608,7 +602,6 @@ The September 8, 2026 corpus audit added the following candidates after checking
 
 ### Reasoning & model behavior
 
-- Test-Time Scaling
 - Deliberation
 - Hidden Chain of Thought
 - Reasoning Trace
