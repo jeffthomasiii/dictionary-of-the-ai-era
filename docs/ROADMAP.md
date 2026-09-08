@@ -7,7 +7,7 @@ EpochLex is a Living Dictionary. The roadmap is therefore a statement of current
 The initial product and corpus MVP is substantially complete:
 
 - 365 published dictionary entries;
-- 152 researched provenance records and 213 pending provenance records in the current published corpus;
+- 162 researched provenance records and 203 pending provenance records in the current published corpus;
 - an editorial model that separates publishable dictionary completeness from provenance-research completion;
 - dedicated term pages;
 - Browse search, A-Z navigation, filters, list/grid views;
