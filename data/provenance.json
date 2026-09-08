@@ -4798,5 +4798,267 @@
       "ai-washing"
     ],
     "sources": []
+  },
+  "ai-literacy": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "artificial-intelligence",
+      "ai-governance",
+      "responsible-ai",
+      "human-in-the-loop"
+    ],
+    "sources": [
+      {
+        "id": "ec-ai-literacy-2026",
+        "type": "primary",
+        "publisher": "European Commission",
+        "title": "AI talent, skills and literacy",
+        "published": "2026",
+        "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-talent-skills-and-literacy",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "indirect-prompt-injection": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "prompt-injection",
+      "jailbreak",
+      "tool-calling",
+      "rag"
+    ],
+    "sources": [
+      {
+        "id": "owasp-indirect-prompt-injection-2025",
+        "type": "reference",
+        "publisher": "OWASP GenAI Security Project",
+        "title": "LLM01:2025 Prompt Injection",
+        "published": "2025",
+        "url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+        "supports": [
+          "definition",
+          "usage",
+          "risk"
+        ]
+      }
+    ]
+  },
+  "data-poisoning": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "training-data",
+      "adversarial-attack",
+      "model-collapse",
+      "fine-tuning"
+    ],
+    "sources": [
+      {
+        "id": "nist-data-poisoning-2025",
+        "type": "primary",
+        "publisher": "NIST",
+        "title": "Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations",
+        "published": "2025-03-24",
+        "url": "https://csrc.nist.gov/glossary/term/data_poisoning",
+        "supports": [
+          "definition",
+          "usage",
+          "risk"
+        ]
+      }
+    ]
+  },
+  "model-card": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "system-card",
+      "model-evaluation",
+      "benchmark",
+      "responsible-ai"
+    ],
+    "sources": [
+      {
+        "id": "google-model-cards-2019",
+        "type": "primary",
+        "publisher": "Google Research",
+        "title": "Model Cards for Model Reporting",
+        "published": "2019",
+        "url": "https://research.google/pubs/model-cards-for-model-reporting/",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "system-card": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "model-card",
+      "red-teaming",
+      "ai-governance",
+      "benchmark"
+    ],
+    "sources": [
+      {
+        "id": "openai-gpt55-system-card-2026",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "GPT-5.5 System Card",
+        "published": "2026-04-23",
+        "url": "https://openai.com/index/gpt-5-5-system-card/",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "agentic-workflow": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "agentic",
+      "ai-agent",
+      "orchestration",
+      "prompt-chaining"
+    ],
+    "sources": [
+      {
+        "id": "anthropic-building-agents",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Building Effective AI Agents",
+        "published": "2024-12-19",
+        "url": "https://www.anthropic.com/engineering/building-effective-agents",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "agent-loop": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-agent",
+      "agentic",
+      "tool-calling",
+      "orchestration"
+    ],
+    "sources": [
+      {
+        "id": "anthropic-building-agents-loop",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Building Effective AI Agents",
+        "published": "2024-12-19",
+        "url": "https://www.anthropic.com/engineering/building-effective-agents",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "ai-companion": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "artificial-intelligence",
+      "chatgpt",
+      "synthetic-content"
+    ],
+    "sources": [
+      {
+        "id": "stanford-ai-companions-2026",
+        "type": "secondary",
+        "publisher": "Stanford University",
+        "title": "AI companions may worsen loneliness for vulnerable users",
+        "published": "2026-08-04",
+        "url": "https://news.stanford.edu/stories/2026/08/ai-companions-chatbots-loneliness-research",
+        "supports": [
+          "definition",
+          "usage",
+          "risk"
+        ]
+      }
+    ]
+  },
+  "human-ai-collaboration": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "human-in-the-loop",
+      "copilot",
+      "ai-agent",
+      "ai-native"
+    ],
+    "sources": [
+      {
+        "id": "nist-human-ai-collaboration-2025",
+        "type": "reference",
+        "publisher": "NIST",
+        "title": "Economic Research and Analysis of the National Need for Technology Infrastructure to Support the Internet of Things (IoT)",
+        "published": "2025",
+        "url": "https://nvlpubs.nist.gov/nistpubs/gcr/2025/NIST.GCR.25-059.pdf",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "sampling": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "temperature",
+      "top-p",
+      "token",
+      "large-language-model"
+    ],
+    "sources": [
+      {
+        "id": "huggingface-generation-sampling",
+        "type": "reference",
+        "publisher": "Hugging Face",
+        "title": "How to generate text: using different decoding methods for language generation with Transformers",
+        "published": "2020",
+        "url": "https://huggingface.co/blog/how-to-generate",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
   }
 }
