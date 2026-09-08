@@ -1,0 +1,26 @@
+name: Apply September 2026 corpus Batch R
+on:
+  push:
+    branches:
+      - corpus/2026-09-publish-batch-r
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: corpus/2026-09-publish-batch-r
+      - name: Apply and validate Batch R
+        run: python tools/apply_corpus_batch_r_2026_09.py
+      - name: Commit generated corpus changes
+        run: |
+          git config user.name "Jeff Thomas III"
+          git config user.email "Masterstudent@duck.com"
+          git add data/terms.json data/provenance.json docs/CORPUS-AUDIT-2026-09.md docs/CORPUS-CANDIDATES.md docs/ROADMAP.md sitemap.xml terms/
+          if ! git diff --cached --quiet; then
+            git commit -m "Promote and publish EpochLex corpus Batch R"
+            git push origin corpus/2026-09-publish-batch-r
+          fi
