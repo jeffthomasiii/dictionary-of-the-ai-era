@@ -1,0 +1,31 @@
+name: Apply September 2026 corpus Batch B
+
+on:
+  push:
+    branches:
+      - corpus/2026-09-publish-batch-b
+    paths:
+      - tools/apply_corpus_batch_b_2026_09.py
+      - .github/workflows/apply-corpus-batch-b-2026-09.yml
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: corpus/2026-09-publish-batch-b
+      - name: Apply and validate Batch B
+        run: python tools/apply_corpus_batch_b_2026_09.py
+      - name: Commit generated corpus changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/terms.json data/provenance.json docs/CORPUS-CANDIDATES.md docs/CORPUS-AUDIT-2026-09.md docs/ROADMAP.md sitemap.xml terms/
+          git commit -m "Publish corpus Batch B with pending provenance"
+          git push origin HEAD:corpus/2026-09-publish-batch-b
