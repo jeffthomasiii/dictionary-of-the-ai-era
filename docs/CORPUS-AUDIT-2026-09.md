@@ -378,6 +378,90 @@ These are not recommended as separate entries now. Some are generic business phr
 - Cyborg Workflow
 - Vibe Debugging
 
+## Research Further promotion pass 10 — Batch N (published September 8, 2026)
+
+This batch is the tenth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
+
+### MCP Prompt
+
+**Why promote and publish:** A prompt template exposed by a Model Context Protocol server for clients to discover, retrieve, and optionally customize with arguments before use with a language model.
+
+**Usage evidence:** [Model Context Protocol: Prompts](https://modelcontextprotocol.io/specification/draft/server/prompts)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### MCP OAuth
+
+**Why promote and publish:** The OAuth-based authorization profile used by HTTP-based Model Context Protocol implementations so MCP clients can obtain appropriately scoped access to restricted MCP servers on behalf of resource owners.
+
+**Usage evidence:** [Model Context Protocol: Authorization](https://modelcontextprotocol.io/specification/draft/basic/authorization); [Model Context Protocol: The 2026-07-28 Specification](https://blog.modelcontextprotocol.io/posts/2026-07-28/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### MCP Elicitation
+
+**Why promote and publish:** A Model Context Protocol interaction in which a server requests additional information, confirmation, or other user input through the client while processing a request.
+
+**Usage evidence:** [Model Context Protocol: Elicitation](https://modelcontextprotocol.io/specification/draft/client/elicitation); [Model Context Protocol: The 2026-07-28 Specification](https://blog.modelcontextprotocol.io/posts/2026-07-28/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### MCP Security
+
+**Why promote and publish:** The security practices and controls used to protect Model Context Protocol clients, servers, authorization flows, tools, resources, and data from threats such as token misuse, confused-deputy attacks, unsafe tool invocation, and unauthorized access.
+
+**Usage evidence:** [Model Context Protocol: Specification — Security and Trust & Safety principles](https://modelcontextprotocol.io/specification/2025-11-25); [Model Context Protocol: Authorization — Security Considerations](https://modelcontextprotocol.io/specification/draft/basic/authorization)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Human Approval Gate
+
+**Why promote and publish:** A control point in an AI or agent workflow that pauses a proposed action until a person explicitly approves, rejects, or modifies it before execution continues.
+
+**Usage evidence:** [OpenAI: Running Codex safely at OpenAI](https://openai.com/index/running-codex-safely/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Tool Permission
+
+**Why promote and publish:** A rule or authorization that determines whether an AI model or agent may use a particular tool, capability, resource, or class of actions, often with restrictions based on scope, context, or risk.
+
+**Usage evidence:** [OpenAI: Running Codex safely at OpenAI](https://openai.com/index/running-codex-safely/); [Model Context Protocol: Specification — Tool Safety](https://modelcontextprotocol.io/specification/2025-11-25)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Systemic Risk
+
+**Why promote and publish:** In the EU AI Act context, risk associated with the high-impact capabilities or broad reach of a general-purpose AI model that can have significant effects on public health, safety, security, fundamental rights, or society at scale.
+
+**Usage evidence:** [EUR-Lex: Regulation (EU) 2024/1689 — General-purpose AI models with systemic risk](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32024R1689)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Prohibited AI Practice
+
+**Why promote and publish:** An AI practice that is forbidden under a governing legal framework; in the EU AI Act, Article 5 identifies specified practices that may not be placed on the market, put into service, or used under the conditions described by the regulation.
+
+**Usage evidence:** [EUR-Lex: Regulation (EU) 2024/1689 — Article 5 Prohibited AI practices](https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32024R1689)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### AI Impact Assessment
+
+**Why promote and publish:** A structured assessment used to identify and evaluate the potential consequences of an AI system’s deployment, intended use, and foreseeable misuse, including impacts on people, rights, safety, organizations, society, or the environment.
+
+**Usage evidence:** [UK Department for Science, Innovation and Technology: AI Management Essentials tool — Impact assessment](https://www.gov.uk/government/consultations/ai-management-essentials-tool/ai-management-essentials-tool-accessible); [NIST AI Resource Center: Descriptions of AI Actor Tasks — AI Impact Assessment](https://airc.nist.gov/airmf-resources/airmf/appendices/app-a-descriptions-of-ai-actor-tasks/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Agent Security
+
+**Why promote and publish:** The practice of protecting AI agents, their identities, sessions, tools, data flows, permissions, and execution paths from misuse, unauthorized access, prompt injection, data exfiltration, and other threats created or amplified by agentic behavior.
+
+**Usage evidence:** [Microsoft Learn: Agent Security with FIDES](https://learn.microsoft.com/en-us/agent-framework/agents/security); [Microsoft Learn: Agent Safety](https://learn.microsoft.com/en-us/agent-framework/concepts/agents/safety)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
 ## Research Further promotion pass 9 — Batch M (published September 8, 2026)
 
 This batch is the ninth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
@@ -1149,7 +1233,7 @@ All remaining unpublished candidates in `CORPUS-CANDIDATES.md`, including the ne
 
 ## Expansion result
 
-This audit has now published 123 candidates across Batches A–M and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
+This audit has now published 133 candidates across Batches A–N and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
 
 ## Follow-up
 
