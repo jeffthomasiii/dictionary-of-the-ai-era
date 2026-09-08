@@ -4,7 +4,7 @@
 
 ## Why this queue exists
 
-EpochLex currently has **365 published entries**, including **152 researched** provenance records and **213 pending** records after provenance Batch 03. The current corpus-growth pause shifts attention from bulk publication to deeper provenance review. The first milestone remains **183 researched / 182 pending** without adding new entries. Provenance Batches 01–03 completed 30 of the 61 Wave 1 records, leaving **31 Wave 1 reviews** to reach that milestone.
+EpochLex currently has **365 published entries**, including **162 researched** provenance records and **203 pending** records after provenance Batch 04. The current corpus-growth pause shifts attention from bulk publication to deeper provenance review. The first milestone remains **183 researched / 182 pending** without adding new entries. Provenance Batches 01–04 completed 40 of the 61 Wave 1 records, leaving **21 Wave 1 reviews** to reach that milestone.
 
 The queue prioritizes four practical considerations: broad reader importance, value to EpochLex’s identity and differentiation, volatility or likelihood of meaning changing quickly, and the value of documenting provenance/history rather than leaving a useful definition without its research layer. These considerations guide this working queue only; they do not change `PROVENANCE.md` or `CONTRIBUTING.md`.
 
@@ -60,6 +60,21 @@ This batch concentrated on model architecture, probability-output, evaluation, m
 8. **Perplexity**
 9. **Multimodal Model**
 10. **FlashAttention**
+
+## Provenance Batch 04 — completed September 8, 2026
+
+This batch concentrated on model serving and retrieval architecture. All ten records completed the initial human-reviewed provenance pass and now use `researchStatus: "researched"`.
+
+1. **Model Serving**
+2. **Top-p**
+3. **BM25**
+4. **HNSW**
+5. **Dense Retrieval**
+6. **Sparse Retrieval**
+7. **Cross-Encoder**
+8. **Bi-Encoder**
+9. **Reranker**
+10. **Retrieval Pipeline**
 
 ## Wave 1 — Majority milestone (61)
 
