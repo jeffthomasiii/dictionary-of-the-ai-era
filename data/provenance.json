@@ -9139,5 +9139,289 @@
         ]
       }
     ]
+  },
+  "inference-backend": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "inference-server",
+      "inference-runtime",
+      "model-serving"
+    ],
+    "sources": [
+      {
+        "id": "nvidia-triton-backend-2026",
+        "type": "primary",
+        "publisher": "NVIDIA",
+        "title": "Triton Inference Server Backend",
+        "published": "2026",
+        "url": "https://docs.nvidia.com/deeplearning/triton-inference-server/user-guide/docs/backend/README.html",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "model-offloading": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "gpu-offloading",
+      "local-inference",
+      "inference-runtime"
+    ],
+    "sources": [
+      {
+        "id": "hf-big-model-offload-2026",
+        "type": "reference",
+        "publisher": "Hugging Face",
+        "title": "Loading models — Big Model Inference",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/transformers/models",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "cpu-offloading": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "model-offloading",
+      "gpu-offloading",
+      "local-inference"
+    ],
+    "sources": [
+      {
+        "id": "hf-accelerate-cpu-offload-2026",
+        "type": "reference",
+        "publisher": "Hugging Face",
+        "title": "Working with large models — cpu_offload",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/accelerate/package_reference/big_modeling",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "prompt-observability": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "llm-observability",
+      "model-telemetry",
+      "evaluation-trace"
+    ],
+    "sources": [
+      {
+        "id": "langfuse-observability-2026",
+        "type": "reference",
+        "publisher": "Langfuse",
+        "title": "Example Project — Tracing and Prompt Management",
+        "published": "2026",
+        "url": "https://langfuse.com/docs/demo",
+        "supports": [
+          "definition",
+          "usage",
+          "observability"
+        ]
+      }
+    ]
+  },
+  "retrieval-pipeline": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "rag",
+      "retriever",
+      "reranker"
+    ],
+    "sources": [
+      {
+        "id": "elastic-retrieval-pipeline-2026",
+        "type": "primary",
+        "publisher": "Elastic",
+        "title": "Retrievers overview",
+        "published": "2026",
+        "url": "https://www.elastic.co/docs/solutions/search/retrievers-overview",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "retriever": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "rag",
+      "dense-retrieval",
+      "sparse-retrieval"
+    ],
+    "sources": [
+      {
+        "id": "elastic-retriever-2026",
+        "type": "primary",
+        "publisher": "Elastic",
+        "title": "Retrievers",
+        "published": "2026",
+        "url": "https://www.elastic.co/docs/reference/elasticsearch/rest-apis/retrievers",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "ai-security": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "agent-security",
+      "ai-risk-management",
+      "prompt-injection"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-ai-security-2026",
+        "type": "primary",
+        "publisher": "Microsoft Security",
+        "title": "What is AI Security?",
+        "published": "2026",
+        "url": "https://www.microsoft.com/en-us/security/business/security-101/what-is-ai-security",
+        "supports": [
+          "definition",
+          "usage",
+          "security"
+        ]
+      }
+    ]
+  },
+  "model-inventory": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-inventory",
+      "model-risk-management",
+      "model-registry"
+    ],
+    "sources": [
+      {
+        "id": "fed-model-inventory-2026",
+        "type": "primary",
+        "publisher": "Federal Reserve",
+        "title": "Supervisory Guidance on Model Risk Management — Model Inventory",
+        "published": "2026-04-17",
+        "url": "https://www.federalreserve.gov/frrs/guidance/supervisory-guidance-on-model-risk-management.htm",
+        "supports": [
+          "definition",
+          "usage",
+          "governance"
+        ]
+      }
+    ]
+  },
+  "algorithmic-accountability": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-accountability",
+      "ai-governance",
+      "human-oversight"
+    ],
+    "sources": [
+      {
+        "id": "ftc-algorithmic-accountability-2022",
+        "type": "primary",
+        "publisher": "Federal Trade Commission",
+        "title": "Combatting Online Harms Through Innovation",
+        "published": "2022",
+        "url": "https://www.ftc.gov/system/files/ftc_gov/pdf/Combatting%20Online%20Harms%20Through%20Innovation%3B%20Federal%20Trade%20Commission%20Report%20to%20Congress.pdf",
+        "supports": [
+          "definition",
+          "usage",
+          "governance"
+        ]
+      },
+      {
+        "id": "nist-algorithmic-accountability-2026",
+        "type": "primary",
+        "publisher": "NIST AI Resource Center",
+        "title": "AI RMF Playbook — Govern",
+        "published": "2026",
+        "url": "https://airc.nist.gov/airmf-resources/playbook/govern/",
+        "supports": [
+          "usage",
+          "governance"
+        ]
+      }
+    ]
+  },
+  "ai-policy": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-governance",
+      "ai-compliance",
+      "responsible-ai"
+    ],
+    "sources": [
+      {
+        "id": "oecd-ai-policy-2026",
+        "type": "primary",
+        "publisher": "OECD.AI",
+        "title": "The OECD AI Policy Toolkit: Better AI policies for better lives",
+        "published": "2026-06-03",
+        "url": "https://oecd.ai/en/wonk/the-oecd-ai-policy-toolkit-better-ai-policies-for-better-lives",
+        "supports": [
+          "definition",
+          "usage",
+          "governance"
+        ]
+      },
+      {
+        "id": "oecd-policy-navigator-2026",
+        "type": "primary",
+        "publisher": "OECD.AI",
+        "title": "AI Policy Navigator",
+        "published": "2026",
+        "url": "https://oecd.ai/en/dashboards/overview",
+        "supports": [
+          "usage",
+          "governance"
+        ]
+      }
+    ]
   }
 }

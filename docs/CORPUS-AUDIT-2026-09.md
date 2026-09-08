@@ -378,6 +378,90 @@ These are not recommended as separate entries now. Some are generic business phr
 - Cyborg Workflow
 - Vibe Debugging
 
+## Research Further promotion pass 14 — Batch R (published September 8, 2026)
+
+This batch is the fourteenth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
+
+### Inference Backend
+
+**Why promote and publish:** The software implementation within an inference-serving system that actually executes a model, often by wrapping a framework or runtime such as PyTorch, TensorRT, ONNX Runtime, or a custom execution layer.
+
+**Usage evidence:** [NVIDIA: Triton Inference Server Backend](https://docs.nvidia.com/deeplearning/triton-inference-server/user-guide/docs/backend/README.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Model Offloading
+
+**Why promote and publish:** A memory-management technique that moves some model parameters, buffers, or other state from a faster device such as a GPU to slower memory such as CPU RAM or disk so models larger than the fastest device memory can still run.
+
+**Usage evidence:** [Hugging Face: Loading models — Big Model Inference](https://huggingface.co/docs/transformers/models)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### CPU Offloading
+
+**Why promote and publish:** A model-execution technique that keeps some or all model parameters in CPU memory and transfers them to an accelerator such as a GPU only when needed for computation.
+
+**Usage evidence:** [Hugging Face: Working with large models — cpu_offload](https://huggingface.co/docs/accelerate/package_reference/big_modeling)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Prompt Observability
+
+**Why promote and publish:** The practice of capturing and analyzing prompt-related traces, versions, inputs, outputs, metadata, and evaluation signals so teams can understand how prompts behave in development and production.
+
+**Usage evidence:** [Langfuse: Example Project — Tracing and Prompt Management](https://langfuse.com/docs/demo)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Retrieval Pipeline
+
+**Why promote and publish:** The ordered retrieval and ranking logic that turns a query into a set of top results, potentially combining multiple retrievers, filters, fusion steps, and rerankers.
+
+**Usage evidence:** [Elastic: Retrievers overview](https://www.elastic.co/docs/solutions/search/retrievers-overview)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Retriever
+
+**Why promote and publish:** A search component that accepts a query and returns a ranked or otherwise selected set of candidate documents, passages, records, or other items for downstream use.
+
+**Usage evidence:** [Elastic: Retrievers](https://www.elastic.co/docs/reference/elasticsearch/rest-apis/retrievers)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### AI Security
+
+**Why promote and publish:** The cybersecurity practices, controls, and technologies used to protect AI models, data, applications, and supporting systems from threats, vulnerabilities, unauthorized access, manipulation, and disruption.
+
+**Usage evidence:** [Microsoft Security: What is AI Security?](https://www.microsoft.com/en-us/security/business/security-101/what-is-ai-security)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Model Inventory
+
+**Why promote and publish:** A maintained record of models under development, in use, or retired, together with enough information about ownership, purpose, status, validation, limitations, and risk to support model governance and risk management.
+
+**Usage evidence:** [Federal Reserve: Supervisory Guidance on Model Risk Management — Model Inventory](https://www.federalreserve.gov/frrs/guidance/supervisory-guidance-on-model-risk-management.htm)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Algorithmic Accountability
+
+**Why promote and publish:** The principle and practice of making organizations responsible for the effects of automated or algorithmic systems through governance, documentation, transparency, oversight, assessment, and mechanisms for addressing harmful outcomes.
+
+**Usage evidence:** [Federal Trade Commission: Combatting Online Harms Through Innovation](https://www.ftc.gov/system/files/ftc_gov/pdf/Combatting%20Online%20Harms%20Through%20Innovation%3B%20Federal%20Trade%20Commission%20Report%20to%20Congress.pdf); [NIST AI Resource Center: AI RMF Playbook — Govern](https://airc.nist.gov/airmf-resources/playbook/govern/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### AI Policy
+
+**Why promote and publish:** A policy, policy framework, or coordinated set of public or organizational rules and priorities that directs how artificial intelligence is developed, adopted, governed, regulated, or used.
+
+**Usage evidence:** [OECD.AI: The OECD AI Policy Toolkit: Better AI policies for better lives](https://oecd.ai/en/wonk/the-oecd-ai-policy-toolkit-better-ai-policies-for-better-lives); [OECD.AI: AI Policy Navigator](https://oecd.ai/en/dashboards/overview)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
 ## Research Further promotion pass 13 — Batch Q (published September 8, 2026)
 
 This batch is the thirteenth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
@@ -1485,7 +1569,7 @@ All remaining unpublished candidates in `CORPUS-CANDIDATES.md`, including the ne
 
 ## Expansion result
 
-This audit has now published 163 candidates across Batches A–Q and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
+This audit has now published 173 candidates across Batches A–R and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
 
 ## Follow-up
 
