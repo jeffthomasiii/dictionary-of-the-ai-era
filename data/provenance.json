@@ -7276,5 +7276,349 @@
         ]
       }
     ]
+  },
+  "query-routing": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "rag",
+      "contextual-retrieval",
+      "semantic-router"
+    ],
+    "sources": [
+      {
+        "id": "rag-query-routing-2025",
+        "type": "research",
+        "publisher": "arXiv",
+        "title": "Query Routing for Retrieval-Augmented Language Models",
+        "published": "2025-05-29",
+        "url": "https://arxiv.org/abs/2505.23052",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "unsupervised-query-routing-2025",
+        "type": "research",
+        "publisher": "arXiv",
+        "title": "Unsupervised Query Routing for Retrieval Augmented Generation",
+        "published": "2025-01-14",
+        "url": "https://arxiv.org/abs/2501.07793",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "semantic-router": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "query-routing",
+      "model-serving",
+      "ai-agent"
+    ],
+    "sources": [
+      {
+        "id": "vllm-semantic-router-2026",
+        "type": "primary",
+        "publisher": "vLLM Project",
+        "title": "vLLM Semantic Router — Introduction",
+        "published": "2026",
+        "url": "https://github.com/vllm-project/semantic-router/blob/main/website/docs/intro.md",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "semantic-router-docs",
+        "type": "primary",
+        "publisher": "Aurelio Labs",
+        "title": "Semantic Router documentation",
+        "published": "2024",
+        "url": "https://semantic-router.readthedocs.io/en/stable/",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "agent-authorization": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "agent-identity",
+      "agent-permission",
+      "least-privilege-agent"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-agent-authorization-2026",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "Grant agents access to Microsoft 365 resources",
+        "published": "2026-05-01",
+        "url": "https://github.com/MicrosoftDocs/entra-docs/blob/main/docs/agent-id/grant-agent-access-microsoft-365.md",
+        "supports": [
+          "definition",
+          "usage",
+          "risk"
+        ]
+      }
+    ]
+  },
+  "ai-risk-management": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-risk-assessment",
+      "ai-governance",
+      "ai-assurance"
+    ],
+    "sources": [
+      {
+        "id": "nist-ai-rmf",
+        "type": "primary",
+        "publisher": "NIST",
+        "title": "AI Risk Management Framework",
+        "published": "2026",
+        "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+        "supports": [
+          "definition",
+          "usage",
+          "governance"
+        ]
+      },
+      {
+        "id": "iso-ai-risk-management",
+        "type": "standard",
+        "publisher": "ISO",
+        "title": "ISO/IEC 23894:2023 — Artificial intelligence — Guidance on risk management",
+        "published": "2023-02",
+        "url": "https://www.iso.org/standard/77304.html",
+        "supports": [
+          "definition",
+          "usage",
+          "governance"
+        ]
+      }
+    ]
+  },
+  "ai-act": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "high-risk-ai",
+      "general-purpose-ai",
+      "ai-risk-management"
+    ],
+    "sources": [
+      {
+        "id": "eu-ai-act-official-2026",
+        "type": "primary",
+        "publisher": "European Commission",
+        "title": "AI Act",
+        "published": "2026-08",
+        "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+        "supports": [
+          "definition",
+          "usage",
+          "regulation"
+        ]
+      },
+      {
+        "id": "eu-ai-act-explorer",
+        "type": "primary",
+        "publisher": "AI Act Service Desk",
+        "title": "AI Act Explorer",
+        "published": "2026",
+        "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act-explorer",
+        "supports": [
+          "definition",
+          "regulation"
+        ]
+      }
+    ]
+  },
+  "onnx": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "model-serving",
+      "local-ai",
+      "model-license"
+    ],
+    "sources": [
+      {
+        "id": "onnx-official-intro",
+        "type": "primary",
+        "publisher": "ONNX",
+        "title": "Introduction to ONNX",
+        "published": "2026",
+        "url": "https://onnx.ai/onnx/intro/",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "onnx-github",
+        "type": "primary",
+        "publisher": "ONNX",
+        "title": "Open standard for machine learning interoperability",
+        "published": "2026",
+        "url": "https://github.com/onnx/onnx",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "open-source-ai": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "open-weight-model",
+      "model-license",
+      "local-ai"
+    ],
+    "sources": [
+      {
+        "id": "osi-osaid-1",
+        "type": "primary",
+        "publisher": "Open Source Initiative",
+        "title": "The Open Source AI Definition — 1.0",
+        "published": "2024-10-28",
+        "url": "https://opensource.org/ai/open-source-ai-definition",
+        "supports": [
+          "definition",
+          "usage",
+          "governance"
+        ]
+      }
+    ]
+  },
+  "human-evaluation": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "eval",
+      "pairwise-evaluation",
+      "agent-evaluation"
+    ],
+    "sources": [
+      {
+        "id": "google-human-evaluation-2026",
+        "type": "reference",
+        "publisher": "Google Cloud",
+        "title": "Evaluating Single LLM Outputs With Vertex AI Evaluation",
+        "published": "2026",
+        "url": "https://codelabs.developers.google.com/codelabs/production-ready-ai-with-gc/6-ai-evaluation/evaluating-single-llm-outputs-with-vertex-ai-evaluation",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      },
+      {
+        "id": "google-judge-human-ratings",
+        "type": "reference",
+        "publisher": "Google Cloud",
+        "title": "Evaluate a judge model",
+        "published": "2026",
+        "url": "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/evaluate-judge-model",
+        "supports": [
+          "usage",
+          "evaluation"
+        ]
+      }
+    ]
+  },
+  "task-success-rate": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "agent-evaluation",
+      "eval",
+      "human-evaluation"
+    ],
+    "sources": [
+      {
+        "id": "snowflake-agent-evaluation",
+        "type": "reference",
+        "publisher": "Snowflake",
+        "title": "AI Agent Evaluation: Metrics and Methods",
+        "published": "2026",
+        "url": "https://www.snowflake.com/en/artificial-intelligence/agents/agent-evaluation/",
+        "supports": [
+          "definition",
+          "usage",
+          "evaluation"
+        ]
+      }
+    ]
+  },
+  "mcp-host": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "mcp",
+      "mcp-client",
+      "mcp-server"
+    ],
+    "sources": [
+      {
+        "id": "mcp-core-architecture",
+        "type": "primary",
+        "publisher": "Model Context Protocol",
+        "title": "Core architecture",
+        "published": "2026",
+        "url": "https://github.com/modelcontextprotocol/docs/blob/main/docs/concepts/architecture.mdx",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "microsoft-mcp-architecture",
+        "type": "reference",
+        "publisher": "Microsoft Learn",
+        "title": "Overview of MCP servers in Azure API Management",
+        "published": "2025",
+        "url": "https://learn.microsoft.com/en-us/azure/api-management/mcp-server-overview",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
   }
 }
