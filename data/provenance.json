@@ -4694,5 +4694,109 @@
         ]
       }
     ]
+  },
+  "artificial-intelligence": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "machine-learning",
+      "generative-ai",
+      "artificial-general-intelligence",
+      "ai-governance"
+    ],
+    "sources": []
+  },
+  "ground-truth": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "eval",
+      "benchmark",
+      "supervised-learning",
+      "training-data"
+    ],
+    "sources": []
+  },
+  "hybrid-search": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "semantic-search",
+      "vector-search",
+      "retrieval",
+      "rag"
+    ],
+    "sources": []
+  },
+  "natural-language-processing": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "large-language-model",
+      "machine-learning",
+      "transformer",
+      "tokenization"
+    ],
+    "sources": []
+  },
+  "open-weight-model": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "model-weights",
+      "quantization",
+      "llama",
+      "deepseek-r1"
+    ],
+    "sources": []
+  },
+  "responsible-ai": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-governance",
+      "ai-alignment",
+      "guardrail",
+      "human-in-the-loop"
+    ],
+    "sources": []
+  },
+  "tokenization": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "token",
+      "large-language-model",
+      "context-window",
+      "transformer"
+    ],
+    "sources": []
+  },
+  "workslop": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-slop",
+      "meat-proxy",
+      "human-in-the-loop",
+      "ai-washing"
+    ],
+    "sources": []
   }
 }

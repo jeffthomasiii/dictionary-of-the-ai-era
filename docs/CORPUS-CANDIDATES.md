@@ -21,7 +21,7 @@ The initial inventory below was seeded from the September 2026 EpochLex corpus-e
 
 These planning pools are not new editorial lifecycle states. Candidates with an active research issue are linked directly to that issue.
 
-**Current unpublished inventory: 590 candidates** (83 repository-roadmap candidates and 507 research-pool candidates).
+**Current unpublished inventory: 743 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
 
 ---
 
@@ -47,7 +47,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Prompt Literacy
 - Synthetic Influencer
 - Vibe Debugging
-- [Workslop](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/issues/81)
 
 ### AI Risks, Safety & Governance
 
@@ -69,7 +68,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Model Poisoning
 - Prompt Extraction
 - Prompt Leaking
-- [Responsible AI](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/issues/79)
 
 ### AI Systems & Technical Concepts
 
@@ -88,7 +86,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Leaderboard
 - Loss Function
 - Model Card
-- [Model Evaluation](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/issues/69)
+
 - Overfitting
 - Perplexity
 - Precision
@@ -114,7 +112,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - API
 - Autonomous Agent
 - Browser Use
-- [Function Calling](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/issues/68)
+
 - Long-Term Memory
 - Planning
 - Reflection
@@ -282,7 +280,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 - Activation Function
 - Architecture
-- [Artificial Intelligence (AI)](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/issues/80)
+
 - Autoregressive Model
 - Byte-Pair Encoding (BPE)
 - Compute Scaling
@@ -302,7 +300,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Language Model
 - Logit
 - Multimodal Model
-- [Natural Language Processing (NLP)](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/issues/73)
+
 - Neural Scaling Law
 - Parameter Count
 - Positional Encoding
@@ -314,7 +312,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Sparse Attention
 - Subword Token
 - Test-Time Compute
-- [Tokenization](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/issues/67)
+
 - Tokenizer
 - Vocabulary
 - World Model
@@ -340,7 +338,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - False Positive
 - Golden Dataset
 - Grader
-- [Ground Truth](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/issues/70)
+
 - Hallucination Rate
 - Holdout Set
 - Human Evaluation
@@ -456,7 +454,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Open Model
 - Open-Source AI
 - Open-Source Model
-- [Open-Weight Model](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/issues/76)
+
 - Private AI
 - Proprietary Model
 - Quantized Model
@@ -510,7 +508,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 ### Prompting & Context
 
-- Chain-of-Thought Prompting
 - Context Assembly
 - Context Budget
 - Context Compression
@@ -520,7 +517,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Context Pollution
 - Context Retrieval
 - Contextualization
-- Few-Shot Prompting
+
 - Meta-Prompting
 - Persona Prompting
 - Prompt Compression
@@ -535,7 +532,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Scratchpad
 - Self-Consistency
 - Tree of Thoughts
-- Zero-Shot Prompting
 
 ### Retrieval & RAG
 
@@ -552,7 +548,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Fixed-Size Chunking
 - HNSW
 - Hybrid Retrieval
-- [Hybrid Search](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/issues/72)
+
 - Keyword Search
 - Knowledge Retrieval
 - Late Chunking
@@ -564,13 +560,11 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Query Rewriting
 - Reranker
 - Retrieval Pipeline
-- Retrieval-Augmented Generation
+
 - Retriever
 - Self-RAG
 - Semantic Chunking
 - Sparse Retrieval
-- Vector Embedding
-- Vector Store
 
 ### Safety, Security & Governance
 
@@ -614,7 +608,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Human-on-the-Loop
 - Human-out-of-the-Loop
 - Indirect Prompt Injection Attack
-- Jailbreaking
+
 - Meaningful Human Control
 - Membership Inference
 - Model Audit
@@ -628,7 +622,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Poisoning Attack
 - Privilege Escalation
 - Prohibited AI Practice
-- Prompt Injection Attack
+
 - RAG Poisoning
 - Safe AI
 - Sandboxing
@@ -663,7 +657,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Human Feedback
 - Hyperparameter
 - Instruction Dataset
-- Knowledge Distillation
+
 - Labeling
 - Learning Rate
 - Optimizer
@@ -685,6 +679,217 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 New candidates can enter through repository corpus review, Discussions, contributor term suggestions, or other documented editorial research. Adding a term here records that it may be worth future review; it does not establish inclusion.
 
 When a candidate is ready for focused research, create an individual **Research candidate entry** issue using the repository issue template and link the candidate here. Once research and human editorial review produce a publication decision, update this inventory so it does not drift from the actionable backlog or published corpus.
+
+---
+
+## September 2026 audit expansion
+
+The September 8, 2026 corpus audit added the following candidates after checking for gaps in agent standards, MCP evolution, local AI hardware, reasoning, retrieval, evaluation, safety/governance, generative media, work, and AI economics. These remain candidates, not approved entries. Their initial disposition is **Research Further** unless promoted by the audit document.
+
+### Agents, protocols & agentic systems
+
+- Agent Skills
+- SKILL.md
+- Agentic Commerce
+- Agentic Payments
+- Agentic Web
+- AI Browser
+- Agent Session
+- Agent Trace
+- Agent Observability
+- Agent Telemetry
+- Agent Sandbox
+- Agent Permission
+- Agent Authorization
+- Agent Security
+- Agent Benchmark
+- Tool Permission
+- Tool Approval
+- Tool Result
+- Tool Schema
+- Tool Discovery
+- Tool Search
+- Programmatic Tool Calling
+- Human Approval Gate
+- Least-Privilege Agent
+- Agentic UI
+
+### MCP ecosystem
+
+- MCP Apps
+- MCP Extension
+- MCP Elicitation
+- MCP Sampling
+- MCP Roots
+- MCP Authorization
+- MCP OAuth
+- MCP Tasks
+- MCP Progress Notification
+- MCP Structured Content
+- MCP Security
+- MCP UI Resource
+
+### Local AI, hardware & inference
+
+- Neural Processing Unit (NPU)
+- AI PC
+- TOPS
+- Edge Inference
+- Local Inference
+- Unified Memory
+- GPU Offloading
+- Model Offloading
+- CPU Offloading
+- KV Cache Quantization
+- Inference Engine
+- Inference Backend
+- Hardware Acceleration
+- AI Accelerator Card
+- Memory Footprint
+
+### Reasoning & model behavior
+
+- Reasoning Effort
+- Inference-Time Scaling
+- Test-Time Scaling
+- Deliberation
+- Hidden Chain of Thought
+- Reasoning Trace
+- Reasoning Summary
+- Verifiable Reward
+- Sparse MoE
+- Expert Routing
+- Activation Sparsity
+- Long-Context Model
+- Reasoning Budget
+- Compute-Optimal Inference
+
+### Training & adaptation
+
+- QLoRA
+- Adapter
+- LoRA Adapter
+- Full Fine-Tuning
+- Continued Pretraining
+- Domain-Adaptive Pretraining
+- Instruction Fine-Tuning
+- Synthetic Data Generation
+- RLHF Data
+- Preference Pair
+- Rejection Sampling
+- Rejection Sampling Fine-Tuning
+- Distillation Loss
+- Reward Hacking
+- Specification Gaming
+- Process Reward Model
+- Outcome Reward Model
+- Verifier Model
+- Critic Model
+
+### Retrieval, RAG & search
+
+- RAG Evaluation
+- RAG Pipeline
+- RAG Chunking
+- Retrieval Quality
+- Query Routing
+- Semantic Router
+- Agentic Retrieval
+- Multi-Hop Retrieval
+- Retrieval Fusion
+- Reciprocal Rank Fusion (RRF)
+- ColBERT
+- Late Interaction
+- Retrieval Grounding
+- Citation Retrieval
+- Contextual Reranking
+
+### Evaluation & observability
+
+- Evals Framework
+- Benchmark Gaming
+- Benchmark Leakage
+- Capability Benchmark
+- Safety Benchmark
+- Multimodal Benchmark
+- Long-Context Evaluation
+- Needle-in-a-Haystack Evaluation
+- Human Preference Evaluation
+- Evaluation Harness
+- Evaluation Trace
+- Agent Evaluation Trace
+- LLM Observability
+- Prompt Observability
+- Model Telemetry
+
+### Safety, security & governance
+
+- Safety Case
+- AI Safety Case
+- Frontier Safety Framework
+- Responsible Scaling Policy
+- Capability Threshold
+- Deployment Threshold
+- Model Behavior Specification
+- Model Spec
+- Constitutional Classifier
+- Safeguard Model
+- AI Red Team
+- AI Security Testing
+- Prompt Injection Defense
+- Tool Injection
+- Kill Switch (AI)
+- AI Incident Response
+- Deployment Safeguard
+- Capability Gate
+- Model Safeguard
+- Agent Risk Assessment
+
+### Generative media & provenance
+
+- Video Diffusion Model
+- Diffusion Transformer (DiT)
+- Flow Matching
+- Rectified Flow
+- Image-to-Video Model
+- Text-to-Audio Model
+- Voice Conversion
+- Speaker Cloning
+- Digital Watermark
+- Content Authenticity Initiative (CAI)
+- Provenance Signal
+- Synthetic Media Detection
+
+### Work, roles & operations
+
+- AI Procurement
+- AI Readiness
+- AI Operating Model
+- AI Center of Excellence (AI CoE)
+- AI Governance Board
+- AI Product Manager
+- AI Engineer
+- Prompt Engineer
+- AI Generalist
+- Agent Manager
+- Human-Agent Collaboration
+- Agentic Organization
+- Agentic Operations
+- AI Change Management
+- AI Adoption Framework
+
+### Economics & compute
+
+- Inference Economics
+- AI Capex
+- GPU Scarcity
+- Compute Governance
+- Compute Efficiency
+- Inference Budget
+- Token Budget
+- Compute Allocation
+- AI Infrastructure Cost
+- Cost per Inference
 
 ## Related documentation
 

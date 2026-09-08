@@ -6,8 +6,8 @@ EpochLex is a Living Dictionary. The roadmap is therefore a statement of current
 
 The initial product and corpus MVP is substantially complete:
 
-- 122 published dictionary entries;
-- researched provenance records for the current published corpus;
+- 130 published dictionary entries;
+- 122 researched provenance records and 8 pending provenance records in the current published corpus;
 - an editorial model that separates publishable dictionary completeness from provenance-research completion;
 - dedicated term pages;
 - Browse search, A-Z navigation, filters, list/grid views;
@@ -98,6 +98,10 @@ Possible work includes:
 - periodic review of whether Discussions, Issues, the Project, the candidate inventory, and public contribution guidance still route people clearly.
 
 EpochLex should remain open to contributions beyond code, including term suggestions, source research, corrections, pronunciation guidance, accessibility testing, design feedback, and documentation improvements.
+
+## September 2026 corpus audit
+
+The September 2026 audit classified the candidate inventory into Publish, Alias, Research Further, and Exclude/Observe planning dispositions, expanded the research pool, and published the first eight entries under the separate publication/provenance model. See [`CORPUS-AUDIT-2026-09.md`](CORPUS-AUDIT-2026-09.md).
 
 ## Corpus growth
 
