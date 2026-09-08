@@ -109,6 +109,8 @@ The current published corpus is a foundation, not a target ceiling. Future addit
 
 [`CORPUS-CANDIDATES.md`](CORPUS-CANDIDATES.md) is the source-controlled working inventory of unpublished terminology that may merit future review. It provides a durable place to preserve possible coverage without implying that every candidate belongs in the dictionary. Selected candidates can be promoted into focused research issues when they are ready for contributor work.
 
+The current operating focus is a **provenance-consolidation phase** rather than continued systematic bulk publication. The working review order for the 243 pending provenance records is documented in [`PROVENANCE-REVIEW-QUEUE-2026-09.md`](PROVENANCE-REVIEW-QUEUE-2026-09.md). This is a current prioritization aid, not a new permanent editorial standard; the queue should be reassessed as research progresses.
+
 Corpus growth does not require every accepted term to complete its full provenance investigation before it can help readers. Once an entry satisfies the core publication standard in `CONTRIBUTING.md`, it may enter the Living Dictionary with a transparent `pending` provenance status. Deeper sourcing can then continue without representing unresolved origin or history claims as settled fact.
 
 Ongoing corpus work may include:
