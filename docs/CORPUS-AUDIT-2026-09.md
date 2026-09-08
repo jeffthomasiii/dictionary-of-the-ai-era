@@ -378,6 +378,90 @@ These are not recommended as separate entries now. Some are generic business phr
 - Cyborg Workflow
 - Vibe Debugging
 
+## Research Further promotion pass 4 — Batch H (published September 8, 2026)
+
+This batch is the fourth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
+
+### Agent Sandbox
+
+**Why promote and publish:** An isolated or constrained execution environment that limits what an AI agent can access or change, reducing the potential impact of unsafe, unintended, or compromised actions.
+
+**Usage evidence:** [Anthropic: Beyond permission prompts: making Claude Code more secure and autonomous](https://www.anthropic.com/engineering/claude-code-sandboxing)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Agent Permission
+
+**Why promote and publish:** A configured rule or grant that determines which resources, tools, commands, data, or actions an AI agent is allowed to access or use.
+
+**Usage evidence:** [Anthropic: How we built Claude Code auto mode: a safer way to skip permissions](https://www.anthropic.com/engineering/claude-code-auto-mode)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Tool Approval
+
+**Why promote and publish:** A human or policy-controlled checkpoint that must authorize an AI system or agent before it invokes a particular tool or performs a tool-mediated action.
+
+**Usage evidence:** [Anthropic: Getting Started with Custom Connectors Using Remote MCP](https://support.anthropic.com/en/articles/11175166-about-custom-integrations-using-remote-mcp)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### MCP Server
+
+**Why promote and publish:** A server-side implementation of the Model Context Protocol that exposes tools, resources, prompts, or other supported capabilities for MCP clients to discover and use.
+
+**Usage evidence:** [Model Context Protocol: MCP Server](https://java.sdk.modelcontextprotocol.io/latest/server/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### MCP Resource
+
+**Why promote and publish:** A URI-identified item of data or context that an MCP server exposes for clients to discover or read, such as a file, schema, document, or application-specific resource.
+
+**Usage evidence:** [Model Context Protocol: Resources](https://modelcontextprotocol.io/specification/2025-11-25/server/resources)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### MCP Apps
+
+**Why promote and publish:** An MCP extension that lets servers provide interactive user interfaces to host applications by linking UI resources with MCP tools and enabling communication between the embedded interface and the host.
+
+**Usage evidence:** [Model Context Protocol: MCP Apps: Extending servers with interactive user interfaces](https://blog.modelcontextprotocol.io/posts/2025-11-21-mcp-apps/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### MCP Tasks
+
+**Why promote and publish:** An MCP extension for representing and tracking longer-running server work through task handles and task lifecycle operations such as getting status, updating, or cancelling work.
+
+**Usage evidence:** [Model Context Protocol: The 2026-07-28 Specification](https://blog.modelcontextprotocol.io/posts/2026-07-28/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### On-Device AI
+
+**Why promote and publish:** AI processing in which a model runs directly on an end-user device rather than sending each inference request to a remote cloud service.
+
+**Usage evidence:** [Apple: Integrating on-device AI models in your app with Core AI](https://developer.apple.com/documentation/CoreAI/integrating-on-device-ai-models-in-your-app-with-core-ai)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### QLoRA
+
+**Why promote and publish:** A parameter-efficient fine-tuning technique that keeps a pretrained model quantized, commonly at 4-bit precision, while training low-rank adapter weights instead of updating the full model.
+
+**Usage evidence:** [Hugging Face: bitsandbytes](https://huggingface.co/docs/transformers/main/quantization/bitsandbytes)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Direct Preference Optimization
+
+**Why promote and publish:** A post-training method that fine-tunes a language model directly on preferred and rejected response pairs without first training a separate explicit reward model.
+
+**Usage evidence:** [Hugging Face: DPO Trainer](https://huggingface.co/docs/trl/dpo_trainer)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
 ## Research Further promotion pass 3 — Batch G (published September 8, 2026)
 
 This batch is the third evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
@@ -645,7 +729,7 @@ All remaining unpublished candidates in `CORPUS-CANDIDATES.md`, including the ne
 
 ## Expansion result
 
-This audit has now published 63 candidates across Batches A–G and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
+This audit has now published 73 candidates across Batches A–H and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
 
 ## Follow-up
 

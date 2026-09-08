@@ -6225,5 +6225,270 @@
         ]
       }
     ]
+  },
+  "agent-sandbox": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-agent",
+      "agentic-workflow",
+      "computer-use"
+    ],
+    "sources": [
+      {
+        "id": "anthropic-agent-sandbox-2025",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Beyond permission prompts: making Claude Code more secure and autonomous",
+        "published": "2025-10-20",
+        "url": "https://www.anthropic.com/engineering/claude-code-sandboxing",
+        "supports": [
+          "definition",
+          "usage",
+          "risk"
+        ]
+      }
+    ]
+  },
+  "agent-permission": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-agent",
+      "agent-sandbox",
+      "tool-approval",
+      "mcp-authorization"
+    ],
+    "sources": [
+      {
+        "id": "anthropic-auto-mode-permissions-2026",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "How we built Claude Code auto mode: a safer way to skip permissions",
+        "published": "2026-03-25",
+        "url": "https://www.anthropic.com/engineering/claude-code-auto-mode",
+        "supports": [
+          "definition",
+          "usage",
+          "risk"
+        ]
+      }
+    ]
+  },
+  "tool-approval": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "tool-calling",
+      "ai-agent",
+      "agent-permission",
+      "human-in-the-loop"
+    ],
+    "sources": [
+      {
+        "id": "anthropic-tool-approval-remote-mcp",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Getting Started with Custom Connectors Using Remote MCP",
+        "published": "2025",
+        "url": "https://support.anthropic.com/en/articles/11175166-about-custom-integrations-using-remote-mcp",
+        "supports": [
+          "definition",
+          "usage",
+          "risk"
+        ]
+      }
+    ]
+  },
+  "mcp-server": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "mcp",
+      "mcp-tool",
+      "mcp-resource",
+      "mcp-authorization"
+    ],
+    "sources": [
+      {
+        "id": "mcp-java-server",
+        "type": "primary",
+        "publisher": "Model Context Protocol",
+        "title": "MCP Server",
+        "published": "2026",
+        "url": "https://java.sdk.modelcontextprotocol.io/latest/server/",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "mcp-resource": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "mcp",
+      "mcp-server",
+      "mcp-tool",
+      "context-engineering"
+    ],
+    "sources": [
+      {
+        "id": "mcp-resources-spec",
+        "type": "primary",
+        "publisher": "Model Context Protocol",
+        "title": "Resources",
+        "published": "2025-11-25",
+        "url": "https://modelcontextprotocol.io/specification/2025-11-25/server/resources",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "mcp-apps": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "mcp",
+      "mcp-server",
+      "mcp-resource",
+      "mcp-tool"
+    ],
+    "sources": [
+      {
+        "id": "mcp-apps-2025",
+        "type": "primary",
+        "publisher": "Model Context Protocol",
+        "title": "MCP Apps: Extending servers with interactive user interfaces",
+        "published": "2025-11-21",
+        "url": "https://blog.modelcontextprotocol.io/posts/2025-11-21-mcp-apps/",
+        "supports": [
+          "definition",
+          "usage",
+          "history"
+        ]
+      }
+    ]
+  },
+  "mcp-tasks": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "mcp",
+      "mcp-server",
+      "agentic-workflow"
+    ],
+    "sources": [
+      {
+        "id": "mcp-spec-2026-tasks",
+        "type": "primary",
+        "publisher": "Model Context Protocol",
+        "title": "The 2026-07-28 Specification",
+        "published": "2026-07-28",
+        "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+        "supports": [
+          "definition",
+          "usage",
+          "history"
+        ]
+      }
+    ]
+  },
+  "on-device-ai": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "local-ai",
+      "edge-inference",
+      "npu",
+      "ai-pc"
+    ],
+    "sources": [
+      {
+        "id": "apple-core-ai-on-device-2026",
+        "type": "primary",
+        "publisher": "Apple",
+        "title": "Integrating on-device AI models in your app with Core AI",
+        "published": "2026",
+        "url": "https://developer.apple.com/documentation/CoreAI/integrating-on-device-ai-models-in-your-app-with-core-ai",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "qlora": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "lora",
+      "peft",
+      "fine-tuning",
+      "open-weight-model"
+    ],
+    "sources": [
+      {
+        "id": "hf-qlora-bitsandbytes",
+        "type": "reference",
+        "publisher": "Hugging Face",
+        "title": "bitsandbytes",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/transformers/main/quantization/bitsandbytes",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "direct-preference-optimization": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "fine-tuning",
+      "ai-alignment",
+      "training-data",
+      "loss-function"
+    ],
+    "sources": [
+      {
+        "id": "hf-dpo-trainer",
+        "type": "reference",
+        "publisher": "Hugging Face",
+        "title": "DPO Trainer",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/trl/dpo_trainer",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
   }
 }
