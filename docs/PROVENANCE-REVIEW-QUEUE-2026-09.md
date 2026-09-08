@@ -4,7 +4,7 @@
 
 ## Why this queue exists
 
-EpochLex currently has **365 published entries**, including **172 researched** provenance records and **193 pending** records after provenance Batch 05. The current corpus-growth pause shifts attention from bulk publication to deeper provenance review. The first milestone remains **183 researched / 182 pending** without adding new entries. Provenance Batches 01–05 completed 50 of the 61 Wave 1 records, leaving **11 Wave 1 reviews** to reach that milestone.
+EpochLex currently has **365 published entries**, including **183 researched** provenance records and **182 pending** records after provenance Batch 06. The current corpus-growth pause shifts attention from bulk publication to deeper provenance review. The first milestone remains **183 researched / 182 pending** without adding new entries. Provenance Batches 01–06 completed all 61 Wave 1 records. EpochLex has now crossed the first consolidation milestone with **183 researched** records and **182 pending** records.
 
 The queue prioritizes four practical considerations: broad reader importance, value to EpochLex’s identity and differentiation, volatility or likelihood of meaning changing quickly, and the value of documenting provenance/history rather than leaving a useful definition without its research layer. These considerations guide this working queue only; they do not change `PROVENANCE.md` or `CONTRIBUTING.md`.
 
@@ -90,6 +90,24 @@ This batch concentrated on agent architecture and practical AI, with two remaini
 8. **Agent Handoff**
 9. **Agent Planning**
 10. **On-Device AI**
+
+## Provenance Batch 06 — completed September 8, 2026
+
+This milestone batch completed the final 11 Wave 1 records, concentrating on governance, safety, trust, local inference, and AI companionship. All eleven records completed the initial human-reviewed provenance pass and now use `researchStatus: "researched"`.
+
+1. **AI Assurance**
+2. **High-Risk AI**
+3. **AI Safety Case**
+4. **Frontier AI**
+5. **General-Purpose AI**
+6. **AI Act**
+7. **Human Oversight**
+8. **AI Accountability**
+9. **Trustworthy AI**
+10. **Local Inference**
+11. **AI Companion**
+
+**Wave 1 milestone reached:** 61 of 61 Wave 1 records are researched, bringing the published corpus to **183 researched / 182 pending** without adding new entries.
 
 ## Wave 1 — Majority milestone (61)
 
