@@ -378,6 +378,90 @@ These are not recommended as separate entries now. Some are generic business phr
 - Cyborg Workflow
 - Vibe Debugging
 
+## Research Further promotion pass 3 — Batch G (published September 8, 2026)
+
+This batch is the third evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
+
+### Content Credentials
+
+**Why promote and publish:** Cryptographically verifiable provenance information attached to or associated with digital content to record claims about its origin, edits, and processing history using the C2PA standard.
+
+**Usage evidence:** [C2PA: Content Credentials: C2PA Technical Specification 2.4](https://spec.c2pa.org/specifications/specifications/2.4/specs/C2PA_Specification.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Context Caching
+
+**Why promote and publish:** A technique for reusing computation associated with previously processed context so repeated or shared prompt prefixes do not have to be fully recomputed for every generation.
+
+**Usage evidence:** [Hugging Face: Cache strategies](https://huggingface.co/docs/transformers/main/kv_cache)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### MCP Authorization
+
+**Why promote and publish:** The authorization mechanisms used with Model Context Protocol connections to control whether an MCP client may access protected MCP servers or capabilities on behalf of a resource owner.
+
+**Usage evidence:** [Model Context Protocol: The 2026-07-28 Specification](https://blog.modelcontextprotocol.io/posts/2026-07-28/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### MCP Tool
+
+**Why promote and publish:** A callable capability exposed by a Model Context Protocol server, described with a name and input schema and invoked by an MCP client through the protocol’s tool-calling methods.
+
+**Usage evidence:** [Model Context Protocol: The 2026-07-28 Specification](https://blog.modelcontextprotocol.io/posts/2026-07-28/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Grader
+
+**Why promote and publish:** A rule, metric, program, or model used in an AI evaluation to score, label, compare, or otherwise judge a model or system output against defined criteria.
+
+**Usage evidence:** [OpenAI: Graders](https://platform.openai.com/docs/api-reference/graders)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Long-Context Evaluation
+
+**Why promote and publish:** Evaluation designed to measure how well a model uses, retrieves from, reasons over, or summarizes information across very long input contexts rather than merely accepting a large context window.
+
+**Usage evidence:** [Stanford CRFM: HELM Long Context](https://crfm.stanford.edu/helm/long-context/latest/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Structured Output
+
+**Why promote and publish:** Model-generated output constrained to follow a specified machine-readable structure or schema so downstream software can reliably parse and use it.
+
+**Usage evidence:** [OpenAI: Introducing Structured Outputs in the API](https://openai.com/index/introducing-structured-outputs-in-the-api/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Speculative Decoding
+
+**Why promote and publish:** An inference technique that speeds generation by having a faster helper produce candidate tokens that a larger model verifies in fewer expensive forward passes.
+
+**Usage evidence:** [Hugging Face: Assisted decoding](https://huggingface.co/docs/transformers/main/assisted_decoding)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### KV Cache
+
+**Why promote and publish:** A key-value cache that stores attention-layer key and value states for previously processed tokens so an autoregressive model can reuse them during later generation steps instead of recomputing them.
+
+**Usage evidence:** [Hugging Face: Caching](https://huggingface.co/docs/transformers/cache_explanation)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### General-Purpose AI
+
+**Why promote and publish:** In the EU AI Act context, AI with significant generality that can competently perform a wide range of distinct tasks and be integrated into varied downstream systems or applications; the Act separately defines general-purpose AI models and systems.
+
+**Usage evidence:** [European Commission AI Act Service Desk: Guidelines on the scope of the obligations for general-purpose AI models](https://ai-act-service-desk.ec.europa.eu/sites/default/files/2025-07/guidelines_on_the_scope_of_the_obligations_for_generalpurpose_ai_models_established_by_regulation_1cx2atxgq79us4n3x8jfgyy1qlm_118340-3.pdf)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
 ## Research Further promotion pass 2 — Batch F (published September 8, 2026)
 
 This batch is the second evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule. **Frontier Model** is treated as an alias of **Frontier AI** rather than a separate entry in this pass.
@@ -561,7 +645,7 @@ All remaining unpublished candidates in `CORPUS-CANDIDATES.md`, including the ne
 
 ## Expansion result
 
-This audit has now published 53 candidates across Batches A–F and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
+This audit has now published 63 candidates across Batches A–G and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
 
 ## Follow-up
 

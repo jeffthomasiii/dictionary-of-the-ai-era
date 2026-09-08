@@ -21,7 +21,7 @@ The initial inventory below was seeded from the September 2026 EpochLex corpus-e
 
 These planning pools are not new editorial lifecycle states. Candidates with an active research issue are linked directly to that issue.
 
-**Current unpublished inventory: 697 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
+**Current unpublished inventory: 687 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
 
 ---
 
@@ -277,7 +277,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Hidden Layer
 - Hidden State
 - Inference-Time Compute
-- KV Cache
+
 - Language Model
 - Logit
 - Multimodal Model
@@ -318,7 +318,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - False Negative
 - False Positive
 - Golden Dataset
-- Grader
 
 - Hallucination Rate
 - Holdout Set
@@ -355,7 +354,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Audio Generation
 - C2PA
 - Content Authenticity
-- [Content Credentials](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/issues/78)
+
 - Content Provenance
 - Digital Avatar
 - Digital Double
@@ -392,7 +391,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Batch Inference
 - Cached Token
 - Constrained Decoding
-- [Context Caching](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/issues/71)
+
 - Inference Provider
 - Inference Server
 - Input Token
@@ -405,10 +404,10 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Offline Inference
 - Online Inference
 - Output Token
-- Speculative Decoding
+
 - Stop Sequence
 - Streaming Generation
-- Structured Output
+
 - Throughput
 - Time to First Token (TTFT)
 - Tokens per Second
@@ -452,7 +451,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - MCP Registry
 - MCP Resource
 - MCP Server
-- MCP Tool
+
 - MCP Transport
 - Remote MCP Server
 
@@ -583,7 +582,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Data Leakage
 - Evasion Attack
 - Excessive Agency
-- General-Purpose AI (GPAI)
+
 - General-Purpose AI Model
 - Human Oversight
 - Human-on-the-Loop
@@ -701,7 +700,7 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - MCP Elicitation
 - MCP Sampling
 - MCP Roots
-- MCP Authorization
+
 - MCP OAuth
 - MCP Tasks
 - MCP Progress Notification
@@ -787,7 +786,7 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - Capability Benchmark
 - Safety Benchmark
 - Multimodal Benchmark
-- Long-Context Evaluation
+
 - Needle-in-a-Haystack Evaluation
 - Human Preference Evaluation
 - Evaluation Harness
