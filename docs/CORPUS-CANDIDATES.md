@@ -21,7 +21,7 @@ The initial inventory below was seeded from the September 2026 EpochLex corpus-e
 
 These planning pools are not new editorial lifecycle states. Candidates with an active research issue are linked directly to that issue.
 
-**Current unpublished inventory: 743 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
+**Current unpublished inventory: 733 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
 
 ---
 
@@ -32,7 +32,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - AI Anxiety
 - AI Booster
 - AI Coder
-- AI Companion
+
 - AI Doomer
 - AI Fatigue
 - AI Fluency
@@ -41,7 +41,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Centaur
 - Cyborg Workflow
 - Digital Human
-- Human-AI Collaboration
+
 - Model Hopping
 - Model Roulette
 - Prompt Literacy
@@ -53,17 +53,17 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Adversarial Attack
 - AI Assurance
 - AI Inventory
-- AI Literacy
+
 - AI Policy
 - Algorithmic Accountability
 - Constitutional AI
 - Data Exfiltration
-- Data Poisoning
+
 - Explainable AI (XAI)
 - Frontier AI
 - Frontier Model
 - High-Risk AI
-- Indirect Prompt Injection
+
 - Interpretable AI
 - Model Poisoning
 - Prompt Extraction
@@ -85,7 +85,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Latent Space
 - Leaderboard
 - Loss Function
-- Model Card
 
 - Overfitting
 - Perplexity
@@ -93,11 +92,11 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Preference Learning
 - Recall
 - Robustness
-- Sampling
+
 - Seed
 - Sparse Model
 - Speech-to-Text
-- System Card
+
 - Text-to-Speech
 - Text-to-Video
 - Top-p
@@ -106,8 +105,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 ### AI Ways of Working
 
-- [Agent Loop](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/issues/75)
-- [Agentic Workflow](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/issues/74)
 - AI Memory
 - API
 - Autonomous Agent

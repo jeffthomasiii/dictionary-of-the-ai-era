@@ -91,20 +91,92 @@ Any candidate in `CORPUS-CANDIDATES.md` that is not explicitly listed as Publish
 
 **Provenance state:** `pending` — the entry is useful as a dictionary definition now; origin/first-known-use/history research remains open.
 
+## Publish — Batch B (published September 8, 2026)
+
+### AI Literacy
+
+**Why publish:** The knowledge and skills needed to understand, use, evaluate, and make informed decisions about artificial intelligence, including awareness of its capabilities, limitations, and risks.
+
+**Usage evidence:** [European Commission: AI talent, skills and literacy](https://digital-strategy.ec.europa.eu/en/policies/ai-talent-skills-and-literacy)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Indirect Prompt Injection
+
+**Why publish:** A prompt-injection attack in which malicious or conflicting instructions reach an AI system through external content such as a webpage, document, message, or retrieved data rather than directly from the user.
+
+**Usage evidence:** [OWASP GenAI Security Project: LLM01:2025 Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Data Poisoning
+
+**Why publish:** An attack in which an adversary manipulates or inserts data used for training or adaptation so the resulting AI model learns unwanted behavior, loses performance, or develops a hidden vulnerability.
+
+**Usage evidence:** [NIST: Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations](https://csrc.nist.gov/glossary/term/data_poisoning)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Model Card
+
+**Why publish:** A structured document that accompanies an AI or machine-learning model and describes information such as its intended uses, evaluation results, performance characteristics, limitations, and relevant context for responsible use.
+
+**Usage evidence:** [Google Research: Model Cards for Model Reporting](https://research.google/pubs/model-cards-for-model-reporting/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### System Card
+
+**Why publish:** A document published about an AI system or major model release that summarizes evaluations, identified risks, safety measures, limitations, and other information relevant to understanding how the system was assessed and deployed.
+
+**Usage evidence:** [OpenAI: GPT-5.5 System Card](https://openai.com/index/gpt-5-5-system-card/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Agentic Workflow
+
+**Why publish:** A multi-step AI workflow that uses agentic behavior such as model-directed decisions, tool use, routing, iteration, or delegation to move a task toward a goal.
+
+**Usage evidence:** [Anthropic: Building Effective AI Agents](https://www.anthropic.com/engineering/building-effective-agents)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Agent Loop
+
+**Why publish:** A recurring cycle in which an AI agent observes its current state or results, decides what to do next, takes an action or uses a tool, evaluates the outcome, and repeats until it reaches a stopping condition.
+
+**Usage evidence:** [Anthropic: Building Effective AI Agents](https://www.anthropic.com/engineering/building-effective-agents)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### AI Companion
+
+**Why publish:** An AI system, often conversational, designed or used for ongoing social interaction, companionship, emotional support, or a simulated interpersonal relationship.
+
+**Usage evidence:** [Stanford University: AI companions may worsen loneliness for vulnerable users](https://news.stanford.edu/stories/2026/08/ai-companions-chatbots-loneliness-research)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Human-AI Collaboration
+
+**Why publish:** A way of working in which people and AI systems contribute to a shared task or goal, with each providing capabilities, information, judgment, or actions that shape the combined result.
+
+**Usage evidence:** [NIST: Economic Research and Analysis of the National Need for Technology Infrastructure to Support the Internet of Things (IoT)](https://nvlpubs.nist.gov/nistpubs/gcr/2025/NIST.GCR.25-059.pdf)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Sampling
+
+**Why publish:** A generation method in which an AI model selects among possible next tokens according to a probability distribution rather than always choosing only the single highest-probability option.
+
+**Usage evidence:** [Hugging Face: How to generate text: using different decoding methods for language generation with Transformers](https://huggingface.co/blog/how-to-generate)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
 ## Publish — next qualified group
 
 These candidates have strong reader value and should move next into definition drafting and meaning-evidence review under the new publication model:
 
-- AI Literacy
-- Indirect Prompt Injection
-- Data Poisoning
-- Model Card
-- System Card
-- Agentic Workflow
-- Agent Loop
-- AI Companion
-- Human-AI Collaboration
-- Sampling
 - Top-p
 - Speech-to-Text
 - Text-to-Speech
@@ -213,7 +285,7 @@ All remaining unpublished candidates in `CORPUS-CANDIDATES.md`, including the ne
 
 ## Expansion result
 
-This audit publishes 8 candidates immediately and adds 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
+This audit has now published 18 candidates across Batches A and B and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
 
 ## Follow-up
 
