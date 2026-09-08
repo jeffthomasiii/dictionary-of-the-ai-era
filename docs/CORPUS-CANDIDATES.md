@@ -21,7 +21,7 @@ The initial inventory below was seeded from the September 2026 EpochLex corpus-e
 
 These planning pools are not new editorial lifecycle states. Candidates with an active research issue are linked directly to that issue.
 
-**Current unpublished inventory: 545 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
+**Current unpublished inventory: 533 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
 
 ---
 
@@ -217,7 +217,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 - Agent
 - Agent Context
-- Agent Delegation
 
 - Agent Protocol
 
@@ -295,7 +294,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 - Benchmark Saturation
 
-- Capability Evaluation
 - Citation Accuracy
 - Confidence Score
 - Data Contamination
@@ -309,9 +307,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 - Hallucination Rate
 - Holdout Set
-
-- Judge Model
-- Model Grader
 
 - Reference Answer
 - Refusal
@@ -486,7 +481,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Knowledge Retrieval
 - Late Chunking
 
-- Multi-Query Retrieval
 - Multimodal RAG
 - Parent-Child Retrieval
 - Query Expansion
@@ -525,9 +519,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Membership Inference
 
 - Model Backdoor
-- Model Extraction
-
-- Model Inversion
 
 - Model Stealing
 - Poisoning Attack
@@ -671,10 +662,7 @@ The September 8, 2026 corpus audit added the following candidates after checking
 
 - Agentic Retrieval
 - Multi-Hop Retrieval
-- Retrieval Fusion
 
-- ColBERT
-- Late Interaction
 - Retrieval Grounding
 - Citation Retrieval
 - Contextual Reranking
@@ -684,7 +672,7 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - Benchmark Gaming
 - Benchmark Leakage
 - Capability Benchmark
-- Safety Benchmark
+
 - Multimodal Benchmark
 
 - Needle-in-a-Haystack Evaluation
@@ -705,7 +693,6 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - Constitutional Classifier
 - Safeguard Model
 - AI Red Team
-- AI Security Testing
 
 - Tool Injection
 - Kill Switch (AI)

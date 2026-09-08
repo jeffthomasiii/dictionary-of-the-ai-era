@@ -10360,5 +10360,388 @@
         ]
       }
     ]
+  },
+  "multi-query-retrieval": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "retrieval-pipeline",
+      "query-rewriting",
+      "retrieval-fusion"
+    ],
+    "sources": [
+      {
+        "id": "microsoft-agentic-retrieval-multi-query-2026",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "Retrieval augmented generation (RAG) and indexes in Microsoft Foundry",
+        "published": "2026",
+        "url": "https://learn.microsoft.com/en-us/azure/foundry/concepts/retrieval-augmented-generation",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "microsoft-rag-multiple-queries-2026",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "Develop a RAG Solution on Azure - Information-Retrieval Phase",
+        "published": "2026",
+        "url": "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-information-retrieval",
+        "supports": [
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "retrieval-fusion": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "reciprocal-rank-fusion",
+      "hybrid-retrieval",
+      "multi-query-retrieval"
+    ],
+    "sources": [
+      {
+        "id": "elastic-fuse-2026",
+        "type": "primary",
+        "publisher": "Elastic",
+        "title": "ES|QL FUSE command",
+        "published": "2026",
+        "url": "https://www.elastic.co/docs/reference/query-languages/esql/commands/fuse",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "elastic-rrf-2026",
+        "type": "primary",
+        "publisher": "Elastic",
+        "title": "Reciprocal rank fusion",
+        "published": "2026",
+        "url": "https://www.elastic.co/docs/reference/elasticsearch/rest-apis/reciprocal-rank-fusion",
+        "supports": [
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "colbert": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "late-interaction",
+      "reranker",
+      "dense-retrieval"
+    ],
+    "sources": [
+      {
+        "id": "khattab-colbert-2020",
+        "type": "research",
+        "publisher": "Stanford University / arXiv",
+        "title": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT",
+        "published": "2020",
+        "url": "https://arxiv.org/abs/2004.12832",
+        "supports": [
+          "definition",
+          "technical-definition",
+          "origin"
+        ]
+      },
+      {
+        "id": "pinecone-late-interaction-colbert-2026",
+        "type": "reference",
+        "publisher": "Pinecone",
+        "title": "Cascading retrieval with multi-vector representations: balancing efficiency and effectiveness",
+        "published": "2026",
+        "url": "https://www.pinecone.io/blog/cascading-retrieval-with-multi-vector-representations/",
+        "supports": [
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "late-interaction": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "colbert",
+      "bi-encoder",
+      "reranker"
+    ],
+    "sources": [
+      {
+        "id": "khattab-colbert-2020-late-interaction",
+        "type": "research",
+        "publisher": "Stanford University / arXiv",
+        "title": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT",
+        "published": "2020",
+        "url": "https://arxiv.org/abs/2004.12832",
+        "supports": [
+          "definition",
+          "technical-definition",
+          "origin"
+        ]
+      },
+      {
+        "id": "pinecone-late-interaction-2026",
+        "type": "reference",
+        "publisher": "Pinecone",
+        "title": "Cascading retrieval with multi-vector representations: balancing efficiency and effectiveness",
+        "published": "2026",
+        "url": "https://www.pinecone.io/blog/cascading-retrieval-with-multi-vector-representations/",
+        "supports": [
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "capability-evaluation": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "eval",
+      "automated-evaluation",
+      "system-card"
+    ],
+    "sources": [
+      {
+        "id": "openai-gpt55-capabilities-2026",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "GPT-5.5 System Card",
+        "published": "2026-04-23",
+        "url": "https://openai.com/index/gpt-5-5-system-card/",
+        "supports": [
+          "definition",
+          "usage",
+          "evaluation"
+        ]
+      },
+      {
+        "id": "openai-gpt54-capabilities-2026",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "GPT-5.4 Thinking System Card",
+        "published": "2026-03-05",
+        "url": "https://deploymentsafety.openai.com/gpt-5-4-thinking",
+        "supports": [
+          "usage",
+          "evaluation"
+        ]
+      }
+    ]
+  },
+  "safety-benchmark": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "safety-evaluation",
+      "eval",
+      "system-card"
+    ],
+    "sources": [
+      {
+        "id": "openai-gpt55-safety-benchmarks-2026",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "GPT-5.5 System Card",
+        "published": "2026-04-23",
+        "url": "https://deploymentsafety.openai.com/gpt-5-5/monorepo-bench",
+        "supports": [
+          "definition",
+          "usage",
+          "evaluation"
+        ]
+      },
+      {
+        "id": "anthropic-system-cards-2026",
+        "type": "primary",
+        "publisher": "Anthropic",
+        "title": "Model system cards",
+        "published": "2026",
+        "url": "https://www.anthropic.com/system-cards",
+        "supports": [
+          "usage",
+          "evaluation"
+        ]
+      }
+    ]
+  },
+  "ai-security-testing": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-security",
+      "prompt-injection-defense",
+      "agent-security"
+    ],
+    "sources": [
+      {
+        "id": "owasp-aisvs-2026",
+        "type": "primary",
+        "publisher": "OWASP",
+        "title": "Artificial Intelligence Security Verification Standard (AISVS)",
+        "published": "2026-06-24",
+        "url": "https://owasp.org/www-project-artificial-intelligence-security-verification-standard-aisvs-docs/",
+        "supports": [
+          "definition",
+          "usage",
+          "security"
+        ]
+      },
+      {
+        "id": "owasp-ai-testing-guide-2025",
+        "type": "primary",
+        "publisher": "OWASP",
+        "title": "AI Testing Guide",
+        "published": "2025-11-26",
+        "url": "https://owasp.org/www-project-ai-testing-guide/",
+        "supports": [
+          "usage",
+          "security",
+          "evaluation"
+        ]
+      }
+    ]
+  },
+  "agent-delegation": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "agent-handoff",
+      "supervisor-agent",
+      "multi-agent-orchestration"
+    ],
+    "sources": [
+      {
+        "id": "openai-agent-delegation-2026",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "A practical guide to building agents",
+        "published": "2026",
+        "url": "https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      },
+      {
+        "id": "microsoft-agent-delegation-2026",
+        "type": "primary",
+        "publisher": "Microsoft Learn",
+        "title": "Workflows",
+        "published": "2026-08-25",
+        "url": "https://learn.microsoft.com/en-us/agent-framework/journey/workflows",
+        "supports": [
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ]
+  },
+  "model-extraction": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "ai-security",
+      "model-audit",
+      "ai-security-testing"
+    ],
+    "sources": [
+      {
+        "id": "nist-model-extraction-2025",
+        "type": "primary",
+        "publisher": "NIST CSRC",
+        "title": "model extraction - Glossary",
+        "published": "2025",
+        "url": "https://csrc.nist.gov/glossary/term/model_extraction",
+        "supports": [
+          "definition",
+          "technical-definition",
+          "security"
+        ]
+      },
+      {
+        "id": "owasp-secure-model-ops-extraction-2026",
+        "type": "primary",
+        "publisher": "OWASP Cheat Sheet Series",
+        "title": "Secure AI/ML Model Ops Cheat Sheet",
+        "published": "2026",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/Secure_AI_Model_Ops_Cheat_Sheet.html",
+        "supports": [
+          "usage",
+          "security"
+        ]
+      }
+    ]
+  },
+  "model-inversion": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "model-extraction",
+      "ai-security",
+      "ai-security-testing"
+    ],
+    "sources": [
+      {
+        "id": "nist-model-inversion-2025",
+        "type": "primary",
+        "publisher": "NIST",
+        "title": "Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations",
+        "published": "2025-03",
+        "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition",
+          "security"
+        ]
+      },
+      {
+        "id": "nist-ai-metrology-inversion-2026",
+        "type": "primary",
+        "publisher": "NIST AI Resource Center",
+        "title": "AI Metrology Center - Inversion Recall",
+        "published": "2026",
+        "url": "https://airc.nist.gov/metrology/",
+        "supports": [
+          "usage",
+          "evaluation",
+          "security"
+        ]
+      }
+    ]
   }
 }
