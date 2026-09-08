@@ -21,7 +21,7 @@ The initial inventory below was seeded from the September 2026 EpochLex corpus-e
 
 These planning pools are not new editorial lifecycle states. Candidates with an active research issue are linked directly to that issue.
 
-**Current unpublished inventory: 687 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
+**Current unpublished inventory: 677 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
 
 ---
 
@@ -429,7 +429,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Model Repository
 - Model Runtime
 - Offline AI
-- On-Device AI
+
 - ONNX
 - Open Model
 - Open-Source AI
@@ -449,8 +449,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - MCP Host
 - MCP Prompt
 - MCP Registry
-- MCP Resource
-- MCP Server
 
 - MCP Transport
 - Remote MCP Server
@@ -629,7 +627,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Data Annotation
 - Data Augmentation
 - Dataset Curation
-- Direct Preference Optimization (DPO)
+
 - Dropout
 - Gradient
 - Gradient Clipping
@@ -677,13 +675,12 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - Agent Trace
 
 - Agent Telemetry
-- Agent Sandbox
-- Agent Permission
+
 - Agent Authorization
 - Agent Security
 - Agent Benchmark
 - Tool Permission
-- Tool Approval
+
 - Tool Result
 - Tool Schema
 - Tool Discovery
@@ -695,14 +692,13 @@ The September 8, 2026 corpus audit added the following candidates after checking
 
 ### MCP ecosystem
 
-- MCP Apps
 - MCP Extension
 - MCP Elicitation
 - MCP Sampling
 - MCP Roots
 
 - MCP OAuth
-- MCP Tasks
+
 - MCP Progress Notification
 - MCP Structured Content
 - MCP Security
@@ -741,7 +737,6 @@ The September 8, 2026 corpus audit added the following candidates after checking
 
 ### Training & adaptation
 
-- QLoRA
 - Adapter
 - LoRA Adapter
 - Full Fine-Tuning
