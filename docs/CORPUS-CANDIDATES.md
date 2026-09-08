@@ -21,7 +21,7 @@ The initial inventory below was seeded from the September 2026 EpochLex corpus-e
 
 These planning pools are not new editorial lifecycle states. Candidates with an active research issue are linked directly to that issue.
 
-**Current unpublished inventory: 754 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions. (83 repository-roadmap candidates and 507 research-pool candidates).
+**Current unpublished inventory: 743 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
 
 ---
 
@@ -86,7 +86,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Leaderboard
 - Loss Function
 - Model Card
-- [Model Evaluation](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/issues/69)
+
 - Overfitting
 - Perplexity
 - Precision
@@ -112,7 +112,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - API
 - Autonomous Agent
 - Browser Use
-- [Function Calling](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/issues/68)
+
 - Long-Term Memory
 - Planning
 - Reflection
@@ -508,7 +508,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 ### Prompting & Context
 
-- Chain-of-Thought Prompting
 - Context Assembly
 - Context Budget
 - Context Compression
@@ -518,7 +517,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Context Pollution
 - Context Retrieval
 - Contextualization
-- Few-Shot Prompting
+
 - Meta-Prompting
 - Persona Prompting
 - Prompt Compression
@@ -533,7 +532,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Scratchpad
 - Self-Consistency
 - Tree of Thoughts
-- Zero-Shot Prompting
 
 ### Retrieval & RAG
 
@@ -562,13 +560,11 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Query Rewriting
 - Reranker
 - Retrieval Pipeline
-- Retrieval-Augmented Generation
+
 - Retriever
 - Self-RAG
 - Semantic Chunking
 - Sparse Retrieval
-- Vector Embedding
-- Vector Store
 
 ### Safety, Security & Governance
 
@@ -612,7 +608,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Human-on-the-Loop
 - Human-out-of-the-Loop
 - Indirect Prompt Injection Attack
-- Jailbreaking
+
 - Meaningful Human Control
 - Membership Inference
 - Model Audit
@@ -626,7 +622,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Poisoning Attack
 - Privilege Escalation
 - Prohibited AI Practice
-- Prompt Injection Attack
+
 - RAG Poisoning
 - Safe AI
 - Sandboxing
@@ -661,7 +657,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Human Feedback
 - Hyperparameter
 - Instruction Dataset
-- Knowledge Distillation
+
 - Labeling
 - Learning Rate
 - Optimizer
