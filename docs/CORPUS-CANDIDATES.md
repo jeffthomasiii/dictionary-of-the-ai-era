@@ -21,7 +21,7 @@ The initial inventory below was seeded from the September 2026 EpochLex corpus-e
 
 These planning pools are not new editorial lifecycle states. Candidates with an active research issue are linked directly to that issue.
 
-**Current unpublished inventory: 733 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
+**Current unpublished inventory: 723 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
 
 ---
 
@@ -72,21 +72,19 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 ### AI Systems & Technical Concepts
 
 - Accuracy
-- Backpropagation
+
 - Dense Model
 - Emergent Capability
 - Epoch
 - Faithfulness
 - Generative Video
-- Gradient Descent
+
 - Groundedness
 - Image-to-Image
 - Latent Diffusion
 - Latent Space
 - Leaderboard
-- Loss Function
 
-- Overfitting
 - Perplexity
 - Precision
 - Preference Learning
@@ -95,13 +93,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 - Seed
 - Sparse Model
-- Speech-to-Text
-
-- Text-to-Speech
-- Text-to-Video
-- Top-p
-- Underfitting
-- Unsupervised Learning
 
 ### AI Ways of Working
 

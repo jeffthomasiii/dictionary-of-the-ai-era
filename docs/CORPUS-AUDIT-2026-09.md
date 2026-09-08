@@ -173,20 +173,92 @@ Any candidate in `CORPUS-CANDIDATES.md` that is not explicitly listed as Publish
 
 **Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
 
+## Publish — Batch C (published September 8, 2026)
+
+### Top-p
+
+**Why publish:** A sampling method that limits the next-token choices to the smallest set of likely tokens whose cumulative probability reaches a chosen threshold p, then samples from that set.
+
+**Usage evidence:** [Hugging Face: How to generate text: using different decoding methods for language generation with Transformers](https://huggingface.co/blog/how-to-generate)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Speech-to-Text
+
+**Why publish:** An AI speech-recognition capability that converts spoken audio into written text or a text transcription.
+
+**Usage evidence:** [Google Cloud: Cloud Speech-to-Text documentation](https://docs.cloud.google.com/speech-to-text/docs)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Text-to-Speech
+
+**Why publish:** An AI speech-synthesis capability that converts written text into spoken audio, often using generated voices.
+
+**Usage evidence:** [Google Cloud: Cloud Text-to-Speech documentation](https://docs.cloud.google.com/text-to-speech/docs)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Text-to-Video
+
+**Why publish:** A generative AI task or model capability that creates video from a text prompt or description.
+
+**Usage evidence:** [Hugging Face: Text-to-Video](https://huggingface.co/tasks/text-to-video)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Loss Function
+
+**Why publish:** A mathematical function that measures how far a model’s predictions are from desired or reference outcomes, producing a loss value that training commonly seeks to minimize.
+
+**Usage evidence:** [Google for Developers: Machine Learning Glossary](https://developers.google.com/machine-learning/glossary)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Gradient Descent
+
+**Why publish:** An optimization method that iteratively adjusts model parameters in directions that reduce a loss function.
+
+**Usage evidence:** [Google for Developers: Machine Learning Glossary](https://developers.google.com/machine-learning/glossary)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Backpropagation
+
+**Why publish:** The algorithm used in neural-network training to calculate how changes in model parameters affect loss, allowing gradients to be propagated backward through the network so the parameters can be updated.
+
+**Usage evidence:** [Google for Developers: Machine Learning Glossary](https://developers.google.com/machine-learning/glossary)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Overfitting
+
+**Why publish:** A training failure in which a model fits its training data so closely that it performs poorly on new or unseen data.
+
+**Usage evidence:** [Google for Developers: Machine Learning Glossary](https://developers.google.com/machine-learning/glossary)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Underfitting
+
+**Why publish:** A training failure in which a model does not capture enough of the structure or complexity in the training data to make useful predictions.
+
+**Usage evidence:** [Google for Developers: Machine Learning Glossary](https://developers.google.com/machine-learning/glossary)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Unsupervised Learning
+
+**Why publish:** A machine-learning approach that trains on data without supplied target labels in order to discover patterns, structure, groupings, or useful representations.
+
+**Usage evidence:** [Google for Developers: Machine Learning Glossary](https://developers.google.com/machine-learning/glossary)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
 ## Publish — next qualified group
 
 These candidates have strong reader value and should move next into definition drafting and meaning-evidence review under the new publication model:
 
-- Top-p
-- Speech-to-Text
-- Text-to-Speech
-- Text-to-Video
-- Loss Function
-- Gradient Descent
-- Backpropagation
-- Overfitting
-- Underfitting
-- Unsupervised Learning
 - Latent Space
 - AI Assurance
 - Subagent
@@ -285,7 +357,7 @@ All remaining unpublished candidates in `CORPUS-CANDIDATES.md`, including the ne
 
 ## Expansion result
 
-This audit has now published 18 candidates across Batches A and B and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
+This audit has now published 28 candidates across Batches A, B, and C and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
 
 ## Follow-up
 
