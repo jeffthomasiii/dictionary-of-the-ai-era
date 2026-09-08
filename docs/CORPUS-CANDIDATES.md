@@ -21,7 +21,7 @@ The initial inventory below was seeded from the September 2026 EpochLex corpus-e
 
 These planning pools are not new editorial lifecycle states. Candidates with an active research issue are linked directly to that issue.
 
-**Current unpublished inventory: 597 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
+**Current unpublished inventory: 587 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
 
 ---
 
@@ -51,8 +51,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 ### AI Risks, Safety & Governance
 
 - Adversarial Attack
-
-- AI Inventory
 
 - AI Policy
 - Algorithmic Accountability
@@ -409,8 +407,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Edge AI
 - Edge Model
 
-- Inference Runtime
-
 - Local Model
 - Low-Bit Quantization
 - Model Hub
@@ -431,8 +427,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 ### MCP Ecosystem
 
 - Local MCP Server
-
-- MCP Connector
 
 - Remote MCP Server
 
@@ -497,7 +491,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 ### Retrieval & RAG
 
 - Approximate Nearest Neighbor (ANN)
-- Bi-Encoder
 
 - Chunk Overlap
 
@@ -524,7 +517,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Retriever
 - Self-RAG
 - Semantic Chunking
-- Sparse Retrieval
 
 ### Safety, Security & Governance
 
@@ -583,7 +575,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 - Tool Poisoning
 - Training Data Extraction
-- Trustworthy AI
+
 - Universal Jailbreak
 - Vector Database Poisoning
 
@@ -666,8 +658,6 @@ The September 8, 2026 corpus audit added the following candidates after checking
 
 - TOPS
 
-- Unified Memory
-- GPU Offloading
 - Model Offloading
 - CPU Offloading
 
@@ -744,7 +734,6 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - Agent Evaluation Trace
 
 - Prompt Observability
-- Model Telemetry
 
 ### Safety, security & governance
 
@@ -763,7 +752,7 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - Prompt Injection Defense
 - Tool Injection
 - Kill Switch (AI)
-- AI Incident Response
+
 - Deployment Safeguard
 - Capability Gate
 - Model Safeguard

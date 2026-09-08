@@ -378,6 +378,90 @@ These are not recommended as separate entries now. Some are generic business phr
 - Cyborg Workflow
 - Vibe Debugging
 
+## Research Further promotion pass 13 — Batch Q (published September 8, 2026)
+
+This batch is the thirteenth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
+
+### Inference Runtime
+
+**Why promote and publish:** Software that loads and executes trained machine-learning or AI models for inference, often providing hardware-specific execution, memory management, graph optimization, or other runtime services.
+
+**Usage evidence:** [ONNX Runtime: ONNX Runtime for Inferencing](https://onnxruntime.ai/inference)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Unified Memory
+
+**Why promote and publish:** A memory architecture in which processors such as the CPU and GPU share the same physical memory pool, reducing or eliminating copies that would otherwise be needed between separate memory spaces.
+
+**Usage evidence:** [Apple Developer: Get started with MLX for Apple silicon](https://developer.apple.com/videos/play/wwdc2025/315/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### GPU Offloading
+
+**Why promote and publish:** A model-execution technique that distributes model weights, caches, or computation between GPU memory and slower memory tiers such as CPU RAM or disk so workloads can run within limited GPU memory.
+
+**Usage evidence:** [Hugging Face: Loading models — Big Model Inference](https://huggingface.co/docs/transformers/models)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Model Telemetry
+
+**Why promote and publish:** Operational data collected from AI model interactions—such as model identifiers, token usage, latency, errors, inputs or outputs when enabled, and related traces or metrics—to support monitoring, debugging, cost analysis, and performance assessment.
+
+**Usage evidence:** [OpenTelemetry: Inside the LLM Call: GenAI Observability with OpenTelemetry](https://opentelemetry.io/blog/2026/genai-observability/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### MCP Connector
+
+**Why promote and publish:** An integration layer that connects an AI product or API to one or more Model Context Protocol servers so the product can access MCP-exposed tools or context without implementing each server integration separately.
+
+**Usage evidence:** [Anthropic: Model Context Protocol (MCP)](https://docs.anthropic.com/en/docs/mcp)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Bi-Encoder
+
+**Why promote and publish:** An embedding model architecture that encodes two inputs independently into fixed-size vector representations so their similarity can be compared efficiently, commonly for first-stage semantic retrieval.
+
+**Usage evidence:** [Sentence Transformers: Quickstart — Sentence Transformer](https://sbert.net/docs/quickstart.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Sparse Retrieval
+
+**Why promote and publish:** A retrieval approach that represents queries and documents with sparse vectors in which most dimensions are zero, often preserving token- or term-associated signals and supporting efficient lexical or learned sparse search.
+
+**Usage evidence:** [Sentence Transformers: Sparse Encoder — Usage](https://www.sbert.net/docs/sparse_encoder/usage/usage.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### AI Inventory
+
+**Why promote and publish:** A maintained record of AI systems used, developed, acquired, or operated by an organization, typically capturing enough information to support ownership, governance, risk prioritization, monitoring, and lifecycle management.
+
+**Usage evidence:** [NIST AI Resource Center: AI RMF Core — Govern 1.6](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### AI Incident Response
+
+**Why promote and publish:** The coordinated process for preparing for, detecting, containing, investigating, recovering from, and learning from incidents involving AI systems, including incidents caused by system failure, attack, misuse, or harmful behavior.
+
+**Usage evidence:** [NIST AI Resource Center: AI RMF Playbook — Govern](https://airc.nist.gov/airmf-resources/playbook/govern/); [NIST: Workshop on AI Incident Management](https://www.nist.gov/news-events/events/2026/05/nist-workshop-ai-incident-management)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Trustworthy AI
+
+**Why promote and publish:** AI developed and used in ways intended to satisfy principles such as human-centred values, fairness, transparency and explainability, robustness, security and safety, accountability, and beneficial outcomes for people and society.
+
+**Usage evidence:** [OECD.AI: Catalogue of Tools & Metrics for Trustworthy AI — FAQ](https://oecd.ai/en/catalogue/faq)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
 ## Research Further promotion pass 12 — Batch P (published September 8, 2026)
 
 This batch is the twelfth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
@@ -1401,7 +1485,7 @@ All remaining unpublished candidates in `CORPUS-CANDIDATES.md`, including the ne
 
 ## Expansion result
 
-This audit has now published 153 candidates across Batches A–P and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
+This audit has now published 163 candidates across Batches A–Q and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
 
 ## Follow-up
 
