@@ -12,10 +12,9 @@ The queue prioritizes four practical considerations: broad reader importance, va
 
 - **Wave 1 — Majority milestone (61):** highest-priority mix of foundational concepts, EpochLex differentiators, fast-moving agent/protocol terms, and governance/safety anchors. Completing this wave crosses the majority-researched milestone.
 - **Wave 2 — Time-sensitive and governance/security:** remaining fast-moving protocols, agent concepts, security, regulation, oversight, and governance entries where current sourcing matters especially strongly.
-- **Wave 3 — Technical and workflow backbone:** remaining systems, retrieval, evaluation, deployment, and ways-of-working concepts that are important but generally less time-sensitive.
-- **Wave 4 — Stable/narrower supporting vocabulary:** remaining pending entries that can follow once higher-impact and more volatile records are consolidated.
+- **Wave 3 — Technical and workflow backbone:** all other pending systems, retrieval, evaluation, deployment, and ways-of-working concepts. These remain important, but the current evidence suggests they are generally less time-sensitive than Wave 2.
 
-Within Waves 2–4, relationship centrality in the current published corpus is used only as a practical ordering aid; it is not a measure of editorial importance.
+Within Waves 2–3, relationship centrality in the current published corpus is used only as a practical ordering aid; it is not a measure of editorial importance.
 
 ## First provenance research batch — 10 entries
 
@@ -297,9 +296,6 @@ This first batch deliberately mixes foundational, differentiating, practical, an
 - **Verifiable Reward** — AI Systems & Technical Concepts; relationship links: 3
 - **Speech-to-Text** — AI Systems & Technical Concepts; relationship links: 2
 - **Text-to-Speech** — AI Systems & Technical Concepts; relationship links: 2
-
-## Wave 4 — Stable/narrower supporting vocabulary (0)
-
 
 ## Working review sequence
 
