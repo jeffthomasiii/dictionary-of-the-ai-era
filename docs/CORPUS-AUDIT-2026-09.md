@@ -1,0 +1,223 @@
+# EpochLex Corpus Audit — September 2026
+
+This audit applies the editorial model established on September 8, 2026: a dictionary entry may be publishable before its dedicated provenance review is complete. The four labels below are **planning dispositions for this audit**, not new permanent editorial lifecycle states.
+
+## Audit rules
+
+- **Publish** — documented usage and distinct reader value are strong enough to draft a human-reviewed core dictionary entry now; provenance may remain `pending`.
+- **Alias** — the phrase is useful for discovery but does not currently add enough distinct reader value for a separate page.
+- **Research Further** — plausible candidate, but boundaries, durability, evidence, or relationship to existing entries still need work.
+- **Exclude or Observe** — too generic, too overlapping, too volatile, or insufficiently useful as a separate entry today; retain only when future usage may change the decision.
+
+Any candidate in `CORPUS-CANDIDATES.md` that is not explicitly listed as Publish, Alias, or Exclude/Observe below is classified **Research Further** by default. That makes the full inventory classified without pretending that hundreds of unresolved candidates have received a deeper research pass.
+
+## Publish — Batch A (published in this change)
+
+### Artificial Intelligence
+
+**Why publish:** The broad field of creating machine-based systems that can perform tasks associated with human intelligence, such as perception, learning, reasoning, language use, decision-making, or goal-directed action.
+
+**Usage evidence:**
+- [NIST AI glossary](https://csrc.nist.gov/glossary/term/artificial_intelligence)
+
+**Provenance state:** `pending` — the entry is useful as a dictionary definition now; origin/first-known-use/history research remains open.
+
+### Ground Truth
+
+**Why publish:** The reference information treated as the correct or verified answer when training, testing, or evaluating an AI or machine-learning system, even though the reference itself can contain measurement, labeling, or judgment errors.
+
+**Usage evidence:**
+- [Google Machine Learning Glossary](https://developers.google.com/machine-learning/glossary)
+- [IBM: Ground truth](https://www.ibm.com/think/topics/ground-truth)
+
+**Provenance state:** `pending` — the entry is useful as a dictionary definition now; origin/first-known-use/history research remains open.
+
+### Hybrid Search
+
+**Why publish:** A search approach that combines two or more retrieval methods—commonly keyword or full-text search with vector or semantic search—and merges their results into one ranked set.
+
+**Usage evidence:**
+- [Elastic hybrid search documentation](https://www.elastic.co/docs/solutions/search/hybrid-search)
+- [Microsoft Azure AI Search hybrid search overview](https://learn.microsoft.com/en-us/azure/search/hybrid-search-overview)
+
+**Provenance state:** `pending` — the entry is useful as a dictionary definition now; origin/first-known-use/history research remains open.
+
+### Natural Language Processing
+
+**Why publish:** A field of artificial intelligence and computer science focused on enabling computers to analyze, understand, generate, and otherwise work with human language in text or speech.
+
+**Usage evidence:**
+- [IBM: What is NLP?](https://www.ibm.com/think/topics/natural-language-processing)
+
+**Provenance state:** `pending` — the entry is useful as a dictionary definition now; origin/first-known-use/history research remains open.
+
+### Open-Weight Model
+
+**Why publish:** An AI model whose trained weights are made available for others to download and run. Open weights do not by themselves establish that the training data, source code, development process, or license satisfies a broader definition of open-source AI.
+
+**Usage evidence:**
+- [OpenAI open-weight models overview](https://help.openai.com/en/articles/11870455-openai-open-weight-models)
+- [OpenAI gpt-oss model card](https://openai.com/index/gpt-oss-model-card/)
+
+**Provenance state:** `pending` — the entry is useful as a dictionary definition now; origin/first-known-use/history research remains open.
+
+### Responsible AI
+
+**Why publish:** An approach to designing, developing, deploying, and governing AI with explicit attention to trustworthiness and societal impacts such as fairness, safety, privacy, transparency, accountability, and human oversight.
+
+**Usage evidence:**
+- [NIST trustworthy and responsible AI glossary](https://www.nist.gov/publications/language-trustworthy-ai-depth-glossary-terms)
+- [Microsoft Responsible AI](https://www.microsoft.com/en/ai/responsible-ai)
+
+**Provenance state:** `pending` — the entry is useful as a dictionary definition now; origin/first-known-use/history research remains open.
+
+### Tokenization
+
+**Why publish:** The process of converting text or other input into tokens that a model can represent and process, often by splitting text into words, subwords, characters, bytes, or other learned units and mapping them to token IDs.
+
+**Usage evidence:**
+- [Hugging Face tokenization pipeline](https://huggingface.co/docs/tokenizers/main/pipeline)
+- [Hugging Face tokenization algorithms](https://huggingface.co/docs/transformers/main/tokenizer_summary)
+
+**Provenance state:** `pending` — the entry is useful as a dictionary definition now; origin/first-known-use/history research remains open.
+
+### Workslop
+
+**Why publish:** Low-effort AI-generated work that appears polished but lacks the context, substance, or judgment needed to be useful, shifting cleanup or thinking work onto the recipient.
+
+**Usage evidence:**
+- [BetterUp Labs / Stanford Social Media Lab workslop research](https://www.betterup.com/workslop)
+- [Harvard Business Review, Why People Create AI Workslop](https://hbr.org/2026/01/why-people-create-ai-workslop-and-how-to-stop-it)
+
+**Provenance state:** `pending` — the entry is useful as a dictionary definition now; origin/first-known-use/history research remains open.
+
+## Publish — next qualified group
+
+These candidates have strong reader value and should move next into definition drafting and meaning-evidence review under the new publication model:
+
+- AI Literacy
+- Indirect Prompt Injection
+- Data Poisoning
+- Model Card
+- System Card
+- Agentic Workflow
+- Agent Loop
+- AI Companion
+- Human-AI Collaboration
+- Sampling
+- Top-p
+- Speech-to-Text
+- Text-to-Speech
+- Text-to-Video
+- Loss Function
+- Gradient Descent
+- Backpropagation
+- Overfitting
+- Underfitting
+- Unsupervised Learning
+- Latent Space
+- AI Assurance
+- Subagent
+- Autonomous Agent
+- AI Fluency
+
+## Alias
+
+These should currently improve discovery through an existing entry rather than create a duplicate page:
+
+- **Function Calling** → **Tool Calling**
+- **Model Evaluation** → **Eval**
+- **Few-Shot Prompting** → **Few-Shot**
+- **Zero-Shot Prompting** → **Zero-Shot**
+- **Chain-of-Thought Prompting** → **Chain-of-Thought**
+- **Vector Embedding** → **Embedding**
+- **Vector Store** → **Vector Database**
+- **Retrieval-Augmented Generation** → **RAG**
+- **Knowledge Distillation** → **Distillation**
+- **Re-ranking** → **Reranking**
+- **Model Parameters** → **Parameters**
+- **Weights** → **Model Weights**
+- **Training Dataset** → **Training Data**
+- **System Message** → **System Prompt**
+- **Developer Message** → **Developer Prompt**
+- **User Message** → **User Prompt**
+- **Model-as-a-Judge** → **LLM-as-a-Judge**
+- **LLM Judge** → **LLM-as-a-Judge**
+- **AI Jailbreak** → **Jailbreak**
+- **LLM Jailbreak** → **Jailbreak**
+- **Jailbreaking** → **Jailbreak**
+- **AI Red Teaming** → **Red Teaming**
+- **Prompt Injection Attack** → **Prompt Injection**
+- **Artificial Neural Network** → **Neural Network**
+- **ANN** → **Neural Network**
+- **Supervised Machine Learning** → **Supervised Learning**
+- **Low-Rank Adaptation** → **LoRA**
+- **Parameter-Efficient Fine-Tuning** → **PEFT**
+- **One-Shot Prompting** → **One-Shot**
+
+## Exclude or Observe
+
+These are not recommended as separate entries now. Some are generic business phrases; others are unstable culture labels, narrow subtypes, or phrases whose reader value is not yet distinct enough. Observation does not mean permanent rejection.
+
+- AI Boom
+- AI Bubble
+- AI Gold Rush
+- AI Race
+- AI Hype
+- AI Hype Cycle
+- AI Arms Race
+- AI Delusion
+- AI Psychosis
+- AI Girlfriend/Boyfriend
+- AI Friend
+- AI Therapist
+- AI Employee
+- Synthetic Employee
+- AI Clone
+- AI Twin
+- Digital Clone
+- AI-Enabled
+- AI-Assisted
+- AI-First
+- AI Adoption
+- AI Transformation
+- AI Upskilling
+- AI Reskilling
+- AI Workforce
+- AI Exceptionalism
+- AI Maximalist
+- AI Booster
+- Decelerationism
+- AI Skeptic
+- AI Skepticism
+- AI Optimism
+- AI Anxiety
+- AI Fatigue
+- Model Roulette
+- Model Hopping
+- Cyborg Workflow
+- Vibe Debugging
+
+## Research Further
+
+All remaining unpublished candidates in `CORPUS-CANDIDATES.md`, including the newly added September 2026 expansion pool, are classified **Research Further** unless later promoted. This is intentionally conservative: candidate status records possible reader value, while publication requires actual evidence and human editorial judgment.
+
+### Highest-priority research clusters
+
+1. **Agent and agentic systems:** AI Memory, Browser Use, Subagent, Agent Skills, Agentic Commerce, Agent Observability, agent permissions/authorization, and MCP-era interaction concepts.
+2. **Safety and governance:** AI Literacy, Indirect Prompt Injection, Data Poisoning, AI Assurance, Frontier Model, High-Risk AI, AI safety cases, and deployment safeguards.
+3. **Evaluation:** Model Card, System Card, faithfulness/groundedness, calibration, benchmark contamination, agent evaluation, and long-context evaluation.
+4. **Local/open deployment:** Local AI, open-source/open-model distinctions, NPUs, AI PCs, edge inference, model runtimes, and quantized deployment.
+5. **Reasoning and post-training:** reasoning effort, inference-time scaling, verifiable rewards, DPO/GRPO/RLVR-adjacent terminology, and reward/specification failure modes.
+6. **Retrieval:** hybrid and agentic retrieval, query routing, rerankers, retrieval fusion, RRF, and RAG evaluation.
+
+## Expansion result
+
+This audit publishes 8 candidates immediately and adds 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
+
+## Follow-up
+
+- Close or update candidate issues whose outcome is now established (for example, Function Calling → Tool Calling alias).
+- Promote the next Publish group in coherent batches while leaving provenance `pending` where the core definition is ready but historical research is not.
+- Keep Alias mappings discoverable in canonical term records when they are adopted.
+- Revisit Exclude/Observe terms only when new evidence shows durable, distinct usage.
