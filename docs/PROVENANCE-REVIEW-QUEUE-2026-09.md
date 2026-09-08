@@ -4,7 +4,7 @@
 
 ## Why this queue exists
 
-EpochLex currently has **365 published entries**, including **122 researched** provenance records and **243 pending** records. The current corpus-growth pause shifts attention from bulk publication to deeper provenance review. The first milestone is to complete 61 pending records, which would move the corpus to **183 researched / 182 pending** without adding new entries.
+EpochLex currently has **365 published entries**, including **132 researched** provenance records and **233 pending** records after provenance Batch 01. The current corpus-growth pause shifts attention from bulk publication to deeper provenance review. The first milestone remains **183 researched / 182 pending** without adding new entries. Provenance Batch 01 completed 10 of the 61 Wave 1 records, leaving **51 Wave 1 reviews** to reach that milestone.
 
 The queue prioritizes four practical considerations: broad reader importance, value to EpochLex’s identity and differentiation, volatility or likelihood of meaning changing quickly, and the value of documenting provenance/history rather than leaving a useful definition without its research layer. These considerations guide this working queue only; they do not change `PROVENANCE.md` or `CONTRIBUTING.md`.
 
@@ -16,9 +16,9 @@ The queue prioritizes four practical considerations: broad reader importance, va
 
 Within Waves 2–3, relationship centrality in the current published corpus is used only as a practical ordering aid; it is not a measure of editorial importance.
 
-## First provenance research batch — 10 entries
+## Provenance Batch 01 — completed September 8, 2026
 
-This first batch deliberately mixes foundational, differentiating, practical, and fast-moving concepts so the workflow can be tested across several kinds of provenance research before scaling to the rest of Wave 1.
+This first batch deliberately mixed foundational, differentiating, practical, and fast-moving concepts so the provenance workflow could be tested across several kinds of research. All ten records completed the initial human-reviewed provenance pass and now use `researchStatus: "researched"`.
 
 1. **Artificial Intelligence**
 2. **Workslop**
@@ -299,7 +299,7 @@ This first batch deliberately mixes foundational, differentiating, practical, an
 
 ## Working review sequence
 
-1. Complete the first 10-entry research batch and verify that the provenance-review workflow is producing useful, appropriately cautious records.
+1. **Completed:** Provenance Batch 01 reviewed the first 10 entries and validated the cautious, claim-specific research workflow.
 2. Continue through the rest of Wave 1 until EpochLex reaches at least **183 researched / 182 pending**.
 3. Reassess the queue after the majority milestone rather than assuming the remaining order is permanent.
 4. Continue accepting candidate terminology, but do not resume systematic bulk publication unless an entry is important enough to interrupt the consolidation phase.
