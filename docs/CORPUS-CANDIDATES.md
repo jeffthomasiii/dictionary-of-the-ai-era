@@ -21,7 +21,7 @@ The initial inventory below was seeded from the September 2026 EpochLex corpus-e
 
 These planning pools are not new editorial lifecycle states. Candidates with an active research issue are linked directly to that issue.
 
-**Current unpublished inventory: 677 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
+**Current unpublished inventory: 667 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
 
 ---
 
@@ -325,7 +325,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Judge Model
 - Model Grader
 - Pairwise Evaluation
-- Pass@k
+
 - Pointwise Evaluation
 - Reference Answer
 - Refusal
@@ -333,7 +333,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Retrieval Precision
 - Retrieval Recall
 - Rubric
-- Safety Evaluation
+
 - Task Success Rate
 - Test Contamination
 - Test Set
@@ -393,14 +393,14 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Constrained Decoding
 
 - Inference Provider
-- Inference Server
+
 - Input Token
 - JSON Mode
 - Latency
 - Log Probability
 - Max Tokens
 - Model Endpoint
-- Model Serving
+
 - Offline Inference
 - Online Inference
 - Output Token
@@ -414,12 +414,11 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 ### Local, Open Models & Deployment
 
-- 4-Bit Quantization
 - 8-Bit Quantization
 - Closed Model
 - Edge AI
 - Edge Model
-- GGUF
+
 - Inference Runtime
 
 - Local Model
@@ -438,7 +437,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Private AI
 - Proprietary Model
 - Quantized Model
-- Safetensors
+
 - Self-Hosted AI
 
 ### MCP Ecosystem
@@ -536,7 +535,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Parent-Child Retrieval
 - Query Expansion
 - Query Rewriting
-- Reranker
+
 - Retrieval Pipeline
 
 - Retriever
@@ -594,7 +593,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Model Extraction
 - Model Inventory
 - Model Inversion
-- Model Registry
+
 - Model Risk Management
 - Model Stealing
 - Poisoning Attack
@@ -631,7 +630,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Dropout
 - Gradient
 - Gradient Clipping
-- Group Relative Policy Optimization (GRPO)
+
 - Human Feedback
 - Hyperparameter
 - Instruction Dataset

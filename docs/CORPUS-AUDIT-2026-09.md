@@ -378,6 +378,90 @@ These are not recommended as separate entries now. Some are generic business phr
 - Cyborg Workflow
 - Vibe Debugging
 
+## Research Further promotion pass 5 — Batch I (published September 8, 2026)
+
+This batch is the fifth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
+
+### Inference Server
+
+**Why promote and publish:** Server software that loads one or more trained AI models and exposes an interface, often an API, for receiving requests and running model inference.
+
+**Usage evidence:** [Hugging Face: Serve CLI](https://huggingface.co/docs/transformers/serve-cli/serving)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Model Serving
+
+**Why promote and publish:** The deployment and operation of a trained AI model so applications or users can send inference requests and receive outputs, typically through managed endpoints or inference servers.
+
+**Usage evidence:** [Hugging Face: Serve Models on Jobs](https://huggingface.co/docs/hub/jobs-serving)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### GGUF
+
+**Why promote and publish:** A single-file model format used with GGML-compatible inference engines that stores model tensors together with standardized metadata and supports multiple quantized data types.
+
+**Usage evidence:** [Hugging Face: GGUF](https://huggingface.co/docs/transformers/main/quantization/gguf)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### 4-Bit Quantization
+
+**Why promote and publish:** A model-compression approach that represents model weights or other numerical values using 4-bit precision, substantially reducing memory requirements while potentially changing accuracy or performance.
+
+**Usage evidence:** [Hugging Face: Bitsandbytes](https://huggingface.co/docs/transformers/main/quantization/bitsandbytes)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Safetensors
+
+**Why promote and publish:** A tensor serialization format designed to store model weights and other tensors safely and efficiently without relying on executable pickle-based serialization.
+
+**Usage evidence:** [Hugging Face: Safetensors](https://huggingface.co/docs/safetensors/index)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Reranker
+
+**Why promote and publish:** A model or component that takes an existing set of retrieved candidates and reorders them according to their estimated relevance to a query or task.
+
+**Usage evidence:** [Cohere: Cohere’s Rerank Model](https://docs.cohere.com/docs/rerank)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Safety Evaluation
+
+**Why promote and publish:** The systematic testing of an AI model or system for safety-relevant behaviors, risks, safeguards, and failure modes under defined conditions or scenarios.
+
+**Usage evidence:** [NIST: AI Metrology Center](https://airc.nist.gov/metrology/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Pass@k
+
+**Why promote and publish:** An evaluation metric estimating whether at least one successful solution appears among k independently sampled model outputs for the same task, commonly used in code-generation evaluation.
+
+**Usage evidence:** [OpenAI researchers: Evaluating Large Language Models Trained on Code](https://arxiv.org/abs/2107.03374)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Group Relative Policy Optimization
+
+**Why promote and publish:** A reinforcement-learning post-training method in which a model generates groups of candidate completions, receives rewards for them, and updates its policy using advantages computed relative to other completions in the group.
+
+**Usage evidence:** [Hugging Face: GRPO Trainer](https://huggingface.co/docs/trl/grpo_trainer)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Model Registry
+
+**Why promote and publish:** A managed catalog for recording model versions and associated metadata, evaluation information, lifecycle status, approvals, or deployment references so models can be governed and promoted through operational workflows.
+
+**Usage evidence:** [AWS: Model Registration Deployment with Model Registry](https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
 ## Research Further promotion pass 4 — Batch H (published September 8, 2026)
 
 This batch is the fourth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
@@ -729,7 +813,7 @@ All remaining unpublished candidates in `CORPUS-CANDIDATES.md`, including the ne
 
 ## Expansion result
 
-This audit has now published 73 candidates across Batches A–H and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
+This audit has now published 83 candidates across Batches A–I and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
 
 ## Follow-up
 
