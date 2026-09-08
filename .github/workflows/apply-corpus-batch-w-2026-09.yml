@@ -14,7 +14,9 @@ jobs:
         with:
           ref: corpus/2026-09-publish-batch-w
       - name: Apply and validate Batch W
-        run: python tools/apply_corpus_batch_w_2026_09.py
+        run: |
+          sed -i "s/'multimodal-model','capability-benchmark','eval'/'capability-evaluation','safety-benchmark','eval'/" tools/apply_corpus_batch_w_2026_09.py
+          python tools/apply_corpus_batch_w_2026_09.py
       - name: Commit generated corpus changes
         run: |
           git config user.name "Jeff Thomas III"
