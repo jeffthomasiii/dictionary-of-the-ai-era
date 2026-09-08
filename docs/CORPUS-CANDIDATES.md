@@ -21,7 +21,7 @@ The initial inventory below was seeded from the September 2026 EpochLex corpus-e
 
 These planning pools are not new editorial lifecycle states. Candidates with an active research issue are linked directly to that issue.
 
-**Current unpublished inventory: 617 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
+**Current unpublished inventory: 607 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
 
 ---
 
@@ -310,7 +310,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Confidence Score
 - Data Contamination
 - Elo Rating
-- Evaluation Dataset
+
 - Exact Match
 - Factual Consistency
 - Factuality
@@ -405,7 +405,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 ### Local, Open Models & Deployment
 
-- 8-Bit Quantization
 - Closed Model
 - Edge AI
 - Edge Model
@@ -426,7 +425,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 - Private AI
 - Proprietary Model
-- Quantized Model
 
 - Self-Hosted AI
 
@@ -652,7 +650,6 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - Agentic Web
 - AI Browser
 - Agent Session
-- Agent Trace
 
 - Agent Telemetry
 
@@ -668,15 +665,10 @@ The September 8, 2026 corpus audit added the following candidates after checking
 
 ### MCP ecosystem
 
-- MCP Extension
-
 - MCP Sampling
 - MCP Roots
 
 - MCP Progress Notification
-- MCP Structured Content
-
-- MCP UI Resource
 
 ### Local AI, hardware & inference
 
@@ -687,7 +679,7 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - GPU Offloading
 - Model Offloading
 - CPU Offloading
-- KV Cache Quantization
+
 - Inference Engine
 - Inference Backend
 - Hardware Acceleration
@@ -757,10 +749,10 @@ The September 8, 2026 corpus audit added the following candidates after checking
 
 - Needle-in-a-Haystack Evaluation
 - Human Preference Evaluation
-- Evaluation Harness
+
 - Evaluation Trace
 - Agent Evaluation Trace
-- LLM Observability
+
 - Prompt Observability
 - Model Telemetry
 

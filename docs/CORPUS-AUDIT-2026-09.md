@@ -378,6 +378,90 @@ These are not recommended as separate entries now. Some are generic business phr
 - Cyborg Workflow
 - Vibe Debugging
 
+## Research Further promotion pass 11 — Batch O (published September 8, 2026)
+
+This batch is the eleventh evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
+
+### MCP Extension
+
+**Why promote and publish:** An opt-in capability that extends Model Context Protocol beyond the core specification, is negotiated through extension metadata, and can evolve and version independently of the protocol core.
+
+**Usage evidence:** [Model Context Protocol: The 2026-07-28 Specification](https://blog.modelcontextprotocol.io/posts/2026-07-28/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### MCP UI Resource
+
+**Why promote and publish:** A server-provided user-interface resource in the MCP Apps extension, referenced by tool metadata and rendered by a host as a sandboxed interactive interface.
+
+**Usage evidence:** [Model Context Protocol: MCP Apps - Bringing UI Capabilities To MCP Clients](https://blog.modelcontextprotocol.io/posts/2026-01-26-mcp-apps/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### MCP Structured Content
+
+**Why promote and publish:** Machine-readable JSON returned by an MCP tool in its structuredContent field, optionally validated against the tool’s output schema alongside other result content.
+
+**Usage evidence:** [Model Context Protocol: Tools](https://modelcontextprotocol.io/specification/2025-11-25/server/tools); [Model Context Protocol: The 2026-07-28 Specification Release Candidate](https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Agent Trace
+
+**Why promote and publish:** A trace of an AI agent execution that records an ordered span hierarchy across model calls, tool invocations, retrieval, workflow steps, latency, errors, and other telemetry used to inspect the agent’s behavior.
+
+**Usage evidence:** [Microsoft Foundry: Set Up Tracing for AI Agents in Microsoft Foundry](https://learn.microsoft.com/en-us/azure/foundry/observability/how-to/trace-agent-setup)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### LLM Observability
+
+**Why promote and publish:** The practice of collecting and analyzing telemetry about language-model and generative-AI application behavior—such as traces, model calls, tool calls, tokens, latency, events, and errors—to understand and troubleshoot system operation.
+
+**Usage evidence:** [OpenTelemetry: Inside the LLM Call: GenAI Observability with OpenTelemetry](https://opentelemetry.io/blog/2026/genai-observability/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Evaluation Harness
+
+**Why promote and publish:** A software framework that runs standardized evaluation tasks, benchmarks, prompts, metrics, and model backends in a repeatable way so model results can be compared and reproduced.
+
+**Usage evidence:** [EleutherAI: Language Model Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Evaluation Dataset
+
+**Why promote and publish:** A collection of reusable evaluation inputs, test cases, conversations, traces, contexts, reference answers, or other records prepared for running and comparing AI-system evaluations.
+
+**Usage evidence:** [Microsoft Foundry: Evaluation datasets in Microsoft Foundry](https://learn.microsoft.com/en-us/azure/foundry/observability/how-to/evaluation-datasets)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### 8-Bit Quantization
+
+**Why promote and publish:** Quantization that represents selected model weights or activations with 8-bit numeric precision, commonly to reduce memory use and make inference more efficient than higher-precision representations.
+
+**Usage evidence:** [Hugging Face: Bitsandbytes](https://huggingface.co/docs/transformers/quantization/bitsandbytes)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Quantized Model
+
+**Why promote and publish:** A model whose weights, activations, or other numerical representations have been converted to lower precision through quantization to reduce memory or computational cost, often for more efficient inference or deployment.
+
+**Usage evidence:** [Hugging Face: Quantization](https://huggingface.co/docs/transformers/main_classes/quantization); [Hugging Face: Bitsandbytes](https://huggingface.co/docs/transformers/quantization/bitsandbytes)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### KV Cache Quantization
+
+**Why promote and publish:** The reduction of numerical precision used to store a transformer’s key-value attention cache, such as using FP8, to lower cache memory consumption and potentially improve throughput or support longer contexts.
+
+**Usage evidence:** [vLLM: Quantized KV Cache](https://docs.vllm.ai/en/stable/features/quantization/quantized_kvcache/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
 ## Research Further promotion pass 10 — Batch N (published September 8, 2026)
 
 This batch is the tenth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
@@ -1233,7 +1317,7 @@ All remaining unpublished candidates in `CORPUS-CANDIDATES.md`, including the ne
 
 ## Expansion result
 
-This audit has now published 133 candidates across Batches A–N and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
+This audit has now published 143 candidates across Batches A–O and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
 
 ## Follow-up
 
