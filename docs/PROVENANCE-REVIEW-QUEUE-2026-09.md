@@ -4,7 +4,7 @@
 
 ## Why this queue exists
 
-EpochLex currently has **365 published entries**, including **142 researched** provenance records and **223 pending** records after provenance Batch 02. The current corpus-growth pause shifts attention from bulk publication to deeper provenance review. The first milestone remains **183 researched / 182 pending** without adding new entries. Provenance Batches 01–02 completed 20 of the 61 Wave 1 records, leaving **41 Wave 1 reviews** to reach that milestone.
+EpochLex currently has **365 published entries**, including **152 researched** provenance records and **213 pending** records after provenance Batch 03. The current corpus-growth pause shifts attention from bulk publication to deeper provenance review. The first milestone remains **183 researched / 182 pending** without adding new entries. Provenance Batches 01–03 completed 30 of the 61 Wave 1 records, leaving **31 Wave 1 reviews** to reach that milestone.
 
 The queue prioritizes four practical considerations: broad reader importance, value to EpochLex’s identity and differentiation, volatility or likelihood of meaning changing quickly, and the value of documenting provenance/history rather than leaving a useful definition without its research layer. These considerations guide this working queue only; they do not change `PROVENANCE.md` or `CONTRIBUTING.md`.
 
@@ -45,6 +45,21 @@ This batch concentrated on foundational machine-learning and language-processing
 8. **Overfitting**
 9. **Underfitting**
 10. **Unsupervised Learning**
+
+## Provenance Batch 03 — completed September 8, 2026
+
+This batch concentrated on model architecture, probability-output, evaluation, multimodal, and attention concepts. All ten records completed the initial human-reviewed provenance pass and now use `researchStatus: "researched"`.
+
+1. **Byte-Pair Encoding (BPE)**
+2. **Autoregressive Model**
+3. **Encoder**
+4. **Decoder**
+5. **Cross-Attention**
+6. **Softmax**
+7. **Logit**
+8. **Perplexity**
+9. **Multimodal Model**
+10. **FlashAttention**
 
 ## Wave 1 — Majority milestone (61)
 

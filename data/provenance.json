@@ -11931,349 +11931,334 @@
     ]
   },
   "byte-pair-encoding": {
-    "researchStatus": "pending",
-    "origin": null,
-    "firstKnownUse": null,
-    "history": [],
-    "relatedTerms": [
-      "tokenization"
+    "researchStatus": "researched",
+    "origin": "Byte Pair Encoding (BPE) was introduced by Philip Gage in 1994 as a general-purpose data-compression algorithm that repeatedly replaces frequent adjacent byte pairs. In NLP, Sennrich, Haddow, and Birch adapted BPE to subword segmentation in 2016, a milestone that helped make BPE-style tokenization widely used in neural language systems.",
+    "firstKnownUse": {
+      "date": "1994-02-01",
+      "precision": "day",
+      "note": "Philip Gage’s 1994 article “A New Algorithm for Data Compression” explicitly names and describes Byte Pair Encoding (BPE)."
+    },
+    "history": [
+      {
+        "date": "1994-02-01",
+        "event": "Philip Gage published “A New Algorithm for Data Compression,” describing Byte Pair Encoding (BPE)."
+      },
+      {
+        "date": "2016",
+        "event": "Sennrich, Haddow, and Birch applied BPE to subword segmentation for neural machine translation."
+      }
     ],
     "sources": [
       {
-        "id": "hf-bpe-2026",
+        "id": "gage-bpe-1994",
         "type": "primary",
-        "publisher": "Hugging Face",
-        "title": "Tokenization algorithms — Byte pair encoding (BPE)",
-        "published": "2026",
-        "url": "https://huggingface.co/docs/transformers/main/tokenizer_summary",
+        "publisher": "C Users Journal",
+        "title": "A New Algorithm for Data Compression",
+        "published": "1994-02-01",
+        "url": "https://jacobfilipp.com/DrDobbs/articles/CUJ/1994/9402/gage/gage.htm",
         "supports": [
+          "origin",
+          "firstKnownUse",
           "definition",
-          "usage",
-          "technical-definition"
+          "history"
         ]
       },
       {
-        "id": "hf-tokenizers-bpe-2026",
+        "id": "sennrich-bpe-2016",
         "type": "primary",
-        "publisher": "Hugging Face",
-        "title": "Tokenizers Models — BPE",
-        "published": "2026",
-        "url": "https://huggingface.co/docs/tokenizers/main/api/models",
+        "publisher": "Association for Computational Linguistics",
+        "title": "Neural Machine Translation of Rare Words with Subword Units",
+        "published": "2016",
+        "url": "https://aclanthology.org/P16-1162/",
         "supports": [
+          "history",
+          "usage",
           "technical-definition"
         ]
       }
+    ],
+    "relatedTerms": [
+      "tokenization"
     ]
   },
   "autoregressive-model": {
-    "researchStatus": "pending",
-    "origin": null,
+    "researchStatus": "researched",
+    "origin": "Autoregressive modeling originated in statistics and time-series analysis long before modern generative AI. In current generative-model usage, an autoregressive model predicts each next element from earlier elements or prior predictions. EpochLex does not assign the general concept to a modern AI coinage.",
     "firstKnownUse": null,
     "history": [],
+    "sources": [
+      {
+        "id": "google-autoregressive-glossary",
+        "type": "reference",
+        "publisher": "Google for Developers",
+        "title": "Machine Learning Glossary — auto-regressive model",
+        "published": null,
+        "url": "https://developers.google.com/machine-learning/glossary/generative",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      },
+      {
+        "id": "ibm-autoregressive",
+        "type": "reference",
+        "publisher": "IBM",
+        "title": "What is an autoregressive model?",
+        "published": null,
+        "url": "https://www.ibm.com/think/topics/autoregressive-model",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ],
     "relatedTerms": [
       "transformer",
       "inference"
+    ]
+  },
+  "encoder": {
+    "researchStatus": "researched",
+    "origin": "Encoders are a long-standing component pattern in representation learning and sequence models rather than a Transformer-era coinage. In encoder-decoder systems, the encoder transforms input into an internal representation used by downstream components. The 2017 Transformer retained the encoder-decoder pattern while replacing recurrence and convolution with attention.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2017-06-12",
+        "event": "Vaswani and colleagues introduced the Transformer, using stacked attention-based encoder and decoder components."
+      }
     ],
     "sources": [
       {
-        "id": "google-autoregressive-glossary-2026",
+        "id": "attention-is-all-you-need",
         "type": "primary",
+        "publisher": "Google Research / NeurIPS",
+        "title": "Attention Is All You Need",
+        "published": "2017-06-12",
+        "url": "https://research.google/pubs/attention-is-all-you-need/",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ],
+    "relatedTerms": [
+      "decoder",
+      "transformer",
+      "embedding"
+    ]
+  },
+  "decoder": {
+    "researchStatus": "researched",
+    "origin": "Decoders are a long-standing component pattern in sequence and representation models rather than a Transformer-era coinage. In encoder-decoder systems, the decoder produces outputs using an encoded representation plus any previously generated state or tokens. The 2017 Transformer implemented this role using masked self-attention and encoder-decoder attention.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2017-06-12",
+        "event": "Vaswani and colleagues introduced the Transformer architecture with stacked attention-based decoder layers."
+      }
+    ],
+    "sources": [
+      {
+        "id": "attention-is-all-you-need",
+        "type": "primary",
+        "publisher": "Google Research / NeurIPS",
+        "title": "Attention Is All You Need",
+        "published": "2017-06-12",
+        "url": "https://research.google/pubs/attention-is-all-you-need/",
+        "supports": [
+          "definition",
+          "history",
+          "usage"
+        ]
+      }
+    ],
+    "relatedTerms": [
+      "encoder",
+      "transformer",
+      "cross-attention"
+    ]
+  },
+  "cross-attention": {
+    "researchStatus": "researched",
+    "origin": "Cross-attention is the modern label for attention in which queries from one sequence or representation attend to keys and values from another. The 2017 Transformer paper described this mechanism in the decoder as encoder-decoder attention rather than using “cross-attention” as its primary label, so EpochLex does not treat the paper as evidence that the current term itself originated there.",
+    "firstKnownUse": null,
+    "history": [
+      {
+        "date": "2017-06-12",
+        "event": "The Transformer paper described decoder attention over encoder outputs, the mechanism now commonly described as cross-attention."
+      }
+    ],
+    "sources": [
+      {
+        "id": "attention-is-all-you-need",
+        "type": "primary",
+        "publisher": "Google Research / NeurIPS",
+        "title": "Attention Is All You Need",
+        "published": "2017-06-12",
+        "url": "https://research.google/pubs/attention-is-all-you-need/",
+        "supports": [
+          "definition",
+          "history",
+          "technical-definition"
+        ]
+      }
+    ],
+    "relatedTerms": [
+      "encoder",
+      "decoder",
+      "transformer"
+    ]
+  },
+  "softmax": {
+    "researchStatus": "researched",
+    "origin": "Softmax is a mathematical normalization function that predates modern AI. In machine learning, it transforms a vector of scores or logits into normalized probabilities whose values sum to one, commonly for multi-class prediction or token selection. The current research pass does not assign the function to a single AI-era origin.",
+    "firstKnownUse": null,
+    "history": [],
+    "sources": [
+      {
+        "id": "google-softmax-glossary",
+        "type": "reference",
         "publisher": "Google for Developers",
-        "title": "Machine Learning Glossary — auto-regressive model",
-        "published": "2026",
+        "title": "Machine Learning Glossary — softmax",
+        "published": null,
+        "url": "https://developers.google.com/machine-learning/glossary/fundamentals",
+        "supports": [
+          "definition",
+          "technical-definition",
+          "usage"
+        ]
+      }
+    ],
+    "relatedTerms": [
+      "logit"
+    ]
+  },
+  "logit": {
+    "researchStatus": "researched",
+    "origin": "The logit is a statistical concept that predates modern machine learning. In current ML systems, “logits” commonly refers to raw, unnormalized model scores that are often passed through a function such as softmax to obtain probabilities. EpochLex leaves the deeper historical origin unresolved in this pass rather than assigning a precise first use without stronger claim-specific evidence.",
+    "firstKnownUse": null,
+    "history": [],
+    "sources": [
+      {
+        "id": "google-logits-glossary",
+        "type": "reference",
+        "publisher": "Google for Developers",
+        "title": "Machine Learning Glossary — logits",
+        "published": null,
         "url": "https://developers.google.com/machine-learning/glossary",
         "supports": [
           "definition",
           "usage",
           "technical-definition"
         ]
-      },
-      {
-        "id": "hf-causal-lm-2026",
-        "type": "primary",
-        "publisher": "Hugging Face",
-        "title": "Causal language modeling",
-        "published": "2026",
-        "url": "https://huggingface.co/docs/transformers/tasks/language_modeling",
-        "supports": [
-          "usage",
-          "technical-definition"
-        ]
       }
+    ],
+    "relatedTerms": [
+      "softmax",
+      "decoder"
     ]
   },
-  "encoder": {
-    "researchStatus": "pending",
-    "origin": null,
+  "perplexity": {
+    "researchStatus": "researched",
+    "origin": "Perplexity is an information-theoretic and language-model evaluation concept rather than a recent generative-AI coinage. In language modeling it summarizes how uncertain a model is about observed sequences, with lower perplexity generally indicating that the model assigns higher probability to the evaluated data. The current research pass does not establish a defensible first use of the term in language modeling.",
     "firstKnownUse": null,
     "history": [],
-    "relatedTerms": [
-      "decoder",
-      "transformer",
-      "embedding"
-    ],
     "sources": [
       {
-        "id": "hf-encoder-decoder-2026",
-        "type": "primary",
-        "publisher": "Hugging Face",
-        "title": "Encoder Decoder Models",
-        "published": "2026",
-        "url": "https://huggingface.co/docs/transformers/model_doc/encoder-decoder",
-        "supports": [
-          "definition",
-          "usage",
-          "technical-definition"
-        ]
-      },
-      {
-        "id": "vaswani-transformer-2017",
-        "type": "research",
-        "publisher": "arXiv",
-        "title": "Attention Is All You Need",
-        "published": "2017-06-12",
-        "url": "https://arxiv.org/abs/1706.03762",
-        "supports": [
-          "technical-definition",
-          "history"
-        ]
-      }
-    ]
-  },
-  "decoder": {
-    "researchStatus": "pending",
-    "origin": null,
-    "firstKnownUse": null,
-    "history": [],
-    "relatedTerms": [
-      "encoder",
-      "transformer",
-      "cross-attention"
-    ],
-    "sources": [
-      {
-        "id": "hf-encoder-decoder-2026",
-        "type": "primary",
-        "publisher": "Hugging Face",
-        "title": "Encoder Decoder Models",
-        "published": "2026",
-        "url": "https://huggingface.co/docs/transformers/model_doc/encoder-decoder",
-        "supports": [
-          "definition",
-          "usage",
-          "technical-definition"
-        ]
-      },
-      {
-        "id": "vaswani-transformer-2017",
-        "type": "research",
-        "publisher": "arXiv",
-        "title": "Attention Is All You Need",
-        "published": "2017-06-12",
-        "url": "https://arxiv.org/abs/1706.03762",
-        "supports": [
-          "technical-definition",
-          "history"
-        ]
-      }
-    ]
-  },
-  "cross-attention": {
-    "researchStatus": "pending",
-    "origin": null,
-    "firstKnownUse": null,
-    "history": [],
-    "relatedTerms": [
-      "encoder",
-      "decoder",
-      "transformer"
-    ],
-    "sources": [
-      {
-        "id": "hf-cross-attention-2026",
-        "type": "primary",
-        "publisher": "Hugging Face",
-        "title": "Encoder Decoder Models",
-        "published": "2026",
-        "url": "https://huggingface.co/docs/transformers/model_doc/encoder-decoder",
-        "supports": [
-          "definition",
-          "usage",
-          "technical-definition"
-        ]
-      },
-      {
-        "id": "vaswani-transformer-2017",
-        "type": "research",
-        "publisher": "arXiv",
-        "title": "Attention Is All You Need",
-        "published": "2017-06-12",
-        "url": "https://arxiv.org/abs/1706.03762",
-        "supports": [
-          "technical-definition",
-          "history"
-        ]
-      }
-    ]
-  },
-  "softmax": {
-    "researchStatus": "pending",
-    "origin": null,
-    "firstKnownUse": null,
-    "history": [],
-    "relatedTerms": [
-      "logit"
-    ],
-    "sources": [
-      {
-        "id": "pytorch-softmax-2026",
-        "type": "primary",
-        "publisher": "PyTorch",
-        "title": "Softmax",
-        "published": "2026",
-        "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.modules.activation.Softmax.html",
-        "supports": [
-          "definition",
-          "technical-definition"
-        ]
-      },
-      {
-        "id": "google-softmax-glossary-2026",
-        "type": "primary",
+        "id": "google-perplexity-glossary",
+        "type": "reference",
         "publisher": "Google for Developers",
-        "title": "Machine Learning Glossary — softmax",
-        "published": "2026",
+        "title": "Machine Learning Glossary — perplexity",
+        "published": null,
+        "url": "https://developers.google.com/machine-learning/glossary",
+        "supports": [
+          "definition",
+          "usage",
+          "technical-definition"
+        ]
+      }
+    ],
+    "relatedTerms": [
+      "autoregressive-model",
+      "eval"
+    ]
+  },
+  "multimodal-model": {
+    "researchStatus": "researched",
+    "origin": "Multimodal modeling developed from work combining multiple forms of data such as text, images, audio, and video rather than from a single established coinage. In current AI usage, a multimodal model accepts, produces, or jointly represents more than one modality. The current evidence does not support assigning the term to one inventor.",
+    "firstKnownUse": null,
+    "history": [],
+    "sources": [
+      {
+        "id": "google-multimodal-glossary",
+        "type": "reference",
+        "publisher": "Google for Developers",
+        "title": "Machine Learning Glossary — multimodal model",
+        "published": null,
         "url": "https://developers.google.com/machine-learning/glossary",
         "supports": [
           "definition",
           "usage"
         ]
       }
-    ]
-  },
-  "logit": {
-    "researchStatus": "pending",
-    "origin": null,
-    "firstKnownUse": null,
-    "history": [],
-    "relatedTerms": [
-      "softmax",
-      "decoder"
     ],
-    "sources": [
-      {
-        "id": "hf-logits-encoder-decoder-2026",
-        "type": "primary",
-        "publisher": "Hugging Face",
-        "title": "Encoder Decoder Models",
-        "published": "2026",
-        "url": "https://huggingface.co/docs/transformers/model_doc/encoder-decoder",
-        "supports": [
-          "definition",
-          "usage",
-          "technical-definition"
-        ]
-      }
-    ]
-  },
-  "perplexity": {
-    "researchStatus": "pending",
-    "origin": null,
-    "firstKnownUse": null,
-    "history": [],
-    "relatedTerms": [
-      "autoregressive-model",
-      "eval"
-    ],
-    "sources": [
-      {
-        "id": "hf-perplexity-2026",
-        "type": "primary",
-        "publisher": "Hugging Face",
-        "title": "Perplexity of fixed-length models",
-        "published": "2026",
-        "url": "https://huggingface.co/docs/transformers/v4.57.1/en/perplexity",
-        "supports": [
-          "definition",
-          "usage",
-          "technical-definition",
-          "evaluation"
-        ]
-      },
-      {
-        "id": "hf-causal-perplexity-2026",
-        "type": "primary",
-        "publisher": "Hugging Face",
-        "title": "Causal language modeling",
-        "published": "2026",
-        "url": "https://huggingface.co/docs/transformers/tasks/language_modeling",
-        "supports": [
-          "usage",
-          "evaluation"
-        ]
-      }
-    ]
-  },
-  "multimodal-model": {
-    "researchStatus": "pending",
-    "origin": null,
-    "firstKnownUse": null,
-    "history": [],
     "relatedTerms": [
       "multimodal-benchmark",
       "text-to-video"
-    ],
-    "sources": [
-      {
-        "id": "hf-multimodal-generation-2026",
-        "type": "primary",
-        "publisher": "Hugging Face",
-        "title": "Multimodal Generation",
-        "published": "2026",
-        "url": "https://huggingface.co/docs/transformers/main/tasks/any_to_any",
-        "supports": [
-          "definition",
-          "usage",
-          "technical-definition"
-        ]
-      }
     ]
   },
   "flashattention": {
-    "researchStatus": "pending",
-    "origin": null,
-    "firstKnownUse": null,
-    "history": [],
-    "relatedTerms": [
-      "transformer",
-      "kv-cache"
+    "researchStatus": "researched",
+    "origin": "FlashAttention was introduced by Tri Dao, Daniel Y. Fu, Stefano Ermon, Atri Rudra, and Christopher Ré in 2022 as an IO-aware exact attention algorithm designed to reduce memory traffic between GPU memory levels while preserving exact attention results.",
+    "firstKnownUse": {
+      "date": "2022-05-27",
+      "precision": "day",
+      "note": "The authors submitted the paper “FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness” on May 27, 2022."
+    },
+    "history": [
+      {
+        "date": "2022-05-27",
+        "event": "The FlashAttention paper was submitted, introducing an IO-aware exact attention algorithm using tiling to reduce memory reads and writes."
+      },
+      {
+        "date": "2022",
+        "event": "FlashAttention appeared in NeurIPS 2022 and quickly became a widely adopted optimization for Transformer attention."
+      }
     ],
     "sources": [
       {
-        "id": "dao-flashattention-2022",
-        "type": "research",
-        "publisher": "arXiv",
+        "id": "flashattention-2022",
+        "type": "primary",
+        "publisher": "arXiv / NeurIPS",
         "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
         "published": "2022-05-27",
         "url": "https://arxiv.org/abs/2205.14135",
         "supports": [
+          "origin",
+          "firstKnownUse",
           "definition",
-          "technical-definition",
-          "history"
+          "history",
+          "technical-definition"
         ]
       },
       {
-        "id": "hf-attention-backends-2026",
+        "id": "flashattention-repo",
         "type": "primary",
-        "publisher": "Hugging Face",
-        "title": "Attention backends",
-        "published": "2026",
-        "url": "https://huggingface.co/docs/transformers/en/attention_interface",
+        "publisher": "Dao-AILab",
+        "title": "FlashAttention official implementation",
+        "published": null,
+        "url": "https://github.com/Dao-AILab/flash-attention",
         "supports": [
           "usage",
-          "technical-definition"
+          "history"
         ]
       }
+    ],
+    "relatedTerms": [
+      "transformer",
+      "kv-cache"
     ]
   }
 }
