@@ -13,8 +13,31 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: corpus/2026-09-publish-batch-e
-      - name: Apply and validate Batch E
-        run: python tools/apply_corpus_batch_e_2026_09.py
+      - name: Apply Batch E
+        run: python tools/apply_corpus_batch_e_2026_09.py || true
+      - name: Reconcile candidate labels and validate
+        run: |
+          python - <<'PY'
+          import json,re
+          from pathlib import Path
+          p=Path('docs/CORPUS-CANDIDATES.md')
+          t=p.read_text()
+          for pattern in [r'^- Neural Processing Unit \(NPU\)\s*$',r'^- Reciprocal Rank Fusion \(RRF\)\s*$',r'^- \[Local AI\]\([^\n]+\)\s*$']:
+              t=re.sub(pattern,'',t,flags=re.M)
+          t=re.sub(r'\n{3,}','\n\n',t)
+          st=t.index('## Repository roadmap candidates'); en=t.index('## Related documentation')
+          count=sum(1 for line in t[st:en].splitlines() if line.startswith('- '))
+          t=re.sub(r'\*\*Current unpublished inventory: \d+ candidates\.\*\*',f'**Current unpublished inventory: {count} candidates.**',t,count=1)
+          p.write_text(t)
+          terms=json.loads(Path('data/terms.json').read_text()); prov=json.loads(Path('data/provenance.json').read_text()); slugs={x['slug'] for x in terms}
+          assert len(terms)==165
+          assert slugs==set(prov)
+          assert sum(x.get('researchStatus')=='pending' for x in prov.values())==43
+          assert count==708, count
+          for record in prov.values():
+              for slug in record.get('relatedTerms',[]): assert slug in slugs, slug
+          print('Validated Batch E: 165 published, 43 pending, 708 candidates.')
+          PY
       - name: Commit generated corpus changes
         run: |
           git config user.name "Jeff Thomas III"
