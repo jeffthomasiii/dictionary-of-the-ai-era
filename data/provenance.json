@@ -5971,5 +5971,259 @@
         ]
       }
     ]
+  },
+  "content-credentials": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "synthetic-content",
+      "responsible-ai",
+      "ai-governance"
+    ],
+    "sources": [
+      {
+        "id": "c2pa-2-4-2026",
+        "type": "primary",
+        "publisher": "C2PA",
+        "title": "Content Credentials: C2PA Technical Specification 2.4",
+        "published": "2026-04",
+        "url": "https://spec.c2pa.org/specifications/specifications/2.4/specs/C2PA_Specification.html",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "context-caching": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "context-window",
+      "kv-cache",
+      "inference",
+      "token"
+    ],
+    "sources": [
+      {
+        "id": "hf-context-caching-2026",
+        "type": "reference",
+        "publisher": "Hugging Face",
+        "title": "Cache strategies",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/transformers/main/kv_cache",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "mcp-authorization": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "mcp",
+      "tool-calling",
+      "ai-agent"
+    ],
+    "sources": [
+      {
+        "id": "mcp-auth-2026",
+        "type": "primary",
+        "publisher": "Model Context Protocol",
+        "title": "The 2026-07-28 Specification",
+        "published": "2026-07-28",
+        "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "mcp-tool": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "mcp",
+      "tool-calling",
+      "ai-agent"
+    ],
+    "sources": [
+      {
+        "id": "mcp-tools-2026",
+        "type": "primary",
+        "publisher": "Model Context Protocol",
+        "title": "The 2026-07-28 Specification",
+        "published": "2026-07-28",
+        "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "grader": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "eval",
+      "benchmark",
+      "ground-truth"
+    ],
+    "sources": [
+      {
+        "id": "openai-graders-2026",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "Graders",
+        "published": "2026",
+        "url": "https://platform.openai.com/docs/api-reference/graders",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "long-context-evaluation": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "eval",
+      "context-window",
+      "benchmark"
+    ],
+    "sources": [
+      {
+        "id": "helm-long-context-2026",
+        "type": "reference",
+        "publisher": "Stanford CRFM",
+        "title": "HELM Long Context",
+        "published": "2026",
+        "url": "https://crfm.stanford.edu/helm/long-context/latest/",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "structured-output": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "tool-calling",
+      "prompt-engineering",
+      "large-language-model"
+    ],
+    "sources": [
+      {
+        "id": "openai-structured-outputs-2024",
+        "type": "primary",
+        "publisher": "OpenAI",
+        "title": "Introducing Structured Outputs in the API",
+        "published": "2024-08-06",
+        "url": "https://openai.com/index/introducing-structured-outputs-in-the-api/",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "speculative-decoding": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "inference",
+      "sampling",
+      "large-language-model"
+    ],
+    "sources": [
+      {
+        "id": "hf-speculative-decoding-2026",
+        "type": "reference",
+        "publisher": "Hugging Face",
+        "title": "Assisted decoding",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/transformers/main/assisted_decoding",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "kv-cache": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "inference",
+      "context-caching",
+      "large-language-model",
+      "token"
+    ],
+    "sources": [
+      {
+        "id": "hf-kv-cache-2026",
+        "type": "reference",
+        "publisher": "Hugging Face",
+        "title": "Caching",
+        "published": "2026",
+        "url": "https://huggingface.co/docs/transformers/cache_explanation",
+        "supports": [
+          "definition",
+          "usage"
+        ]
+      }
+    ]
+  },
+  "general-purpose-ai": {
+    "researchStatus": "pending",
+    "origin": null,
+    "firstKnownUse": null,
+    "history": [],
+    "relatedTerms": [
+      "artificial-intelligence",
+      "ai-governance",
+      "frontier-ai",
+      "high-risk-ai"
+    ],
+    "sources": [
+      {
+        "id": "eu-gpai-guidance-2025",
+        "type": "primary",
+        "publisher": "European Commission AI Act Service Desk",
+        "title": "Guidelines on the scope of the obligations for general-purpose AI models",
+        "published": "2025",
+        "url": "https://ai-act-service-desk.ec.europa.eu/sites/default/files/2025-07/guidelines_on_the_scope_of_the_obligations_for_generalpurpose_ai_models_established_by_regulation_1cx2atxgq79us4n3x8jfgyy1qlm_118340-3.pdf",
+        "supports": [
+          "definition",
+          "usage",
+          "scope"
+        ]
+      }
+    ]
   }
 }
