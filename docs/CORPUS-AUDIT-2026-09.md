@@ -378,6 +378,97 @@ These are not recommended as separate entries now. Some are generic business phr
 - Cyborg Workflow
 - Vibe Debugging
 
+## Research Further promotion pass 18 — Batch V (published September 8, 2026)
+
+This batch is the eighteenth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
+
+### Multi-Query Retrieval
+
+**Why promote and publish:** A retrieval approach that generates or decomposes an information need into multiple search queries, runs them separately or in parallel, and combines their results to improve coverage or grounding.
+
+**Usage evidence:** [Microsoft Learn: Retrieval augmented generation (RAG) and indexes in Microsoft Foundry](https://learn.microsoft.com/en-us/azure/foundry/concepts/retrieval-augmented-generation); [Microsoft Learn: Develop a RAG Solution on Azure - Information-Retrieval Phase](https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-information-retrieval)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Retrieval Fusion
+
+**Why promote and publish:** The process of combining ranked results or scores from multiple retrieval methods or queries into a single ranked result set.
+
+**Usage evidence:** [Elastic: ES|QL FUSE command](https://www.elastic.co/docs/reference/query-languages/esql/commands/fuse); [Elastic: Reciprocal rank fusion](https://www.elastic.co/docs/reference/elasticsearch/rest-apis/reciprocal-rank-fusion)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### ColBERT
+
+**Why promote and publish:** A neural information-retrieval model that independently encodes query and document tokens and then scores relevance through late interaction between their token-level representations.
+
+**Usage evidence:** [Stanford University / arXiv: ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://arxiv.org/abs/2004.12832); [Pinecone: Cascading retrieval with multi-vector representations: balancing efficiency and effectiveness](https://www.pinecone.io/blog/cascading-retrieval-with-multi-vector-representations/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Late Interaction
+
+**Why promote and publish:** A retrieval-model design in which query and document representations are encoded separately and combined only at a later scoring stage, often through token-level similarity rather than a single pooled embedding.
+
+**Usage evidence:** [Stanford University / arXiv: ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](https://arxiv.org/abs/2004.12832); [Pinecone: Cascading retrieval with multi-vector representations: balancing efficiency and effectiveness](https://www.pinecone.io/blog/cascading-retrieval-with-multi-vector-representations/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Capability Evaluation
+
+**Why promote and publish:** An evaluation designed to measure what a model or AI system is able to do in a defined domain or task area, including the level, reliability, or limits of that capability.
+
+**Usage evidence:** [OpenAI: GPT-5.5 System Card](https://openai.com/index/gpt-5-5-system-card/); [OpenAI: GPT-5.4 Thinking System Card](https://deploymentsafety.openai.com/gpt-5-4-thinking)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Safety Benchmark
+
+**Why promote and publish:** A benchmark or evaluation dataset used to measure safety-relevant behavior, such as policy compliance, refusal quality, robustness to attacks, or performance on defined risk categories.
+
+**Usage evidence:** [OpenAI: GPT-5.5 System Card](https://deploymentsafety.openai.com/gpt-5-5/monorepo-bench); [Anthropic: Model system cards](https://www.anthropic.com/system-cards)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### AI Security Testing
+
+**Why promote and publish:** Structured testing that probes AI systems for security weaknesses, attack susceptibility, unsafe tool or data flows, and failures of security controls across the model, application, data, and infrastructure layers.
+
+**Usage evidence:** [OWASP: Artificial Intelligence Security Verification Standard (AISVS)](https://owasp.org/www-project-artificial-intelligence-security-verification-standard-aisvs-docs/); [OWASP: AI Testing Guide](https://owasp.org/www-project-ai-testing-guide/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Agent Delegation
+
+**Why promote and publish:** The assignment or transfer of a task, subtask, or authority from one AI agent to another agent or specialized component while the larger workflow continues.
+
+**Usage evidence:** [OpenAI: A practical guide to building agents](https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/); [Microsoft Learn: Workflows](https://learn.microsoft.com/en-us/agent-framework/journey/workflows)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Model Extraction
+
+**Why promote and publish:** An attack that attempts to recover details of a machine-learning model, such as its architecture, parameters, or functional behavior, through access to the model or its outputs.
+
+**Usage evidence:** [NIST CSRC: model extraction - Glossary](https://csrc.nist.gov/glossary/term/model_extraction); [OWASP Cheat Sheet Series: Secure AI/ML Model Ops Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Secure_AI_Model_Ops_Cheat_Sheet.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Model Inversion
+
+**Why promote and publish:** A privacy attack that uses access to a trained model, its outputs, confidence information, gradients, or parameters to reconstruct representative or sensitive information about the data used to train the model.
+
+**Usage evidence:** [NIST: Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf); [NIST AI Resource Center: AI Metrology Center - Inversion Recall](https://airc.nist.gov/metrology/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Alias dispositions: Model Grader and Judge Model
+
+- **Model Grader** is represented as an alias of the published **Grader** entry.
+- **Judge Model** is represented as an alias of the published **LLM-as-a-Judge** entry.
+
+These labels do not provide enough distinct reader value to justify duplicate pages.
+
 ## Research Further promotion pass 17 — Batch U (published September 8, 2026)
 
 This batch is the seventeenth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
@@ -1829,7 +1920,7 @@ All remaining unpublished candidates in `CORPUS-CANDIDATES.md`, including the ne
 
 ## Expansion result
 
-This audit has now published 203 candidates across Batches A–U and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
+This audit has now published 213 candidates across Batches A–V and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
 
 ## Follow-up
 
