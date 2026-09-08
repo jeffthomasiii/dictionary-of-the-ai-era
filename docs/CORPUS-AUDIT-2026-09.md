@@ -378,6 +378,94 @@ These are not recommended as separate entries now. Some are generic business phr
 - Cyborg Workflow
 - Vibe Debugging
 
+## Research Further promotion pass 16 — Batch T (published September 8, 2026)
+
+This batch is the sixteenth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
+
+### Agent-to-Agent (A2A)
+
+**Why promote and publish:** An open interoperability protocol that lets independent AI agents discover one another, exchange information, delegate work, and collaborate across different frameworks, vendors, and services.
+
+**Usage evidence:** [A2A Protocol: Agent2Agent (A2A) Protocol](https://a2a-protocol.org/v1.0.0/); [Linux Foundation: A2A Protocol Surpasses 150 Organizations, Lands in Major Cloud Platforms, and Sees Enterprise Production Use in First Year](https://www.linuxfoundation.org/press/a2a-protocol-surpasses-150-organizations-lands-in-major-cloud-platforms-and-sees-enterprise-production-use-in-first-year)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Supervisor Agent
+
+**Why promote and publish:** An agent that coordinates other agents or tools by deciding how work should be delegated, sequenced, or routed and by combining their results toward a larger task.
+
+**Usage evidence:** [Microsoft Learn: Use Supervisor Agent to create a coordinated multi-agent system](https://learn.microsoft.com/en-us/azure/databricks/generative-ai/agent-bricks/multi-agent-supervisor)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Agent Memory
+
+**Why promote and publish:** Stored or retrievable information from prior interactions, sessions, or external context that an AI agent can use to maintain continuity and influence later behavior or responses.
+
+**Usage evidence:** [Microsoft Learn: Chat History Memory Provider](https://learn.microsoft.com/en-us/agent-framework/concepts/agents/conversations/chat-history-memory-provider); [Microsoft Learn: Conversations & Memory overview](https://learn.microsoft.com/en-us/agent-framework/agents/conversations/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Outcome Reward Model
+
+**Why promote and publish:** A reward model that scores a complete response or trajectory based on its final outcome rather than assigning separate rewards to intermediate reasoning steps.
+
+**Usage evidence:** [PMLR: Free Process Rewards without Process Labels](https://proceedings.mlr.press/v267/yuan25c.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Metadata Filtering
+
+**Why promote and publish:** A retrieval technique that restricts search results using structured metadata conditions, such as category, date, tenant, source, or document type, before or alongside relevance ranking.
+
+**Usage evidence:** [Pinecone: Filter by metadata](https://docs.pinecone.io/guides/search/filter-by-metadata)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Query Rewriting
+
+**Why promote and publish:** The practice of reformulating a user or search query into a version intended to improve retrieval quality, specificity, coverage, or compatibility with the search system.
+
+**Usage evidence:** [Elastic: RAG](https://www.elastic.co/docs/solutions/search/rag)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Automated Evaluation
+
+**Why promote and publish:** Evaluation in which software, rules, metrics, or AI-based graders automatically score or judge model outputs or system behavior without requiring a human reviewer for every case.
+
+**Usage evidence:** [OpenAI: Measuring the performance of our models on real-world tasks](https://openai.com/index/gdpval/); [OpenAI: How evals drive the next chapter in AI for businesses](https://openai.com/index/evals-drive-next-chapter-of-ai/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Rubric
+
+**Why promote and publish:** A set of explicit criteria used to judge or score model outputs, often defining what a successful response should include, avoid, or accomplish and sometimes assigning weights or points to each criterion.
+
+**Usage evidence:** [OpenAI: Introducing HealthBench](https://openai.com/index/healthbench/); [OpenAI: How evals drive the next chapter in AI for businesses](https://openai.com/index/evals-drive-next-chapter-of-ai/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Algorithmic Audit
+
+**Why promote and publish:** An independent or structured examination of an algorithmic or AI system, or the processes around it, to assess behavior, compliance, risks, impacts, accountability, or whether the system operates as claimed.
+
+**Usage evidence:** [OECD: Enablers, guardrails and engagement for unlocking trustworthy AI](https://www.oecd.org/en/publications/governing-with-artificial-intelligence_795de142-en/full-report/enablers-guardrails-and-engagement-for-unlocking-trustworthy-ai_2f817983.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### AI Regulation
+
+**Why promote and publish:** Binding legal or regulatory rules that govern the development, deployment, use, oversight, or effects of artificial intelligence systems within a jurisdiction or sector.
+
+**Usage evidence:** [OECD: Enablers, guardrails and engagement for unlocking trustworthy AI](https://www.oecd.org/en/publications/governing-with-artificial-intelligence_795de142-en/full-report/enablers-guardrails-and-engagement-for-unlocking-trustworthy-ai_2f817983.html); [OECD: Regulating for the future](https://www.oecd.org/en/publications/oecd-regulatory-policy-outlook-2025_56b60e39-en/full-report/regulating-for-the-future_e948d334.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Alias disposition: AI Auditing
+
+**Disposition:** Represent as an alias of the published **AI Audit** entry rather than as a separate page. The gerund form does not provide distinct reader value beyond the existing audit concept.
+
 ## Research Further promotion pass 15 — Batch S (published September 8, 2026)
 
 This batch is the fifteenth evidence-based promotion from **Research Further**. Promotion records an audit decision for these entries; it does not create a permanent lifecycle state or automatic promotion rule.
@@ -1657,7 +1745,7 @@ All remaining unpublished candidates in `CORPUS-CANDIDATES.md`, including the ne
 
 ## Expansion result
 
-This audit has now published 183 candidates across Batches A–S and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
+This audit has now published 193 candidates across Batches A–T and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
 
 ## Follow-up
 

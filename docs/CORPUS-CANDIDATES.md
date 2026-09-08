@@ -21,7 +21,7 @@ The initial inventory below was seeded from the September 2026 EpochLex corpus-e
 
 These planning pools are not new editorial lifecycle states. Candidates with an active research issue are linked directly to that issue.
 
-**Current unpublished inventory: 566 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
+**Current unpublished inventory: 555 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
 
 ---
 
@@ -222,13 +222,12 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Agent Handoff
 - Agent Harness
 
-- Agent Memory
 - Agent Planning
 - Agent Protocol
 
 - Agent Supervisor
 - Agent Swarm
-- Agent-to-Agent (A2A)
+
 - Agentic AI
 - Agentic Browser
 - Agentic Coding
@@ -245,7 +244,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Persistent Memory
 - Research Agent
 - Semantic Memory
-- Supervisor Agent
+
 - Swarm Intelligence
 - Task Decomposition
 - Tool-Using Agent
@@ -297,7 +296,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 - Abstention
 - Arena
-- Automated Evaluation
 
 - Benchmark Saturation
 
@@ -322,8 +320,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Reference Answer
 - Refusal
 - Regression Evaluation
-
-- Rubric
 
 - Test Contamination
 - Test Set
@@ -494,12 +490,11 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Keyword Search
 - Knowledge Retrieval
 - Late Chunking
-- Metadata Filtering
+
 - Multi-Query Retrieval
 - Multimodal RAG
 - Parent-Child Retrieval
 - Query Expansion
-- Query Rewriting
 
 - Self-RAG
 - Semantic Chunking
@@ -511,23 +506,19 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Adversarial Machine Learning
 - Agent Hijacking
 
-- AI Auditing
-
 - AI Control
 - AI Control Framework
 - AI Disclosure
 - AI Ethics
 
 - AI Oversight
-- AI Regulation
+
 - AI Risk
 
 - AI Safety
 - AI Sandbox
 
 - AI Standard
-
-- Algorithmic Audit
 
 - Backdoor Attack
 - Confused Deputy
@@ -678,7 +669,6 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - Reward Hacking
 - Specification Gaming
 
-- Outcome Reward Model
 - Verifier Model
 - Critic Model
 
