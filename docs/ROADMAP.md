@@ -7,7 +7,8 @@ EpochLex is a Living Dictionary. The roadmap is therefore a statement of current
 The initial product and corpus MVP is substantially complete:
 
 - 122 published dictionary entries;
-- researched provenance records for the published corpus;
+- researched provenance records for the current published corpus;
+- an editorial model that separates publishable dictionary completeness from provenance-research completion;
 - dedicated term pages;
 - Browse search, A-Z navigation, filters, list/grid views;
 - category collections;
@@ -25,7 +26,7 @@ The initial product and corpus MVP is substantially complete:
 - EpochLex selected as the public identity after a brand-collision review of the earlier AILex name;
 - the custom public domain `epochlex.justathoughtblog.org` configured for GitHub Pages.
 
-The focus now shifts from accumulating MVP features to improving readiness, contribution quality, publishing integrity, and long-term maintainability.
+The focus now shifts from accumulating MVP features to improving readiness, useful corpus coverage, contribution quality, publishing integrity, and long-term maintainability.
 
 ## Product readiness
 
@@ -79,16 +80,19 @@ EpochLex now has a basic contributor-participation system in place:
 - a linked GitHub Project for current priorities and contributor-ready work;
 - a source-controlled [`CORPUS-CANDIDATES.md`](CORPUS-CANDIDATES.md) inventory for possible future coverage;
 - individual research issues for selected candidates that are sufficiently actionable for focused contributor work;
-- a growing set of bounded issues suitable for outside contributors.
+- a growing set of bounded issues suitable for outside contributors;
+- separate publication and provenance-research thresholds, with `pending` and `researched` used to communicate provenance-review state.
 
 The candidate inventory is a planning and research surface, not a publication queue. A candidate's appearance there does not mean it has been approved as a future entry. Research can result in a separate entry, an alias, continued observation, or a decision not to include the candidate. Human editorial review remains responsible for publication decisions.
+
+A term that passes the dictionary publication threshold may be published with `researchStatus: "pending"` while deeper origin and historical sourcing remains unfinished. This does not lower the standard for the core definition or inclusion decision. A term moves to `researched` only after the provenance record receives the initial human-reviewed sourcing pass defined in [`../PROVENANCE.md`](../PROVENANCE.md).
 
 The next operational maturity work is less about creating entry points and more about making contribution quality and review sustainable.
 
 Possible work includes:
 
 - contributor-oriented validation tooling;
-- clearer review states for proposed/revised terms;
+- clearer review states for proposed/revised terms beyond the established provenance statuses;
 - documented handling of contested terminology and source disagreements;
 - contributor recognition and release-note practices;
 - periodic review of whether Discussions, Issues, the Project, the candidate inventory, and public contribution guidance still route people clearly.
@@ -100,6 +104,8 @@ EpochLex should remain open to contributions beyond code, including term suggest
 The current published corpus is a foundation, not a target ceiling. Future additions should be driven by documented usage, reader value, and coverage gaps rather than arbitrary term-count milestones.
 
 [`CORPUS-CANDIDATES.md`](CORPUS-CANDIDATES.md) is the source-controlled working inventory of unpublished terminology that may merit future review. It provides a durable place to preserve possible coverage without implying that every candidate belongs in the dictionary. Selected candidates can be promoted into focused research issues when they are ready for contributor work.
+
+Corpus growth does not require every accepted term to complete its full provenance investigation before it can help readers. Once an entry satisfies the core publication standard in `CONTRIBUTING.md`, it may enter the Living Dictionary with a transparent `pending` provenance status. Deeper sourcing can then continue without representing unresolved origin or history claims as settled fact.
 
 Ongoing corpus work may include:
 
