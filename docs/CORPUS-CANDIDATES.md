@@ -21,7 +21,7 @@ The initial inventory below was seeded from the September 2026 EpochLex corpus-e
 
 These planning pools are not new editorial lifecycle states. Candidates with an active research issue are linked directly to that issue.
 
-**Current unpublished inventory: 718 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
+**Current unpublished inventory: 708 candidates.** The inventory combines the original repository-roadmap and research pools with later audit expansions.
 
 ---
 
@@ -62,7 +62,6 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Explainable AI (XAI)
 - Frontier AI
 - Frontier Model
-- High-Risk AI
 
 - Interpretable AI
 - Model Poisoning
@@ -96,10 +95,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 
 ### AI Ways of Working
 
-- AI Memory
 - API
-
-- Browser Use
 
 - Long-Term Memory
 - Planning
@@ -429,7 +425,7 @@ These planning pools are not new editorial lifecycle states. Candidates with an 
 - Edge Model
 - GGUF
 - Inference Runtime
-- [Local AI](https://github.com/jeffthomasiii/dictionary-of-the-ai-era/issues/77)
+
 - Local Model
 - Low-Bit Quantization
 - Model Hub
@@ -676,7 +672,6 @@ The September 8, 2026 corpus audit added the following candidates after checking
 
 ### Agents, protocols & agentic systems
 
-- Agent Skills
 - SKILL.md
 - Agentic Commerce
 - Agentic Payments
@@ -684,7 +679,7 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - AI Browser
 - Agent Session
 - Agent Trace
-- Agent Observability
+
 - Agent Telemetry
 - Agent Sandbox
 - Agent Permission
@@ -719,8 +714,6 @@ The September 8, 2026 corpus audit added the following candidates after checking
 
 ### Local AI, hardware & inference
 
-- Neural Processing Unit (NPU)
-- AI PC
 - TOPS
 - Edge Inference
 - Local Inference
@@ -737,7 +730,6 @@ The September 8, 2026 corpus audit added the following candidates after checking
 
 ### Reasoning & model behavior
 
-- Reasoning Effort
 - Inference-Time Scaling
 - Test-Time Scaling
 - Deliberation
@@ -785,7 +777,7 @@ The September 8, 2026 corpus audit added the following candidates after checking
 - Agentic Retrieval
 - Multi-Hop Retrieval
 - Retrieval Fusion
-- Reciprocal Rank Fusion (RRF)
+
 - ColBERT
 - Late Interaction
 - Retrieval Grounding

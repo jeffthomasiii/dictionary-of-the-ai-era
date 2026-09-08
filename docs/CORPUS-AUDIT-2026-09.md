@@ -378,6 +378,90 @@ These are not recommended as separate entries now. Some are generic business phr
 - Cyborg Workflow
 - Vibe Debugging
 
+## Research Further promotion pass 1 — Batch E (published September 8, 2026)
+
+This batch is the first set promoted directly from **Research Further** after the original prequalified Publish queue was exhausted. Promotion reflects fresh evidence and reader value review; it does not create a new permanent editorial status or automatic promotion rule.
+
+### Agent Skills
+
+**Why promote and publish:** A packaging approach for giving AI agents reusable procedural knowledge through organized instructions, scripts, and resources that can be discovered and loaded when relevant to a task.
+
+**Usage evidence:** [Anthropic: Equipping agents for the real world with Agent Skills](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Agent Observability
+
+**Why promote and publish:** The methods and instrumentation used to inspect, monitor, trace, and evaluate the behavior and internal activity of AI agents, including model interactions, tool use, latency, errors, and execution paths.
+
+**Usage evidence:** [Google Cloud: Agent observability](https://docs.cloud.google.com/stackdriver/docs/observability/agent-observability)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### AI PC
+
+**Why promote and publish:** A personal computer designed with dedicated hardware for running artificial-intelligence workloads locally, typically combining a CPU and GPU with a neural processing unit or other specialized AI accelerator.
+
+**Usage evidence:** [Intel: What is an AI PC?](https://www.intel.com/content/www/us/en/support/articles/000099561/processors/intel-core-ultra-processors.html)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### NPU
+
+**Why promote and publish:** A neural processing unit: a specialized processor or accelerator optimized for neural-network and other AI workloads, often designed to perform highly parallel AI computations efficiently and at relatively low power.
+
+**Usage evidence:** [Microsoft: All about neural processing units (NPUs)](https://support.microsoft.com/en-us/windows/experience/compatibility/all-about-neural-processing-units-npus)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### High-Risk AI
+
+**Why promote and publish:** A regulatory classification under the European Union AI Act for certain AI systems that meet specified product or use-case criteria and are therefore subject to enhanced requirements and obligations. The term does not simply mean any AI system that seems dangerous.
+
+**Usage evidence:** [European Commission AI Act Service Desk: Article 6: Classification rules for high-risk AI systems](https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-6)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Reasoning Effort
+
+**Why promote and publish:** A configurable setting that controls how much reasoning computation a supported AI model uses before producing an answer, allowing developers or users to trade off response quality, latency, and token use.
+
+**Usage evidence:** [OpenAI: Introducing GPT-5 for developers](https://openai.com/index/introducing-gpt-5-for-developers/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Reciprocal Rank Fusion
+
+**Why promote and publish:** A rank-fusion method that combines multiple ranked result lists by assigning each result a score based on its reciprocal rank in each list and summing those contributions into one final ranking.
+
+**Usage evidence:** [Elastic: Reciprocal rank fusion](https://www.elastic.co/docs/reference/elasticsearch/rest-apis/reciprocal-rank-fusion)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Browser Use
+
+**Why promote and publish:** An AI capability that lets a model or agent work with websites through a web browser by opening pages, reading content, navigating links or tabs, and taking permitted browser actions.
+
+**Usage evidence:** [OpenAI: Using the built-in browser in the ChatGPT desktop app](https://help.openai.com/en/articles/20001277-using-the-built-in-browser-in-the-chatgpt-desktop-app)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### AI Memory
+
+**Why promote and publish:** Mechanisms that let an AI system retain, retrieve, or reuse information beyond the immediate turn so prior facts, preferences, events, or learned state can influence later interactions or agent behavior.
+
+**Usage evidence:** [Microsoft Security: Guarding AI memory](https://www.microsoft.com/en-us/security/blog/2026/06/22/guarding-ai-memory/)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
+### Local AI
+
+**Why promote and publish:** Running AI models and inference on a user-controlled device or local infrastructure rather than relying on a remote public-cloud AI service for the computation.
+
+**Usage evidence:** [Microsoft Learn: Choose between cloud-based and local AI models](https://learn.microsoft.com/en-us/windows/ai/cloud-ai); [Intel: Local AI and the Compute Architecture That Makes It Work](https://community.intel.com/t5/Blogs/Tech-Innovation/Edge-5G/Local-AI-and-the-Compute-Architecture-That-Makes-It-Work/post/1750535)
+
+**Provenance state:** `pending` — meaning/usage evidence is recorded; origin, first-known-use, and fuller history research remain open.
+
 ## Research Further
 
 All remaining unpublished candidates in `CORPUS-CANDIDATES.md`, including the newly added September 2026 expansion pool, are classified **Research Further** unless later promoted. This is intentionally conservative: candidate status records possible reader value, while publication requires actual evidence and human editorial judgment.
@@ -393,7 +477,7 @@ All remaining unpublished candidates in `CORPUS-CANDIDATES.md`, including the ne
 
 ## Expansion result
 
-This audit has now published 33 candidates across Batches A, B, C, and D and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
+This audit has now published 43 candidates across Batches A–E and added 172 new research candidates. The candidate inventory is intentionally broader than the publication queue; the goal is useful coverage without treating every AI-adjacent phrase as a dictionary entry.
 
 ## Follow-up
 
