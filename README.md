@@ -15,8 +15,8 @@ EpochLex is built to be used like a modern reference work rather than a static g
 
 The public site currently includes:
 
-- **100 published dictionary entries**;
-- **100 researched provenance records** with supporting sources;
+- **365 published dictionary entries**;
+- **183 researched provenance records and 182 pending provenance records** across the published corpus;
 - stable dedicated pages for every term;
 - plain-English definitions and natural usage examples;
 - written and audible pronunciation;
@@ -30,7 +30,7 @@ The public site currently includes:
 - canonical URLs, social metadata, structured data, sitemap, and robots directives;
 - a continuously updated Living Dictionary plus a defined annual-edition model.
 
-The 100-term corpus is an MVP floor, not a ceiling. EpochLex is intended to continue growing when new terms meet the editorial standard.
+The current 365-entry corpus is a foundation, not a target ceiling. Systematic bulk publication is paused during the current provenance-consolidation phase, while important new candidates can still be considered when they provide enough reader value to interrupt that pause.
 
 ## How it started
 
@@ -128,7 +128,7 @@ EpochLex is intended to be a dictionary, not a list of AI buzzwords or a vendor 
 
 Named AI organizations, products, model families, and individual models may qualify when understanding the name provides meaningful context for understanding AI-era terminology, technology, history, or culture. Inclusion is not automatic merely because an organization develops AI, a product uses AI, or a model has been released.
 
-Every published entry has a matching researched provenance record. A source that explains what an entry means does not automatically prove who coined, introduced, named, or released it or when it first appeared. EpochLex intentionally distinguishes meaning, origin, first known use, history, broader adoption, and current usage.
+Every published entry has a matching provenance record. Provenance status may be `researched` or `pending`: `pending` means the core entry is publishable while deeper claim-specific origin, first-known-use, or history research remains incomplete. A source that explains what an entry means does not automatically prove who coined, introduced, named, or released it or when it first appeared. EpochLex intentionally distinguishes meaning, origin, first known use, history, broader adoption, and current usage.
 
 AI may assist with discovery and research organization, but publication remains human reviewed.
 
@@ -184,7 +184,7 @@ The public site uses the custom domain **https://epochlex.justathoughtblog.org/*
 
 ## Roadmap
 
-The major MVP capabilities are implemented. Current work is focused on product quality and sustainable growth rather than feature count, including cross-device QA, contribution/review workflows, publishing verification, continued editorial corpus growth, and long-term maintenance.
+The major MVP capabilities are implemented. Current work is focused on product quality, provenance consolidation, contribution/review workflows, publishing verification, and long-term maintenance rather than feature or corpus count.
 
 See [`docs/ROADMAP.md`](docs/ROADMAP.md).
 
