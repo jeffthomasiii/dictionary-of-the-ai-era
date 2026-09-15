@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'epochlex-pwa-20260915-5';
+const CACHE_VERSION = 'epochlex-pwa-20260915-6';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
