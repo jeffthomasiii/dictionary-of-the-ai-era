@@ -1,0 +1,636 @@
+/* Compact installed-PWA presentation. Normal browser layouts remain unchanged. */
+
+html[data-pwa-standalone="true"] body{
+  --pwa-compact-gap:12px;
+}
+
+html[data-pwa-standalone="true"] .pwa-app-page-heading{
+  padding:22px 0 14px;
+}
+
+html[data-pwa-standalone="true"] .pwa-app-page-heading .eyebrow{
+  margin-bottom:6px;
+  color:var(--accent-strong,var(--accent));
+}
+
+html[data-pwa-standalone="true"] .pwa-app-page-heading h1{
+  margin:0;
+  font-size:clamp(2rem,10vw,3rem);
+  line-height:1.02;
+}
+
+html[data-pwa-standalone="true"] .pwa-app-page-heading>p:last-child{
+  margin:8px 0 0;
+  color:var(--muted);
+  font-size:.9rem;
+  line-height:1.45;
+}
+
+/* Browse */
+html[data-pwa-standalone="true"] body.pwa-view-browse .hero{
+  min-height:0;
+  padding:22px 0 18px;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .hero-inner{
+  display:block;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .hero-stats,
+html[data-pwa-standalone="true"] body.pwa-view-browse .hero-quote{
+  display:none!important;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .hero-copy{
+  width:100%;
+  max-width:none;
+  margin:0;
+  text-align:center;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .hero-copy .eyebrow{
+  margin-bottom:5px;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .hero-copy h1{
+  margin:0;
+  font-size:clamp(3rem,14vw,4.4rem);
+  line-height:.98;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .hero-copy .lede{
+  max-width:35rem;
+  margin:10px auto 14px;
+  font-size:.9rem;
+  line-height:1.45;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .search-wrap{
+  width:100%;
+  max-width:none;
+  margin:0;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .search-wrap input{
+  min-height:46px;
+  font-size:.92rem;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .toolbar{
+  width:100%;
+  margin-top:8px;
+  display:flex;
+  gap:6px;
+  flex-wrap:nowrap;
+  overflow-x:auto;
+  padding:1px 0 4px;
+  scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .toolbar::-webkit-scrollbar{display:none}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .filter{
+  flex:0 0 auto;
+  min-height:34px;
+  padding:6px 9px;
+  font-size:.67rem;
+  white-space:nowrap;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .filter .category-icon{
+  width:18px;
+  height:18px;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .hero-network{
+  opacity:.42;
+  transform:scale(.84);
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .hero-wave{
+  opacity:.6;
+  height:105px;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .wotd-home-section{
+  margin-top:12px;
+  margin-bottom:10px;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .wotd-home-card{
+  gap:12px;
+  padding:14px;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .wotd-home-main{
+  gap:5px;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .wotd-kicker{
+  font-size:.62rem;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .wotd-term{
+  margin:2px 0 0;
+  font-size:2rem;
+  line-height:1;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .wotd-pronunciation-row{
+  margin-top:2px;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .wotd-definition{
+  margin:6px 0 4px;
+  font-size:.88rem;
+  line-height:1.42;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:3;
+  overflow:hidden;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .wotd-categories{
+  margin-top:2px;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .wotd-category:not(:first-child){display:none}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .wotd-home-actions{
+  gap:8px;
+  padding-left:12px;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .wotd-home-date{
+  font-size:.62rem;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .wotd-action-link{
+  min-height:32px;
+  font-size:.72rem;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .dictionary-section{
+  padding-top:8px;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .dictionary-meta{
+  margin-bottom:10px;
+  min-height:0;
+  gap:8px;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .browse-label{
+  font-size:.68rem;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .alpha-nav{
+  gap:2px;
+  overflow-x:auto;
+  flex-wrap:nowrap;
+  scrollbar-width:none;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .alpha-nav::-webkit-scrollbar{display:none}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .alpha-nav button{
+  min-width:25px;
+  width:25px;
+  height:28px;
+  padding:0;
+  font-size:.67rem;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .view-toggle{
+  display:none!important;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse #result-count{
+  font-size:.68rem;
+  white-space:nowrap;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .letter-group{
+  margin-top:10px;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .letter-heading{
+  margin-bottom:6px;
+  font-size:.72rem;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .entry{
+  padding:11px 12px;
+  gap:7px;
+  border-radius:12px;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .term-name{
+  margin:0;
+  font-size:1.4rem;
+  line-height:1.05;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .pronunciation-row{
+  margin-top:3px;
+  font-size:.74rem;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .part-of-speech,
+html[data-pwa-standalone="true"] body.pwa-view-browse .example-block,
+html[data-pwa-standalone="true"] body.pwa-view-browse .definition-block .entry-label,
+html[data-pwa-standalone="true"] body.pwa-view-browse .entry-meta{
+  display:none!important;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .definition-block{
+  margin:0;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .definition{
+  margin:0;
+  font-size:.84rem;
+  line-height:1.42;
+}
+
+/* Categories */
+html[data-pwa-standalone="true"] body.pwa-view-categories main>.page-hero,
+html[data-pwa-standalone="true"] body.pwa-view-categories main>.content-page{
+  display:none!important;
+}
+
+html[data-pwa-standalone="true"] .pwa-category-app{
+  padding-bottom:18px;
+}
+
+html[data-pwa-standalone="true"] .pwa-category-card-list{
+  display:grid;
+  gap:9px;
+}
+
+html[data-pwa-standalone="true"] .pwa-category-card{
+  display:grid;
+  grid-template-columns:44px minmax(0,1fr) auto 18px;
+  align-items:center;
+  gap:10px;
+  padding:11px 12px;
+  border:1px solid var(--line);
+  border-radius:13px;
+  background:var(--surface);
+  color:var(--ink);
+  text-decoration:none;
+  box-shadow:0 5px 16px rgba(15,29,45,.04);
+}
+
+html[data-theme="dark"][data-pwa-standalone="true"] .pwa-category-card{
+  box-shadow:none;
+}
+
+html[data-pwa-standalone="true"] .pwa-category-card:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:2px;
+}
+
+html[data-pwa-standalone="true"] .pwa-category-icon{
+  width:42px;
+  height:42px;
+  display:grid;
+  place-items:center;
+  border-radius:12px;
+  background:var(--surface-2);
+}
+
+html[data-pwa-standalone="true"] .pwa-category-icon svg{
+  width:23px;
+  height:23px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.65;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+html[data-pwa-standalone="true"] .pwa-category-card--culture .pwa-category-icon{color:var(--culture);background:color-mix(in srgb,var(--culture) 10%,var(--surface))}
+html[data-pwa-standalone="true"] .pwa-category-card--work .pwa-category-icon{color:var(--work);background:color-mix(in srgb,var(--work) 10%,var(--surface))}
+html[data-pwa-standalone="true"] .pwa-category-card--systems .pwa-category-icon{color:var(--systems);background:color-mix(in srgb,var(--systems) 10%,var(--surface))}
+html[data-pwa-standalone="true"] .pwa-category-card--risks .pwa-category-icon{color:var(--risks);background:color-mix(in srgb,var(--risks) 10%,var(--surface))}
+html[data-pwa-standalone="true"] .pwa-category-card--entities .pwa-category-icon{color:var(--entities,var(--accent));background:color-mix(in srgb,var(--entities,var(--accent)) 10%,var(--surface))}
+
+html[data-pwa-standalone="true"] .pwa-category-copy strong{
+  display:block;
+  font:700 .88rem/1.2 Inter,ui-sans-serif,system-ui,sans-serif;
+}
+
+html[data-pwa-standalone="true"] .pwa-category-copy small{
+  display:block;
+  margin-top:2px;
+  color:var(--muted);
+  font:.71rem/1.3 Inter,ui-sans-serif,system-ui,sans-serif;
+}
+
+html[data-pwa-standalone="true"] .pwa-category-count{
+  color:var(--muted);
+  font:700 .65rem/1 Inter,ui-sans-serif,system-ui,sans-serif;
+  white-space:nowrap;
+}
+
+html[data-pwa-standalone="true"] .pwa-category-chevron{
+  color:var(--muted);
+  font-size:1.4rem;
+  line-height:1;
+}
+
+/* Word of the Day */
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-page-intro{
+  display:none!important;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-page-shell{
+  padding-top:14px;
+  padding-bottom:18px;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-feature-card{
+  position:relative;
+  padding:16px 14px 14px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:7px 12px;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-feature-card::before{
+  content:"Word of the Day";
+  grid-column:1;
+  grid-row:1;
+  align-self:center;
+  color:var(--accent-strong,var(--accent));
+  font:800 .62rem/1 Inter,ui-sans-serif,system-ui,sans-serif;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-date{
+  grid-column:2;
+  grid-row:1;
+  align-self:center;
+  margin:0;
+  font-size:.61rem;
+  white-space:nowrap;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-page-term,
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-pronunciation-row,
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-page-definition,
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-page-actions{
+  grid-column:1/-1;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-page-term{
+  margin:4px 0 0;
+  font-size:clamp(2.25rem,12vw,3.35rem);
+  line-height:.98;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-pronunciation-row{
+  margin:0;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-pos,
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-categories,
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-example,
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-time-note{
+  display:none!important;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-page-definition{
+  margin:8px 0 4px;
+  font-size:1rem;
+  line-height:1.46;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-page-actions{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:8px;
+  margin-top:6px;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-action-link{
+  min-height:43px;
+  justify-content:flex-start;
+  padding:8px 9px;
+  font-size:.7rem;
+  line-height:1.2;
+  border:1px solid var(--line);
+  border-radius:10px;
+  background:var(--surface-2);
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-action-icon{
+  width:21px;
+  height:21px;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-history-section{
+  margin-top:14px;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-history-heading{
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:end;
+  gap:4px 10px;
+  margin-bottom:6px;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-history-heading h2{
+  margin:0;
+  font-size:1.45rem;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-history-heading p{
+  grid-column:1;
+  margin:1px 0 0;
+  font-size:.7rem;
+}
+
+html[data-pwa-standalone="true"] .pwa-history-toggle{
+  grid-column:2;
+  grid-row:1/3;
+  align-self:center;
+  border:0;
+  background:transparent;
+  color:var(--accent-strong,var(--accent));
+  font:700 .7rem/1 Inter,ui-sans-serif,system-ui,sans-serif;
+  cursor:pointer;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-history-list{
+  margin:0;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-history-row{
+  min-height:42px;
+  padding:7px 8px;
+  grid-template-columns:58px minmax(0,1fr) auto;
+  gap:7px;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-history-term a{
+  font-size:.82rem;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-history-term span{
+  display:none;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-history-date,
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-today-badge{
+  font-size:.62rem;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-history-row:nth-child(n+6){
+  display:none;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .pwa-history-expanded .wotd-history-row:nth-child(n+6){
+  display:grid;
+}
+
+/* About */
+html[data-pwa-standalone="true"] body.pwa-view-about main>.page-hero,
+html[data-pwa-standalone="true"] body.pwa-view-about main>.content-page{
+  display:none!important;
+}
+
+html[data-pwa-standalone="true"] .pwa-about-app{
+  padding-bottom:18px;
+}
+
+html[data-pwa-standalone="true"] .pwa-about-card-list,
+html[data-pwa-standalone="true"] .pwa-about-secondary-list{
+  display:grid;
+  gap:8px;
+}
+
+html[data-pwa-standalone="true"] .pwa-about-secondary-list{
+  margin-top:12px;
+}
+
+html[data-pwa-standalone="true"] .pwa-about-card{
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:var(--surface);
+  overflow:hidden;
+}
+
+html[data-pwa-standalone="true"] .pwa-about-card>summary{
+  list-style:none;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:10px;
+  min-height:64px;
+  padding:11px 12px;
+  cursor:pointer;
+}
+
+html[data-pwa-standalone="true"] .pwa-about-card>summary::-webkit-details-marker{display:none}
+html[data-pwa-standalone="true"] .pwa-about-card>summary::marker{content:""}
+
+html[data-pwa-standalone="true"] .pwa-about-card>summary strong{
+  display:block;
+  color:var(--ink);
+  font:700 .9rem/1.22 Inter,ui-sans-serif,system-ui,sans-serif;
+}
+
+html[data-pwa-standalone="true"] .pwa-about-card>summary small{
+  display:block;
+  margin-top:3px;
+  color:var(--muted);
+  font:.71rem/1.3 Inter,ui-sans-serif,system-ui,sans-serif;
+}
+
+html[data-pwa-standalone="true"] .pwa-about-chevron{
+  color:var(--muted);
+  font-size:1.4rem;
+  transition:transform .16s ease;
+}
+
+html[data-pwa-standalone="true"] .pwa-about-card[open] .pwa-about-chevron{
+  transform:rotate(90deg);
+}
+
+html[data-pwa-standalone="true"] .pwa-about-card-content{
+  padding:0 12px 12px;
+  border-top:1px solid var(--line);
+}
+
+html[data-pwa-standalone="true"] .pwa-about-card-content .doc-card,
+html[data-pwa-standalone="true"] .pwa-about-card-content .doc-section,
+html[data-pwa-standalone="true"] .pwa-about-card-content .doc-callout{
+  margin:0;
+  padding:12px 0 0;
+  border:0;
+  box-shadow:none;
+  background:transparent;
+}
+
+html[data-pwa-standalone="true"] .pwa-about-card-content .doc-kicker,
+html[data-pwa-standalone="true"] .pwa-about-card-content h2{
+  display:none;
+}
+
+html[data-pwa-standalone="true"] .pwa-about-card-content p,
+html[data-pwa-standalone="true"] .pwa-about-card-content li{
+  font-size:.82rem;
+  line-height:1.5;
+}
+
+html[data-pwa-standalone="true"] .pwa-about-card-content .doc-feature-columns{
+  grid-template-columns:1fr;
+  gap:4px;
+}
+
+html[data-pwa-standalone="true"] .pwa-about-card-content .doc-link-row{
+  gap:6px;
+  flex-wrap:wrap;
+}
+
+html[data-pwa-standalone="true"] .pwa-about-card-content .doc-link-row a{
+  font-size:.72rem;
+}
+
+html[data-pwa-standalone="true"] .pwa-about-card--secondary{
+  background:var(--surface-2);
+}
+
+@media(max-width:430px){
+  html[data-pwa-standalone="true"] .pwa-category-card{
+    grid-template-columns:40px minmax(0,1fr) auto 14px;
+    gap:8px;
+    padding:10px;
+  }
+
+  html[data-pwa-standalone="true"] .pwa-category-icon{
+    width:38px;
+    height:38px;
+  }
+
+  html[data-pwa-standalone="true"] .pwa-category-count{
+    font-size:.6rem;
+  }
+
+  html[data-pwa-standalone="true"] body.pwa-view-word .wotd-page-actions{
+    gap:6px;
+  }
+
+  html[data-pwa-standalone="true"] body.pwa-view-word .wotd-action-link{
+    padding:8px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  html[data-pwa-standalone="true"] .pwa-about-chevron{transition:none}
+}
