@@ -66,6 +66,11 @@
     document.body.classList.add(`pwa-view-${name}`);
   }
 
+  function afterPageLoad(callback) {
+    if (document.readyState === 'complete') callback();
+    else window.addEventListener('load', callback, { once: true });
+  }
+
   function restorePendingCategory() {
     let category = null;
     try {
@@ -74,17 +79,17 @@
     } catch (_) {}
     if (!category) return;
 
-    window.addEventListener('load', () => {
+    afterPageLoad(() => {
       const button = [...document.querySelectorAll('.filter')].find(item => item.dataset.category === category);
       if (!button) return;
       button.click();
       requestAnimationFrame(() => document.getElementById('browse')?.scrollIntoView({ block: 'start' }));
-    }, { once: true });
+    });
   }
 
   function refineBrowse() {
     markView('browse');
-    document.getElementById('list-view')?.click();
+    afterPageLoad(() => document.getElementById('list-view')?.click());
     restorePendingCategory();
   }
 
@@ -192,6 +197,7 @@
     });
 
     waitFor('.wotd-history-list', list => {
+      if (list.children.length <= 5) return;
       const section = list.closest('.wotd-history-section');
       const heading = section?.querySelector('.wotd-history-heading');
       if (!section || !heading || heading.querySelector('.pwa-history-toggle')) return;
