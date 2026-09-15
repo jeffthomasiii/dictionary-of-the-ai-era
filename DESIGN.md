@@ -346,7 +346,18 @@ The custom domain is the current canonical public base. Publishing changes shoul
 
 ## Dates and living status
 
-When the interface displays an updated date, use a human-readable full date such as **August 28, 2026** rather than only the year. The Living Dictionary status is conceptually separate from the last-updated date.
+The homepage **Updated** date is a Living Dictionary freshness indicator, not a deployment timestamp. It records the most recent date on which published EpochLex dictionary content received a substantive reader-facing change.
+
+Advance the date when a published change materially affects the dictionary itself, including:
+
+- adding a new published term;
+- materially revising a definition, example, category, status, alias, or other reader-facing entry content;
+- adding or materially revising provenance, origin, first-known-use, history, sources, or research status for a published entry when that changes what readers can learn from the entry;
+- making a substantive corpus correction that changes meaning or classification.
+
+Do **not** advance the date for UI or PWA changes, code refactoring, documentation-only changes, SEO or metadata maintenance, build/cache/deployment work, or purely typographic/copyediting fixes that do not materially change dictionary content.
+
+The value is maintained manually in `index.html` and should be updated in the same change that introduces the qualifying Living Dictionary content update. Display it as a human-readable full date such as **September 8, 2026**. The **Living** status is conceptually separate from this date.
 
 Word of the Day uses the EpochLex calendar date in Pacific Time and changes at midnight Pacific Time.
 
