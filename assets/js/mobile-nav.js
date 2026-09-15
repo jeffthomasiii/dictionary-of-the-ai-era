@@ -1,4 +1,17 @@
 (() => {
+  const currentScript = document.currentScript;
+  const assetVersion = new URL(currentScript?.src || window.location.href).searchParams.get('v');
+  const siteRoot = currentScript?.src ? new URL('../../', currentScript.src) : new URL('./', window.location.href);
+
+  if (currentScript?.src && !document.querySelector('script[data-pwa-loader]')) {
+    const pwaScript = document.createElement('script');
+    const pwaUrl = new URL('pwa.js', currentScript.src);
+    pwaUrl.searchParams.set('v', 'epochlex-pwa-20260915-2');
+    pwaScript.src = pwaUrl.href;
+    pwaScript.dataset.pwaLoader = 'true';
+    document.head.append(pwaScript);
+  }
+
   const header = document.querySelector('.site-header');
   const headerInner = header?.querySelector('.header-inner');
   const desktopNav = header?.querySelector('.primary-nav');
@@ -6,9 +19,6 @@
 
   if (!header || !headerInner || !desktopNav || header.querySelector('.mobile-nav-details')) return;
 
-  const currentScript = document.currentScript;
-  const assetVersion = new URL(currentScript?.src || window.location.href).searchParams.get('v');
-  const siteRoot = currentScript?.src ? new URL('../../', currentScript.src) : new URL('./', window.location.href);
   if (currentScript?.src && !document.querySelector('link[data-mobile-nav-styles]')) {
     const styles = document.createElement('link');
     styles.rel = 'stylesheet';
@@ -17,15 +27,6 @@
     styles.href = stylesUrl.href;
     styles.dataset.mobileNavStyles = 'true';
     document.head.append(styles);
-  }
-
-  if (currentScript?.src && !document.querySelector('script[data-pwa-loader]')) {
-    const pwaScript = document.createElement('script');
-    const pwaUrl = new URL('pwa.js', currentScript.src);
-    if (assetVersion) pwaUrl.searchParams.set('v', assetVersion);
-    pwaScript.src = pwaUrl.href;
-    pwaScript.dataset.pwaLoader = 'true';
-    document.head.append(pwaScript);
   }
 
   const details = document.createElement('details');
