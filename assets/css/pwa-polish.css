@@ -65,6 +65,11 @@ html[data-pwa-standalone="true"] body.pwa-view-browse .filter.systems.active{bor
 html[data-pwa-standalone="true"] body.pwa-view-browse .filter.risks.active{border-color:var(--risks)}
 html[data-pwa-standalone="true"] body.pwa-view-browse .filter.entities.active{border-color:var(--entities,var(--accent-secondary,var(--accent)))}
 
+/* In the installed app, Browse stays focused on search, filtering, and dictionary scanning. */
+html[data-pwa-standalone="true"] body.pwa-view-browse .wotd-home-section{
+  display:none!important;
+}
+
 /* Word of the Day: category cue and streamlined history rows */
 html[data-pwa-standalone="true"] body.pwa-view-word .wotd-feature-card{
   border-left-width:3px;
@@ -78,13 +83,29 @@ html[data-pwa-standalone="true"] body.pwa-view-word .wotd-feature-card:has(.wotd
 
 html[data-pwa-standalone="true"] body.pwa-view-word .wotd-history-row{
   position:relative;
-  grid-template-columns:58px minmax(0,1fr) auto;
+  grid-template-columns:58px minmax(0,1fr) auto!important;
   align-items:center;
-  padding-right:32px;
+  gap:8px;
+  padding-right:34px;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-history-date{
+  grid-column:1!important;
+  grid-row:1!important;
+  align-self:center;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-history-term{
+  grid-column:2!important;
+  grid-row:1!important;
+  min-width:0;
+  align-self:center;
 }
 
 html[data-pwa-standalone="true"] body.pwa-view-word .wotd-today-badge{
-  justify-self:end;
+  grid-column:3!important;
+  grid-row:1!important;
+  justify-self:end!important;
   align-self:center;
   margin:0;
   white-space:nowrap;
@@ -121,4 +142,14 @@ html[data-pwa-standalone="true"] body.pwa-view-about .pwa-app-page-heading .eyeb
   html[data-pwa-standalone="true"] body.pwa-view-browse .toolbar{gap:5px}
   html[data-pwa-standalone="true"] body.pwa-view-browse .filter{min-height:38px;padding:4px}
   html[data-pwa-standalone="true"] body.pwa-view-browse .filter .category-icon{width:20px;height:20px}
+
+  html[data-pwa-standalone="true"] body.pwa-view-word .wotd-history-row{
+    grid-template-columns:50px minmax(0,1fr) auto!important;
+    gap:6px;
+  }
+
+  html[data-pwa-standalone="true"] body.pwa-view-word .wotd-today-badge{
+    padding-inline:6px;
+    font-size:.58rem;
+  }
 }

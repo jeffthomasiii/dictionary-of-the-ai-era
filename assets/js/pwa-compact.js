@@ -7,7 +7,7 @@
   if (!document.querySelector('link[data-pwa-polish-styles]')) {
     const styles = document.createElement('link');
     styles.rel = 'stylesheet';
-    styles.href = new URL('assets/css/pwa-polish.css?v=epochlex-pwa-polish-20260915-1', siteRoot).href;
+    styles.href = new URL('assets/css/pwa-polish.css?v=epochlex-pwa-polish-20260915-2', siteRoot).href;
     styles.dataset.pwaPolishStyles = 'true';
     document.head.append(styles);
   }
