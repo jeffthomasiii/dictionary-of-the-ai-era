@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#0F1D2D">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="EpochLex">
+  <title>Word of the Day · EpochLex</title>
+  <meta name="description" content="Discover today's randomly selected EpochLex term from the Dictionary of the AI Era.">
+  <link rel="canonical" href="https://epochlex.justathoughtblog.org/word-of-the-day/">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <meta property="og:site_name" content="EpochLex">
+  <meta property="og:title" content="Word of the Day · EpochLex">
+  <meta property="og:description" content="Discover today's randomly selected EpochLex term from the Dictionary of the AI Era.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://epochlex.justathoughtblog.org/word-of-the-day/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Word of the Day · EpochLex">
+  <meta name="twitter:description" content="Discover today's randomly selected EpochLex term from the Dictionary of the AI Era.">
+  <script>
+    (() => {
+      const saved = localStorage.getItem("ai-era-theme");
+      const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.dataset.theme = saved || (systemDark ? "dark" : "light");
+    })();
+  </script>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/term-pages.css">
+  <link rel="stylesheet" href="../assets/css/brand-theme.css">
+  <link rel="stylesheet" href="../assets/css/word-of-the-day.css?v=epochlex-wotd-20260915-1">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../" aria-label="EpochLex home">
+        <span class="brand-lockup" aria-hidden="true"><img class="brand-lockup-image brand-lockup-light" src="../assets/brand/epochlex/epochlex-logo-horizontal-light.png" alt=""><img class="brand-lockup-image brand-lockup-dark" src="../assets/brand/epochlex/epochlex-logo-horizontal-dark.png" alt=""></span><span class="sr-only">EpochLex</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="../">Browse</a>
+        <a href="../categories.html">Categories</a>
+        <a href="../about.html">About</a>
+        <a href="../contribute.html">Contribute</a>
+        <a href="../methodology.html">Methodology</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">
+        <span class="sun" aria-hidden="true">☼</span><span class="toggle-track"><span class="toggle-knob"></span></span><span class="moon" aria-hidden="true">☾</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="shell wotd-page-shell">
+    <header class="wotd-page-intro">
+      <p class="eyebrow">Dictionary of the AI Era</p>
+      <h1>Word of the Day</h1>
+      <p>A randomly selected term from the EpochLex dictionary, refreshed each day at midnight Pacific Time.</p>
+    </header>
+
+    <div id="word-of-day-page" data-wotd-loading>
+      <p class="wotd-loading">Loading today's word…</p>
+    </div>
+
+    <section id="previous-words" class="wotd-history-section" aria-labelledby="previous-words-heading">
+      <div class="wotd-history-heading">
+        <h2 id="previous-words-heading">Previous Words</h2>
+        <p>Recent Word of the Day selections</p>
+      </div>
+      <div id="word-of-day-history" data-wotd-loading>
+        <p class="wotd-loading">Loading recent words…</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner"><span class="footer-mark" aria-hidden="true">◎</span><p><strong>EpochLex · Dictionary of the AI Era</strong><br>Vibe coded · Human-directed · AI-assisted · Human-reviewed</p><p class="footer-license">Code: MIT · Content: CC BY 4.0</p></div>
+  </footer>
+
+  <script src="../assets/js/pwa.js?v=epochlex-pwa-20260829-2" data-pwa-loader></script>
+  <script src="../assets/js/app.js?v=epochlex-20260829-1"></script>
+  <script src="../assets/js/word-of-the-day.js?v=epochlex-wotd-20260915-1"></script>
+</body>
+</html>
