@@ -12,7 +12,7 @@
   if (!document.querySelector('link[data-wotd-styles]')) {
     const styles = document.createElement('link');
     styles.rel = 'stylesheet';
-    styles.href = new URL('assets/css/word-of-the-day.css?v=epochlex-wotd-20260915-1', siteRoot).href;
+    styles.href = new URL('assets/css/word-of-the-day.css?v=epochlex-wotd-20260915-2', siteRoot).href;
     styles.dataset.wotdStyles = 'true';
     document.head.append(styles);
   }
@@ -140,7 +140,6 @@
   function renderHome(term, date) {
     const container = document.getElementById('word-of-day-home');
     if (!container || !term) return;
-    const entryUrl = new URL(`terms/${encodeURIComponent(term.slug)}/`, siteRoot).href;
     const pageUrl = new URL('word-of-the-day/', siteRoot).href;
 
     container.innerHTML = `
@@ -153,9 +152,8 @@
           <div class="wotd-categories">${categoryMarkup(term)}</div>
         </div>
         <div class="wotd-home-actions">
-          <a class="wotd-primary-link" href="${pageUrl}">Explore today's word <span aria-hidden="true">→</span></a>
-          <a class="wotd-secondary-link" href="${pageUrl}#previous-words">View previous words <span aria-hidden="true">→</span></a>
-          <a class="wotd-text-link" href="${entryUrl}">Open complete entry</a>
+          <a class="wotd-action-link" href="${pageUrl}">View today's word <span aria-hidden="true">→</span></a>
+          <a class="wotd-action-link" href="${pageUrl}#previous-words">Previous words <span aria-hidden="true">→</span></a>
         </div>
       </div>`;
     wirePronunciation(container, term);
@@ -168,7 +166,6 @@
 
     container.innerHTML = `
       <article class="wotd-feature-card">
-        <p class="wotd-kicker">Word of the Day</p>
         <time class="wotd-date" datetime="${date}">${esc(formatDate(date))}</time>
         <h1 class="wotd-page-term">${esc(term.term)}</h1>
         <div class="wotd-pronunciation-row">${pronunciationMarkup(term, 'pronunciation-button')}</div>
@@ -177,8 +174,8 @@
         <p class="wotd-page-definition">${esc(term.definition)}</p>
         ${term.example ? `<section class="wotd-example"><span>In use</span><p><em>${esc(term.example)}</em></p></section>` : ''}
         <div class="wotd-page-actions">
-          <a class="wotd-primary-link" href="${entryUrl}">Explore the complete ${esc(term.term)} entry <span aria-hidden="true">→</span></a>
-          <button id="wotd-share" class="wotd-share-button" type="button">Share today's word</button>
+          <a class="wotd-action-link" href="${entryUrl}">View complete entry <span aria-hidden="true">→</span></a>
+          <button id="wotd-share" class="wotd-action-link wotd-share-link" type="button">Share today's word</button>
         </div>
         <p class="wotd-time-note">Word of the Day changes daily at midnight Pacific Time.</p>
       </article>`;
