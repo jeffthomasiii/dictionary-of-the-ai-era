@@ -3,6 +3,15 @@
 
   const script = document.currentScript;
   const siteRoot = script?.src ? new URL('../../', script.src) : new URL('./', window.location.href);
+
+  if (!document.querySelector('link[data-pwa-polish-styles]')) {
+    const styles = document.createElement('link');
+    styles.rel = 'stylesheet';
+    styles.href = new URL('assets/css/pwa-polish.css?v=epochlex-pwa-polish-20260915-1', siteRoot).href;
+    styles.dataset.pwaPolishStyles = 'true';
+    document.head.append(styles);
+  }
+
   const path = (() => {
     const rootPath = siteRoot.pathname.endsWith('/') ? siteRoot.pathname : `${siteRoot.pathname}/`;
     const current = window.location.pathname;
@@ -171,8 +180,8 @@
     app.className = 'pwa-about-app shell';
     app.innerHTML = `
       <header class="pwa-app-page-heading">
-        <p class="eyebrow">About EpochLex</p>
-        <h1>Dictionary of the AI Era</h1>
+        <p class="eyebrow">Dictionary of the AI Era</p>
+        <h1>About EpochLex</h1>
         <p>A living, open-source reference for the language developing around artificial intelligence.</p>
       </header>
       <div class="pwa-about-card-list"></div>
