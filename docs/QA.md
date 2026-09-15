@@ -51,6 +51,8 @@ On desktop, test the public site without a mouse:
 5. Confirm Escape clears and exits focused Browse search.
 6. Open the mobile navigation with keyboard input at a narrow viewport and confirm Escape closes it and restores focus to the menu control.
 
+For the installed PWA, also confirm the bottom navigation can be traversed by keyboard, the active destination is exposed programmatically, the More control opens the secondary sheet, and Escape closes the sheet and restores focus to More.
+
 ## Screen-reader and semantics checks
 
 Spot-check with at least one common screen reader/browser combination when practical.
@@ -58,6 +60,8 @@ Spot-check with at least one common screen reader/browser combination when pract
 Verify:
 
 - primary and mobile navigation are announced as navigation landmarks;
+- the installed PWA bottom navigation is announced as app navigation;
+- the PWA More sheet is announced as a modal dialog with a meaningful title;
 - the Browse result count is announced when filtering changes results;
 - category filters communicate pressed/not-pressed state;
 - list/grid view controls communicate the active state;
@@ -88,6 +92,32 @@ At each size, check:
 - footer wrapping;
 - no clipped controls, horizontal page overflow, or unreachable content.
 
+## Installed PWA checks
+
+The installed PWA is intentionally a different navigation shell over the same EpochLex content. Test both browser mode and actual standalone mode; viewport width alone is not a substitute for installed-PWA testing.
+
+In normal desktop and mobile-browser mode, confirm:
+
+- the existing primary/hamburger navigation remains unchanged;
+- no bottom app navigation is rendered;
+- the normal site footer remains visible;
+- responsive developer-tool testing does not accidentally trigger the app shell solely because the viewport is narrow.
+
+In standalone/install mode, confirm:
+
+- the normal desktop navigation and mobile hamburger menu are hidden;
+- the compact branded header is visible and the theme toggle still works;
+- the bottom navigation shows Browse, Categories, Word, About, and More;
+- Browse is active for the homepage and dedicated term pages;
+- Categories, Word, and About become active on their corresponding destinations;
+- More is active on Contribute and Methodology;
+- More opens the secondary sheet and its links remain reachable;
+- bottom navigation and sheets respect device safe areas and do not cover page content;
+- the normal site footer is omitted from the installed shell;
+- light and dark themes both preserve readable contrast and active-state visibility;
+- the primary app destinations remain usable after loss of connectivity when they have been included in the core service-worker cache;
+- older/lean term pages still receive a usable standalone header and bottom navigation.
+
 ## Theme checks
 
 Check light and dark modes for:
@@ -97,6 +127,7 @@ Check light and dark modes for:
 - semantic category accents that remain distinguishable;
 - pronunciation controls and active states;
 - mobile menu and filter surfaces;
+- installed PWA header, bottom navigation, and More sheet;
 - term-page sources and relationship cards.
 
 The site should remain usable if local storage is unavailable. A saved theme/view preference may not persist in that case, but content and controls should continue to function.
@@ -137,16 +168,19 @@ Add explicit shared speech overrides when a browser is likely to interpret an ac
 
 ## Regression checks after shared UI changes
 
-Any change to `assets/js/app.js`, shared CSS, mobile navigation, or term-page rendering should trigger a quick review of:
+Any change to `assets/js/app.js`, shared CSS, mobile navigation, PWA shell behavior, or term-page rendering should trigger a quick review of:
 
-- Browse on desktop and mobile;
+- Browse on desktop and mobile browser;
+- Browse in an installed/standalone PWA;
 - at least one dedicated term page;
 - at least one `researched` entry and, once present in the corpus, at least one `pending` entry;
-- About, Categories, Contribute, and Methodology;
+- About, Categories, Contribute, Methodology, and Word of the Day;
 - theme switching;
 - pronunciation;
 - keyboard focus;
-- mobile navigation.
+- mobile browser navigation;
+- standalone bottom navigation and More sheet;
+- offline-aware navigation after service-worker updates.
 
 ## Known limitation of automated QA
 
