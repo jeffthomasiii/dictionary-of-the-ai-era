@@ -9,6 +9,25 @@
   const ALGORITHM_VERSION = 'epochlex-wotd-v1';
   const NO_REPEAT_DAYS = 90;
 
+  if (!document.querySelector('link[data-wotd-styles]')) {
+    const styles = document.createElement('link');
+    styles.rel = 'stylesheet';
+    styles.href = new URL('assets/css/word-of-the-day.css?v=epochlex-wotd-20260915-1', siteRoot).href;
+    styles.dataset.wotdStyles = 'true';
+    document.head.append(styles);
+  }
+
+  const browse = document.getElementById('browse');
+  if (browse && !document.getElementById('word-of-day-home')) {
+    const section = document.createElement('section');
+    section.id = 'word-of-day-home';
+    section.className = 'shell wotd-home-section';
+    section.dataset.wotdLoading = 'true';
+    section.setAttribute('aria-label', 'Word of the Day');
+    section.innerHTML = '<p class="wotd-loading">Loading Word of the Day…</p>';
+    browse.parentNode.insertBefore(section, browse);
+  }
+
   const esc = (value = '') => String(value).replace(/[&<>"']/g, ch => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   }[ch]));
