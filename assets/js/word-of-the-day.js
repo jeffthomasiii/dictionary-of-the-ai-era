@@ -12,7 +12,7 @@
   if (!document.querySelector('link[data-wotd-styles]')) {
     const styles = document.createElement('link');
     styles.rel = 'stylesheet';
-    styles.href = new URL('assets/css/word-of-the-day.css?v=epochlex-wotd-20260915-2', siteRoot).href;
+    styles.href = new URL('assets/css/word-of-the-day.css?v=epochlex-wotd-20260915-3', siteRoot).href;
     styles.dataset.wotdStyles = 'true';
     document.head.append(styles);
   }
@@ -33,6 +33,12 @@
   }[ch]));
 
   const isYmd = value => /^\d{4}-\d{2}-\d{2}$/.test(value || '');
+
+  const icons = {
+    book: '<svg class="wotd-action-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5c2.8-.8 5.5-.4 8 1.2v12c-2.5-1.6-5.2-2-8-1.2v-12Z"/><path d="M20 5.5c-2.8-.8-5.5-.4-8 1.2v12c2.5-1.6 5.2-2 8-1.2v-12Z"/></svg>',
+    history: '<svg class="wotd-action-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8V4m0 0h4M4 4l3 3a7 7 0 1 1-2 5"/><path d="M12 8v4l3 2"/></svg>',
+    share: '<svg class="wotd-action-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.5-4.4M8.2 13.2l7.5 4.4"/></svg>'
+  };
 
   function getEpochLexDate(now = new Date()) {
     const parts = new Intl.DateTimeFormat('en-US', {
@@ -145,15 +151,16 @@
     container.innerHTML = `
       <div class="wotd-home-card">
         <div class="wotd-home-main">
-          <div class="wotd-kicker-row"><span class="wotd-kicker">Word of the Day</span><time datetime="${date}">${esc(formatDate(date))}</time></div>
+          <div class="wotd-kicker-row"><span class="wotd-kicker">Word of the Day</span></div>
           <h2 class="wotd-term">${esc(term.term)}</h2>
           <div class="wotd-pronunciation-row">${pronunciationMarkup(term, 'pronunciation-button')}</div>
           <p class="wotd-definition">${esc(term.definition)}</p>
           <div class="wotd-categories">${categoryMarkup(term)}</div>
         </div>
         <div class="wotd-home-actions">
-          <a class="wotd-action-link" href="${pageUrl}">View today's word <span aria-hidden="true">→</span></a>
-          <a class="wotd-action-link" href="${pageUrl}#previous-words">Previous words <span aria-hidden="true">→</span></a>
+          <time class="wotd-home-date" datetime="${date}">${esc(formatDate(date))}</time>
+          <a class="wotd-action-link" href="${pageUrl}">${icons.book}<span>View today's word</span><span aria-hidden="true">→</span></a>
+          <a class="wotd-action-link" href="${pageUrl}#previous-words">${icons.history}<span>Previous words</span><span aria-hidden="true">→</span></a>
         </div>
       </div>`;
     wirePronunciation(container, term);
@@ -174,8 +181,8 @@
         <p class="wotd-page-definition">${esc(term.definition)}</p>
         ${term.example ? `<section class="wotd-example"><span>In use</span><p><em>${esc(term.example)}</em></p></section>` : ''}
         <div class="wotd-page-actions">
-          <a class="wotd-action-link" href="${entryUrl}">View complete entry <span aria-hidden="true">→</span></a>
-          <button id="wotd-share" class="wotd-action-link wotd-share-link" type="button">Share today's word</button>
+          <a class="wotd-action-link" href="${entryUrl}">${icons.book}<span>View complete entry</span><span aria-hidden="true">→</span></a>
+          <button id="wotd-share" class="wotd-action-link wotd-share-link" type="button">${icons.share}<span class="wotd-share-label">Share today's word</span></button>
         </div>
         <p class="wotd-time-note">Word of the Day changes daily at midnight Pacific Time.</p>
       </article>`;
@@ -183,6 +190,7 @@
     wirePronunciation(container, term);
 
     const shareButton = document.getElementById('wotd-share');
+    const shareLabel = shareButton?.querySelector('.wotd-share-label');
     shareButton?.addEventListener('click', async () => {
       const url = new URL('word-of-the-day/', siteRoot).href;
       const shareData = { title: `EpochLex Word of the Day: ${term.term}`, text: `EpochLex Word of the Day: ${term.term}`, url };
@@ -191,8 +199,8 @@
           await navigator.share(shareData);
         } else if (navigator.clipboard) {
           await navigator.clipboard.writeText(url);
-          shareButton.textContent = 'Link copied';
-          setTimeout(() => { shareButton.textContent = "Share today's word"; }, 1800);
+          if (shareLabel) shareLabel.textContent = 'Link copied';
+          setTimeout(() => { if (shareLabel) shareLabel.textContent = "Share today's word"; }, 1800);
         }
       } catch (_) {}
     });
