@@ -78,6 +78,56 @@
     return `<a class="pwa-app-tab${active ? ' is-active' : ''}" href="${new URL(href, siteRoot).href}"${active ? ' aria-current="page"' : ''}>${icons[key]}<span>${label}</span></a>`;
   }
 
+  function wireStandaloneThemeToggle(button) {
+    if (!button || button.dataset.pwaThemeWired) return;
+    button.dataset.pwaThemeWired = 'true';
+
+    const stored = (() => {
+      try { return localStorage.getItem('ai-era-theme'); } catch (_) { return null; }
+    })();
+    if (!document.documentElement.dataset.theme) {
+      document.documentElement.dataset.theme = stored || (window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    }
+
+    const syncLabel = () => {
+      const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+      button.setAttribute('aria-label', `Switch to ${next} mode`);
+      button.setAttribute('title', `Switch to ${next} mode`);
+    };
+
+    syncLabel();
+    button.addEventListener('click', () => {
+      const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem('ai-era-theme', next); } catch (_) {}
+      syncLabel();
+    });
+  }
+
+  function ensureStandaloneHeader() {
+    let header = document.querySelector('.site-header');
+    if (header) return header;
+
+    header = document.createElement('header');
+    header.className = 'site-header pwa-generated-header';
+    header.innerHTML = `
+      <div class="shell header-inner">
+        <a class="brand" href="${siteRoot.href}" aria-label="EpochLex home">
+          <span class="brand-lockup" aria-hidden="true">
+            <img class="brand-lockup-image brand-lockup-light" src="${new URL('assets/brand/epochlex/epochlex-logo-horizontal-light.png', siteRoot).href}" alt="">
+            <img class="brand-lockup-image brand-lockup-dark" src="${new URL('assets/brand/epochlex/epochlex-logo-horizontal-dark.png', siteRoot).href}" alt="">
+          </span>
+          <span class="sr-only">EpochLex</span>
+        </a>
+        <button class="theme-toggle pwa-generated-theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">
+          <span class="sun" aria-hidden="true">☼</span><span class="toggle-track"><span class="toggle-knob"></span></span><span class="moon" aria-hidden="true">☾</span>
+        </button>
+      </div>`;
+    document.body.prepend(header);
+    wireStandaloneThemeToggle(header.querySelector('.theme-toggle'));
+    return header;
+  }
+
   function closeMoreSheet() {
     const backdrop = document.querySelector('.pwa-more-backdrop');
     const sheet = document.querySelector('.pwa-more-sheet');
@@ -85,7 +135,9 @@
     backdrop.hidden = true;
     sheet.hidden = true;
     document.documentElement.classList.remove('pwa-more-open');
-    document.querySelector('.pwa-app-more')?.focus();
+    const moreButton = document.querySelector('.pwa-app-more');
+    moreButton?.setAttribute('aria-expanded', 'false');
+    moreButton?.focus();
   }
 
   function openMoreSheet() {
@@ -95,6 +147,7 @@
     backdrop.hidden = false;
     sheet.hidden = false;
     document.documentElement.classList.add('pwa-more-open');
+    document.querySelector('.pwa-app-more')?.setAttribute('aria-expanded', 'true');
     sheet.querySelector('a,button')?.focus();
   }
 
@@ -103,6 +156,7 @@
 
     document.documentElement.dataset.pwaStandalone = 'true';
     document.body.classList.add('pwa-standalone');
+    ensureStandaloneHeader();
 
     const nav = document.createElement('nav');
     nav.className = 'pwa-app-nav';
@@ -141,9 +195,7 @@
 
     const moreButton = nav.querySelector('.pwa-app-more');
     moreButton?.addEventListener('click', () => {
-      const willOpen = sheet.hidden;
-      moreButton.setAttribute('aria-expanded', String(willOpen));
-      if (willOpen) openMoreSheet();
+      if (sheet.hidden) openMoreSheet();
       else closeMoreSheet();
     });
 
