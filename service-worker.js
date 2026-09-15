@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'epochlex-pwa-20260915-1';
+const CACHE_VERSION = 'epochlex-pwa-20260915-2';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
@@ -8,6 +8,10 @@ const CORE_ASSETS = [
   './offline.html',
   './manifest.webmanifest',
   './favicon.png',
+  './categories.html',
+  './about.html',
+  './contribute.html',
+  './methodology.html',
   './word-of-the-day/',
   './assets/brand/epochlex/epochlex-logo-stacked-pronunciation-light.png',
   './assets/css/styles.css',

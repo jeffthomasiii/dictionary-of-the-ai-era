@@ -79,15 +79,21 @@ This hybrid approach preserves useful no-JavaScript/indexing content while avoid
 
 ## Progressive Web App foundation
 
-EpochLex currently includes an installable Progressive Web App foundation while remaining a static GitHub Pages site.
+EpochLex includes an installable Progressive Web App while remaining a static GitHub Pages site.
 
-- `manifest.webmanifest` provides install metadata.
-- `assets/js/pwa.js` ensures the manifest, touch icon, mobile-app metadata, and service-worker registration are available across pages that load the shared PWA script.
+- `manifest.webmanifest` provides install metadata and uses `display: "standalone"`.
+- `assets/js/pwa.js` ensures the manifest, touch icon, mobile-app metadata, service-worker registration, and installed-app shell are available across pages that load the shared scripts.
+- standalone mode is detected with the standard `display-mode: standalone` media query plus the iOS `navigator.standalone` fallback.
+- the standalone app shell is injected only when the installed PWA is actually running; ordinary desktop and mobile-browser views retain the normal responsive website navigation.
+- the installed app uses a compact branded header and a persistent bottom navigation with **Browse**, **Categories**, **Word**, **About**, and **More**.
+- **More** exposes lower-frequency destinations such as Contribute and Methodology without expanding the primary bottom navigation.
 - `service-worker.js` maintains a versioned core cache and runtime cache.
-- core site assets, the dictionary dataset, and Word of the Day assets are cached for offline-aware behavior.
+- the main app-navigation destinations, core site assets, the dictionary dataset, and Word of the Day assets are cached for offline-aware behavior.
 - navigation and canonical dictionary/provenance data use a network-first strategy so fresh content is preferred when connectivity is available.
 - style, script, image, and font requests use stale-while-revalidate behavior.
 - navigation can fall back to `offline.html` when the requested page is unavailable from the network and no cached navigation response exists.
+
+The standalone shell is a presentation/navigation layer over the same public pages and canonical datasets; it does not create a second app content model.
 
 The PWA does **not** currently implement push notifications or maintain user subscription data.
 
@@ -113,11 +119,13 @@ Builds category collections dynamically from the canonical term dataset.
 
 ### `assets/js/pwa.js`
 
-Loads the install metadata required by the current PWA foundation and registers the service worker when the browser supports it.
+Loads install metadata, registers the service worker, detects installed/standalone execution, and creates the PWA-only app shell. It also provides a fallback compact header on older/lean term pages that do not already contain the shared site header.
 
 ### Mobile behavior
 
-Mobile navigation and Browse refinements are kept in focused shared scripts/styles rather than duplicated across pages. Word of the Day adapts to the same responsive design system rather than introducing a separate mobile interaction model.
+Mobile-browser navigation and Browse refinements remain in focused shared scripts/styles rather than duplicated across pages. The installed PWA is intentionally a different shell over the same content: it removes the browser-style hamburger/desktop navigation and exposes app-style bottom navigation instead.
+
+Responsive browser testing or a mobile viewport in desktop developer tools should therefore continue to show the normal website interface. The app shell is tied to standalone execution, not viewport width alone.
 
 ## Related-term discovery
 
@@ -158,7 +166,7 @@ See [`../EDITIONS.md`](../EDITIONS.md) for the release model.
 
 ## Why no framework or backend?
 
-At the current scale, a framework, database, server API, or build pipeline would add operational complexity without enough reader benefit to justify it. The static architecture keeps the project portable, inspectable, and inexpensive while still supporting the current product, including the PWA foundation and Word of the Day.
+At the current scale, a framework, database, server API, or build pipeline would add operational complexity without enough reader benefit to justify it. The static architecture keeps the project portable, inspectable, and inexpensive while still supporting the current product, including the installed PWA shell and Word of the Day.
 
 That choice is not ideological. Architecture should change if future requirements make the current approach materially harder to maintain, validate, search, publish, or contribute to.
 

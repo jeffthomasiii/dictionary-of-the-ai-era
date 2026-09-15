@@ -47,7 +47,7 @@ Each published term also has a stable dedicated URL at `terms/<slug>/` with defi
 
 Word of the Day has a dedicated page at `word-of-the-day/` with the current daily term, pronunciation, definition, example, links to the canonical entry, sharing, and recent Word of the Day history.
 
-EpochLex also has an installable Progressive Web App foundation. PWA installability and offline-aware caching support the reference experience but should not introduce a separate visual identity from the website.
+EpochLex also has an installable Progressive Web App. The installed PWA uses the same EpochLex visual identity and content as the website but adopts a focused app shell when launched in standalone mode.
 
 Repository governance documents remain Markdown, while the public site provides readable HTML for the main reader-facing concepts.
 
@@ -217,6 +217,29 @@ On the dedicated Word of the Day page:
 
 Word of the Day uses the normal EpochLex light/dark system and should not introduce a separate color palette, decorative AI illustration, or promotional visual identity.
 
+## Installed PWA app shell
+
+The **EpochLex PWA Showcase** is the visual and interaction reference for the installed standalone experience.
+
+The installed PWA should feel like an application without creating a different EpochLex product or changing the browser website. The same pages, terms, categories, Word of the Day content, light/dark themes, and editorial hierarchy remain in place; the app shell changes navigation and framing only when the PWA is actually running in standalone mode.
+
+Established standalone behavior:
+
+- normal desktop-browser and mobile-browser layouts remain unchanged;
+- responsive testing in desktop developer tools continues to show the normal mobile website unless the browser is actually emulating/running standalone display mode;
+- the normal primary navigation and mobile hamburger menu are hidden in standalone mode;
+- the installed app uses a compact branded header with the EpochLex lockup and theme control;
+- a persistent bottom navigation provides **Browse**, **Categories**, **Word**, **About**, and **More**;
+- **Word** links directly to the dedicated Word of the Day experience;
+- **More** opens an app-style secondary sheet for lower-frequency destinations such as **Contribute** and **Methodology**;
+- the active section is clearly indicated without oversized tabs, heavy fills, or dashboard styling;
+- iconography uses restrained line icons consistent with the site's existing system;
+- bottom navigation and sheets respect device safe areas and remain usable in both light and dark themes;
+- the normal site footer may be omitted in standalone mode because the persistent app navigation becomes the installed experience's primary shell;
+- standalone navigation should remain keyboard accessible and expose appropriate navigation/dialog semantics.
+
+The standalone shell must not fork content or create PWA-only editorial pages. It is an application-like frame over the same canonical EpochLex site.
+
 ## Dedicated term pages
 
 Dedicated term pages are part of the current product, not a future roadmap item.
@@ -273,17 +296,18 @@ Category counts and membership should never be maintained in a second manual dat
 
 Desktop and tablet layouts should preserve the editorial reference feel. Mobile should simplify controls without removing core discovery capability.
 
-Current mobile behavior includes:
+Current mobile-browser behavior includes:
 
 - native `<details>/<summary>` primary navigation;
 - compact search/filter treatment;
 - horizontally scrollable A-Z navigation;
 - single-column term layouts where necessary;
 - responsive category collections and related-term cards;
-- responsive Word of the Day cards and compact icon-led actions;
-- PWA/standalone display support through the same visual system.
+- responsive Word of the Day cards and compact icon-led actions.
 
-Avoid mobile-specific UI that creates a second behavioral model when the same semantic control can adapt responsively.
+Installed standalone behavior uses the app shell defined above rather than the browser hamburger-navigation pattern.
+
+Avoid viewport-only logic that accidentally turns ordinary mobile browsing into the installed app shell. Standalone presentation should be tied to installed/standalone execution, not merely screen size.
 
 ## Search and interaction
 
@@ -301,7 +325,7 @@ The interface currently supports:
 - related-term navigation;
 - category collection navigation;
 - Word of the Day discovery, recent-word history, and sharing;
-- installable PWA behavior and offline-aware caching where supported.
+- installable PWA behavior, standalone app navigation, and offline-aware caching where supported.
 
 Push notifications are not a current interaction capability.
 
