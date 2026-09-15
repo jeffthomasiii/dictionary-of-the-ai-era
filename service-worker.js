@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'epochlex-pwa-20260915-4';
+const CACHE_VERSION = 'epochlex-pwa-20260915-5';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
@@ -23,6 +23,7 @@ const CORE_ASSETS = [
   './assets/css/mobile-browse.css',
   './assets/css/pwa.css',
   './assets/css/pwa-compact.css',
+  './assets/css/pwa-polish.css',
   './assets/css/word-of-the-day.css',
   './assets/js/app.js',
   './assets/js/mobile-nav.js',
