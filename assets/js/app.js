@@ -247,3 +247,15 @@ if (dictionary) {
   script.dataset.mobileNavigationLoader = 'true';
   document.head.append(script);
 })();
+
+(() => {
+  if (!dictionary || document.querySelector('script[data-wotd-loader]')) return;
+  const source = document.currentScript?.src;
+  if (!source) return;
+  const script = document.createElement('script');
+  const wotdUrl = new URL('word-of-the-day.js', source);
+  wotdUrl.searchParams.set('v', 'epochlex-wotd-20260915-4');
+  script.src = wotdUrl.href;
+  script.dataset.wotdLoader = 'true';
+  document.head.append(script);
+})();
