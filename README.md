@@ -11,7 +11,7 @@ EpochLex is an open-source, living dictionary of the language developing around 
 
 ## What EpochLex is
 
-EpochLex is built to be used like a modern reference work rather than a static glossary. Readers can search, browse, hear pronunciations, move through categories and related concepts, and inspect the provenance and sources behind individual entries.
+EpochLex is built to be used like a modern reference work rather than a static glossary. Readers can search, browse, hear pronunciations, move through categories and related concepts, inspect the provenance and sources behind individual entries, and use a daily discovery feature without creating an account.
 
 The public site currently includes:
 
@@ -25,6 +25,10 @@ The public site currently includes:
 - category filtering and dedicated category collections;
 - list and grid views;
 - related-term discovery;
+- an automated **Word of the Day** experience with a dedicated page and recent-word history;
+- deterministic Pacific-Time daily selection with rolling no-repeat protection;
+- an installable Progressive Web App (PWA) foundation with a web manifest and service worker;
+- offline-aware caching for core site assets and dictionary data;
 - light and dark themes;
 - responsive desktop, tablet, and mobile behavior;
 - canonical URLs, social metadata, structured data, sitemap, and robots directives;
@@ -83,7 +87,7 @@ Start with [`docs/README.md`](docs/README.md) for the complete documentation map
 | Document | Purpose |
 | --- | --- |
 | [`docs/ORIGIN.md`](docs/ORIGIN.md) | How Meat Proxy, a personal catalog, provenance curiosity, the AILex stage, and the AI-building experiment became EpochLex |
-| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Static-site architecture, datasets, term pages, pronunciation, discovery, and publishing |
+| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Static-site architecture, datasets, term pages, PWA behavior, Word of the Day, pronunciation, discovery, and publishing |
 | [`docs/TAXONOMY.md`](docs/TAXONOMY.md) | Editorial categories, entry types, named-entity inclusion, and model-version granularity |
 | [`docs/ROADMAP.md`](docs/ROADMAP.md) | Current readiness priorities and longer-term direction |
 | [`docs/QA.md`](docs/QA.md) | Product-readiness, accessibility, responsive, and regression QA baseline |
@@ -115,10 +119,12 @@ EpochLex is intentionally static and data-driven.
 - `data/provenance.json` is the canonical research and sourcing dataset.
 - `data/editions.json` records Living Dictionary and annual-edition metadata.
 - `terms/<slug>/index.html` provides stable, indexable fallback content for each entry.
-- shared JavaScript progressively adds search, category discovery, pronunciation, provenance, history, sources, and related-term navigation.
-- GitHub Pages serves the repository directly from `main`.
+- `word-of-the-day/` provides a dedicated daily-discovery page whose selection is derived from the canonical term dataset rather than a second editorial schedule.
+- `manifest.webmanifest`, `assets/js/pwa.js`, and `service-worker.js` provide the current installable PWA and offline-aware caching foundation.
+- shared JavaScript progressively adds search, category discovery, pronunciation, provenance, history, sources, related-term navigation, and Word of the Day behavior.
+- GitHub Pages serves the repository directly from `main` at **https://epochlex.justathoughtblog.org/**.
 
-There is no database, framework, backend, server API, or required build process for the public site.
+There is no database, framework, backend, server API, or required build process for the public site. Current Word of the Day functionality is deliberately client-side and does not require a scheduler or daily repository update.
 
 See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
 
@@ -180,11 +186,13 @@ Then visit `http://localhost:8000`.
 
 GitHub Pages deploys directly from `main` at the repository root. No build step is required.
 
-The public site uses the custom domain **https://epochlex.justathoughtblog.org/**. The repository slug remains `dictionary-of-the-ai-era`. Canonical URLs, sitemap URLs, social metadata URLs, redirects, and GitHub Pages configuration should remain aligned with the custom domain whenever publishing metadata changes.
+The live public site uses the custom domain **https://epochlex.justathoughtblog.org/**. The repository slug remains `dictionary-of-the-ai-era`. Canonical URLs, sitemap URLs, social metadata URLs, redirects, and GitHub Pages configuration should remain aligned with the custom domain whenever publishing metadata changes.
 
 ## Roadmap
 
 The major MVP capabilities are implemented. Current work is focused on product quality, provenance consolidation, contribution/review workflows, publishing verification, and long-term maintenance rather than feature or corpus count.
+
+True PWA push notifications are **not** a current capability. They remain a future possibility because reliable background delivery would require persistent push-subscription storage and a server-side or scheduled sender, which would be a meaningful change from EpochLex's current static architecture.
 
 See [`docs/ROADMAP.md`](docs/ROADMAP.md).
 

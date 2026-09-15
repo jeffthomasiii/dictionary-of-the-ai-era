@@ -37,13 +37,17 @@ EpochLex behaves like a reference website rather than a single landing page.
 
 Primary navigation includes:
 
-- **Browse:** searchable dictionary home page with A-Z navigation, category filters, list/grid views, and audible pronunciation
+- **Browse:** searchable dictionary home page with A-Z navigation, category filters, list/grid views, audible pronunciation, and the Word of the Day discovery panel
 - **Categories:** taxonomy explanation plus live browsable collections generated from the dictionary dataset
-- **About:** project purpose, EpochLex pronunciation, Living Dictionary/edition model, transparency, and licensing
+- **About:** project purpose, EpochLex pronunciation, Living Dictionary/edition model, current capabilities, transparency, and licensing
 - **Contribute:** contribution guidance
 - **Methodology:** editorial, provenance, sourcing, and maintenance process
 
 Each published term also has a stable dedicated URL at `terms/<slug>/` with definition, pronunciation, provenance, history, related terms, sources, and research status.
+
+Word of the Day has a dedicated page at `word-of-the-day/` with the current daily term, pronunciation, definition, example, links to the canonical entry, sharing, and recent Word of the Day history.
+
+EpochLex also has an installable Progressive Web App foundation. PWA installability and offline-aware caching support the reference experience but should not introduce a separate visual identity from the website.
 
 Repository governance documents remain Markdown, while the public site provides readable HTML for the main reader-facing concepts.
 
@@ -94,7 +98,7 @@ Neither accent should flood large areas of the interface.
 
 ### Category colors
 
-Category color is semantic, not decorative. The four established category colors remain intentionally more distinct than the surrounding brand palette so readers can recognize category at a glance in both light and dark modes.
+Category color is semantic, not decorative. The established semantic colors remain intentionally more distinct than the surrounding brand palette so readers can recognize category at a glance in both light and dark modes.
 
 Light mode:
 
@@ -102,13 +106,9 @@ Light mode:
 - **AI Ways of Working:** muted teal `#4E9A8A`
 - **AI Systems & Technical Concepts:** muted steel blue `#507EA6`
 - **AI Risks, Safety & Governance:** muted clay/coral `#B56F61`
+- **AI Organizations, Products & Models:** uses the restrained EpochLex system accent treatment established in the implementation rather than introducing a competing fifth decorative palette
 
-Dark mode uses brighter counterparts for comparable recognition and contrast:
-
-- **AI Culture & Slang:** `#A387CC`
-- **AI Ways of Working:** `#61B4A2`
-- **AI Systems & Technical Concepts:** `#6694BD`
-- **AI Risks, Safety & Governance:** `#CA7C6C`
+Dark mode uses brighter counterparts for comparable recognition and contrast for the four established semantic category hues, while **AI Organizations, Products & Models** continues to use the implementation's system-accent treatment.
 
 Never depend on color alone to communicate category or state.
 
@@ -144,6 +144,8 @@ General treatment:
 
 Search remains the most visually prominent control on Browse.
 
+Secondary discovery actions, including Word of the Day links, should remain visually quieter than search and dictionary content. Where icons are used, they should clarify the action without turning secondary links into dominant call-to-action buttons.
+
 ## Technical visual language
 
 Technical flair appears through subtle structure:
@@ -168,9 +170,10 @@ Category icons are simple line icons with semantic meaning rather than abstract 
 - Ways of Working: people/collaboration
 - Systems & Technical: cube/system
 - Risks & Governance: shield/protection
+- Organizations, Products & Models: organization/building or similarly restrained named-entity cue
 - All Terms: collection/grid
 
-Icons inherit their category color and remain secondary to the label.
+Icons inherit their semantic/system accent and remain secondary to the label.
 
 ## Browse entries
 
@@ -193,6 +196,26 @@ Browse supports:
 - **Grid view:** compact dictionary cards
 
 The user's view preference persists locally. Neither view changes the underlying term data or filtering behavior.
+
+## Word of the Day
+
+Word of the Day is a discovery feature layered onto the dictionary rather than a separate editorial brand or promotional landing page.
+
+On Browse:
+
+- it appears after the primary hero/search/filter area and before Browse A-Z;
+- it must not displace search as the primary interaction;
+- the daily term, definition, pronunciation, category, date, and compact navigation actions should remain visually subordinate to the main dictionary hero;
+- action links should be restrained, icon-led where useful, and avoid oversized filled buttons.
+
+On the dedicated Word of the Day page:
+
+- the selected term should be the dominant headline;
+- the page-level “Word of the Day” label should not compete with the term;
+- definition, pronunciation, part of speech, category, example, canonical-entry link, sharing, and recent-word history may be shown;
+- recent words should preserve the same reference-site hierarchy and theme behavior rather than becoming a dashboard or activity feed.
+
+Word of the Day uses the normal EpochLex light/dark system and should not introduce a separate color palette, decorative AI illustration, or promotional visual identity.
 
 ## Dedicated term pages
 
@@ -229,7 +252,7 @@ Pronunciation controls should:
 - avoid autoplay;
 - work with keyboard navigation;
 - expose clear screen-reader labels;
-- use the same interaction model on Browse and dedicated term pages;
+- use the same interaction model on Browse, Word of the Day, and dedicated term pages;
 - use explicit speech overrides for acronyms or terms browser voices commonly misread;
 - fail gracefully when speech synthesis is unsupported.
 
@@ -241,7 +264,7 @@ Curated audio files may be added later for unusual or consistently unreliable pr
 
 The Categories page has two responsibilities:
 
-1. explain the four editorial categories;
+1. explain the five editorial categories;
 2. provide live, browsable term collections sourced from `data/terms.json`.
 
 Category counts and membership should never be maintained in a second manual dataset.
@@ -256,7 +279,9 @@ Current mobile behavior includes:
 - compact search/filter treatment;
 - horizontally scrollable A-Z navigation;
 - single-column term layouts where necessary;
-- responsive category collections and related-term cards.
+- responsive category collections and related-term cards;
+- responsive Word of the Day cards and compact icon-led actions;
+- PWA/standalone display support through the same visual system.
 
 Avoid mobile-specific UI that creates a second behavioral model when the same semantic control can adapt responsively.
 
@@ -274,7 +299,11 @@ The interface currently supports:
 - persistent light/dark preference;
 - audible pronunciation;
 - related-term navigation;
-- category collection navigation.
+- category collection navigation;
+- Word of the Day discovery, recent-word history, and sharing;
+- installable PWA behavior and offline-aware caching where supported.
+
+Push notifications are not a current interaction capability.
 
 ## Publishing and metadata
 
@@ -282,18 +311,20 @@ EpochLex is a reference site and should remain indexable by default.
 
 Current publishing behavior includes:
 
-- canonical URLs;
+- canonical URLs using `https://epochlex.justathoughtblog.org/` as the public base;
 - Open Graph and Twitter/X metadata;
 - Schema.org `DefinedTermSet` on home;
 - Schema.org `DefinedTerm` on term pages;
 - sitemap and robots directives;
 - noindex behavior for the 404 page.
 
-A custom-domain migration must update canonical URLs, sitemap URLs, social URLs, and redirects together.
+The custom domain is the current canonical public base. Publishing changes should keep canonical URLs, sitemap URLs, social URLs, redirects, and GitHub Pages configuration aligned with it.
 
 ## Dates and living status
 
 When the interface displays an updated date, use a human-readable full date such as **August 28, 2026** rather than only the year. The Living Dictionary status is conceptually separate from the last-updated date.
+
+Word of the Day uses the EpochLex calendar date in Pacific Time and changes at midnight Pacific Time.
 
 Annual editions are immutable historical snapshots and should not be confused with the continuously updated public site.
 

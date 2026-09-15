@@ -14,13 +14,13 @@ The architecture favors:
 - human-reviewable changes through Git pull requests;
 - progressive enhancement rather than framework dependence.
 
-GitHub Pages serves the repository directly from `main`.
+GitHub Pages serves the repository directly from `main` at **https://epochlex.justathoughtblog.org/**.
 
 ## Canonical data
 
 ### `data/terms.json`
 
-The lightweight reader-facing dictionary dataset. It contains the information required for Browse, search, category collections, and the fallback content on dedicated term pages.
+The lightweight reader-facing dictionary dataset. It contains the information required for Browse, search, category collections, Word of the Day, and the fallback content on dedicated term pages.
 
 Typical fields include term, slug, pronunciation, part of speech, definition, example, categories, entry type, aliases, status, added date, and last-reviewed date.
 
@@ -28,7 +28,7 @@ EpochLex uses two complementary classification layers. `categories` describes th
 
 ### `data/provenance.json`
 
-The canonical research dataset. Every published term has a matching researched provenance record containing some combination of origin context, first-known-use information when defensible, history, related terms, source records, and research status.
+The canonical research dataset. Every published term has a matching provenance record containing some combination of origin context, first-known-use information when defensible, history, related terms, source records, and research status.
 
 A source that supports a definition does not automatically establish origin. The provenance schema exists to keep those claims separate.
 
@@ -40,7 +40,26 @@ The machine-readable registry for the continuously updated Living Dictionary and
 
 ### Browse: `index.html`
 
-The main dictionary interface provides client-side search, A-Z navigation, category filtering, list/grid views, term counts, theme preference, and audible pronunciation.
+The main dictionary interface provides client-side search, A-Z navigation, category filtering, list/grid views, term counts, theme preference, audible pronunciation, and the homepage Word of the Day feature.
+
+### Word of the Day: `word-of-the-day/index.html`
+
+Word of the Day is a current product feature, not a manually maintained editorial schedule. The daily term is derived from `data/terms.json` by `assets/js/word-of-the-day.js`.
+
+The current selection model:
+
+- uses the EpochLex day in `America/Los_Angeles`;
+- changes at midnight Pacific Time;
+- sorts eligible terms by canonical slug before selection so JSON ordering does not control the result;
+- makes terms eligible beginning the day after their `added` date so a same-day corpus merge cannot change that day's selection;
+- applies deterministic date-based selection so all visitors receive the same term for the same EpochLex date;
+- protects against reuse within the previous 90 Word of the Day dates when the eligible corpus is large enough;
+- progressively releases the oldest exclusion only if the eligible pool is too small to maintain the full protection window;
+- dynamically reconstructs recent history from the same algorithm rather than storing a separate Word-of-the-Day dataset.
+
+This design keeps Word of the Day compatible with the static architecture. It requires no daily commit, scheduled GitHub Action, server process, or second editorial data source.
+
+The dynamically reconstructed Word of the Day history is a discovery feature, not an immutable historical publication record. If future requirements demand permanent daily-history preservation, that would require an explicit persistence decision.
 
 ### Categories: `categories.html`
 
@@ -50,21 +69,39 @@ Builds reader-facing category collections from `data/terms.json`. There is no se
 
 Every term has a stable, indexable URL with core fallback content in HTML. JavaScript progressively enriches the page with provenance, history, sources, aliases, research status, entry type where applicable, and related-term discovery.
 
-This hybrid approach preserves useful no-JavaScript/indexing content while avoiding 100 independent hand-maintained content sources.
+This hybrid approach preserves useful no-JavaScript/indexing content while avoiding hundreds of independent hand-maintained content sources.
 
 ### Reader documentation
 
-- `about.html`: what EpochLex is, how it began, site features, pronunciation, Living Dictionary context, and a brief open-source/AI-transparency statement.
+- `about.html`: what EpochLex is, how it began, current reader features, pronunciation, Living Dictionary context, PWA availability, and a brief open-source/AI-transparency statement.
 - `methodology.html`: reader-friendly explanation of how terms are selected, researched, reviewed, and maintained.
 - `contribute.html`: low-friction ways a reader can help, with a path into the repository for deeper contribution workflows.
+
+## Progressive Web App foundation
+
+EpochLex currently includes an installable Progressive Web App foundation while remaining a static GitHub Pages site.
+
+- `manifest.webmanifest` provides install metadata.
+- `assets/js/pwa.js` ensures the manifest, touch icon, mobile-app metadata, and service-worker registration are available across pages that load the shared PWA script.
+- `service-worker.js` maintains a versioned core cache and runtime cache.
+- core site assets, the dictionary dataset, and Word of the Day assets are cached for offline-aware behavior.
+- navigation and canonical dictionary/provenance data use a network-first strategy so fresh content is preferred when connectivity is available.
+- style, script, image, and font requests use stale-while-revalidate behavior.
+- navigation can fall back to `offline.html` when the requested page is unavailable from the network and no cached navigation response exists.
+
+The PWA does **not** currently implement push notifications or maintain user subscription data.
 
 ## JavaScript responsibilities
 
 ### `assets/js/app.js`
 
-Shared Browse behavior, search/filter state, theme controls, view preference, entry-type handling, and the Web Speech API pronunciation engine.
+Shared Browse behavior, search/filter state, theme controls, view preference, entry-type handling, the Web Speech API pronunciation engine, and loading of the homepage Word of the Day module.
 
 Speech overrides are used where browsers are likely to guess incorrectly, especially for acronyms and the EpochLex brand name.
+
+### `assets/js/word-of-the-day.js`
+
+Calculates the deterministic daily selection from the canonical term dataset, renders the homepage and dedicated Word of the Day experiences, reconstructs recent daily history, reuses the pronunciation engine, and provides native share/copy-link behavior.
 
 ### `assets/js/term-page.js`
 
@@ -74,9 +111,13 @@ Loads canonical term and provenance data for dedicated pages and renders the ric
 
 Builds category collections dynamically from the canonical term dataset.
 
+### `assets/js/pwa.js`
+
+Loads the install metadata required by the current PWA foundation and registers the service worker when the browser supports it.
+
 ### Mobile behavior
 
-Mobile navigation and Browse refinements are kept in focused shared scripts/styles rather than duplicated across pages.
+Mobile navigation and Browse refinements are kept in focused shared scripts/styles rather than duplicated across pages. Word of the Day adapts to the same responsive design system rather than introducing a separate mobile interaction model.
 
 ## Related-term discovery
 
@@ -98,7 +139,7 @@ Curated audio files remain an optional future enhancement for cases where browse
 
 The static site includes:
 
-- canonical URLs;
+- canonical URLs using `https://epochlex.justathoughtblog.org/` as the public base;
 - Open Graph metadata;
 - Twitter/X card metadata;
 - Schema.org `DefinedTermSet` metadata on the dictionary home;
@@ -107,7 +148,7 @@ The static site includes:
 - `robots.txt`;
 - explicit `noindex` treatment for the 404 page.
 
-The current canonical base is the GitHub Pages URL. A future custom-domain migration should update canonical URLs, sitemap URLs, social metadata URLs, and redirects as one coordinated change.
+The custom domain is the current public canonical base. Canonical URLs, sitemap URLs, social metadata URLs, redirects, and GitHub Pages configuration should remain aligned with it whenever publishing metadata changes.
 
 ## Annual editions
 
@@ -117,12 +158,14 @@ See [`../EDITIONS.md`](../EDITIONS.md) for the release model.
 
 ## Why no framework or backend?
 
-At the current scale, a framework, database, server API, or build pipeline would add operational complexity without enough reader benefit to justify it. The static architecture keeps the project portable, inspectable, and inexpensive while still supporting the current product.
+At the current scale, a framework, database, server API, or build pipeline would add operational complexity without enough reader benefit to justify it. The static architecture keeps the project portable, inspectable, and inexpensive while still supporting the current product, including the PWA foundation and Word of the Day.
 
 That choice is not ideological. Architecture should change if future requirements make the current approach materially harder to maintain, validate, search, publish, or contribute to.
 
+True background Web Push is one example of a feature that would cross the current boundary. Reliable push delivery would require persistent storage for browser push subscriptions plus a server-side or scheduled sender holding private application credentials. That possibility is recorded in [`ROADMAP.md`](ROADMAP.md), but it is not part of the current architecture.
+
 ## Contribution boundary
 
-The architecture is designed so that changes remain reviewable in source control. A complete published term affects more than one surface: canonical term data, provenance, relationships, dedicated fallback content, pronunciation handling where necessary, and indexing metadata.
+The architecture is designed so that changes remain reviewable in source control. A complete published term affects more than one surface: canonical term data, provenance, relationships, dedicated fallback content, pronunciation handling where necessary, indexing metadata, and any discovery features that derive from the canonical dataset.
 
 See [`../CONTRIBUTING.md`](../CONTRIBUTING.md) for the current contribution and validation expectations.

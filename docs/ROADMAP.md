@@ -15,6 +15,9 @@ The initial product and corpus MVP is substantially complete:
 - related-term discovery;
 - written and audible pronunciation;
 - responsive/mobile behavior;
+- an installable Progressive Web App foundation with a manifest, service worker, and offline-aware caching;
+- an automated Word of the Day feature on the homepage plus a dedicated daily page and recent-word history;
+- deterministic Pacific-Time Word of the Day selection with rolling no-repeat protection and no manually maintained daily schedule;
 - publishing and SEO foundation;
 - Living Dictionary and annual-edition model;
 - open-source repository and contribution guidance;
@@ -32,20 +35,33 @@ The focus now shifts from accumulating MVP features to improving readiness, usef
 
 ### Cross-device and accessibility QA
 
-The repository now includes a repeatable QA baseline in [`QA.md`](QA.md). Remaining readiness work includes deliberate human spot checks across representative devices, browsers, keyboard-only use, screen-reader behavior, themes, reduced motion, pronunciation, and graceful degradation.
+The repository now includes a repeatable QA baseline in [`QA.md`](QA.md). Remaining readiness work includes deliberate human spot checks across representative devices, browsers, keyboard-only use, screen-reader behavior, themes, reduced motion, pronunciation, PWA installation behavior, Word of the Day, and graceful degradation.
 
 ### Mobile web app and install identity
 
-EpochLex now has a first-launch installable web-app foundation. During initial mobile testing, the installed app uses the existing `assets/brand/epochlex/epochlex-logo-stacked-pronunciation-light.png` brand asset as a pragmatic launcher icon rather than treating it as the permanent app-icon design.
+EpochLex now has an installable web-app foundation backed by `manifest.webmanifest`, `assets/js/pwa.js`, and `service-worker.js`. The service worker provides versioned caching for core site assets and offline-aware behavior while the public site remains a static GitHub Pages deployment.
 
-Future refinement should include:
+During initial mobile testing, the installed app uses the existing `assets/brand/epochlex/epochlex-logo-stacked-pronunciation-light.png` brand asset as a pragmatic launcher icon rather than treating it as the permanent app-icon design.
+
+Future refinement may include:
 
 - design and validate a dedicated EpochLex app icon that remains legible across Android and other supported launcher treatments;
 - create appropriate standard and maskable icon variants and sizes rather than relying on a general-purpose brand asset;
 - verify icon safe areas, background treatment, cropping, and launcher masking on representative devices;
+- continue validating installation, offline behavior, cache updates, and standalone display across representative browsers and devices;
 - keep the app icon consistent with the approved EpochLex identity without changing the underlying logo artwork solely to satisfy launcher behavior.
 
 This is product-polish work, not a new logo or brand-direction decision.
+
+### Word of the Day
+
+Word of the Day is now a current feature rather than a future concept. It is intentionally automated from the canonical dictionary dataset instead of being maintained as a separate editorial schedule.
+
+The current implementation uses the EpochLex day in `America/Los_Angeles`, changes at midnight Pacific Time, makes newly added terms eligible the following day, and uses a deterministic algorithm so all visitors receive the same daily term. It also protects against reuse within the previous 90 daily selections when the eligible corpus is large enough.
+
+The homepage feature, dedicated `/word-of-the-day/` page, recent-word history, pronunciation, term-entry links, and share behavior all derive from the existing static site and require no daily commit or scheduled job.
+
+The reconstructed history is a discovery experience, not an immutable historical publication record. If EpochLex later needs permanent daily-history preservation, that should be treated as a separate persistence decision rather than assumed from the current feature.
 
 ### Public identity and URLs
 
@@ -144,6 +160,18 @@ Potential post-MVP reader features include:
 - improved ways to compare related or easily confused terms.
 
 These should be implemented only when they improve reference value rather than adding visualization for its own sake.
+
+## PWA notifications
+
+**Push notifications are a future possibility, not a current feature or committed implementation.**
+
+A possible future use would be an opt-in Word of the Day notification, with other notification types considered only if they provide clear reader value.
+
+True Web Push would materially change the current architecture. Although the browser/PWA can request notification permission and create a push subscription, EpochLex would need a private place to persist those subscriptions and a server-side or scheduled sender with private application credentials to deliver notifications while the app is closed. GitHub Pages alone cannot provide that persistent subscriber storage and sender role.
+
+For that reason, push notifications are intentionally deferred. They should be reconsidered only if the reader value justifies introducing EpochLex's first small backend or equivalent server-side component. A future implementation should preserve the current static site wherever possible and keep any new backend boundary narrowly focused on subscription management and push delivery.
+
+No third-party push-notification platform is currently required or planned.
 
 ## Pronunciation
 
