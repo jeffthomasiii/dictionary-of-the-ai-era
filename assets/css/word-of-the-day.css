@@ -64,19 +64,24 @@ html[data-theme="dark"] .wotd-share-link{color:#cbd6d4}
 @media(max-width:760px){
   .wotd-home-section{padding-top:18px}
   .wotd-home-card{grid-template-columns:1fr;gap:18px;padding:22px}
-  .wotd-home-actions{border-left:0;border-top:1px solid var(--line);padding:15px 0 0;display:grid;grid-template-columns:1fr 1fr;align-items:start;gap:14px 18px}
+  .wotd-home-actions{border-left:0;border-top:1px solid var(--line);padding:15px 0 0;display:grid;grid-template-columns:auto auto;justify-content:start;align-items:start;gap:14px 18px}
   .wotd-home-date{grid-column:1/-1;margin-bottom:0}
-  .wotd-action-link{font-size:.74rem}
+  .wotd-action-link{font-size:.74rem;white-space:nowrap}
   .wotd-action-icon{width:17px;height:17px}
   .wotd-page-shell{padding:38px 0 68px}
   .wotd-page-intro{margin-bottom:24px}
   .wotd-page-intro>p:last-child{white-space:normal;font-size:.92rem;line-height:1.55}
   .wotd-feature-card{padding:24px 20px}
   .wotd-page-term{font-size:clamp(2.65rem,13vw,3.7rem)}
-  .wotd-page-actions{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+  .wotd-page-actions{display:grid;grid-template-columns:auto auto;justify-content:start;gap:16px 20px;align-items:start}
   .wotd-page-actions .wotd-action-link{font-size:.75rem}
   .wotd-history-heading{align-items:flex-start;flex-direction:column;gap:4px}
   .wotd-history-row{grid-template-columns:64px minmax(0,1fr);gap:12px}
   .wotd-today-badge{grid-column:2;justify-self:start}
   .wotd-definition{font-size:.95rem}
+}
+
+@media(max-width:340px){
+  .wotd-home-actions,.wotd-page-actions{grid-template-columns:1fr 1fr;column-gap:12px}
+  .wotd-action-link{white-space:normal}
 }
