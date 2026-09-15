@@ -1,0 +1,124 @@
+/* Standalone PWA polish layered after pwa-compact.css. Browser layouts remain unchanged. */
+
+/* Browse: icon-only filter strip and full-width search */
+html[data-pwa-standalone="true"] body.pwa-view-browse .mobile-browse-controls{
+  display:block;
+  width:100%;
+  max-width:none;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .mobile-browse-controls .search-wrap{
+  width:100%;
+  max-width:none;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .mobile-filter-toggle,
+html[data-pwa-standalone="true"] body.pwa-view-browse .mobile-filter-menu{
+  display:none!important;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .toolbar{
+  display:grid!important;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:7px;
+  width:100%;
+  margin-top:9px;
+  padding:0;
+  overflow:visible;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .filter{
+  position:relative;
+  display:grid;
+  place-items:center;
+  width:100%;
+  min-width:0;
+  min-height:40px;
+  padding:5px;
+  border-radius:9px;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .filter .category-icon{
+  width:22px;
+  height:22px;
+  margin:0;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .filter>span:last-child{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;
+  border:0!important;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-browse .filter.all.active{
+  border-color:color-mix(in srgb,var(--accent) 68%,var(--line));
+}
+html[data-pwa-standalone="true"] body.pwa-view-browse .filter.culture.active{border-color:var(--culture)}
+html[data-pwa-standalone="true"] body.pwa-view-browse .filter.work.active{border-color:var(--work)}
+html[data-pwa-standalone="true"] body.pwa-view-browse .filter.systems.active{border-color:var(--systems)}
+html[data-pwa-standalone="true"] body.pwa-view-browse .filter.risks.active{border-color:var(--risks)}
+html[data-pwa-standalone="true"] body.pwa-view-browse .filter.entities.active{border-color:var(--entities,var(--accent-secondary,var(--accent)))}
+
+/* Word of the Day: category cue and streamlined history rows */
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-feature-card{
+  border-left-width:3px;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-feature-card:has(.wotd-category.culture){border-left-color:var(--culture)}
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-feature-card:has(.wotd-category.work){border-left-color:var(--work)}
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-feature-card:has(.wotd-category.systems){border-left-color:var(--systems)}
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-feature-card:has(.wotd-category.risks){border-left-color:var(--risks)}
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-feature-card:has(.wotd-category.entities){border-left-color:var(--entities,var(--accent-secondary,var(--accent)))}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-history-row{
+  position:relative;
+  grid-template-columns:58px minmax(0,1fr) auto;
+  align-items:center;
+  padding-right:32px;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-today-badge{
+  justify-self:end;
+  align-self:center;
+  margin:0;
+  white-space:nowrap;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-history-term a::after{
+  content:"›";
+  position:absolute;
+  right:7px;
+  top:50%;
+  width:22px;
+  height:28px;
+  display:grid;
+  place-items:center;
+  transform:translateY(-50%);
+  color:var(--muted);
+  font-size:1.25rem;
+  line-height:1;
+  border-radius:7px;
+}
+
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-history-term a:hover::after,
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-history-term a:focus-visible::after{
+  color:var(--accent-strong,var(--accent));
+  background:var(--surface-2);
+}
+
+/* About: visual hierarchy is provided by the compact app heading. */
+html[data-pwa-standalone="true"] body.pwa-view-about .pwa-app-page-heading .eyebrow{
+  color:var(--accent-strong,var(--accent));
+}
+
+@media(max-width:380px){
+  html[data-pwa-standalone="true"] body.pwa-view-browse .toolbar{gap:5px}
+  html[data-pwa-standalone="true"] body.pwa-view-browse .filter{min-height:38px;padding:4px}
+  html[data-pwa-standalone="true"] body.pwa-view-browse .filter .category-icon{width:20px;height:20px}
+}
