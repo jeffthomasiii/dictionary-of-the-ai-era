@@ -70,15 +70,17 @@ html[data-pwa-standalone="true"] body.pwa-view-word .wotd-feature-card{
   border-left-width:3px;
 }
 
-html[data-pwa-standalone="true"] body.pwa-view-word .wotd-feature-card.pwa-wotd-category-culture{border-left-color:var(--culture)}
-html[data-pwa-standalone="true"] body.pwa-view-word .wotd-feature-card.pwa-wotd-category-work{border-left-color:var(--work)}
-html[data-pwa-standalone="true"] body.pwa-view-word .wotd-feature-card.pwa-wotd-category-systems{border-left-color:var(--systems)}
-html[data-pwa-standalone="true"] body.pwa-view-word .wotd-feature-card.pwa-wotd-category-risks{border-left-color:var(--risks)}
-html[data-pwa-standalone="true"] body.pwa-view-word .wotd-feature-card.pwa-wotd-category-entities{border-left-color:var(--entities,var(--accent-secondary,var(--accent)))}
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-feature-card:has(.wotd-category.culture){border-left-color:var(--culture)}
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-feature-card:has(.wotd-category.work){border-left-color:var(--work)}
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-feature-card:has(.wotd-category.systems){border-left-color:var(--systems)}
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-feature-card:has(.wotd-category.risks){border-left-color:var(--risks)}
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-feature-card:has(.wotd-category.entities){border-left-color:var(--entities,var(--accent-secondary,var(--accent)))}
 
 html[data-pwa-standalone="true"] body.pwa-view-word .wotd-history-row{
-  grid-template-columns:58px minmax(0,1fr) auto 22px;
+  position:relative;
+  grid-template-columns:58px minmax(0,1fr) auto;
   align-items:center;
+  padding-right:32px;
 }
 
 html[data-pwa-standalone="true"] body.pwa-view-word .wotd-today-badge{
@@ -88,29 +90,26 @@ html[data-pwa-standalone="true"] body.pwa-view-word .wotd-today-badge{
   white-space:nowrap;
 }
 
-html[data-pwa-standalone="true"] body.pwa-view-word .pwa-history-chevron-link{
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-history-term a::after{
+  content:"›";
+  position:absolute;
+  right:7px;
+  top:50%;
   width:22px;
   height:28px;
   display:grid;
   place-items:center;
-  justify-self:end;
+  transform:translateY(-50%);
   color:var(--muted);
   font-size:1.25rem;
   line-height:1;
-  text-decoration:none;
   border-radius:7px;
 }
 
-html[data-pwa-standalone="true"] body.pwa-view-word .pwa-history-chevron-link:hover,
-html[data-pwa-standalone="true"] body.pwa-view-word .pwa-history-chevron-link:focus-visible{
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-history-term a:hover::after,
+html[data-pwa-standalone="true"] body.pwa-view-word .wotd-history-term a:focus-visible::after{
   color:var(--accent-strong,var(--accent));
   background:var(--surface-2);
-  text-decoration:none;
-}
-
-html[data-pwa-standalone="true"] body.pwa-view-word .pwa-history-chevron-link:focus-visible{
-  outline:2px solid var(--accent);
-  outline-offset:1px;
 }
 
 /* About: visual hierarchy is provided by the compact app heading. */
