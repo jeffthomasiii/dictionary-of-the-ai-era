@@ -3,7 +3,7 @@
   if (!currentScript?.src) return;
 
   const siteRoot = new URL('../../', currentScript.src);
-  const assetVersion = new URL(currentScript.src).searchParams.get('v') || 'epochlex-pwa-20260915-2';
+  const assetVersion = new URL(currentScript.src).searchParams.get('v') || 'epochlex-pwa-20260915-4';
 
   if (!document.querySelector('link[rel="manifest"]')) {
     const manifest = document.createElement('link');
@@ -49,7 +49,7 @@
   const icons = {
     browse: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 11.2 12 4l8.5 7.2"/><path d="M5.5 10.2V20h13v-9.8M9.2 20v-6h5.6v6"/></svg>',
     categories: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg>',
-    word: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 5.5c3-.8 5.8-.3 8.5 1.4v12c-2.7-1.7-5.5-2.2-8.5-1.4v-12Z"/><path d="M20.5 5.5c-3-.8-5.8-.3-8.5 1.4v12c2.7-1.7 5.5-2.2 8.5-1.4v-12Z"/></svg>',
+    word: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 5.5c3-.8 5.8-.3 8.5 1.4v12c-2.7-1.7-5.5-2.2-8.5-1.4v-12Z"/><path d="M20.5 5.5c-3-.8-5.8-.3-8.5 1.4v12c2.7-1.7 5.5-2.2 8-1.2v-12Z"/></svg>',
     about: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 10.8v5.5M12 7.7h.01"/></svg>',
     more: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.4"/><circle cx="12" cy="12" r="1.4"/><circle cx="19" cy="12" r="1.4"/></svg>',
     contribute: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7.5 7.5 12 3l4.5 4.5"/><path d="M5 13v6h14v-6"/></svg>',
@@ -128,6 +128,23 @@
     return header;
   }
 
+  function loadCompactExperience() {
+    if (!document.querySelector('link[data-pwa-compact-styles]')) {
+      const styles = document.createElement('link');
+      styles.rel = 'stylesheet';
+      styles.href = new URL('assets/css/pwa-compact.css?v=epochlex-pwa-compact-20260915-1', siteRoot).href;
+      styles.dataset.pwaCompactStyles = 'true';
+      document.head.append(styles);
+    }
+
+    if (!document.querySelector('script[data-pwa-compact-script]')) {
+      const script = document.createElement('script');
+      script.src = new URL('assets/js/pwa-compact.js?v=epochlex-pwa-compact-20260915-1', siteRoot).href;
+      script.dataset.pwaCompactScript = 'true';
+      document.head.append(script);
+    }
+  }
+
   function closeMoreSheet() {
     const backdrop = document.querySelector('.pwa-more-backdrop');
     const sheet = document.querySelector('.pwa-more-sheet');
@@ -157,6 +174,7 @@
     document.documentElement.dataset.pwaStandalone = 'true';
     document.body.classList.add('pwa-standalone');
     ensureStandaloneHeader();
+    loadCompactExperience();
 
     const nav = document.createElement('nav');
     nav.className = 'pwa-app-nav';
