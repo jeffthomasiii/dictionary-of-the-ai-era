@@ -12,7 +12,7 @@
   if (!document.querySelector('link[data-wotd-styles]')) {
     const styles = document.createElement('link');
     styles.rel = 'stylesheet';
-    styles.href = new URL('assets/css/word-of-the-day.css?v=epochlex-wotd-20260915-3', siteRoot).href;
+    styles.href = new URL('assets/css/word-of-the-day.css?v=epochlex-wotd-20260915-4', siteRoot).href;
     styles.dataset.wotdStyles = 'true';
     document.head.append(styles);
   }
@@ -159,8 +159,8 @@
         </div>
         <div class="wotd-home-actions">
           <time class="wotd-home-date" datetime="${date}">${esc(formatDate(date))}</time>
-          <a class="wotd-action-link" href="${pageUrl}">${icons.book}<span>View today's word</span><span aria-hidden="true">→</span></a>
-          <a class="wotd-action-link" href="${pageUrl}#previous-words">${icons.history}<span>Previous words</span><span aria-hidden="true">→</span></a>
+          <a class="wotd-action-link" href="${pageUrl}">${icons.book}<span>View today's word</span></a>
+          <a class="wotd-action-link" href="${pageUrl}#previous-words">${icons.history}<span>Previous words</span></a>
         </div>
       </div>`;
     wirePronunciation(container, term);
@@ -181,7 +181,7 @@
         <p class="wotd-page-definition">${esc(term.definition)}</p>
         ${term.example ? `<section class="wotd-example"><span>In use</span><p><em>${esc(term.example)}</em></p></section>` : ''}
         <div class="wotd-page-actions">
-          <a class="wotd-action-link" href="${entryUrl}">${icons.book}<span>View complete entry</span><span aria-hidden="true">→</span></a>
+          <a class="wotd-action-link" href="${entryUrl}">${icons.book}<span>View complete entry</span></a>
           <button id="wotd-share" class="wotd-action-link wotd-share-link" type="button">${icons.share}<span class="wotd-share-label">Share today's word</span></button>
         </div>
         <p class="wotd-time-note">Word of the Day changes daily at midnight Pacific Time.</p>
