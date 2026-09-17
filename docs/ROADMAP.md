@@ -26,10 +26,13 @@ The initial product and corpus MVP is substantially complete:
 - a linked GitHub Project for priorities and contributor-ready work;
 - a source-controlled corpus candidate inventory for terminology that may merit future research;
 - repeatable accessibility and product-readiness QA baseline;
+- the corpus-wide `entryType` migration tracked in Issue #37 is complete, so every published record now carries an explicit entry type;
 - EpochLex selected as the public identity after a brand-collision review of the earlier AILex name;
 - the custom public domain `epochlex.justathoughtblog.org` configured for GitHub Pages.
 
 The focus now shifts from accumulating MVP features to improving readiness, useful corpus coverage, contribution quality, publishing integrity, and long-term maintainability.
+
+The runtime may still interpret a missing `entryType` as `term` for backward compatibility, but this remains a compatibility bridge rather than the desired canonical data state. Because the canonical corpus now contains explicit values, any future removal of that fallback is a separate technical cleanup and does not block current reader-facing functionality or provenance-consolidation work.
 
 ## Product readiness
 

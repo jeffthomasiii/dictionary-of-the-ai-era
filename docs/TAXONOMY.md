@@ -36,6 +36,8 @@ Initial vocabulary:
 
 `entryType` describes the entry itself. Editorial categories describe the subject areas through which readers may discover it. The two fields should not be treated as substitutes for one another.
 
+As of September 17, 2026, the published corpus has completed the `entryType` migration tracked in Issue #37: every record in `data/terms.json` now carries an explicit value. The runtime may still treat a missing `entryType` as `term` for backward compatibility, but that behavior is a temporary migration bridge rather than the desired canonical data state. Future published records should continue to provide `entryType` explicitly. Any removal of the runtime fallback should be handled as a separate technical cleanup after compatibility is verified.
+
 ## Named-entity inclusion principle
 
 Named AI organizations, products, model families, and individual models may qualify for EpochLex when understanding the name provides meaningful context for understanding AI-era terminology, technology, history, or culture.

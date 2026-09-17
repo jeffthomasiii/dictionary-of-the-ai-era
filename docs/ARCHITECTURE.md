@@ -24,7 +24,7 @@ The lightweight reader-facing dictionary dataset. It contains the information re
 
 Typical fields include term, slug, pronunciation, part of speech, definition, example, categories, entry type, aliases, status, added date, and last-reviewed date.
 
-EpochLex uses two complementary classification layers. `categories` describes the editorial areas through which a reader may discover an entry, while `entryType` identifies whether the entry is a general `term`, `organization`, `product`, `model-family`, or individual `model`. Existing records without an explicit `entryType` are treated as `term` for backward compatibility; new or materially revised named-entity records should identify their type explicitly. See [`TAXONOMY.md`](TAXONOMY.md).
+EpochLex uses two complementary classification layers. `categories` describes the editorial areas through which a reader may discover an entry, while `entryType` identifies whether the entry is a general `term`, `organization`, `product`, `model-family`, or individual `model`. The canonical published corpus now gives every record an explicit `entryType`. The runtime may still treat a missing value as `term` only for backward compatibility; that fallback is a migration bridge rather than the desired canonical data state. See [`TAXONOMY.md`](TAXONOMY.md).
 
 ### `data/provenance.json`
 
