@@ -49,7 +49,7 @@ if (!document.querySelector('link[data-taxonomy-styles]')) {
   taxonomyStyles.rel = "stylesheet";
   taxonomyStyles.href = document.currentScript?.src ? new URL("../css/taxonomy.css", document.currentScript.src).href : "assets/css/taxonomy.css";
   taxonomyStyles.dataset.taxonomyStyles = "true";
-  document.head.append(taxonomyStyles);
+  document.head.append(accessibilityStyles);
 }
 
 if (dictionary && !document.querySelector('link[data-browse-pronunciation]')) {
@@ -63,7 +63,9 @@ if (dictionary && !document.querySelector('link[data-browse-pronunciation]')) {
 const speechOverrides = {
   "epochlex": "epoch lex",
   "agentic": "ay jenn tick",
+  "agentic-commerce": "ay jenn tick commerce",
   "agentic-rag": "ay jenn tick rag",
+  "agentic-workflow": "ay jenn tick workflow",
   "ai-agent": "A I agent",
   "ai-alignment": "A I alignment",
   "ai-governance": "A I governance",
