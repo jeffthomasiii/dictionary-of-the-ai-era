@@ -89,8 +89,8 @@ EpochLex includes an installable Progressive Web App while remaining a static Gi
 - **More** exposes lower-frequency destinations such as Contribute and Methodology without expanding the primary bottom navigation.
 - `service-worker.js` maintains a versioned core cache and runtime cache.
 - the main app-navigation destinations, core site assets, the dictionary dataset, and Word of the Day assets are cached for offline-aware behavior.
-- navigation and canonical dictionary/provenance data use a network-first strategy so fresh content is preferred when connectivity is available.
-- style, script, image, and font requests use stale-while-revalidate behavior.
+- navigation, canonical dictionary/provenance data, and JavaScript requests use a network-first strategy so fresh content and application logic are preferred when connectivity is available.
+- style, image, and font requests use stale-while-revalidate behavior.
 - navigation can fall back to `offline.html` when the requested page is unavailable from the network and no cached navigation response exists.
 
 The standalone shell is a presentation/navigation layer over the same public pages and canonical datasets; it does not create a second app content model.
