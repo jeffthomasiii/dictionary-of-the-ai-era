@@ -63,7 +63,9 @@ if (dictionary && !document.querySelector('link[data-browse-pronunciation]')) {
 const speechOverrides = {
   "epochlex": "epoch lex",
   "agentic": "ay jenn tick",
+  "agentic-commerce": "ay jenn tick commerce",
   "agentic-rag": "ay jenn tick rag",
+  "agentic-workflow": "ay jenn tick workflow",
   "ai-agent": "A I agent",
   "ai-alignment": "A I alignment",
   "ai-governance": "A I governance",
