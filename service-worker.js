@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'epochlex-pwa-20260915-6';
+const CACHE_VERSION = 'epochlex-pwa-20260917-7';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
@@ -53,24 +53,28 @@ self.addEventListener('activate', event => {
 });
 
 async function networkFirst(request) {
-  const cache = await caches.open(RUNTIME_CACHE);
+  const runtimeCache = await caches.open(RUNTIME_CACHE);
   try {
     const response = await fetch(request);
-    if (response && response.ok) cache.put(request, response.clone());
+    if (response && response.ok) runtimeCache.put(request, response.clone());
     return response;
   } catch (error) {
-    const cached = await caches.match(request);
-    if (cached) return cached;
-    if (request.mode === 'navigate') return caches.match('./offline.html');
+    const runtimeCached = await runtimeCache.match(request);
+    if (runtimeCached) return runtimeCached;
+    const coreCache = await caches.open(CORE_CACHE);
+    const coreCached = await coreCache.match(request);
+    if (coreCached) return coreCached;
+    if (request.mode === 'navigate') return coreCache.match('./offline.html');
     throw error;
   }
 }
 
 async function staleWhileRevalidate(request) {
-  const cache = await caches.open(RUNTIME_CACHE);
-  const cached = await caches.match(request);
+  const runtimeCache = await caches.open(RUNTIME_CACHE);
+  const coreCache = await caches.open(CORE_CACHE);
+  const cached = await runtimeCache.match(request) || await coreCache.match(request);
   const network = fetch(request).then(response => {
-    if (response && response.ok) cache.put(request, response.clone());
+    if (response && response.ok) runtimeCache.put(request, response.clone());
     return response;
   }).catch(() => null);
   return cached || network;
@@ -88,7 +92,12 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  if (['style', 'script', 'image', 'font'].includes(request.destination)) {
+  if (request.destination === 'script') {
+    event.respondWith(networkFirst(request));
+    return;
+  }
+
+  if (['style', 'image', 'font'].includes(request.destination)) {
     event.respondWith(staleWhileRevalidate(request));
   }
 });
