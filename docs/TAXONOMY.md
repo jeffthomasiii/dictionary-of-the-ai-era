@@ -71,8 +71,6 @@ This taxonomy does not establish typed relationship semantics.
 
 EpochLex may surface related entries such as an organization, its product, and an associated model family through the existing related-term system, but a related-term connection alone does not formally mean `developed by`, `owned by`, `powers`, `successor to`, or any other typed relationship unless the data model is later expanded to encode and source those claims explicitly.
 
-This matters particularly for named organizations, products, and model families: a related-term connection may help discovery without claiming a typed relationship that the data does not encode.
-
 ## Initial named-entity expansion
 
 The first planned expansion under this taxonomy includes entries covering the following organizations, products, and model families where research supports distinct reader value:
