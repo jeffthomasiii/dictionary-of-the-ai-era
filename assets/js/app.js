@@ -49,7 +49,7 @@ if (!document.querySelector('link[data-taxonomy-styles]')) {
   taxonomyStyles.rel = "stylesheet";
   taxonomyStyles.href = document.currentScript?.src ? new URL("../css/taxonomy.css", document.currentScript.src).href : "assets/css/taxonomy.css";
   taxonomyStyles.dataset.taxonomyStyles = "true";
-  document.head.append(accessibilityStyles);
+  document.head.append(taxonomyStyles);
 }
 
 if (dictionary && !document.querySelector('link[data-browse-pronunciation]')) {
