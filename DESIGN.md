@@ -42,6 +42,7 @@ Primary navigation includes:
 - **About:** project purpose, EpochLex pronunciation, Living Dictionary/edition model, current capabilities, transparency, and licensing
 - **Contribute:** contribution guidance
 - **Methodology:** editorial, provenance, sourcing, and maintenance process
+- **Experiment:** public editorial case-study surface at `experiment/`, with a companion report reader at `experiment/report/`; linked contextually from About and Methodology and available under More in the installed PWA rather than added to permanent primary navigation
 
 Each published term also has a stable dedicated URL at `terms/<slug>/` with definition, pronunciation, provenance, history, related terms, sources, and research status.
 
