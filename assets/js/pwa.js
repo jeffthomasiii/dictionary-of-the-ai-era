@@ -53,7 +53,7 @@
     about: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 10.8v5.5M12 7.7h.01"/></svg>',
     more: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.4"/><circle cx="12" cy="12" r="1.4"/><circle cx="19" cy="12" r="1.4"/></svg>',
     contribute: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7.5 7.5 12 3l4.5 4.5"/><path d="M5 13v6h14v-6"/></svg>',
-    methodology: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h6.5c1.3 0 1.5.7 1.5 1.5v12c0-.8-.2-1.5-1.5-1.5H4v-12Z"/><path d="M20 5.5h-6.5c-1.3 0-1.5.7-1.5 1.5v12c0-.8.2-1.5 1.5-1.5H20v-12Z"/></svg>',
+    methodology: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h6.5c1.3 0 1.5.7 1.5 1.5v12c0-.8-.2-1.5-1.5-1.5H4v-12Z"/><path d="M20 5.5h-6.5c-1.3 0-1.5.7-1.5 1.5v12c0-.8.2-1.5 1.5-1.5H20v-12Z"/></svg>',\n    experiment: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v5l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/><path d="M8 14h8"/></svg>',
     close: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>'
   };
 
@@ -69,7 +69,7 @@
     if (path === 'categories.html') return 'categories';
     if (path === 'word-of-the-day') return 'word';
     if (path === 'about.html') return 'about';
-    if (path === 'contribute.html' || path === 'methodology.html') return 'more';
+    if (path === 'contribute.html' || path === 'methodology.html' || path === 'experiment' || path.startsWith('experiment/')) return 'more';
     return 'browse';
   }
 
