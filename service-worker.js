@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'epochlex-pwa-20260921-mobile-shell-3';
+const CACHE_VERSION = 'epochlex-pwa-20260921-report-figures-4';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
