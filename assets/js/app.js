@@ -261,3 +261,16 @@ if (dictionary) {
   script.dataset.wotdLoader = 'true';
   document.head.append(script);
 })();
+
+
+(() => {
+  if (document.querySelector('script[data-pwa-loader]')) return;
+  const source = document.currentScript?.src;
+  if (!source) return;
+  const script = document.createElement('script');
+  const pwaUrl = new URL('pwa.js', source);
+  pwaUrl.searchParams.set('v', 'epochlex-pwa-20260921-5');
+  script.src = pwaUrl.href;
+  script.dataset.pwaLoader = 'true';
+  document.head.append(script);
+})();
