@@ -725,3 +725,32 @@
     padding-bottom:calc(var(--pwa-app-nav-height) + env(safe-area-inset-bottom));
   }
 }
+
+@media (max-width:680px) {
+  body.experiment-page .report-cover {
+    width:min(250px,76vw);
+    aspect-ratio:.74;
+    margin:4px auto 10px;
+    padding:22px 20px;
+  }
+
+  body.experiment-page .report-cover small {
+    font-size:.58rem;
+    line-height:1.45;
+    letter-spacing:.13em;
+  }
+
+  body.experiment-page .report-cover strong {
+    font-size:1.75rem;
+    line-height:1;
+  }
+
+  body.experiment-page .report-cover-subtitle {
+    display:none;
+  }
+
+  html[data-pwa-shell-mode="mobile-browser"] body.experiment-page .experiment-mobile-nav,
+  html[data-pwa-shell-mode="standalone"] body.experiment-page .experiment-mobile-nav {
+    display:none;
+  }
+}
