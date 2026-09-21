@@ -44,7 +44,9 @@
   ensureMeta('apple-mobile-web-app-title', 'EpochLex');
 
   const standaloneQuery = window.matchMedia?.('(display-mode: standalone)');
+  const mobileShellQuery = window.matchMedia?.('(max-width: 680px)');
   const isStandalone = () => Boolean(standaloneQuery?.matches || window.navigator.standalone === true);
+  const shouldUseAppShell = () => Boolean(isStandalone() || mobileShellQuery?.matches);
 
   const icons = {
     browse: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 11.2 12 4l8.5 7.2"/><path d="M5.5 10.2V20h13v-9.8M9.2 20v-6h5.6v6"/></svg>',
@@ -170,12 +172,13 @@
   }
 
   function ensureAppShell() {
-    if (!isStandalone() || document.querySelector('.pwa-app-nav')) return;
-
     document.documentElement.dataset.pwaStandalone = 'true';
+    document.documentElement.dataset.pwaShellMode = isStandalone() ? 'standalone' : 'mobile-browser';
     document.body.classList.add('pwa-standalone');
     ensureStandaloneHeader();
     loadCompactExperience();
+
+    if (document.querySelector('.pwa-app-nav')) return;
 
     const nav = document.createElement('nav');
     nav.className = 'pwa-app-nav';
@@ -206,6 +209,7 @@
         <button class="pwa-more-close" type="button" aria-label="Close more menu">${icons.close}</button>
       </div>
       <div class="pwa-more-links">
+        <a href="${new URL('experiment/', siteRoot).href}">${icons.experiment}<span><strong>The Experiment</strong><small>Explore the documented AI-assisted development case study.</small></span></a>
         <a href="${new URL('contribute.html', siteRoot).href}">${icons.contribute}<span><strong>Contribute</strong><small>Suggest terms, corrections, research, design, or code.</small></span></a>
         <a href="${new URL('methodology.html', siteRoot).href}">${icons.methodology}<span><strong>Methodology</strong><small>See how EpochLex selects, researches, and reviews entries.</small></span></a>
       </div>`;
@@ -228,9 +232,11 @@
   }
 
   function syncStandaloneState() {
-    if (isStandalone()) ensureAppShell();
+    if (shouldUseAppShell()) ensureAppShell();
     else {
+      closeMoreSheet();
       delete document.documentElement.dataset.pwaStandalone;
+      delete document.documentElement.dataset.pwaShellMode;
       document.body?.classList.remove('pwa-standalone');
     }
   }
@@ -241,6 +247,7 @@
     syncStandaloneState();
   }
   standaloneQuery?.addEventListener?.('change', syncStandaloneState);
+  mobileShellQuery?.addEventListener?.('change', syncStandaloneState);
 
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
