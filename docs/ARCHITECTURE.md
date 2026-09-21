@@ -82,10 +82,10 @@ This hybrid approach preserves useful no-JavaScript/indexing content while avoid
 EpochLex includes an installable Progressive Web App while remaining a static GitHub Pages site.
 
 - `manifest.webmanifest` provides install metadata and uses `display: "standalone"`.
-- `assets/js/pwa.js` ensures the manifest, touch icon, mobile-app metadata, service-worker registration, and installed-app shell are available across pages that load the shared scripts.
+- `assets/js/pwa.js` ensures the manifest, touch icon, mobile-app metadata, service-worker registration, and shared mobile/PWA app shell are available across pages that load the shared scripts. `assets/js/app.js` loads it on pages that do not already include it directly.
 - standalone mode is detected with the standard `display-mode: standalone` media query plus the iOS `navigator.standalone` fallback.
-- the standalone app shell is injected only when the installed PWA is actually running; ordinary desktop and mobile-browser views retain the normal responsive website navigation.
-- the installed app uses a compact branded header and a persistent bottom navigation with **Browse**, **Categories**, **Word**, **About**, and **More**.
+- the app shell is activated for phone-size browser views and for installed standalone execution; desktop and larger browser views retain the reference-site navigation.
+- the shared mobile/PWA shell uses a compact branded header and a persistent bottom navigation with **Browse**, **Categories**, **Word**, **About**, and **More**.
 - **More** exposes lower-frequency destinations such as Contribute and Methodology without expanding the primary bottom navigation.
 - `service-worker.js` maintains a versioned core cache and runtime cache.
 - the main app-navigation destinations, core site assets, the dictionary dataset, and Word of the Day assets are cached for offline-aware behavior.
@@ -93,7 +93,7 @@ EpochLex includes an installable Progressive Web App while remaining a static Gi
 - style, image, and font requests use stale-while-revalidate behavior.
 - navigation can fall back to `offline.html` when the requested page is unavailable from the network and no cached navigation response exists.
 
-The standalone shell is a presentation/navigation layer over the same public pages and canonical datasets; it does not create a second app content model.
+The mobile/PWA shell is a presentation/navigation layer over the same public pages and canonical datasets; it does not create a second app content model.
 
 The PWA does **not** currently implement push notifications or maintain user subscription data.
 
@@ -119,13 +119,11 @@ Builds category collections dynamically from the canonical term dataset.
 
 ### `assets/js/pwa.js`
 
-Loads install metadata, registers the service worker, detects installed/standalone execution, and creates the PWA-only app shell. It also provides a fallback compact header on older/lean term pages that do not already contain the shared site header.
+Loads install metadata, registers the service worker, detects phone-size browser or installed/standalone execution, and creates the shared app shell. It also provides a fallback compact header on older/lean term pages that do not already contain the shared site header.
 
 ### Mobile behavior
 
-Mobile-browser navigation and Browse refinements remain in focused shared scripts/styles rather than duplicated across pages. The installed PWA is intentionally a different shell over the same content: it removes the browser-style hamburger/desktop navigation and exposes app-style bottom navigation instead.
-
-Responsive browser testing or a mobile viewport in desktop developer tools should therefore continue to show the normal website interface. The app shell is tied to standalone execution, not viewport width alone.
+Phone-size browser navigation and installed-PWA navigation now share the same app shell over the same canonical content. Both use the compact branded header, app-style bottom navigation, More sheet, and compact page treatments. Desktop and larger browser layouts continue to use the normal reference-site navigation.
 
 ## Related-term discovery
 

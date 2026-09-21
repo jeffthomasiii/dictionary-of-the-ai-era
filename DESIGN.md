@@ -42,6 +42,7 @@ Primary navigation includes:
 - **About:** project purpose, EpochLex pronunciation, Living Dictionary/edition model, current capabilities, transparency, and licensing
 - **Contribute:** contribution guidance
 - **Methodology:** editorial, provenance, sourcing, and maintenance process
+- **Experiment:** public editorial case-study surface at `experiment/`, with a companion report reader at `experiment/report/`; linked contextually from About and Methodology and available under More in the installed PWA rather than added to permanent primary navigation
 
 Each published term also has a stable dedicated URL at `terms/<slug>/` with definition, pronunciation, provenance, history, related terms, sources, and research status.
 
@@ -217,15 +218,15 @@ On the dedicated Word of the Day page:
 
 Word of the Day uses the normal EpochLex light/dark system and should not introduce a separate color palette, decorative AI illustration, or promotional visual identity.
 
-## Installed PWA app shell
+## Mobile app shell and installed PWA
 
-The **EpochLex PWA Showcase** is the visual and interaction reference for the installed standalone experience.
+The **EpochLex PWA Showcase** is the visual and interaction reference for both the mobile-browser experience and the installed standalone experience.
 
-The installed PWA should feel like an application without creating a different EpochLex product or changing the browser website. The same pages, terms, categories, Word of the Day content, light/dark themes, and editorial hierarchy remain in place; the app shell changes navigation and framing only when the PWA is actually running in standalone mode.
+On phone-size viewports, the public website and installed PWA share the same app-like shell: compact branded header, persistent bottom navigation, compact content treatments, and the More sheet. The installed PWA remains the installable form of the same canonical site rather than a separate content product.
 
 Established standalone behavior:
 
-- normal desktop-browser and mobile-browser layouts remain unchanged;
+- phone-size browser views use the same app-like navigation shell as the installed PWA, while desktop and larger browser layouts retain the reference-site navigation;
 - responsive testing in desktop developer tools continues to show the normal mobile website unless the browser is actually emulating/running standalone display mode;
 - the normal primary navigation and mobile hamburger menu are hidden in standalone mode;
 - the installed app uses a compact branded header with the EpochLex lockup and theme control;
@@ -238,7 +239,7 @@ Established standalone behavior:
 - the normal site footer may be omitted in standalone mode because the persistent app navigation becomes the installed experience's primary shell;
 - standalone navigation should remain keyboard accessible and expose appropriate navigation/dialog semantics.
 
-The standalone shell must not fork content or create PWA-only editorial pages. It is an application-like frame over the same canonical EpochLex site.
+The shared mobile/PWA shell must not fork content or create app-only editorial pages. It is an application-like frame over the same canonical EpochLex site.
 
 ## Dedicated term pages
 
@@ -305,9 +306,7 @@ Current mobile-browser behavior includes:
 - responsive category collections and related-term cards;
 - responsive Word of the Day cards and compact icon-led actions.
 
-Installed standalone behavior uses the app shell defined above rather than the browser hamburger-navigation pattern.
-
-Avoid viewport-only logic that accidentally turns ordinary mobile browsing into the installed app shell. Standalone presentation should be tied to installed/standalone execution, not merely screen size.
+Phone-size browser views and installed standalone views use the shared app shell defined above rather than the hamburger-navigation pattern. The Experiment publication keeps its compact card surfaces and swipeable content groups, but uses the same global EpochLex bottom navigation as the rest of the mobile site.
 
 ## Search and interaction
 

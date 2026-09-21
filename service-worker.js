@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'epochlex-pwa-20260917-7';
+const CACHE_VERSION = 'epochlex-pwa-20260921-final-figures-5';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
@@ -13,6 +13,8 @@ const CORE_ASSETS = [
   './contribute.html',
   './methodology.html',
   './word-of-the-day/',
+  './experiment/',
+  './experiment/report/',
   './assets/brand/epochlex/epochlex-logo-stacked-pronunciation-light.png',
   './assets/css/styles.css',
   './assets/css/term-pages.css',
@@ -25,12 +27,14 @@ const CORE_ASSETS = [
   './assets/css/pwa-compact.css',
   './assets/css/pwa-polish.css',
   './assets/css/word-of-the-day.css',
+  './assets/css/experiment.css',
   './assets/js/app.js',
   './assets/js/mobile-nav.js',
   './assets/js/mobile-browse.js',
   './assets/js/pwa.js',
   './assets/js/pwa-compact.js',
   './assets/js/word-of-the-day.js',
+  './assets/js/experiment.js',
   './data/terms.json'
 ];
 

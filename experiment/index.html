@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>The EpochLex Experiment · EpochLex</title>
+  <meta name="description" content="A documented case study in human-directed, AI-assisted development: what happened while building EpochLex, what the evidence supports, and what remains uncertain.">
+  <link rel="canonical" href="https://epochlex.justathoughtblog.org/experiment/">
+  <meta property="og:site_name" content="EpochLex">
+  <meta property="og:title" content="The EpochLex Experiment">
+  <meta property="og:description" content="A documented case study in human-directed, AI-assisted development.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://epochlex.justathoughtblog.org/experiment/">
+  <meta name="twitter:card" content="summary">
+  <script>(()=>{try{const s=localStorage.getItem('ai-era-theme');document.documentElement.dataset.theme=s||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch(_){document.documentElement.dataset.theme='light'}})();</script>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/brand-theme.css">
+  <link rel="stylesheet" href="../assets/css/experiment.css?v=epochlex-experiment-20260921-3">
+</head>
+<body class="experiment-page">
+<header class="site-header"><div class="shell header-inner"><a class="brand" href="../" aria-label="EpochLex home"><span class="brand-lockup" aria-hidden="true"><img class="brand-lockup-image brand-lockup-light" src="../assets/brand/epochlex/epochlex-logo-horizontal-light.png" alt=""><img class="brand-lockup-image brand-lockup-dark" src="../assets/brand/epochlex/epochlex-logo-horizontal-dark.png" alt=""></span><span class="sr-only">EpochLex</span></a><nav class="primary-nav"><a href="../">Browse</a><a href="../categories.html">Categories</a><a href="../about.html">About</a><a href="../contribute.html">Contribute</a><a href="../methodology.html">Methodology</a></nav><button id="theme-toggle" class="theme-toggle" type="button"><span>☼</span><span class="toggle-track"><span class="toggle-knob"></span></span><span>☾</span></button></div></header>
+<main>
+  <section class="experiment-hero">
+    <div class="experiment-shell experiment-hero-inner">
+      <p class="experiment-kicker">The EpochLex Experiment · Phase I</p>
+      <h1>Building a dictionary with artificial intelligence.</h1>
+      <p class="lede">A documented case study in human-directed, AI-assisted product development—examining what happened as EpochLex grew from a small dictionary concept into a working public reference product.</p>
+      <div class="experiment-meta"><span><strong>Observation period</strong> · August 28–September 17, 2026</span><span><strong>Report snapshot</strong> · September 18, 2026</span><span><strong>Report</strong> · Version 1.0 · September 2026</span></div>
+      <div class="experiment-actions"><a class="experiment-button experiment-button--primary" href="#findings">Explore findings →</a><a class="experiment-button" href="report/">Read web report →</a></div>
+    </div>
+  </section>
+
+  <div class="experiment-subnav"><div class="experiment-shell"><nav aria-label="Experiment sections"><a href="#one-minute">One minute</a><a href="#evidence">Evidence</a><a href="#findings">Findings</a><a href="#roles">Human + AI</a><a href="#cases">Cases</a><a href="#timeline">Timeline</a><a href="#limits">Limits</a><a href="#report">Report</a></nav></div></div>
+
+  <section class="experiment-section" id="one-minute"><div class="experiment-shell">
+    <div class="experiment-section-head"><div><p class="experiment-kicker">The experiment in one minute</p><h2>From an idea to an observed development system.</h2></div><p class="experiment-section-intro">The project began as a dictionary, not as a software benchmark. The experiment emerged as AI became part of the design, implementation, research, documentation, testing, and maintenance workflow.</p></div>
+    <div class="one-minute">
+      <article><span class="story-number">01</span><h3>The question</h3><p>Can a human-directed, AI-assisted workflow produce and evolve a useful, maintainable public product?</p></article>
+      <article><span class="story-number">02</span><h3>The approach</h3><p>Build a real product while keeping product intent, architecture, validation, and publication under human control.</p></article>
+      <article><span class="story-number">03</span><h3>What happened</h3><p>EpochLex became a 365-entry reference work with provenance, dedicated pages, a PWA, contributor infrastructure, and documented standards.</p></article>
+      <article><span class="story-number">04</span><h3>What it suggests</h3><p>AI shortened the path from intent to implementation, while judgment, verification, and process became more important.</p></article>
+    </div>
+  </div></section>
+
+  <section class="experiment-section" id="evidence"><div class="experiment-shell">
+    <div class="experiment-section-head"><div><p class="experiment-kicker">From a question to a working system</p><h2>It did more than grow the term count.</h2></div><p class="experiment-section-intro">The September 18 snapshot records different kinds of activity. The report explicitly does not combine them into a single productivity score.</p></div>
+    <div class="evolution">
+      <div class="evolution-axis"><div class="evolution-end"><span class="evolution-date">August 28, 2026</span><span class="evolution-value">27</span><span>published entries</span></div><div class="evolution-line" aria-hidden="true"></div><div class="evolution-end"><span class="evolution-date">September 18, 2026</span><span class="evolution-value">365</span><span>published entries</span></div></div>
+      <div class="metric-strip"><div class="metric"><strong>98</strong><span>pull requests audited</span></div><div class="metric"><strong>97</strong><span>merged pull requests</span></div><div class="metric"><strong>30</strong><span>identified issues</span></div><div class="metric"><strong>183</strong><span>researched provenance records</span></div></div>
+      <div class="system-grid">
+        <article class="system-item"><span class="system-icon">⌕</span><h3>Search & browse</h3><p>Searchable dictionary, A–Z navigation, categories, and list/grid discovery.</p></article>
+        <article class="system-item"><span class="system-icon">§</span><h3>Dedicated pages</h3><p>Stable term pages with definitions, history, sources, status, and related discovery.</p></article>
+        <article class="system-item"><span class="system-icon">◎</span><h3>Provenance</h3><p>Structured records separating meaning evidence from origin and history claims.</p></article>
+        <article class="system-item"><span class="system-icon">◖</span><h3>Pronunciation</h3><p>Written and audible pronunciation with explicit overrides where needed.</p></article>
+        <article class="system-item"><span class="system-icon">▣</span><h3>PWA</h3><p>An installable, app-like experience layered over the same canonical static site.</p></article>
+        <article class="system-item"><span class="system-icon">◫</span><h3>Word of the Day</h3><p>A daily discovery experience built from the canonical dictionary dataset.</p></article>
+        <article class="system-item"><span class="system-icon">＋</span><h3>Contributor surface</h3><p>Issues, contribution guidance, Discussions, and open-source documentation.</p></article>
+        <article class="system-item"><span class="system-icon">✓</span><h3>QA infrastructure</h3><p>Validation guidance, testing expectations, accessibility, and publishing checks.</p></article>
+      </div>
+      <aside class="observation"><p>This was not simply “AI generated 338 definitions.” The product accumulated architecture, research practice, QA, documentation, and maintenance systems alongside corpus growth.</p></aside>
+      <p class="draft-note"><strong>Final report:</strong> Version 1.0 contains the complete 75-page case study, finalized figures, evidence notes, appendices, and methodology details.</p>
+    </div>
+  </div></section>
+
+  <section class="experiment-section" id="findings"><div class="experiment-shell">
+    <div class="experiment-section-head"><div><p class="experiment-kicker">Key findings</p><h2>What the first phase established.</h2></div><p class="experiment-section-intro">These statements summarize the current report without converting its observations into claims the evidence does not support.</p></div>
+    <div class="findings">
+      <article class="finding"><div class="finding-number">01</div><h3>AI reduced the distance between product intent and working implementation.</h3><p>Features, migrations, content expansions, revisions, and debugging could reach an evaluable state quickly enough that working software often became part of the design and requirements process.</p></article>
+      <article class="finding"><div class="finding-number">02</div><h3>Speed shifted where effort and risk accumulated.</h3><p>As implementation became easier to produce, research, verification, accumulated project knowledge, and the judgment required to decide what should be built became increasingly consequential.</p></article>
+      <article class="finding"><div class="finding-number">03</div><h3>Ambiguity became part of the experiment.</h3><p>Unexpected output did not always mean bad implementation. In several cases it exposed product assumptions or requirements that had never been made explicit.</p></article>
+      <article class="finding"><div class="finding-number">04</div><h3>Human direction remained consequential throughout.</h3><p>Identity, architecture, editorial policy, taxonomy, source evaluation, interface quality, prioritization, ambiguity resolution, and release judgment remained human decisions.</p></article>
+      <article class="finding"><div class="finding-number">05</div><h3>Conventional development discipline became more explicit, not less.</h3><p>Architecture, source control, QA, documentation, issue tracking, validation, standards, and human review expanded as the project and the AI-assisted workflow became more capable.</p></article>
+      <article class="finding"><div class="finding-number">06</div><h3>Failure was not one category—and AI assistance was not autonomy.</h3><p>Problems included implementation defects, cache and deployment state, documentation drift, incomplete repository context, and unstated human assumptions. The record does not support describing EpochLex as an autonomous AI-created project.</p></article>
+    </div>
+  </div></section>
+
+  <section class="experiment-section" id="roles"><div class="experiment-shell">
+    <div class="experiment-section-head"><div><p class="experiment-kicker">AI assistance × human judgment</p><h2>Different kinds of work. A shared outcome.</h2></div><p class="experiment-section-intro">The repository phrase “Vibe coded · Human-directed · AI-assisted · Human-reviewed” describes the development model more accurately than an “AI vs. human” framing.</p></div>
+    <div class="role-flow">
+      <article class="role-box"><h3>Human direction</h3><ul><li>Product intent and priorities</li><li>Architecture and constraints</li><li>Editorial policy and taxonomy</li><li>Risk and acceptance boundaries</li></ul></article>
+      <div class="role-arrow" aria-hidden="true">→</div>
+      <article class="role-box role-box--ai"><h3>AI assistance</h3><ul><li>Product exploration and drafting</li><li>Implementation and refactoring</li><li>Debugging and documentation</li><li>Research organization and QA assistance</li></ul></article>
+      <div class="role-arrow" aria-hidden="true">→</div>
+      <article class="role-box"><h3>Human review</h3><ul><li>Evaluate actual behavior</li><li>Judge sources and evidence</li><li>Resolve ambiguity</li><li>Accept, reject, revise, or publish</li></ul></article>
+    </div>
+    <p class="role-loop">Review feeds the next iteration: intent → assistance → artifact → evaluation → decision → revised intent.</p>
+  </div></section>
+
+  <section class="experiment-section" id="cases"><div class="experiment-shell">
+    <div class="experiment-section-head"><div><p class="experiment-kicker">Case studies</p><h2>Where the lessons became visible.</h2></div><p class="experiment-section-intro">The final Version 1.0 report contains ten case studies. This overview gives each a compact introduction; the report preserves the complete context, evidence notes, and findings.</p></div>
+    <div class="case-index">
+      <article class="case-item"><div class="case-no">01</div><div><h3>From 27 Terms to a Working Reference Product</h3><p>How a modest dictionary concept became a functioning product and a platform for further questions.</p></div></article>
+      <article class="case-item"><div class="case-no">02</div><div><h3>Provenance Changed the Nature of the Project</h3><p>How asking where terms came from introduced a deeper research and evidence model.</p></div></article>
+      <article class="case-item"><div class="case-no">03</div><div><h3>Mobile Development and the Difference Between Functional and Correct</h3><p>Why technically working output could still fail the intended product experience.</p></div></article>
+      <article class="case-item"><div class="case-no">04</div><div><h3>The AILex to EpochLex Rename</h3><p>Brand migration as a cross-system change touching identity, assets, metadata, and continuity.</p></div></article>
+      <article class="case-item"><div class="case-no">05</div><div><h3>Open Source Required More Than Publishing the Code</h3><p>How contribution surfaces, documentation, issues, and community structure became product work.</p></div></article>
+      <article class="case-item"><div class="case-no">06</div><div><h3>Rapid Corpus Growth and the Creation of Research Debt</h3><p>How publication throughput created a downstream provenance-research bottleneck.</p></div></article>
+      <article class="case-item"><div class="case-no">07</div><div><h3>Word of the Day, Push Notifications, and Architectural Restraint</h3><p>How new feature ideas were evaluated against the intentionally static architecture.</p></div></article>
+      <article class="case-item"><div class="case-no">08</div><div><h3>A Stale Pull Request and the Introduction of Codex</h3><p>How repository state and tool context became part of the development system itself.</p></div></article>
+      <article class="case-item"><div class="case-no">09</div><div><h3>Strong Automated Validation Did Not Eliminate Human Testing</h3><p>Why automated checks and actual device/browser evaluation remained complementary.</p></div></article>
+      <article class="case-item"><div class="case-no">10</div><div><h3>Ambiguity as Part of the Experiment</h3><p>When ambiguity must be closed—and when observing it can reveal something useful.</p></div></article>
+    </div>
+    <div class="experiment-actions"><a class="experiment-button" href="report/#part-iii">See the full case-study structure →</a></div>
+  </div></section>
+
+  <section class="experiment-section" id="timeline"><div class="experiment-shell">
+    <div class="experiment-section-head"><div><p class="experiment-kicker">How it evolved</p><h2>A project, step by step.</h2></div><p class="experiment-section-intro">This overview emphasizes turning points rather than reproducing a commit-by-commit changelog.</p></div>
+    <div class="timeline">
+      <article class="timeline-item"><div class="timeline-date">Aug 28</div><div class="timeline-marker"></div><div class="timeline-copy"><h3>The dictionary begins</h3><p>A 27-entry implementation turns the idea into something concrete enough to evaluate.</p></div></article>
+      <article class="timeline-item"><div class="timeline-date">Early phase</div><div class="timeline-marker"></div><div class="timeline-copy"><h3>The product expands</h3><p>Search, categories, dedicated pages, and rapid corpus growth create new product questions.</p></div></article>
+      <article class="timeline-item"><div class="timeline-date">Research</div><div class="timeline-marker"></div><div class="timeline-copy"><h3>Provenance becomes a system</h3><p>Meaning, origin, history, sources, and research status become distinct concerns.</p></div></article>
+      <article class="timeline-item"><div class="timeline-date">Open source</div><div class="timeline-marker"></div><div class="timeline-copy"><h3>The community surface appears</h3><p>Contribution guidance, issues, Discussions, and documentation become part of the product.</p></div></article>
+      <article class="timeline-item"><div class="timeline-date">Maturation</div><div class="timeline-marker"></div><div class="timeline-copy"><h3>Safeguards and quality become explicit</h3><p>QA, validation, accessibility, maintenance, and architectural constraints become more formal.</p></div></article>
+      <article class="timeline-item"><div class="timeline-date">Sep 17</div><div class="timeline-marker"></div><div class="timeline-copy"><h3>Codex enters the existing workflow</h3><p>A repository-oriented implementation agent creates a natural boundary for Phase II.</p></div></article>
+      <article class="timeline-item"><div class="timeline-date">Sep 18</div><div class="timeline-marker"></div><div class="timeline-copy"><h3>The first reporting snapshot</h3><p>The 365-entry snapshot becomes the baseline documented by the report.</p></div></article>
+    </div>
+  </div></section>
+
+  <section class="experiment-section" id="limits"><div class="experiment-shell">
+    <div class="experiment-section-head"><div><p class="experiment-kicker">What this experiment cannot tell us</p><h2>Important boundaries around the evidence.</h2></div><p class="experiment-section-intro">The report is a documented case study, not a controlled benchmark of AI against conventional software development.</p></div>
+    <div class="limit-grid">
+      <article class="limit"><strong>01</strong><p>No matched control project exists, so the report does not establish a causal productivity multiplier.</p></article>
+      <article class="limit"><strong>02</strong><p>Human labor was not tracked systematically, preventing credible labor-savings or hourly-productivity calculations.</p></article>
+      <article class="limit"><strong>03</strong><p>No lifetime token total is reported in Version 1.0 because the retained evidence does not support a defensible reconstruction.</p></article>
+      <article class="limit"><strong>04</strong><p>The exact underlying AI model is not verified for every historical interaction.</p></article>
+      <article class="limit"><strong>05</strong><p>Repository history does not preserve every rejected idea, informal test, design reaction, or conversation.</p></article>
+      <article class="limit"><strong>06</strong><p>One static, public reference product should not automatically be generalized to very different risk profiles or teams.</p></article>
+    </div>
+  </div></section>
+
+  <section class="experiment-section"><div class="experiment-shell">
+    <div class="experiment-section-head"><div><p class="experiment-kicker">What changes next</p><h2>The experiment continues with better measurement.</h2></div><p class="experiment-section-intro">The September 18 report establishes a baseline rather than a final assessment. The Codex phase begins a deliberately more prospective observation period.</p></div>
+    <div class="one-minute">
+      <article><span class="story-number">01</span><h3>Measure prospectively</h3><p>Track activity intentionally rather than reconstructing important measures after the fact.</p></article>
+      <article><span class="story-number">02</span><h3>Observe ambiguity</h3><p>Distinguish high-risk ambiguity that must be closed from lower-risk ambiguity that may reveal reasoning behavior.</p></article>
+      <article><span class="story-number">03</span><h3>Preserve boundaries</h3><p>Keep architecture, source-of-truth documentation, validation expectations, and human decision points explicit.</p></article>
+      <article><span class="story-number">04</span><h3>Compare phases</h3><p>Use the first-phase snapshot as the baseline for evaluating changes in workflow, rework, QA, and tool behavior.</p></article>
+    </div>
+  </div></section>
+
+  <section class="experiment-section report-gateway" id="report"><div class="experiment-shell">
+    <div class="report-gateway-grid">
+      <div><p class="experiment-kicker">Go deeper</p><h2>The complete record.</h2><p class="experiment-section-intro">This page highlights the major observations. Version 1.0 is the finalized 75-page case study, including the full narrative, finalized figures, evidence notes, quantitative analysis, limitations, and appendices.</p><div class="experiment-actions"><a class="experiment-button experiment-button--primary" href="report/">Read the web companion →</a><a class="experiment-button" href="../assets/reports/epochlex-experiment-report-2026-v1.0.pdf" download>Download PDF · v1.0 ↓</a></div></div>
+      <div class="report-cover" aria-label="Stylized representation of the EpochLex Experiment Version 1.0 report cover"><small>Designed Research Case Study</small><span class="report-cover-rule" aria-hidden="true"></span><strong>The EpochLex<br>Experiment</strong><span class="report-cover-subtitle">Building a Dictionary of the AI Era through<br>Human-Directed, AI-Assisted Development</span><small>Report · Version 1.0 · September 2026</small></div>
+    </div>
+  </div></section>
+</main>
+<nav class="experiment-mobile-nav" aria-label="Experiment navigation">
+  <a href="#one-minute" data-experiment-section="one-minute" aria-current="page">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M12 4v16"/></svg>
+    <span>Overview</span>
+  </a>
+  <a href="#evidence" data-experiment-section="evidence">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>
+    <span>Evidence</span>
+  </a>
+  <a href="#findings" data-experiment-section="findings">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5zM8 8h8M8 12h8M8 16h5"/></svg>
+    <span>Findings</span>
+  </a>
+  <a href="#cases" data-experiment-section="cases">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v13H4zM8 7V4h8v3"/></svg>
+    <span>Cases</span>
+  </a>
+  <a href="#report" data-experiment-section="report">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6zM15 3v4h4M9 11h6M9 15h6"/></svg>
+    <span>Report</span>
+  </a>
+</nav>
+<footer class="site-footer"><div class="shell footer-inner"><span class="footer-mark">◎</span><p><strong>EpochLex · Dictionary of the AI Era</strong><br>Vibe coded · Human-directed · AI-assisted · Human-reviewed</p><p class="footer-license">Code: MIT · Content: CC BY 4.0</p></div></footer>
+<script src="../assets/js/pwa.js?v=epochlex-pwa-20260918-experiment" data-pwa-loader></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/experiment.js?v=epochlex-experiment-20260921-1"></script>
+</body>
+</html>

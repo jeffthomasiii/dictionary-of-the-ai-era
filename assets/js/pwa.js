@@ -44,7 +44,9 @@
   ensureMeta('apple-mobile-web-app-title', 'EpochLex');
 
   const standaloneQuery = window.matchMedia?.('(display-mode: standalone)');
+  const mobileShellQuery = window.matchMedia?.('(max-width: 680px)');
   const isStandalone = () => Boolean(standaloneQuery?.matches || window.navigator.standalone === true);
+  const shouldUseAppShell = () => Boolean(isStandalone() || mobileShellQuery?.matches);
 
   const icons = {
     browse: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 11.2 12 4l8.5 7.2"/><path d="M5.5 10.2V20h13v-9.8M9.2 20v-6h5.6v6"/></svg>',
@@ -54,6 +56,7 @@
     more: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.4"/><circle cx="12" cy="12" r="1.4"/><circle cx="19" cy="12" r="1.4"/></svg>',
     contribute: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7.5 7.5 12 3l4.5 4.5"/><path d="M5 13v6h14v-6"/></svg>',
     methodology: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h6.5c1.3 0 1.5.7 1.5 1.5v12c0-.8-.2-1.5-1.5-1.5H4v-12Z"/><path d="M20 5.5h-6.5c-1.3 0-1.5.7-1.5 1.5v12c0-.8.2-1.5 1.5-1.5H20v-12Z"/></svg>',
+    experiment: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v5l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/><path d="M8 14h8"/></svg>',
     close: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>'
   };
 
@@ -69,7 +72,7 @@
     if (path === 'categories.html') return 'categories';
     if (path === 'word-of-the-day') return 'word';
     if (path === 'about.html') return 'about';
-    if (path === 'contribute.html' || path === 'methodology.html') return 'more';
+    if (path === 'contribute.html' || path === 'methodology.html' || path === 'experiment' || path.startsWith('experiment/')) return 'more';
     return 'browse';
   }
 
@@ -169,12 +172,13 @@
   }
 
   function ensureAppShell() {
-    if (!isStandalone() || document.querySelector('.pwa-app-nav')) return;
-
     document.documentElement.dataset.pwaStandalone = 'true';
+    document.documentElement.dataset.pwaShellMode = isStandalone() ? 'standalone' : 'mobile-browser';
     document.body.classList.add('pwa-standalone');
     ensureStandaloneHeader();
     loadCompactExperience();
+
+    if (document.querySelector('.pwa-app-nav')) return;
 
     const nav = document.createElement('nav');
     nav.className = 'pwa-app-nav';
@@ -205,6 +209,7 @@
         <button class="pwa-more-close" type="button" aria-label="Close more menu">${icons.close}</button>
       </div>
       <div class="pwa-more-links">
+        <a href="${new URL('experiment/', siteRoot).href}">${icons.experiment}<span><strong>The Experiment</strong><small>Explore the documented AI-assisted development case study.</small></span></a>
         <a href="${new URL('contribute.html', siteRoot).href}">${icons.contribute}<span><strong>Contribute</strong><small>Suggest terms, corrections, research, design, or code.</small></span></a>
         <a href="${new URL('methodology.html', siteRoot).href}">${icons.methodology}<span><strong>Methodology</strong><small>See how EpochLex selects, researches, and reviews entries.</small></span></a>
       </div>`;
@@ -227,9 +232,11 @@
   }
 
   function syncStandaloneState() {
-    if (isStandalone()) ensureAppShell();
+    if (shouldUseAppShell()) ensureAppShell();
     else {
+      closeMoreSheet();
       delete document.documentElement.dataset.pwaStandalone;
+      delete document.documentElement.dataset.pwaShellMode;
       document.body?.classList.remove('pwa-standalone');
     }
   }
@@ -240,6 +247,7 @@
     syncStandaloneState();
   }
   standaloneQuery?.addEventListener?.('change', syncStandaloneState);
+  mobileShellQuery?.addEventListener?.('change', syncStandaloneState);
 
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
