@@ -1011,3 +1011,168 @@
     overflow-x:auto;
   }
 }
+
+
+/* Final report-figure refinements */
+@media (min-width:681px) {
+  .web-timeline-figure {
+    grid-template-columns:repeat(7,minmax(0,1fr));
+    overflow-x:visible;
+    width:100%;
+  }
+  .web-timeline-figure article {
+    min-width:0;
+    padding-inline:9px;
+  }
+  .web-timeline-figure strong {
+    font-size:.82rem;
+    line-height:1.25;
+  }
+  .web-timeline-figure small {
+    font-size:.65rem;
+    line-height:1.35;
+  }
+}
+
+/* Inline SVG text needs explicit theme values for reliable dark-mode rendering. */
+.figure-growth-chart .figure-point text {
+  fill:#142437;
+}
+.figure-growth-chart .figure-point .figure-small {
+  fill:#657080;
+}
+[data-theme="dark"] .figure-growth-chart .figure-point text {
+  fill:#F5F2EC;
+}
+[data-theme="dark"] .figure-growth-chart .figure-point .figure-small {
+  fill:#C5CBD0;
+}
+
+/* Figure 6: diagnosis flow, not a flat list of possible causes. */
+.outcome-model {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.outcome-center {
+  width:min(270px,80%);
+  margin:0;
+}
+.outcome-flow-arrow {
+  color:var(--accent-secondary);
+  font-size:1.55rem;
+  line-height:1;
+  padding:7px 0;
+}
+.outcome-question {
+  width:min(360px,92%);
+  padding:14px 18px;
+  border:1px solid var(--experiment-rule);
+  border-radius:12px;
+  background:color-mix(in srgb,var(--accent-secondary-soft) 36%,var(--surface));
+  color:var(--text);
+  text-align:center;
+  font-weight:800;
+}
+.outcome-causes {
+  width:100%;
+}
+.outcome-cause {
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  justify-content:center;
+}
+.outcome-cause strong {
+  font-size:.84rem;
+  line-height:1.3;
+}
+.outcome-cause small {
+  color:var(--muted);
+  font-size:.67rem;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+}
+.outcome-cause--ai {
+  border-color:color-mix(in srgb,var(--accent-secondary) 72%,var(--line)) !important;
+  background:color-mix(in srgb,var(--accent-secondary-soft) 52%,var(--surface)) !important;
+}
+
+/* Figure 7: explicit capacity labels and the widening pressure/backlog gap. */
+.figure-pressure-chart {
+  width:100%;
+  max-width:100%;
+  min-width:0;
+  height:auto;
+}
+.figure-pressure-chart #pressure-arrow path {
+  fill:#b36f60;
+}
+.figure-pressure-arrow {
+  stroke:#b36f60;
+  stroke-width:3;
+}
+.figure-label-box rect {
+  stroke-width:1.2;
+}
+.figure-label-box text {
+  text-anchor:middle;
+  dominant-baseline:middle;
+  font:700 14px Inter,system-ui,sans-serif;
+}
+.figure-label-box--production rect {
+  fill:color-mix(in srgb,var(--surface) 92%,var(--accent-secondary-soft));
+  stroke:var(--accent-secondary);
+}
+.figure-label-box--production text {
+  fill:var(--text);
+}
+.figure-label-box--review rect {
+  fill:color-mix(in srgb,var(--surface) 92%,#718f72 8%);
+  stroke:#718f72;
+}
+.figure-label-box--review text {
+  fill:var(--text);
+}
+.figure-pressure-callout rect {
+  fill:color-mix(in srgb,var(--surface) 90%,#c77b68 10%);
+  stroke:#b36f60;
+  stroke-width:1.2;
+}
+.figure-pressure-callout text {
+  fill:var(--text);
+  text-anchor:middle;
+  font:700 13px Inter,system-ui,sans-serif;
+}
+.figure-axis-caption {
+  fill:var(--muted);
+}
+
+[data-theme="dark"] .figure-label-box--production text,
+[data-theme="dark"] .figure-label-box--review text,
+[data-theme="dark"] .figure-pressure-callout text {
+  fill:#F5F2EC;
+}
+[data-theme="dark"] .figure-axis-caption {
+  fill:#C5CBD0;
+}
+
+@media (max-width:680px) {
+  .figure-pressure-chart {
+    width:100%;
+    max-width:100%;
+    min-width:0;
+  }
+  .web-report-figure--pressure {
+    overflow:visible;
+  }
+  .web-report-figure:has(.figure-pressure-chart) {
+    overflow:visible;
+  }
+  .figure-label-box text {
+    font-size:15px;
+  }
+  .figure-pressure-callout text {
+    font-size:14px;
+  }
+}
