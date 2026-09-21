@@ -226,7 +226,7 @@ The installed PWA should feel like an application without creating a different E
 
 Established standalone behavior:
 
-- normal desktop-browser and mobile-browser layouts remain unchanged;
+- the installed app shell remains standalone-only; individual browser pages may still adopt responsive app-like presentation patterns when explicitly designed for mobile, as the Experiment publication does;
 - responsive testing in desktop developer tools continues to show the normal mobile website unless the browser is actually emulating/running standalone display mode;
 - the normal primary navigation and mobile hamburger menu are hidden in standalone mode;
 - the installed app uses a compact branded header with the EpochLex lockup and theme control;
@@ -308,7 +308,7 @@ Current mobile-browser behavior includes:
 
 Installed standalone behavior uses the app shell defined above rather than the browser hamburger-navigation pattern.
 
-Avoid viewport-only logic that accidentally turns ordinary mobile browsing into the installed app shell. Standalone presentation should be tied to installed/standalone execution, not merely screen size.
+The Experiment publication intentionally uses a more app-like mobile-browser presentation: compact card surfaces, swipeable content groups, tighter spacing, and an Experiment-specific bottom section navigator. This is still the canonical browser page, not the standalone PWA shell. The installed app shell itself remains tied to standalone execution rather than viewport size.
 
 ## Search and interaction
 
