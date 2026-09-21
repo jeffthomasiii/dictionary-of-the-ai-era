@@ -28,7 +28,8 @@ The initial product and corpus MVP is substantially complete:
 - repeatable accessibility and product-readiness QA baseline;
 - the corpus-wide `entryType` migration tracked in Issue #37 is complete, so every published record now carries an explicit entry type;
 - EpochLex selected as the public identity after a brand-collision review of the earlier AILex name;
-- the custom public domain `epochlex.justathoughtblog.org` configured for GitHub Pages.
+- the custom public domain `epochlex.justathoughtblog.org` configured for GitHub Pages;
+- **The EpochLex Experiment — Version 1.0** published as a public overview, web companion, and finalized 75-page PDF documenting the first observation period.
 
 The focus now shifts from accumulating MVP features to improving readiness, useful corpus coverage, contribution quality, publishing integrity, and long-term maintainability.
 
@@ -182,7 +183,7 @@ Browser speech synthesis remains the default because it preserves the static arc
 
 ## AI-assisted project development
 
-EpochLex will continue exploring human-directed AI collaboration as part of the project itself.
+EpochLex will continue exploring human-directed AI collaboration as part of the project itself. **Version 1.0 of The EpochLex Experiment** now establishes the documented baseline for the August 28–September 17, 2026 observation period; later work should be treated as a new observation phase rather than retroactively changing that baseline. See [`EXPERIMENT-PUBLICATION.md`](EXPERIMENT-PUBLICATION.md).
 
 Future experimentation may include:
 
