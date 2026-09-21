@@ -9,7 +9,7 @@
   <link rel="canonical" href="https://epochlex.justathoughtblog.org/experiment/report/">
   <meta property="og:site_name" content="EpochLex"><meta property="og:title" content="The EpochLex Experiment Report"><meta property="og:type" content="article"><meta property="og:url" content="https://epochlex.justathoughtblog.org/experiment/report/">
   <script>(()=>{try{const s=localStorage.getItem('ai-era-theme');document.documentElement.dataset.theme=s||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch(_){document.documentElement.dataset.theme='light'}})();</script>
-  <link rel="stylesheet" href="../../assets/css/styles.css"><link rel="stylesheet" href="../../assets/css/brand-theme.css"><link rel="stylesheet" href="../../assets/css/experiment.css?v=epochlex-experiment-20260921-2">
+  <link rel="stylesheet" href="../../assets/css/styles.css"><link rel="stylesheet" href="../../assets/css/brand-theme.css"><link rel="stylesheet" href="../../assets/css/experiment.css?v=epochlex-experiment-20260921-3">
 </head>
 <body class="experiment-page">
 <header class="site-header"><div class="shell header-inner"><a class="brand" href="../../" aria-label="EpochLex home"><span class="brand-lockup" aria-hidden="true"><img class="brand-lockup-image brand-lockup-light" src="../../assets/brand/epochlex/epochlex-logo-horizontal-light.png" alt=""><img class="brand-lockup-image brand-lockup-dark" src="../../assets/brand/epochlex/epochlex-logo-horizontal-dark.png" alt=""></span><span class="sr-only">EpochLex</span></a><nav class="primary-nav"><a href="../../">Browse</a><a href="../../categories.html">Categories</a><a href="../../about.html">About</a><a href="../../contribute.html">Contribute</a><a href="../../methodology.html">Methodology</a></nav><button id="theme-toggle" class="theme-toggle" type="button"><span>☼</span><span class="toggle-track"><span class="toggle-knob"></span></span><span>☾</span></button></div></header>
@@ -95,41 +95,61 @@
   <div class="web-figure-heading">
     <span>Figure 6</span>
     <h3 id="fig6-title">Classifying an unexpected outcome</h3>
-    <p>An unexpected result should not automatically be counted as an AI coding failure.</p>
+    <p>An unexpected result is the starting point for diagnosis—not a verdict that the AI failed.</p>
   </div>
-  <div class="outcome-model" role="img" aria-label="Unexpected outcomes can result from implementation error, missing repository context, unstated human requirement, conflicting requirements, outdated project information, tool or environment behavior, or deliberately unresolved ambiguity.">
-    <div class="outcome-center">Unexpected<br>outcome</div>
+  <div class="outcome-model" role="img" aria-label="An unexpected outcome is classified by asking what best explains the result. Possible classifications are AI implementation error, missing repository context, unstated human requirement, conflicting requirements, outdated project information, tool or environment behavior, or deliberately unresolved ambiguity.">
+    <div class="outcome-center">Unexpected outcome</div>
+    <div class="outcome-flow-arrow" aria-hidden="true">↓</div>
+    <div class="outcome-question">What best explains the result?</div>
+    <div class="outcome-flow-arrow" aria-hidden="true">↓</div>
     <div class="outcome-causes">
-      <span>Implementation error</span>
-      <span>Missing repository context</span>
-      <span>Unstated human requirement</span>
-      <span>Conflicting requirements</span>
-      <span>Outdated project information</span>
-      <span>Tool / environment behavior</span>
-      <span>Deliberately unresolved ambiguity</span>
+      <span class="outcome-cause outcome-cause--ai"><strong>AI implementation error</strong><small>Execution defect</small></span>
+      <span class="outcome-cause"><strong>Missing repository context</strong><small>Context gap</small></span>
+      <span class="outcome-cause"><strong>Unstated human requirement</strong><small>Intent gap</small></span>
+      <span class="outcome-cause"><strong>Conflicting requirements</strong><small>Specification conflict</small></span>
+      <span class="outcome-cause"><strong>Outdated project information</strong><small>Stale context</small></span>
+      <span class="outcome-cause"><strong>Tool / environment behavior</strong><small>Environment</small></span>
+      <span class="outcome-cause"><strong>Deliberately unresolved ambiguity</strong><small>Intentional uncertainty</small></span>
     </div>
   </div>
-  <div class="web-figure-takeaway"><strong>Key takeaway</strong><span>Classification separates execution defects from context, intent, and environment failures.</span></div>
+  <div class="web-figure-takeaway"><strong>Key takeaway</strong><span>Only one branch is a straightforward AI implementation error. The other branches locate the unexpected result in context, human intent, requirements, environment, or deliberate ambiguity.</span></div>
   <figcaption>Figure 6. Classification model for unexpected AI-assisted development outcomes.</figcaption>
 </figure></section>
 
-<section id="part-v"><p class="experiment-kicker">Part V</p><h2>Discussion, Lessons, and Implications</h2><ol class="report-map" start="56"><li>The Experiment Was Not Really About Whether AI Could Write Code</li><li>AI Reduced the Cost of Trying an Idea</li><li>Faster Implementation Changes the Economics of Iteration</li><li>The Hammer and the Nail Gun</li><li>Established Development Practices Did Not Disappear</li><li>Repository Context Became a Form of Organizational Memory</li><li>Documentation Is Part of the AI Control System</li><li>AI Can Accelerate Technical Debt as Easily as Features</li><li>Human Judgment Became the Scarcer Resource</li><li>Human Review Is More Than Error Checking</li><li>Ambiguity Is Shared Between the Human and the AI</li><li>The Ability to Surface Ambiguity May Become a Model Capability Worth Measuring</li><li>Product Responsibility Limits Experimental Freedom</li><li>Architecture Became a Decision Framework</li><li>Simplicity Has Ongoing Value in AI-Assisted Systems</li><li>AI-Assisted Research Has Different Risks From AI-Assisted Coding</li><li>The Meaning of “AI-Built” Requires Precision</li><li>Tool Changes Complicate Cause and Effect</li><li>The Work Is Shifting Rather Than Disappearing</li><li>Implications for Professional Practice</li><li>Process Knowledge May Outlast Tool Knowledge</li><li>Vibe Coding and Professional Practice Are Not Necessarily Opposites</li><li>What the Experiment Suggests So Far</li><li>A More Mature Statement of the Experiment</li><li>The Central Lesson</li></ol><p>Across these sections, the report argues for process principles that remain useful even as tools change: current repository state over stale planning material, claim-specific evidence, deliberate handling of high-risk ambiguity, explicit invariants for large changes, and validation that states both what was tested and what was not.</p><figure class="web-report-figure" aria-labelledby="fig7-title">
+<section id="part-v"><p class="experiment-kicker">Part V</p><h2>Discussion, Lessons, and Implications</h2><ol class="report-map" start="56"><li>The Experiment Was Not Really About Whether AI Could Write Code</li><li>AI Reduced the Cost of Trying an Idea</li><li>Faster Implementation Changes the Economics of Iteration</li><li>The Hammer and the Nail Gun</li><li>Established Development Practices Did Not Disappear</li><li>Repository Context Became a Form of Organizational Memory</li><li>Documentation Is Part of the AI Control System</li><li>AI Can Accelerate Technical Debt as Easily as Features</li><li>Human Judgment Became the Scarcer Resource</li><li>Human Review Is More Than Error Checking</li><li>Ambiguity Is Shared Between the Human and the AI</li><li>The Ability to Surface Ambiguity May Become a Model Capability Worth Measuring</li><li>Product Responsibility Limits Experimental Freedom</li><li>Architecture Became a Decision Framework</li><li>Simplicity Has Ongoing Value in AI-Assisted Systems</li><li>AI-Assisted Research Has Different Risks From AI-Assisted Coding</li><li>The Meaning of “AI-Built” Requires Precision</li><li>Tool Changes Complicate Cause and Effect</li><li>The Work Is Shifting Rather Than Disappearing</li><li>Implications for Professional Practice</li><li>Process Knowledge May Outlast Tool Knowledge</li><li>Vibe Coding and Professional Practice Are Not Necessarily Opposites</li><li>What the Experiment Suggests So Far</li><li>A More Mature Statement of the Experiment</li><li>The Central Lesson</li></ol><p>Across these sections, the report argues for process principles that remain useful even as tools change: current repository state over stale planning material, claim-specific evidence, deliberate handling of high-risk ambiguity, explicit invariants for large changes, and validation that states both what was tested and what was not.</p><figure class="web-report-figure web-report-figure--pressure" aria-labelledby="fig7-title">
   <div class="web-figure-heading">
     <span>Figure 7</span>
     <h3 id="fig7-title">Production capacity and review pressure</h3>
     <p>Interpretive model derived from the EpochLex case; curves are conceptual, not measured throughput.</p>
   </div>
-  <svg class="figure-chart figure-pressure-chart" viewBox="0 0 800 420" role="img" aria-label="Conceptual chart showing production capacity rising faster than review and research capacity, creating growing review pressure and downstream backlog.">
+  <svg class="figure-chart figure-pressure-chart" viewBox="0 0 800 420" role="img" aria-label="Conceptual chart showing production capacity rising faster than review and research capacity. A vertical double-headed arrow marks the widening gap as growing review pressure and downstream backlog.">
+    <defs>
+      <marker id="pressure-arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z"></path>
+      </marker>
+    </defs>
     <line class="figure-axis" x1="75" y1="350" x2="750" y2="350"></line>
     <line class="figure-axis" x1="75" y1="40" x2="75" y2="350"></line>
     <path class="figure-pressure-fill" d="M75 350 C180 250 330 210 460 165 C560 130 655 92 750 48 L750 230 C655 250 560 270 460 292 C330 315 180 325 75 350 Z"></path>
     <path class="figure-line figure-line-production" d="M75 350 C180 250 330 210 460 165 C560 130 655 92 750 48"></path>
     <path class="figure-line figure-line-review" d="M75 350 C180 315 330 305 460 282 C560 265 655 248 750 225"></path>
-    <text class="figure-label figure-label-production" x="612" y="74">Production capacity</text>
-    <text class="figure-label figure-label-review" x="590" y="250">Review / research capacity</text>
-    <text class="figure-pressure-label" x="475" y="205">Growing review pressure</text>
-    <text class="figure-pressure-label" x="475" y="225">and downstream backlog</text>
-    <text class="figure-small" x="390" y="392">Increasing AI-assisted development capacity</text>
+
+    <g class="figure-label-box figure-label-box--production">
+      <rect x="560" y="48" width="178" height="34" rx="8"></rect>
+      <text x="649" y="70">Production capacity</text>
+    </g>
+    <g class="figure-label-box figure-label-box--review">
+      <rect x="548" y="232" width="190" height="34" rx="8"></rect>
+      <text x="643" y="254">Review / research capacity</text>
+    </g>
+
+    <line class="figure-pressure-arrow" x1="520" y1="145" x2="520" y2="280" marker-start="url(#pressure-arrow)" marker-end="url(#pressure-arrow)"></line>
+    <g class="figure-pressure-callout">
+      <rect x="330" y="182" width="170" height="62" rx="10"></rect>
+      <text x="415" y="205">Growing review pressure</text>
+      <text x="415" y="226">+ downstream backlog</text>
+    </g>
+    <text class="figure-small figure-axis-caption" x="410" y="392">Increasing AI-assisted development capacity</text>
   </svg>
   <figcaption>Figure 7. Interpretive model of increased production capacity and the resulting pressure on review and research.</figcaption>
 </figure></section>
