@@ -20,21 +20,119 @@
 <aside class="report-toc" aria-label="Report contents"><h2>Report map</h2><a href="#summary">Executive Summary</a><a href="#metrics">Key Metrics</a><a href="#part-i">Part I · Introduction, Scope & Methodology</a><a href="#part-ii">Part II · Reconstructing the Experiment</a><a href="#part-iii">Part III · Case Studies & Findings</a><a href="#part-iv">Part IV · Quantitative Analysis</a><a href="#part-v">Part V · Discussion & Implications</a><a href="#part-vi">Part VI · Conclusion & Continuing Experiment</a><a href="#appendices">Appendices</a><a href="#publication">Publication notes</a></aside>
 
 <article class="report-body">
+<aside class="report-publication-note">
+  <strong>About this web companion.</strong>
+  It presents selected report text and the figures that most directly support the summarized findings. The finalized 75-page PDF remains the authoritative complete Version 1.0 edition.
+</aside>
 <section id="summary"><p class="experiment-kicker">01 · Experiment report</p><h2>Executive Summary</h2><p>EpochLex is an open-source, searchable reference work for terminology of the AI era. The project began on August 28, 2026, as a relatively small dictionary concept and developed into a 365-entry public reference work with structured provenance, dedicated term pages, pronunciation, responsive browsing, related-term discovery, a Progressive Web App, Word of the Day, contributor infrastructure, and a documented editorial and architectural model.</p><p>The project also became an experiment in AI-assisted development. ChatGPT was used extensively alongside GitHub and repository-based development during the initial phase, assisting with product exploration, implementation, debugging, documentation, research organization, quality assurance, and editorial support. On September 17, Codex was added to the existing workflow as a more repository-oriented implementation agent. The development process remained human-directed and human-reviewed throughout.</p><p>The strongest finding in Version 1.0 is that AI materially reduced the distance between product intent and working implementation. That acceleration did not remove the need for planning or engineering discipline. As the project grew, architecture, QA, source control, documentation, validation, editorial standards, and human review became more explicit rather than less important.</p><p>The report also treats ambiguity as an experimental variable and distinguishes different classes of failure. It does not interpret repository throughput as a productivity multiplier, labor saving, or proof of superiority over conventional development because no matched control project or reliable historical labor record exists.</p><aside class="observation"><p>The first phase suggests that AI changes the rate at which ideas can be converted into implementation more clearly than it changes the need for judgment.</p></aside></section>
 
 <section id="metrics"><p class="experiment-kicker">Report snapshot</p><h2>Key Metrics at a Glance</h2><p>These measures describe different forms of activity at the September 18 cutoff and are not combined into a single productivity score.</p><table class="report-metrics"><thead><tr><th>Measure</th><th>September 18, 2026</th></tr></thead><tbody>
 <tr><td>Initial published entries</td><td>27</td></tr><tr><td>First corpus milestone</td><td>100</td></tr><tr><td>Current published entries</td><td>365</td></tr><tr><td>Pull requests in audited history</td><td>98</td></tr><tr><td>Merged pull requests</td><td>97</td></tr><tr><td>Identified issues</td><td>30</td></tr><tr><td>Open issues</td><td>5</td></tr><tr><td>Researched provenance records</td><td>183</td></tr><tr><td>Pending provenance records</td><td>182</td></tr><tr><td>Provenance records completed in Wave 1</td><td>61</td></tr><tr><td>Reader-facing categories</td><td>5</td></tr><tr><td>Explicit entry types</td><td>5</td></tr><tr><td>Legacy records migrated in PR #131</td><td>343</td></tr><tr><td>URL replacements in PR #133</td><td>615</td></tr>
-</tbody></table><p class="draft-note"><strong>Version 1.0:</strong> these figures match the finalized September 18 report snapshot. The PDF contains the finalized report graphics and supporting evidence notes.</p></section>
+</tbody></table></section>
 
 <section id="part-i"><p class="experiment-kicker">Part I</p><h2>Introduction, Scope, and Methodology</h2><ol class="report-map"><li>Introduction, Scope, and Methodology</li><li>Purpose of the Case Study</li><li>Questions Examined</li><li>Observation Period and Evidence Base</li><li>Development Environment</li><li>Quantitative Evidence</li><li>What This Report Does Not Claim</li><li>A Note on Ambiguity</li></ol><p>The report treats the public repository and current source-controlled project state as the primary record for the reporting cutoff. Development conversations provide supporting context for intent, rejected alternatives, ambiguity, and human feedback. The case study documents one real product rather than a controlled laboratory comparison.</p></section>
 
-<section id="part-ii"><p class="experiment-kicker">Part II</p><h2>Reconstructing the Experiment</h2><ol class="report-map" start="9"><li>From a Term List to a Working Product</li><li>Rapid Expansion and the First Regression Cycle</li><li>Quality Assurance Becomes Part of the Product</li><li>The AILex to EpochLex Migration</li><li>The Taxonomy Expands Beyond Terms</li><li>The PWA and the Boundary of the Static Architecture</li><li>From a Private Project to an Open-Source Operation</li><li>Making the Research Pipeline Persistent</li><li>Scaling the Corpus Changes the Bottleneck</li><li>Word of the Day and the Question of Architectural Cost</li><li>The PWA Becomes an Intentional Product Experience</li><li>Introducing Codex Into an Existing Workflow</li><li>Maintenance Work Becomes More Explicit</li><li>What Changed During the First Three Weeks</li></ol><p>This part reconstructs how a dictionary project accumulated software architecture, research infrastructure, contributor workflows, QA, and maintenance concerns. The emphasis is on how the system changed—not merely on counting features.</p><div class="draft-note"><strong>Web companion:</strong> this page provides a navigable publication map and selected report material. The finalized PDF remains the authoritative complete Version 1.0 edition.</div></section>
+<section id="part-ii"><p class="experiment-kicker">Part II</p><h2>Reconstructing the Experiment</h2><ol class="report-map" start="9"><li>From a Term List to a Working Product</li><li>Rapid Expansion and the First Regression Cycle</li><li>Quality Assurance Becomes Part of the Product</li><li>The AILex to EpochLex Migration</li><li>The Taxonomy Expands Beyond Terms</li><li>The PWA and the Boundary of the Static Architecture</li><li>From a Private Project to an Open-Source Operation</li><li>Making the Research Pipeline Persistent</li><li>Scaling the Corpus Changes the Bottleneck</li><li>Word of the Day and the Question of Architectural Cost</li><li>The PWA Becomes an Intentional Product Experience</li><li>Introducing Codex Into an Existing Workflow</li><li>Maintenance Work Becomes More Explicit</li><li>What Changed During the First Three Weeks</li></ol><p>This part reconstructs how a dictionary project accumulated software architecture, research infrastructure, contributor workflows, QA, and maintenance concerns. The emphasis is on how the system changed—not merely on counting features.</p><figure class="web-report-figure" aria-labelledby="fig1-title">
+  <div class="web-figure-heading">
+    <span>Figure 1</span>
+    <h3 id="fig1-title">EpochLex Development Timeline</h3>
+    <p>Major phases during the first observation period, August 28–September 17, 2026.</p>
+  </div>
+  <div class="web-timeline-figure" role="img" aria-label="Timeline showing product formation, brand and taxonomy work, contributor readiness, operations, scale and research, PWA and Word of the Day, and the introduction of Codex.">
+    <article><b>Aug 28</b><strong>Product formation</strong><small>PR #1, #5<br>MVP + goals defined</small></article>
+    <article><b>Aug 29</b><strong>Brand + taxonomy</strong><small>PR #31, #38, #47<br>Logo/brand + wiki</small></article>
+    <article><b>Aug 30–31</b><strong>Contributor readiness</strong><small>PR #92, #94<br>Open-source operation</small></article>
+    <article><b>Sept 5</b><strong>Operations</strong><small>PR #82, #84<br>Candidate inventory</small></article>
+    <article><b>Sept 8–9</b><strong>Scale + research</strong><small>PR #116–118<br>328 entries, pilot tests</small></article>
+    <article><b>Sept 15</b><strong>PWA + WOTD</strong><small>PR #119–125<br>Mobile PWA + Word of the Day</small></article>
+    <article><b>Sept 17</b><strong>Codex introduced</strong><small>PR #127–133<br>Agent-assisted development</small></article>
+  </div>
+  <figcaption>Figure 1. Major development phases during the first EpochLex observation period.</figcaption>
+</figure></section>
 
 <section id="part-iii"><p class="experiment-kicker">Part III</p><h2>Case Studies and Findings</h2><ol class="report-map" start="23"><li>Case Study One: From 27 Terms to a Working Reference Product</li><li>Case Study Two: Provenance Changed the Nature of the Project</li><li>Case Study Three: Mobile Development and the Difference Between Functional and Correct</li><li>Case Study Four: The AILex to EpochLex Rename</li><li>Case Study Five: Open Source Required More Than Publishing the Code</li><li>Case Study Six: Rapid Corpus Growth and the Creation of Research Debt</li><li>Case Study Seven: Word of the Day, Push Notifications, and Architectural Restraint</li><li>Case Study Eight: A Stale Pull Request and the Introduction of Codex</li><li>Case Study Nine: Strong Automated Validation Did Not Eliminate Human Testing</li><li>Case Study Ten: Ambiguity as Part of the Experiment</li><li>Cross-Case Findings</li><li>A Developing Interpretation of “Vibe Coding”</li><li>The Role of Human Judgment</li><li>The Emerging Development Model</li><li>Interim Finding</li></ol><p>Version 1.0’s interim interpretation is that AI changed the speed and cost of iteration more clearly than it changed the need for judgment. Working software became part of the thinking process, while the value of that acceleration increasingly depended on the surrounding system’s ability to distinguish useful output from plausible but incomplete output.</p></section>
 
-<section id="part-iv"><p class="experiment-kicker">Part IV</p><h2>Quantitative Analysis and Experimental Measures</h2><ol class="report-map" start="38"><li>Why Quantitative Measures Matter</li><li>Repository Activity During the Observation Period</li><li>Development Was Highly Concentrated in Bursts</li><li>Corpus Growth</li><li>Provenance as a Quantifiable Bottleneck</li><li>Pull Requests as a Measure of Iteration, Not Productivity</li><li>Rework and Follow-Up Work</li><li>Human-Detected Versus Automated Findings</li><li>The Toolchain Timeline</li><li>Model Changes Are Part of the Experiment</li><li>Token Utilization</li><li>Token Counts Are Not Productivity Scores</li><li>Human Effort Is the Largest Missing Quantitative Measure</li><li>Measuring the Next Phase Beginning With Codex</li><li>Tracking Ambiguity as Data</li><li>Candidate Metrics for the Continuing Experiment</li><li>What Can Be Quantified Now</li><li>What the Numbers Tell Us</li></ol><p>The quantitative section deliberately separates direct measurements from reconstructed estimates and prospective measures. It does not convert pull-request counts, tokens, or corpus growth into unsupported productivity claims.</p></section>
+<section id="part-iv"><p class="experiment-kicker">Part IV</p><h2>Quantitative Analysis and Experimental Measures</h2><ol class="report-map" start="38"><li>Why Quantitative Measures Matter</li><li>Repository Activity During the Observation Period</li><li>Development Was Highly Concentrated in Bursts</li><li>Corpus Growth</li><li>Provenance as a Quantifiable Bottleneck</li><li>Pull Requests as a Measure of Iteration, Not Productivity</li><li>Rework and Follow-Up Work</li><li>Human-Detected Versus Automated Findings</li><li>The Toolchain Timeline</li><li>Model Changes Are Part of the Experiment</li><li>Token Utilization</li><li>Token Counts Are Not Productivity Scores</li><li>Human Effort Is the Largest Missing Quantitative Measure</li><li>Measuring the Next Phase Beginning With Codex</li><li>Tracking Ambiguity as Data</li><li>Candidate Metrics for the Continuing Experiment</li><li>What Can Be Quantified Now</li><li>What the Numbers Tell Us</li></ol><p>The quantitative section deliberately separates direct measurements from reconstructed estimates and prospective measures. It does not convert pull-request counts, tokens, or corpus growth into unsupported productivity claims.</p><figure class="web-report-figure" aria-labelledby="fig5-title">
+  <div class="web-figure-heading">
+    <span>Figure 5</span>
+    <h3 id="fig5-title">Corpus growth and provenance consolidation</h3>
+    <p>Published entries grew rapidly; deeper provenance research became the next visible constraint.</p>
+  </div>
+  <div class="figure-panel">
+    <h4>Published entries over time</h4>
+    <svg class="figure-chart figure-growth-chart" viewBox="0 0 800 250" role="img" aria-label="Published entries grew from 27 to 100 to 122 to 365.">
+      <line class="figure-axis" x1="70" y1="200" x2="750" y2="200"></line>
+      <line class="figure-axis" x1="70" y1="35" x2="70" y2="200"></line>
+      <polyline class="figure-line figure-line-production" points="100,188 300,158 500,148 720,48"></polyline>
+      <g class="figure-point"><circle cx="100" cy="188" r="7"></circle><text x="100" y="170">27</text><text class="figure-small" x="100" y="222">Initial MVP</text></g>
+      <g class="figure-point"><circle cx="300" cy="158" r="7"></circle><text x="300" y="140">100</text><text class="figure-small" x="300" y="222">First milestone</text></g>
+      <g class="figure-point"><circle cx="500" cy="148" r="7"></circle><text x="500" y="130">122</text><text class="figure-small" x="500" y="222">Pre-expansion</text></g>
+      <g class="figure-point"><circle cx="720" cy="48" r="7"></circle><text x="720" y="30">365</text><text class="figure-small" x="720" y="222">Post-expansion</text></g>
+    </svg>
+  </div>
+  <div class="figure-panel">
+    <h4>Provenance records before and after consolidation</h4>
+    <div class="provenance-bars" role="img" aria-label="Immediately after expansion, 122 records were researched and 243 pending. After Wave 1 consolidation, 183 were researched and 182 pending.">
+      <div class="provenance-bar-item">
+        <div class="provenance-stack">
+          <div class="provenance-pending" style="--portion:66.6%"><span>243 pending</span></div>
+          <div class="provenance-researched" style="--portion:33.4%"><span>122 researched</span></div>
+        </div>
+        <small>Immediately after<br>365-entry expansion</small>
+      </div>
+      <div class="provenance-bar-item">
+        <div class="provenance-stack">
+          <div class="provenance-pending" style="--portion:49.9%"><span>182 pending</span></div>
+          <div class="provenance-researched" style="--portion:50.1%"><span>183 researched</span></div>
+        </div>
+        <small>After Wave 1<br>consolidation</small>
+      </div>
+    </div>
+  </div>
+  <div class="web-figure-takeaway"><strong>Key takeaway</strong><span>Published entries increased from 27 to 365 while provenance research became a larger focus.</span></div>
+  <figcaption>Figure 5. Corpus growth and the shift from publication throughput to provenance-research pressure.</figcaption>
+</figure><figure class="web-report-figure" aria-labelledby="fig6-title">
+  <div class="web-figure-heading">
+    <span>Figure 6</span>
+    <h3 id="fig6-title">Classifying an unexpected outcome</h3>
+    <p>An unexpected result should not automatically be counted as an AI coding failure.</p>
+  </div>
+  <div class="outcome-model" role="img" aria-label="Unexpected outcomes can result from implementation error, missing repository context, unstated human requirement, conflicting requirements, outdated project information, tool or environment behavior, or deliberately unresolved ambiguity.">
+    <div class="outcome-center">Unexpected<br>outcome</div>
+    <div class="outcome-causes">
+      <span>Implementation error</span>
+      <span>Missing repository context</span>
+      <span>Unstated human requirement</span>
+      <span>Conflicting requirements</span>
+      <span>Outdated project information</span>
+      <span>Tool / environment behavior</span>
+      <span>Deliberately unresolved ambiguity</span>
+    </div>
+  </div>
+  <div class="web-figure-takeaway"><strong>Key takeaway</strong><span>Classification separates execution defects from context, intent, and environment failures.</span></div>
+  <figcaption>Figure 6. Classification model for unexpected AI-assisted development outcomes.</figcaption>
+</figure></section>
 
-<section id="part-v"><p class="experiment-kicker">Part V</p><h2>Discussion, Lessons, and Implications</h2><ol class="report-map" start="56"><li>The Experiment Was Not Really About Whether AI Could Write Code</li><li>AI Reduced the Cost of Trying an Idea</li><li>Faster Implementation Changes the Economics of Iteration</li><li>The Hammer and the Nail Gun</li><li>Established Development Practices Did Not Disappear</li><li>Repository Context Became a Form of Organizational Memory</li><li>Documentation Is Part of the AI Control System</li><li>AI Can Accelerate Technical Debt as Easily as Features</li><li>Human Judgment Became the Scarcer Resource</li><li>Human Review Is More Than Error Checking</li><li>Ambiguity Is Shared Between the Human and the AI</li><li>The Ability to Surface Ambiguity May Become a Model Capability Worth Measuring</li><li>Product Responsibility Limits Experimental Freedom</li><li>Architecture Became a Decision Framework</li><li>Simplicity Has Ongoing Value in AI-Assisted Systems</li><li>AI-Assisted Research Has Different Risks From AI-Assisted Coding</li><li>The Meaning of “AI-Built” Requires Precision</li><li>Tool Changes Complicate Cause and Effect</li><li>The Work Is Shifting Rather Than Disappearing</li><li>Implications for Professional Practice</li><li>Process Knowledge May Outlast Tool Knowledge</li><li>Vibe Coding and Professional Practice Are Not Necessarily Opposites</li><li>What the Experiment Suggests So Far</li><li>A More Mature Statement of the Experiment</li><li>The Central Lesson</li></ol><p>Across these sections, the report argues for process principles that remain useful even as tools change: current repository state over stale planning material, claim-specific evidence, deliberate handling of high-risk ambiguity, explicit invariants for large changes, and validation that states both what was tested and what was not.</p></section>
+<section id="part-v"><p class="experiment-kicker">Part V</p><h2>Discussion, Lessons, and Implications</h2><ol class="report-map" start="56"><li>The Experiment Was Not Really About Whether AI Could Write Code</li><li>AI Reduced the Cost of Trying an Idea</li><li>Faster Implementation Changes the Economics of Iteration</li><li>The Hammer and the Nail Gun</li><li>Established Development Practices Did Not Disappear</li><li>Repository Context Became a Form of Organizational Memory</li><li>Documentation Is Part of the AI Control System</li><li>AI Can Accelerate Technical Debt as Easily as Features</li><li>Human Judgment Became the Scarcer Resource</li><li>Human Review Is More Than Error Checking</li><li>Ambiguity Is Shared Between the Human and the AI</li><li>The Ability to Surface Ambiguity May Become a Model Capability Worth Measuring</li><li>Product Responsibility Limits Experimental Freedom</li><li>Architecture Became a Decision Framework</li><li>Simplicity Has Ongoing Value in AI-Assisted Systems</li><li>AI-Assisted Research Has Different Risks From AI-Assisted Coding</li><li>The Meaning of “AI-Built” Requires Precision</li><li>Tool Changes Complicate Cause and Effect</li><li>The Work Is Shifting Rather Than Disappearing</li><li>Implications for Professional Practice</li><li>Process Knowledge May Outlast Tool Knowledge</li><li>Vibe Coding and Professional Practice Are Not Necessarily Opposites</li><li>What the Experiment Suggests So Far</li><li>A More Mature Statement of the Experiment</li><li>The Central Lesson</li></ol><p>Across these sections, the report argues for process principles that remain useful even as tools change: current repository state over stale planning material, claim-specific evidence, deliberate handling of high-risk ambiguity, explicit invariants for large changes, and validation that states both what was tested and what was not.</p><figure class="web-report-figure" aria-labelledby="fig7-title">
+  <div class="web-figure-heading">
+    <span>Figure 7</span>
+    <h3 id="fig7-title">Production capacity and review pressure</h3>
+    <p>Interpretive model derived from the EpochLex case; curves are conceptual, not measured throughput.</p>
+  </div>
+  <svg class="figure-chart figure-pressure-chart" viewBox="0 0 800 420" role="img" aria-label="Conceptual chart showing production capacity rising faster than review and research capacity, creating growing review pressure and downstream backlog.">
+    <line class="figure-axis" x1="75" y1="350" x2="750" y2="350"></line>
+    <line class="figure-axis" x1="75" y1="40" x2="75" y2="350"></line>
+    <path class="figure-pressure-fill" d="M75 350 C180 250 330 210 460 165 C560 130 655 92 750 48 L750 230 C655 250 560 270 460 292 C330 315 180 325 75 350 Z"></path>
+    <path class="figure-line figure-line-production" d="M75 350 C180 250 330 210 460 165 C560 130 655 92 750 48"></path>
+    <path class="figure-line figure-line-review" d="M75 350 C180 315 330 305 460 282 C560 265 655 248 750 225"></path>
+    <text class="figure-label figure-label-production" x="612" y="74">Production capacity</text>
+    <text class="figure-label figure-label-review" x="590" y="250">Review / research capacity</text>
+    <text class="figure-pressure-label" x="475" y="205">Growing review pressure</text>
+    <text class="figure-pressure-label" x="475" y="225">and downstream backlog</text>
+    <text class="figure-small" x="390" y="392">Increasing AI-assisted development capacity</text>
+  </svg>
+  <figcaption>Figure 7. Interpretive model of increased production capacity and the resulting pressure on review and research.</figcaption>
+</figure></section>
 
 <section id="part-vi"><p class="experiment-kicker">Part VI</p><h2>Conclusion, Limitations, and the Continuing Experiment</h2><ol class="report-map" start="81"><li>The September 18 Snapshot</li><li>What the First Phase Established</li><li>Limitations of the First Report</li><li>Limits on Generalization</li><li>Codex Marks a New Observation Period</li><li>Measurement Plan for the Next Phase</li><li>Token Utilization Status</li><li>Model Timeline Status</li><li>Contributors and the Expanding Experimental Environment</li><li>Ambiguity Should Continue to Be Observed Deliberately</li><li>EpochLex as a Living Experiment</li><li>Conclusion</li></ol><p>The first phase demonstrates AI participation across a broad product-development lifecycle while also documenting consequential human direction. Faster implementation did not remove conventional development practice; as the project grew, architecture, source control, QA, documentation, validation, and human review became more explicit.</p><h3>Limits carried forward</h3><ul><li>No matched control project.</li><li>No systematic historical human-labor tracking.</li><li>No defensible lifetime token total can be reconstructed from the retained evidence set.</li><li>Exact historical model/configuration is left unspecified where it cannot be verified.</li><li>Repository and conversation records are substantial but not forensically complete.</li><li>Results should not automatically be generalized to projects with substantially different risk profiles, architectures, or teams.</li></ul></section>
 
