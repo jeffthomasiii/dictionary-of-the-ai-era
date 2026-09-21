@@ -17,7 +17,8 @@ The public website is written primarily for people who want to **use and underst
 | Contribute terms, sources, code, design, tests, or documentation | [`../CONTRIBUTING.md`](../CONTRIBUTING.md) |
 | Use baseline AI prompts for code, design, research, or documentation contributions | [`prompts/README.md`](prompts/README.md) |
 | Understand sourcing and provenance standards | [`../PROVENANCE.md`](../PROVENANCE.md) |
-| Understand the AI-assisted/vibe-coding experiment | [`../AI-TRANSPARENCY.md`](../AI-TRANSPARENCY.md) |
+| Understand the AI-assisted/vibe-coding development model | [`../AI-TRANSPARENCY.md`](../AI-TRANSPARENCY.md) |
+| Read the published Version 1.0 experiment record and its evidence boundaries | [`EXPERIMENT-PUBLICATION.md`](EXPERIMENT-PUBLICATION.md) and the [public Experiment](https://epochlex.justathoughtblog.org/experiment/) |
 | Understand the visual and interaction system | [`../DESIGN.md`](../DESIGN.md) |
 | Understand naming and brand usage | [`../BRAND.md`](../BRAND.md) |
 | Understand Living Dictionary and annual-edition policy | [`../EDITIONS.md`](../EDITIONS.md) |
@@ -48,6 +49,7 @@ The site should help readers answer questions such as:
 - How is an entry researched and reviewed?
 - How can I suggest a term, correction, source, or pronunciation fix?
 - What does it mean that EpochLex is a Living Dictionary?
+- What did the first documented EpochLex development experiment find, and where can I read the full report?
 
 The site should not require a reader to understand repository structure, JSON schemas, Git workflows, release mechanics, or implementation details simply to understand the dictionary.
 
@@ -57,7 +59,7 @@ The repository should preserve the complete project context, including:
 
 - project origin and intent;
 - the open-source philosophy;
-- the human-directed AI/vibe-coding experiment;
+- the human-directed AI/vibe-coding experiment and its published observation-period reports;
 - technical architecture and data flow;
 - editorial and provenance standards;
 - contribution expectations;

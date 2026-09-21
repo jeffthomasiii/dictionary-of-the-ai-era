@@ -32,7 +32,8 @@ The public site currently includes:
 - light and dark themes;
 - responsive desktop, tablet, and mobile behavior;
 - canonical URLs, social metadata, structured data, sitemap, and robots directives;
-- a continuously updated Living Dictionary plus a defined annual-edition model.
+- a continuously updated Living Dictionary plus a defined annual-edition model;
+- a published **EpochLex Experiment** overview and web companion, with the finalized Version 1.0 report available as a 75-page PDF.
 
 The current 365-entry corpus is a foundation, not a target ceiling. Systematic bulk publication is paused during the current provenance-consolidation phase, while important new candidates can still be considered when they provide enough reader value to interrupt that pause.
 
@@ -64,7 +65,9 @@ AI may assist with brainstorming, research support, source discovery, architectu
 
 AI output is never treated as evidence merely because a model produced it.
 
-See [`AI-TRANSPARENCY.md`](AI-TRANSPARENCY.md).
+The first documented observation period is now published as **The EpochLex Experiment — Version 1.0**. Readers can explore the [public Experiment overview](https://epochlex.justathoughtblog.org/experiment/), use the [web companion](https://epochlex.justathoughtblog.org/experiment/report/), or download the finalized report from the publication surface.
+
+See [`AI-TRANSPARENCY.md`](AI-TRANSPARENCY.md) for the development model and [`docs/EXPERIMENT-PUBLICATION.md`](docs/EXPERIMENT-PUBLICATION.md) for the Version 1.0 publication record and evidence boundaries.
 
 ## Brand
 
@@ -94,6 +97,7 @@ Start with [`docs/README.md`](docs/README.md) for the complete documentation map
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | How to contribute terms, research, corrections, code, design, testing, or documentation |
 | [`PROVENANCE.md`](PROVENANCE.md) | Detailed sourcing, origin, attribution, and first-known-use standards |
 | [`AI-TRANSPARENCY.md`](AI-TRANSPARENCY.md) | How and why AI is used in the project |
+| [`docs/EXPERIMENT-PUBLICATION.md`](docs/EXPERIMENT-PUBLICATION.md) | Version 1.0 experiment publication metadata, evidence boundaries, and stable report location |
 | [`DESIGN.md`](DESIGN.md) | Visual system, interaction principles, responsive behavior, and UI guardrails |
 | [`EDITIONS.md`](EDITIONS.md) | Living Dictionary versus immutable annual editions |
 | [`BRAND.md`](BRAND.md) | Naming, pronunciation, descriptor, brand history, and identity guidance |

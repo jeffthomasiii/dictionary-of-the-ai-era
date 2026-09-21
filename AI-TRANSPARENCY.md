@@ -32,6 +32,21 @@ A concise description of the development model is:
 
 The experiment is not whether AI can produce code at all. It is how far AI collaboration can responsibly support the full lifecycle of a public project while human judgment remains accountable for what ships and what the dictionary says.
 
+## Published experiment report
+
+The first documented observation period is published as **The EpochLex Experiment — Version 1.0**. It covers August 28–September 17, 2026, with a September 18 repository snapshot, and is preserved as a 75-page designed research case study.
+
+The report documents what the first phase supports and what it does not. It does not convert repository activity into a productivity multiplier, does not claim specific labor savings, does not report a lifetime token total that cannot be defensibly reconstructed, and does not describe EpochLex as autonomously created by AI.
+
+Readers can:
+
+- explore the [Experiment overview](https://epochlex.justathoughtblog.org/experiment/);
+- use the [web companion](https://epochlex.justathoughtblog.org/experiment/report/);
+- review the repository publication record in [`docs/EXPERIMENT-PUBLICATION.md`](docs/EXPERIMENT-PUBLICATION.md);
+- download the finalized Version 1.0 PDF from the public Experiment pages.
+
+Later observation periods should be documented as new phases or editions rather than silently rewriting the Version 1.0 baseline.
+
 ## How AI may be used
 
 AI tools may assist with:
