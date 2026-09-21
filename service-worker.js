@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'epochlex-pwa-20260918-experiment-1';
+const CACHE_VERSION = 'epochlex-pwa-20260921-experiment-2';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
@@ -34,6 +34,7 @@ const CORE_ASSETS = [
   './assets/js/pwa.js',
   './assets/js/pwa-compact.js',
   './assets/js/word-of-the-day.js',
+  './assets/js/experiment.js',
   './data/terms.json'
 ];
 
