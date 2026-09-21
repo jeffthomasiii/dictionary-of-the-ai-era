@@ -103,6 +103,7 @@
 
 .report-gateway { background:#0F1D2D; color:#F5F2EC; }
 .report-gateway .experiment-kicker { color:#9bc3c8; }
+.report-gateway h2 { color:#F5F2EC; }
 .report-gateway .experiment-section-intro { color:#c5cbd0; }
 .report-gateway-grid { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr); gap:48px; align-items:end; }
 .report-cover { width:min(290px,80%); aspect-ratio:.74; margin-left:auto; padding:28px; border:1px solid #73808b; background:linear-gradient(145deg,#1f3347,#101b29); display:flex; flex-direction:column; justify-content:space-between; box-shadow:18px 22px 0 rgba(0,0,0,.12); }
