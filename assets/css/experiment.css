@@ -1176,3 +1176,98 @@
     font-size:14px;
   }
 }
+
+
+/* Why this matters beyond EpochLex */
+.experiment-beyond .experiment-section-intro {
+  max-width:46rem;
+}
+.beyond-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+}
+.beyond-card {
+  padding:22px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:var(--surface);
+}
+.beyond-card .story-number {
+  display:block;
+  margin-bottom:16px;
+  color:var(--accent-secondary);
+}
+.beyond-card h3 {
+  margin:0 0 10px;
+  font-size:1.15rem;
+  line-height:1.2;
+}
+.beyond-card p {
+  margin:0;
+  color:var(--muted);
+  font-size:.88rem;
+  line-height:1.58;
+}
+.beyond-bridge {
+  margin:18px 0 0;
+  padding:18px 20px;
+  border-left:3px solid var(--accent-secondary);
+  background:color-mix(in srgb,var(--accent-secondary-soft) 28%,var(--surface));
+  border-radius:0 12px 12px 0;
+}
+.beyond-bridge p {
+  margin:0;
+  font:500 1rem/1.62 Georgia,serif;
+  color:var(--text);
+}
+.beyond-aec {
+  margin-top:14px;
+  padding:20px 22px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:color-mix(in srgb,var(--surface) 88%,var(--bg));
+}
+.beyond-aec .experiment-kicker {
+  margin-bottom:8px;
+}
+.beyond-aec p:last-child {
+  margin:0;
+  color:var(--muted);
+  font-size:.88rem;
+  line-height:1.6;
+}
+
+@media (max-width:900px) {
+  .beyond-grid {
+    grid-template-columns:1fr;
+  }
+}
+@media (max-width:680px) {
+  .beyond-grid {
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
+    padding:2px 2px 9px;
+    scroll-snap-type:x mandatory;
+    scrollbar-width:none;
+  }
+  .beyond-grid::-webkit-scrollbar { display:none; }
+  .beyond-card {
+    flex:0 0 min(80vw,300px);
+    padding:17px;
+    scroll-snap-align:start;
+  }
+  .beyond-card h3 { font-size:1rem; }
+  .beyond-card p { font-size:.8rem; line-height:1.5; }
+  .beyond-bridge {
+    margin-top:12px;
+    padding:15px 16px;
+  }
+  .beyond-bridge p { font-size:.94rem; }
+  .beyond-aec {
+    margin-top:10px;
+    padding:17px;
+  }
+  .beyond-aec p:last-child { font-size:.82rem; line-height:1.5; }
+}
