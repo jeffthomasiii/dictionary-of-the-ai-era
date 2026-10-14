@@ -12,6 +12,7 @@
     const styles = document.createElement('style');
     styles.dataset.browseCollapseStyles = 'true';
     styles.textContent = `
+      .letter-group .entry[hidden]{display:none!important}
       .letter-expand-control{display:flex;justify-content:flex-start;margin:16px 0 4px}
       .letter-expand-button{appearance:none;border:0;background:transparent;color:var(--accent,var(--teal,#477f7a));font:600 .82rem/1.3 var(--font-sans,system-ui,sans-serif);letter-spacing:.01em;padding:7px 0;cursor:pointer;text-decoration:none}
       .letter-expand-button:hover{text-decoration:underline;text-underline-offset:3px}
