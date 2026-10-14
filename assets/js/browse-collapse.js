@@ -111,7 +111,7 @@
     if (applying) return;
     if (mutations.some(mutation => mutation.type === 'childList' || mutation.attributeName === 'class')) queueApply();
   });
-  observer.observe(dictionary, { childList: true, subtree: true, attributes: true, attributeFilter: ['class'] });
+  observer.observe(dictionary, { childList: true, subtree: false, attributes: true, attributeFilter: ['class'] });
 
   queueApply();
 })();
